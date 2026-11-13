@@ -3,25 +3,47 @@
 > ### 🌐 Portal de Estudio Interactivo (GitHub Pages)
 > 👉 **[Abrir Portal Web Interactivo (`https://bigsasi.github.io/opos-biomedica-sergas/`)](https://bigsasi.github.io/opos-biomedica-sergas/)**
 
-Repositorio completo y verificado para la preparación de la oposición de **Ingeniero/a Biomédico/a (Subgrupo A1)** del **Servizo Galego de Saúde (SERGAS)**, conforme a la convocatoria oficial (**DOG núm. 67, de 13 de abril de 2026** — 4 plazas: 3 Turno Libre + 1 Promoción Interna; 82 temas: 8 Parte Común + 74 Parte Específica).
+Repositorio completo y verificado para la preparación de la oposición de **Ingeniero/a Biomédico/a (Subgrupo A1)** del **Servizo Galego de Saúde (SERGAS)**, conforme a la convocatoria oficial (**DOG núm. 67, de 13 de abril de 2026** — 4 plazas: 3 Turno Libre + 1 Promoción Interna; **82 temas**: 8 Parte Común + 74 Parte Específica).
 
 ---
 
-## 🚀 1. Portal de Estudio Interactivo (`index.html`)
+## 📁 Estructura del Repositorio
 
-Disponible directamente desde cualquier navegador, móvil o tablet en **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)** con guardado automático de progreso (`localStorage`):
-
-1. **📚 Apuntes «Núcleo Diamante» (10 Bloques)**: Lector interactivo con tabla de contenidos por bloque, buscador instantáneo en los 82 temas, modo de resaltado de datos críticos de examen y seguimiento de lectura.
-2. **🎯 Mapa de 82 Temas y Cruce Histórico SERGAS**: Filtro por fase estratégica (Núcleo Diamante 53 temas con solapamiento directo en exámenes SERGAS vs. Exclusivos Biomédica 29 temas), control de estado (*Pendiente* / *En estudio* / *Dominado*) y cruce con 5 categorías afines del SERGAS.
-3. **📝 Simulacro Oficial Interactivo (45 Preguntas + 5 Supuestos Prácticos)**: Modo Entrenamiento (feedback inmediato) o Modo Examen Real, cálculo de nota neta con penalización oficial ($-1/4$), escalado sobre 50 puntos (mínimo 25,00 ptos) y justificación técnica/jurídica completa.
-4. **⚡ Flashcards y Cifras Clave**: Tarjetas interactivas de repaso rápido (umbrales IEC 60601-1, ITC-BT-38, plazos MDR/AEMPS, CSN, LCSP y legislación gallega).
-5. **⚖️ Biblioteca Normativa (26 Leyes) y Calculadora de Baremo (60/40)**: Acceso directo a los 26 PDFs/HTMLs oficiales alojados directamente en este repositorio y en el BOE/DOG, junto con la calculadora oficial de Oposición (60 ptos) + Concurso (40 ptos).
+| Carpeta / Archivo | Contenido |
+| :--- | :--- |
+| 🌐 **[`index.html`](https://bigsasi.github.io/opos-biomedica-sergas/)** | **Portal Web Interactivo**: Lector de los 10 bloques, visor desplegable de los 82 temas, 4 exámenes interactivos (103 preguntas + 9 supuestos), flashcards, calculadora de baremo y normativa. |
+| 📚 **[`04_temario_82_temas_individuales/`](./04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md)** | **Los 82 Temas Desglosados Uno por Uno**: Un archivo Markdown individual para cada tema (`Comun_Tema_01..08.md` y `Especifico_Tema_01..74.md`) con su desarrollo completo y cruce SERGAS. |
+| 💎 **[`02_apuntes_nucleo_diamante/`](./02_apuntes_nucleo_diamante/)** | **Los 10 Bloques Temáticos Desarrollados**: Síntesis intensiva agrupada por áreas tecnológicas y normativas. |
+| 📝 **[`03_examenes_y_simulacros/`](./03_examenes_y_simulacros/)** | **4 Exámenes y Simulacros Oficiales Comentados** (103 preguntas tipo test + 9 supuestos prácticos hospitalarios). |
+| ⚖️ **[`01_normativa_oficial/`](./01_normativa_oficial/)** | **26 Textos Legales Consolidados** (BOE, DOUE y DOG) en PDF y HTML. |
+| 🏛️ **[`05_convocatorias_dog_referencia/`](./05_convocatorias_dog_referencia/)** | Convocatorias oficiales del DOG y programas en JSON/HTML de Ingeniería Biomédica y de las 5 categorías afines del SERGAS. |
 
 ---
 
-## 💎 2. Apuntes «Núcleo Diamante» (`02_apuntes_nucleo_diamante/`)
+## 📝 1. Exámenes y Simulacros Oficiales (`03_examenes_y_simulacros/`)
 
-Puedes leer cualquiera de los 10 bloques directamente en GitHub haciendo clic en su enlace:
+Puedes realizarlos de forma interactiva con corrección automática en **[el Portal Web](https://bigsasi.github.io/opos-biomedica-sergas/)** (pestaña **«📝 3. Exámenes y Simulacros»**) o abrirlos directamente en Markdown aquí:
+
+| Examen / Simulacro | Alcance y Estructura | Enlace Directo |
+| :--- | :--- | :--- |
+| **📝 Simulacro Oficial #1 (Global)** | **45 preguntas** (25 Teoría Específica + 5 Supuestos Prácticos + 5 Parte Común) | [📄 `Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md`](./03_examenes_y_simulacros/Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md) |
+| **🔬 Simulacro Oficial #2 (Equipamiento, Imagen y Radiaciones)** | **29 preguntas** (RX, TC, Mamo, RM, Eco, LINAC, Protonterapia, PET/SPECT, Protección Radiológica, Ventilación, Anestesia, Monitorización, Quirófano, Diálisis, Esterilización + **2 Supuestos Prácticos**) | [📄 `Simulacro_02_Equipamiento_Imagen_Criticos_y_Radiaciones.md`](./03_examenes_y_simulacros/Simulacro_02_Equipamiento_Imagen_Criticos_y_Radiaciones.md) |
+| **🏥 Simulacro Oficial #3 (Ing. Hospitalaria, TIC, XMAO, LCSP y MDR)** | **19 preguntas** (`REBT ITC-BT-38`, Climatización `UNE 100713`/`171340`, `IANUS`/`TELEA`/`SILICON`/`DICOM`/`HL7`, Mantenimiento `XMAO`, `COCIR`/`FENIN`, `LCSP`, `MDR` + **2 Supuestos Prácticos**) | [📄 `Simulacro_03_Ingenieria_Hospitalaria_Salud_Digital_XMAO_LCSP_MDR.md`](./03_examenes_y_simulacros/Simulacro_03_Ingenieria_Hospitalaria_Salud_Digital_XMAO_LCSP_MDR.md) |
+| **⚖️ Examen #4 (Parte Común SERGAS e Igualdad)** | **10 preguntas de corte oficial SERGAS** (Constitución, Estatuto de Galicia, Ley 8/2008, Decreto 145/2024, Estatuto Marco, Decreto 206/2005, Ley 3/2001, PRL e Igualdad) | [📄 `Examen_04_Recopilatorio_Oficial_Parte_Comun_SERGAS_e_Igualdad.md`](./03_examenes_y_simulacros/Examen_04_Recopilatorio_Oficial_Parte_Comun_SERGAS_e_Igualdad.md) |
+
+---
+
+## 📚 2. Temario Completo por Temas Individuales (`04_temario_82_temas_individuales/`)
+
+👉 **[Ver Índice Completo de los 82 Temas Individuales (`00_INDICE_82_TEMAS.md`)](./04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md)**
+
+Cada uno de los **82 temas oficiales** cuenta con su propio archivo `.md` individual con su desarrollo técnico completo:
+- **Parte Común (Temas 1 al 8):** [`Comun_Tema_01.md`](./04_temario_82_temas_individuales/Comun_Tema_01.md) a [`Comun_Tema_08.md`](./04_temario_82_temas_individuales/Comun_Tema_08.md)
+- **Parte Específica (Temas 1 al 74):** [`Especifico_Tema_01.md`](./04_temario_82_temas_individuales/Especifico_Tema_01.md) a [`Especifico_Tema_74.md`](./04_temario_82_temas_individuales/Especifico_Tema_74.md)
+
+---
+
+## 💎 3. Apuntes por Bloques Temáticos (`02_apuntes_nucleo_diamante/`)
 
 | Bloque | Título y Alcance | Temas Oficiales | Archivo Markdown |
 | :---: | :--- | :--- | :--- |
@@ -35,15 +57,6 @@ Puedes leer cualquiera de los 10 bloques directamente en GitHub haciendo clic en
 | **Bloque 08** | Ingeniería Hospitalaria: Normativa Eléctrica (REBT / ITC-BT-38), Áreas de Ambiente Controlado (UNE 100713 / 171340), Planes Funcionales y Directores, Calidad por Procesos, CAD y Sostenibilidad | `45, 55, 59, 61, 62, 63, 64, 65, 66, 68, 69` | [📄 `Bloque_08_Ingenieria_Hospitalaria_REBT_ITC38_Ambiente_Controlado_Planes_Directores_Calidad.md`](./02_apuntes_nucleo_diamante/Bloque_08_Ingenieria_Hospitalaria_REBT_ITC38_Ambiente_Controlado_Planes_Directores_Calidad.md) |
 | **Bloque 09** | Gestión del Mantenimiento Biomédico (`UNE 209001 IN`), XMAO, Base Instalada/Ciclo de Vida, Renovación Tecnológica (`FENIN` / `COCIR`) y Contratación Pública (`Ley 9/2017 LCSP`) | `56, 60, 71, 72, 73` | [📄 `Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md`](./02_apuntes_nucleo_diamante/Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md) |
 | **Bloque 10** | Parte Común del SERGAS (Temas 1 al 8) y Tema 74 Específico (Perspectiva y Violencia de Género en el SERGAS) — Resumen Directo para Test | `C1, C2, C3, C4, C5, C6, C7, C8, 74` | [📄 `Bloque_10_Parte_Comun_SERGAS_y_Tema_74_Igualdad_Resumen_Test.md`](./02_apuntes_nucleo_diamante/Bloque_10_Parte_Comun_SERGAS_y_Tema_74_Igualdad_Resumen_Test.md) |
-
----
-
-## 📝 3. Simulacros, Catálogo y Cruces de Temario
-
-- 📋 **[`00_INDICE_CATALOGO.md`](./00_INDICE_CATALOGO.md)**: Catálogo maestro del repositorio, inventario de los 82 temas y estrategia de estudio en 3 fases.
-- 📝 **[`03_examenes_y_simulacros/Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md`](./03_examenes_y_simulacros/Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md)**: Simulacro oficial completo (35 preguntas de teoría + 10 preguntas de 5 supuestos prácticos) con plantilla de respuestas comentada.
-- 🔀 **[`cruce_temarios_sergas.md`](./cruce_temarios_sergas.md)**: Cruce detallado tema por tema con Radiofísica Hospitalaria, Ingeniero/a Técnico/a, TS Imagen para el Diagnóstico, TS Radioterapia y Grupo Técnico TIC.
-- 📧 **[`resumen_email_biomedica.md`](./resumen_email_biomedica.md)**: Resumen ejecutivo de la convocatoria, estructura de pruebas, baremo de méritos y fechas clave.
 
 ---
 
@@ -79,4 +92,3 @@ Los **26 documentos normativos oficiales** (BOE, DOUE y DOG) verificados e inclu
 | **BOE-A-2022-21682** | `Esp. Tema 54` | Real Decreto 1029/2022, de 20 de diciembre, Reglamento sobre protección de la salud contra los riesgos derivados de las radiaciones ionizantes (Directiva 2013/59/EURATOM) | [📄 `T54_RD_1029_2022_Reglamento_Proteccion_Salud_Radiaciones_Ionizantes_EURATOM.pdf`](./01_normativa_oficial/T54_RD_1029_2022_Reglamento_Proteccion_Salud_Radiaciones_Ionizantes_EURATOM.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2022-21682) |
 | **BOE-A-2002-18099** | `Esp. Tema 55` | Real Decreto 842/2002, de 2 de agosto, Reglamento Electrotécnico para Baja Tensión (REBT) e ITC-BT-38 (Quirófanos y salas de intervención) | [📄 `T55_RD_842_2002_REBT_e_ITC_BT_38_Quirofanos.pdf`](./01_normativa_oficial/T55_RD_842_2002_REBT_e_ITC_BT_38_Quirofanos.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099) |
 | **BOE-A-2017-12902** | `Esp. Tema 56` | Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público (LCSP — Libros I y II) | [📄 `T56_Ley_9_2017_Contratos_Sector_Publico_LCSP.pdf`](./01_normativa_oficial/T56_Ley_9_2017_Contratos_Sector_Publico_LCSP.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902) |
-
