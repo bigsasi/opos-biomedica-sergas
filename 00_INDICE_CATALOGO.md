@@ -18,13 +18,15 @@ Este repositorio contiene toda la documentación oficial descargada, el cruce se
   - Referencias de otras CCAA (**IB-SALUT Baleares**, **GVA Comunitat Valenciana**, **SAS Andalucía**, **Osakidetza País Vasco**, **SALUD Aragón**) y el origen real del temario en el **RD 838/2015**.
   - El **«Set Mínimo de Estudio» (39 temas)** y la **Estrategia «Bingo» / Núcleo Diamante (10 bloques / 15 temas clave)** basada en las reglas de puntuación del Anexo III del DOG.
 - [`resumen_email_biomedica.md`](./resumen_email_biomedica.md): Resumen ejecutivo listo para enviar por correo electrónico.
-- [`temario_biomedica.json`](./temario_biomedica.json) y [`convocatoria_biomedica.html`](./convocatoria_biomedica.html): Convocatoria oficial íntegra del DOG (Resolución de 31 de marzo de 2026, DOG núm. 67, de 13/04/2026) y temario estructurado en JSON.
-- Temarios oficiales en JSON y convocatorias/temarios íntegros en HTML del DOG de las 5 categorías comparadas del SERGAS:
-  - **Ingeniero/a Técnico/a:** [`temario_ingeniero_tecnico.json`](./temario_ingeniero_tecnico.json), [`ingeniero_tecnico_2026.html`](./ingeniero_tecnico_2026.html) y [`ingeniero_tecnico_temario_2018.html`](./ingeniero_tecnico_temario_2018.html)
-  - **Radiofísica Hospitalaria:** [`temario_radiofisica.json`](./temario_radiofisica.json), [`radiofisica_2025.html`](./radiofisica_2025.html) y [`radiofisica_temario_2007.html`](./radiofisica_temario_2007.html)
-  - **Informática (TIC A1/A2/C1):** [`temario_tic.json`](./temario_tic.json), [`tic_2025.html`](./tic_2025.html) y [`tic_temario_2021.html`](./tic_temario_2021.html)
-  - **TS Imagen para el Diagnóstico:** [`temario_imagen_diagnostico.json`](./temario_imagen_diagnostico.json), [`imagen_diagnostico_2025.html`](./imagen_diagnostico_2025.html) y [`imagen_rad_temario_2015.html`](./imagen_rad_temario_2015.html)
-  - **TS Radioterapia:** [`temario_radioterapia.json`](./temario_radioterapia.json), [`radioterapia_2019.html`](./radioterapia_2019.html) y [`imagen_rad_temario_2015.html`](./imagen_rad_temario_2015.html)
+- **[`04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md`](./04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md)**: Índice y los **82 temas desarrollados individualmente uno por uno** (`Comun_Tema_01..08.md` y `Especifico_Tema_01..74.md`).
+- **[`05_convocatorias_dog_referencia/Comparativa_Ingeniero_Biomedico_Otras_CCAA.md`](./05_convocatorias_dog_referencia/Comparativa_Ingeniero_Biomedico_Otras_CCAA.md)**: **Mapa Nacional de Oposiciones de Ingeniería Biomédica y Electromedicina en Otras CCAA** (Illes Balears IB-SALUT `SSCC 2026-1`, Comunitat Valenciana GVA `A1-S05-04`, País Vasco Osakidetza `OPE 2023-25`, Andalucía SAS, Castilla-La Mancha SESCAM, Cataluña SISCAT e INGESA).
+- [`05_convocatorias_dog_referencia/temario_biomedica.json`](./05_convocatorias_dog_referencia/temario_biomedica.json) y [`05_convocatorias_dog_referencia/convocatoria_biomedica.html`](./05_convocatorias_dog_referencia/convocatoria_biomedica.html): Convocatoria oficial íntegra del DOG (Resolución de 31 de marzo de 2026, DOG núm. 67, de 13/04/2026) y temario estructurado en JSON.
+- Temarios oficiales en JSON y convocatorias/temarios íntegros en HTML del DOG de las 5 categorías comparadas del SERGAS (en [`05_convocatorias_dog_referencia/`](./05_convocatorias_dog_referencia/)):
+  - **Ingeniero/a Técnico/a:** [`temario_ingeniero_tecnico.json`](./05_convocatorias_dog_referencia/temario_ingeniero_tecnico.json), [`ingeniero_tecnico_2026.html`](./05_convocatorias_dog_referencia/ingeniero_tecnico_2026.html) y [`ingeniero_tecnico_temario_2018.html`](./05_convocatorias_dog_referencia/ingeniero_tecnico_temario_2018.html)
+  - **Radiofísica Hospitalaria:** [`temario_radiofisica.json`](./05_convocatorias_dog_referencia/temario_radiofisica.json), [`radiofisica_2025.html`](./05_convocatorias_dog_referencia/radiofisica_2025.html) y [`radiofisica_temario_2007.html`](./05_convocatorias_dog_referencia/radiofisica_temario_2007.html)
+  - **Informática (TIC A1/A2/C1):** [`temario_tic.json`](./05_convocatorias_dog_referencia/temario_tic.json), [`tic_2025.html`](./05_convocatorias_dog_referencia/tic_2025.html) y [`tic_temario_2021.html`](./05_convocatorias_dog_referencia/tic_temario_2021.html)
+  - **TS Imagen para el Diagnóstico:** [`temario_imagen_diagnostico.json`](./05_convocatorias_dog_referencia/temario_imagen_diagnostico.json), [`imagen_diagnostico_2025.html`](./05_convocatorias_dog_referencia/imagen_diagnostico_2025.html) y [`imagen_rad_temario_2015.html`](./05_convocatorias_dog_referencia/imagen_rad_temario_2015.html)
+  - **TS Radioterapia:** [`temario_radioterapia.json`](./05_convocatorias_dog_referencia/temario_radioterapia.json), [`radioterapia_2019.html`](./05_convocatorias_dog_referencia/radioterapia_2019.html) y [`imagen_rad_temario_2015.html`](./05_convocatorias_dog_referencia/imagen_rad_temario_2015.html)
 
 ---
 
@@ -83,8 +85,12 @@ Cada archivo Markdown está redactado directamente con las **definiciones legale
 
 ---
 
-### D. Carpeta [`03_examenes_y_simulacros/`](./03_examenes_y_simulacros/) — Entrenamiento de Examen
-- [`Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md`](./03_examenes_y_simulacros/Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md): **45 preguntas completas con formato oficial del SERGAS** (25 de Teoría Específica + 5 Supuestos Prácticos hospitalarios desglosados en 15 preguntas encadenadas + 5 de Parte Común) con plantilla de respuestas y explicación técnica paso a paso.
+### D. Carpeta [`03_examenes_y_simulacros/`](./03_examenes_y_simulacros/) — 5 Exámenes y Simulacros Oficiales Comentados (133 Preguntas + 12 Supuestos Prácticos)
+- [`Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md`](./03_examenes_y_simulacros/Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md): **Simulacro Oficial #1 (45 preguntas)** — 25 de Teoría Específica + 5 Supuestos Prácticos hospitalarios (15 preguntas) + 5 de Parte Común.
+- [`Simulacro_02_Equipamiento_Imagen_Criticos_y_Radiaciones.md`](./03_examenes_y_simulacros/Simulacro_02_Equipamiento_Imagen_Criticos_y_Radiaciones.md): **Simulacro Oficial #2 (29 preguntas + 2 Supuestos Prácticos)** — Equipamiento de Imagen Médica, Radiaciones, Críticos, Quirófano, Diálisis y Esterilización.
+- [`Simulacro_03_Ingenieria_Hospitalaria_Salud_Digital_XMAO_LCSP_MDR.md`](./03_examenes_y_simulacros/Simulacro_03_Ingenieria_Hospitalaria_Salud_Digital_XMAO_LCSP_MDR.md): **Simulacro Oficial #3 (19 preguntas + 2 Supuestos Prácticos)** — Ingeniería Hospitalaria (`REBT ITC-BT-38`, `UNE 100713`), Salud Digital (`IANUS`, `DICOM`, `HL7`), Mantenimiento `XMAO`, `LCSP` y `MDR`.
+- [`Examen_04_Recopilatorio_Oficial_Parte_Comun_SERGAS_e_Igualdad.md`](./03_examenes_y_simulacros/Examen_04_Recopilatorio_Oficial_Parte_Comun_SERGAS_e_Igualdad.md): **Examen Oficial #4 (10 preguntas)** — Parte Común del SERGAS (Temas 1–8) y Tema 74 de Igualdad.
+- [`Examen_05_Otras_CCAA_Biomedica_y_Electromedicina_IBSALUT_GVA_Osakidetza_SAS.md`](./03_examenes_y_simulacros/Examen_05_Otras_CCAA_Biomedica_y_Electromedicina_IBSALUT_GVA_Osakidetza_SAS.md): **Examen Oficial #5 (30 preguntas + 3 Supuestos Prácticos)** — Preguntas extraídas y adaptadas de las convocatorias y baterías oficiales de **IB-SALUT (Baleares `SSCC 2026-1`), GVA (Comunitat Valenciana `A1-S05-04`), Osakidetza (País Vasco `OPE 2023-25`) y SAS (Andalucía)**.
 
 ---
 

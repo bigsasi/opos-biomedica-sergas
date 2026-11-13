@@ -11,12 +11,12 @@ Repositorio completo y verificado para la preparación de la oposición de **Ing
 
 | Carpeta / Archivo | Contenido |
 | :--- | :--- |
-| 🌐 **[`index.html`](https://bigsasi.github.io/opos-biomedica-sergas/)** | **Portal Web Interactivo**: Lector de los 10 bloques, visor desplegable de los 82 temas, 4 exámenes interactivos (103 preguntas + 9 supuestos), flashcards, calculadora de baremo y normativa. |
+| 🌐 **[`index.html`](https://bigsasi.github.io/opos-biomedica-sergas/)** | **Portal Web Interactivo**: Lector de los 10 bloques, visor desplegable de los 82 temas, 5 exámenes interactivos (133 preguntas + 12 supuestos), flashcards, calculadora de baremo y normativa. |
 | 📚 **[`04_temario_82_temas_individuales/`](./04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md)** | **Los 82 Temas Desglosados Uno por Uno**: Un archivo Markdown individual para cada tema (`Comun_Tema_01..08.md` y `Especifico_Tema_01..74.md`) con su desarrollo completo y cruce SERGAS. |
 | 💎 **[`02_apuntes_nucleo_diamante/`](./02_apuntes_nucleo_diamante/)** | **Los 10 Bloques Temáticos Desarrollados**: Síntesis intensiva agrupada por áreas tecnológicas y normativas. |
-| 📝 **[`03_examenes_y_simulacros/`](./03_examenes_y_simulacros/)** | **4 Exámenes y Simulacros Oficiales Comentados** (103 preguntas tipo test + 9 supuestos prácticos hospitalarios). |
+| 📝 **[`03_examenes_y_simulacros/`](./03_examenes_y_simulacros/)** | **5 Exámenes y Simulacros Oficiales Comentados** (133 preguntas tipo test + 12 supuestos prácticos hospitalarios, incluyendo preguntas oficiales de IB-SALUT, GVA, Osakidetza y SAS). |
 | ⚖️ **[`01_normativa_oficial/`](./01_normativa_oficial/)** | **26 Textos Legales Consolidados** (BOE, DOUE y DOG) en PDF y HTML. |
-| 🏛️ **[`05_convocatorias_dog_referencia/`](./05_convocatorias_dog_referencia/)** | Convocatorias oficiales del DOG y programas en JSON/HTML de Ingeniería Biomédica y de las 5 categorías afines del SERGAS. |
+| 🏛️ **[`05_convocatorias_dog_referencia/`](./05_convocatorias_dog_referencia/)** | **[Comparativa Nacional de Ingeniería Biomédica en Otras CCAA](./05_convocatorias_dog_referencia/Comparativa_Ingeniero_Biomedico_Otras_CCAA.md)** + Convocatorias oficiales del DOG y programas en JSON/HTML del SERGAS. |
 
 ---
 
@@ -30,6 +30,7 @@ Puedes realizarlos de forma interactiva con corrección automática en **[el Por
 | **🔬 Simulacro Oficial #2 (Equipamiento, Imagen y Radiaciones)** | **29 preguntas** (RX, TC, Mamo, RM, Eco, LINAC, Protonterapia, PET/SPECT, Protección Radiológica, Ventilación, Anestesia, Monitorización, Quirófano, Diálisis, Esterilización + **2 Supuestos Prácticos**) | [📄 `Simulacro_02_Equipamiento_Imagen_Criticos_y_Radiaciones.md`](./03_examenes_y_simulacros/Simulacro_02_Equipamiento_Imagen_Criticos_y_Radiaciones.md) |
 | **🏥 Simulacro Oficial #3 (Ing. Hospitalaria, TIC, XMAO, LCSP y MDR)** | **19 preguntas** (`REBT ITC-BT-38`, Climatización `UNE 100713`/`171340`, `IANUS`/`TELEA`/`SILICON`/`DICOM`/`HL7`, Mantenimiento `XMAO`, `COCIR`/`FENIN`, `LCSP`, `MDR` + **2 Supuestos Prácticos**) | [📄 `Simulacro_03_Ingenieria_Hospitalaria_Salud_Digital_XMAO_LCSP_MDR.md`](./03_examenes_y_simulacros/Simulacro_03_Ingenieria_Hospitalaria_Salud_Digital_XMAO_LCSP_MDR.md) |
 | **⚖️ Examen #4 (Parte Común SERGAS e Igualdad)** | **10 preguntas de corte oficial SERGAS** (Constitución, Estatuto de Galicia, Ley 8/2008, Decreto 145/2024, Estatuto Marco, Decreto 206/2005, Ley 3/2001, PRL e Igualdad) | [📄 `Examen_04_Recopilatorio_Oficial_Parte_Comun_SERGAS_e_Igualdad.md`](./03_examenes_y_simulacros/Examen_04_Recopilatorio_Oficial_Parte_Comun_SERGAS_e_Igualdad.md) |
+| **🌍 Examen #5 (Otras CCAA: IB-SALUT, GVA, Osakidetza y SAS)** | **30 preguntas + 3 Supuestos Prácticos** extraídos/adaptados de procesos selectivos y baterías oficiales de **Illes Balears (`SSCC 2026-1`), Comunitat Valenciana (`A1-S05-04`), País Vasco (`OPE 2023-25`) y Andalucía (`SAS`)** | [📄 `Examen_05_Otras_CCAA_Biomedica_y_Electromedicina_IBSALUT_GVA_Osakidetza_SAS.md`](./03_examenes_y_simulacros/Examen_05_Otras_CCAA_Biomedica_y_Electromedicina_IBSALUT_GVA_Osakidetza_SAS.md) |
 
 ---
 
