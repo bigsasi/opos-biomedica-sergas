@@ -2,7 +2,6 @@
 
 > **🌐 Portal Web Interactivo (GitHub Pages):** **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)**  
 > **💻 Repositorio en GitHub:** **[https://github.com/bigsasi/opos-biomedica-sergas](https://github.com/bigsasi/opos-biomedica-sergas)**  
-> **📂 Carpeta en Google Drive:** **[`Opos SERGAS/`](https://drive.google.com/drive/folders/12gg4hbIbHzy2jmOLJ0L82U0uXK8LcNMj)**
 
 Este repositorio contiene toda la documentación oficial descargada, el cruce semántico de temarios, los **10 Bloques de Apuntes Desarrollados (que cubren los 82 temas del programa oficial: 8 de Parte Común + 74 de Parte Específica)**, los **26 textos legales oficiales íntegros del BOE, DOUE y DOG**, el **Simulacro Oficial de Examen (Teoría + Supuestos Prácticos + Parte Común)** y el **Portal Web Interactivo (`index.html`)**.
 

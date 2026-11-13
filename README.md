@@ -15,7 +15,7 @@ Disponible directamente desde cualquier navegador, móvil o tablet en **[https:/
 2. **🎯 Mapa de 82 Temas y Cruce Histórico SERGAS**: Filtro por fase estratégica (Núcleo Diamante 53 temas con solapamiento directo en exámenes SERGAS vs. Exclusivos Biomédica 29 temas), control de estado (*Pendiente* / *En estudio* / *Dominado*) y cruce con 5 categorías afines del SERGAS.
 3. **📝 Simulacro Oficial Interactivo (45 Preguntas + 5 Supuestos Prácticos)**: Modo Entrenamiento (feedback inmediato) o Modo Examen Real, cálculo de nota neta con penalización oficial ($-1/4$), escalado sobre 50 puntos (mínimo 25,00 ptos) y justificación técnica/jurídica completa.
 4. **⚡ Flashcards y Cifras Clave**: Tarjetas interactivas de repaso rápido (umbrales IEC 60601-1, ITC-BT-38, plazos MDR/AEMPS, CSN, LCSP y legislación gallega).
-5. **⚖️ Biblioteca Normativa (26 Leyes) y Calculadora de Baremo (60/40)**: Acceso directo a los 26 PDFs/HTMLs oficiales alojados en este repositorio, en el BOE/DOG y en Google Drive, junto con la calculadora oficial de Oposición (60 ptos) + Concurso (40 ptos).
+5. **⚖️ Biblioteca Normativa (26 Leyes) y Calculadora de Baremo (60/40)**: Acceso directo a los 26 PDFs/HTMLs oficiales alojados directamente en este repositorio y en el BOE/DOG, junto con la calculadora oficial de Oposición (60 ptos) + Concurso (40 ptos).
 
 ---
 
@@ -80,8 +80,3 @@ Los **26 documentos normativos oficiales** (BOE, DOUE y DOG) verificados e inclu
 | **BOE-A-2002-18099** | `Esp. Tema 55` | Real Decreto 842/2002, de 2 de agosto, Reglamento Electrotécnico para Baja Tensión (REBT) e ITC-BT-38 (Quirófanos y salas de intervención) | [📄 `T55_RD_842_2002_REBT_e_ITC_BT_38_Quirofanos.pdf`](./01_normativa_oficial/T55_RD_842_2002_REBT_e_ITC_BT_38_Quirofanos.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099) |
 | **BOE-A-2017-12902** | `Esp. Tema 56` | Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público (LCSP — Libros I y II) | [📄 `T56_Ley_9_2017_Contratos_Sector_Publico_LCSP.pdf`](./01_normativa_oficial/T56_Ley_9_2017_Contratos_Sector_Publico_LCSP.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902) |
 
----
-
-## 📂 5. Enlace a Carpeta de Google Drive
-
-- **[Carpeta Google Drive (`Opos SERGAS/`)](https://drive.google.com/drive/folders/12gg4hbIbHzy2jmOLJ0L82U0uXK8LcNMj)**
