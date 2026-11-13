@@ -1,0 +1,583 @@
+{
+  "convocatoria": "RESOLUCIÓN de 31 de marzo de 2026, de la Dirección General de Recursos Humanos, por la que se convoca concurso-oposición para el ingreso en la categoría de ingeniero/a biomédico/a.",
+  "publicacion": "DOG núm. 67, de 13 de abril de 2026",
+  "url": "https://www.xunta.gal/dog/Publicados/2026/20260413/AnuncioG0003-310326-0001_es.html",
+  "anexo": "ANEXO II - Programa de las pruebas selectivas",
+  "parte_comun": {
+    "nota_vigencia": "Los textos legales serán los vigentes a la fecha de publicación en el Diario Oficial de Galicia de la resolución de la Dirección General de Recursos Humanos del Servicio Gallego de Salud por la que se procede al nombramiento del tribunal de calificación.",
+    "temas": [
+      {
+        "numero": 1,
+        "epigrafe": "Tema 1",
+        "titulo": "La Constitución española: principios fundamentales, derechos y deberes fundamentales de los españoles. La protección de la salud en la Constitución.",
+        "texto_completo": "Tema 1. La Constitución española: principios fundamentales, derechos y deberes fundamentales de los españoles. La protección de la salud en la Constitución."
+      },
+      {
+        "numero": 2,
+        "epigrafe": "Tema 2",
+        "titulo": "Estatuto de autonomía de Galicia: estructura y contenido. El Parlamento. La Xunta y su Presidencia. La Administración pública gallega.",
+        "texto_completo": "Tema 2. Estatuto de autonomía de Galicia: estructura y contenido. El Parlamento. La Xunta y su Presidencia. La Administración pública gallega."
+      },
+      {
+        "numero": 3,
+        "epigrafe": "Tema 3",
+        "titulo": "La Ley general de sanidad: fundamentos y características. Competencias de las administraciones públicas en relación con la salud. Derechos y deberes de los usuarios del sistema sanitario público.",
+        "texto_completo": "Tema 3. La Ley general de sanidad: fundamentos y características. Competencias de las administraciones públicas en relación con la salud. Derechos y deberes de los usuarios del sistema sanitario público."
+      },
+      {
+        "numero": 4,
+        "epigrafe": "Tema 4",
+        "titulo": "La Ley de salud de Galicia: el Sistema público de salud de Galicia. Competencias sanitarias de las administraciones públicas de Galicia. El Servicio Gallego de Salud. Su estructura organizativa: disposiciones que la regulan.",
+        "texto_completo": "Tema 4. La Ley de salud de Galicia: el Sistema público de salud de Galicia. Competencias sanitarias de las administraciones públicas de Galicia. El Servicio Gallego de Salud. Su estructura organizativa: disposiciones que la regulan."
+      },
+      {
+        "numero": 5,
+        "epigrafe": "Tema 5",
+        "titulo": "El Estatuto Marco del personal estatutario de los servicios de salud: clasificación del personal estatutario. Derechos y deberes. Retribuciones. Jornada de trabajo. Situaciones del personal estatutario. Régimen disciplinario. Incompatibilidades. Representación, participación y negociación colectiva.",
+        "texto_completo": "Tema 5. El Estatuto Marco del personal estatutario de los servicios de salud: clasificación del personal estatutario. Derechos y deberes. Retribuciones. Jornada de trabajo. Situaciones del personal estatutario. Régimen disciplinario. Incompatibilidades. Representación, participación y negociación colectiva."
+      },
+      {
+        "numero": 6,
+        "epigrafe": "Tema 6",
+        "titulo": "El personal estatutario del Servicio Gallego de Salud: régimen de provisión y selección de plazas.",
+        "texto_completo": "Tema 6. El personal estatutario del Servicio Gallego de Salud: régimen de provisión y selección de plazas."
+      },
+      {
+        "numero": 7,
+        "epigrafe": "Tema 7",
+        "titulo": "Normativa vigente sobre protección de datos personales y garantía de los derechos digitales: disposiciones generales; principios de protección de datos; derechos de las personas. La Ley gallega 3/2001, de 28 de mayo, reguladora del consentimiento informado y de la historia clínica de los pacientes.",
+        "texto_completo": "Tema 7. Normativa vigente sobre protección de datos personales y garantía de los derechos digitales: disposiciones generales; principios de protección de datos; derechos de las personas. La Ley gallega 3/2001, de 28 de mayo, reguladora del consentimiento informado y de la historia clínica de los pacientes."
+      },
+      {
+        "numero": 8,
+        "epigrafe": "Tema 8",
+        "titulo": "La Ley 31/1995, de 8 de noviembre, de prevención de riesgos laborales: capítulos I, II, III y V. Principales riesgos y medidas de prevención en las IISS. Ley orgánica 1/2004, de 28 de diciembre, de medidas de protección integral contra la violencia de género. Ley 11/2007, de 27 de julio, gallega para la prevención y el tratamiento integral de la violencia de género. Legislación sobre igualdad de mujeres y hombres: su aplicación en los distintos ámbitos de la función pública.",
+        "texto_completo": "Tema 8. La Ley 31/1995, de 8 de noviembre, de prevención de riesgos laborales: capítulos I, II, III y V. Principales riesgos y medidas de prevención en las IISS. Ley orgánica 1/2004, de 28 de diciembre, de medidas de protección integral contra la violencia de género. Ley 11/2007, de 27 de julio, gallega para la prevención y el tratamiento integral de la violencia de género. Legislación sobre igualdad de mujeres y hombres: su aplicación en los distintos ámbitos de la función pública."
+      }
+    ]
+  },
+  "parte_especifica": {
+    "nota_vigencia": "Los textos legales serán los vigentes a la fecha de publicación, en el Diario Oficial de Galicia, de la resolución de la Dirección General de Recursos Humanos del Servicio Gallego de Salud por la que se procede al nombramiento del tribunal de calificación.",
+    "nota_numeracion_dog": "En la publicación oficial del DOG se omite el número 46 (pasa del Tema 45 al Tema 47) y se duplica el número 48 (Tema 48 -> Tema 49 -> Tema 48 -> Tema 50), sumando un total de 74 temas.",
+    "temas": [
+      {
+        "orden": 1,
+        "numero": 1,
+        "epigrafe": "Tema 1",
+        "titulo": "Concepto y clasificación de dispositivos biomédicos. Definición, alcance y tipos principales en la atención sanitaria. Equipamiento electromédico.",
+        "texto_completo": "Tema 1. Concepto y clasificación de dispositivos biomédicos. Definición, alcance y tipos principales en la atención sanitaria. Equipamiento electromédico."
+      },
+      {
+        "orden": 2,
+        "numero": 2,
+        "epigrafe": "Tema 2",
+        "titulo": "Caracterización de la radiación en el ámbito sanitario. Radiación ionizante y no ionizante: naturaleza física, interacción con la materia y efectos biológicos relevantes. Magnitudes y unidades radiológicas de uso sanitario.",
+        "texto_completo": "Tema 2. Caracterización de la radiación en el ámbito sanitario. Radiación ionizante y no ionizante: naturaleza física, interacción con la materia y efectos biológicos relevantes. Magnitudes y unidades radiológicas de uso sanitario."
+      },
+      {
+        "orden": 3,
+        "numero": 3,
+        "epigrafe": "Tema 3",
+        "titulo": "Fundamentos del electromagnetismo. Conceptos y aplicaciones en el ámbito médico.",
+        "texto_completo": "Tema 3. Fundamentos del electromagnetismo. Conceptos y aplicaciones en el ámbito médico."
+      },
+      {
+        "orden": 4,
+        "numero": 4,
+        "epigrafe": "Tema 4",
+        "titulo": "Componentes y funcionamiento de los equipos de radiología digital. El tubo de rayos X: componentes y funcionamiento. Receptores de imagen.",
+        "texto_completo": "Tema 4. Componentes y funcionamiento de los equipos de radiología digital. El tubo de rayos X: componentes y funcionamiento. Receptores de imagen."
+      },
+      {
+        "orden": 5,
+        "numero": 5,
+        "epigrafe": "Tema 5",
+        "titulo": "Caracterización y funcionamiento de las salas de radiología digital.",
+        "texto_completo": "Tema 5. Caracterización y funcionamiento de las salas de radiología digital."
+      },
+      {
+        "orden": 6,
+        "numero": 6,
+        "epigrafe": "Tema 6",
+        "titulo": "Caracterización y funcionamiento de los equipos de tomografía computarizada. Imagen tomográfica y componentes de los equipos. Adquisición: helicoidal, multicorte, volumétrica y espectral.",
+        "texto_completo": "Tema 6. Caracterización y funcionamiento de los equipos de tomografía computarizada. Imagen tomográfica y componentes de los equipos. Adquisición: helicoidal, multicorte, volumétrica y espectral."
+      },
+      {
+        "orden": 7,
+        "numero": 7,
+        "epigrafe": "Tema 7",
+        "titulo": "Mamografía. Caracterización y funcionamiento de los equipos de mamografía digital. Diagnóstico e intervencionismo.",
+        "texto_completo": "Tema 7. Mamografía. Caracterización y funcionamiento de los equipos de mamografía digital. Diagnóstico e intervencionismo."
+      },
+      {
+        "orden": 8,
+        "numero": 8,
+        "epigrafe": "Tema 8",
+        "titulo": "Caracterización y funcionamiento de los equipos de radiología portátil. Diagnóstico e intervencionismo.",
+        "texto_completo": "Tema 8. Caracterización y funcionamiento de los equipos de radiología portátil. Diagnóstico e intervencionismo."
+      },
+      {
+        "orden": 9,
+        "numero": 9,
+        "epigrafe": "Tema 9",
+        "titulo": "Caracterización y funcionamiento de los sistemas de intervencionismo vascular y cardiológico. Quirófanos híbridos.",
+        "texto_completo": "Tema 9. Caracterización y funcionamiento de los sistemas de intervencionismo vascular y cardiológico. Quirófanos híbridos."
+      },
+      {
+        "orden": 10,
+        "numero": 10,
+        "epigrafe": "Tema 10",
+        "titulo": "Caracterización de los equipos de resonancia magnética. Generación de la señal electromagnética. Componentes, equipos e imanes.",
+        "texto_completo": "Tema 10. Caracterización de los equipos de resonancia magnética. Generación de la señal electromagnética. Componentes, equipos e imanes."
+      },
+      {
+        "orden": 11,
+        "numero": 11,
+        "epigrafe": "Tema 11",
+        "titulo": "Protocolos de actuación en resonancia magnética. Seguridad de las exploraciones, usos diagnósticos y terapéuticos de la RM. Reconstrucción y artefactos.",
+        "texto_completo": "Tema 11. Protocolos de actuación en resonancia magnética. Seguridad de las exploraciones, usos diagnósticos y terapéuticos de la RM. Reconstrucción y artefactos."
+      },
+      {
+        "orden": 12,
+        "numero": 12,
+        "epigrafe": "Tema 12",
+        "titulo": "Caracterización y funcionamiento de los equipos de ultrasonido. Interacción de los ultrasonidos con el medio. Equipos y transductores. Usos diagnósticos y terapéuticos. Ecografía y artefactos.",
+        "texto_completo": "Tema 12. Caracterización y funcionamiento de los equipos de ultrasonido. Interacción de los ultrasonidos con el medio. Equipos y transductores. Usos diagnósticos y terapéuticos. Ecografía y artefactos."
+      },
+      {
+        "orden": 13,
+        "numero": 13,
+        "epigrafe": "Tema 13",
+        "titulo": "Caracterización y funcionamiento de los equipos de radioterapia externa. Elementos de una instalación.",
+        "texto_completo": "Tema 13. Caracterización y funcionamiento de los equipos de radioterapia externa. Elementos de una instalación."
+      },
+      {
+        "orden": 14,
+        "numero": 14,
+        "epigrafe": "Tema 14",
+        "titulo": "Caracterización y funcionamiento de los equipos de braquiterapia. Elementos de una instalación.",
+        "texto_completo": "Tema 14. Caracterización y funcionamiento de los equipos de braquiterapia. Elementos de una instalación."
+      },
+      {
+        "orden": 15,
+        "numero": 15,
+        "epigrafe": "Tema 15",
+        "titulo": "Caracterización y funcionamiento de los equipos de protonterapia. Elementos de una instalación.",
+        "texto_completo": "Tema 15. Caracterización y funcionamiento de los equipos de protonterapia. Elementos de una instalación."
+      },
+      {
+        "orden": 16,
+        "numero": 16,
+        "epigrafe": "Tema 16",
+        "titulo": "Caracterización y funcionamiento de los sistemas de planificación para radioterapia y protonterapia. Equipamiento asociado.",
+        "texto_completo": "Tema 16. Caracterización y funcionamiento de los sistemas de planificación para radioterapia y protonterapia. Equipamiento asociado."
+      },
+      {
+        "orden": 17,
+        "numero": 17,
+        "epigrafe": "Tema 17",
+        "titulo": "Sistema de producción de fármacos para medicina nuclear. Ciclotrón.",
+        "texto_completo": "Tema 17. Sistema de producción de fármacos para medicina nuclear. Ciclotrón."
+      },
+      {
+        "orden": 18,
+        "numero": 18,
+        "epigrafe": "Tema 18",
+        "titulo": "Caracterización y funcionamiento de los equipos PET. Imagen híbrida: PET-TC y PET-RM.",
+        "texto_completo": "Tema 18. Caracterización y funcionamiento de los equipos PET. Imagen híbrida: PET-TC y PET-RM."
+      },
+      {
+        "orden": 19,
+        "numero": 19,
+        "epigrafe": "Tema 19",
+        "titulo": "Caracterización y funcionamiento de los equipos SPECT-TC.",
+        "texto_completo": "Tema 19. Caracterización y funcionamiento de los equipos SPECT-TC."
+      },
+      {
+        "orden": 20,
+        "numero": 20,
+        "epigrafe": "Tema 20",
+        "titulo": "Caracterización y funcionamiento de los sistemas de endoscopia diagnóstica y terapéutica. Componentes técnicos, mecánicos y electrónicos.",
+        "texto_completo": "Tema 20. Caracterización y funcionamiento de los sistemas de endoscopia diagnóstica y terapéutica. Componentes técnicos, mecánicos y electrónicos."
+      },
+      {
+        "orden": 21,
+        "numero": 21,
+        "epigrafe": "Tema 21",
+        "titulo": "Ventilación mecánica. Definición y principios físicos de la ventilación mecánica. Modos de la ventilación mecánica. Ventilación invasiva y no invasiva. Ventilación en neonatología. Ventilación en anestesia.",
+        "texto_completo": "Tema 21. Ventilación mecánica. Definición y principios físicos de la ventilación mecánica. Modos de la ventilación mecánica. Ventilación invasiva y no invasiva. Ventilación en neonatología. Ventilación en anestesia."
+      },
+      {
+        "orden": 22,
+        "numero": 22,
+        "epigrafe": "Tema 22",
+        "titulo": "Caracterización y funcionamiento de los sistemas de anestesia. Equipamiento asociado.",
+        "texto_completo": "Tema 22. Caracterización y funcionamiento de los sistemas de anestesia. Equipamiento asociado."
+      },
+      {
+        "orden": 23,
+        "numero": 23,
+        "epigrafe": "Tema 23",
+        "titulo": "Caracterización y funcionamiento de los sistemas de monitorización de pacientes. Parámetros, principios físicos y sensores.",
+        "texto_completo": "Tema 23. Caracterización y funcionamiento de los sistemas de monitorización de pacientes. Parámetros, principios físicos y sensores."
+      },
+      {
+        "orden": 24,
+        "numero": 24,
+        "epigrafe": "Tema 24",
+        "titulo": "Caracterización y funcionamiento del equipamiento de laboratorio en los centros sanitarios del Servicio Gallego de Salud.",
+        "texto_completo": "Tema 24. Caracterización y funcionamiento del equipamiento de laboratorio en los centros sanitarios del Servicio Gallego de Salud."
+      },
+      {
+        "orden": 25,
+        "numero": 25,
+        "epigrafe": "Tema 25",
+        "titulo": "Caracterización y funcionamiento de los sistemas de endoscopia quirúrgica. Componentes y tecnologías.",
+        "texto_completo": "Tema 25. Caracterización y funcionamiento de los sistemas de endoscopia quirúrgica. Componentes y tecnologías."
+      },
+      {
+        "orden": 26,
+        "numero": 26,
+        "epigrafe": "Tema 26",
+        "titulo": "Robotización quirúrgica. Principios, tipos y tecnologías.",
+        "texto_completo": "Tema 26. Robotización quirúrgica. Principios, tipos y tecnologías."
+      },
+      {
+        "orden": 27,
+        "numero": 27,
+        "epigrafe": "Tema 27",
+        "titulo": "Caracterización y funcionamiento del equipamiento de rehabilitación y fisioterapia.",
+        "texto_completo": "Tema 27. Caracterización y funcionamiento del equipamiento de rehabilitación y fisioterapia."
+      },
+      {
+        "orden": 28,
+        "numero": 28,
+        "epigrafe": "Tema 28",
+        "titulo": "Caracterización y funcionamiento del equipamiento de neonatología. Cunas térmicas. Incubadoras. Transporte neonatal.",
+        "texto_completo": "Tema 28. Caracterización y funcionamiento del equipamiento de neonatología. Cunas térmicas. Incubadoras. Transporte neonatal."
+      },
+      {
+        "orden": 29,
+        "numero": 29,
+        "epigrafe": "Tema 29",
+        "titulo": "Equipamiento de pacientes. Hospitalización y movilización.",
+        "texto_completo": "Tema 29. Equipamiento de pacientes. Hospitalización y movilización."
+      },
+      {
+        "orden": 30,
+        "numero": 30,
+        "epigrafe": "Tema 30",
+        "titulo": "Caracterización y funcionamiento del equipamiento de diálisis. Tratamiento de agua asociado a la hemodiálisis.",
+        "texto_completo": "Tema 30. Caracterización y funcionamiento del equipamiento de diálisis. Tratamiento de agua asociado a la hemodiálisis."
+      },
+      {
+        "orden": 31,
+        "numero": 31,
+        "epigrafe": "Tema 31",
+        "titulo": "Desfibrilación. Fundamentos y tipos de desfibriladores. Soporte vital.",
+        "texto_completo": "Tema 31. Desfibrilación. Fundamentos y tipos de desfibriladores. Soporte vital."
+      },
+      {
+        "orden": 32,
+        "numero": 32,
+        "epigrafe": "Tema 32",
+        "titulo": "Caracterización, funcionamiento y gestión de los dispositivos biomédicos implantables. Dispositivos cardioimplantables, ortopédicos, neuroimplantables y otros dispositivos implantables.",
+        "texto_completo": "Tema 32. Caracterización, funcionamiento y gestión de los dispositivos biomédicos implantables. Dispositivos cardioimplantables, ortopédicos, neuroimplantables y otros dispositivos implantables."
+      },
+      {
+        "orden": 33,
+        "numero": 33,
+        "epigrafe": "Tema 33",
+        "titulo": "Diseño de elementos y dispositivos biomédicos. Conceptos generales. Fases y legislación como parte de la I+D+i biomédica.",
+        "texto_completo": "Tema 33. Diseño de elementos y dispositivos biomédicos. Conceptos generales. Fases y legislación como parte de la I+D+i biomédica."
+      },
+      {
+        "orden": 34,
+        "numero": 34,
+        "epigrafe": "Tema 34",
+        "titulo": "Impresión 3D en el ámbito sanitario. Aplicación y tecnología.",
+        "texto_completo": "Tema 34. Impresión 3D en el ámbito sanitario. Aplicación y tecnología."
+      },
+      {
+        "orden": 35,
+        "numero": 35,
+        "epigrafe": "Tema 35",
+        "titulo": "Caracterización y funcionamiento de las fuentes de energía para uso quirúrgico o intervencionista. Equipamiento asociado.",
+        "texto_completo": "Tema 35. Caracterización y funcionamiento de las fuentes de energía para uso quirúrgico o intervencionista. Equipamiento asociado."
+      },
+      {
+        "orden": 36,
+        "numero": 36,
+        "epigrafe": "Tema 36",
+        "titulo": "Caracterización y funcionamiento del equipamiento electromédico de consultas y salas de técnicas.",
+        "texto_completo": "Tema 36. Caracterización y funcionamiento del equipamiento electromédico de consultas y salas de técnicas."
+      },
+      {
+        "orden": 37,
+        "numero": 37,
+        "epigrafe": "Tema 37",
+        "titulo": "Equipamiento estándar bloque quirúrgico: columnas de suministro, mesas quirúrgicas e iluminación.",
+        "texto_completo": "Tema 37. Equipamiento estándar bloque quirúrgico: columnas de suministro, mesas quirúrgicas e iluminación."
+      },
+      {
+        "orden": 38,
+        "numero": 38,
+        "epigrafe": "Tema 38",
+        "titulo": "Caracterización y funcionamiento del equipamiento asociado a la gestión de la imagen diagnóstica. Herramientas de posprocesado. HIS, RIS y PACS.",
+        "texto_completo": "Tema 38. Caracterización y funcionamiento del equipamiento asociado a la gestión de la imagen diagnóstica. Herramientas de posprocesado. HIS, RIS y PACS."
+      },
+      {
+        "orden": 39,
+        "numero": 39,
+        "epigrafe": "Tema 39",
+        "titulo": "Estándares de integración con los sistemas corporativos del Servicio Gallego de Salud.",
+        "texto_completo": "Tema 39. Estándares de integración con los sistemas corporativos del Servicio Gallego de Salud."
+      },
+      {
+        "orden": 40,
+        "numero": 40,
+        "epigrafe": "Tema 40",
+        "titulo": "Historia clínica electrónica. Concepto y objetivos en atención primaria y hospitalaria.",
+        "texto_completo": "Tema 40. Historia clínica electrónica. Concepto y objetivos en atención primaria y hospitalaria."
+      },
+      {
+        "orden": 41,
+        "numero": 41,
+        "epigrafe": "Tema 41",
+        "titulo": "Información sanitaria nacional para análisis y planificación: SIAP, BDCAP y CMBD/RAE-CMBD (contenidos, definiciones, periodicidad y comparabilidad). Estratificación poblacional tipo GMA: conceptos básicos y aplicaciones.",
+        "texto_completo": "Tema 41. Información sanitaria nacional para análisis y planificación: SIAP, BDCAP y CMBD/RAE-CMBD (contenidos, definiciones, periodicidad y comparabilidad). Estratificación poblacional tipo GMA: conceptos básicos y aplicaciones."
+      },
+      {
+        "orden": 42,
+        "numero": 42,
+        "epigrafe": "Tema 42",
+        "titulo": "Codificación sanitaria e interoperabilidad. Estándares y clasificaciones (CIAP2, CIE-10, SNOMED CT) para el uso clínico.",
+        "texto_completo": "Tema 42. Codificación sanitaria e interoperabilidad. Estándares y clasificaciones (CIAP2, CIE-10, SNOMED CT) para el uso clínico."
+      },
+      {
+        "orden": 43,
+        "numero": 43,
+        "epigrafe": "Tema 43",
+        "titulo": "Gestión del dato sanitario desde la perspectiva funcional y organizativa: conceptos generales de captura, calidad, interoperabilidad y gobierno del dato en el ámbito sanitario.",
+        "texto_completo": "Tema 43. Gestión del dato sanitario desde la perspectiva funcional y organizativa: conceptos generales de captura, calidad, interoperabilidad y gobierno del dato en el ámbito sanitario."
+      },
+      {
+        "orden": 44,
+        "numero": 44,
+        "epigrafe": "Tema 44",
+        "titulo": "Uso de los datos sanitarios como apoyo a la toma de decisiones clínicas y organizativas. Fundamentos de analítica de datos sanitarios, uso secundario de datos en investigación e identificación de las principales herramientas de explotación.",
+        "texto_completo": "Tema 44. Uso de los datos sanitarios como apoyo a la toma de decisiones clínicas y organizativas. Fundamentos de analítica de datos sanitarios, uso secundario de datos en investigación e identificación de las principales herramientas de explotación."
+      },
+      {
+        "orden": 45,
+        "numero": 45,
+        "epigrafe": "Tema 45",
+        "titulo": "Caracterización y funcionamiento de los sistemas CAD (diseño asistido por ordenador).",
+        "texto_completo": "Tema 45. Caracterización y funcionamiento de los sistemas CAD (diseño asistido por ordenador)."
+      },
+      {
+        "orden": 46,
+        "numero": 47,
+        "epigrafe": "Tema 47",
+        "titulo": "Internet of Medical Things (IoMT) y Telemedicina: concepto, arquitectura funcional, sensores y casos de uso en el Sistema público de salud gallego.",
+        "texto_completo": "Tema 47. Internet of Medical Things (IoMT) y Telemedicina: concepto, arquitectura funcional, sensores y casos de uso en el Sistema público de salud gallego."
+      },
+      {
+        "orden": 47,
+        "numero": 48,
+        "epigrafe": "Tema 48",
+        "titulo": "Reglamento (UE) 2017/745 del Parlamento Europeo y del Consejo, de 5 de abril de 2017, sobre los productos sanitarios: capítulos I, II y IX.",
+        "texto_completo": "Tema 48. Reglamento (UE) 2017/745 del Parlamento Europeo y del Consejo, de 5 de abril de 2017, sobre los productos sanitarios: capítulos I, II y IX."
+      },
+      {
+        "orden": 48,
+        "numero": 49,
+        "epigrafe": "Tema 49",
+        "titulo": "Regulación de los productos sanitarios. Normativa vigente.",
+        "texto_completo": "Tema 49. Regulación de los productos sanitarios. Normativa vigente."
+      },
+      {
+        "orden": 49,
+        "numero": 48,
+        "epigrafe": "Tema 48",
+        "titulo": "AEMPS: funciones como autoridad competente en la regulación de productos sanitarios.",
+        "texto_completo": "Tema 48. AEMPS: funciones como autoridad competente en la regulación de productos sanitarios."
+      },
+      {
+        "orden": 50,
+        "numero": 50,
+        "epigrafe": "Tema 50",
+        "titulo": "Regulación de los productos sanitarios implantables activos. Normativa vigente.",
+        "texto_completo": "Tema 50. Regulación de los productos sanitarios implantables activos. Normativa vigente."
+      },
+      {
+        "orden": 51,
+        "numero": 51,
+        "epigrafe": "Tema 51",
+        "titulo": "Real decreto 601/2019, de 18 de octubre, sobre justificación y optimización del uso de las radiaciones ionizantes para la protección radiológica de las personas con ocasión de exposiciones médicas.",
+        "texto_completo": "Tema 51. Real decreto 601/2019, de 18 de octubre, sobre justificación y optimización del uso de las radiaciones ionizantes para la protección radiológica de las personas con ocasión de exposiciones médicas."
+      },
+      {
+        "orden": 52,
+        "numero": 52,
+        "epigrafe": "Tema 52",
+        "titulo": "Real decreto 1085/2009, de 3 de julio, por el que se aprueba el Reglamento sobre instalación y utilización de aparatos de rayos X con fines de diagnóstico médico.",
+        "texto_completo": "Tema 52. Real decreto 1085/2009, de 3 de julio, por el que se aprueba el Reglamento sobre instalación y utilización de aparatos de rayos X con fines de diagnóstico médico."
+      },
+      {
+        "orden": 53,
+        "numero": 53,
+        "epigrafe": "Tema 53",
+        "titulo": "Consejo de Seguridad Nuclear: la protección radiológica en el medio sanitario.",
+        "texto_completo": "Tema 53. Consejo de Seguridad Nuclear: la protección radiológica en el medio sanitario."
+      },
+      {
+        "orden": 54,
+        "numero": 54,
+        "epigrafe": "Tema 54",
+        "titulo": "Riesgos laborales en el ámbito sanitario: Reglamento de protección sanitaria contra radiaciones ionizantes. Medidas fundamentales de protección radiológica. Directiva europea 2013/59/EURATOM, sobre normas de seguridad básicas.",
+        "texto_completo": "Tema 54. Riesgos laborales en el ámbito sanitario: Reglamento de protección sanitaria contra radiaciones ionizantes. Medidas fundamentales de protección radiológica. Directiva europea 2013/59/EURATOM, sobre normas de seguridad básicas."
+      },
+      {
+        "orden": 55,
+        "numero": 55,
+        "epigrafe": "Tema 55",
+        "titulo": "Aplicación de la normativa eléctrica (REBT) y eficiencia energética en entornos biomédicos.",
+        "texto_completo": "Tema 55. Aplicación de la normativa eléctrica (REBT) y eficiencia energética en entornos biomédicos."
+      },
+      {
+        "orden": 56,
+        "numero": 56,
+        "epigrafe": "Tema 56",
+        "titulo": "Ley 9/2017, de 8 de noviembre, de contratos del sector público, por la que se trasponen al ordenamiento jurídico español las directivas del Parlamento Europeo y del Consejo 2014/23/UE y 2014/24/UE, de 26 de febrero de 2014: libros I y II. Procesos de contratación de tecnología sanitaria.",
+        "texto_completo": "Tema 56. Ley 9/2017, de 8 de noviembre, de contratos del sector público, por la que se trasponen al ordenamiento jurídico español las directivas del Parlamento Europeo y del Consejo 2014/23/UE y 2014/24/UE, de 26 de febrero de 2014: libros I y II. Procesos de contratación de tecnología sanitaria."
+      },
+      {
+        "orden": 57,
+        "numero": 57,
+        "epigrafe": "Tema 57",
+        "titulo": "Caracterización y funcionamiento del equipamiento de farmacia hospitalaria. Dispensación.",
+        "texto_completo": "Tema 57. Caracterización y funcionamiento del equipamiento de farmacia hospitalaria. Dispensación."
+      },
+      {
+        "orden": 58,
+        "numero": 58,
+        "epigrafe": "Tema 58",
+        "titulo": "Procesos de esterilización. Trazabilidad.",
+        "texto_completo": "Tema 58. Procesos de esterilización. Trazabilidad."
+      },
+      {
+        "orden": 59,
+        "numero": 59,
+        "epigrafe": "Tema 59",
+        "titulo": "Calidad asistencial y gestión por procesos. Descripción y diseño de programas de calidad en sistemas sanitarios. Identificación de procesos clave. Bases metodológicas. Implantación de los procesos: características, claves estratégicas, metodología de implantación. Control y mejora continua de los procesos. Mecanismos de evaluación y seguimiento de procesos.",
+        "texto_completo": "Tema 59. Calidad asistencial y gestión por procesos. Descripción y diseño de programas de calidad en sistemas sanitarios. Identificación de procesos clave. Bases metodológicas. Implantación de los procesos: características, claves estratégicas, metodología de implantación. Control y mejora continua de los procesos. Mecanismos de evaluación y seguimiento de procesos."
+      },
+      {
+        "orden": 60,
+        "numero": 60,
+        "epigrafe": "Tema 60",
+        "titulo": "Perfil tecnológico hospitalario y propuesta para la renovación de tecnologías sanitarias: FENIN y COCIR.",
+        "texto_completo": "Tema 60. Perfil tecnológico hospitalario y propuesta para la renovación de tecnologías sanitarias: FENIN y COCIR."
+      },
+      {
+        "orden": 61,
+        "numero": 61,
+        "epigrafe": "Tema 61",
+        "titulo": "Plan de necesidades. Plan de inversión. Planes de alta tecnología. Metodología.",
+        "texto_completo": "Tema 61. Plan de necesidades. Plan de inversión. Planes de alta tecnología. Metodología."
+      },
+      {
+        "orden": 62,
+        "numero": 62,
+        "epigrafe": "Tema 62",
+        "titulo": "Áreas de ambiente controlado. Bloque quirúrgico. Unidades de críticos. Unidades de aislamiento. Flujo de trabajo y circulaciones.",
+        "texto_completo": "Tema 62. Áreas de ambiente controlado. Bloque quirúrgico. Unidades de críticos. Unidades de aislamiento. Flujo de trabajo y circulaciones."
+      },
+      {
+        "orden": 63,
+        "numero": 63,
+        "epigrafe": "Tema 63",
+        "titulo": "Plan funcional de centros sanitarios. Concepto y metodología. Definición de necesidades asistenciales, cartera de servicios, dimensionamiento de espacios y organización de recursos.",
+        "texto_completo": "Tema 63. Plan funcional de centros sanitarios. Concepto y metodología. Definición de necesidades asistenciales, cartera de servicios, dimensionamiento de espacios y organización de recursos."
+      },
+      {
+        "orden": 64,
+        "numero": 64,
+        "epigrafe": "Tema 64",
+        "titulo": "Documentos estratégicos y de planificación del Servicio Gallego de Salud y de la Consellería de Sanidad.",
+        "texto_completo": "Tema 64. Documentos estratégicos y de planificación del Servicio Gallego de Salud y de la Consellería de Sanidad."
+      },
+      {
+        "orden": 65,
+        "numero": 65,
+        "epigrafe": "Tema 65",
+        "titulo": "Unidades funcionales y diseño de flujos: seguridad, eficiencia y circuitos asistenciales. Estructura organizativa y recursos. Criterios de humanización y sostenibilidad en el diseño de espacios y gestión de recursos.",
+        "texto_completo": "Tema 65. Unidades funcionales y diseño de flujos: seguridad, eficiencia y circuitos asistenciales. Estructura organizativa y recursos. Criterios de humanización y sostenibilidad en el diseño de espacios y gestión de recursos."
+      },
+      {
+        "orden": 66,
+        "numero": 66,
+        "epigrafe": "Tema 66",
+        "titulo": "Planes directores de hospitales. Metodología y etapas.",
+        "texto_completo": "Tema 66. Planes directores de hospitales. Metodología y etapas."
+      },
+      {
+        "orden": 67,
+        "numero": 67,
+        "epigrafe": "Tema 67",
+        "titulo": "Planificación integrada en hospitales y centros de atención primaria. Sistemas de gestión de la citación y de la demanda asistencial.",
+        "texto_completo": "Tema 67. Planificación integrada en hospitales y centros de atención primaria. Sistemas de gestión de la citación y de la demanda asistencial."
+      },
+      {
+        "orden": 68,
+        "numero": 68,
+        "epigrafe": "Tema 68",
+        "titulo": "Integración de equipos biomédicos en instalaciones e infraestructuras.",
+        "texto_completo": "Tema 68. Integración de equipos biomédicos en instalaciones e infraestructuras."
+      },
+      {
+        "orden": 69,
+        "numero": 69,
+        "epigrafe": "Tema 69",
+        "titulo": "Economía circular. Sostenibilidad. Resiliencia.",
+        "texto_completo": "Tema 69. Economía circular. Sostenibilidad. Resiliencia."
+      },
+      {
+        "orden": 70,
+        "numero": 70,
+        "epigrafe": "Tema 70",
+        "titulo": "Logística de productos sanitarios. Cadena de suministros.",
+        "texto_completo": "Tema 70. Logística de productos sanitarios. Cadena de suministros."
+      },
+      {
+        "orden": 71,
+        "numero": 71,
+        "epigrafe": "Tema 71",
+        "titulo": "Sistema de gestión de mantenimiento asistido por ordenador (XMAO).",
+        "texto_completo": "Tema 71. Sistema de gestión de mantenimiento asistido por ordenador (XMAO)."
+      },
+      {
+        "orden": 72,
+        "numero": 72,
+        "epigrafe": "Tema 72",
+        "titulo": "Gestión del mantenimiento y planes de mantenimiento en el ámbito biomédico.",
+        "texto_completo": "Tema 72. Gestión del mantenimiento y planes de mantenimiento en el ámbito biomédico."
+      },
+      {
+        "orden": 73,
+        "numero": 73,
+        "epigrafe": "Tema 73",
+        "titulo": "Gestión de la base instalada. Inventario. Ciclo de vida.",
+        "texto_completo": "Tema 73. Gestión de la base instalada. Inventario. Ciclo de vida."
+      },
+      {
+        "orden": 74,
+        "numero": 74,
+        "epigrafe": "Tema 74",
+        "titulo": "Perspectiva de género. Violencia de género: prevención, detección y actuación por parte de los/las profesionales del Servicio Gallego de Salud.",
+        "texto_completo": "Tema 74. Perspectiva de género. Violencia de género: prevención, detección y actuación por parte de los/las profesionales del Servicio Gallego de Salud."
+      }
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+# Catálogo Maestro del Repositorio de Estudio — Oposición Ingeniero/a Biomédico/a del SERGAS (DOG 13/04/2026)
+
+> **🌐 Portal Web Interactivo (GitHub Pages):** **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)**  
+> **💻 Repositorio en GitHub:** **[https://github.com/bigsasi/opos-biomedica-sergas](https://github.com/bigsasi/opos-biomedica-sergas)**  
+> **📂 Carpeta en Google Drive:** **[`Opos SERGAS/`](https://drive.google.com/drive/folders/12gg4hbIbHzy2jmOLJ0L82U0uXK8LcNMj)**
+
+Este repositorio contiene toda la documentación oficial descargada, el cruce semántico de temarios, los **10 Bloques de Apuntes Desarrollados (que cubren los 82 temas del programa oficial: 8 de Parte Común + 74 de Parte Específica)**, los **26 textos legales oficiales íntegros del BOE, DOUE y DOG**, el **Simulacro Oficial de Examen (Teoría + Supuestos Prácticos + Parte Común)** y el **Portal Web Interactivo (`index.html`)**.
+
+---
+
+## 1. Mapa de Carpetas y Archivos Principales
+
+### A. Raíz — Portal Interactivo, Convocatorias, JSONs de Temarios y Cruce Estratégico
+- **[`index.html`](./index.html) / [`00_PORTAL_ESTUDIO_INTERACTIVO_BIOMEDICA_SERGAS.html`](./00_PORTAL_ESTUDIO_INTERACTIVO_BIOMEDICA_SERGAS.html)**: Portal web interactivo publicado en **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)**.
+- [`00_INDICE_CATALOGO.md`](./00_INDICE_CATALOGO.md): Este índice maestro y guía de lo que tienes y lo que falta.
+- [`cruce_temarios_sergas.md`](./cruce_temarios_sergas.md): **Documento estratégico central**. Contiene:
+  - Tabla comparativa tema a tema de los 82 temas contra las 5 categorías del SERGAS y otras CCAA.
+  - Análisis de solapamiento interno en **14 clústeres** («1 tema de otra opo = hasta 6 temas de Biomédica»).
+  - Referencias de otras CCAA (**IB-SALUT Baleares**, **GVA Comunitat Valenciana**, **SAS Andalucía**, **Osakidetza País Vasco**, **SALUD Aragón**) y el origen real del temario en el **RD 838/2015**.
+  - El **«Set Mínimo de Estudio» (39 temas)** y la **Estrategia «Bingo» / Núcleo Diamante (10 bloques / 15 temas clave)** basada en las reglas de puntuación del Anexo III del DOG.
+- [`resumen_email_biomedica.md`](./resumen_email_biomedica.md): Resumen ejecutivo listo para enviar por correo electrónico.
+- [`temario_biomedica.json`](./temario_biomedica.json) y [`convocatoria_biomedica.html`](./convocatoria_biomedica.html): Convocatoria oficial íntegra del DOG (Resolución de 31 de marzo de 2026, DOG núm. 67, de 13/04/2026) y temario estructurado en JSON.
+- Temarios oficiales en JSON y convocatorias/temarios íntegros en HTML del DOG de las 5 categorías comparadas del SERGAS:
+  - **Ingeniero/a Técnico/a:** [`temario_ingeniero_tecnico.json`](./temario_ingeniero_tecnico.json), [`ingeniero_tecnico_2026.html`](./ingeniero_tecnico_2026.html) y [`ingeniero_tecnico_temario_2018.html`](./ingeniero_tecnico_temario_2018.html)
+  - **Radiofísica Hospitalaria:** [`temario_radiofisica.json`](./temario_radiofisica.json), [`radiofisica_2025.html`](./radiofisica_2025.html) y [`radiofisica_temario_2007.html`](./radiofisica_temario_2007.html)
+  - **Informática (TIC A1/A2/C1):** [`temario_tic.json`](./temario_tic.json), [`tic_2025.html`](./tic_2025.html) y [`tic_temario_2021.html`](./tic_temario_2021.html)
+  - **TS Imagen para el Diagnóstico:** [`temario_imagen_diagnostico.json`](./temario_imagen_diagnostico.json), [`imagen_diagnostico_2025.html`](./imagen_diagnostico_2025.html) y [`imagen_rad_temario_2015.html`](./imagen_rad_temario_2015.html)
+  - **TS Radioterapia:** [`temario_radioterapia.json`](./temario_radioterapia.json), [`radioterapia_2019.html`](./radioterapia_2019.html) y [`imagen_rad_temario_2015.html`](./imagen_rad_temario_2015.html)
+
+---
+
+### B. Carpeta [`02_apuntes_nucleo_diamante/`](./02_apuntes_nucleo_diamante/) — Los 10 Bloques de Apuntes Desarrollados (Cobertura del 100 % de los 82 Temas)
+
+Cada archivo Markdown está redactado directamente con las **definiciones legales exactas, fórmulas de cálculo, tablas comparativas, cifras clave de normas UNE/ITC y trampas habituales de examen tipo test y supuestos prácticos**:
+
+| Archivo de Apuntes | Temas del Programa Oficial de Biomédica Cubiertos | Nº de Temas Cubiertos |
+| :--- | :--- | :---: |
+| **[`Bloque_01_Productos_Sanitarios_MDR_AEMPS_Implantables.md`](./02_apuntes_nucleo_diamante/Bloque_01_Productos_Sanitarios_MDR_AEMPS_Implantables.md)** | **Parte Específica:** Temas **1, 32, 33, 48 (MDR), 49 (RD 192/2023), 48-bis (AEMPS) y 50 (Implantables activos)** *(incluye las 22 Reglas del Anexo VIII del MDR, clasificación B/BF/CF `UNE-EN 60601-1`, fabricación in-house, tarjeta de implante y diseño `ISO 13485` / `14971` / `62304`)* | **7 temas** |
+| **[`Bloque_02_Fisica_Radiaciones_y_Radiodiagnostico_RX_TC_Mamo_Arcos.md`](./02_apuntes_nucleo_diamante/Bloque_02_Fisica_Radiaciones_y_Radiodiagnostico_RX_TC_Mamo_Arcos.md)** | **Parte Específica:** Temas **2, 3, 4, 5, 6, 7, 8 y 9** *(Física de radiaciones, magnitudes SI, electromagnetismo, tubo de RX, CR vs. DR indirecto/directo, salas RX, TC helicoidal/multicorte/volumétrico/espectral, Mamografía digital, Portátiles, Arcos en C, Hemodinámica y Quirófanos Híbridos)* | **8 temas** |
+| **[`Bloque_03_RM_Ecografia_Radioterapia_Protonterapia_y_Medicina_Nuclear.md`](./02_apuntes_nucleo_diamante/Bloque_03_RM_Ecografia_Radioterapia_Protonterapia_y_Medicina_Nuclear.md)** | **Parte Específica:** Temas **10, 11, 12, 13, 14, 15, 16, 17, 18 y 19** *(Resonancia Magnética, Espacio K, artefactos, Zonas ACR y Quench; Ecografía y Doppler; Acelerador Lineal LINAC, Braquiterapia HDR/LDR, Protonterapia y Pico de Bragg, Planificación TPS ICRU; Ciclotrón, PET-TC, PET-RM y SPECT-TC)* | **10 temas** |
+| **[`Bloque_04_Proteccion_Radiologica_CSN_RD601_RD1085_EURATOM.md`](./02_apuntes_nucleo_diamante/Bloque_04_Proteccion_Radiologica_CSN_RD601_RD1085_EURATOM.md)** | **Parte Específica:** Temas **51, 52, 53 y 54** *(`RD 601/2019` exposiciones médicas y NRD; `RD 1085/2009` instalaciones RX Clases 1, 2 y 3, EVAT/UTPR/SPR; Funciones del CSN `Ley 15/1980`; `RD 1029/2022` / Directiva `2013/59/EURATOM`: tabla de límites de dosis en cristalino $20\text{ mSv}$, feto $1\text{ mSv}$ y zonas radiológicas)* | **4 temas** |
+| **[`Bloque_05_Electromedicina_Criticos_Quirofano_Ventilacion_Anestesia_Monitorizacion.md`](./02_apuntes_nucleo_diamante/Bloque_05_Electromedicina_Criticos_Quirofano_Ventilacion_Anestesia_Monitorizacion.md)** | **Parte Específica:** Temas **20, 21, 22, 23, 25, 26, 28, 31, 35, 36 y 37** *(Ventilación mecánica, ecuación del movimiento y modos; Estación de anestesia y vaporizadores; Monitorización ECG, SpO2, PANI, PAI, EtCO2; Endoscopia flexible y quirúrgica; Robótica quirúrgica; Incubadoras y cunas térmicas; Desfibriladores; Electrobisturís; Consultas; Columnas, mesas y lámparas quirúrgicas)* | **11 temas** |
+| **[`Bloque_06_Equipamiento_Dialisis_Laboratorio_Esterilizacion_Rehabilitacion_Farmacia.md`](./02_apuntes_nucleo_diamante/Bloque_06_Equipamiento_Dialisis_Laboratorio_Esterilizacion_Rehabilitacion_Farmacia.md)** | **Parte Específica:** Temas **24, 27, 29, 30, 34, 57 y 58** *(Hemodiálisis y tren completo de Planta de Agua / Ósmosis Inversa; Esterilización vapor/peróxido/OE, Bowie-Dick y trazabilidad; Laboratorio clínico y Cabinas de Seguridad Biológica; Rehabilitación y Fisioterapia; Farmacia hospitalaria robotizada; Camas/grúas de hospitalización; Impresión 3D sanitaria)* | **7 temas** |
+| **[`Bloque_07_Salud_Digital_HIS_RIS_PACS_Interoperabilidad_HCE_CMBD_BI_IoMT.md`](./02_apuntes_nucleo_diamante/Bloque_07_Salud_Digital_HIS_RIS_PACS_Interoperabilidad_HCE_CMBD_BI_IoMT.md)** | **Parte Específica:** Temas **38, 39, 40, 41, 42, 43, 44, 47, 67 y 70** *(Mapa de sistemas del SERGAS: `IANUS`, `TELEA`, `SILICON`, `LOGAS`, `SIHGA`, `XIDE`, `HEXE`; Flujo HIS-RIS-PACS; Estándares `DICOM`, `HL7 v2/CDA/FHIR`, `IHE`, `IEEE 11073`; Codificación `CIAP-2`, `CIE-10-ES`, `SNOMED CT`; `SIAP`, `BDCAP`, `RAE-CMBD` y estratificación `GMA`; Gobierno del dato, BI/Datawarehouse, uso secundario LOPDGDD; Citación y Logística Kanban/RFID)* | **10 temas** |
+| **[`Bloque_08_Ingenieria_Hospitalaria_REBT_ITC38_Ambiente_Controlado_Planes_Directores_Calidad.md`](./02_apuntes_nucleo_diamante/Bloque_08_Ingenieria_Hospitalaria_REBT_ITC38_Ambiente_Controlado_Planes_Directores_Calidad.md)** | **Parte Específica:** Temas **45, 55, 59, 61, 62, 63, 64, 65, 66, 68 y 69** *(`REBT ITC-BT-38` quirófanos y esquema IT; Climatización y áreas de ambiente controlado `UNE 100713` y `UNE 171340`; Plan Funcional, Diseño de flujos, Planes Directores y Plan de Necesidades/Inversión; Preinstalación de equipos; Calidad por procesos y Donabedian; Estrategia SERGAS; CAD/BIM; Economía circular y residuos `Decreto 38/2015`)* | **11 temas** |
+| **[`Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md`](./02_apuntes_nucleo_diamante/Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md)** | **Parte Específica:** Temas **56, 60, 71, 72 y 73** *(Ciclo de vida y norma `UNE 209001 IN`, pruebas de aceptación y seguridad eléctrica `UNE-EN 62353`; Índice de criticidad de Fennigkoh y Smith; Cálculo de `MTBF`, `MTTR` y Disponibilidad; Módulos del `XMAO`; Regla de oro **60 / 30 / 10 de `COCIR` y `FENIN`**; `Ley 9/2017 LCSP` Libros I y II aplicada a tecnología sanitaria)* | **5 temas** |
+| **[`Bloque_10_Parte_Comun_SERGAS_y_Tema_74_Igualdad_Resumen_Test.md`](./02_apuntes_nucleo_diamante/Bloque_10_Parte_Comun_SERGAS_y_Tema_74_Igualdad_Resumen_Test.md)** | **Parte Común:** Temas **1 al 8** + **Parte Específica:** Tema **74** *(Constitución Art. 43, Estatuto de Galicia Art. 33, Ley General de Sanidad, Ley 8/2008 de Salud de Galicia y las 7 Áreas Sanitarias, Decreto 145/2024 estructura del SERGAS, Estatuto Marco Ley 55/2003, Decreto 206/2005, RGPD/LOPDGDD y Ley 3/2001, PRL Ley 31/1995 y Violencia de Género/Igualdad `LO 1/2004`, `Ley 11/2007` y `Ley 7/2023`)* | **9 temas** |
+| **TOTAL CUBIERTO EN LOS 10 BLOQUES DE APUNTES** | **8 Temas de Parte Común + 74 Temas de Parte Específica** | **82 de 82 (100 %)** |
+
+---
+
+### C. Carpeta [`01_normativa_oficial/`](./01_normativa_oficial/) — 26 Textos Legales Íntegros Oficiales Descargados del BOE, DOUE y DOG
+
+1. **Productos Sanitarios, Implantables, AEMPS y Currículo Base de Electromedicina Clínica:**
+   - [`T01_T48_T50_Reglamento_UE_2017_745_MDR_Productos_Sanitarios.pdf`](./01_normativa_oficial/T01_T48_T50_Reglamento_UE_2017_745_MDR_Productos_Sanitarios.pdf) (1,6 MB — Texto íntegro del DOUE)
+   - [`T01_T49_T50_RD_192_2023_Regulacion_Productos_Sanitarios.pdf`](./01_normativa_oficial/T01_T49_T50_RD_192_2023_Regulacion_Productos_Sanitarios.pdf) (BOE consolidado `BOE-A-2023-7416`)
+   - [`T50_RD_1616_2009_Productos_Sanitarios_Implantables_Activos.pdf`](./01_normativa_oficial/T50_RD_1616_2009_Productos_Sanitarios_Implantables_Activos.pdf) (BOE consolidado `BOE-A-2009-17607`)
+   - [`T48bis_RD_1275_2011_Estatuto_AEMPS.pdf`](./01_normativa_oficial/T48bis_RD_1275_2011_Estatuto_AEMPS.pdf) (BOE consolidado `BOE-A-2011-15044`)
+   - [`Base_Temas_01_a_73_RD_838_2015_Titulo_TS_Electromedicina_Clinica.pdf`](./01_normativa_oficial/Base_Temas_01_a_73_RD_838_2015_Titulo_TS_Electromedicina_Clinica.pdf) (BOE `BOE-A-2015-10728` — Título oficial del que proceden los epígrafes del SERGAS)
+   - [`Base_Temas_01_a_73_Orden_EFP_1216_2019_Curriculo_Electromedicina_Clinica.pdf`](./01_normativa_oficial/Base_Temas_01_a_73_Orden_EFP_1216_2019_Curriculo_Electromedicina_Clinica.pdf) (BOE `BOE-A-2019-18150` — Desarrollo curricular de los módulos 1588 a 1594)
+2. **Protección Radiológica, Rayos X y Consejo de Seguridad Nuclear (CSN):**
+   - [`T51_RD_601_2019_Justificacion_Optimizacion_Exposiciones_Medicas.pdf`](./01_normativa_oficial/T51_RD_601_2019_Justificacion_Optimizacion_Exposiciones_Medicas.pdf) (`BOE-A-2019-15604`)
+   - [`T52_RD_1085_2009_Reglamento_Instalacion_Aparatos_Rayos_X_Diagnostico.pdf`](./01_normativa_oficial/T52_RD_1085_2009_Reglamento_Instalacion_Aparatos_Rayos_X_Diagnostico.pdf) (`BOE-A-2009-11932`)
+   - [`T54_RD_1029_2022_Reglamento_Proteccion_Salud_Radiaciones_Ionizantes_EURATOM.pdf`](./01_normativa_oficial/T54_RD_1029_2022_Reglamento_Proteccion_Salud_Radiaciones_Ionizantes_EURATOM.pdf) (`BOE-A-2022-21682`)
+   - [`T53_Ley_15_1980_Creacion_Consejo_Seguridad_Nuclear_CSN.pdf`](./01_normativa_oficial/T53_Ley_15_1980_Creacion_Consejo_Seguridad_Nuclear_CSN.pdf) (`BOE-A-1980-8650`)
+   - [`T53_RD_1440_2010_Estatuto_Consejo_Seguridad_Nuclear_CSN.pdf`](./01_normativa_oficial/T53_RD_1440_2010_Estatuto_Consejo_Seguridad_Nuclear_CSN.pdf) (`BOE-A-2010-17861`)
+3. **Ingeniería Hospitalaria (REBT / `ITC-BT-38`), Contratación Pública (`LCSP`) y Sistemas de Información (`RAE-CMBD`):**
+   - [`T55_RD_842_2002_REBT_e_ITC_BT_38_Quirofanos.pdf`](./01_normativa_oficial/T55_RD_842_2002_REBT_e_ITC_BT_38_Quirofanos.pdf) (8,6 MB — Reglamento Electrotécnico para Baja Tensión completo con todas sus ITC-BT, incluidas `ITC-BT-28` e `ITC-BT-38`, `BOE-A-2002-18099`)
+   - [`T56_Ley_9_2017_Contratos_Sector_Publico_LCSP.pdf`](./01_normativa_oficial/T56_Ley_9_2017_Contratos_Sector_Publico_LCSP.pdf) (1,6 MB — Texto consolidado íntegro, `BOE-A-2017-12902`)
+   - [`T41_RD_69_2015_Registro_Actividad_Atencion_Sanitaria_Especializada_RAE_CMBD.pdf`](./01_normativa_oficial/T41_RD_69_2015_Registro_Actividad_Atencion_Sanitaria_Especializada_RAE_CMBD.pdf) (`BOE-A-2015-1235`)
+4. **Legislación de Parte Común y Transversal de Igualdad / Protección de Datos:**
+   - [`Comun_T01_Constitucion_Espanola_1978.pdf`](./01_normativa_oficial/Comun_T01_Constitucion_Espanola_1978.pdf) (`BOE-A-1978-31229`)
+   - [`Comun_T02_LO_1_1981_Estatuto_Autonomia_Galicia.pdf`](./01_normativa_oficial/Comun_T02_LO_1_1981_Estatuto_Autonomia_Galicia.pdf) (`BOE-A-1981-9564`)
+   - [`Comun_T03_Ley_14_1986_General_de_Sanidad.pdf`](./01_normativa_oficial/Comun_T03_Ley_14_1986_General_de_Sanidad.pdf) (`BOE-A-1986-10499`)
+   - [`Comun_T04_Ley_8_2008_Salud_de_Galicia.pdf`](./01_normativa_oficial/Comun_T04_Ley_8_2008_Salud_de_Galicia.pdf) (`BOE-A-2008-14134`)
+   - [`Comun_T05_Ley_55_2003_Estatuto_Marco_Personal_Estatutario.pdf`](./01_normativa_oficial/Comun_T05_Ley_55_2003_Estatuto_Marco_Personal_Estatutario.pdf) (`BOE-A-2003-23101`)
+   - [`Comun_T06_Decreto_206_2005_Provision_Plazas_Personal_Estatutario_SERGAS.html`](./01_normativa_oficial/Comun_T06_Decreto_206_2005_Provision_Plazas_Personal_Estatutario_SERGAS.html) (`DOG núm. 145, de 29/07/2005`)
+   - [`Comun_T07_Esp_T40_LO_3_2018_Proteccion_Datos_LOPDGDD.pdf`](./01_normativa_oficial/Comun_T07_Esp_T40_LO_3_2018_Proteccion_Datos_LOPDGDD.pdf) (`BOE-A-2018-16673`)
+   - [`Comun_T07_Esp_T40_Ley_Gallega_3_2001_Consentimiento_Informado_e_Historia_Clinica.html`](./01_normativa_oficial/Comun_T07_Esp_T40_Ley_Gallega_3_2001_Consentimiento_Informado_e_Historia_Clinica.html) (`BOE-A-2001-12770`)
+   - [`Comun_T08_Ley_31_1995_Prevencion_Riesgos_Laborales.pdf`](./01_normativa_oficial/Comun_T08_Ley_31_1995_Prevencion_Riesgos_Laborales.pdf) (`BOE-A-1995-24292`)
+   - [`Comun_T08_Esp_T74_LO_1_2004_Proteccion_Integral_Violencia_Genero.pdf`](./01_normativa_oficial/Comun_T08_Esp_T74_LO_1_2004_Proteccion_Integral_Violencia_Genero.pdf) (`BOE-A-2004-21760`)
+   - [`Comun_T08_Esp_T74_Ley_Gallega_11_2007_Prevencion_Violencia_Genero.html`](./01_normativa_oficial/Comun_T08_Esp_T74_Ley_Gallega_11_2007_Prevencion_Violencia_Genero.html) (`BOE-A-2007-16611`)
+   - [`Comun_T08_Esp_T74_Ley_Gallega_7_2023_Igualdad_Mujeres_y_Hombres.pdf`](./01_normativa_oficial/Comun_T08_Esp_T74_Ley_Gallega_7_2023_Igualdad_Mujeres_y_Hombres.pdf) (`BOE-A-2024-2663`)
+
+---
+
+### D. Carpeta [`03_examenes_y_simulacros/`](./03_examenes_y_simulacros/) — Entrenamiento de Examen
+- [`Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md`](./03_examenes_y_simulacros/Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md): **45 preguntas completas con formato oficial del SERGAS** (25 de Teoría Específica + 5 Supuestos Prácticos hospitalarios desglosados en 15 preguntas encadenadas + 5 de Parte Común) con plantilla de respuestas y explicación técnica paso a paso.
+
+---
+
+## 2. ¿Qué Falta Aparte de lo que Ya Tienes Aquí y Dónde Conseguirlo? (Transparencia Total)
+
+Para que tengas el mapa completo sin puntos ciegos, esto es lo único que **no es de descarga libre directa desde el BOE** y cómo suplirlo o conseguirlo:
+
+1. **Normas Técnicas `UNE` / `AENOR` sujetas a Copyright (No son leyes gratuitas del BOE):**
+   - En concreto: **`UNE 209001 IN`** (Gestión de unidad de electromedicina), **`UNE 100713`** (Climatización en hospitales), **`UNE 171340`** (Validación de salas de ambiente controlado), **`UNE-EN 60601-1`** (Seguridad básica de equipos electromédicos) y **`UNE-EN 62353`** (Ensayos recurrentes tras reparación).
+   - **¿Cómo está resuelto ya en tus apuntes?** Ya te he extraído e incluido en los **[Bloques 01](./02_apuntes_nucleo_diamante/Bloque_01_Productos_Sanitarios_MDR_AEMPS_Implantables.md), [08](./02_apuntes_nucleo_diamante/Bloque_08_Ingenieria_Hospitalaria_REBT_ITC38_Ambiente_Controlado_Planes_Directores_Calidad.md) y [09](./02_apuntes_nucleo_diamante/Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md)** **todas las tablas numéricas, presiones en Pascales, renovaciones/hora, clases ISO 5/7/8, umbrales de corrientes de fuga en $\mu\text{A}$, resistencias en $\Omega$ y fases del ciclo de vida** que caen en los test. Si aun así quieres leer el texto íntegro de alguna norma UNE, puedes consultarla gratis a través de la base de datos *AENORmás* de cualquier biblioteca universitaria gallega (USC, UVigo, UDC) o Colegio Oficial de Ingenieros.
+2. **Cuadernillos históricos de exámenes anteriores en la web del SERGAS y del SAS:**
+   - En la web del SERGAS (`www.sergas.es` $\rightarrow$ *Emprego Público* $\rightarrow$ *Listaxes e convocatorias OPE*) y del SAS (`sspa.juntadeandalucia.es` $\rightarrow$ *OEP Electromedicina*) los PDFs de exámenes de años anteriores están detrás de buscadores dinámicos por categoría. Conviene descargarse los últimos **2 exámenes de Ingeniero/a Técnico/a del SERGAS**, **2 de Informática TIC (A1/A2) del SERGAS**, **2 de Radiofísica del SERGAS** y **2 de Técnico Especialista en Electromedicina del SAS** para hacer simulacros reales cronometrados.
+3. **Documentación Interna de Usuario de las Aplicaciones Corporativas del SERGAS (`IANUS 5`, `XMAO`, `LOGAS`, `SILICON`, `TELEA`):**
+   - En los **[Bloques 07](./02_apuntes_nucleo_diamante/Bloque_07_Salud_Digital_HIS_RIS_PACS_Interoperabilidad_HCE_CMBD_BI_IoMT.md) y [09](./02_apuntes_nucleo_diamante/Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md)** tienes explicada la función, arquitectura y estándares de integración de cada una. Si trabajas o tienes contacto en un Área Sanitaria del SERGAS, echar un vistazo de 30 minutos a una pantalla real de una Orden de Trabajo en el **`XMAO`** y al árbol de inventario te dará ventaja adicional en los supuestos prácticos de los Temas 71–73.
+4. **Ampliación opcional de esquemas de equipos concretos (Manuales de FP Electromedicina Clínica `RD 838/2015`):**
+   - Si en algún tema de equipamiento (ej. *Módulo 1588 Imagen*, *Módulo 1589 Críticos* o *Módulo 1590 Laboratorio/Hemodiálisis*) quieres ver diagramas de bloques electrónicos detallados más allá de los resúmenes de los Bloques 02 a 06, los manuales de la editorial **Síntesis** o **Arán** del Ciclo Superior de *Electromedicina Clínica* siguen exactamente el mismo índice que tu convocatoria.

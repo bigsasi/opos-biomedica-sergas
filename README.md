@@ -1,2 +1,87 @@
-# opos-biomedica-sergas
-Portal interactivo de estudio, apuntes Núcleo Diamante (82 temas), simulacros y normativa oficial BOE/DOG para las Oposiciones de Ingeniería Biomédica del SERGAS
+# 🏥 Oposiciones Ingeniero/a Biomédico/a SERGAS (OPE 2026)
+
+> ### 🌐 Portal de Estudio Interactivo (GitHub Pages)
+> 👉 **[Abrir Portal Web Interactivo (`https://bigsasi.github.io/opos-biomedica-sergas/`)](https://bigsasi.github.io/opos-biomedica-sergas/)**
+
+Repositorio completo y verificado para la preparación de la oposición de **Ingeniero/a Biomédico/a (Subgrupo A1)** del **Servizo Galego de Saúde (SERGAS)**, conforme a la convocatoria oficial (**DOG núm. 67, de 13 de abril de 2026** — 4 plazas: 3 Turno Libre + 1 Promoción Interna; 82 temas: 8 Parte Común + 74 Parte Específica).
+
+---
+
+## 🚀 1. Portal de Estudio Interactivo (`index.html`)
+
+Disponible directamente desde cualquier navegador, móvil o tablet en **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)** con guardado automático de progreso (`localStorage`):
+
+1. **📚 Apuntes «Núcleo Diamante» (10 Bloques)**: Lector interactivo con tabla de contenidos por bloque, buscador instantáneo en los 82 temas, modo de resaltado de datos críticos de examen y seguimiento de lectura.
+2. **🎯 Mapa de 82 Temas y Cruce Histórico SERGAS**: Filtro por fase estratégica (Núcleo Diamante 53 temas con solapamiento directo en exámenes SERGAS vs. Exclusivos Biomédica 29 temas), control de estado (*Pendiente* / *En estudio* / *Dominado*) y cruce con 5 categorías afines del SERGAS.
+3. **📝 Simulacro Oficial Interactivo (45 Preguntas + 5 Supuestos Prácticos)**: Modo Entrenamiento (feedback inmediato) o Modo Examen Real, cálculo de nota neta con penalización oficial ($-1/4$), escalado sobre 50 puntos (mínimo 25,00 ptos) y justificación técnica/jurídica completa.
+4. **⚡ Flashcards y Cifras Clave**: Tarjetas interactivas de repaso rápido (umbrales IEC 60601-1, ITC-BT-38, plazos MDR/AEMPS, CSN, LCSP y legislación gallega).
+5. **⚖️ Biblioteca Normativa (26 Leyes) y Calculadora de Baremo (60/40)**: Acceso directo a los 26 PDFs/HTMLs oficiales alojados en este repositorio, en el BOE/DOG y en Google Drive, junto con la calculadora oficial de Oposición (60 ptos) + Concurso (40 ptos).
+
+---
+
+## 💎 2. Apuntes «Núcleo Diamante» (`02_apuntes_nucleo_diamante/`)
+
+Puedes leer cualquiera de los 10 bloques directamente en GitHub haciendo clic en su enlace:
+
+| Bloque | Título y Alcance | Temas Oficiales | Archivo Markdown |
+| :---: | :--- | :--- | :--- |
+| **Bloque 01** | Concepto, Clasificación y Regulación de Dispositivos Biomédicos y Productos Sanitarios (MDR, RD 192/2023, AEMPS, Implantables e I+D+i) | `1, 32, 33, 48, 49, 48-bis, 50` | [📄 `Bloque_01_Productos_Sanitarios_MDR_AEMPS_Implantables.md`](./02_apuntes_nucleo_diamante/Bloque_01_Productos_Sanitarios_MDR_AEMPS_Implantables.md) |
+| **Bloque 02** | Física de las Radiaciones, Electromagnetismo y Equipos de Radiodiagnóstico por Rayos X (Salas Digitales, TC, Mamografía, Portátiles e Intervencionismo) | `2, 3, 4, 5, 6, 7, 8, 9` | [📄 `Bloque_02_Fisica_Radiaciones_y_Radiodiagnostico_RX_TC_Mamo_Arcos.md`](./02_apuntes_nucleo_diamante/Bloque_02_Fisica_Radiaciones_y_Radiodiagnostico_RX_TC_Mamo_Arcos.md) |
+| **Bloque 03** | Resonancia Magnética, Ultrasonidos, Radioterapia (Externa, Braquiterapia, Protonterapia, Planificación) y Medicina Nuclear (Ciclotrón, PET, SPECT) | `10, 11, 12, 13, 14, 15, 16, 17, 18, 19` | [📄 `Bloque_03_RM_Ecografia_Radioterapia_Protonterapia_y_Medicina_Nuclear.md`](./02_apuntes_nucleo_diamante/Bloque_03_RM_Ecografia_Radioterapia_Protonterapia_y_Medicina_Nuclear.md) |
+| **Bloque 04** | Protección Radiológica y Normativa Sanitaria (RD 601/2019, RD 1085/2009, CSN y Reglamento de Protección contra Radiaciones Ionizantes / Directiva 2013/59/EURATOM) | `51, 52, 53, 54` | [📄 `Bloque_04_Proteccion_Radiologica_CSN_RD601_RD1085_EURATOM.md`](./02_apuntes_nucleo_diamante/Bloque_04_Proteccion_Radiologica_CSN_RD601_RD1085_EURATOM.md) |
+| **Bloque 05** | Electromedicina de Cuidados Críticos, Bloque Quirúrgico, Ventilación Mecánica, Anestesia, Monitorización, Desfibrilación, Endoscopia y Robótica Quirúrgica | `20, 21, 22, 23, 25, 26, 28, 31, 35, 36, 37` | [📄 `Bloque_05_Electromedicina_Criticos_Quirofano_Ventilacion_Anestesia_Monitorizacion.md`](./02_apuntes_nucleo_diamante/Bloque_05_Electromedicina_Criticos_Quirofano_Ventilacion_Anestesia_Monitorizacion.md) |
+| **Bloque 06** | Equipamiento de Diálisis y Tratamiento de Agua, Esterilización, Laboratorio, Rehabilitación, Farmacia Hospitalaria, Hospitalización e Impresión 3D | `24, 27, 29, 30, 34, 57, 58` | [📄 `Bloque_06_Equipamiento_Dialisis_Laboratorio_Esterilizacion_Rehabilitacion_Farmacia.md`](./02_apuntes_nucleo_diamante/Bloque_06_Equipamiento_Dialisis_Laboratorio_Esterilizacion_Rehabilitacion_Farmacia.md) |
+| **Bloque 07** | Salud Digital, HIS/RIS/PACS, Interoperabilidad (DICOM, HL7, IHE, SNOMED), Historia Clínica Electrónica, CMBD/GMA, Analítica/BI, IoMT, Citación y Logística | `38, 39, 40, 41, 42, 43, 44, 47, 67, 70` | [📄 `Bloque_07_Salud_Digital_HIS_RIS_PACS_Interoperabilidad_HCE_CMBD_BI_IoMT.md`](./02_apuntes_nucleo_diamante/Bloque_07_Salud_Digital_HIS_RIS_PACS_Interoperabilidad_HCE_CMBD_BI_IoMT.md) |
+| **Bloque 08** | Ingeniería Hospitalaria: Normativa Eléctrica (REBT / ITC-BT-38), Áreas de Ambiente Controlado (UNE 100713 / 171340), Planes Funcionales y Directores, Calidad por Procesos, CAD y Sostenibilidad | `45, 55, 59, 61, 62, 63, 64, 65, 66, 68, 69` | [📄 `Bloque_08_Ingenieria_Hospitalaria_REBT_ITC38_Ambiente_Controlado_Planes_Directores_Calidad.md`](./02_apuntes_nucleo_diamante/Bloque_08_Ingenieria_Hospitalaria_REBT_ITC38_Ambiente_Controlado_Planes_Directores_Calidad.md) |
+| **Bloque 09** | Gestión del Mantenimiento Biomédico (`UNE 209001 IN`), XMAO, Base Instalada/Ciclo de Vida, Renovación Tecnológica (`FENIN` / `COCIR`) y Contratación Pública (`Ley 9/2017 LCSP`) | `56, 60, 71, 72, 73` | [📄 `Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md`](./02_apuntes_nucleo_diamante/Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md) |
+| **Bloque 10** | Parte Común del SERGAS (Temas 1 al 8) y Tema 74 Específico (Perspectiva y Violencia de Género en el SERGAS) — Resumen Directo para Test | `C1, C2, C3, C4, C5, C6, C7, C8, 74` | [📄 `Bloque_10_Parte_Comun_SERGAS_y_Tema_74_Igualdad_Resumen_Test.md`](./02_apuntes_nucleo_diamante/Bloque_10_Parte_Comun_SERGAS_y_Tema_74_Igualdad_Resumen_Test.md) |
+
+---
+
+## 📝 3. Simulacros, Catálogo y Cruces de Temario
+
+- 📋 **[`00_INDICE_CATALOGO.md`](./00_INDICE_CATALOGO.md)**: Catálogo maestro del repositorio, inventario de los 82 temas y estrategia de estudio en 3 fases.
+- 📝 **[`03_examenes_y_simulacros/Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md`](./03_examenes_y_simulacros/Simulacro_Oficial_Biomedica_SERGAS_Teoria_y_Supuestos.md)**: Simulacro oficial completo (35 preguntas de teoría + 10 preguntas de 5 supuestos prácticos) con plantilla de respuestas comentada.
+- 🔀 **[`cruce_temarios_sergas.md`](./cruce_temarios_sergas.md)**: Cruce detallado tema por tema con Radiofísica Hospitalaria, Ingeniero/a Técnico/a, TS Imagen para el Diagnóstico, TS Radioterapia y Grupo Técnico TIC.
+- 📧 **[`resumen_email_biomedica.md`](./resumen_email_biomedica.md)**: Resumen ejecutivo de la convocatoria, estructura de pruebas, baremo de méritos y fechas clave.
+
+---
+
+## ⚖️ 4. Normativa Oficial Consolidada (`01_normativa_oficial/`)
+
+Los **26 documentos normativos oficiales** (BOE, DOUE y DOG) verificados e incluidos en el repositorio:
+
+| Referencia Oficial | Temas | Descripción | Archivo en Repositorio | Texto Consolidado |
+| :--- | :--- | :--- | :--- | :---: |
+| **BOE-A-2019-18150** | `Temas 1–73 (Currículo Módulos 1588–1594)` | Orden EFP/1216/2019, de 11 de diciembre — Currículo de TS en Electromedicina Clínica | [📄 `Base_Temas_01_a_73_Orden_EFP_1216_2019_Curriculo_Electromedicina_Clinica.pdf`](./01_normativa_oficial/Base_Temas_01_a_73_Orden_EFP_1216_2019_Curriculo_Electromedicina_Clinica.pdf) | [🌐 BOE/DOG](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2019-18150) |
+| **BOE-A-2015-10728** | `Temas 1–73 (Base del Temario)` | Real Decreto 838/2015, de 21 de septiembre — Título de TS en Electromedicina Clínica | [📄 `Base_Temas_01_a_73_RD_838_2015_Titulo_TS_Electromedicina_Clinica.pdf`](./01_normativa_oficial/Base_Temas_01_a_73_RD_838_2015_Titulo_TS_Electromedicina_Clinica.pdf) | [🌐 BOE/DOG](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2015-10728) |
+| **BOE-A-1978-31229** | `Común Tema 1` | Constitución Española de 1978 (Art. 43 Protección de la salud; Art. 149.1.16ª Competencias) | [📄 `Comun_T01_Constitucion_Espanola_1978.pdf`](./01_normativa_oficial/Comun_T01_Constitucion_Espanola_1978.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229) |
+| **BOE-A-1981-9564** | `Común Tema 2` | Ley Orgánica 1/1981, de 6 de abril, de Estatuto de Autonomía para Galicia (Art. 33 Sanidad) | [📄 `Comun_T02_LO_1_1981_Estatuto_Autonomia_Galicia.pdf`](./01_normativa_oficial/Comun_T02_LO_1_1981_Estatuto_Autonomia_Galicia.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-1981-9564) |
+| **BOE-A-1986-10499** | `Común Tema 3` | Ley 14/1986, de 25 de abril, General de Sanidad (Áreas de Salud 200k-250k hab., Derechos y Deberes) | [📄 `Comun_T03_Ley_14_1986_General_de_Sanidad.pdf`](./01_normativa_oficial/Comun_T03_Ley_14_1986_General_de_Sanidad.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-1986-10499) |
+| **BOE-A-2008-14134** | `Común Tema 4` | Ley 8/2008, de 10 de julio, de salud de Galicia (7 Áreas Sanitarias, 14 Distritos, SERGAS) | [📄 `Comun_T04_Ley_8_2008_Salud_de_Galicia.pdf`](./01_normativa_oficial/Comun_T04_Ley_8_2008_Salud_de_Galicia.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2008-14134) |
+| **BOE-A-2003-23101** | `Común Tema 5` | Ley 55/2003, de 16 de diciembre, del Estatuto Marco del personal estatutario de los servicios de salud | [📄 `Comun_T05_Ley_55_2003_Estatuto_Marco_Personal_Estatutario.pdf`](./01_normativa_oficial/Comun_T05_Ley_55_2003_Estatuto_Marco_Personal_Estatutario.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2003-23101) |
+| **DOG-2005-145** | `Común Tema 6` | Decreto 206/2005, de 22 de julio, de provisión de plazas de personal estatutario del SERGAS | [📄 `Comun_T06_Decreto_206_2005_Provision_Plazas_Personal_Estatutario_SERGAS.html`](./01_normativa_oficial/Comun_T06_Decreto_206_2005_Provision_Plazas_Personal_Estatutario_SERGAS.html) | [🌐 BOE/DOG](https://www.xunta.gal/dog/Publicados/2005/20050729/Anuncio18FA2_es.html) |
+| **BOE-A-2018-16673** | `Común Tema 7 y Esp. Tema 40` | Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD) | [📄 `Comun_T07_Esp_T40_LO_3_2018_Proteccion_Datos_LOPDGDD.pdf`](./01_normativa_oficial/Comun_T07_Esp_T40_LO_3_2018_Proteccion_Datos_LOPDGDD.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673) |
+| **BOE-A-2001-12770** | `Común Tema 7 y Esp. Tema 40` | Ley 3/2001, de 28 de mayo, reguladora del consentimiento informado y de la historia clínica de los pacientes | [📄 `Comun_T07_Esp_T40_Ley_Gallega_3_2001_Consentimiento_Informado_e_Historia_Clinica.html`](./01_normativa_oficial/Comun_T07_Esp_T40_Ley_Gallega_3_2001_Consentimiento_Informado_e_Historia_Clinica.html) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2001-12770) |
+| **BOE-A-2004-21760** | `Común Tema 8 y Esp. Tema 74` | Ley Orgánica 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género | [📄 `Comun_T08_Esp_T74_LO_1_2004_Proteccion_Integral_Violencia_Genero.pdf`](./01_normativa_oficial/Comun_T08_Esp_T74_LO_1_2004_Proteccion_Integral_Violencia_Genero.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2004-21760) |
+| **BOE-A-2007-16611** | `Común Tema 8 y Esp. Tema 74` | Ley 11/2007, de 27 de julio, gallega para la prevención y el tratamiento integral de la violencia de género | [📄 `Comun_T08_Esp_T74_Ley_Gallega_11_2007_Prevencion_Violencia_Genero.html`](./01_normativa_oficial/Comun_T08_Esp_T74_Ley_Gallega_11_2007_Prevencion_Violencia_Genero.html) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2007-16611) |
+| **BOE-A-2024-2663** | `Común Tema 8 y Esp. Tema 74` | Ley 7/2023, de 30 de noviembre, para la igualdad efectiva de mujeres y hombres de Galicia | [📄 `Comun_T08_Esp_T74_Ley_Gallega_7_2023_Igualdad_Mujeres_y_Hombres.pdf`](./01_normativa_oficial/Comun_T08_Esp_T74_Ley_Gallega_7_2023_Igualdad_Mujeres_y_Hombres.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2024-2663) |
+| **BOE-A-1995-24292** | `Común Tema 8` | Ley 31/1995, de 8 de noviembre, de Prevención de Riesgos Laborales (Caps. I, II, III y V) | [📄 `Comun_T08_Ley_31_1995_Prevencion_Riesgos_Laborales.pdf`](./01_normativa_oficial/Comun_T08_Ley_31_1995_Prevencion_Riesgos_Laborales.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-1995-24292) |
+| **DOUE-L-2017-81024** | `Esp. Temas 1, 32, 48 y 50` | Reglamento (UE) 2017/745 (MDR) sobre los productos sanitarios (Caps. I, II, IX y Anexo VIII 22 Reglas) | [📄 `T01_T48_T50_Reglamento_UE_2017_745_MDR_Productos_Sanitarios.pdf`](./01_normativa_oficial/T01_T48_T50_Reglamento_UE_2017_745_MDR_Productos_Sanitarios.pdf) | [🌐 BOE/DOG](https://www.boe.es/doue/2017/117/L00001-00175.pdf) |
+| **BOE-A-2023-7416** | `Esp. Temas 1, 49 y 50` | Real Decreto 192/2023, de 21 de marzo, por el que se regulan los productos sanitarios en España (Art. 9 in-house) | [📄 `T01_T49_T50_RD_192_2023_Regulacion_Productos_Sanitarios.pdf`](./01_normativa_oficial/T01_T49_T50_RD_192_2023_Regulacion_Productos_Sanitarios.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2023-7416) |
+| **BOE-A-2015-1235** | `Esp. Tema 41` | Real Decreto 69/2015, de 6 de febrero, por el que se regula el Registro de Actividad de Atención Sanitaria Especializada (RAE-CMBD) | [📄 `T41_RD_69_2015_Registro_Actividad_Atencion_Sanitaria_Especializada_RAE_CMBD.pdf`](./01_normativa_oficial/T41_RD_69_2015_Registro_Actividad_Atencion_Sanitaria_Especializada_RAE_CMBD.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2015-1235) |
+| **BOE-A-2011-15044** | `Esp. Tema 48-bis (Orden 49)` | Real Decreto 1275/2011, de 16 de septiembre, por el que se crea la Agencia estatal AEMPS y se aprueba su Estatuto | [📄 `T48bis_RD_1275_2011_Estatuto_AEMPS.pdf`](./01_normativa_oficial/T48bis_RD_1275_2011_Estatuto_AEMPS.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2011-15044) |
+| **BOE-A-2009-17607** | `Esp. Tema 50 y Tema 32` | Real Decreto 1616/2009, de 26 de octubre, por el que se regulan los productos sanitarios implantables activos | [📄 `T50_RD_1616_2009_Productos_Sanitarios_Implantables_Activos.pdf`](./01_normativa_oficial/T50_RD_1616_2009_Productos_Sanitarios_Implantables_Activos.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2009-17607) |
+| **BOE-A-2019-15604** | `Esp. Tema 51` | Real Decreto 601/2019, de 18 de octubre, sobre justificación y optimización del uso de las radiaciones ionizantes en exposiciones médicas | [📄 `T51_RD_601_2019_Justificacion_Optimizacion_Exposiciones_Medicas.pdf`](./01_normativa_oficial/T51_RD_601_2019_Justificacion_Optimizacion_Exposiciones_Medicas.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2019-15604) |
+| **BOE-A-2009-11932** | `Esp. Tema 52` | Real Decreto 1085/2009, de 3 de julio, Reglamento sobre instalación y utilización de aparatos de rayos X con fines de diagnóstico médico | [📄 `T52_RD_1085_2009_Reglamento_Instalacion_Aparatos_Rayos_X_Diagnostico.pdf`](./01_normativa_oficial/T52_RD_1085_2009_Reglamento_Instalacion_Aparatos_Rayos_X_Diagnostico.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2009-11932) |
+| **BOE-A-1980-8650** | `Esp. Tema 53` | Ley 15/1980, de 22 de abril, de creación del Consejo de Seguridad Nuclear (CSN) | [📄 `T53_Ley_15_1980_Creacion_Consejo_Seguridad_Nuclear_CSN.pdf`](./01_normativa_oficial/T53_Ley_15_1980_Creacion_Consejo_Seguridad_Nuclear_CSN.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-1980-8650) |
+| **BOE-A-2010-17861** | `Esp. Tema 53` | Real Decreto 1440/2010, de 5 de noviembre, por el que se aprueba el Estatuto del Consejo de Seguridad Nuclear | [📄 `T53_RD_1440_2010_Estatuto_Consejo_Seguridad_Nuclear_CSN.pdf`](./01_normativa_oficial/T53_RD_1440_2010_Estatuto_Consejo_Seguridad_Nuclear_CSN.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2010-17861) |
+| **BOE-A-2022-21682** | `Esp. Tema 54` | Real Decreto 1029/2022, de 20 de diciembre, Reglamento sobre protección de la salud contra los riesgos derivados de las radiaciones ionizantes (Directiva 2013/59/EURATOM) | [📄 `T54_RD_1029_2022_Reglamento_Proteccion_Salud_Radiaciones_Ionizantes_EURATOM.pdf`](./01_normativa_oficial/T54_RD_1029_2022_Reglamento_Proteccion_Salud_Radiaciones_Ionizantes_EURATOM.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2022-21682) |
+| **BOE-A-2002-18099** | `Esp. Tema 55` | Real Decreto 842/2002, de 2 de agosto, Reglamento Electrotécnico para Baja Tensión (REBT) e ITC-BT-38 (Quirófanos y salas de intervención) | [📄 `T55_RD_842_2002_REBT_e_ITC_BT_38_Quirofanos.pdf`](./01_normativa_oficial/T55_RD_842_2002_REBT_e_ITC_BT_38_Quirofanos.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099) |
+| **BOE-A-2017-12902** | `Esp. Tema 56` | Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público (LCSP — Libros I y II) | [📄 `T56_Ley_9_2017_Contratos_Sector_Publico_LCSP.pdf`](./01_normativa_oficial/T56_Ley_9_2017_Contratos_Sector_Publico_LCSP.pdf) | [🌐 BOE/DOG](https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902) |
+
+---
+
+## 📂 5. Enlace a Carpeta de Google Drive
+
+- **[Carpeta Google Drive (`Opos SERGAS/`)](https://drive.google.com/drive/folders/12gg4hbIbHzy2jmOLJ0L82U0uXK8LcNMj)**
