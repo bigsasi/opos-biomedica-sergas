@@ -1,35 +1,6 @@
 # Tema 16 — Caracterización y funcionamiento de los sistemas de planificación para radioterapia y protonterapia. Equipamiento asociado.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #16 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 03 — Resonancia Magnética, Ultrasonidos, Radioterapia y Medicina Nuclear
-> - **Marco Normativo y Técnico Nuclear:** RD 1566/1998 (Criterios de Calidad en Radioterapia), RD 601/2019 (Justificación y Optimización de Exposiciones Médicas), Reglamento (UE) 2017/745 (MDR — Software como Producto Sanitario Clase IIb, Regla 11), RD 192/2023, RD 838/2015 y Orden EFP/1216/2019 (Módulo 1588), Norma UNE-EN 62083 (Seguridad de los sistemas de planificación de tratamiento para radioterapia) e IEC 62304 (Ciclo de vida del software de dispositivos médicos), Informes ICRU 50, ICRU 62, ICRU 78, ICRU 83, ICRU 89 e ICRU 91, e Informe Técnico OIEA TRS-430.
-> - **Sistemas y Entorno SERGAS:** Servicios de Radiofísica y Protección Radiológica y de Oncología Radioterápica del SERGAS (CHUS, CHUAC, CHUVI, HULA, CHUO) y Centro de Protonterapia de Galicia, Sistemas TPS (Eclipse, RayStation, Monaco, Oncentra), Sistemas OIS/R&V (ARIA, MOSAIQ), Estándar DICOM-RT / DICOM-RT Ion, PACS e IANUS.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 16** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del SERGAS aborda el núcleo computacional, dosimétrico y de imagen del proceso radioterápico: los **Sistemas de Planificación de Tratamiento (*Treatment Planning Systems* — TPS)** tanto para radioterapia externa con fotones/electrones y braquiterapia como para **protonterapia**, así como todo el **equipamiento asociado de simulación, inmovilización y verificación dosimétrica**. Su desarrollo integral comprende:
-1. **Equipamiento asociado de simulación e inmovilización:** TC simulador de gran apertura (*Big-Bore CT*), adquisición 4D sincronizada con el ciclo respiratorio (**TC 4D**), sistemas láser externos móviles motorizados (`LAP`), dispositivos de inmovilización indexados, y registro rígido y deformable (**DIR**) con RM y PET-TC.
-2. **Física de conversión de imagen tomográfica a medio de cálculo dosimétrico:** Curva de calibración de Unidades Hounsfield ($\text{UH}$) a **Densidad Electrónica Relativa ($\rho_e^w$)** o densidad másica ($\rho$) en fotones/electrones, frente a la conversión crítica a **Poder de Frenado Relativo al agua (*Stopping Power Ratio* — $\text{SPR}$)** mediante el método estequiométrico de Schneider o **TC de Doble Energía (DECT)** en protonterapia.
-3. **Jerarquía internacional de volúmenes de planificación y prescripción:** Informes **ICRU 50 y 62** (3D-CRT), **ICRU 78** (Protonterapia), **ICRU 83** (IMRT/VMAT), **ICRU 89** (Braquiterapia 3D) e **ICRU 91** (SRS/SBRT), junto con la sustitución del PTV geométrico por la **Optimización Robusta multi-escenario** en protonterapia.
-4. **Algoritmos matemáticos de cálculo de dosis, optimización inversa y control de calidad:** Algoritmos de Tipo A (*Pencil Beam*), Tipo B (*Collapsed Cone Convolution* y *AAA*) y Tipo C (**Monte Carlo** y resolución determinista de la Ecuación Lineal de Transporte de Boltzmann **LBTE / Acuros XB**); herramientas 3D (**BEV**, **DRR**, **HDV/DVH**, TCP/NTCP); flujo **`DICOM-RT`** y verificación experimental paciente-específica mediante **Análisis de Índice Gamma ($\gamma$)**.
-
-### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Radiofísica Hospitalaria** | **TS Radioterapia**
-- **Grado de solapamiento:** **Total (90%)** en Radiofísica Hospitalaria (cubre sistemas de planificación computadorizados, especificaciones ICRU, algoritmos de cálculo 1D/2D/3D, herramientas 3D, optimización, verificación y equipamiento de simulación/fusión de imágenes asociado); **Alto (75%)** en TS Radioterapia (técnicas de planificación dosimétrica en radioterapia externa e inmovilización/simulación).
-- **Epígrafes equivalentes en temarios SERGAS:**
-  - **Radiofísica Hospitalaria:**
-    - *Tema 16:* Sistemas de planificación y cálculo de dosis. Dosimetría clínica. Especificación de dosis y volúmenes. Recomendaciones internacionales (ICRU 50, ICRU 62...). Parámetros y funciones que intervienen en el cálculo de la dosis. Sistemas de planificación computadorizados. Algoritmos de cálculo (1D, 2D, 3D). Herramientas en la planificación 3D: BEV, DRR, HDV. Optimización y evaluación de la planificación. Verificación de cálculos dosimétricos. Transmisión de imágenes y datos.
-    - *Tema 15:* Adquisición de datos del paciente. Técnicas de simulación. Posicionamiento e inmovilización. Fusión de imágenes.
-  - **TS Radioterapia:**
-    - *Tema 23:* Técnicas de planificación dosimétrica en radioterapia externa.
-    - *Tema 22:* Técnicas de elaboración de complementos e inmovilización y simulación.
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Naturaleza Jurídica y Técnica del TPS como Producto Sanitario Software
 
 ### 1.1. Naturaleza Jurídica y Técnica del TPS como Producto Sanitario Software (SaMD)
 Un **Sistema de Planificación de Tratamiento (TPS)** es una estación de trabajo de alto rendimiento con arquitectura cliente-servidor o computación en GPU que crea un **gemelo digital anatómico y físico del paciente** a partir de imágenes médicas multimodales, modela matemáticamente los cabezales de los equipos de tratamiento (LINACs, proyectores de braquiterapia HDR o aceleradores de protonterapia) y calcula la distribución tridimensional de dosis absorbida para maximizar la probabilidad de control tumoral (**TCP**) minimizando la probabilidad de complicación en los tejidos sanos (**NTCP**).
@@ -38,7 +9,7 @@ Desde el punto de vista regulatorio y de ingeniería biomédica:
 - **Clasificación bajo el Reglamento (UE) 2017/745 (MDR) y RD 192/2023:** Conforme al Anexo VIII (**Regla 11** sobre software destinado a proporcionar información que se utiliza para tomar decisiones con fines terapéuticos o diagnósticos, y **Regla 9** sobre control/influencia en equipos terapéuticos de radiación ionizante), el TPS es un **Producto Sanitario Software de Clase IIb** (pudiendo alcanzar Clase III si un fallo causase directamente la muerte o un deterioro irreversible). Debe ostentar marcado CE emitido por Organismo Notificado y cumplir la norma **UNE-EN 62083** (*Requisitos particulares para la seguridad de los sistemas de planificación de tratamiento para radioterapia*), la **IEC 62304** (ciclo de vida del software) y la **ISO 14971** (gestión de riesgos).
 - **Exigencia en el RD 1566/1998 y OIEA TRS-430:** El **Real Decreto 1566/1998** (por el que se establecen los criterios de calidad en radioterapia) obliga a que todo TPS sea sometido a **pruebas de aceptación y puesta en servicio clínico (*commissioning*)** por el Especialista en Radiofísica Hospitalaria antes de su primer uso en pacientes, verificando experimentalmente el modelo de cada haz frente a las medidas en maniquí de agua motorizado 3D, así como tras cualquier actualización de versión de software o cambio en los ficheros de datos de máquina.
 
-### 1.2. Definición Normativa de Volúmenes de Planificación y Prescripción (Informes ICRU 50, 62, 78, 83, 89 y 91)
+### 1.2. Definición Normativa de Volúmenes de Planificación y Prescripción
 La **Comisión Internacional de Unidades y Medidas de la Radiación (ICRU)** ha estandarizado el lenguaje geométrico y dosimétrico universal que todo TPS implementa para delimitar estructuras y reportar tratamientos:
 
 1. **Volúmenes Relacionados con el Tumor (Concéntricos: $\text{GTV} \subset \text{CTV} \subset \text{ITV} \subset \text{PTV}$):**
@@ -56,7 +27,7 @@ La **Comisión Internacional de Unidades y Medidas de la Radiación (ICRU)** ha 
    - **PRV (*Planning Organ at Risk Volume* — Volumen de Planificación del Órgano de Riesgo, ICRU 62):** Análogo al PTV para los órganos sanos en serie móviles o próximos al blanco ($\text{PRV} = \text{OAR} \oplus \text{IM} \oplus \text{SM}$).
    - **RVR (*Remaining Volume at Risk* — Volumen Restante en Riesgo, ICRU 83):** Volumen del paciente contorneado que queda fuera de todos los CTV/PTV y de todos los OAR delineados; es obligatorio evaluarlo en IMRT/VMAT/IMPT para detectar puntos calientes inesperados (*hot spots*) en tejidos no contorneados.
 
-### 1.3. Evolución de los Criterios de Prescripción y Reporte (`ICRU 50/62` vs. `ICRU 78` vs. `ICRU 83` vs. `ICRU 91`)
+### 1.3. Evolución de los Criterios de Prescripción y Reporte
 - **En Radioterapia Conformada 3D (`ICRU 50 y 62`):** La prescripción se realiza en el **Punto de Referencia ICRU** (situado en el centro del PTV, en una zona sin gradientes bruscos y habitualmente en el isocentro), exigiendo que todo el PTV quede comprendido entre el **$95\%$ y el $107\%$ de la dosis prescrita**.
 - **En IMRT y VMAT (`ICRU 83`):** Como la modulación inversa de intensidad elimina las mesetas planas de dosis, el punto ICRU pierde validez estadística y se sustituye por una **prescripción y reporte basados en volúmenes (HDV/DVH)**: se prescribe a la **Dosis Mediana absorbida por el PTV ($D_{50\%}$)**, reportando obligatoriamente la **dosis casi mínima ($D_{98\%}$)** y la **dosis casi máxima ($D_{2\%}$)** (descartando $D_{100\%}$ y $D_{0\%}$ por su incertidumbre de vóxel en los bordes del contorno).
 - **En Radiocirugía (SRS) y SBRT (`ICRU 91`):** Se prescribe a una superficie de isodosis periférica que englobe el PTV (habitualmente la isodosis del $80\%$ en SBRT permitiendo heterogeneidad interna deliberada con $D_{\text{máx}}$ central del $120\text{–}140\%$ para ablación hipóxica), reportando $D_{98\%}$, $D_{50\%}$ y $D_{\text{near-max}}$ ($D_{2\%}$ si $\text{PTV} \ge 2\text{ cm}^3$, o **$D_{0,035\text{ cm}^3}$** si $\text{PTV} < 2\text{ cm}^3$).
@@ -64,7 +35,7 @@ La **Comisión Internacional de Unidades y Medidas de la Radiación (ICRU)** ha 
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Equipamiento Asociado de Simulación, Inmovilización y Adquisición 4D
 
 ### 2.1. Equipamiento Asociado de Simulación, Inmovilización y Adquisición 4D
 El cálculo exacto en el TPS exige que la anatomía tridimensional del paciente se adquiera en idéntica geometría y posición que tendrá diariamente en el búnker:
@@ -91,7 +62,7 @@ El cálculo exacto en el TPS exige que la anatomía tridimensional del paciente 
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Clasificación y Física de los Algoritmos de Cálculo de Dosis en el TPS
 
 ### 3.1. Clasificación y Física de los Algoritmos de Cálculo de Dosis en el TPS
 En ingeniería biomédica y radiofísica hospitalaria, los algoritmos de cálculo de dosis absorbida en medios heterogéneos implementados en los TPS se clasifican en tres generaciones según cómo modelan el transporte de los electrones secundarios y la dispersión lateral:
@@ -123,7 +94,7 @@ En ingeniería biomédica y radiofísica hospitalaria, los algoritmos de cálcul
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Estándar `DICOM-RT`, Integración con Sistemas R&V y Ciberseguridad
 
 ### 4.1. Estándar `DICOM-RT`, Integración con Sistemas R&V y Ciberseguridad
 La comunicación sin errores entre el TC simulador, el TPS, el Sistema de Información Oncológica / Registro y Verificación (**OIS / R&V**: *Varian ARIA* o *Elekta MOSAIQ*) y el acelerador se articula mediante los **7 objetos de información del estándar `DICOM-RT`** (Suplementos 11 y 102):
@@ -131,7 +102,7 @@ La comunicación sin errores entre el TC simulador, el TPS, el Sistema de Inform
 2. **`RT Structure Set` (`RTSTRUCT`):** Coordenadas geométricas 3D de todos los contornos dibujados sobre las imágenes (GTV, CTV, ITV, PTV, OAR, mesa de tratamiento y marcadores fiduciales).
 3. **`RT Plan` (`RTPLAN`) y `RT Ion Plan` (`RTIONPLAN`):** Parámetros geométricos y mecánicos completos del tratamiento: coordenadas de isocentro, ángulos de gantry/colimador/mesa, energías, Unidades Monitor (UM), posiciones de mandíbulas y secuencia de puntos de control del MLC (o coordenadas $(x,y)$, energías y pesos de los *spots* PBS en protonterapia).
 4. **`RT Dose` (`RTDOSE`):** Matriz tridimensional de dosis calculada por el TPS (en $\text{Gy}$), curvas de isodosis e histogramas dosis-volumen (DVH).
-5. **`RT Beams Treatment Record` (`RTRECORD`) / `RT Ion Beams Treatment Record`:** Registro real de cada sesión administrada por la máquina para trazabilidad legal y dosimétrica (`RD 601/2019`).
+5. **`RT Beams Treatment Record` (`RTRECORD`) / `RT Ion Beams Treatment Record`:** Registro real de cada sesión administrada por la máquina para trazabilidad legal y dosimétrica.
 6. **`RT Brachy Application Setup`:** Parámetros de canales, aplicadores, *dwell positions* y *dwell times* para braquiterapia HDR/LDR.
 
 ### 4.2. Control de Calidad del TPS (`RD 1566/1998` / `TRS-430`) y Verificación Paciente-Específica (Índice Gamma $\gamma$)
@@ -146,23 +117,9 @@ La comunicación sin errores entre el TC simulador, el TPS, el Sistema de Inform
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Arquitectura Centralizada y Distribuida de Planificación en el SERGAS
-En el **Servicio Gallego de Salud (SERGAS)**, los Sistemas de Planificación de Tratamiento (TPS) operan en estrecha coordinación entre los **Servicios de Radiofísica y Protección Radiológica** y los **Servicios de Oncología Radioterápica** de los grandes complejos hospitalarios (**CHUS** en Santiago, **CHUAC** en A Coruña, **CHUVI — Hospital Álvaro Cunqueiro** en Vigo, **HULA** en Lugo y **CHUO** en Ourense), gestionados en el ámbito de alta tecnología oncológica con el soporte de **GALARIA, Empresa Pública de Servizos Sanitarios**, así como en el nuevo **Centro de Protonterapia de Galicia** en Santiago de Compostela.
-
-- **Infraestructura de Servidores Citrix / GPU en Centros de Datos del SERGAS:** Los TPS corporativos (*Varian Eclipse*, *RaySearch RayStation*, *Elekta Monaco* y *Oncentra Brachy*) se despliegan sobre granjas de servidores de cálculo de alta disponibilidad dotadas de **procesadores multiproceso y aceleradoras gráficas GPU empresariales (NVIDIA Tesla/A100)** alojadas en los Centros de Proceso de Datos hospitalarios, accesibles desde estaciones clínicas multimonitor mediante virtualización segura. Esta arquitectura permite ejecutar cálculos Monte Carlo y Acuros XB en menos de $1\text{–}2\text{ minutos}$ y compartir licencias flotantes e información dosimétrica en red.
-- **Planificación Comparativa Fotones vs. Protones:** En el flujo asistencial del **Centro de Protonterapia de Galicia**, el TPS permite realizar **planificación comparativa fotones (VMAT) vs. protones (IMPT con optimización robusta 4D)** sobre el mismo `RT Structure Set` del paciente para cuantificar objetivamente la reducción de dosis integral y el beneficio en modelos NTCP antes de la sesión del comité multidisciplinar de tumores.
-
-### 5.2. Integración con `IANUS`, `PACS` y Gestión de Activos Software en `XMAO`
-- **Flujo Digital Completo en el SERGAS:** El TC Simulador 4D (*Big-Bore*) consulta la lista de trabajo `DICOM MWL` generada desde el OIS (`ARIA`/`MOSAIQ`) e integrada con **`SIHGA`/`IANUS`**, envía los estudios TC 4D al **PACS centralizado del SERGAS** y al servidor TPS; simultáneamente el TPS importa desde el PACS autonómico los estudios de **RM y PET-TC** realizados en cualquiera de las 7 Áreas Sanitarias de Galicia para su fusión multimodal. Una vez aprobado y firmado electrónicamente el plan por el Oncólogo Radioterápico y el Radiofísico Hospitalario (`RD 1566/1998`), el informe dosimétrico y el resumen de dosis se publican en la historia clínica electrónica **`IANUS`** en cumplimiento del **`RD 601/2019`**.
-- **Gestión del Ciclo de Vida en `XMAO`:** Tanto el equipamiento físico de simulación e inmovilización (TC simulador de gran apertura, láseres móviles `LAP`, sistemas de gating respiratorio y maniquíes/matrices de verificación 2D/3D) como las **licencias y versiones del software TPS (Producto Sanitario Clase IIb)** se inventarían en **`XMAO`**, controlando la trazabilidad de parches de ciberseguridad, copias de seguridad de la base de datos de pacientes y modelos de haces, y actas de aceptación tras cada actualización de versión.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Informe / Norma / Parámetro | Valor / Regla / Ecuación Clave | Observación Crítica para Examen A1 SERGAS |
 | :--- | :--- | :--- |
@@ -177,7 +134,7 @@ En el **Servicio Gallego de Salud (SERGAS)**, los Sistemas de Planificación de 
 | **Objetos del estándar `DICOM-RT`** | `RT Image`, `RT Structure Set`, `RT Plan`, `RT Dose`, `RT Record` | En protonterapia se emplean **`RT Ion Plan`** y **`RT Ion Beams Treatment Record`** |
 | **Índice Gamma ($\gamma$) de verificación QA** | **$\gamma \le 1$ en $\ge 95\%$ de los puntos ($3\% / 3\text{ mm}$)** | En SBRT/SRS/IMPT criterio estricto de **$3\% / 2\text{ mm}$** o **$2\% / 2\text{ mm}$ ($\ge 90\%$)** |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Pregunta clásica de examen sobre por qué no se puede planificar directamente sobre una RM sin TC (salvo generación de *pseudo-CT*)!** Por dos razones físicas fundamentales: 1) la **RM sufre distorsiones geométricas espaciales** por inhomogeneidades de $B_0$, no linealidad de gradientes y desplazamiento químico, y 2) la **intensidad de señal de la RM depende de la densidad protónica y de los tiempos de relajación $T_1/T_2$, pero NO guarda relación biunívoca con la densidad electrónica ($\rho_e$) ni con el poder de frenado ($\text{SPR}$)** (por ejemplo, tanto el aire como el hueso cortical aparecen negros sin señal en RM convencional a pesar de tener densidades opuestas).
 2. **Diferencia conceptual entre Acuros XB y Monte Carlo (ambos Algoritmos Tipo C):** Los tribunales preguntan con frecuencia cuál es la diferencia entre ambos si los dos alcanzan la máxima exactitud en pulmón y hueso. Ambos resuelven las mismas ecuaciones físicas que gobiernan el transporte acoplado de radiación en la materia (**la Ecuación Lineal de Transporte de Boltzmann — LBTE**), pero **Monte Carlo la resuelve de forma estocástica/probabilista** simulando millones de historias individuales de partículas con números pseudoaleatorios (por lo que presenta ruido estadístico intrínseco en los vóxeles), mientras que **Acuros XB la resuelve de forma determinista/numérica** discretizando el espacio, la energía y el ángulo sin ruido estadístico.
 3. **Trampa sobre los Histogramas Dosis-Volumen (HDV / DVH):** Si en un examen tipo test se afirma que *«el HDV acumulado permite localizar anatómicamente en qué región del órgano de riesgo se encuentra el punto de dosis máxima»*, la respuesta es **FALSO**. El HDV condensa una distribución 3D en un gráfico 2D **perdiendo toda la información posicional/espacial**. Dos planes pueden tener exactamente el mismo HDV y, sin embargo, uno tener un punto caliente aceptable lejos de una sutura y el otro sobre la pared rectal anterior.

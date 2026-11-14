@@ -1,28 +1,8 @@
 # Tema 39 — Estándares de integración con los sistemas corporativos del Servicio Gallego de Salud.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #39 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 07 — Salud Digital, Sistemas Corporativos, Interoperabilidad, HCE, Analítica, IoMT, Citación y Logística (`💎 Núcleo Diamante · Fase 1`)
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 4/2010, de 8 de enero (Esquema Nacional de Interoperabilidad — `ENI`), Ley 16/2003 de cohesión y calidad del SNS y Real Decreto 1093/2010; Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulos Profesionales 1588 y 1592); Estándares internacionales `HL7 v2.x` (sobre `MLLP`), `HL7 v3 / CDA Release 2`, `HL7 FHIR R4/R5` y `SMART on FHIR`; Norma `UNE-EN ISO 12052` (`DICOM` y `DICOMweb`); Marcos Técnicos `IHE` (*Radiology*, *IT Infrastructure*, *Patient Care Device — PCD*); Familia de normas `ISO/IEEE 11073` (`11073-10101`, `11073-20601 PHD` / *Continua*, y `11073 SDC` — *Service-Oriented Device Connectivity*); Comités `ISO/TC 215`, `CEN/TC 251` y `UNE-CTN 139`.
-> - **Sistemas y Entorno SERGAS:** Bus de Integración Corporativo del SERGAS (`ESB`), `IANUS 5`, `SIHGA`, `SILICON`, `PACS Corporativo` / `Anello Radiolóxico Galego`, Sistemas de Información de Laboratorio (`LIS`), `TELEA`, y pasarelas de integración de equipamiento electromédico de UCI, Reanimación, Quirófanos y Hemodiálisis en las 7 Áreas Sanitarias.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose de Subepígrafes según Publicación Oficial del DOG (Resolución de 13/04/2026)
-El presente tema aborda la ingeniería de protocolos de comunicación, sintaxis de mensajería clínica, perfiles de integración y buses de servicios empresariales que permiten conectar de forma bidireccional, segura y normalizada el parque de equipamiento biomédico (modalidades de imagen, monitores multiparamétricos, respiradores, máquinas de anestesia, bombas de infusión, analizadores de laboratorio y robots de farmacia) con los sistemas de información corporativos del Servicio Gallego de Salud (SERGAS). A diferencia del Tema 38 (centrado en la arquitectura física del departamento de imagen, monitores y algoritmos de posprocesado) y del Tema 42 (centrado en las clasificaciones y ontologías de codificación semántica), el Tema 39 profundiza en la **interoperabilidad técnica, sintáctica y de procesos**, analizando a nivel de protocolo **`HL7` (`v2.x`, `v3/CDA`, `FHIR`), `DICOM` en red (`DIMSE` y `DICOMweb`), perfiles `IHE` (`SWF`, `XDS.b`, `PIX/PDQ`, `ATNA`, `PCD`), `IEEE 11073` (`PHD` y `SDC`)** y la arquitectura de **Buses de Integración (`ESB`)**.
-
-### 0.2. Cruce Verificado 1:1 con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-
-| Categorías con las que coincide | Epígrafes Equivalentes en Otras Convocatorias del SERGAS | Grado de Solapamiento y Enfoque de Tribunal |
-| :--- | :--- | :--- |
-| **Grupo Técnico / Gestión TIC** | • **TIC Superior (A1):** Tema 25. Interoperabilidad en el entorno sanitario. Estándares tecnológicos en el ámbito sanitario: DICOM, HL7, CDA, IHE, CEN TC/251, AEN/CTN 139, IEEE Continua Alliance. Implementación de mensajería HL7 sobre buses de integración. y Tema 31. Buses de integración. Implementación de canales de integración. Modelos orientados a eventos.<br>• **TIC Gestión (A2):** Tema 17. Interoperabilidad en el entorno sanitario. Estándares tecnológicos en el ámbito sanitario: DICOM, HL7, CDA, IHE, CEN TC/251, AEN/CTN 139, IEEE Continua Alliance. Implementación de mensajería HL7 sobre buses de integración. y Tema 23. Buses de integración. Implementación de canales de integración. Modelos orientados a eventos.<br>• **TIC Especialista (C1):** Tema 12. Interoperabilidad en el entorno sanitario. Estándares tecnológicos en el ámbito sanitario: DICOM, HL7, CDA, IHE, CEN TC/251, AEN/CTN 139, IEEE Continua Alliance. Implementación de mensajería HL7 sobre buses de integración. | **Total (95%)**: Cubre íntegramente los estándares tecnológicos de interoperabilidad en el entorno sanitario (`DICOM`, `HL7`, `CDA`, `FHIR`, `IHE`, `IEEE 11073 / Continua`, `CEN/TC 251`, `UNE-CTN 139`) y su implementación sobre buses de integración corporativos orientados a eventos. |
-
----
-
 ## 📖 1. Fundamentos de Interoperabilidad Sanitaria, Comités de Normalización y Arquitecturas de Integración
 
-### 1.1. Dimensiones de la Interoperabilidad en Salud (`EIF` y `Real Decreto 4/2010 — ENI`)
+### 1.1. Dimensiones de la Interoperabilidad en Salud
 De acuerdo con el **Marco Europeo de Interoperabilidad (`EIF` — *European Interoperability Framework*)** y el **Real Decreto 4/2010, de 8 de enero**, por el que se regula el **Esquema Nacional de Interoperabilidad (`ENI`)**, la interoperabilidad es la capacidad de los sistemas de información y de los procedimientos a los que éstos dan soporte para compartir datos y posibilitar el intercambio de información y conocimiento entre ellos. En el entorno hospitalario y biomédico se estructura en cuatro niveles jerárquicos:
 1. **Interoperabilidad Técnica (Capa Física, Enlace, Red y Transporte):** Garantiza la conectividad física y lógica para transmitir flujos de bits y paquetes de un nodo emisor a un receptor sin corrupción, apoyándose en protocolos de infraestructura (`Ethernet IEEE 802.3`, `Wi-Fi IEEE 802.11`, `BLE`, `TCP/IP`, `TLS 1.3`, `MLLP`, `HTTP/HTTPS`, `WebSockets`).
 2. **Interoperabilidad Sintáctica (Formato y Estructura de Datos):** Permite que dos aplicaciones interpreten correctamente la gramática, delimitadores, jerarquía de campos y estructura de los mensajes o documentos intercambiados, con independencia de su significado clínico (estándares **`HL7 v2.x`**, **`HL7 CDA` en XML**, **`HL7 FHIR` en JSON/XML**, estructura binaria de etiquetas **`DICOM`** o **`IEEE 11073`**).
@@ -30,7 +10,7 @@ De acuerdo con el **Marco Europeo de Interoperabilidad (`EIF` — *European Inte
 4. **Interoperabilidad Organizativa y Legal (Procesos Asistenciales):** Alinea los flujos de trabajo clínicos interdepartamentales, las políticas de seguridad, firma electrónica y gobernanza entre centros, Áreas Sanitarias, Comunidades Autónomas (`HCDSNS`) y Estados miembros de la Unión Europea (`MyHealth@EU`), orquestada técnicamente mediante los **Perfiles de Integración de `IHE`**.
 
 ### 1.2. Organismos y Comités Técnicos Oficiales de Normalización en Informática Sanitaria
-Tal como exige el bloque `f)` del **Módulo Profesional 1592 (`Orden EFP/1216/2019`)**, el ingeniero biomédico debe distinguir los tres comités oficiales de normalización (*de iure*) y las organizaciones de desarrollo de estándares de consenso (*SDOs*):
+Tal como exige el bloque `f)` del **Módulo Profesional 1592**, el ingeniero biomédico debe distinguir los tres comités oficiales de normalización (*de iure*) y las organizaciones de desarrollo de estándares de consenso (*SDOs*):
 - **Ámbito Internacional — `ISO/TC 215` (*Health Informatics*):** Comité Técnico 215 de la Organización Internacional de Normalización (`ISO`), responsable de normas mundiales como **`ISO 12052`** (DICOM), **`ISO 13606`** (arquitectura de HCE), **`ISO/IEEE 11073`** (comunicación de dispositivos médicos de punto de cuidado), **`ISO 27799`** (gestión de seguridad de la información en sanidad basada en ISO/IEC 27002) e **`ISO 14971`** (gestión de riesgos en productos sanitarios).
 - **Ámbito Europeo — `CEN/TC 251` (*Health Informatics*):** Comité Técnico 251 del Comité Europeo de Normalización (`CEN`). Sus normas europeas (`EN`) son de transposición obligatoria a los organismos nacionales de los Estados miembros (como `UNE-EN`). Ha liderado la creación de la familia **`EN 13606`**, el estándar europeo de tarjeta sanitaria (`EN 1867`), el resumen internacional del paciente (`EN 17269` *IPS*) y la identificación de medicamentos (`IDMP`).
 - **Ámbito Español — `UNE-CTN 139` (antiguo `AEN/CTN 139`):** Comité Técnico de Normalización 139 de la Asociación Española de Normalización (`UNE`), denominado ***«Tecnologías de la Información y las Comunicaciones para la Salud»***, cuya secretaría ostenta la Sociedad Española de Informática de la Salud (`SEIS`). Es el espejo nacional de `CEN/TC 251` e `ISO/TC 215` y publica informes como la norma **`UNE 209001 IN`** (en colaboración con el CTN 209) y las traducciones oficiales `UNE-EN ISO`.
@@ -114,7 +94,7 @@ Aunque la mensajería pura `HL7 v3` resultó excesivamente compleja de implement
 
 ---
 
-## 🔬 3. Protocolo de Red `DICOM` (`ISO 12052`), Perfiles `IHE` y Conectividad de Equipamiento Electromédico (`IHE PCD` e `IEEE 11073`)
+## 🔬 3. Protocolo de Red `DICOM`, Perfiles `IHE` y Conectividad de Equipamiento Electromédico
 
 ### 3.1. Ingeniería de Protocolo del Estándar `DICOM` (`UNE-EN ISO 12052`) y `DICOMweb`
 En el ámbito de la integración corporativa, **`DICOM` (*Digital Imaging and Communications in Medicine*, norma `UNE-EN ISO 12052`)** es simultáneamente un formato de archivo y un protocolo de aplicación en red sobre TCP/IP (puertos registrados **`104`** o **`11112`**, y **`2762`** para `DICOM TLS`):
@@ -194,25 +174,9 @@ Una de las funciones más críticas del Ingeniero Biomédico del SERGAS al redac
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. El Ecosistema de Integración Corporativa del SERGAS
-La Subdirección Xeral de Sistemas e Tecnoloxías da Información de la Consellería de Sanidade / SERGAS opera una arquitectura de integración centralizada que interconecta en tiempo real los sistemas corporativos de las **7 Áreas Sanitarias**:
-1. **Sincronización de Identidad y Movimiento de Pacientes (`TSI` / `SIHGA` $\rightarrow$ Bus Corporativo):** Cualquier alta en el sistema de Tarjeta Sanitaria (`TSI`) o movimiento asistencial en **`SIHGA`** (admisión de urgencias, ingreso en planta, traslado a UCI, citación en consulta externa o programación quirúrgica) dispara eventos **`HL7 v2.x ADT` y `SIU`** hacia el Bus Corporativo, actualizando de forma inmediata **`IANUS 5`**, el **`RIS/PACS`**, **`SILICON`** y los **Sistemas de Información de Laboratorio (`LIS`)**.
-2. **Ciclo de Peticiones y Resultados Clínicos (`IANUS 5` $\leftrightarrow$ `RIS` / `LIS` / `Anatomía Patológica`):** Las peticiones electrónicas generadas en `IANUS` (tanto desde los Centros de Salud de Atención Primaria como desde los Hospitales) viajan mediante mensajería **`HL7 ORM / OML`** hacia los sistemas departamentales, y los resultados validados regresan mediante **`HL7 ORU`**, documentos **`HL7 CDA R2`** e informes estructurados, quedando accesibles de forma inmediata tanto para los profesionales en `IANUS 5` como para el ciudadano en **`É-Saúde`** y **`Sergas Móbil`**, y publicándose hacia el nodo nacional **`HCDSNS`** (`RD 1093/2010`) y europeo **`MyHealth@EU`** mediante perfiles basados en **`HL7 CDA` e `IHE XDS.b`**.
-3. **Integración de Farmacia y Automatización (`SILICON`):** La prescripción electrónica hospitalaria en `SILICON` se comunica mediante mensajería **`HL7`** con los carruseles de almacenamiento central y los sistemas de dispensación automatizada en unidades de enfermería y quirófanos (**armarios inteligentes tipo `Pyxis`**), verificando que solo se puedan retirar medicamentos prescritos para los pacientes ingresados en esa unidad (`ADT` + `OMP`/`RDS`).
-
-### 5.2. Casuística Práctica: Integración de Equipamiento Electromédico en UCI, Quirófanos y Pruebas Funcionales en el SERGAS
-Más allá de los grandes equipos de radiología (`PACS`), en los hospitales del SERGAS la integración del equipamiento biomédico abarca tres escenarios técnicos cotidianos para los Servicios de Electromedicina e Ingeniería Biomédica:
-- **Unidades de Críticos (`UCI`, `REA`, Coronarias y Neonatología):** Los monitores multiparamétricos de cabecera, centrales de monitorización, respiradores mecánicos, máquinas de anestesia y monitores de gasto cardíaco/hemofiltración se integran a través de pasarelas de conectividad de dispositivos médicos utilizando el perfil **`IHE PCD DEC (Transacción PCD-01, HL7 v2.6 ORU^R01)`** y códigos **`IEEE 11073-10101`**, volcando automáticamente cada minuto o cada $15\text{ minutos}$ las constantes vitales y parámetros ventilatorios directamente a la gráfica electrónica de **`IANUS` / Sistema Departamental de Críticos**, previa vinculación del paciente a la cama (`ADT`) o lectura de código de barras de su pulsera identificativa.
-- **Gabinetes de Pruebas Funcionales (Electrocardiografía, Espirometría, Ecocardiografía, Endoscopia y Oftalmología):** Los electrocardiógrafos digitales de 12 derivaciones de los centros de salud y hospitales descargan la lista de trabajo (`DICOM MWL` o `HL7 ORM`) y envían al servidor corporativo de electrocardiografía y al `VNA/IANUS` tanto el trazado vectorial en estándar **`DICOM Waveform` / `SCP-ECG` (`EN 1064`) / `HL7 aECG`** como el informe interpretativo en **`DICOM Encapsulated PDF`**.
-- **Analizadores de Punto de Cuidado (`POCT` — Gasómetros de UCI/Urgencias, Glucómetros y Coagulómetros hospitalarios):** Se conectan mediante el estándar **`POCT1-A2` / `HL7`** a un gestor centralizado de POCT y al `LIS`, exigiendo que el profesional escanee su tarjeta identificativa y el código de barras de la muestra/paciente antes de liberar la medición hacia `IANUS`, bloqueando de forma remota el analizador si no ha superado el control de calidad interno diario.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Estándar / Protocolo / Perfil | Estructura / Sintaxis / Norma Oficial | Puntos Clave de Examen A1 |
 | :--- | :--- | :--- |
@@ -225,7 +189,7 @@ Más allá de los grandes equipos de radiología (`PACS`), en los hospitales del
 | **Familia `ISO/IEEE 11073`** | **`10101`** (Nomenclatura), **`10201`** (`DIM`), **`20601`** (`PHD` / *Continua*) y **`SDC`** (`20701`, `10207` `BICEPS`, `20702` `MDPWS`) | `PHD/Continua` = telemedicina domiciliaria (`TELEA`). **`SDC`** = interoperabilidad bidireccional *Plug-and-Play* y control seguro en Quirófano Integrado y UCI. |
 | **Comités Oficiales TIC Salud** | **`ISO/TC 215`** (Internacional) · **`CEN/TC 251`** (Europeo) · **`UNE-CTN 139`** (Español) | Espejos oficiales de normalización en informática sanitaria. Topología Bus `ESB`: reduce de $\frac{N(N-1)}{2}$ interfaces a $N$ conexiones. |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Trampa clásica sobre `IHE`!** En las preguntas tipo test suelen incluir como opción falsa: *«IHE es el estándar internacional ISO que sustituye a DICOM y HL7»*. **FALSO**: `IHE` (*Integrating the Healthcare Enterprise*) **no crea nuevos estándares de protocolo**, sino que publica **Perfiles de Integración** que especifican cómo usar de manera coordinada estándares existentes (`HL7`, `DICOM`, `IEEE 11073`, `W3C`) mediante **Actores y Transacciones**.
 2. **¡Trampa sobre `SCU` y `SCP` en `DICOM`!** Un equipo de rayos X o TC **no es siempre `SCU` ni el PACS es siempre `SCP` en sentido absoluto**: el rol se define **para cada Clase SOP y transacción**. Cuando el TC envía imágenes (`C-STORE`) o consulta la lista de trabajo (`MWL C-FIND`), el **TC es `SCU` (cliente)** y el PACS/RIS es `SCP` (servidor). Pero cuando el PACS envía confirmación asíncrona de `Storage Commitment` (`N-EVENT-REPORT`) o solicita imágenes a una estación, los roles pueden invertirse en la sub-operación.
 3. **¡Trampa sobre Etiquetas Pares vs. Impares en `DICOM`!** Las etiquetas `(GGGG,EEEE)` cuyo número de grupo `GGGG` es **PAR** (`0008`, `0010`, `0018`, `0020`, `0028`, `7FE0`) pertenecen al **Diccionario Estándar Oficial DICOM**, mientras que los grupos **IMPARES** (`0009`, `0019`, `0029`) son **Etiquetas Privadas (*Private Tags*)** de los fabricantes.

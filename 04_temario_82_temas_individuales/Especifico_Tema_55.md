@@ -1,30 +1,6 @@
 # Tema 55 — Aplicación de la normativa eléctrica (REBT) y eficiencia energética en entornos biomédicos.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #55 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 08 — Ingeniería Hospitalaria, REBT, Ambiente Controlado, Planes Directores, Calidad, CAD y Sostenibilidad
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 842/2002, de 2 de agosto, por el que se aprueba el Reglamento Electrotécnico para Baja Tensión (REBT) y sus Instrucciones Técnicas Complementarias (especialmente ITC-BT-03, ITC-BT-04, ITC-BT-05, ITC-BT-18, ITC-BT-19, ITC-BT-24, ITC-BT-28, ITC-BT-36 e ITC-BT-38), Norma armonizada UNE-HD 60364-7-710 (IEC 60364-7-710 de instalaciones eléctricas en locales de uso médico), UNE-EN 61558-2-15 (transformadores de aislamiento para locales médicos), UNE-EN 61557-8 (dispositivos de vigilancia de aislamiento CPI/IMD), UNE-EN 50160 (calidad de tensión suministrada), Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulo 1585 de Instalaciones eléctricas), Código Técnico de la Edificación (CTE DB-HE Ahorro de Energía), RITE (RD 1027/2007), RD 390/2021 (certificación de eficiencia energética de edificios) y UNE-EN ISO 50001 (Sistemas de Gestión de la Energía).
-> - **Sistemas y Entorno SERGAS:** Servicios de Ingeniería, Mantenimiento y Electromedicina de las 7 Áreas Sanitarias del SERGAS, registro de controles semanales/mensuales/anuales del Libro de Mantenimiento de quirófanos e inspecciones quinquenales de OCA en el sistema corporativo `XMAO`, monitorización en tiempo real de cuadros de quirófano (esquema IT médico), SAIs y grupos electrógenos mediante pasarelas Modbus/TCP integradas en el sistema de gestión técnica centralizada (`BMS` / `SCADA`) y planes de descarbonización y eficiencia energética hospitalaria del SERGAS.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 55** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud (publicado en el **DOG núm. 67, de 13 de abril de 2026**) constituye el núcleo de referencia sobre ingeniería eléctrica hospitalaria, seguridad eléctrica frente a *macroshock* y *microshock* en áreas críticas, prescripciones reglamentarias de los locales de pública concurrencia (`ITC-BT-28`) y de los quirófanos y salas de intervención (`ITC-BT-38` y `UNE-HD 60364-7-710`), calidad de red y medidas de eficiencia energética aplicables tanto a las instalaciones generales del edificio como al parque de alta tecnología biomédica.
-
-- **Categorías del SERGAS con solapamiento directo (verificado 1:1 con `cruce_temarios_sergas.md`):**
-  - **Ingeniero/a Técnico/a (Subgrupo A2 — Resolución DOG núm. 51, de 13/03/2018 y DOG núm. 145, de 04/08/2026):**
-    - *Tema 3:* «Reglamento electrotécnico de baja tensión (RBT): Real decreto 842/2002. Ámbito de aplicación. Instrucciones técnicas complementarias ITC-BT. Guía técnica.»
-    - *Tema 4:* «Instalación eléctrica en locales de pública concurrencia, alumbrado de emergencia.»
-    - *Tema 28:* «Cogeneración, trigeneración: aspectos generales. Recuperadores. Máquinas de absorción. Eficiencia energética. Código técnico de la edificación (HE ahorro de energía: objeto y ámbito de aplicación).»
-    - *Tema 30:* «Real decreto 235/2013, de 5 de abril, por el que se aprueba el procedimiento básico para la certificación de la eficiencia energética de los edificios [actualizado al vigente RD 390/2021].»
-  - **Grupo Técnico / Gestión de Sistemas y Tecnologías de la Información (TIC — A1, A2, C1 — DOG núm. 126, de 05/07/2021):**
-    - *Superior (A1) Temas 58 y 59 / Gestión (A2) Temas 48 y 49 / Especialista (C1) Temas 36 y 37:* «Diseño de centro de procesos de datos. Instalaciones (electricidad, control de acceso, control de presencia, sistema antincendios, climatización, sistemas de alimentación ininterrumpida).» y «Virtualización... Green IT y eficiencia energética.»
-- **Grado de solapamiento:** **Total (95%)** con Ingeniero/a Técnico/a y **Medio (45%)** con categorías TIC.
-- **Origen curricular estatal (BOE):** Desarrolla los contenidos del **Módulo Profesional 1585 (*Instalaciones eléctricas*)** del **Real Decreto 838/2015** y la **Orden EFP/1216/2019**.
-
----
-
-## 📖 1. Fundamentos Fisiopatológicos del Choque Eléctrico y Marco del REBT (`RD 842/2002`)
+## 📖 1. Fundamentos Fisiopatológicos del Choque Eléctrico y Marco del REBT
 
 ### 1.1. Fisiopatología del *Macroshock* vs. *Microshock* en Entornos Clínicos
 
@@ -39,7 +15,7 @@ La justificación científica de la estricta reglamentación eléctrica en quir�
      $$\Delta V_{\text{máx}} = 10 \times 10^{-6}\text{ A} \times 1.000\text{ }\Omega = 10 \times 10^{-3}\text{ V} = \mathbf{10\text{ mV}}$$
    Este cálculo biofísico explica por qué la instrucción **`ITC-BT-38` del REBT** exige que la **diferencia de potencial máxima entre cualesquiera partes metálicas accesibles y el embarrado de equipotencialidad dentro del quirófano no supere los $10\text{ mV}$ eficaces en condiciones normales**, y que la resistencia del conductor de equipotencialidad sea **$\le 0,1\text{ }\Omega$**.
 
-### 1.2. Estructura del REBT (`RD 842/2002`) y Clasificación de Locales Médicos (`UNE-HD 60364-7-710`)
+### 1.2. Estructura del REBT y Clasificación de Locales Médicos
 
 El **Real Decreto 842/2002, de 2 de agosto**, aprueba el **Reglamento Electrotécnico para Baja Tensión (REBT)**, aplicable a las instalaciones que distribuyen o generan energía eléctrica para tensiones nominales de hasta **$1.000\text{ V}$ en corriente alterna (AC)** y **$1.500\text{ V}$ en corriente continua (DC)**:
 - **Clasificación de tensiones (`Art. 4 REBT`):**
@@ -51,7 +27,7 @@ El **Real Decreto 842/2002, de 2 de agosto**, aprueba el **Reglamento Electroté
   - Conforme a la **`ITC-BT-04`**, requieren obligatoriamente **Proyecto Técnico** firmado por técnico titulado competente: **todos los locales de pública concurrencia** (Grupo i, sin límite de potencia) y **todos los quirófanos y salas de intervención** (Grupo j, cualquiera que sea su potencia).
   - Conforme a la **`ITC-BT-05`**, tanto los **locales de pública concurrencia** como los **quirófanos y salas de intervención** están sujetos a **Inspección Inicial** antes de su puesta en servicio y a **Inspección Periódica cada 5 años** realizada por un **Organismo de Control Autorizado (`OCA`)**, calificándose los defectos como **Muy Graves** (peligro inmediato; impide puesta en servicio o exige corte), **Graves** (plazo máximo de corrección de **6 meses**) o **Leves**.
 
-De forma complementaria a la `ITC-BT-38`, la norma europea armonizada **`UNE-HD 60364-7-710` (`IEC 60364-7-710`)** clasifica los locales médicos en **tres Grupos (`0`, `1` y `2`)** en función del tipo de contacto de las partes aplicables y de la criticidad de la continuidad del suministro:
+De forma complementaria a la `ITC-BT-38`, la norma europea armonizada **`UNE-HD 60364-7-710`** clasifica los locales médicos en **tres Grupos (`0`, `1` y `2`)** en función del tipo de contacto de las partes aplicables y de la criticidad de la continuidad del suministro:
 
 | Grupo (`UNE-HD 60364-7-710`) | Definición Funcional y Seguridad del Paciente | Ejemplos de Salas Hospitalarias | Esquema Eléctrico y Tiempo de Conmutación |
 | :--- | :--- | :--- | :--- |
@@ -63,11 +39,11 @@ De forma complementaria a la `ITC-BT-38`, la norma europea armonizada **`UNE-HD 
 
 ## ⚙️ 2. Prescripciones de la `ITC-BT-28`: Hospitales como Locales de Pública Concurrencia y Suministros de Seguridad
 
-### 2.1. Regímenes de Suministros Complementarios o de Seguridad (`Art. 10 REBT` e `ITC-BT-28`)
+### 2.1. Regímenes de Suministros Complementarios o de Seguridad
 
 La instrucción **`ITC-BT-28` (*Instalaciones en locales de pública concurrencia*)** incluye explícitamente dentro de los **locales de reunión, trabajo y usos sanitarios** a **todos los hospitales, ambulatorios, sanatorios y centros de salud**, cualquiera que sea su ocupación o superficie. Para garantizar la continuidad de la asistencia ante un fallo de la red de distribución general, el REBT define tres modalidades de suministros complementarios:
 1. **Suministro de Socorro:** Limitado a una potencia mínima equivalente al **$15\%$ del total contratado** para el suministro normal (exigido en locales de espectáculos o reunión).
-2. **Suministro de Reserva (¡Obligatorio en Hospitales y Ambulatorios!):** Destinado a mantener un servicio restringido de los elementos indispensables del edificio sanitario para una potencia mínima del **$25\%$ de la potencia total contratada** para el suministro normal. En la práctica de ingeniería hospitalaria del SERGAS, los grupos electrógenos diésel de emergencia de los grandes complejos hospitalarios se dimensionan para cubrir entre el **$75\%$ y el $100\%$ de la demanda crítica total del hospital** con redundancia $N+1$ y depósitos de gasóleo con autonomía mínima de $48\text{ a }72\text{ horas}$ a plena carga.
+2. **Suministro de Reserva (¡Obligatorio en Hospitales y Ambulatorios!):** Destinado a mantener un servicio restringido de los elementos indispensables del edificio sanitario para una potencia mínima del **$25\%$ de la potencia total contratada** para el suministro normal. En la práctica de ingeniería hospitalaria del servicio de salud, los grupos electrógenos diésel de emergencia de los grandes complejos hospitalarios se dimensionan para cubrir entre el **$75\%$ y el $100\%$ de la demanda crítica total del hospital** con redundancia $N+1$ y depósitos de gasóleo con autonomía mínima de $48\text{ a }72\text{ horas}$ a plena carga.
 3. **Suministro Duplicado:** Capaz de mantener un servicio mayor del **$50\%$ de la potencia total contratada** mediante dos acometidas independientes de media tensión procedentes de subestaciones o barras distintas.
 
 Según el tiempo de conmutación en el que entra en servicio la fuente propia de energía, las fuentes se clasifican en:
@@ -89,9 +65,9 @@ Adicionalmente, todos los cables eléctricos de los locales de pública concurre
 
 ---
 
-## 🔬 3. Requisitos Particulares para Quirófanos y Salas de Intervención (`ITC-BT-38` al Completo)
+## 🔬 3. Requisitos Particulares para Quirófanos y Salas de Intervención
 
-### 3.1. Las Cinco Barreras de Protección frente al Choque Eléctrico (`ITC-BT-38` Apdo. 2.1)
+### 3.1. Las Cinco Barreras de Protección frente al Choque Eléctrico
 
 La instrucción **`ITC-BT-38`** regula los requisitos particulares de las instalaciones eléctricas en **quirófanos y salas de intervención** (salas de anestesia, paritorios quirúrgicos, salas de cateterismo cardíaco/hemodinámica, angiografía intervencionista y endoscopia quirúrgica donde se utilice anestesia o instrumental invasivo). Establece cinco medidas obligatorias de protección:
 
@@ -109,7 +85,7 @@ La instrucción **`ITC-BT-38`** regula los requisitos particulares de las instal
 
 3. **Suministro a través de un Transformador de Aislamiento — Esquema `IT` Médico (`Apdo. 2.1.3`):**
    - **Obligatoriedad:** Es obligatorio el empleo de transformadores de aislamiento o de separación de circuitos, **como mínimo uno por cada quirófano o sala de intervención**, para aumentar la fiabilidad de la alimentación eléctrica a los equipos en los que una interrupción pueda poner en peligro directa o indirectamente al paciente o al personal, y para limitar las corrientes de fuga que pudieran producirse.
-   - **Características técnicas del transformador (`UNE 20615` / `UNE-EN 61558-2-15` y `UNE-HD 60364-7-710`):** Transformador monofásico de separación de seguridad con pantalla electrostática entre primario y secundario conectada al embarrado de equipotencialidad; **potencia nominal asignada comprendida entre $0,5\text{ kVA}$ y $10\text{ kVA}$** (habitualmente $5\text{ kVA}$ o $7,5\text{ kVA}$ en quirófanos del SERGAS); **tensión secundaria nominal no superior a $230\text{ V}$ eficaces**; y **corriente de fuga del devanado secundario a tierra en vacío $\le 0,5\text{ mA}$** (con fuga de la envolvente $\le 0,1\text{ mA}$). El secundario del transformador trabaja como un **sistema `IT` médico**, es decir, con sus dos conductores activos **totalmente aislados de tierra** (sin neutro puesto a tierra).
+   - **Características técnicas del transformador (`UNE 20615` / `UNE-EN 61558-2-15` y `UNE-HD 60364-7-710`):** Transformador monofásico de separación de seguridad con pantalla electrostática entre primario y secundario conectada al embarrado de equipotencialidad; **potencia nominal asignada comprendida entre $0,5\text{ kVA}$ y $10\text{ kVA}$** (habitualmente $5\text{ kVA}$ o $7,5\text{ kVA}$ en quirófanos del servicio de salud); **tensión secundaria nominal no superior a $230\text{ V}$ eficaces**; y **corriente de fuga del devanado secundario a tierra en vacío $\le 0,5\text{ mA}$** (con fuga de la envolvente $\le 0,1\text{ mA}$). El secundario del transformador trabaja como un **sistema `IT` médico**, es decir, con sus dos conductores activos **totalmente aislados de tierra** (sin neutro puesto a tierra).
    - **Comportamiento físico ante el 1.er y 2.º defecto de aislamiento:**
      - *Ante un primer defecto franco a masa o tierra* en uno de los conductores activos del secundario (p. ej., un fallo de aislamiento en una bomba de circulación extracorpórea o bisturí eléctrico), al no existir retorno galvánico directo por tierra hacia el transformador, el circuito solo se cierra a través de la reducidísima capacidad parásita de la línea respecto a tierra ($C_{\text{fuga}}$), circulando una corriente capacitiva ínfima ($I_d < 1\text{–}2\text{ mA}$). Consecuentemente: **1) No se produce caída de tensión ni salta ningún interruptor magnetotérmico (continuidad total del soporte vital en plena cirugía)**, **2) La tensión de contacto en la masa del equipo ($\Delta V = I_d \times R_{\text{EE}} \le 2\text{ mA} \times 0,1\text{ }\Omega = 0,2\text{ mV} \ll 10\text{ mV}$) es completamente inocua frente al microshock**, y **3) El monitor de aislamiento (`CPI`) detecta instantáneamente la caída de resistencia por debajo de $50\text{ k}\Omega$ y activa la alarma en el quirófano** para que se corrija el fallo al terminar la intervención.
      - *Ante un segundo defecto simultáneo* en el otro conductor activo del secundario, se produce un cortocircuito franco entre fases que hace disparar las protecciones contra sobreintensidades (magnetotérmicos bipolares del secundario), motivo por el cual el primer defecto debe subsanarse a la mayor brevedad.
@@ -152,9 +128,9 @@ La instrucción **`ITC-BT-38`** regula los requisitos particulares de las instal
 
 ## 🛡️ 4. Calidad de Red Eléctrica, Armónicos y Eficiencia Energética en Entornos Biomédicos
 
-### 4.1. Calidad de Suministro (`UNE-EN 50160`), Factor de Potencia y Distorsión Armónica (`THD`) en Hospitales
+### 4.1. Calidad de Suministro, Factor de Potencia y Distorsión Armónica (`THD`) en Hospitales
 
-Los equipos biomédicos de alta tecnología (generadores de rayos X de alta frecuencia de $80\text{–}120\text{ kW}$, tomógrafos computarizados multicorte, amplificadores de gradientes y radiofrecuencia de Resonancia Magnética, aceleradores lineales de electrones y sistemas `SAI` de gran potencia) constituyen **cargas eléctricas altamente no lineales y pulsantes**. Su operación impacta en tres magnitudes de calidad de red (`Módulo 1585.b` y `UNE-EN 50160`):
+Los equipos biomédicos de alta tecnología (generadores de rayos X de alta frecuencia de $80\text{–}120\text{ kW}$, tomógrafos computarizados multicorte, amplificadores de gradientes y radiofrecuencia de Resonancia Magnética, aceleradores lineales de electrones y sistemas `SAI` de gran potencia) constituyen **cargas eléctricas altamente no lineales y pulsantes**. Su operación impacta en tres magnitudes de calidad de red:
 1. **Compensación de Energía Reactiva y Factor de Potencia ($\cos \varphi$):** En un sistema con distorsión armónica, el factor de potencia total ($\text{PF} = P / S$) es menor que el factor de desplazamiento de la componente fundamental a $50\text{ Hz}$ ($\cos \varphi_1$):
    $$\text{PF} = \frac{P}{S} = \frac{\cos \varphi_1}{\sqrt{1 + \text{THD}_I^2}}$$
    Para eliminar las penalizaciones tarifarias por consumo de energía reactiva inductiva y liberar capacidad en los transformadores de potencia del hospital, se instalan en los cuadros generales de baja tensión **baterías automáticas de condensadores dotadas de inductancias de rechazo desintonizadas** (al $7\%$ o $189\text{ Hz}$ para evitar resonancia paralelo con el $5.^\circ$ armónico), cuya potencia reactiva capacitiva necesaria $Q_c$ ($\text{kVAr}$) para elevar el factor de potencia desde $\cos \varphi_1$ hasta $\cos \varphi_2$ ($\ge 0,95\text{–}0,98$) para una potencia activa $P$ ($\text{kW}$) se calcula mediante la ecuación:
@@ -163,12 +139,12 @@ Los equipos biomédicos de alta tecnología (generadores de rayos X de alta frec
    $$\text{THD}_V = \frac{\sqrt{\sum_{h=2}^{40} V_h^2}}{V_1} \times 100\% \quad (\le 8\%\text{ según UNE-EN 50160; recomendado } \le 3\text{–}5\%\text{ en áreas médicas críticas})$$
    Los **armónicos impares múltiplos de 3 (*triplen harmonics*: $3.^\circ$ a $150\text{ Hz}$, $9.^\circ$ a $450\text{ Hz}$, $15.^\circ$ a $750\text{ Hz}$)** son secuencias homopolares que **NO se anulan en el punto neutro de un sistema trifásico equilibrado, sino que se suman en fase por el conductor neutro** ($I_N \approx \sqrt{3}\,I_{3}$), pudiendo provocar que la corriente por el neutro supere hasta $1,73$ veces la corriente de fase. Por ello, en instalaciones hospitalarias con elevada densidad electrónica se sobredimensiona la sección del conductor neutro (neutro al $100\%$ o doble neutro) y se instalan **transformadores de separación con acoplamiento Zig-Zag ($Dyn11$ / $Dzn0$)** y **Filtros Activos de Armónicos (`AHF`)** en paralelo que inyectan en tiempo real corrientes en contrafase para cancelar los armónicos del $2.^\circ$ al $50.^\circ$ orden.
 
-### 4.2. Eficiencia Energética en Hospitales e Instalaciones Biomédicas (`CTE DB-HE`, `RITE`, `RD 390/2021` e `ISO 50001`)
+### 4.2. Eficiencia Energética en Hospitales e Instalaciones Biomédicas
 
-Un complejo hospitalario de agudos opera de manera ininterrumpida **$24\text{ horas al día, }365\text{ días al año}$** ($8.760\text{ h/año}$), presentando una intensidad energética de **$250\text{ a }450\text{ kWh/m}^2\cdot\text{año}$** (entre 2,5 y 4 veces superior a un edificio de oficinas convencional). El balance energético típico de un hospital del SERGAS se distribuye en tres grandes vectores: **$40\%\text{–}50\%$ en Climatización (`HVAC`), Ventilación y Agua Caliente Sanitaria (`ACS`)**, **$20\%\text{–}25\%$ en Iluminación e informática** y **$25\%\text{–}35\%$ en Equipamiento Electromédico, Alta Tecnología de Imagen/Radioterapia, Esterilización, Lavandería y Cocinas**.
+Un complejo hospitalario de agudos opera de manera ininterrumpida **$24\text{ horas al día, }365\text{ días al año}$** ($8.760\text{ h/año}$), presentando una intensidad energética de **$250\text{ a }450\text{ kWh/m}^2\cdot\text{año}$** (entre 2,5 y 4 veces superior a un edificio de oficinas convencional). El balance energético típico de un hospital del servicio de salud se distribuye en tres grandes vectores: **$40\%\text{–}50\%$ en Climatización (`HVAC`), Ventilación y Agua Caliente Sanitaria (`ACS`)**, **$20\%\text{–}25\%$ en Iluminación e informática** y **$25\%\text{–}35\%$ en Equipamiento Electromédico, Alta Tecnología de Imagen/Radioterapia, Esterilización, Lavandería y Cocinas**.
 
 Las actuaciones normativas y de ingeniería para la optimización energética hospitalaria comprenden:
-1. **Sistemas de Gestión de la Energía (`UNE-EN ISO 50001`) y Certificación Energética (`RD 390/2021`):** Establecimiento de la **Línea Base Energética (`EnB`)** y de **Indicadores de Desempeño Energético (`IDEn` / `EnPI`)** normalizados por metro cuadrado, por cama ocupada y por unidad de actividad asistencial (`kWh por exploración de RM/TC`). Conforme al **`RD 390/2021`**, todo edificio sanitario público con superficie útil total **$> 250\text{ m}^2$** debe disponer de su **Certificado de Eficiencia Energética** en vigor (validez de $10\text{ años}$, o $5\text{ años}$ para calificación `G`) y exhibir la etiqueta energética en lugar visible al público.
+1. **Sistemas de Gestión de la Energía (`UNE-EN ISO 50001`) y Certificación Energética:** Establecimiento de la **Línea Base Energética (`EnB`)** y de **Indicadores de Desempeño Energético (`IDEn` / `EnPI`)** normalizados por metro cuadrado, por cama ocupada y por unidad de actividad asistencial (`kWh por exploración de RM/TC`). Conforme al **`RD 390/2021`**, todo edificio sanitario público con superficie útil total **$> 250\text{ m}^2$** debe disponer de su **Certificado de Eficiencia Energética** en vigor (validez de $10\text{ años}$, o $5\text{ años}$ para calificación `G`) y exhibir la etiqueta energética en lugar visible al público.
 2. **Leyes de Afinidad en Bombas Hidráulicas y Ventiladores de UTAs con Variadores de Frecuencia (`VFD`):** En las redes hidrónicas de climatización de caudal variable y en los ventiladores de las Unidades de Tratamiento de Aire (`UTA`), el caudal $Q$, la altura manométrica o presión $\Delta P$ y la **potencia eléctrica absorbida en el eje $P$** se relacionan con la velocidad de giro del motor $n$ ($\text{rpm}$) mediante las **Leyes de Afinidad de las turbomáquinas**:
    $$\frac{Q_2}{Q_1} = \frac{n_2}{n_1} \qquad ; \qquad \frac{\Delta P_2}{\Delta P_1} = \left(\frac{n_2}{n_1}\right)^2 \qquad ; \qquad \mathbf{\frac{P_2}{P_1} = \left(\frac{n_2}{n_1}\right)^3}$$
    Al variar la potencia con el **cubo de la velocidad**, reducir mediante un variador de frecuencia (`VFD`) el caudal de aire de un quirófano en modo de reposo nocturno (*setback mode* fuera de actividad quirúrgica programada, manteniendo siempre la sobrepresión positiva reglamentaria de $+15\text{ Pa}$) al **$70\%$ del caudal nominal ($n_2 = 0,70\,n_1$) reduce el consumo eléctrico de los ventiladores al $0,70^3 = 34,3\%$ (un ahorro energético directo del $65,7\%$)**.
@@ -185,44 +161,27 @@ Las actuaciones normativas y de ingeniería para la optimización energética ho
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Arquitectura Eléctrica de Alta Disponibilidad en los Hospitales de las 7 Áreas Sanitarias
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-En los complejos hospitalarios del **SERGAS** (*CHUAC, CHUS, Hospital Público Álvaro Cunqueiro de Vigo, HULA, CHUO, CHOP/Gran Montecelo y CHUF*), el suministro eléctrico se diseña con topología de **redundancia crítica**:
-- **Doble acometida subterránea en Media Tensión ($20\text{ kV}$)** en anillo desde subestaciones distintas de la compañía distribuidora, alimentando varios Centros de Transformación (`CT`) equipados con transformadores secos encapsulados en resina epoxi (`clase F1` de mínima inflamabilidad).
-- **Central de Grupos Electrógenos sincronizados en paralelo** (que superan ampliamente el mínimo legal del $25\%$ de reserva de la `ITC-BT-28`, alcanzando el $100\%$ de las cargas de red de emergencia y entrando en carga en $< 10\text{–}15\text{ s}$).
-- **Sistemas de Alimentación Ininterrumpida (`SAI` / `UPS`) modulares en configuración redundante $N+1$ o $2N$**, que garantizan el suministro especial complementario de corte muy breve ($< 0,15\text{ s}$ / $0\text{ ms}$ en línea) con autonomía $\ge 2\text{ horas}$ para todos los quirófanos, UCI, REA, paritorios, salas de hemodinámica y nodos de comunicaciones TIC (`IANUS`/`PACS`).
+| Parámetro / Concepto Normativo | Valor Numérico o Regla Exacta de Examen (¡Memorizar!) |
+| :--- | :--- |
+| **Umbral de Microshock (Fibrilación Ventricular)** | **$10\text{ }\mu\text{A}$ a $50\text{ }\mu\text{A}$** a $50\text{ Hz}$ directamente al miocardio ($R_{\text{int}} \approx 500\text{–}1.000\text{ }\Omega$ $\Rightarrow \Delta V_{\text{máx}} = \mathbf{10\text{ mV}}$). |
+| **Suministro de Reserva en Hospitales** | Obligatorio en hospitales, ambulatorios y centros de salud: mínimo **$\mathbf{25\%}$ de la potencia total contratada** (Socorro $\ge 15\%$, Duplicado $\ge 50\%$). |
+| **Alumbrado de Emergencia (Activación y Evacuación)** | Entra cuando la tensión cae a **$< 70\%$ de la nominal**. Evacuación: **$\ge 1\text{ lux}$** en eje de pasos y **$\ge 5\text{ lux}$** en equipos contra incendios y cuadros eléctricos durante **$\ge 1\text{ h}$** ($E_{\text{máx}}/E_{\text{mín}} < 40$). Antipánico: **$\ge 0,5\text{ lux}$**. |
+| **Alumbrado de Reemplazamiento en Quirófano** | Iluminancia **igual al alumbrado normal** durante un mínimo de **$\mathbf{2\text{ horas}}$**. |
+| **Suministro Especial Complementario (SAI Quirófano)** | Alimenta **lámpara de quirófano y equipos de asistencia vital**: entrada automática en **$< 0,5\text{ segundos}$ (corte breve)** y autonomía **$\ge 2\text{ horas}$**. |
+| **Puesta a Tierra de Protección (`PT`) en Quirófano** | Impedancia máxima entre el embarrado común de tierra (`PT`) y las masas o tomas de corriente: **$\mathbf{\le 0,2\text{ }\Omega}$**. |
+| **Conexión de Equipotencialidad (`EE`) en Quirófano** | Impedancia máxima entre partes metálicas accesibles y `EE`: **$\mathbf{\le 0,1\text{ }\Omega}$**. Diferencia de potencial máxima en condición normal: **$\mathbf{\le 10\text{ mV}}$ eficaces**. Sección conductores a `EE`: **$\ge 6\text{ mm}^2$ Cu**. Unión `EE`–`PT`: **$\ge 16\text{ mm}^2$ Cu**. |
+| **Transformador de Aislamiento (Esquema `IT` Médico)** | Mínimo **1 por cada quirófano**; potencia monofásica entre **$\mathbf{0,5\text{ kVA y }10\text{ kVA}}$**; tensión secundaria **$\le 230\text{ V}$**; corriente de fuga en vacío **$\le 0,5\text{ mA}$**. **Prohibidos diferenciales en sus circuitos**. |
+| **Monitor de Vigilancia de Aislamiento (`CPI` / `IMD`)** | Impedancia interna **$\ge 100\text{ k}\Omega$**; tensión medida **$\le 25\text{ V DC}$**; corriente inyectada **$\le 1\text{ mA}$**; disparo de **alarma óptica ROJA + acústica cuando $R_{\text{aisl}} < \mathbf{50\text{ k}\Omega}$**. |
+| **Diferenciales fuera del Transformador y `MBTS`** | Diferenciales **Clase A de alta sensibilidad ($\le 30\text{ mA}$)** para RX portátiles o equipos $> 5\text{ kVA}$ fuera del trafo IT. `MBTS` en quirófanos: **$\le 24\text{ V AC}$** y **$\le 50\text{ V DC}$**. |
+| **Suelos Antiestáticos y Ventilación Zona M** | Resistencia suelo antielectrostático **$\le 1\text{ M}\Omega$** ($50\text{ k}\Omega\text{–}1\text{ M}\Omega$ `UNE 20392`, nunca $> 100\text{ M}\Omega$). Zona M desclasificable con **$\ge 15\text{ renovaciones/hora}$**. |
+| **Periodicidad de Controles e Inspecciones** | **Semanal** (control `CPI`), **Mensual** (medidas continuidad y aislamiento en Libro), **Anual** (revisión por instalador autorizado) y **Cada 5 años** (Inspección periódica por **`OCA`**). |
+| **Leyes de Afinidad (Eficiencia en Bombas/UTAs)** | $Q \propto n$ ; $\Delta P \propto n^2$ ; **$P \propto n^3$** (la potencia eléctrica varía con el **cubo** de la velocidad de giro o del caudal). |
 
-### 5.2. Monitorización de Cuadros de Quirófano en `BMS`/`XMAO` y Gestión de Inspecciones `OCA`
-
-En los bloques quirúrgicos y unidades de críticos del SERGAS, cada quirófano cuenta con su **cuadro eléctrico de aislamiento individual** situado en el pasillo técnico exterior anexo, dotado de transformador de separación monofásico de $5\text{ a }7,5\text{ kVA}$, vigilador de aislamiento digital (`CPI` `UNE-EN 61557-8` con localizador automático del circuito en fallo `EDS`) y pasarela de comunicaciones **`Modbus TCP/IP`**. Esta pasarela reporta en tiempo real tanto al panel técnico táctil del interior del quirófano como al puesto central de control de ingeniería (**`BMS / SCADA`**) el valor instantáneo en $\text{k}\Omega$ de la resistencia de aislamiento, el porcentaje de carga en $\text{kVA}$ y la temperatura del transformador.
-
-En el sistema corporativo **`XMAO` del SERGAS**, cada quirófano y sala de intervención (Grupo 2) tiene parametrizadas sus **gamas técnico-legales obligatorias de la `ITC-BT-38`**: orden de trabajo semanal de test del vigilador de aislamiento, orden mensual de medición de continuidad y aislamiento con volcado al **Libro de Mantenimiento** del quirófano, revisión anual por empresa instaladora especialista (`IBTE`) e **inspección quinquenal oficial por `OCA` (`ITC-BT-05`)**, vinculando digitalmente los certificados favorables y el control de subsanación de posibles defectos dentro del expediente técnico de la ubicación.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
-
-| Parámetro / Concepto Normativo | Norma / Instrucción | Valor Numérico o Regla Exacta de Examen (¡Memorizar!) |
-| :--- | :--- | :--- |
-| **Umbral de Microshock (Fibrilación Ventricular)** | Biofísica / `UNE-EN 60601-1` | **$10\text{ }\mu\text{A}$ a $50\text{ }\mu\text{A}$** a $50\text{ Hz}$ directamente al miocardio ($R_{\text{int}} \approx 500\text{–}1.000\text{ }\Omega$ $\Rightarrow \Delta V_{\text{máx}} = \mathbf{10\text{ mV}}$). |
-| **Suministro de Reserva en Hospitales** | **`ITC-BT-28` Apdo. 2** | Obligatorio en hospitales, ambulatorios y centros de salud: mínimo **$\mathbf{25\%}$ de la potencia total contratada** (Socorro $\ge 15\%$, Duplicado $\ge 50\%$). |
-| **Alumbrado de Emergencia (Activación y Evacuación)** | **`ITC-BT-28` Apdo. 3** | Entra cuando la tensión cae a **$< 70\%$ de la nominal**. Evacuación: **$\ge 1\text{ lux}$** en eje de pasos y **$\ge 5\text{ lux}$** en equipos contra incendios y cuadros eléctricos durante **$\ge 1\text{ h}$** ($E_{\text{máx}}/E_{\text{mín}} < 40$). Antipánico: **$\ge 0,5\text{ lux}$**. |
-| **Alumbrado de Reemplazamiento en Quirófano** | **`ITC-BT-28` / `ITC-BT-38`** | Iluminancia **igual al alumbrado normal** durante un mínimo de **$\mathbf{2\text{ horas}}$**. |
-| **Suministro Especial Complementario (SAI Quirófano)** | **`ITC-BT-38` Apdo. 2.2** | Alimenta **lámpara de quirófano y equipos de asistencia vital**: entrada automática en **$< 0,5\text{ segundos}$ (corte breve)** y autonomía **$\ge 2\text{ horas}$**. |
-| **Puesta a Tierra de Protección (`PT`) en Quirófano** | **`ITC-BT-38` Apdo. 2.1.1** | Impedancia máxima entre el embarrado común de tierra (`PT`) y las masas o tomas de corriente: **$\mathbf{\le 0,2\text{ }\Omega}$**. |
-| **Conexión de Equipotencialidad (`EE`) en Quirófano** | **`ITC-BT-38` Apdo. 2.1.2** | Impedancia máxima entre partes metálicas accesibles y `EE`: **$\mathbf{\le 0,1\text{ }\Omega}$**. Diferencia de potencial máxima en condición normal: **$\mathbf{\le 10\text{ mV}}$ eficaces**. Sección conductores a `EE`: **$\ge 6\text{ mm}^2$ Cu**. Unión `EE`–`PT`: **$\ge 16\text{ mm}^2$ Cu**. |
-| **Transformador de Aislamiento (Esquema `IT` Médico)** | **`ITC-BT-38` Apdo. 2.1.3** | Mínimo **1 por cada quirófano**; potencia monofásica entre **$\mathbf{0,5\text{ kVA y }10\text{ kVA}}$**; tensión secundaria **$\le 230\text{ V}$**; corriente de fuga en vacío **$\le 0,5\text{ mA}$**. **Prohibidos diferenciales en sus circuitos**. |
-| **Monitor de Vigilancia de Aislamiento (`CPI` / `IMD`)** | **`ITC-BT-38` Apdo. 2.1.3** | Impedancia interna **$\ge 100\text{ k}\Omega$**; tensión medida **$\le 25\text{ V DC}$**; corriente inyectada **$\le 1\text{ mA}$**; disparo de **alarma óptica ROJA + acústica cuando $R_{\text{aisl}} < \mathbf{50\text{ k}\Omega}$**. |
-| **Diferenciales fuera del Transformador y `MBTS`** | **`ITC-BT-38` Apdos. 2.1.4 / 2.1.5** | Diferenciales **Clase A de alta sensibilidad ($\le 30\text{ mA}$)** para RX portátiles o equipos $> 5\text{ kVA}$ fuera del trafo IT. `MBTS` en quirófanos: **$\le 24\text{ V AC}$** y **$\le 50\text{ V DC}$**. |
-| **Suelos Antiestáticos y Ventilación Zona M** | **`ITC-BT-38` Apdo. 2.3** | Resistencia suelo antielectrostático **$\le 1\text{ M}\Omega$** ($50\text{ k}\Omega\text{–}1\text{ M}\Omega$ `UNE 20392`, nunca $> 100\text{ M}\Omega$). Zona M desclasificable con **$\ge 15\text{ renovaciones/hora}$**. |
-| **Periodicidad de Controles e Inspecciones** | **`ITC-BT-38` Apdo. 2.4 / `ITC-BT-05`** | **Semanal** (control `CPI`), **Mensual** (medidas continuidad y aislamiento en Libro), **Anual** (revisión por instalador autorizado) y **Cada 5 años** (Inspección periódica por **`OCA`**). |
-| **Leyes de Afinidad (Eficiencia en Bombas/UTAs)** | Física / `RITE` / `ISO 50001` | $Q \propto n$ ; $\Delta P \propto n^2$ ; **$P \propto n^3$** (la potencia eléctrica varía con el **cubo** de la velocidad de giro o del caudal). |
-
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 
 1. **La trampa clásica entre $0,1\text{ }\Omega$ y $0,2\text{ }\Omega$ en la `ITC-BT-38`:** Los tribunales invierten sistemáticamente las dos resistencias del quirófano. Regla infalible: la **Equipotencialidad (`EE`) es la más estricta: $\le 0,1\text{ }\Omega$** (con conductores de $\ge 6\text{ mm}^2$), mientras que la **Puesta a Tierra de Protección (`PT`) es el doble: $\le 0,2\text{ }\Omega$** (y el puente que une ambos embarrados `EE`–`PT` es de **$\ge 16\text{ mm}^2$**).
 2. **La trampa del disparo ante un primer fallo en el Esquema `IT` de quirófano:** En los supuestos prácticos preguntan qué ocurre si durante una cirugía cardíaca se produce un primer defecto franco de aislamiento a masa en el bisturí eléctrico o en la bomba extracorpórea conectada al transformador de aislamiento. **Respuesta:** **NO se corta el suministro ni dispara ningún automático**; el equipo sigue funcionando con total normalidad, la señal del panel pasa de verde a **roja fija y suena la alarma acústica** (al caer $R < 50\text{ k}\Omega$), se pulsa el silenciado acústico, se termina la operación quirúrgica con seguridad y se repara el defecto inmediatamente después.

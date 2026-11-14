@@ -1,34 +1,6 @@
 # Tema 6 — Caracterización y funcionamiento de los equipos de tomografía computarizada. Imagen tomográfica y componentes de los equipos. Adquisición: helicoidal, multicorte, volumétrica y espectral.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #6 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 02 — Física de las Radiaciones, Electromagnetismo y Equipos de Radiodiagnóstico
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulo Profesional 1588: *Sistemas de radiodiagnóstico, radioterapia e imagen médica*; MP 1585, 1586 y 1587); Real Decreto 601/2019 (justificación y optimización, registro de $\text{CTDI}_{\text{vol}}$ y $\text{DLP}$); Real Decreto 1085/2009 (Reglamento de instalaciones de rayos X médicos — Clase 1); Real Decreto 1976/1999 y Protocolo Español de Control de Calidad en Radiodiagnóstico (PECCRD — SEFM/SEPR/SERAM); Norma particular `UNE-EN 60601-2-44` (seguridad básica y funcionamiento esencial de equipos de TC) y `UNE-EN 61223-3-5` (ensayos de aceptación y constancia en TC).
-> - **Sistemas y Entorno SERGAS:** Servicios de Radiodiagnóstico y Servicios de Radiofísica y Protección Radiológica de las 7 Áreas Sanitarias del SERGAS (`CHUAC`, `CHUS`, `CHUVI`, `HULA`, `CHUO`, `CHOP`, `C.H. Arquitecto Marcide`); integración `HIS/SIHGA` – `RIS` – `DICOM MWL / MPPS / RDSR` – `PACS` corporativo – `IANUS` y gestión de mantenimiento en `XMAO`.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose de Subepígrafes según Publicación Oficial del DOG (Resolución de 13 de abril de 2026)
-El **Tema 6** de la Parte Específica del programa oficial para el ingreso en la categoría de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud aborda la modalidad diagnóstica de mayor impacto en la dosis colectiva hospitalaria y de mayor complejidad mecatrónica y computacional dentro del radiodiagnóstico por rayos X. El epígrafe se estructura en tres grandes ejes:
-1. **Caracterización y principio de formación de la imagen tomográfica:** Fundamentos matemáticos de la reconstrucción tomográfica (transformada de Radon, teorema del corte central de Fourier, matriz de reconstrucción, píxel y vóxel isotrópico), escala cuantitativa de **Unidades Hounsfield (UH)**, ventana de visualización (*Window Width / Window Level*) y evolución desde la retroproyección filtrada (FBP) hasta la reconstrucción iterativa (IR) y por inteligencia artificial (*Deep Learning Reconstruction* — DLR).
-2. **Arquitectura técnica y componentes de los equipos de TC:** Ingeniería del estativo o *gantry* (anillos rozantes de potencia y datos ópticos, chasis rotatorio de alta aceleración centrífuga), generador de alta tensión embarcado, tubo de rayos X de alta capacidad térmica o envolvente giratorio con foco volante (*z-Flying Focal Spot*), filtros de forma en pajarita (*Bowtie*), colimación pre-paciente y post-paciente, y detectores de estado sólido multicorte con sistema de adquisición de datos (DAS).
-3. **Modalidades avanzadas de adquisición:** Cinemática y física de la **adquisición helicoidal** (factor de paso o *Pitch*), **TC multicorte (MDCT)**, **TC volumétrica de haz cónico amplio** (*Wide-Cone Volume CT* de $256\text{–}320\text{ filas}$) y **TC espectral / doble energía (DECT)** junto con la nueva generación de **TC por contaje de fotones (*Photon-Counting CT* — PCCT)**, incluyendo magnitudes dosimétricas reglamentarias ($\text{CTDI}_w$, $\text{CTDI}_{\text{vol}}$, $\text{DLP}$, $\text{SSDE}$) y control de calidad.
-
-### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** `TS Imagen para el Diagnóstico` | `Radiofísica Hospitalaria` | `Ingeniero/a Técnico/a`
-- **Grado de solapamiento:**
-  - **Alto (80%) en TS Imagen para el Diagnóstico:** Cubre equipamiento, fundamentos físicos, estudios y técnicas de exploración de Tomografía Computarizada.
-  - **Alto (80%) en Radiofísica Hospitalaria:** Cubre tomógrafos computarizados, algoritmos de reconstrucción tomográfica, métricas de calidad de imagen, protocolos DICOM y dosimetría en estudios de TC.
-  - **Medio (50%) en Ingeniero/a Técnico/a:** Incluye los equipos de TAC dentro de los sistemas e instalaciones hospitalarias de diagnóstico por imagen.
-- **Epígrafes equivalentes en temarios SERGAS:**
-  - **TS Imagen para el Diagnóstico:** *Tema 9. Equipamientos de diagnóstico por imagen: radiología convencional intervencionista, tomografía computerizada, resonancia magnética y ultrasonografía. Principios de tomografía computerizada y resonancia magnética: fundamentos físicos, aplicaciones e indicaciones. Estudios y técnicas de exploración con TC y RMN.*
-  - **Radiofísica Hospitalaria:** *Tema 26. Equipos... Características de los equipos de radiodiagnóstico: ... tomógrafos computadorizados (TC)*; *Tema 27. Introducción a los principales procedimientos... Estudios de TC*; *Tema 5. Fundamentos de la imagen médica... Tratamiento de imágenes: filtros, algoritmos de reconstrucción... Evaluación de la calidad de imagen: MTF, ruido, resolución y contraste. Protocolos DICOM.*
-  - **Ingeniero/a Técnico/a:** *Tema 50. Diagnóstico por imagen. Equipos y salas de radiodiagnóstico. RNM. TAC. Instalaciones. Procesado de placas. Digitalización de imágenes.*
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Principio Físico-Matemático de la Imagen Tomográfica y Transformada de Radon
 
 ### 1.1. Principio Físico-Matemático de la Imagen Tomográfica y Transformada de Radon
 La radiografía proyectiva convencional superpone todas las estructuras tridimensionales atravesadas por el haz de rayos X sobre un plano bidimensional, reduciendo drásticamente la sensibilidad al bajo contraste. La **Tomografía Computarizada (TC)**, desarrollada por Godfrey Hounsfield y Allan Cormack (Premio Nobel 1979), resuelve la superposición midiendo múltiples perfiles de transmisión de un haz de rayos X colimado que rota $360^\circ$ alrededor del paciente y reconstruyendo matemáticamente la distribución espacial del **coeficiente de atenuación lineal $\mu(x,y,z)$** en cada elemento de volumen (**vóxel**).
@@ -63,12 +35,12 @@ La imagen se codifica con una profundidad de **$12\text{ bits}$ ($4.096\text{ ni
 1. **Reglamento de Productos Sanitarios (`UE 2017/745 MDR` y `RD 192/2023`):** Un equipo de TC es un producto sanitario activo para diagnóstico que emite radiaciones ionizantes, clasificado en **Clase IIb** conforme a la **Regla 10 del Anexo VIII del MDR**.
 2. **Norma Particular `UNE-EN 60601-2-44`:** Establece los requisitos de seguridad básica y funcionamiento esencial de los equipos de TC (exactitud y visualización pre-disparo de $\text{CTDI}_{\text{vol}}$ y $\text{DLP}$, alertas y niveles de notificación de dosis *Dose Check* según `NEMA XR-25`, parada de emergencia de rotación y movimiento de mesa, y protección contra sobreirradiación).
 3. **`RD 1085/2009` (Instalaciones de Rayos X con fines de diagnóstico médico):** Clasifica los equipos de Tomografía Computarizada dentro de las **Instalaciones de Clase 1** (máxima exigencia administrativa: declaración y registro con proyecto de blindaje, vigilancia anual de niveles de radiación y **certificado anual de conformidad** emitido por UTPR/SPR).
-4. **`RD 601/2019` (Justificación y optimización del uso de radiaciones ionizantes):** Obliga a que todos los equipos de TC instalados dispongan de indicación en consola y transferencia automática del informe estructurado de dosis (**`DICOM RDSR`** — *Radiation Dose Structured Report*) al historial dosimétrico del paciente (`IANUS`), así como a comparar anualmente las medianas locales con los **Niveles de Referencia para Diagnóstico (NRD)**.
+4. **`RD 601/2019` (Justificación y optimización del uso de radiaciones ionizantes):** Obliga a que todos los equipos de TC instalados dispongan de indicación en consola y transferencia automática del informe estructurado de dosis (**`DICOM RDSR`** — *Radiation Dose Structured Report*) al historial dosimétrico del paciente (`HCE`), así como a comparar anualmente las medianas locales con los **Niveles de Referencia para Diagnóstico (NRD)**.
 5. **`RD 1976/1999` y Protocolo Español de Control de Calidad en Radiodiagnóstico (`PECCRD`):** Regula las pruebas de aceptación, estado y constancia en calidad de imagen y dosimetría de TC realizadas por el **Servicio de Radiofísica y Protección Radiológica**.
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Evolución Histórica de las Generaciones de TC
 
 ### 2.1. Evolución Histórica de las Generaciones de TC (1.ª a 4.ª Generación y EBCT)
 - **1.ª Generación (Traslación-Rotación, haz fino tipo lápiz *Pencil-Beam*):** Un único detector (yodo de sodio) y un haz lineal que se trasladaban linealmente y giraban de $1^\circ\text{ en }1^\circ$ hasta $180^\circ$ ($4\text{–}5\text{ min}$ por corte; cabeza).
@@ -95,7 +67,7 @@ El **Gantry** aloja en una corona rotatoria de fundición de aluminio de alta ri
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Adquisición Helicoidal (Espiral) y Definición Normativa del Factor de Paso
 
 ### 3.1. Adquisición Helicoidal (Espiral) y Definición Normativa del Factor de Paso (*Pitch*)
 En la adquisición secuencial (*Step-and-Shoot*), el tubo realiza un giro de $360^\circ$ con la mesa estática, se interrumpe la irradiación y la mesa avanza a la siguiente posición. En la **adquisición helicoidal o espiral** (introducida por Willi Kalender en 1989 gracias a los *slip rings*), el tubo de rayos X gira continuamente mientras el tablero de la mesa de fibra de carbono se desplaza a velocidad constante $v_{\text{mesa}}$ a lo largo del eje $Z$, describiendo una trayectoria helicoidal alrededor del paciente.
@@ -140,9 +112,9 @@ La **TC Espectral o de Doble Energía (DECT)** adquiere dos conjuntos de proyecc
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Magnitudes Dosimétricas Reglamentarias en TC
 
-### 4.1. Magnitudes Dosimétricas Reglamentarias en TC (`IEC 60601-2-44` y `RD 601/2019`)
+### 4.1. Magnitudes Dosimétricas Reglamentarias en TC
 Dado que el tubo gira $360^\circ$ y las colas de radiación dispersa se extienden longitudinalmente más allá del grosor nominal del corte $T$, la dosimetría en TC se basa en el **Índice de Dosis en Tomografía Computarizada ($\text{CTDI}$)**:
 1. **$\text{CTDI}_{100}$ (en $\text{mGy}$):** Se mide con una **cámara de ionización tipo lápiz (*Pencil Chamber*) de longitud activa $L_c = 100\text{ mm}$** insertada en los orificios (central y a $1\text{ cm}$ de la periferia a las $12, 3, 6\text{ y }9\text{ h}$) de los **maniquíes cilíndricos normalizados de Polimetilmetacrilato (PMMA) de $16\text{ cm}$ de diámetro (Cabeza y Pediatría) y de $32\text{ cm}$ de diámetro (Cuerpo adulto)** durante una rotación axial de $360^\circ$:
    $$\text{CTDI}_{100} = \frac{1}{N \times T} \int_{-50\text{ mm}}^{+50\text{ mm}} D(z)\, dz$$
@@ -162,41 +134,30 @@ Dado que el tubo gira $360^\circ$ y las colas de radiación dispersa se extiende
    - **Volumen Parcial (*Partial Volume*):** Cuando una estructura densa ocupa solo una fracción del espesor de corte $T$, promediándose su UH con el tejido vecino $\rightarrow$ Se corrige adquiriendo cortes finos submilimétricos ($0,5\text{–}0,625\text{ mm}$).
 2. **Tolerancias del Protocolo Español de Control de Calidad (`PECCRD` / `UNE-EN 61223-3-5`):**
    - **Exactitud del número TC del agua:** **$0 \pm 4\text{ UH}$** en el centro del maniquí de agua; **Uniformidad espacial** entre el centro y los 4 puntos periféricos: **$\le \pm 5\text{ UH}$**; **Ruido de la imagen** (desviación estándar $\sigma$ de las UH en una ROI central): **$\le \pm 10\text{–}20\%$** respecto al valor de referencia basal.
-   - **Exactitud del indicador de distancia de desplazamiento de la mesa** (bajo carga): **$\le \pm 1\text{ a }2\text{ mm}$**; coincidencia de luces láser de posicionamiento interno/externo con el plano de corte: **$\le \pm 2\text{ mm}$**; exactitud del ángulo de inclinación del gantry (*Tilt*): **$\le \pm 1^\circ$**; espesor efectivo de corte e índice $\text{CTDI}_{\text{vol}}$ indicado en consola frente a medida con cámara lápiz: **$\le \pm 20\%$** (`IEC 60601-2-44`).
-3. **Requisitos de Ingeniería Hospitalaria y Mantenimiento (`XMAO`):**
+   - **Exactitud del indicador de distancia de desplazamiento de la mesa** (bajo carga): **$\le \pm 1\text{ a }2\text{ mm}$**; coincidencia de luces láser de posicionamiento interno/externo con el plano de corte: **$\le \pm 2\text{ mm}$**; exactitud del ángulo de inclinación del gantry (*Tilt*): **$\le \pm 1^\circ$**; espesor efectivo de corte e índice $\text{CTDI}_{\text{vol}}$ indicado en consola frente a medida con cámara lápiz: **$\le \pm 20\%$**.
+3. **Requisitos de Ingeniería Hospitalaria y Mantenimiento (`GMAO`):**
    - **Obra civil y cimentación:** El gantry pesa entre **$1.800\text{ y }2.800\text{ kg}$** y gira a $>200\text{ rpm}$; exige bancada de anclaje nivelada sobre forjado calculado para cargas dinámicas ($\ge 1.000\text{–}1.500\text{ kg/m}^2$).
    - **Suministro eléctrico (`REBT`):** Acometida trifásica $400\text{ V}_{\text{AC}}$ de **$80\text{ a }150\text{ kVA}$** con impedancia de línea ultrabaja ($\le 0,08\text{ }\Omega$), diferencial **Tipo B** (sensible a corrientes continuas alisadas de los inversores del gantry) y **SAI/UPS** para la consola de reconstrucción y electrónica de control (evita corrupción de *Raw Data* y parada brusca sin refrigeración del tubo ante microcortes).
    - **Climatización y Blindaje:** Disipación térmica en sala de exploración y técnica de $8\text{ a }18\text{ kW}$, manteniendo **$20\text{–}24\text{ }^\circ\text{C}$** con gradiente $<3\text{ }^\circ\text{C/h}$ y humedad $30\text{–}60\%$ para proteger los detectores cerámicos. Blindaje estructural de plomo de **$2,0\text{ a }3,5\text{ mm Pb}$** en paredes, puerta plomada y visor de control debido a la elevada carga de trabajo semanal ($W$) y alta radiación secundaria.
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Renovación Tecnológica del Parque de TC en las 7 Áreas Sanitarias del SERGAS
-El Servicio Gallego de Salud cuenta con una red de más de **40 tomógrafos computarizados** distribuidos en los hospitales de sus **7 Áreas Sanitarias** (A Coruña y Cee, Santiago de Compostela y Barbanza, Ferrol, Lugo-A Mariña-Monforte, Ourense-Verín-O Barco, Pontevedra y O Salnés, y Vigo) más las unidades de simulación de Oncología Radioterápica y Galaria. A través del **Plan INVEAT** y de los contratos centralizados de renovación tecnológica de la Consellería de Sanidade, el SERGAS ha sustituido todos los equipos con antigüedad $>10\text{ años}$ (criterio de obsolescencia `FENIN/COCIR`) implantando **TC Espectrales de al menos 64–128 cortes y TC Volumétricos de 256–320 cortes** en los servicios de Urgencias, Radiodiagnóstico Central y Cardiología de los grandes complejos (`CHUAC`, `CHUS`, `CHUVI`, `HULA`, `CHUO`, `CHOP` y `C.H. Arquitecto Marcide`), así como equipos de $64\text{ cortes}$ con reconstrucción por inteligencia artificial (DLR) en los hospitales comarcales (Barbanza, Cee, Burela, Monforte, Verín, O Barco y O Salnés).
-
-### 5.2. Integración Digital Corporativa (`HIS/RIS/PACS/IANUS`) y Gestión de Activos (`XMAO`)
-1. **Flujo de Trabajo `DICOM` y Vigilancia Dosimétrica Corporativa:** La petición clínica electrónica generada en **`IANUS` / `SIHGA`** se gestiona en el **`RIS`** corporativo y se publica en la lista de trabajo del tomógrafo mediante **`DICOM Modality Worklist (MWL)`**. Al finalizar la exploración, el equipo notifica el estado mediante **`DICOM MPPS`**, envía las series axiales finas, reconstrucciones MPR y mapas espectrales al **`PACS` centralizado de Galicia** (accesible desde cualquier centro del SERGAS) y transmite obligatoriamente el objeto **`DICOM RDSR` (*Radiation Dose Structured Report*)** al sistema corporativo de gestión de dosis del SERGAS. Este sistema registra en la historia clínica única `IANUS` el $\text{CTDI}_{\text{vol}}$, el $\text{DLP}$ y el maniquí de referencia de cada serie, generando alertas automáticas al Servicio de Radiofísica si una exploración supera los umbrales de notificación o los NRD establecidos conforme al `RD 601/2019`.
-2. **Ingeniería de Mantenimiento en `XMAO`:** En los pliegos de prescripciones técnicas (PPT) de mantenimiento integral del SERGAS gestionados en **`XMAO`**, los equipos de TC se clasifican como equipamiento de **criticidad máxima (Alta Tecnología Clase A)**, exigiéndose una **disponibilidad operativa $\ge 97\text{–}98\%$**, tiempo de respuesta presencial $<2\text{–}4\text{ h}$ (especialmente en TC de Urgencias/Código Ictus 24/7), cobertura total de reposición de **tubos de rayos X y módulos detectores** sin límite de cortes, mantenimiento preventivo trimestral de limpieza y engrase de pistas de anillos rozantes, cambio de escobillas, verificación de intercambiadores térmicos agua-aceite y calibración diaria en aire por los TSID antes del inicio de la jornada asistencial.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Parámetro / Magnitud / Norma | Valor / Fórmula / Referencia Exacta de Examen | Observación Crítica para el Tribunal A1 |
 | :--- | :--- | :--- |
 | **Ecuación de Unidades Hounsfield (UH)** | $\text{UH} = 1000 \times (\mu_{\text{tejido}} - \mu_{\text{agua}})/\mu_{\text{agua}}$ | Aire $= -1000\text{ UH}$; Grasa $= -50\text{ a }-100\text{ UH}$; Agua $= 0\text{ UH}$; Hueso cortical $\ge +1000\text{ UH}$. |
 | **Tolerancia PECCRD del Número TC del Agua** | **$0 \pm 4\text{ UH}$** (Uniformidad espacial: **$\le \pm 5\text{ UH}$**) | Medido en maniquí cilíndrico de agua de $20\text{ cm}$ de diámetro en condiciones clínicas de referencia. |
-| **Definición Normativa de *Pitch* (`IEC 60601-2-44`)** | $\text{Pitch} = I / (N \times T)$ | $I$: avance de mesa por giro ($360^\circ$); $N \times T$: colimación total del haz en el isocentro. |
+| **Definición Normativa de *Pitch*** | $\text{Pitch} = I / (N \times T)$ | $I$: avance de mesa por giro ($360^\circ$); $N \times T$: colimación total del haz en el isocentro. |
 | **Maniquíes de Dosimetría $\text{CTDI}_{100}$** | PMMA de **$16\text{ cm}$ $\varnothing$ (Cabeza/Pediatría)** y **$32\text{ cm}$ $\varnothing$ (Cuerpo)** | Cámara de ionización tipo lápiz de **$100\text{ mm}$ de longitud activa** (longitud de maniquí $\ge 14\text{–}15\text{ cm}$). |
 | **Ecuaciones de $\text{CTDI}_w$, $\text{CTDI}_{\text{vol}}$ y $\text{DLP}$** | $\text{CTDI}_w = \frac{1}{3}\text{CTDI}_{100,c} + \frac{2}{3}\text{CTDI}_{100,p}$ ; $\text{CTDI}_{\text{vol}} = \frac{\text{CTDI}_w}{\text{Pitch}}$ ; $\text{DLP} = \text{CTDI}_{\text{vol}} \times L$ | $\text{CTDI}_{\text{vol}}$ se expresa en $\text{mGy}$ y $\text{DLP}$ en $\text{mGy}\cdot\text{cm}$. El $\text{SSDE}$ corrige el $\text{CTDI}_{\text{vol}}$ por el diámetro del paciente. |
 | **Cobertura de TC Volumétrico (320 filas)** | **$16\text{ cm}$ en eje $Z$** ($320 \times 0,5\text{ mm}$) en **$0,25\text{–}0,275\text{ s}$** | Permite adquirir el corazón completo en un solo latido o perfusión cerebral entera sin mover la mesa. |
 | **Semiconductor de TC por Contaje de Fotones (PCCT)** | **$\text{CdTe}$ / $\text{CdZnTe}$ (CZT — Telururo de Cadmio-Zinc)** | Conversión directa sin centelleador ni septos ópticos; elimina ruido electrónico y logra píxeles de $0,15\text{–}0,2\text{ mm}$. |
-| **Clasificación Reglamentaria de la Instalación** | **Clase 1 (`RD 1085/2009`)** y Producto Sanitario **Clase IIb (`MDR`)** | Requiere proyecto de blindaje, vigilancia anual de radiación y **certificación anual** por UTPR/SPR. |
+| **Clasificación Reglamentaria de la Instalación** | **Clase 1** y Producto Sanitario **Clase IIb (`MDR`)** | Requiere proyecto de blindaje, vigilancia anual de radiación y **certificación anual** por UTPR/SPR. |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa clásica sobre el significado de $\text{CTDI}_{\text{vol}}$:** Si el tribunal pregunta si el $\text{CTDI}_{\text{vol}}$ representa la dosis absorbida real recibida por el paciente, la respuesta es **FALSO**. El $\text{CTDI}_{\text{vol}}$ es únicamente un índice de la salida de radiación del tomógrafo referida a un maniquí cilíndrico estándar de PMMA de $16\text{ cm}$ o $32\text{ cm}$. Si se mantienen constantes los $\text{kVp}$ y $\text{mAs}$, un paciente delgado de $50\text{ kg}$ y uno obeso de $130\text{ kg}$ tendrán exactamente el mismo $\text{CTDI}_{\text{vol}}$ en pantalla, aunque la dosis absorbida real en los órganos del paciente delgado será mucho mayor (de ahí la introducción de la métrica **$\text{SSDE}$**).
 2. **Trampa sobre qué maniquí se usa en TC pediátrico de cuerpo vs. adulto:** Para un TC craneal (tanto en niños como en adultos) se referencia siempre al maniquí de **$16\text{ cm}$** y para un TC toracoabdominal de adulto al de **$32\text{ cm}$**. Si se evalúa un protocolo utilizando el maniquí de $16\text{ cm}$, el valor numérico de $\text{CTDI}_{\text{vol}}$ mostrado para los mismos factores técnicos ($\text{kVp}$, $\text{mAs}$) es **aproximadamente el doble ($\times 2$)** que el mostrado si se referencia al maniquí de $32\text{ cm}$, debido a la menor atenuación del PMMA de $16\text{ cm}$.
 3. **Relación entre $\text{Pitch}$, $\text{CTDI}_{\text{vol}}$ y corriente efectiva ($\text{mAs}_{\text{ef}}$):** En los tomógrafos que trabajan con concepto de **$\text{mAs}$ efectivos ($\text{mAs}_{\text{ef}} = \text{mA} \times t_{\text{rot}} / \text{Pitch}$)**, si el operador aumenta el $\text{Pitch}$ para ir más rápido, el equipo **sube automáticamente los $\text{mA}$ en la misma proporción** para mantener constante el ruido de imagen, por lo que **el $\text{CTDI}_{\text{vol}}$ permanece constante** salvo que se modifiquen explícitamente los $\text{mAs}_{\text{ef}}$.

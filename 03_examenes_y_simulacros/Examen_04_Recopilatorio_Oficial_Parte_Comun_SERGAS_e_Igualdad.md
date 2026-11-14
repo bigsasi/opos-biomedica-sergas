@@ -104,7 +104,7 @@
 **Según el Decreto 145/2024, de 20 de mayo, por el que se establece la estructura orgánica del Servicio Gallego de Salud (SERGAS), ¿cuál es su naturaleza jurídica y cuáles son sus órganos centrales de dirección?**
 
 - **A)** Es una sociedad anónima mercantil privada sin órganos centrales.
-- **B)** Es un organismo autónomo de carácter administrativo adscrito a la Consellería de Sanidade, dotado de personalidad jurídica propia. Sus órganos centrales de dirección son: la Presidencia (que ostenta la persona titular de la Consellería de Sanidade), el Consejo de Dirección, la Gerencia del SERGAS y las tres Direcciones Generales (Dirección General de Asistencia Sanitaria, Dirección General de Recursos Económicos y Dirección General de Recursos Humanos).
+- **B)** Es un organismo autónomo de carácter administrativo adscrito a la Consellería de Sanidade, dotado de personalidad jurídica propia (Art. 92 Ley 8/2008). Según el Decreto 145/2024, sus órganos centrales son: como órganos colegiados el Consejo de Dirección y el Comité Ejecutivo; y como órganos unipersonales la Presidencia (persona titular de la Consellería de Sanidade), la Gerencia del SERGAS (de la que dependen la Vicegerencia y la Subdirección General de Humanización) y las Direcciones Generales de Asistencia Sanitaria, de Recursos Económicos y de Recursos Humanos (más el Consejo Asesor de Pacientes).
 - **C)** La Presidencia del SERGAS la ostenta el Gerente de cada hospital comarcal.
 - **D)** La Dirección General de Salud Pública pertenece al Ministerio de Hacienda.
 

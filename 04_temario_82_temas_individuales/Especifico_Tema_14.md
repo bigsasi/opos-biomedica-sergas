@@ -1,38 +1,8 @@
 # Tema 14 — Caracterización y funcionamiento de los equipos de braquiterapia. Elementos de una instalación.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #14 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 03 — Resonancia Magnética, Ultrasonidos, Radioterapia y Medicina Nuclear
-> - **Marco Normativo y Técnico Nuclear:** RD 1566/1998 (Criterios de Calidad en Radioterapia), RD 1836/1999 y RD 35/2008 (Reglamento sobre Instalaciones Nucleares y Radiactivas), RD 229/2006 (Control de fuentes radiactivas encapsuladas de alta actividad — HASS), RD 601/2019 (Justificación y Optimización de Exposiciones Médicas), RD 1029/2022 (RPSI), Reglamento (UE) 2017/745 (MDR), RD 838/2015 y Orden EFP/1216/2019 (Módulo 1588), Norma Particular UNE-EN 60601-2-17 (Seguridad básica y funcionamiento esencial de los equipos automáticos de braquiterapia por carga diferida controlada), ISO 2919 (Fuentes radiactivas selladas), Informes ICRU 38, ICRU 58, ICRU 89 y Protocolo Dosimétrico AAPM TG-43.
-> - **Sistemas y Entorno SERGAS:** Servicios de Oncología Radioterápica y de Radiofísica y Protección Radiológica del SERGAS (CHUS, CHUAC, CHUVI — Hospital Meixoeiro, HULA, CHUO) y GALARIA, Sistemas de Planificación de Braquiterapia (Oncentra Brachy / BrachyVision), OIS (ARIA / MOSAIQ), DICOM-RT Brachy, IANUS, PACS y XMAO.
+## 📖 1. Principio Físico Diferencial de la Braquiterapia y Clasificación
 
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 14** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud aborda de forma monográfica la **braquiterapia** (curieterapia o radioterapia interna con fuentes encapsuladas), una modalidad terapéutica esencial caracterizada por el máximo gradiente geométrico de dosis existente en oncología radioterápica. Su estudio riguroso abarca:
-1. **Fundamentos físicos, radiobiológicos y clasificación clínica de la braquiterapia:** Predominio geométrico de la ley de la inversa del cuadrado de la distancia ($1/r^2$), clasificación según localización anatómica (endocavitaria, intersticial, intraluminal, superficial/plesioterapia y episcleral oftálmica), duración del implante (temporal vs. permanente) y **tasa de dosis (`ICRU 38`: LDR, MDR, HDR y PDR)**.
-2. **Caracterización física y diseño de fuentes radiactivas encapsuladas (`ISO 2919`) y aplicadores:** Propiedades nucleares y clínicas de $^{192}\text{Ir}$, $^{60}\text{Co}$, $^{125}\text{I}$, $^{103}\text{Pd}$, $^{106}\text{Ru}$ y $^{137}\text{Cs}$; especificación oficial de fuentes mediante la **Tasa de Kerma en Aire de Referencia ($\text{RAKR}$ o $S_K$)** y el **formalismo matemático dosimétrico AAPM TG-43**.
-3. **Arquitectura y funcionamiento de los equipos proyectores de carga diferida automática remota (*Remote Afterloaders* HDR/PDR — `UNE-EN 60601-2-17`):** Contenedor blindado (*Safe*), tambor de cable activo y **cable simulado (*Dummy Source*)**, cabezal indexador multicanal, motores paso a paso con *encoders* ópticos, detectores internos de retracción, sistemas de implante prostático en tiempo real guiados por ecografía transrectal (TRUS) y braquiterapia adaptativa guiada por RM 3D (`ICRU 89`).
-4. **Elementos e ingeniería hospitalaria de una instalación de braquiterapia:** Diseño del radioquirófano blindado de 2.ª Categoría CSN, gammateca, **cámara de ionización de pozo (*Well-type Chamber*)**, monitor ambiental independiente, equipamiento y protocolo de emergencia ante fallo de retracción de fuente, y control de calidad (`RD 1566/1998`).
-
-### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Radiofísica Hospitalaria** | **TS Radioterapia**
-- **Grado de solapamiento:** **Total (90%)** en Radiofísica Hospitalaria (cubre equipos y fuentes de braquiterapia [LDR, HDR, PDR], aplicadores, calibración y diseño de instalaciones); **Alto (85%)** en TS Radioterapia (cubre equipaciones de braquiterapia de alta y baja tasa, endocavitaria e intersticial).
-- **Epígrafes equivalentes en temarios SERGAS:**
-  - **Radiofísica Hospitalaria:**
-    - *Tema 20:* Equipos y fuentes de braquiterapia. Tipos de radionúclidos. Fuentes radiactivas encapsuladas: características, selección y diseño de fuentes. Aplicadores. Sistemas de carga diferida (LDR, HDR, PDR). Equipos de calibración de fuentes. Sistemas de imagen para braquiterapia. Especificación de fuentes: a) caracterización de la emisión de las fuentes: actividad, tasa de kerma en aire de referencia, b) definición del rendimiento de las fuentes (protocolos nacionales e internacionales), c) métodos de dosimetría.
-    - *Tema 10:* Regulaciones, recomendaciones y normas. Administración y organización de la protección radiológica. Organizaciones y normas nacionales e internacionales. Legislación nacional e internacional. Diseño de instalaciones. Cálculo de blindajes. Gestión de la seguridad radiológica.
-  - **TS Radioterapia:**
-    - *Tema 11:* Equipaciones de braquiterapia: braquiterapia de alta tasa; braquiterapia de baja tasa. Características físicas de las fuentes radiactivas.
-    - *Tema 24:* Braquiterapia endocavitaria: composición, equipaciones, instrumentación, características físicas de las fuentes radioactivas.
-    - *Tema 26:* Braquiterapia intersticial: composición, equipos, instrumentación, características físicas de las fuentes radiactivas.
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
-
-### 1.1. Principio Físico Diferencial de la Braquiterapia y Clasificación (`ICRU 38` e `ICRU 89`)
+### 1.1. Principio Físico Diferencial de la Braquiterapia y Clasificación
 La **braquiterapia** (del griego *brachys*, «corto») es la modalidad de radioterapia en la que una o varias **fuentes radiactivas encapsuladas (selladas)** se colocan en el interior del volumen tumoral o en contacto íntimo con él a través de cavidades naturales, catéteres intersticiales o moldes superficiales. A diferencia de la teleterapia externa (donde la fuente se sitúa a $\text{SSD/SAD} = 100\text{ cm}$ y el haz debe atravesar tejidos sanos superficiales antes de alcanzar el tumor), en braquiterapia la distribución espacial de dosis alrededor de la fuente está gobernada de forma abrumadora por el **factor geométrico de la Ley de la Inversa del Cuadrado de la Distancia ($1/r^2$)**:
 
 $$\dot{D}(r) \propto \frac{S_K}{r^2}$$
@@ -53,10 +23,10 @@ Los tratamientos y equipos de braquiterapia se clasifican atendiendo a cuatro cr
 3. **Según la Duración del Implante:** **Temporal** (la fuente se retira tras alcanzar la dosis prescrita, como en toda HDR/PDR y placas oftálmicas) frente a **Permanente** (las semillas decaen indefinidamente en el tejido hasta su extinción física, como el $^{125}\text{I}$ prostático).
 4. **Según el Método de Carga Protegida:** **Carga Directa o Caliente (*Hot Loading*)** (colocación manual del aplicador ya cargado con la fuente radiactiva, **hoy restringida únicamente a semillas permanentes de muy baja energía de $^{125}\text{I}$ y placas oftálmicas**), **Carga Diferida Manual (*Manual Afterloading*)** y **Carga Diferida Automática Remota (*Remote Afterloading*)** (se colocan los aplicadores/catéteres totalmente inactivos en quirófano, se verifica su posición por imagen TC/RM y la fuente entra únicamente cuando todo el personal ha abandonado el búnker, reduciendo a **cero la dosis de carga al personal sanitario**).
 
-### 1.2. Caracterización Física de las Fuentes Radiactivas Encapsuladas (`ISO 2919`)
+### 1.2. Caracterización Física de las Fuentes Radiactivas Encapsuladas
 Toda fuente de braquiterapia consiste en un núcleo activo radiactivo encerrado herméticamente dentro de una **cápsula metálica biocompatible (acero inoxidable AISI 316L, titanio o aleación de platino-iridio)** soldada por láser conforme a la norma **ISO 2919**. La cápsula cumple una **triple misión crítica**: 1) impedir cualquier fuga o dispersión del material radiactivo y evitar la contaminación interna del paciente, 2) **absorber y filtrar las partículas $\beta^-$ o electrones de baja energía no deseados** (en fuentes emisoras gamma como $^{192}\text{Ir}$ o $^{60}\text{Co}$), y 3) aportar rigidez mecánica y permitir la soldadura al cable impulsor.
 
-| Radionucleido | Período de Semidesintegración ($T_{1/2}$) | Emisión Útil y Energía Media Fotónica ($E_\gamma$) | Capa Hemirreductora en Plomo ($\text{HVL}_{\text{Pb}}$) | Constante Específica $\Gamma_{\delta}$ ($\frac{\mu\text{Gy}\cdot\text{m}^2}{\text{GBq}\cdot\text{h}}$) | Actividad Típica y Aplicación Clínica Principal en el SERGAS |
+| Radionucleido | Período de Semidesintegración ($T_{1/2}$) | Emisión Útil y Energía Media Fotónica ($E_\gamma$) | Capa Hemirreductora en Plomo ($\text{HVL}_{\text{Pb}}$) | Constante Específica $\Gamma_{\delta}$ ($\frac{\mu\text{Gy}\cdot\text{m}^2}{\text{GBq}\cdot\text{h}}$) | Actividad Típica y Aplicación Clínica Principal en el ámbito hospitalario |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Iridio-192 ($^{192}\text{Ir}$)** | **$73,83\text{ días}$** | $\beta^-$ + $\gamma$ polienergético ($0,136\text{–}1,06\text{ MeV}$; **$E_{\text{media}} = 380\text{ keV}$**) | **$\approx 2,5\text{–}3,0\text{ mm Pb}$** | $109,1$ | **Estándar de oro en HDR:** Microfuente única de **$10\text{ Ci}$ ($370\text{ GBq}$)** ($\varnothing\ 0,6\text{–}0,9\text{ mm} \times 3,5\text{ mm}$). **Recambio trimestral (cada $3\text{–}4\text{ meses}$)**. |
 | **Cobalto-60 ($^{60}\text{Co}$)** | **$5,27\text{ años}$** | $\beta^-$ ($318\text{ keV}$) + $2\gamma$ (**$1,17\text{ y }1,33\text{ MeV}$**; $E_{\text{media}} = 1,25\text{ MeV}$) | **$\approx 11\text{–}12\text{ mm Pb}$** | $308,5$ | **HDR de larga duración:** Microfuente de $2\text{ Ci}$ ($74\text{ GBq}$). Permite **recambio cada $5\text{ años}$** (ahorro logístico), pero exige un **búnker mucho más blindado** que el $^{192}\text{Ir}$. |
@@ -86,9 +56,9 @@ Donde cada factor desacopla un fenómeno físico concreto:
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Equipos Proyectores de Carga Diferida Automática Remota
 
-### 2.1. Equipos Proyectores de Carga Diferida Automática Remota (*Remote Afterloaders* HDR — `UNE-EN 60601-2-17`)
+### 2.1. Equipos Proyectores de Carga Diferida Automática Remota
 Los equipos proyectores de braquiterapia de Alta Tasa de Dosis (HDR) y Tasa Pulsada (PDR) (ej. *Elekta Flexitron / microSelectron Digital*, *Varian GammaMedplus iX / Bravos*) son productos sanitarios activos terapéuticos de **Clase IIb** (`MDR 2017/745`) regulados por la norma particular **UNE-EN 60601-2-17**. Su arquitectura electromecánica se basa en el principio de **fuente única móvil paso a paso (*Stepping Source*)**:
 1. **Contenedor Blindado Interno de Almacenamiento (*Safe*):** Bloque macizo de **Tungsteno densimetálico o Plomo/Uranio empobrecido** alojado en el cabezal de la unidad móvil. Cuando la fuente de $^{192}\text{Ir}$ ($370\text{ GBq}$) o $^{60}\text{Co}$ ($74\text{ GBq}$) se encuentra en su posición de reposo dentro del *Safe*, la tasa de dosis equivalente ambiental a $10\text{ cm}$ de la carcasa es $< 10\text{ }\mu\text{Sv/h}$ y a $1\text{ m}$ es **$< 1\text{ }\mu\text{Sv/h}$**, permitiendo que el personal médico y de enfermería permanezca junto al equipo dentro del radioquirófano mientras conecta los tubos de transferencia al paciente.
 2. **Conjunto del Cable Impulsor Activo (*Active Source Cable*) y Microfuente:** La cápsula milimétrica de $^{192}\text{Ir}$ ($\varnothing\ 0,6\text{ mm} \times 3,5\text{ mm}$) va soldada por láser al extremo de un **cable ultraflexible de acero inoxidable trenzado** enrollado en un tambor motriz de alta precisión. Este diseño permite que la fuente negocie radios de curvatura de hasta **$10\text{–}13\text{ mm}$** sin acodarse al recorrer agujas intersticiales o aplicadores ginecológicos en anillo.
@@ -100,7 +70,7 @@ Los equipos proyectores de braquiterapia de Alta Tasa de Dosis (HDR) y Tasa Puls
    - Un motor paso a paso controlado por microprocesador con **doble codificador óptico rotatorio (*dual optical encoder*) y medición de par** desplaza el cable activo a velocidades de $300\text{–}600\text{ mm/s}$ hasta detener la fuente en una sucesión discreta de **posiciones de parada (*Dwell Positions*)** separadas por pasos (*step size*) de $1, 2,5\text{ o }5\text{ mm}$ con una **exactitud espacial $\le \pm 1,0\text{ mm}$**.
    - En cada posición de parada $i$, la fuente permanece estacionaria durante un **tiempo de parada (*Dwell Time* $t_i$, resolución de $0,1\text{ s}$)** calculado por el TPS. Al variar individualmente los *dwell times* $t_i$ a lo largo de los distintos canales, el equipo esculpe en 3D la curva de isodosis («optimización del tiempo de parada»). Un temporizador electrónico secundario redundante supervisa el tiempo total y reescala automáticamente todos los *dwell times* en cada sesión según el decaimiento diario del $^{192}\text{Ir}$:
      $$t_{\text{sesión}}(T) = t_{\text{plan}}(0) \cdot e^{+\lambda T} = t_{\text{plan}}(0) \cdot 2^{T / 73,83\text{ d}}$$
-6. **Triple Sistema de Retracción de Emergencia y Verificación de Retorno (`UNE-EN 60601-2-17`):**
+6. **Triple Sistema de Retracción de Emergencia y Verificación de Retorno:**
    - **Detector de Radiación Interno:** Un detector Geiger-Müller o fotodiodo semiconductor situado en el interior del cabezal confirma físicamente que la fuente activa ha regresado al *Safe* tras finalizar el tratamiento (no basta con la lectura del *encoder* mecánico, por si la cápsula se hubiese desprendido del cable).
    - **Motor de Retracción de Emergencia DC + Batería Autónoma (SAI interno):** Si durante una sesión se corta el suministro eléctrico de red o falla el motor paso a paso principal, un motor secundario de corriente continua alimentado por batería interna retrae automáticamente la fuente al *Safe*.
    - **Manivela Mecánica Manual de Emergencia (*Hand Crank*):** Si fallasen simultáneamente el motor principal y el motor secundario de emergencia, el cabezal dispone de una manivela mecánica directa que permite al radiofísico/operador enrollar manualmente el cable de la fuente hacia el contenedor blindado.
@@ -114,9 +84,9 @@ Los equipos proyectores de braquiterapia de Alta Tasa de Dosis (HDR) y Tasa Puls
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Braquiterapia Adaptativa Guiada por Imagen 3D/4D
 
-### 3.1. Braquiterapia Adaptativa Guiada por Imagen 3D/4D (`ICRU 89` y `GEC-ESTRO`)
+### 3.1. Braquiterapia Adaptativa Guiada por Imagen 3D/4D
 Históricamente, la braquiterapia ginecológica se prescribía en radiografías ortogonales 2D al **Punto A de Manchester** ($2\text{ cm}$ superior al orificio cervical externo a lo largo de la sonda uterina y $2\text{ cm}$ lateral en el plano parametrial), sin visualizar el volumen real del tumor ni las paredes de los órganos sanos. El **Informe ICRU 89 (GEC-ESTRO)** transformó el estándar asistencial hacia la **Braquiterapia Adaptativa 3D/4D Guiada por RM (IGABT)**:
 - **Volúmenes Blanco Adaptativos en 4D (evolución temporal del tumor tras la radioquimioterapia externa previa):**
   - **$\text{GTV}_{\text{res}}$:** Volumen tumoral macroscópico residual en el momento de la braquiterapia (hiperintenso en RM secuencia **$T_2$ sin supresión grasa**).
@@ -130,9 +100,9 @@ Históricamente, la braquiterapia ginecológica se prescribía en radiografías 
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Calibración Hospitalaria de Fuentes en Cámara de Pozo y Control de Calidad
 
-### 4.1. Calibración Hospitalaria de Fuentes en Cámara de Pozo y Control de Calidad (`RD 1566/1998`)
+### 4.1. Calibración Hospitalaria de Fuentes en Cámara de Pozo y Control de Calidad
 Conforme al **Real Decreto 1566/1998** y a las recomendaciones de la **SEFM**, el Especialista en Radiofísica Hospitalaria debe medir y verificar en el hospital la **Tasa de Kerma en Aire de Referencia ($S_K$)** de **todas las fuentes de braquiterapia antes de su primera aplicación clínica**:
 - **En HDR/PDR ($^{192}\text{Ir}$ / $^{60}\text{Co}$):** Se verifica el $100\%$ de las fuentes en cada cambio trimestral/quinquenal.
 - **En semillas de $^{125}\text{I}$ para implantes permanentes:** Se verifica el $100\%$ de las fuentes o, si el lote comprende un gran número de semillas sueltas/encapsuladas en cartuchos estériles, una **muestra estadística representativa de al menos el $10\%$ del lote**.
@@ -140,7 +110,7 @@ Conforme al **Real Decreto 1566/1998** y a las recomendaciones de la **SEFM**, e
   - Debido a que la tasa de kerma en aire a $1\text{ m}$ de las fuentes de braquiterapia es demasiado baja para medirse en aire libre sin sufrir enormes errores geométricos y de dispersión ambiental, se emplea una **Cámara de Ionización de Pozo de geometría casi $4\pi$** (ej. *Standard Imaging HDR 1000 Plus* acoplada a un electrómetro de referencia con trazabilidad a laboratorio primario ENAC/PTB/NIST).
   - La cámara dispone de un inserto portafuentes específico para cada modelo de catéter. En una fuente móvil de $^{192}\text{Ir}$, primero se realiza un barrido en profundidad dentro del pozo para localizar el **punto dulce (*Sweet Spot*: punto axial de máxima respuesta y mínima sensibilidad a variaciones milimétricas de posición)** y allí se mide la corriente de ionización corrigiendo por presión y temperatura atmosféricas ($k_{TP} = \frac{273,15 + T}{293,15} \cdot \frac{101,325}{P}$) y por recombinación iónica.
   - **Tolerancia legal de aceptación (`RD 1566/1998` / `SEFM`):** La discrepancia entre la $S_K$ medida en el hospital y el certificado de calibración del fabricante debe ser **$\le \pm 3\%$** (siendo deseable $< \pm 1,5\text{–}2\%$); para el cálculo en el TPS se introduce el valor medido por el Servicio de Radiofísica.
-- **Controles de Calidad Periódicos del Proyector Automático HDR (`RD 1566/1998`):**
+- **Controles de Calidad Periódicos del Proyector Automático HDR:**
   - **Diarios (cada día de uso clínico y tras cada cambio de fuente):**
     1. **Exactitud posicional de la fuente activa** (mediante regla autorradiográfica con película radiocrómica *Gafchromic* o cámara de vídeo con centelleador graduado): tolerancia **$\le \pm 1,0\text{ mm}$**.
     2. **Coincidencia espacial entre el cable simulado (*Dummy*) y la fuente activa:** **$\le \pm 1,0\text{ mm}$**.
@@ -151,7 +121,7 @@ Conforme al **Real Decreto 1566/1998** y a las recomendaciones de la **SEFM**, e
 ### 4.2. Diseño del Búnker/Radioquirófano de Braquiterapia y Protocolo de Emergencia Radiológica
 1. **Clasificación Legal e Ingeniería del Radioquirófano HDR (`RD 1836/1999`, `RD 229/2006` y `CSN`):**
    - Una instalación de braquiterapia es una **Instalación Radiactiva de 2.ª Categoría** autorizada con informe preceptivo y vinculante del **CSN**. Asimismo, una fuente de $^{192}\text{Ir}$ de $370\text{ GBq}$ supera ampliamente el umbral del **RD 229/2006 sobre control de fuentes radiactivas encapsuladas de alta actividad (HASS)**, lo que exige hoja de registro estandarizada, control físico de acceso con cerradura electrónica/biométrica, garantías financieras para su gestión final y devolución obligatoria del contenedor agotado al proveedor homologado o a **`ENRESA`**.
-   - **Diseño del Radioquirófano Blindado (*Integrated Brachytherapy Suite*):** En los hospitales modernos del SERGAS, el búnker de HDR está diseñado como un **radioquirófano integrado** (quirófano Clase B/A según `UNE 100713`, gases medicinales, torre de anestesia y mesa radioquirúrgica urológica/ginecológica) revestido con muros de **hormigón ordinario de $40\text{ a }60\text{ cm}$ de espesor** (para $^{192}\text{Ir}$, cuyo $\text{TVL}$ en hormigón es $\approx 13\text{–}15\text{ cm}$ y en plomo $\approx 11\text{–}12\text{ mm}$; si se instala un equipo de $^{60}\text{Co}$ de $1,25\text{ MeV}$, los muros suben a $70\text{–}90\text{ cm}$ de hormigón), acceso en laberinto y puerta plomada motorizada con doble microinterruptor de enclavamiento.
+   - **Diseño del Radioquirófano Blindado (*Integrated Brachytherapy Suite*):** En los hospitales modernos del servicio de salud, el búnker de HDR está diseñado como un **radioquirófano integrado** (quirófano Clase B/A según `UNE 100713`, gases medicinales, torre de anestesia y mesa radioquirúrgica urológica/ginecológica) revestido con muros de **hormigón ordinario de $40\text{ a }60\text{ cm}$ de espesor** (para $^{192}\text{Ir}$, cuyo $\text{TVL}$ en hormigón es $\approx 13\text{–}15\text{ cm}$ y en plomo $\approx 11\text{–}12\text{ mm}$; si se instala un equipo de $^{60}\text{Co}$ de $1,25\text{ MeV}$, los muros suben a $70\text{–}90\text{ cm}$ de hormigón), acceso en laberinto y puerta plomada motorizada con doble microinterruptor de enclavamiento.
 2. **Equipamiento de Seguridad y Protocolo de Emergencia ante Fallo de Retracción de Fuente (¡Pregunta clásica de Supuesto Práctico!):**
    - **Monitor Fijo de Radiación Ambiental Independiente (*Room Radiation Monitor*):** Es obligatorio que en la pared del búnker exista un detector gamma fijo alimentado por SAI **totalmente independiente del proyector HDR**, conectado a un semáforo exterior sobre la puerta (Rojo = radiación presente / fuente fuera del *Safe*; Verde = sin radiación) y alarma acústica.
    - **Dotación obligatoria de emergencia dentro del búnker (junto a la puerta/equipo):**
@@ -166,21 +136,9 @@ Conforme al **Real Decreto 1566/1998** y a las recomendaciones de la **SEFM**, e
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Unidades de Braquiterapia en la Red Oncológica del SERGAS y GALARIA
-En el **Servicio Gallego de Salud (SERGAS)**, las Unidades de Braquiterapia están integradas en los **Servicios de Oncología Radioterápica** y respaldadas técnicamente por los **Servicios de Radiofísica y Protección Radiológica** en los complejos hospitalarios de referencia de Galicia (**CHUS** en Santiago de Compostela, **CHUAC** en A Coruña, **CHUVI — Hospital Meixoeiro** en Vigo, **HULA** en Lugo y **CHUO** en Ourense), contando con la gestión especializada de alta tecnología de **GALARIA, Empresa Pública de Servizos Sanitarios**:
-- **Dotación Tecnológica en el SERGAS:** Los centros operan radioquirófanos blindados dotados de **proyectores automáticos de carga diferida remota HDR de $^{192}\text{Ir}$** de última generación, sistemas de ecografía transrectal biplano digital con *stepper* e integración en tiempo real para **braquiterapia de próstata (tanto implantes permanentes LDR con semillas de $^{125}\text{I}$ en estadios de riesgo bajo/intermedio favorable como *boost* intersticial HDR en alto riesgo)**, programas de **braquiterapia adaptativa ginecológica 3D/4D guiada por RM (`ICRU 89`)** con aplicadores de titanio/fibra de carbono, braquiterapia multicatéter de mama, plesioterapia cutánea y unidad de referencia de **braquiterapia episcleral oftálmica ($^{125}\text{I} / ^{106}\text{Ru}$)** en coordinación con los Servicios de Oftalmología (referencia autonómica en el CHUS para tumores intraoculares).
-
-### 5.2. Integración Digital (`DICOM-RT Brachy`, `IANUS`) y Gestión Logística en `XMAO`
-- **Flujo Digital Corporativo:** Las imágenes de planificación (TC de simulación, RM pélvica $T_2$ o volúmenes ecográficos TRUS) se transfieren desde el **PACS del SERGAS** al sistema de planificación de braquiterapia (*Oncentra Brachy* / *BrachyVision*). Una vez aprobado el plan, se exporta mediante el objeto estándar **`DICOM RT Plan (Brachy Application Setup)`** hacia la consola de control del proyector HDR y el sistema OIS (**`ARIA` / `MOSAIQ`**), verificando automáticamente el número de serie de la fuente, el índice de canales, las longitudes de transferencia y el reescalado de tiempos por decaimiento. Al concluir el tratamiento, el registro dosimétrico (`EQD2` en $\text{CTV}_{\text{HR}}$ y $D_{2\text{cm}^3}$ en OAR) se incorpora a la historia clínica electrónica **`IANUS`** conforme al **`RD 601/2019`**.
-- **Gestión en `XMAO` y Logística Trimestral de Fuentes HASS:** El Servicio de Ingeniería Biomédica y el Servicio de Radiofísica gestionan en **`XMAO`** el mantenimiento preventivo de los proyectores HDR, la esterilización trazable de los juegos de aplicadores ginecológicos/intersticiales (en las Centrales de Esterilización mediante vapor o $\text{VH}_2\text{O}_2$ validando el número máximo de ciclos de cada aplicador plástico), la calibración bienal de las cámaras de pozo y electrómetros, y la operación logística trimestral de **sustitución de la fuente de $^{192}\text{Ir}$ de $370\text{ GBq}$** en bulto de transporte **Tipo B(U)** homologado bajo normativa `ADR Clase 7` y control HASS del **`RD 229/2006`**.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Magnitud / Subsistema | Valor / Norma / Ecuación Clave | Observación Crítica para Examen A1 SERGAS |
 | :--- | :--- | :--- |
@@ -190,14 +148,14 @@ En el **Servicio Gallego de Salud (SERGAS)**, las Unidades de Braquiterapia est�
 | **Fuente estándar de semillas permanentes LDR** | **Yodo-125 ($^{125}\text{I}$): $T_{1/2} = 59,4\text{ días}$ · $E \approx 27\text{–}28\text{ keV}$** | Alternativa: **$^{103}\text{Pd}$ ($17\text{ días}$, $21\text{ keV}$)**; en placas oculares $\beta^-$ puro: **$^{106}\text{Ru}$ ($373,6\text{ d}$)** |
 | **Magnitud oficial de especificación de fuentes** | **Tasa de Kerma en Aire de Referencia ($\text{RAKR}$ o $S_K$)** | A $1\text{ m}$ en vacío en el eje transversal: **$1\text{ U} = 1\text{ }\mu\text{Gy}\cdot\text{m}^2\cdot\text{h}^{-1} = 1\text{ cGy}\cdot\text{cm}^2\cdot\text{h}^{-1}$** |
 | **Ecuación dosimétrica `AAPM TG-43`** | $\dot{D}(r,\theta) = S_K \cdot \Lambda \cdot \frac{G_L(r,\theta)}{G_L(r_0,\theta_0)} \cdot g_L(r) \cdot F(r,\theta)$ | Desacopla intensidad $S_K$, constante $\Lambda$, geometría $G_L$, dosis radial $g_L$ y anisotropía $F$ |
-| **Calibración en Cámara de Ionización de Pozo** | Obligatoria antes de uso clínico (`RD 1566/1998`) | Tolerancia máxima respecto al certificado del fabricante: **$\le \pm 3\%$** |
+| **Calibración en Cámara de Ionización de Pozo** | Obligatoria antes de uso clínico | Tolerancia máxima respecto al certificado del fabricante: **$\le \pm 3\%$** |
 | **Norma particular de proyectores automáticos** | **UNE-EN 60601-2-17** | Exige **cable simulado (*Dummy*)**, detector interno de retorno, motor con batería y **manivela manual** |
-| **Tolerancias diarias del proyector HDR (`SEFM`)** | Posición de fuente y coincidencia con *Dummy*: **$\le \pm 1\text{ mm}$** | Exactitud del temporizador: **$\le \pm 1\%$** · Prueba anual de frotis/fuga (`ISO 9978`): **$< 185\text{ Bq}$** |
+| **Tolerancias diarias del proyector HDR (`SEFM`)** | Posición de fuente y coincidencia con *Dummy*: **$\le \pm 1\text{ mm}$** | Exactitud del temporizador: **$\le \pm 1\%$** · Prueba anual de frotis/fuga: **$< 185\text{ Bq}$** |
 | **Métricas 3D en OAR cavitarios (`ICRU 89`)** | **$D_{2\text{cm}^3}$** y **$D_{0,1\text{cm}^3}$** en $\text{EQD}_2$ ($\alpha/\beta = 3\text{ Gy}$) | Vejiga $D_{2\text{cm}^3} \le 80\text{–}90\text{ Gy}$ · Recto $D_{2\text{cm}^3} \le 65\text{–}75\text{ Gy}$ · Sigma $D_{2\text{cm}^3} \le 70\text{–}75\text{ Gy}$ |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Trampa clásica sobre las unidades de la Tasa de Kerma en Aire de Referencia ($\text{RAKR} / S_K$)!** Los tribunales ponen con mucha frecuencia opciones como $\mu\text{Gy}/\text{h}$ o $\text{MBq}$ para definir la unidad $U$. Recuerda la equivalencia exacta con el metro al cuadrado: **$1\text{ U} = 1\text{ }\mu\text{Gy}\cdot\text{m}^2\cdot\text{h}^{-1} = 1\text{ cGy}\cdot\text{cm}^2\cdot\text{h}^{-1}$** (porque como $1\text{ cGy} = 10^4\text{ }\mu\text{Gy}$ y $1\text{ m}^2 = 10^4\text{ cm}^2$, ambos factores de $10^4$ se cancelan exactamente).
-2. **¿Para qué sirve el cable simulado (*Dummy Source / Check Cable*) en un equipo de carga diferida automática HDR (`UNE-EN 60601-2-17`)?** No sirve para medir dosis: es un cable mecánico no radiactivo que el proyector **hace recorrer por cada canal inmediatamente antes de enviar la fuente activa de $^{192}\text{Ir}$** con el fin de verificar que el tubo de transferencia está bien conectado y que el catéter o aguja no presenta obstrucciones ni acodamientos donde pudiera quedarse atascada la fuente real.
-3. **¿Con qué instrumento se calibra una fuente de braquiterapia en el hospital y cuál es su tolerancia legal (`RD 1566/1998`)?** Nunca se calibra con una cámara dedal Farmer en un tanque de agua (eso es para haces externos de LINAC/protones): se calibra en seco dentro de una **Cámara de Ionización de Pozo (*Well-type Chamber*) de geometría casi $4\pi$** localizando el punto de respuesta máxima (*sweet spot*), y la desviación máxima admisible frente al certificado del proveedor es del **$\pm 3\%$**.
+2. **¿Para qué sirve el cable simulado (*Dummy Source / Check Cable*) en un equipo de carga diferida automática HDR?** No sirve para medir dosis: es un cable mecánico no radiactivo que el proyector **hace recorrer por cada canal inmediatamente antes de enviar la fuente activa de $^{192}\text{Ir}$** con el fin de verificar que el tubo de transferencia está bien conectado y que el catéter o aguja no presenta obstrucciones ni acodamientos donde pudiera quedarse atascada la fuente real.
+3. **¿Con qué instrumento se calibra una fuente de braquiterapia en el hospital y cuál es su tolerancia legal?** Nunca se calibra con una cámara dedal Farmer en un tanque de agua (eso es para haces externos de LINAC/protones): se calibra en seco dentro de una **Cámara de Ionización de Pozo (*Well-type Chamber*) de geometría casi $4\pi$** localizando el punto de respuesta máxima (*sweet spot*), y la desviación máxima admisible frente al certificado del proveedor es del **$\pm 3\%$**.
 4. **Cobalto-60 ($^{60}\text{Co}$) frente a Iridio-192 ($^{192}\text{Ir}$) en proyectores HDR modernos:** Ambos producen distribuciones clínicas de dosis prácticamente equivalentes a corta distancia del aplicador porque cerca de la fuente manda el factor geométrico $1/r^2$. La diferencia es de **ingeniería hospitalaria y costes**: el $^{60}\text{Co}$ ($T_{1/2}=5,27\text{ años}$) solo se cambia cada **$5\text{ años}$** frente a los **$3\text{–}4\text{ meses}$** del $^{192}\text{Ir}$ ($T_{1/2}=73,8\text{ días}$), pero como sus fotones son más de tres veces más energéticos ($1,25\text{ MeV}$ vs $380\text{ keV}$), **exige espesores de hormigón en el búnker significativamente mayores**.
 5. **Regla de Oro en Emergencia de Braquiterapia HDR:** Si la fuente no regresa al contenedor blindado (*Safe*), falla la retracción eléctrica y falla la manivela manual, **jamás se toca el cable ni el aplicador con los dedos**: se utilizan siempre las **pinzas de mango largo ($\ge 30\text{–}50\text{ cm}$)** para retirar el aplicador e introducirlo en el contenedor plomado de emergencia que debe estar permanentemente dentro del búnker, comprobando finalmente al paciente con un detector portátil antes de darle salida.

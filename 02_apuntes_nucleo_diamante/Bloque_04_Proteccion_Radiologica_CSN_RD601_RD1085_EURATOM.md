@@ -37,7 +37,7 @@
 | **Dosis Equivalente en la PIEL ($H_{\text{piel}}$, promediada en $1\text{ cm}^2$)** | **$500\text{ mSv}$ por año oficial** | **$150\text{ mSv}$ por año oficial** | **$50\text{ mSv}$ por año oficial** |
 | **Dosis Equivalente en EXTREMIDADES (manos, antebrazos, pies y tobillos)** | **$500\text{ mSv}$ por año oficial** | **$150\text{ mSv}$ por año oficial** | *(No aplica límite específico distinto de piel)* |
 
-- **Protección especial durante el Embarazo y la Lactancia (Art. 12 RD 1029/2022):**
+- **Protección especial durante el Embarazo y la Lactancia:**
   - **Embarazo:** Tan pronto como una trabajadora embarazada comunique su estado a la empresa/SERGAS, la protección del feto debe ser comparable a la de un miembro del público: las condiciones de trabajo deben garantizar que **la dosis equivalente al feto sea tan baja como sea razonablemente posible y NO supere $1\text{ mSv}$ al menos desde la comunicación del embarazo hasta el final de la gestación**.
   - **Lactancia:** A las trabajadoras en período de lactancia **no se les asignarán trabajos que supongan un riesgo significativo de incorporación de radionucleidos ni de contaminación radiactiva** (ej. medicina nuclear con fuentes no encapsuladas / radiofarmacia).
 
@@ -81,15 +81,15 @@ El **Real Decreto 601/2019, de 18 de octubre**, transpone la parte de **exposici
 1. **Justificación en 3 niveles (Arts. 3 a 5):**
    - Están **prohibidas las exposiciones médicas que no puedan justificarse**.
    - En la justificación individual participan tanto el **médico prescriptor** como el **médico especialista responsable de la exposición** (radiólogo, médico nuclear o radiooncólogo), teniendo en cuenta la eficacia, beneficios y riesgos de **técnicas alternativas que tengan el mismo objetivo pero no utilicen radiaciones ionizantes o impliquen menor dosis (ej. Ecografía o Resonancia Magnética, especialmente en pediatría)**.
-2. **Optimización y Niveles de Referencia para Diagnóstico — NRD (Art. 6):**
+2. **Optimización y Niveles de Referencia para Diagnóstico — NRD:**
    - Las unidades asistenciales de radiodiagnóstico, radiología intervencionista y medicina nuclear deben comparar periódicamente sus dosis medias por procedimiento con los **Niveles de Referencia para Diagnóstico (NRD)**. Si se superan de forma constante e injustificada los NRD, debe realizarse una revisión local y aplicar medidas correctoras.
-3. **Figura del Especialista en Radiofísica Hospitalaria (Art. 9):**
+3. **Figura del Especialista en Radiofísica Hospitalaria:**
    - Participación **obligatoria en todas las exposiciones de radioterapia** (planificación y dosimetría física), en medicina nuclear terapéutica y diagnóstica, y en la optimización, dosimetría de pacientes, control de calidad y **especificaciones técnicas de compra e instalación de equipos de radiodiagnóstico e intervencionismo**.
-4. **Requisitos Técnicos Obligatorios del Equipamiento Nuevo (Art. 14 — ¡Pregunta estrella para Ingenieros Biomédicos!):**
+4. **Requisitos Técnicos Obligatorios del Equipamiento Nuevo:**
    - **Prohibición expresa de la fluoroscopia sin intensificación de imagen** (o sin detector digital equivalente) y obligación de **Control Automático de Intensidad/Tasa de Dosis**.
    - **Equipos de TC y de Radiología Intervencionista:** Todo equipo instalado tras la entrada en vigor debe disponer de un dispositivo que informe al médico especialista de los parámetros dosimétricos al finalizar el procedimiento (**$\text{CTDI}_{\text{vol}}$ y $\text{DLP}$ en TC**; **$K_{a,r}$ y $\text{PKA}$ en intervencionismo**) y **debe tener capacidad de transferir electrónicamente esta información dosimétrica al registro de la exploración / informe radiológico (mediante `DICOM Radiation Dose Structured Report — RDSR`)**.
    - **Informe Dosimétrico en la Historia Clínica:** El informe clínico del procedimiento radiológico debe incluir la información relativa a la **dosis recibida por el paciente**.
-5. **Protección en Embarazo y Lactancia (Art. 12) y Exposición Accidental/No Intencionada (Art. 15):**
+5. **Protección en Embarazo y Lactancia y Exposición Accidental/No Intencionada:**
    - Obligación de preguntar a toda mujer en edad fértil si está embarazada o en período de lactancia (en medicina nuclear) y colocar carteles informativos en las salas de espera.
    - Obligación de contar con un sistema de **registro y análisis de sucesos que impliquen o puedan implicar exposiciones accidentales o no intencionadas** clínicamente significativas y notificarlos a la autoridad sanitaria y al **CSN**.
 
@@ -99,7 +99,7 @@ El **Real Decreto 601/2019, de 18 de octubre**, transpone la parte de **exposici
 
 El **Real Decreto 1085/2009, de 3 de julio**, regula el régimen administrativo y técnico de todas las instalaciones de rayos X de diagnóstico médico en España (incluidos RX convencionales, TC, mamógrafos, telemandos, arcos quirúrgicos, densitómetros y equipos dentales).
 
-### 4.1. Clasificación de las Instalaciones de Rayos X de Diagnóstico Médico (Art. 16 y Anexo III — ¡Pregunta fija de examen!)
+### 4.1. Clasificación de las Instalaciones de Rayos X de Diagnóstico Médico
 A diferencia de los aceleradores lineales de radioterapia o de medicina nuclear (que son *Instalaciones Radiactivas de 2ª categoría* y requieren autorización previa), las instalaciones de rayos X de diagnóstico médico están sujetas a un régimen de **DECLARACIÓN Y REGISTRO** ante el órgano competente de la Comunidad Autónoma (en Galicia, la Dirección Xeral de Enerxía e Minas / Consellería de Economía e Industria), clasificándose en **3 categorías**:
 
 | Categoría de Instalación (`RD 1085/2009`) | Qué equipos incluye exactamente | Periodicidad de Vigilancia y Certificación por UTPR / SPR |

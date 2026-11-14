@@ -1,8 +1,9 @@
 # 📚 Temario Completo Desglosado por Temas (82 Temas Oficiales — DOG núm. 67, 13/04/2026)
 
-> **🌐 Portal Web Interactivo:** **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)**
+> **🌐 Portal Web Interactivo:** **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)**  
+> **📑 Registro Externo de Citas y Fuentes Verificadas:** **[`00_REGISTRO_CITAS_Y_FUENTES_VERIFICADAS.md`](../00_REGISTRO_CITAS_Y_FUENTES_VERIFICADAS.md)**
 
-En esta carpeta tienes **cada uno de los 82 temas del programa oficial en su propio archivo Markdown individual con desarrollo monográfico completo de nivel Subgrupo A1** (8 de Parte Común + 74 de Parte Específica; cada monografía cuenta con estructura homogénea de **7 secciones canónicas `0..6`, mínimo 180 líneas y más de 2.000 palabras por tema**, sumando **565.785 palabras y 17.805 líneas** en el corpus total), con su epígrafe oficial del DOG, su cruce verificado 1:1 con otras oposiciones del SERGAS, su normativa BOE/DOUE/DOG vinculada y todo su desarrollo técnico listo para estudiar.
+En esta carpeta tienes **cada uno de los 82 temas del programa oficial en su propio archivo Markdown individual con desarrollo monográfico completo de nivel Subgrupo A1** (8 de Parte Común + 74 de Parte Específica; cada monografía cuenta con **5 secciones desarrolladas `1..5` adaptadas a la naturaleza de su epígrafe, limpias de citas bibliográficas en línea y depuradas de cualquier dato no verificado**, sumando **465.851 palabras y 14.409 líneas** en el corpus total). Todas las fuentes normativas y técnicas están documentadas externamente en [`00_REGISTRO_CITAS_Y_FUENTES_VERIFICADAS.md`](../00_REGISTRO_CITAS_Y_FUENTES_VERIFICADAS.md).
 
 ---
 

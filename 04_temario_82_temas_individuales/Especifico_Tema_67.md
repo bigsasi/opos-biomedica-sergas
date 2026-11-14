@@ -1,31 +1,8 @@
 # Tema 67 — Planificación integrada en hospitales y centros de atención primaria. Sistemas de gestión de la citación y de la demanda asistencial.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #67 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 07 — Salud Digital, Sistemas Corporativos, Interoperabilidad, HCE, Analítica, IoMT, Citación y Logística (`Fase 2: Subir Nota · Relación 1:1`)
-> - **Marco Normativo y Técnico Nuclear:** Ley 8/2008, de 10 de julio, de Salud de Galicia (modificada por Ley 1/2018: configuración de las **7 Áreas Sanitarias** y Gestión Integrada) y Decreto 145/2024 de estructura orgánica del SERGAS; **Real Decreto 605/2003, de 23 de mayo**, por el que se establecen medidas para el tratamiento homogéneo de la información sobre las listas de espera en el Sistema Nacional de Salud; **Ley 12/2013, de 9 de diciembre, de garantías de prestaciones sanitarias** de Galicia y **Decreto 105/2017, de 28 de septiembre**, por el que se regula el sistema de garantía de tiempos máximos de acceso a las prestaciones sanitarias públicas en Galicia; Modelo corporativo **`XIDE`** (*Xestión Integrada da Demanda en Equipo*) del SERGAS; Estándar `HL7 v2.x SIU` (*Scheduling Information Unsolicited*) y Teoría Matemática de Colas ($M/M/1$ y $M/M/s$ de Kendall-Lee).
-> - **Sistemas y Entorno SERGAS:** **`SIHGA`** (Sistema de Información Hospitalaria de Galicia: admisión, agendas, citación y registro de listas de espera), **`IANUS 5`** (`e-Interconsulta`, petición electrónica y continuidad asistencial), **`XIDE`** (Gestión de la demanda en Atención Primaria), **`É-Saúde`**, **`Sergas Móbil`**, sistemas de guiado y autoticketing anónimo en salas de espera, y **`XMAO`** (sincronización de paradas de mantenimiento de alta tecnología con las agendas de citación).
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 67** del temario oficial de Ingeniero/a Biomédico/a (Subgrupo A1, DOG núm. 67, de 13 de abril de 2026) desarrolla la ingeniería organizativa, clínica y algorítmica que conecta la demanda de asistencia de la ciudadanía con la capacidad instalada de recursos humanos, espacios y equipamiento biomédico tanto en los centros de salud como en los complejos hospitalarios:
-1. **Planificación integrada en hospitales y centros de atención primaria:** modelo organizativo de **Gestión Integrada del SERGAS en las 7 Áreas Sanitarias (`Ley 8/2008` y `Decreto 145/2024`)**, Procesos Asistenciales Integrados (`PAI`), **Vías Rápidas Oncológicas**, **`e-Interconsulta`**, consultas de acto único/alta resolución y acceso directo desde Atención Primaria a pruebas diagnósticas de alta tecnología.
-2. **Sistemas de gestión de la citación y planificación de agendas (`SIHGA` / `IANUS`):** arquitectura técnica de agendas y tramos horarios, planificación sincronizada de recursos múltiples en diagnóstico por imagen y gabinetes (**sala + equipo biomédico + personal + radiofármaco/contraste**), mensajería **`HL7 SIU`**, citación multicanal (`Sergas Móbil`, `É-Saúde`, `IVR`) y sistemas de gestión de colas y llamado anónimo en salas de espera.
-3. **Sistemas de gestión de la demanda asistencial en Atención Primaria (`XIDE`) y modelización matemática:** arquitectura funcional y algorítmica del sistema **`XIDE` (*Xestión Integrada da Demanda en Equipo*)** del SERGAS y dimensionamiento de la capacidad de salas de diagnóstico mediante **Teoría de Colas ($M/M/1$ y $M/M/s$)** y ecuaciones de saturación.
-4. **Gestión normativa y técnica de las Listas de Espera (`RD 605/2003`, `Ley Gallega 12/2013` y `Decreto 105/2017`):** clasificación de pacientes (espera estructural vs. transitoriamente no programable `TNP` vs. rechazo de centro alternativo), **Prioridades Clínicas 1 ($\le 30\text{ días}$), 2 ($\le 90\text{ días}$) y 3**, tiempos máximos garantizados en Galicia (**$\le 60\text{ días}$ cirugía, $\le 45\text{ días}$ consultas y pruebas**) y fórmulas matemáticas de cálculo del Tiempo Medio de Espera (`TME`) y Demora Media Prospectiva.
-
-### Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-
-| Categoría SERGAS con Solapamiento | Grado de Solapamiento | Epígrafes Equivalentes y Orientación de Tribunal |
-| :--- | :--- | :--- |
-| **Grupo Técnico / Gestión TIC (Subgrupos A1, A2 y C1)**<br><br>**TS Imagen para el Diagnóstico (C1)**<br><br>**TS Radioterapia (C1)** | **Alto (85%) con TIC**: Cubre los sistemas de información y sistemas de gestión de pacientes (admisión, citación y demanda) en atención primaria y hospitales.<br>**Medio (50%) con TS Imagen y TS Radioterapia**: Cubre el servicio de admisión, citación y atención al paciente. | • **TIC Superior (A1):** Tema 23. Sistemas de información para la salud pública. Sistemas de Información y sistemas de gestión de pacientes en atención primaria y hospitales. Sistema poblacional y tarjeta sanitaria. Sistemas de gestión de recursos humanos. Sistemas de gestión económica y suministros.<br>• **TIC Gestión (A2):** Tema 15. Sistemas de información para la salud pública...<br>• **TIC Especialista (C1):** Tema 10. Sistemas de información para la salud pública...<br>• **TS Imagen para el Diagnóstico:** Tema 1. Servicio de radiología y medicina nuclear: estructura, organización y funciones. Servicio de admisión, atención al paciente y documentación clínica.<br>• **TS Radioterapia:** Tema 1. Servicio de radioterapia: estructura, organización y funciones. Servicio de admisión, atención al paciente y documentación clínica. |
-
----
-
 ## 📖 1. Modelo de Planificación y Gestión Integrada Primaria–Hospitalaria en el SERGAS
 
-### 1.1. De la Fragmentación por Niveles al Modelo de Gestión Integrada en las 7 Áreas Sanitarias (`Ley 8/2008` y `Decreto 145/2024`)
+### 1.1. De la Fragmentación por Niveles al Modelo de Gestión Integrada en las 7 Áreas Sanitarias
 
 Históricamente, los servicios públicos de salud operaban bajo una separación estanca entre dos organizaciones independientes: las Gerencias de Atención Primaria y las Gerencias de Atención Especializada/Hospitalaria. Esta dicotomía generaba barreras burocráticas en la derivación de pacientes, duplicidad de pruebas diagnósticas y analíticas, descoordinación en el alta hospitalaria de pacientes crónicos complejos y presupuestos contrapuestos.
 
@@ -141,14 +118,14 @@ De estas ecuaciones se extraen **dos leyes de oro de la ingeniería de planifica
 
 ## 🛡️ 4. Gestión Normativa y Técnica de Listas de Espera (`RD 605/2003`, `Ley Gallega 12/2013` y `Decreto 105/2017`): Clasificación, Prioridades y Fórmulas
 
-### 4.1. Estructura de los Registros de Listas de Espera en el SNS (`Real Decreto 605/2003`)
+### 4.1. Estructura de los Registros de Listas de Espera en el SNS
 
 El **`Real Decreto 605/2003, de 23 de mayo`**, establece el marco normativo estatal obligatorio para el tratamiento homogéneo de la información sobre listas de espera en todo el Sistema Nacional de Salud, articulando tres registros oficiales gestionados en el SERGAS a través de **`SIHGA`**:
 1. **Registro de Pacientes en Lista de Espera Quirúrgica (`LEQ`):** Incluye a todos los pacientes con prescripción no urgente de un procedimiento quirúrgico programado (con internamiento o en cirugía mayor ambulatoria `CMA`) previsto para realizarse en un quirófano. *(Excluye expresamente las intervenciones urgentes, la cirugía menor ambulatoria en consulta y los trasplantes de órganos, que se rigen por el registro específico de la ONT).*
 2. **Registro de Pacientes en Lista de Espera de Consultas Externas (`LECE`):** Incluye a los pacientes pendientes de una **primera consulta** de asistencia especializada solicitada por un médico de Atención Primaria o de otra especialidad hospitalaria con carácter ordinario o preferente.
 3. **Registro de Pacientes en Lista de Espera de Pruebas Diagnósticas / Terapéuticas (`LEPD`):** Incluye las primeras exploraciones prescritas pendientes de cita o realización, destacando las modalidades monitorizadas oficialmente por el SNS y el SERGAS: **Tomografía Computarizada (TC), Resonancia Magnética (RM), Ecografía, Mamografía, Endoscopia Digestiva, Hemodinámica, Ecocardiografía y Ergometría**.
 
-### 4.2. Clasificación de Pacientes según Tipo de Espera (`Estructural` vs. `No Estructural`) y Prioridades Clínicas (`RD 605/2003`)
+### 4.2. Clasificación de Pacientes según Tipo de Espera (`Estructural` vs. `No Estructural`) y Prioridades Clínicas
 
 El `Anexo I y II del Real Decreto 605/2003` clasifica a los pacientes inscritos en el registro según dos ejes que caen reiteradamente en los exámenes del SERGAS:
 
@@ -168,17 +145,17 @@ El `Anexo I y II del Real Decreto 605/2003` clasifica a los pacientes inscritos 
   - **Solicitud Preferente:** Pacientes cuya situación clínica precisa ser atendida en un **plazo máximo de 15 días** ($\le 15\text{ días}$).
   - **Solicitud Ordinaria:** Pacientes cuya asistencia no requiere una atención preferente.
 
-### 4.3. Sistema de Garantía de Tiempos Máximos en Galicia (`Ley 12/2013` y `Decreto 105/2017`)
+### 4.3. Sistema de Garantía de Tiempos Máximos en Galicia
 
-En la Comunidad Autónoma de Galicia, la **`Ley 12/2013, de 9 de diciembre, de garantías de prestaciones sanitarias`** (Título I, Capítulo II) y su reglamento de desarrollo, el **`Decreto 105/2017, de 28 de septiembre`**, blindan como derecho subjetivo de la ciudadanía gallega **tiempos máximos legales de respuesta** en atención sanitaria hospitalaria de carácter programado y no urgente:
+En la Comunidad Autónoma de Galicia, la **`Ley 12/2013, de 9 de diciembre, de garantías de prestaciones sanitarias`** y su reglamento de desarrollo, el **`Decreto 105/2017, de 28 de septiembre`**, blindan como derecho subjetivo de la ciudadanía gallega **tiempos máximos legales de respuesta** en atención sanitaria hospitalaria de carácter programado y no urgente:
 
 | Prestación Sanitaria Pública en Galicia | Norma Reguladora Autonómica | Tiempo Máximo Legal Garantizado | Notas Clínicas y Régimen de Garantía |
 | :--- | :--- | :---: | :--- |
 | **Intervenciones Quirúrgicas Programadas Garantizadas** (Patologías graves del Anexo I: neoplasias malignas, cirugía cardíaca valvular y coronaria, aneurismas cerebrales/aórticos, hidrocefalia, desprendimiento de retina, fístulas arteriovenosas para hemodiálisis, etc.) | Art. 8 `Ley 12/2013` y Art. 4 `Decreto 105/2017` | **$\le 60\text{ días naturales}$** *(contados desde la fecha de inscripción en el Registro de Espera Quirúrgica)* | Además, la estrategia corporativa del SERGAS prioriza los procesos oncológicos de **Prioridad 1 en $\le 30\text{ días}$**. Si no pudiera atenderse en la red pública dentro del plazo legal, el SERGAS garantiza la oferta de centro alternativo acreditado o reembolso conforme al Decreto 105/2017. |
 | **Primeras Consultas Externas de Atención Hospitalaria** (para las patologías y procesos garantizados) | Art. 8 `Ley 12/2013` y Art. 4 `Decreto 105/2017` | **$\le 45\text{ días naturales}$** *(contados desde la fecha de presentación de la indicación)* | Complementado por las **Vías Rápidas Oncológicas** (objetivo $< 15\text{ días}$) y las consultas preferentes ($\le 15\text{ días}$ según `RD 605/2003`). |
-| **Primeras Pruebas Diagnósticas o Terapéuticas Programadas Garantizadas** (TC, RM, ecografía, endoscopia, mamografía, medicina nuclear, etc. para los procesos incluidos) | Art. 8 `Ley 12/2013` y Art. 4 `Decreto 105/2017` | **$\le 45\text{ días naturales}$** *(contados desde la fecha de solicitud facultativa)* | El tiempo de suspensión por causa imputable al paciente (aplazamiento voluntario justificado) o por causa clínica sobrevenida (`TNP`) **descuenta/suspende el cómputo del plazo de garantía** mientras dure dicha circunstancia (Art. 11 `Decreto 105/2017`). |
+| **Primeras Pruebas Diagnósticas o Terapéuticas Programadas Garantizadas** (TC, RM, ecografía, endoscopia, mamografía, medicina nuclear, etc. para los procesos incluidos) | Art. 8 `Ley 12/2013` y Art. 4 `Decreto 105/2017` | **$\le 45\text{ días naturales}$** *(contados desde la fecha de solicitud facultativa)* | El tiempo de suspensión por causa imputable al paciente (aplazamiento voluntario justificado) o por causa clínica sobrevenida (`TNP`) **descuenta/suspende el cómputo del plazo de garantía** mientras dure dicha circunstancia. |
 
-### 4.4. Fórmulas Matemáticas de los Indicadores Oficiales de Listas de Espera (`Anexo II RD 605/2003`)
+### 4.4. Fórmulas Matemáticas de los Indicadores Oficiales de Listas de Espera
 
 En los exámenes de oposición A1 se exige conocer y saber calcular los cuatro indicadores cuantitativos del registro de listas de espera:
 1. **Tiempo Medio de Espera (`TME` — Indicador retrospectivo de los pacientes que están esperando en la fecha de corte):**
@@ -195,38 +172,26 @@ En los exámenes de oposición A1 se exige conocer y saber calcular los cuatro i
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Coordinación Operativa entre Admisión (`SADC`), Servicios Clínicos e Ingeniería Biomédica en las 7 Áreas Sanitarias
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-En los hospitales del SERGAS, la gestión integrada de la citación y de las listas de espera es una responsabilidad compartida entre la Dirección Asistencial, el **Servicio de Admisión y Documentación Clínica (`SADC`)**, los Jefes de Servicio Clínico y el **Servicio de Ingeniería Biomédica / Electromedicina**:
-- **Impacto directo de las paradas de equipamiento biomédico en los plazos de la `Ley 12/2013`:** Una parada no planificada de $5\text{ días}$ en una Resonancia Magnética o en un Tomógrafo Computarizado de un hospital del SERGAS supone dejar de realizar entre $150\text{ y }300\text{ estudios}$ diagnósticos, comprometiendo directamente el umbral legal de **$\le 45\text{ días}$ para pruebas diagnósticas garantizadas** y retrasando el estadiaje de pacientes en Vías Rápidas Oncológicas.
-- **Protocolo de Sincronización `XMAO` $\leftrightarrow$ `SIHGA`:**
-  1. **Mantenimiento Preventivo y Controles de Calidad en Ventanas Valle:** El Ingeniero Biomédico planifica anualmente en **`XMAO`** las revisiones preventivas de fabricantes y los controles de calidad de Radiofísica en **franjas horarias de menor presión asistencial** (tardes de viernes, fines de semana o turnos valle) y comunica con al menos $30\text{–}45\text{ días}$ de antelación al `SADC` el calendario de bloqueos técnicos para que `SIHGA` cierre esos tramos de agenda **antes de que se citen pacientes**.
-  2. **Contingencia y Derivación Intra-Área ante Avería Correctiva Sobrevenida:** Cuando un equipo sufre una avería imprevista y el diagnóstico en `XMAO` estima un tiempo de reparación superior a $24\text{ horas}$ (por espera de un tubo de rayos X o bobina de gradiente), Ingeniería Biomédica notifica inmediatamente el tiempo estimado de resolución (`ETR`) a Admisión y al Servicio de Radiología para reprogramar los pacientes preferentes y garantizados en otro equipo gemelo del mismo complejo hospitalario (p. ej., derivar entre Hospital Álvaro Cunqueiro y Hospital Meixoeiro en Vigo, o entre Hospital Clínico y Hospital Gil Casares/Conxo en Santiago) sin perder trazabilidad en el `PACS Corporativo`.
+| Norma / Sistema / Concepto | Cifra / Plazo / Fórmula Clave para Examen A1 |
+| :--- | :--- |
+| **Áreas Sanitarias del SERGAS** | **7 Áreas Sanitarias de Gestión Integrada** y **14 Distritos Sanitarios** (integran Atención Primaria y Atención Hospitalaria bajo una misma Gerencia). |
+| **Prioridades Quirúrgicas SNS** | • **Prioridad 1:** No admite demora **$> 30\text{ días}$**.<br>• **Prioridad 2:** Recomendable intervención en **$< 90\text{ días}$**.<br>• **Prioridad 3:** Admite mayor demora (sin secuelas importantes). |
+| **Prioridad en Consultas y Pruebas SNS** | • **Consulta / Prueba Preferente:** Plazo máximo de **$\le 15\text{ días}$**.<br>• **Consulta / Prueba Ordinaria:** Resto de casos. |
+| **Tiempos Máximos Garantizados en Galicia** | • **Intervenciones quirúrgicas garantizadas:** **$\le 60\text{ días naturales}$**.<br>• **Primeras consultas externas garantizadas:** **$\le 45\text{ días naturales}$**.<br>• **Primeras pruebas diagnósticas/terapéuticas garantizadas:** **$\le 45\text{ días naturales}$**. |
+| **Vías Rápidas Oncológicas SERGAS** | Circuito directo Primaria $\rightarrow$ Diagnóstico/Especialista ante sospecha de cáncer (**mama, colorrectal, pulmón, próstata, vejiga, ORL, melanoma**); objetivo **$< 15\text{ días}$**. |
+| **Espera Estructural vs. No Estructural** | Solo la **Espera Estructural** (atribuible a la organización/recursos del sistema) computa en el indicador oficial de `TME`. La **No Estructural** incluye: **1) Transitoriamente No Programables (`TNP`)** (motivo clínico o aplazamiento voluntario) y **2) Rechazo de oferta de centro alternativo**. |
+| **Fórmulas de Listas de Espera** | • $\text{TME} = \frac{\sum (\text{Fecha corte} - \text{Fecha entrada})}{N_{\text{estructural}}}$ (días).<br>• $\text{Demora Prospectiva} = \frac{N_{\text{estructural}}}{\text{Salidas medias mensuales por actividad}}$ (meses). |
+| **Gestión de la Demanda en AP (`XIDE`)** | ***Xestión Integrada da Demanda en Equipo***: encamina por **motivo de consulta** hacia el profesional idóneo del equipo multidisciplinar de AP definiendo **temporalidad, modalidad y profesional**. |
+| **Mensajería de Citación** | `SIU^S12` (Nueva cita), `SIU^S13` (Reprogramación), `SIU^S14` (Modificación), `SIU^S15` (Cancelación). |
+| **Teoría de Colas en Salas Biomédicas** | Saturación $\rho = \frac{\lambda}{s \cdot \mu} < 1$. En $M/M/1$, $L_q = \frac{\rho^2}{1-\rho}$ y $W_q = \frac{\rho}{\mu(1-\rho)}$. Umbral crítico de saturación de diseño: **$80\text{–}85\%$**. |
 
----
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
-
-| Norma / Sistema / Concepto | Referencia Exacta | Cifra / Plazo / Fórmula Clave para Examen A1 |
-| :--- | :--- | :--- |
-| **Áreas Sanitarias del SERGAS** | `Ley 8/2008` (modif. `Ley 1/2018`) y `Decreto 145/2024` | **7 Áreas Sanitarias de Gestión Integrada** y **14 Distritos Sanitarios** (integran Atención Primaria y Atención Hospitalaria bajo una misma Gerencia). |
-| **Prioridades Quirúrgicas SNS** | **Anexo II `Real Decreto 605/2003`** | • **Prioridad 1:** No admite demora **$> 30\text{ días}$**.<br>• **Prioridad 2:** Recomendable intervención en **$< 90\text{ días}$**.<br>• **Prioridad 3:** Admite mayor demora (sin secuelas importantes). |
-| **Prioridad en Consultas y Pruebas SNS** | **Anexo II `Real Decreto 605/2003`** | • **Consulta / Prueba Preferente:** Plazo máximo de **$\le 15\text{ días}$**.<br>• **Consulta / Prueba Ordinaria:** Resto de casos. |
-| **Tiempos Máximos Garantizados en Galicia** | **Art. 8 `Ley 12/2013` y Art. 4 `Decreto 105/2017`** | • **Intervenciones quirúrgicas garantizadas:** **$\le 60\text{ días naturales}$**.<br>• **Primeras consultas externas garantizadas:** **$\le 45\text{ días naturales}$**.<br>• **Primeras pruebas diagnósticas/terapéuticas garantizadas:** **$\le 45\text{ días naturales}$**. |
-| **Vías Rápidas Oncológicas SERGAS** | Programas Asistenciales SERGAS | Circuito directo Primaria $\rightarrow$ Diagnóstico/Especialista ante sospecha de cáncer (**mama, colorrectal, pulmón, próstata, vejiga, ORL, melanoma**); objetivo **$< 15\text{ días}$**. |
-| **Espera Estructural vs. No Estructural** | **`Real Decreto 605/2003`** | Solo la **Espera Estructural** (atribuible a la organización/recursos del sistema) computa en el indicador oficial de `TME`. La **No Estructural** incluye: **1) Transitoriamente No Programables (`TNP`)** (motivo clínico o aplazamiento voluntario) y **2) Rechazo de oferta de centro alternativo**. |
-| **Fórmulas de Listas de Espera** | **`Anexo II RD 605/2003`** | • $\text{TME} = \frac{\sum (\text{Fecha corte} - \text{Fecha entrada})}{N_{\text{estructural}}}$ (días).<br>• $\text{Demora Prospectiva} = \frac{N_{\text{estructural}}}{\text{Salidas medias mensuales por actividad}}$ (meses). |
-| **Gestión de la Demanda en AP (`XIDE`)** | Sistema Corporativo SERGAS | ***Xestión Integrada da Demanda en Equipo***: encamina por **motivo de consulta** hacia el profesional idóneo del equipo multidisciplinar de AP definiendo **temporalidad, modalidad y profesional**. |
-| **Mensajería de Citación** | Estándar **`HL7 v2.x SIU`** | `SIU^S12` (Nueva cita), `SIU^S13` (Reprogramación), `SIU^S14` (Modificación), `SIU^S15` (Cancelación). |
-| **Teoría de Colas en Salas Biomédicas** | Modelo **$M/M/1$ y $M/M/s$** | Saturación $\rho = \frac{\lambda}{s \cdot \mu} < 1$. En $M/M/1$, $L_q = \frac{\rho^2}{1-\rho}$ y $W_q = \frac{\rho}{\mu(1-\rho)}$. Umbral crítico de saturación de diseño: **$80\text{–}85\%$**. |
-
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
-
-1. **Trampa Clásica: Plazos Estatales (`RD 605/2003`) vs. Tiempos Máximos Garantizados en Galicia (`Ley 12/2013` y `Decreto 105/2017`):**
+1. **Trampa Clásica: Plazos Estatales vs. Tiempos Máximos Garantizados en Galicia (`Ley 12/2013` y `Decreto 105/2017`):**
    - ¡No confundir ambos marcos legales en el test!
      - Si la pregunta cita el **`Real Decreto 605/2003`** (prioridades clínicas del SNS): **Prioridad 1 quirúrgica $\le 30\text{ días}$**, **Prioridad 2 quirúrgica $< 90\text{ días}$**, y **Consulta/Prueba Preferente $\le 15\text{ días}$**.
      - Si la pregunta cita la **`Ley 12/2013` de garantías de prestaciones sanitarias de Galicia** o el **`Decreto 105/2017`**: los tiempos máximos legales garantizados son **$\le 60\text{ días naturales}$ para cirugía**, **$\le 45\text{ días naturales}$ para primeras consultas hospitalarias** y **$\le 45\text{ días naturales}$ para primeras pruebas diagnósticas/terapéuticas**.

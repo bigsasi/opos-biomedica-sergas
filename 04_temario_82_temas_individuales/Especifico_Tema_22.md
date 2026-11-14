@@ -1,38 +1,13 @@
 # Tema 22 — Caracterización y funcionamiento de los sistemas de anestesia. Equipamiento asociado.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #22 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 05 — Electromedicina de Cuidados Críticos, Quirófano, Ventilación, Anestesia, Monitorización, Endoscopia y Robótica
-> - **Marco Normativo y Técnico Nuclear:** Reglamento (UE) 2017/745 (MDR, Clase IIb), Real Decreto 192/2023, Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulos 1585 *Instalaciones eléctricas*, 1586 *Sistemas electromecánicos y de fluidos* y 1589 *Sistemas de monitorización, registro y cuidados críticos*), UNE-EN ISO 80601-2-13 (Estaciones de trabajo de anestesia), UNE-EN ISO 7396-1 (Sistemas de canalización de gases medicinales), UNE-EN ISO 7396-2 (Sistemas de evacuación de gases anestésicos residuales AGSS/SEGA), UNE-EN ISO 9170-1/2 (Tomas murales), UNE-EN ISO 5359 (Latiguillos de baja presión y conectores NIST), ISO 407 (Yugos con índice de pines PISS), ISO 32 (Código de colores de botellas de gases medicinales), UNE-EN ISO 80601-2-55 (Monitores de gases respiratorios)
-> - **Sistemas y Entorno SERGAS:** IANUS, Sistemas de Gestión de Información de Anestesia (AIMS) e integración HL7 `IHE PCD-01`, GMAO corporativo XMAO, Bloques Quirúrgicos, Quirófanos Híbridos, Salas de Endoscopia/Radiología Intervencionista y Unidades de Reanimación Posanestésica (URPA/REA) de las 7 Áreas Sanitarias del SERGAS
+## 📖 1. Evolución de la Máquina de Boyle a la Estación de Trabajo de Anestesia
 
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 22 de la Parte Específica** del programa oficial para el acceso a la categoría de **Ingeniero/a Biomédico/a (Subgrupo A1)** del SERGAS (DOG núm. 67, de 13 de abril de 2026) desarrolla de forma monográfica y exhaustiva la **estación de trabajo de anestesia (`UNE-EN ISO 80601-2-13`) y todo su equipamiento periférico y de monitorización asociado en el bloque quirúrgico**, comprendiendo:
-1. **Arquitectura neumática de suministro y dosificación de gases frescos**: circuitos de alta, media y baja presión, sistemas mecánicos/neumáticos de no intercambiabilidad (**PISS `ISO 407`** y **NIST `ISO 5359`**), código de colores europeo (`ISO 32`) y los **tres sistemas obligatorios de seguridad anti-hipoxia** (*Fail-Safe Valve*, *Hypoxic Guard / Link-25* y *$\text{O}_2$ Flush*).
-2. **Física y tecnología de los vaporizadores de agentes anestésicos volátiles halogenados**: ecuaciones termodinámicas de los vaporizadores de **cortocircuito variable (*variable bypass*)** compensados térmicamente (Sevoflurano e Isoflurano), el **vaporizador electrónico calentado y presurizado de Desflurano ($39\text{ }^\circ\text{C}$, $2\text{ atm}$)** y los inyectores electrónicos en casete (*Aladin*).
-3. **Sistema respiratorio circular semicerrado, absorción química de $\text{CO}_2$, ventilador de anestesia y evacuación AGSS**: reacciones exotérmicas de la cal sodada, válvula APL, tecnologías de impulsión (concertina ascendente/descendente, pistón motorizado, turbina y reflector de volumen), anestesia de bajos flujos y flujos mínimos, y sistema activo **AGSS / SEGA (`UNE-EN ISO 7396-2`)**.
-4. **Equipamiento asociado en anestesia**: analizador multigas por espectroscopía infrarroja no dispersiva (**NDIR**) y cálculo de la **Concentración Alveolar Mínima (CAM / MAC)**, monitorización neurofisiológica de profundidad anestésica (**Índice Biespectral — BIS** y Entropía del EEG), monitorización objetiva de la relajación neuromuscular (**Tren de Cuatro — TOF** por aceleromiografía) y sistemas de anestesia total intravenosa (**TIVA / TCI**).
-
-### Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Ingeniero/a Técnico/a**
-- **Grado de solapamiento:** **Alto (75%)**: Cubre instalaciones y equipos del bloque quirúrgico y unidades de reanimación post-anestésica, equipos de ventilación/monitorización y suministro de gases medicinales/anestésicos.
-- **Epígrafes equivalentes:**
-  - • Tema 46. El bloque quirúrgico: instalaciones y equipos. Circuitos. UCIs y unidades de reanimación post-anestésica: instalaciones y equipos. Inspección y mantenimiento.
-  - • Tema 47. Monitorización. Desfibriladores. Bisturís. Equipos de ventilación.
-  - • Tema 41. Gases medicinales (I). Tipos y prescripciones particulares. Descarga, almacenamiento, transporte y distribución en centros sanitarios. Salas centralizadas de gases. Cuadros de alternancia de suministro. Tomas de gases. Seguridad y mantenimiento. Actuaciones en caso de emergencia.
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
-
-### 1.1. Evolución de la Máquina de Boyle a la Estación de Trabajo de Anestesia (`UNE-EN ISO 80601-2-13`)
+### 1.1. Evolución de la Máquina de Boyle a la Estación de Trabajo de Anestesia
 Históricamente, las máquinas de anestesia inhalatoria de flujo continuo (basadas en el aparato de Boyle de 1917) eran dispositivos puramente neumáticos compuestos por manorreductores, rotámetros de vidrio y vaporizadores de éter o halotano. En la ingeniería biomédica contemporánea, la norma internacional armonizada **`UNE-EN ISO 80601-2-13`** define la **Estación de Trabajo de Anestesia (*Anaesthetic Workstation*)** como un sistema electromédico integrado de soporte vital (clasificado como **Clase IIb** según la Regla 9 del Anexo VIII del **Reglamento (UE) 2017/745 MDR**) que reúne cuatro subsistemas acoplados:
 1. El **sistema de suministro y dosificación de gas fresco** (módulo neumático/electrónico de mezcla de $\text{O}_2$, Aire medicinal y $\text{N}_2\text{O}$ y módulo de vaporización de agentes anestésicos volátiles).
 2. El **sistema respiratorio anestésico circular semicerrado** con absorción de $\text{CO}_2$ y el **ventilador de anestesia**.
 3. El **sistema de recepción y evacuación de gases anestésicos residuales (AGSS / SEGA)** conforme a `UNE-EN ISO 7396-2`.
-4. Los **sistemas obligatorios de protección, alarma (`IEC 60601-1-8`) y monitorización integrada** de presión en vía aérea, volumen espirado, concentración de $\text{O}_2$ inspirada ($\text{FiO}_2$), capnografía ($\text{EtCO}_2$) y concentración de agente anestésico halogenado (`UNE-EN ISO 80601-2-55`).
+4. Los **sistemas obligatorios de protección, alarma y monitorización integrada** de presión en vía aérea, volumen espirado, concentración de $\text{O}_2$ inspirada ($\text{FiO}_2$), capnografía ($\text{EtCO}_2$) y concentración de agente anestésico halogenado (`UNE-EN ISO 80601-2-55`).
 
 El objetivo funcional cuádruple de una estación de anestesia es: **a)** administrar oxígeno y mantener la ventilación alveolar (manual o mecánica), **b)** dosificar con exactitud milimétrica vapores anestésicos y gases medicinales para mantener la hipnosis, analgesia e inmovilidad quirúrgica, **c)** minimizar el consumo de gases frescos y anestésicos volátiles (de elevado coste económico y altísimo potencial de efecto invernadero) mediante la reinhalación segura del gas espirado desprovisto de $\text{CO}_2$, y **d)** proteger tanto al paciente frente a mezclas hipóxicas, barotrauma o sobredosificación anestésica como al personal quirúrgico frente a la exposición laboral a gases anestésicos residuales.
 
@@ -48,10 +23,10 @@ Uno de los accidentes más graves y letales en la historia de la ingeniería cl�
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Subsistema Neumático (Alta, Media y Baja Presión) y las 3 Seguridades Anti-Hipoxia
 
 ### 2.1. Subsistema Neumático (Alta, Media y Baja Presión) y las 3 Seguridades Anti-Hipoxia
-El recorrido neumático de los gases frescos en el interior de la estación de anestesia (`Módulo 1586` y `Módulo 1589`) se divide en tres etapas de presión:
+El recorrido neumático de los gases frescos en el interior de la estación de anestesia se divide en tres etapas de presión:
 
 1. **Circuito de Alta Presión (Exclusivo de las botellas de reserva en yugo PISS)**:
    - Abarca desde la válvula de los cilindros de emergencia colgados en la parte posterior de la estación (**$\text{O}_2$ comprimido en fase gaseosa a $150\text{–}200\text{ bar}$** y **$\text{N}_2\text{O}$ licuado a su presión de vapor saturado de $\approx 50\text{–}52\text{ bar}$ a $20\text{ }^\circ\text{C}$**) hasta los reguladores manorreductores de primera etapa internos.
@@ -97,7 +72,7 @@ Por ello, los vaporizadores anestésicos son instrumentos termodinámicos de alt
 3. **Vaporizadores Electrónicos de Casete e Inyección Directa (*Aladin* de GE Datex-Ohmeda / Inyectores *Maquet Flow-i*)**:
    - En las estaciones electrónicas avanzadas, el líquido anestésico se aloja en un **casete pasivo intercambiable codificado magnéticamente** (que contiene únicamente el líquido y las mechas sin válvulas de control) mientras que la unidad de control electrónico con sensores de flujo, temperatura y presión permanece fija dentro de la estación de anestesia (o bien mediante inyectores piezoeléctricos de microgotas líquidas en cámara calefactada tipo *Maquet Flow-i* o vaporizador cerca de la pieza en «Y» con reflector de carbono activo tipo *Zeus*).
 
-| Agente Halogenado | Color Oficial (`ISO 80601-2-13`) | Presión de Vapor $P_v$ ($20\text{ }^\circ\text{C}$) | Punto de Ebullición ($1\text{ atm}$) | $\text{CAM}$ Adulto en $\text{O}_2$ ($40\text{ años}$) | Coeficiente Sangre/Gas | Tipo de Vaporizador Requerido |
+| Agente Halogenado | Color Oficial | Presión de Vapor $P_v$ ($20\text{ }^\circ\text{C}$) | Punto de Ebullición ($1\text{ atm}$) | $\text{CAM}$ Adulto en $\text{O}_2$ ($40\text{ años}$) | Coeficiente Sangre/Gas | Tipo de Vaporizador Requerido |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **Sevoflurano** | **Amarillo** | $157\text{ mmHg}$ ($21\text{ kPa}$) | $58,6\text{ }^\circ\text{C}$ | **$2,0\%$** | $0,65$ (inducción rápida, no irritante) | *Bypass* variable compensado térmicamente o Casete electrónico |
 | **Isoflurano** | **Morado / Violeta** | $238\text{ mmHg}$ ($31,7\text{ kPa}$) | $48,5\text{ }^\circ\text{C}$ | **$1,15\%$** | $1,40$ (recuperación más lenta) | *Bypass* variable compensado térmicamente o Casete electrónico |
@@ -106,7 +81,7 @@ Por ello, los vaporizadores anestésicos son instrumentos termodinámicos de alt
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. El Circuito Circular Semicerrado, Absorción Química de $\text{CO}_2$, Ventilador de Anestesia y AGSS
 
 ### 3.1. El Circuito Circular Semicerrado, Absorción Química de $\text{CO}_2$, Ventilador de Anestesia y AGSS
 A la salida común de gases frescos (CGO), la mezcla oxigenada y anestésica ingresa en el **Sistema Respiratorio Circular Semicerrado**, cuya arquitectura permite que el paciente reinhale el gas espirado tras depurar su $\text{CO}_2$:
@@ -118,7 +93,7 @@ A la salida común de gases frescos (CGO), la mezcla oxigenada y anestésica ing
      - La **Cal Sodada clásica** está compuesta por **$\approx 75\text{–}80\%$ de Hidróxido Cálcico ($\text{Ca(OH)}_2$)**, **$14\text{–}20\%$ de Agua ($\text{H}_2\text{O}$, imprescindible como película electrolítica para ionizar el ácido carbónico)**, **$1\text{–}4\%$ de Hidróxido Sódico ($\text{NaOH}$, activador catalítico rápido)** y un **indicador ácido-base de pH (habitualmente Violeta de Etilo**, que es **incoloro/blanco en medio alcalino y vira a color VIOLETA/MORADO cuando el pH cae por debajo de $10,3$** por agotamiento de los grupos hidroxilo).
      - **Reacción química global de neutralización (fuertemente exotérmica y generadora de agua y calor que humidifican y calientan el circuito circular)**:
        $$\text{CO}_2 + \text{H}_2\text{O} \rightleftharpoons \text{H}_2\text{CO}_3 \xrightarrow{+\text{NaOH / Ca(OH)}_2} \text{CaCO}_3 \downarrow (\text{Carbonato Cálcico}) + 2\text{H}_2\text{O} + \Delta H_{\text{calor}} \ (13,7\text{ kcal/mol})$$
-     - **Interacción química peligrosa de examen (Cal Sodada desecada + Halogenados)**: Cuando la cal sodada clásica con $\text{NaOH}/\text{KOH}$ se deseca (p. ej. al dejar abierto un flujo de $\text{O}_2$ seco todo el fin de semana), reacciona con el Desflurano o Isoflurano produciendo **Monóxido de Carbono ($\text{CO}$) tóxico**, y con el Sevoflurano a bajos flujos y altas temperaturas produce **Compuesto A (éter fluorometil-pentafluoroisopropenil, nefrotóxico en modelos animales)**. Por ello, en los hospitales del SERGAS se emplean cada vez más **absorbentes de segunda generación libres de bases alcalinas fuertes ($\text{NaOH}/\text{KOH} = 0\%$)** basados exclusivamente en $\text{Ca(OH)}_2$ y cloruro cálcico $\text{CaCl}_2$ humectante (tipo *Amsorb Plus* / *Drägersorb Free*), cuyo cambio de color violeta es además **permanente y no revierte en reposo**.
+     - **Interacción química peligrosa de examen (Cal Sodada desecada + Halogenados)**: Cuando la cal sodada clásica con $\text{NaOH}/\text{KOH}$ se deseca (p. ej. al dejar abierto un flujo de $\text{O}_2$ seco todo el fin de semana), reacciona con el Desflurano o Isoflurano produciendo **Monóxido de Carbono ($\text{CO}$) tóxico**, y con el Sevoflurano a bajos flujos y altas temperaturas produce **Compuesto A (éter fluorometil-pentafluoroisopropenil, nefrotóxico en modelos animales)**. Por ello, en los hospitales del servicio de salud se emplean cada vez más **absorbentes de segunda generación libres de bases alcalinas fuertes ($\text{NaOH}/\text{KOH} = 0\%$)** basados exclusivamente en $\text{Ca(OH)}_2$ y cloruro cálcico $\text{CaCl}_2$ humectante (tipo *Amsorb Plus* / *Drägersorb Free*), cuyo cambio de color violeta es además **permanente y no revierte en reposo**.
 
 2. **Tecnologías del Ventilador de Anestesia y Compensación de Flujo de Gas Fresco**:
    - **Concertina (*Bellows* / Sistema de Doble Circuito *Bag-in-Bottle*)**: Un fuelle elástico plegable que contiene el gas del paciente se aloja dentro de una campana rígida transparente presurizada exteriormente por un gas motriz ($\text{O}_2$ o Aire comprimido). Existen concertinas **ascendentes (*ascending / standing bellows*, que suben durante la espiración y son más seguras porque si hay una desconexión o fuga masiva colapsan por su propio peso haciendo visible el fallo)** y **descendentes (*descending / hanging bellows*)**.
@@ -159,10 +134,10 @@ A la salida común de gases frescos (CGO), la mezcla oxigenada y anestésica ing
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Ensayo Preuso Automático, Fugas de Baja Presión y Verificación Metrológica de Vaporizadores
 
 ### 4.1. Ensayo Preuso Automático, Fugas de Baja Presión y Verificación Metrológica de Vaporizadores
-De acuerdo con el **Módulo 1589** y la norma **`UNE-EN ISO 80601-2-13`**, las estaciones de anestesia tienen un índice de criticidad máximo ($\text{EM} = 20$ en Fennigkoh y Smith) y requieren dos niveles de control:
+De acuerdo con la norma **`UNE-EN ISO 80601-2-13`**, las estaciones de anestesia tienen un índice de criticidad máximo ($\text{EM} = 20$ en Fennigkoh y Smith) y requieren dos niveles de control:
 1. **Autochequeo Diario Preuso (*Checkout* Automático y Prueba de Fuga del Circuito de Baja Presión)**:
    - Antes del primer quirófano de la mañana y entre pacientes, la estación ejecuta su autocomprobación: verifica la presión de tomas murales y botellas de reserva, la batería interna ($\ge 30\text{–}90\text{ min}$), la calibración al $21\%$ del sensor de $\text{O}_2$, la estanqueidad y compliancia del circuito circular en modo automático y en modo manual/APL, y la **estanqueidad del circuito interno de baja presión y de los vaporizadores instalados** (porque una fuga en la junta tórica de un vaporizador Selectatec es interna y no es detectada por la prueba de presión positiva del circuito paciente a menos que se ensaye con el dial del vaporizador abierto o mediante prueba de succión negativa con pera a $-65\text{ mmHg}$).
 2. **Mantenimiento Preventivo y Verificación Metrológica por Electromedicina (Semestral / Anual)**:
@@ -171,27 +146,14 @@ De acuerdo con el **Módulo 1589** y la norma **`UNE-EN ISO 80601-2-13`**, las e
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Estaciones de Anestesia en el Bloque Quirúrgico, Quirófanos de RM y Áreas Fuera de Quirófano del SERGAS
-En los más de 180 quirófanos de las **7 Áreas Sanitarias del SERGAS** (CHUAC, CHUS, CHUVI, HULA, CHUO, CHOP, CHUF y hospitales comarcales):
-1. **Integración con la Gráfica Electrónica de Anestesia (AIMS) e `IANUS`**:
-   - Las estaciones de anestesia (*Dräger Perseus A500 / Atlan / Primus*, *GE Carestation / Aisys CS2*, *Getinge Maquet Flow-i*) y sus monitores hemodinámicos asociados transmiten automáticamente cada $30\text{–}60\text{ segundos}$ mediante perfil **`IHE PCD-01` (HL7)** hacia el registro electrónico perioperatorio integrado con **`IANUS`** todos los flujos de gases frescos, fracciones inspiradas y espiradas de halogenados, CAM, valores de BIS, TOF y parámetros ventilatorios, permitiendo la trazabilidad medicolegal completa del acto anestésico y el cálculo automático del consumo real de mililitros de Sevoflurano/Desflurano por intervención.
-2. **Estaciones de Anestesia No Ferromagnéticas para Salas de Resonancia Magnética (`MR Conditional`)**:
-   - Para procedimientos anestésicos pediátricos o críticos dentro de la sala del imán de **Resonancia Magnética de $1,5\text{ T}$ y $3,0\text{ T}$** del SERGAS (dentro de la línea de gauss de $40\text{ mT} / 400\text{ Gauss}$), el Servicio de Ingeniería Biomédica dispone de estaciones de anestesia específicas **`MR Conditional`** (p. ej. *Dräger Fabius MRI* o *Maquet Flow-i MR*) construidas sin componentes ferromagnéticos, con apantallamiento de radiofrecuencia, teslámetro magnético integrado (que dispara alarma si se acerca a zonas $> 40\text{ mT}$) y cilindros de reserva de aluminio.
-3. **Estrategia de Descarbonización y Sostenibilidad Ambiental en Anestesia del SERGAS**:
-   - Dado que los agentes halogenados y el $\text{N}_2\text{O}$ son potentes gases de efecto invernadero (el **Potencial de Calentamiento Global a 100 años $\text{GWP}_{100}$ del Desflurano es de $2.540$** frente a $510$ del Isoflurano y apenas **$130$ del Sevoflurano**), los pliegos técnicos del SERGAS promueven estaciones de anestesia con **asistentes de bajos flujos (*Econometer / Low-Flow Wizard*)**, control automático de objetivo alveolar (*End-Tidal Control* — EtControl), retirada progresiva del Desflurano y sistemas de captura de gases anestésicos con filtros de carbón activado reciclables en el circuito AGSS.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Subsistema / Norma / Agente | Especificación / Cifra Exacta de Examen | Relevancia Técnica y de Seguridad Clínica |
 | :--- | :--- | :--- |
 | **Norma particular de Estación de Anestesia** | **`UNE-EN ISO 80601-2-13`** (MDR Clase IIb) | Integra suministro de gases, vaporizadores, circuito circular, ventilador, AGSS y monitores. |
-| **No intercambiabilidad de gases** | **NIST (`ISO 5359`)** en mangueras · **PISS (`ISO 407`)** en botellas | Pines PISS: **$\text{O}_2 = 2\text{–}5$** · **$\text{N}_2\text{O} = 3\text{–}5$** · **Aire $= 1\text{–}5$**. Colores `ISO 32`: $\text{O}_2$ blanco, $\text{N}_2\text{O}$ azul, Aire blanco/negro. |
+| **No intercambiabilidad de gases** | **NIST** en mangueras · **PISS** en botellas | Pines PISS: **$\text{O}_2 = 2\text{–}5$** · **$\text{N}_2\text{O} = 3\text{–}5$** · **Aire $= 1\text{–}5$**. Colores `ISO 32`: $\text{O}_2$ blanco, $\text{N}_2\text{O}$ azul, Aire blanco/negro. |
 | **Las 3 Seguridades Anti-Hipoxia** | 1) ***Fail-Safe*** (corta $\text{N}_2\text{O}$ si cae $P_{\text{O}_2}$)<br>2) **Guarda-Hipoxia (*Link-25*)**: **$\text{FiO}_2 \ge 21\text{–}25\%$**<br>3) ***$\text{O}_2$ Flush***: **$35\text{–}75\text{ L/min}$** de $\text{O}_2$ al $100\%$ | El rotámetro de $\text{O}_2$ va siempre en posición **más *downstream* (aguas abajo)**. El *$\text{O}_2$ Flush* puentea caudalímetros y vaporizadores. |
 | **Sevoflurano vs. Isoflurano vs. Desflurano** | • **Sevoflurano (Amarillo)**: $P_v = 157\text{ mmHg}$, $\text{CAM} = 2,0\%$<br>• **Isoflurano (Morado)**: $P_v = 238\text{ mmHg}$, $\text{CAM} = 1,15\%$<br>• **Desflurano (Azul)**: $P_v = 669\text{ mmHg}$, $T_{\text{eb}} = 22,8\text{ }^\circ\text{C}$, $\text{CAM} = 6,0\%$ | El **Desflurano** requiere un **vaporizador eléctrico calentado a $39\text{ }^\circ\text{C}$ y presurizado a $2\text{ atm}$** porque hierve a temperatura de quirófano. |
 | **Absorbedor de $\text{CO}_2$ (Cal Sodada)** | $\approx 80\%\text{ Ca(OH)}_2 + 15\%\text{ H}_2\text{O} + \text{NaOH} + \text{Violeta de etilo}$ | Reacción exotérmica ($\rightarrow \text{CaCO}_3 + \text{H}_2\text{O} + \text{calor}$); vira de **blanco a violeta** a $\text{pH} < 10,3$. |
@@ -199,7 +161,7 @@ En los más de 180 quirófanos de las **7 Áreas Sanitarias del SERGAS** (CHUAC,
 | **Índice Biespectral (BIS) de hipnosis** | **Rango objetivo en anestesia general: $\mathbf{40\text{ a }60}$** | Despierto: $90\text{–}100$ · Sedación: $60\text{–}80$ · Supresión profunda: $< 20$ · EEG plano: $0$. |
 | **Monitorización Neuromuscular (TOF)** | 4 pulsos supramáximos a **$2\text{ Hz}$** (cada $0,5\text{ s}$) en nervio cubital | **Umbral obligatorio para extubación segura: $\text{TOF Ratio } (T_4 / T_1) \ge 0,90$ ($90\%$)**. |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Pregunta estrella de examen! ¿Por qué el Desflurano NO puede administrarse con un vaporizador mecánico de *bypass* variable como el Sevoflurano o el Isoflurano?**: Porque su **punto de ebullición es de $22,8\text{ }^\circ\text{C}$** y su presión de vapor a $20\text{ }^\circ\text{C}$ es de **$669\text{ mmHg}$**, por lo que hierve a la temperatura ambiente del quirófano. Por eso su vaporizador (Tec 6 / D-Vapor) va enchufado a la red eléctrica, **calienta el agente a $39\text{ }^\circ\text{C}$ y lo presuriza a $2\text{ atm}$**, inyectando electrónicamente vapor puro proporcional al flujo de gas fresco sin que el gas fresco entre jamás en la cámara del líquido.
 2. **¿Por qué las botellas de reserva colgadas detrás de la máquina de anestesia no se vacían aunque se dejen abiertas mientras la máquina está conectada a la toma mural?**: Porque la red centralizada del hospital suministra los gases a **$4,0\text{–}5,0\text{ bar}$**, mientras que los manorreductores internos de los yugos PISS de las botellas de reserva están tarados a una presión inferior (**$3,0\text{–}3,5\text{ bar}$**); las válvulas antirretorno mantienen bloqueada la salida de las botellas hasta que la presión de la red mural cae por debajo de $3,5\text{ bar}$.
 3. **¿Por qué el caudalímetro de Oxígeno ($\text{O}_2$) debe colocarse siempre en el extremo más cercano a la salida común de gases (*downstream*) en el banco de rotámetros?**: Para que, en caso de una fuga o fisura en los tubos de vidrio de $\text{N}_2\text{O}$ o Aire situados aguas arriba (*upstream*), lo que se pierda hacia el exterior sea el protóxido o el aire y nunca el oxígeno, garantizando que no llegue al paciente una mezcla hipóxica.

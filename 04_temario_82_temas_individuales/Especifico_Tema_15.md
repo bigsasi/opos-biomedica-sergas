@@ -1,34 +1,6 @@
 # Tema 15 — Caracterización y funcionamiento de los equipos de protonterapia. Elementos de una instalación.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #15 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 03 — Resonancia Magnética, Ultrasonidos, Radioterapia y Medicina Nuclear
-> - **Marco Normativo y Técnico Nuclear:** RD 1566/1998 (Criterios de Calidad en Radioterapia), RD 1836/1999 y RD 35/2008 (Reglamento sobre Instalaciones Nucleares y Radiactivas), RD 601/2019 (Justificación y Optimización de Exposiciones Médicas), RD 1029/2022 (RPSI), Reglamento (UE) 2017/745 (MDR), RD 838/2015 y Orden EFP/1216/2019 (Módulo 1588), Norma Particular UNE-EN 60601-2-64 (Seguridad básica y funcionamiento esencial de equipos de radioterapia con iones ligeros), Informes ICRU 78 y TRS-398 (OIEA).
-> - **Sistemas y Entorno SERGAS:** Centro de Protonterapia de Galicia (Santiago de Compostela — CHUS), Servicios de Oncología Radioterápica y de Radiofísica y Protección Radiológica del SERGAS, OIS Oncológicos (ARIA / MOSAIQ), Sistemas de Planificación (RayStation / Eclipse), IANUS, PACS y XMAO.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 15** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud aborda de forma monográfica la tecnología más avanzada de la oncología radioterápica contemporánea: la **terapia con haces de protones (hadronterapia con protones)**. Su alcance técnico exige dominar:
-1. **Física de la interacción de protones con el tejido biológico y radiobiología:** Ecuación relativista del poder de frenado másico de Bethe-Bloch, depósito selectivo de dosis en el **Pico de Bragg**, conformación del **Pico de Bragg Ensanchado (*Spread-Out Bragg Peak* — SOBP)**, dispersión coulombiana múltiple, reacciones nucleares inelásticas y Eficacia Biológica Relativa ($\text{RBE} = 1,1$).
-2. **Caracterización y principio de funcionamiento de los aceleradores de protonterapia ($70\text{–}250\text{ MeV}$):** Ciclotrón isócrono (convencional o superconductor), sincrociclotrón superconductor compacto de alto campo ($9\text{–}10\text{ T}$) y sincrotrón médico; sistema degradador y selector de energía (*Energy Selection System* — ESS).
-3. **Línea de transporte del haz (*Beamline*), Gantry isocéntrico y Boquilla de tratamiento (*Nozzle*):** Óptica magnética de dipolos y cuadrupolos al alto vacío, evolución desde la dispersión pasiva (*Passive Scattering*) hasta el **Barrido Activo por Pincel (*Pencil Beam Scanning* — PBS / IMPT)** y sistemas de guiado por imagen (kV-CBCT, TC en sala y SGRT).
-4. **Elementos e ingeniería hospitalaria de una instalación de protonterapia:** Obra civil de búnkeres para neutrones de alta energía (cascada intranuclear hasta $250\text{ MeV}$), cálculo de barreras, activación inducida, enclavamientos de seguridad (`UNE-EN 60601-2-64`), dosimetría absoluta (`TRS-398`) y el hito estratégico del **Centro de Protonterapia de Galicia** en el SERGAS.
-
-### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Radiofísica Hospitalaria** | **Ingeniero/a Técnico/a**
-- **Grado de solapamiento:** **Medio (55%)** en Radiofísica Hospitalaria (incluye tratamientos especiales con haces de partículas pesadas —protones e iones de carbono— y diseño de instalaciones radiactivas y cálculo de blindajes); **Bajo (35%)** en Ingeniero/a Técnico/a (aborda de forma general instalaciones de radioterapia y aceleradores).
-- **Epígrafes equivalentes en temarios SERGAS:**
-  - **Radiofísica Hospitalaria:**
-    - *Tema 17:* Técnicas de radioterapia externa. Técnicas especiales: d) tratamientos con haces de partículas pesadas.
-    - *Tema 10:* Regulaciones, recomendaciones y normas. Diseño de instalaciones. Cálculo de blindajes. Gestión de la seguridad radiológica.
-  - **Ingeniero/a Técnico/a:**
-    - *Tema 52:* Radioterapia. Medicina nuclear. Aceleradores lineales. Instalaciones.
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Física de los Haces de Protones y Relación Rango-Energía, Dispersión Lateral, Interacciones Nucleares y RBE
 
 ### 1.1. Física de los Haces de Protones: Ecuación de Bethe-Bloch y el Pico de Bragg
 A diferencia de la radioterapia externa convencional con fotones de megavoltaje (rayos X de frenado generados en un LINAC, cuya curva de porcentaje de dosis en profundidad o PDD presenta un máximo superficial de *build-up* a $1,5\text{–}3,5\text{ cm}$ seguido de una atenuación cuasi-exponencial que irradia todos los tejidos sanos situados detrás del tumor), la **protonterapia** emplea partículas pesadas cargadas positivamente: **protones ($p^+$, núcleos de hidrógeno $^1\text{H}^+$)** con masa en reposo $m_p = 1,6726 \times 10^{-27}\text{ kg} \approx 938,272\text{ MeV}/c^2$ (aproximadamente $1.836$ veces la masa del electrón) y carga elemental $z = +1$.
@@ -72,7 +44,7 @@ No obstante, la transferencia lineal de energía ($LET_d$) aumenta en los últim
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Aceleradores de Protonterapia y Línea de Transporte del Haz (*Beamline*) y Gantry Isocéntrico
 
 Una instalación de protonterapia se estructura en cuatro grandes subsistemas electromecánicos y de vacío: **1) El Acelerador de Protones (con o sin Selector de Energía ESS)**, **2) La Línea de Transporte del Haz (*Beam Transport System*)**, **3) El Gantry Rotatorio Isocéntrico con su Boquilla (*Nozzle*)** y **4) El Sistema de Posicionamiento Robótico e Imagen Guiada (IGRT)**.
 
@@ -110,7 +82,7 @@ En los centros multisala (y en los monosala con acelerador en bóveda anexa), el
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Evolución de la Entrega del Haz en la Boquilla (*Nozzle*)
 
 ### 3.1. Evolución de la Entrega del Haz en la Boquilla (*Nozzle*): Dispersión Pasiva vs. Barrido Activo por Pincel (PBS / IMPT)
 La **Boquilla de Tratamiento (*Nozzle*)** es el conjunto electromecánico final montado en el extremo del gantry frente al paciente. Históricamente han existido dos tecnologías:
@@ -119,7 +91,7 @@ La **Boquilla de Tratamiento (*Nozzle*)** es el conjunto electromecánico final 
    - Exigía fabricar en un taller de mecanizado CNC para cada campo y cada paciente un **Colimador de Latón/Bronce personalizado** (para recortar el contorno lateral 2D) y un **Compensador de Rango de Polimetilmetacrilato (PMMA) o Cera** fresado a medida (para adaptar el borde distal al tumor). Tenía dos graves desventajas: **producía una elevada dosis de neutrones secundarios** al chocar la mayoría de los protones contra el latón en la propia boquilla junto al paciente, y **causaba sobredosificación proximal** porque el espesor del SOBP quedaba fijado por la zona más gruesa del tumor.
 2. **Barrido Activo por Pincel (*Pencil Beam Scanning* — PBS / *Spot Scanning*):**
    - Es el **estándar tecnológico exclusivo actual** (implantado en el Centro de Protonterapia de Galicia). Elimina por completo las láminas dispersoras, los colimadores de latón y los compensadores por paciente.
-   - **Arquitectura interna de una Boquilla PBS (`UNE-EN 60601-2-64`):**
+   - **Arquitectura interna de una Boquilla PBS:**
      - **Dos Imanes Dipolares de Barrido Rápido (*Scanning Magnets* $X$ e $Y$):** Deflectan magnéticamente el haz estrecho («pincel» gaussiano con $\sigma \approx 2,5\text{ a }5\text{ mm}$ en aire en el isocentro) a velocidades de $10\text{ a }40\text{ m/s}$ a través de campos de hasta $30 \times 40\text{ cm}^2$.
      - **Cámaras de Ionización Monitoras de Transmisión Redundantes (IC1, IC2, IC3):** Cámaras plano-paralelas y de tiras (*strip ionization chambers*) con ventana ultrafina (espesor equivalente en agua *WET* $< 1\text{–}2\text{ mm}$ para no ensanchar el pincel) que miden en tiempo real —con resolución temporal de microsegundos— la **dosis (Unidades Monitor)**, la **posición centroide $(X,Y)$** y la **anchura ($\sigma_x, \sigma_y$)** de cada punto (*spot*), cortando el haz en $< 100\text{ }\mu\text{s}$ si cualquier *spot* se desvía más de $1\text{–}1,5\text{ mm}$ de su coordenada planificada.
      - **Absorbedor de Rango Pre-paciente (*Range Shifter*):** Placa retráctil de PMMA o policarbonato de $3\text{ a }5\text{ cm}$ de espesor equivalente en agua que se inserta en el extremo de la boquilla cuando es necesario tratar lesiones muy superficiales situadas a menos de $\approx 4\text{ cm}$ de la piel (ya que la energía mínima de transporte en la línea es de $70\text{ MeV} \equiv 4,1\text{ cm}$).
@@ -141,7 +113,7 @@ La **Boquilla de Tratamiento (*Nozzle*)** es el conjunto electromecánico final 
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Diseño de Obra Civil, Búnker y Blindaje contra Neutrones de Alta Energía
 
 ### 4.1. Diseño de Obra Civil, Búnker y Blindaje contra Neutrones de Alta Energía
 El diseño arquitectónico y de ingeniería hospitalaria de un centro de protonterapia es uno de los más complejos del ámbito sanitario:
@@ -153,32 +125,18 @@ El diseño arquitectónico y de ingeniería hospitalaria de un centro de protont
 - **Activación Inducida y Climatización (`RITE` y CSN):** Los neutrones activan los núcleos del aire de la sala generando gases radiactivos de vida corta ($^{41}\text{Ar}, ^{11}\text{C}, ^{13}\text{N}, ^{15}\text{O}$), así como el agua del circuito cerrado primario de refrigeración de los imanes/degradador y los componentes metálicos. La climatización mantiene una **cascada de depresión negativa** (sala del ciclotrón $<$ sala de gantry $<$ pasillos técnicos) con **6 a 12 renovaciones/hora** y extracción filtrada a cubierta.
 - **Suministro Eléctrico y Agua Enfriada:** Potencia eléctrica contratada de **$1,5\text{ a }3,5\text{ MVA}$** con transformadores dedicados, fuentes de corriente de ultra-alta estabilidad para los imanes ($\Delta I / I < 10^{-5}$), SAI/UPS para sistemas de vacío, criogenia (evitando el *Quench* en bobinas superconductoras) y seguridad, y planta de *chillers* redundantes ($N+1$) de agua desionizada de baja conductividad ($< 1\text{ }\mu\text{S/cm}$) controlada a $\pm 0,1\text{ }^\circ\text{C}$.
 
-### 4.2. Dosimetría Absoluta (`OIEA TRS-398`) y Control de Calidad (`RD 1566/1998` / `AAPM TG-224`)
+### 4.2. Dosimetría Absoluta (`OIEA TRS-398`) y Control de Calidad
 - **Dosimetría Absoluta de Referencia (`TRS-398`):** Se mide la dosis absorbida en agua $D_{w,Q}$ en un maniquí de agua motorizado 3D utilizando una **cámara de ionización cilíndrica tipo Farmer** (o **cámara plano-paralela tipo Markus / Roos** especialmente en energías bajas o picos estrechos donde el gradiente en profundidad es alto), aplicando el factor de calidad de haz $k_{Q,Q_0}$ calculado a partir del **rango residual $R_{\text{res}} = R_p - z_{\text{ref}}$**:
   $$D_{w,Q} = M_Q \cdot N_{D,w,Q_0} \cdot k_{Q,Q_0}$$
 - **Pruebas de Control de Calidad Periódicas (`RD 1566/1998`, `SEFM` y `AAPM TG-224`):**
   - **Diarias:** Constancia de dosis/rendimiento absoluto (**tolerancia $\le \pm 2\%$, acción $\pm 3\%$**), verificación del alcance/energía (**$\le \pm 1\text{ mm}$**), posición de los *spots* de barrido PBS (**$\le \pm 1\text{ mm}$**), coincidencia de láseres e imagen kV/CBCT con el isocentro protónico (**$\le 1\text{ mm}$**), y comprobación de todos los enclavamientos de puerta, setas de parada y monitores de área.
-  - **Mensuales y Anuales:** Verificación exhaustiva de la biblioteca de energías ($70\text{–}230\text{ MeV}$: rango $R_{80}$ dentro de **$\pm 1\text{ mm}$**, anchura distal $d_{80-20}$), perfiles laterales de *spot* ($\sigma_x, \sigma_y$ dentro de $\pm 10\%$), simetría y homogeneidad de campos barridos ($\le \pm 2\%$), esfera de isocentro mecánico/radiante del gantry y mesa 6DoF ($\le 1\text{ mm}$), linealidad y recombinación iónica de las cámaras monitoras de la boquilla (`UNE-EN 60601-2-64`).
+  - **Mensuales y Anuales:** Verificación exhaustiva de la biblioteca de energías ($70\text{–}230\text{ MeV}$: rango $R_{80}$ dentro de **$\pm 1\text{ mm}$**, anchura distal $d_{80-20}$), perfiles laterales de *spot* ($\sigma_x, \sigma_y$ dentro de $\pm 10\%$), simetría y homogeneidad de campos barridos ($\le \pm 2\%$), esfera de isocentro mecánico/radiante del gantry y mesa 6DoF ($\le 1\text{ mm}$), linealidad y recombinación iónica de las cámaras monitoras de la boquilla.
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. El Centro de Protonterapia de Galicia (Santiago de Compostela — CHUS)
-El despliegue de la protonterapia en el **Servicio Gallego de Salud (SERGAS)** constituye uno de los proyectos de ingeniería biomédica y hospitalaria más emblemáticos de España y de Europa:
-- **Contexto Institucional y Estratégico:** En el marco del convenio suscrito entre el **Ministerio de Sanidad**, la **Xunta de Galicia (Consellería de Sanidade / SERGAS)** y la **Fundación Amancio Ortega** (que financió la adquisición de 10 equipos de protonterapia para el Sistema Nacional de Salud), Galicia construyó e implantó el **Centro de Protonterapia de Galicia**, ubicado en **Santiago de Compostela** en parcela anexa y conectada funcionalmente con el **Hospital Clínico Universitario de Santiago (CHUS — Área Sanitaria de Santiago de Compostela e Barbanza)**.
-- **Alcance Asistencial Supraterritorial:** Es el primer centro público de protonterapia en entrar en funcionamiento en el SNS y actúa como **centro de referencia público no solo para las 7 Áreas Sanitarias de Galicia, sino para todo el noroeste peninsular (Galicia, Asturias, Castilla y León)** y norte de Portugal.
-- **Arquitectura del Centro Gallego:** El edificio integra el búnker de alta seguridad radiológica con **acelerador superconductor compacto y sala de tratamiento con Gantry isocéntrico dotado de tecnología de Barrido Activo por Pincel (*Pencil Beam Scanning* — PBS / IMPT) e imagen guiada volumétrica CBCT/TC**, junto con área de simulación dedicada (**TC simulador de gran apertura 4D / DECT** y acceso a RM de planificación), consultas externas, área de **anestesia y despertar pediátrico** (indispensable porque los niños pequeños requieren sedación profunda diaria con monitorización remota desde el exterior del búnker mediante cámaras HD y telemetría multiparamétrica) y laboratorios de Radiofísica e investigación traslacional (IDIS / Galaria).
-
-### 5.2. Integración Digital Corporativa y Gestión del Mantenimiento en el SERGAS
-- **Flujo Digital Oncológico (`DICOM-RT Ion`):** Como los objetos estándar `DICOM RT Plan` de fotones no contemplan imanes de barrido, capas de energía ni absorbedores de rango, la protonterapia utiliza los objetos específicos de **Segunda Generación `DICOM-RT Ion`**: **`RT Ion Plan`** y **`RT Ion Beams Treatment Record`**. Estos objetos fluyen entre el Sistema de Planificación (TPS), el Sistema de Información Oncológica (**OIS / R&V** corporativo), el **PACS centralizado del SERGAS** y la **Historia Clínica Electrónica única (`IANUS`)**, registrando automáticamente las dosis conforme al **RD 601/2019**.
-- **Gestión en `XMAO` y Contrato de Mantenimiento:** El sistema de protonterapia y sus subsistemas críticos (criogenia, bombas de vacío, fuentes de imanes, *chillers*, mesa robótica 6DoF, TC simulador, monitores de neutrones y matrices dosimétricas) están inventariados jerárquicamente en el sistema corporativo **`XMAO`** del SERGAS. Debido a la alta complejidad del acelerador, se opera mediante un contrato de soporte técnico permanente en planta (*in-house field service engineers* del fabricante) supervisado por el **Servicio de Ingeniería Biomédica / Electromedicina** y el **Servicio de Radiofísica y Protección Radiológica (GALARIA / SERGAS)**, quienes validan y autorizan por escrito la devolución del equipo a uso clínico tras cualquier intervención correctiva o preventiva (`RD 1566/1998`).
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Magnitud / Subsistema | Valor / Norma / Ecuación Clave | Observación Crítica para Examen A1 SERGAS |
 | :--- | :--- | :--- |
@@ -190,11 +148,11 @@ El despliegue de la protonterapia en el **Servicio Gallego de Salud (SERGAS)** c
 | **Ciclotrón Isócrono vs. Sincrotrón** | Ciclotrón: **$E$ fija máxima ($230\text{–}250\text{ MeV}$), haz CW + Degradador ESS** | Sincrotrón: **Anillo de radio fijo, $E$ variable directa ($70\text{–}250\text{ MeV}$) por pulsos sin ESS** |
 | **Técnica de entrega en la Boquilla (*Nozzle*)** | **Barrido Activo por Pincel (*Pencil Beam Scanning* — PBS / IMPT)** | Dos imanes dipolares $X,Y$ barren punto por punto (*spots*) en **60–100 capas de energía** |
 | **Norma técnica particular IEC** | **UNE-EN 60601-2-64** | Seguridad básica y funcionamiento esencial de equipos de radioterapia con iones ligeros |
-| **Clasificación legal y Blindaje del Búnker** | **Instalación Radiactiva de 2.ª Categoría** (`RD 1836/1999`) | Muros de hormigón de **$2,0\text{ a }4,5\text{ m}$** para frenar **neutrones secundarios de hasta $250\text{ MeV}$** |
+| **Clasificación legal y Blindaje del Búnker** | **Instalación Radiactiva de 2.ª Categoría** | Muros de hormigón de **$2,0\text{ a }4,5\text{ m}$** para frenar **neutrones secundarios de hasta $250\text{ MeV}$** |
 | **Tolerancias de Control de Calidad (`TG-224` / `SEFM`)** | Rango $R_{80}$: **$\le \pm 1\text{ mm}$** · Dosis absoluta: **$\le \pm 2\%$** | Posición de *spot* PBS: **$\le \pm 1\text{ mm}$** · Esfera de isocentro mecánico/radiante: **$\le 1\text{ mm}$** |
 | **Objetos DICOM específicos de protonterapia** | **`RT Ion Plan`** y **`RT Ion Beams Treatment Record`** | Segunda generación `DICOM-RT Ion` (codifica imanes de barrido, *spots* y *Range Shifter*) |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Trampa clásica sobre cómo se cambia la energía en un Ciclotrón vs. un Sincrotrón!** Un **ciclotrón de protonterapia NO puede variar la energía de extracción del acelerador**: siempre extrae los protones a su energía máxima de diseño ($230\text{ o }250\text{ MeV}$) y necesita obligatoriamente un **Degradador mecánico de energía (*Energy Selection System* — ESS) con cuñas de grafito o berilio** a su salida para reducir la energía hasta el valor requerido por cada capa tumoral ($70\text{–}230\text{ MeV}$). Por el contrario, el **sincrotrón** varía el campo magnético y la RF en su anillo para extraer directamente cada pulso a la energía deseada **sin degradador pasivo**.
 2. **¿Por qué se necesita un *Range Shifter* (Absorbedor de Rango) en la boquilla PBS si el equipo llega a $70\text{ MeV}$?** Porque $70\text{ MeV}$ tienen un alcance en agua de **$\approx 4,1\text{ cm}$**, y por debajo de $70\text{ MeV}$ las pérdidas y la dispersión del haz en la línea de transporte magnética son excesivas. Por tanto, para tratar cualquier tumor situado **entre la piel ($0\text{ cm}$) y los primeros $4\text{ cm}$ de profundidad**, es obligatorio interponer en la boquilla una placa de plástico (**Range Shifter** de PMMA/policarbonato de $3\text{–}5\text{ cm}$ WET), acercándola lo máximo posible al paciente para no ensanchar el tamaño del *spot* por el espacio de aire (*air-gap*).
 3. **¿Qué radiación condiciona el espesor de los muros de un búnker de protonterapia?** **¡Nunca son los protones primarios!** Un haz de protones de $250\text{ MeV}$ se frena totalmente en menos de $20\text{ cm}$ de hormigón. Lo que exige muros de **$2\text{ a }4,5\text{ metros}$ de hormigón** son los **neutrones secundarios de alta energía (cascada intranuclear de hasta $250\text{ MeV}$)** generados cuando los protones chocan contra los núcleos del degradador (ESS), de la boquilla o del propio paciente.

@@ -1,34 +1,6 @@
 # Tema 17 — Sistema de producción de fármacos para medicina nuclear. Ciclotrón.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #17 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 03 — Resonancia Magnética, Ultrasonidos, Radioterapia y Medicina Nuclear
-> - **Marco Normativo y Técnico Nuclear:** RDL 1/2015 (Ley de garantías y uso racional de los medicamentos y productos sanitarios), RD 1345/2007 y RD 479/1993 (Medicamentos radiofármacos de uso humano y Unidades de Radiofarmacia), Normas de Correcta Fabricación de la UE (EU-GMP Anexo 1: Fabricación de medicamentos estériles y Anexo 3: Fabricación de radiofármacos), Real Farmacopea Europea, RD 1841/1997 (Criterios de calidad en Medicina Nuclear — Activímetros), RD 1836/1999 y RD 35/2008 (Instalaciones Radiactivas de 2.ª Categoría), RD 1029/2022 (RPSI), RD 838/2015 y Orden EFP/1216/2019 (Módulo 1588).
-> - **Sistemas y Entorno SERGAS:** Unidad de Radiofarmacia Ciclotrón de Galicia gestionada por GALARIA (Empresa Pública de Servizos Sanitarios — CHUS, Santiago de Compostela), Unidades de Radiofarmacia de los Servicios de Medicina Nuclear del SERGAS (CHUS, CHUAC, CHUVI, HULA, CHUO), SILICON / Gestión Radiofarmacéutica, IANUS, RIS/PACS y XMAO.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 17** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del SERGAS aborda los sistemas físicos, nucleares, radioquímicos y de ingeniería hospitalaria mediante los cuales se producen los radionucleidos y se sintetizan los **radiofármacos** destinados al diagnóstico funcional/metabólico (gammagrafía planar, SPECT y PET) y a la terapia metabólica/teragnosis en Medicina Nuclear. Su alcance técnico comprende:
-1. **Cinética radiactiva y las tres vías de obtención de radionucleidos de uso médico:** Ley de decaimiento exponencial, período físico ($T_f$), biológico ($T_b$) y efectivo ($T_e$); producción en **reactor nuclear** (fisión y captura neutrónica), en **generadores cromatográficos** ($^{99}\text{Mo}/^{99\text{m}}\text{Tc}$ en equilibrio transitorio y $^{68}\text{Ge}/^{68}\text{Ga}$ en equilibrio secular) y en **aceleradores cíclicos (ciclotrón)**.
-2. **Caracterización, física y subsistemas del Ciclotrón Biomédico de Iones Negativos ($\text{H}^- / \text{D}^-$):** Ecuación de Lorentz y frecuencia de ciclotrón de Lawrence, fuente de iones *PIG*, cámara de alto vacío, imán con sectores en espiral (*hills and valleys*), electrodos aceleradores de radiofrecuencia (*Dees*), **extracción por lámina despojadora de electrones de grafito (*Carbon Stripper Foil*)** y diseño de **blancos (*targets*) líquidos y gaseosos** para las reacciones nucleares de $^{18}\text{F}, ^{11}\text{C}, ^{13}\text{N}, ^{15}\text{O}, ^{123}\text{I}$ y $^{67}\text{Ga}$.
-3. **Sistemas automatizados de síntesis radioquímica, celdas blindadas (*Hot Cells*) y control de calidad:** Módulos de síntesis nucleofílica de $^{18}\text{F-FDG}$, fraccionadores automáticos, controles analíticos de Farmacopea (pureza radionucleídica, radioquímica, química y microbiológica) y el **Activímetro (calibrador de dosis)** según el `RD 1841/1997`.
-4. **Ingeniería hospitalaria de una Unidad de Radiofarmacia Ciclotrón (GMP + Seguridad Radiológica):** Paradoja de presiones diferenciales (sala limpia estéril con sobrepresión frente a contención radiactiva en depresión), filtros HEPA y de carbón activo, gestión de efluentes y la **Unidad de Radiofarmacia Ciclotrón de GALARIA-SERGAS** en Santiago de Compostela.
-
-### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Radiofísica Hospitalaria** | **TS Imagen para el Diagnóstico**
-- **Grado de solapamiento:** **Alto (80%)** en Radiofísica Hospitalaria (cubre radionucleidos empleados, obtención de radionucleidos —ciclotrón y generadores—, radiofármacos y período biológico efectivo); **Medio (45%)** en TS Imagen para el Diagnóstico (aborda equipos de medicina nuclear/PET y recepción, almacenamiento y manipulación de material radiactivo).
-- **Epígrafes equivalentes en temarios SERGAS:**
-  - **Radiofísica Hospitalaria:**
-    - *Tema 31:* Fundamentos. Radisótopos empleados y características de los radionucleidos. Obtención de los radionucleidos. Radiofármacos. Captación de los radiofármacos por el organismo: período biológico efectivo. Estudios morfológicos y funcionales.
-  - **TS Imagen para el Diagnóstico:**
-    - *Tema 11:* Equipos de medicina nuclear: gammacámara y tomografía de emisión de positrones (PET).
-    - *Tema 12:* Gestión de material radiactivo: recepción, almacenamiento y manipulación. Gestión de residuos radiactivos en las unidades de medicina nuclear.
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Concepto Legal de Radiofármaco y Cinética de Desintegración y Eliminación Efectiva
 
 ### 1.1. Concepto Legal de Radiofármaco y Cinética de Desintegración y Eliminación Efectiva
 Conforme al **Real Decreto Legislativo 1/2015** y al **Real Decreto 1345/2007**, los **radiofármacos** tienen la consideración legal de **medicamentos especiales de uso humano** y se definen en cuatro categorías regulatorias:
@@ -58,7 +30,7 @@ La estabilidad de un núcleo atómico depende de su relación neutrón/protón (
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Sistemas Generadores de Radionucleidos en Unidades de Radiofarmacia Hospitalaria y El Ciclotrón Biomédico
 
 ### 2.1. Sistemas Generadores de Radionucleidos en Unidades de Radiofarmacia Hospitalaria
 Antes de estudiar el ciclotrón, toda Unidad de Radiofarmacia hospitalaria opera diariamente con **generadores cromatográficos**:
@@ -96,7 +68,7 @@ Los **ciclotrones biomédicos modernos de producción de radiofármacos PET** (e
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Tabla Maestra de Radionucleidos de Ciclotrón y Reacciones Nucleares Estrella
 
 ### 3.1. Tabla Maestra de Radionucleidos de Ciclotrón y Reacciones Nucleares Estrella
 En la Unidad de Radiofarmacia Ciclotrón se seleccionan los materiales del blanco (enriquecidos isotópicamente) y el proyectil ($p^+$ o $d^+$) según el radionucleido deseado:
@@ -115,13 +87,13 @@ Dado que al finalizar un bombardeo de $60\text{–}120\text{ min}$ se transfiere
   1. **Captura en columna de intercambio aniónico (**$\text{QMA}$**):** Retiene el anión $^{18}\text{F}^-$ y permite recuperar el agua enriquecida $\text{H}_2^{18}\text{O}$ no reaccionada.
   2. **Elución y Secado Azeotrópico:** Se eluye el $^{18}\text{F}^-$ con carbonato potásico ($\text{K}_2\text{CO}_3$) y el criptando de transferencia de fase **Kryptofix 2.2.2 ($\text{K}_{222}$)** en acetonitrilo ($\text{CH}_3\text{CN}$), evaporando toda traza de agua a $95\text{–}110\text{ }^\circ\text{C}$ bajo vacío y flujo de nitrógeno (ya que el ion $^{18}\text{F}^-$ hidratado no es nucleófilo).
   3. **Sustitución Nucleofílica Bimolecular ($S_N2$):** Se añade el precursor orgánico **triflato de manosa** (*1,3,4,6-tetra-O-acetil-2-O-trifluorometanosulfonil-$\beta$-D-manopiranosa*); el $^{18}\text{F}^-$ ataca el carbono 2 desplazando al grupo saliente triflato con inversión de configuración (de manosa a glucosa).
-  4. **Hidrólisis (Desprotección) y Purificación:** Hidrólisis básica con $\text{NaOH}$ (o ácida con $\text{HCl}$) para eliminar los cuatro grupos acetilo protectores, seguida de purificación en serie mediante cartuchos de fase reversa (**C18**, alúmina neutra e intercambio catiónico) y **filtración esterilizante final por membrana de $0,22\text{ }\mu\text{m}$** dentro de un dispensador automático situado en ambiente **Clase A (ISO 5)**.
+  4. **Hidrólisis (Desprotección) y Purificación:** Hidrólisis básica con $\text{NaOH}$ (o ácida con $\text{HCl}$) para eliminar los cuatro grupos acetilo protectores, seguida de purificación en serie mediante cartuchos de fase reversa (**C18**, alúmina neutra e intercambio catiónico) y **filtración esterilizante final por membrana de $0,22\text{ }\mu\text{m}$** dentro de un dispensador automático situado en ambiente **Clase A**.
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Control de Calidad de Radiofármacos (Farmacopea Europea) y del Activímetro
 
-### 4.1. Control de Calidad de Radiofármacos (Farmacopea Europea) y del Activímetro (`RD 1841/1997`)
+### 4.1. Control de Calidad de Radiofármacos (Farmacopea Europea) y del Activímetro
 Antes de liberar un lote de $^{18}\text{F-FDG}$ o de administrar un eluido de $^{99\text{m}}\text{Tc}$, la Unidad de Radiofarmacia debe verificar cinco familias de controles analíticos:
 1. **Pureza Radionucleídica (Fracción de la actividad total que corresponde al radionucleido deseado):**
    - En el **eluido del generador $^{99}\text{Mo}/^{99\text{m}}\text{Tc}$:** Se verifica en el activímetro la ausencia de **fuga o elución de Molibdeno-99 (*Mo-99 breakthrough*)** introduciendo el vial dentro de un **contenedor cilíndrico de plomo de $6\text{ mm}$ de espesor** (que absorbe el $100\%$ de los fotones de $140\text{ keV}$ del $^{99\text{m}}\text{Tc}$ pero deja pasar los fotones de alta energía de **$740\text{ y }778\text{ keV}$ del $^{99}\text{Mo}$**). Límite máximo de Farmacopea Europea: **$< 0,1\%$ ($< 1\text{ kBq}$ de $^{99}\text{Mo}$ por cada $1\text{ MBq}$ de $^{99\text{m}}\text{Tc}$)** en el momento de la administración.
@@ -135,10 +107,10 @@ Antes de liberar un lote de $^{18}\text{F-FDG}$ o de administrar un eluido de $^
 4. **Controles Fisicoquímicos y Biológicos:** Aspecto límpido e incoloro, **pH** ($4,0\text{–}8,0$ en $^{99\text{m}}\text{Tc}$; $4,5\text{–}8,5$ en $^{18}\text{F-FDG}$), **integridad del filtro esterilizante de $0,22\text{ }\mu\text{m}$ (*Test del Punto de Burbuja* $\ge 3,2\text{–}3,5\text{ bar}$)** —obligatorio antes de la liberación paramétrica del lote ya que el test de esterilidad tarda 14 días—, **endotoxinas bacterianas (ensayo LAL cromogénico $< 175\text{ UI/V}$ en $< 20\text{ min}$)** y esterilidad.
 5. **El Activímetro (Calibrador de Dosis) y su Control de Calidad (`RD 1841/1997` y Protocolo SEFM/SEPR):**
    - El activímetro es una **cámara de ionización cilíndrica tipo pozo ($4\pi$) presurizada con gas Argón a $10\text{–}20\text{ atmósferas}$** conectada a un electrómetro de alta precisión con factores de calibración específicos por isótopo.
-   - **Tolerancias obligatorias (`RD 1841/1997`):** Control diario de **fondo radiactivo**, **alta tensión** y **estabilidad/constancia y exactitud** con fuentes patrón selladas de vida larga (**$^{137}\text{Cs}$ [$662\text{ keV}$], $^{57}\text{Co}$ [$122\text{ keV}$] y $^{68}\text{Ge}$/$^{22}\text{Na}$ [$511\text{ keV}$]**): desviación máxima **$< \pm 5\%$** en exactitud y **$< \pm 5\%$** en estabilidad; **linealidad de respuesta** en todo el rango de actividades clínicas (**$< \pm 5\%$**, método de decaimiento de $^{99\text{m}}\text{Tc}$ o escudos de atenuación *Calicheck*) y **dependencia geométrica/volumen** en viales y jeringas.
+   - **Tolerancias obligatorias:** Control diario de **fondo radiactivo**, **alta tensión** y **estabilidad/constancia y exactitud** con fuentes patrón selladas de vida larga (**$^{137}\text{Cs}$ [$662\text{ keV}$], $^{57}\text{Co}$ [$122\text{ keV}$] y $^{68}\text{Ge}$/$^{22}\text{Na}$ [$511\text{ keV}$]**): desviación máxima **$< \pm 5\%$** en exactitud y **$< \pm 5\%$** en estabilidad; **linealidad de respuesta** en todo el rango de actividades clínicas (**$< \pm 5\%$**, método de decaimiento de $^{99\text{m}}\text{Tc}$ o escudos de atenuación *Calicheck*) y **dependencia geométrica/volumen** en viales y jeringas.
 
-### 4.2. Ingeniería Hospitalaria de la Instalación: Climatización GMP + Contención Radiológica (`EU-GMP Anexo 3` y `CSN`)
-Una Unidad de Radiofarmacia Ciclotrón es una **Instalación Radiactiva de 2.ª Categoría** (`RD 1836/1999`) y simultáneamente un **Laboratorio Farmacéutico de Fabricación de Medicamentos Estériles (`RD 1345/2007` y `Anexos 1 y 3 EU-GMP`)**. El ingeniero biomédico y hospitalario debe resolver la **paradoja aerodinámica de presiones**:
+### 4.2. Ingeniería Hospitalaria de la Instalación: Climatización GMP + Contención Radiológica
+Una Unidad de Radiofarmacia Ciclotrón es una **Instalación Radiactiva de 2.ª Categoría** y simultáneamente un **Laboratorio Farmacéutico de Fabricación de Medicamentos Estériles (`RD 1345/2007` y `Anexos 1 y 3 EU-GMP`)**. El ingeniero biomédico y hospitalario debe resolver la **paradoja aerodinámica de presiones**:
 - **Requisito Farmacéutico de Esterilidad (GMP):** Exige **presión positiva** en las salas limpias (Grado A en dispensación rodeado de Grado B o Grado C con aislador cerrado) para impedir la entrada de microorganismos y partículas desde el exterior.
 - **Requisito de Protección Radiológica (CSN):** Exige **presión negativa (depresión)** donde se manipulan radionucleidos abiertos o volátiles ($^{18}\text{F}, ^{11}\text{C}, ^{131}\text{I}$) para impedir que una fuga radiactiva salga a los pasillos.
 - **Solución de Ingeniería (Cascada Sumidero-Fuente y Celdas en Depresión):**
@@ -147,22 +119,9 @@ Una Unidad de Radiofarmacia Ciclotrón es una **Instalación Radiactiva de 2.ª 
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. La Unidad de Radiofarmacia Ciclotrón de Galicia (GALARIA — CHUS, Santiago de Compostela)
-En la Comunidad Autónoma de Galicia, la producción centralizada de radiofármacos emisores de positrones ($\beta^+$) para PET se realiza en la **Unidad de Radiofarmacia Ciclotrón**, ubicada en el recinto del **Hospital Clínico Universitario de Santiago de Compostela (CHUS)** y gestionada directamente por **GALARIA, Empresa Pública de Servizos Sanitarios**, adscrita a la **Consellería de Sanidade / Servicio Gallego de Salud (SERGAS)**:
-- **Infraestructura Tecnológica en el SERGAS:** La unidad cuenta con un **ciclotrón biomédico de iones negativos ($\text{H}^- / \text{D}^-$)** instalado en búnker de hormigón de alta densidad, laboratorio GMP con **celdas blindadas (*Hot Cells*) de síntesis automatizada y dispensación robotizada Clase A**, laboratorio de control de calidad fisicoquímico y microbiológico acreditado por la **AEMPS** bajo normas **NCF/GMP**, y sistemas de vigilancia radiológica continua supervisados por el Servicio de Protección Radiológica.
-- **Logística y Distribución Diaria a la Red Hospitalaria del SERGAS:** Debido al período de semidesintegración del **Flúor-18 ($T_{1/2} = 109,8\text{ min}$)**, la Unidad Ciclotrón de GALARIA inicia el bombardeo y la síntesis de **$^{18}\text{F-FDG}$** (y otros trazadores fluorados como $^{18}\text{F-Colina}$, $^{18}\text{F-DOPA}$ o $^{18}\text{F-PSMA}$) de madrugada, calibra las actividades al tiempo futuro de inyección ($A_0 = A_{\text{uso}} \cdot e^{+\lambda \Delta t}$) y distribuye diariamente los viales en contenedores blindados de tungsteno/plomo dentro de **bultos de transporte Tipo A homologados (`ADR Clase 7`, `UN 2915`, Índice de Transporte $\text{IT}$)** hacia los Servicios de Medicina Nuclear con equipos PET-TC del SERGAS (**CHUS en Santiago, CHUAC en A Coruña, CHUVI — Hospital Meixoeiro/Álvaro Cunqueiro en Vigo, HULA en Lugo y CHUO en Ourense**).
-
-### 5.2. Unidades de Radiofarmacia Hospitalarias, Trazabilidad y Mantenimiento en `XMAO`
-- **Radiofarmacias en los Servicios de Medicina Nuclear del SERGAS:** Además de la Unidad Ciclotrón central, los Servicios de Medicina Nuclear de los hospitales del SERGAS disponen de sus propias **Unidades de Radiofarmacia (Instalaciones Radiactivas de 2.ª Categoría)** dotadas de cabinas de flujo laminar vertical blindadas de seguridad biológica/radiológica para la elución diaria de **generadores de $^{99}\text{Mo}/^{99\text{m}}\text{Tc}$ y $^{68}\text{Ge}/^{68}\text{Ga}$**, marcaje de *kits* fríos y preparación de dosis individualizadas de terapia metabólica ($^{131}\text{I}$ y $^{177}\text{Lu}$), así como almacenes de residuos radiactivos sólidos y **depósitos de decaimiento de efluentes líquidos (*fosas sépticas radiactivas*)** para las habitaciones de terapia metabólica.
-- **Trazabilidad Digital y `XMAO`:** Cada monodosis dispensada se etiqueta con código de barras/QR integrando lote, actividad calibrada en $\text{MBq}$, hora de calibración e identificación del paciente vinculada a **`IANUS`**, al módulo de gestión radiofarmacéutica y al registro de dosis del **`RD 601/2019`**. Todo el parque de equipamiento (ciclotrón, celdas calientes, módulos de síntesis, activímetros, radiocromatógrafos, HPLC, contadores de pozo y monitores de contaminación/ambiental) se gestiona mediante órdenes preventivas y metrología legal en **`XMAO`**.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Equipo / Radionucleido | Cifra / Fórmula / Norma Clave | Observación Crítica para Examen A1 SERGAS |
 | :--- | :--- | :--- |
@@ -176,12 +135,12 @@ En la Comunidad Autónoma de Galicia, la producción centralizada de radiofárma
 | **Activímetro (Calibrador de dosis, `RD 1841/1997`)** | Cámara de ionización de pozo con **Argón a $10\text{–}20\text{ atm}$** | Tolerancias legales de exactitud, estabilidad diaria ($^{137}\text{Cs}$) y linealidad: **$< \pm 5\%$** |
 | **Liberación paramétrica de $^{18}\text{F-FDG}$** | **Test de Punto de Burbuja ($\ge 3,2\text{ bar}$)** + **LAL ($< 175\text{ UI/V}$)** | Kryptofix 2.2.2 **$< 2,2\text{ mg/V}$** · Acetonitrilo **$< 4,1\text{ mg/V}$** · Pureza radioquímica **$\ge 95\%$** |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Pregunta estrella de examen sobre por qué los ciclotrones modernos de PET aceleran iones negativos ($\text{H}^-$) en vez de protones positivos ($p^+$)!** Porque al acelerar $\text{H}^-$, la extracción del haz al llegar al borde exterior se realiza simplemente haciendo pasar los iones a través de una **lámina ultrafina de carbono (*Carbon Stripper Foil*)** que les arranca sus dos electrones convirtiéndolos en protones positivos ($p^+$). Al cambiar de signo la carga eléctrica dentro del mismo campo magnético $B$, el haz se curva automáticamente hacia fuera sin necesitar un deflector electrostático de alta tensión, logrando una **eficiencia de extracción $> 99\%$**, mínima activación interna del ciclotrón y la posibilidad de extraer **dos haces simultáneos (*Dual-Beam*)**.
 2. **¿Por qué el vacío de un ciclotrón de iones negativos $\text{H}^-$ debe ser mucho más exigente ($< 10^{-7}\text{ mbar}$) que en otros aceleradores?** Porque la energía de enlace del segundo electrón en el ion hidruro $\text{H}^-$ es de apenas **$0,754\text{ eV}$**. Si la presión residual no es de ultra-alto vacío, los iones $\text{H}^-$ chocan con las moléculas de gas durante la aceleración, pierden prematuramente sus electrones (*gas stripping*) y salen disparados en todas direcciones chocando contra las *Dees* y las paredes de la cámara.
 3. **Diferencia entre Pureza Radionucleídica, Pureza Radioquímica y Pureza Química (¡Trampa fija en test!):**
    - **Pureza Radionucleídica:** ¿Qué porcentaje de la radiactividad total procede del isótopo correcto? (Ej.: que en el eluido de $^{99\text{m}}\text{Tc}$ no haya más de un **$0,1\%$ de $^{99}\text{Mo}$**; se mide con espectrometría o atenuación en plomo en el activímetro).
    - **Pureza Radioquímica:** ¿Qué porcentaje del isótopo correcto está unido a la molécula química deseada? (Ej.: que el $^{18}\text{F}$ esté como $^{18}\text{F-FDG}$ y no como fluoruro $^{18}\text{F}^-$ libre; se mide por **cromatografía ITLC o HPLC** y debe ser **$\ge 95\%$**).
    - **Pureza Química:** Ausencia de contaminantes químicos **no radiactivos** procedentes del proceso (ej.: **$\text{Al}^{3+} < 10\text{ }\mu\text{g/mL}$** de la columna de alúmina en el generador de $^{99\text{m}}\text{Tc}$, o **Kryptofix 2.2.2** y **acetonitrilo** en la síntesis de $^{18}\text{F-FDG}$).
-4. **¿Por qué de los 4 emisores de positrones clásicos de ciclotrón ($^{18}\text{F}, ^{11}\text{C}, ^{13}\text{N}, ^{15}\text{O}$) solo el $^{18}\text{F}$ se distribuye por carretera desde la Unidad Ciclotrón de GALARIA en Santiago al resto de hospitales del SERGAS?** Por su período de semidesintegración físico: el **$^{18}\text{F}$ tiene $T_{1/2} = 109,8\text{ min}$ ($\approx 1,83\text{ horas}$)**, lo que permite su transporte regional en radio de $2\text{–}3\text{ horas}$. En cambio, el $^{11}\text{C}$ ($20,4\text{ min}$), el $^{13}\text{N}$ ($10\text{ min}$) y el $^{15}\text{O}$ ($2\text{ min}$) decaen tan rápido que **exigen que el tomógrafo PET esté en el mismo edificio que el ciclotrón**.
+4. **¿Por qué de los 4 emisores de positrones clásicos de ciclotrón ($^{18}\text{F}, ^{11}\text{C}, ^{13}\text{N}, ^{15}\text{O}$) solo el $^{18}\text{F}$ se distribuye por carretera desde la Unidad Ciclotrón de GALARIA en Santiago al resto de hospitales del servicio de salud?** Por su período de semidesintegración físico: el **$^{18}\text{F}$ tiene $T_{1/2} = 109,8\text{ min}$ ($\approx 1,83\text{ horas}$)**, lo que permite su transporte regional en radio de $2\text{–}3\text{ horas}$. En cambio, el $^{11}\text{C}$ ($20,4\text{ min}$), el $^{13}\text{N}$ ($10\text{ min}$) y el $^{15}\text{O}$ ($2\text{ min}$) decaen tan rápido que **exigen que el tomógrafo PET esté en el mismo edificio que el ciclotrón**.
 5. **Liberación paramétrica antes del resultado de esterilidad:** Como el ensayo microbiológico de esterilidad en Farmacopea tarda **14 días** en incubarse y el $^{18}\text{F-FDG}$ caduca en pocas horas, el radiofármaco se inyecta al paciente mediante **liberación condicional/paramétrica** tras verificar obligatoriamente antes de su salida la **integridad del filtro esterilizante de $0,22\text{ }\mu\text{m}$ mediante el Test del Punto de Burbuja (*Bubble Point Test*)** y el ensayo rápido de **endotoxinas bacterianas (LAL)**.

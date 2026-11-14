@@ -1,46 +1,15 @@
 # Tema 74 — Perspectiva de género. Violencia de género: prevención, detección y actuación por parte de los/las profesionales del Servicio Gallego de Salud.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #74 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 10 — Perspectiva de Género en Salud y Actuación Sanitaria ante la Violencia de Género (Tema Transversal Ley 7/2023)
-> - **Marco Normativo y Técnico Nuclear:** Ley 7/2023, de 30 de noviembre, para la igualdad efectiva de mujeres y hombres de Galicia (Título I y Título II Cap. II «Salud», Arts. 49–55); Ley 11/2007, de 27 de julio, gallega para la prevención y el tratamiento integral de la violencia de género (Título II Cap. II «Ámbito sanitario», Arts. 26–30); Guía Técnica del Proceso de Atención a las Mujeres en Situación de Violencia de Género del SERGAS; Protocolo Común del SNS para la Actuación Sanitaria ante la Violencia de Género; Protocolo de Actuación Sanitaria y Médico-Forense ante la Violencia Sexual en Galicia (SERGAS / IMELGA)
-> - **Sistemas y Entorno SERGAS:** Historia Clínica Electrónica (`IANUS` — Módulo de Cribado y Atención a la Violencia de Género, codificación `CIE-10-ES` / `CIAP-2`), Instituto de Medicina Legal de Galicia (`IMELGA`), Unidades de Trabajo Social Sanitario de las 7 Áreas Sanitarias, Red Gallega de Acogimiento, Centros de Información á Muller (`CIM`) y Centro de Recuperación Integral (`CRI`)
+## 📖 1. Distinción Epistemológica entre Sexo y Género y el Modelo Biopsicosocial de Salud
 
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 74 de la Parte Específica** cierra el temario oficial de la categoría de **Ingeniero/a Biomédico/a (Subgrupo A1)** como tema transversal incorporado en las convocatorias de la Parte Específica del SERGAS por mandato expreso de la **Ley 7/2023, de 30 de noviembre, para la igualdad efectiva de mujeres y hombres de Galicia**. A diferencia del Tema 8 de la Parte Común (centrado en la `Ley 31/1995` de PRL y en la arquitectura orgánica y de función pública de las leyes de violencia e igualdad), el presente Tema 74 desarrolla de forma monográfica dos ejes clínicos, científicos y asistenciales:
-1. **La Perspectiva de Género en Salud, la Morbilidad Diferenciada y los Sesgos de Género en la Atención Sanitaria y en la Ingeniería Biomédica:** Interacción entre determinantes biológicos (sexo) y socioculturales (género), fisiopatología y semiología diferencial, sesgos diagnósticos y terapéuticos, e impacto de la perspectiva de género en el diseño, validación clínica, ergonomía e inteligencia artificial de dispositivos biomédicos (`MDR (UE) 2017/745`, `SaMD`).
-2. **La Violencia de Género como Problema de Salud Pública: Prevención, Detección Temprana (Cribado) y Protocolo de Actuación Asistencial, Médico-Forense y Social por parte de los/las Profesionales del SERGAS:** Modelos teóricos explicativos (Heise/OMS y Leonor Walker), indicadores de sospecha en consulta, escalas psicométricas validadas (**WAST** y **AAS**), valoración del riesgo vital, protocolo de agresión sexual aguda con el **IMELGA**, emisión del **Parte Judicial de Lesiones**, registro confidencial en **`IANUS`** y derivación a la red de recursos especializados de Galicia.
-
-### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías equivalentes con solapamiento:**
-  - **Técnico/a Superior en Imagen para el Diagnóstico** (Parte Específica — Tema transversal Ley 7/2023)
-  - **Facultativo/a Especialista de Área en Radiofísica Hospitalaria** (Parte Específica — Tema transversal Ley 7/2023)
-  - **Grupo Técnico / Gestión de Informática — TIC (Subgrupos A1, A2 y C1)** (Parte Específica — Tema transversal Ley 7/2023)
-  - **Ingeniero/a Técnico/a** (Parte Común)
-- **Grado de solapamiento:**
-  - **Total (95%)** con TS Imagen para el Diagnóstico y Radiofísica Hospitalaria (*Tema transversal añadido por mandato de la Ley 7/2023 en las convocatorias del SERGAS*).
-  - **Total (90%)** con Grupo Técnico / Gestión TIC (*Tema transversal añadido por mandato de la Ley 7/2023 en la convocatoria TIC 2025*).
-  - **Alto (75%)** con Ingeniero/a Técnico/a (*cubre la legislación de igualdad y prevención/tratamiento integral de la violencia de género en Galicia*).
-- **Epígrafes equivalentes en el SERGAS:**
-  - **TS Imagen para el Diagnóstico y Radiofísica Hospitalaria:** *Tema adicional (Ley 7/2023): Perspectiva de género. Salud y género. Morbilidad diferenciada. Violencia de género: prevención, detección y actuación por parte de los/las profesionales del Servicio Gallego de Salud.*
-  - **Grupo Técnico / Gestión TIC:** *Tema adicional (Ley 7/2023): Perspectiva de género. Impacto de las TIC en la igualdad de género. Brecha digital de género. Violencia de género: prevención, detección y actuación por parte de los/las profesionales del Servicio Gallego de Salud. Violencia de género en línea.*
-  - **Ingeniero/a Técnico/a (Parte Común):** *Tema 8. La Ley 31/1995... Ley orgánica 1/2004... Ley 11/2007, gallega para la prevención y el tratamiento integral de la violencia de género. Legislación sobre igualdad de mujeres y hombres...*
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
-
-### 1.1. Distinción Epistemológica entre Sexo y Género y el Modelo Biopsicosocial de Salud (`Ley Gallega 7/2023`, Artículos 49 a 55)
+### 1.1. Distinción Epistemológica entre Sexo y Género y el Modelo Biopsicosocial de Salud
 En la epidemiología clínica, las ciencias de la salud y la ingeniería biomédica, la aplicación rigurosa de la **perspectiva de género** exige distinguir con precisión analítica entre **sexo** y **género**, así como comprender su interacción sinérgica (el denominado sistema **sexo-género**):
 - **Sexo (Determinantes Biológicos):** Conjunto de características genéticas y cromosómicas (`XX` / `XY` y sus variaciones), anatómicas, fisiológicas, endocrinas, metabólicas e inmunológicas que diferencian a los seres humanos desde el nivel celular y tisular hasta el sistémico (p. ej., diferencias en la densidad mineral ósea, porcentaje de masa grasa y agua corporal total, aclaramiento renal y actividad de isoenzimas hepáticas del citocromo `CYP450`, longitud del intervalo $QT_c$ electrocardiográfico o calibre de las arterias coronarias epicárdicas).
 - **Género (Determinantes Socioculturales):** Construcción social, histórica y cultural que asigna de manera diferenciada y jerárquica roles, normas, expectativas de comportamiento, espacios (público/productivo frente a privado/reproductivo), división sexual del trabajo (sobrecarga de cuidados informales no remunerados) y distribución asimétrica del poder y de los recursos entre mujeres y hombres.
 - **Perspectiva de Género en Salud (`Artículo 4 y Artículos 49 a 55 de la Ley 7/2023, de 30 de noviembre`, y `Artículo 34 bis de la Ley 8/2008, de Salud de Galicia`):** Consiste en la categoría de análisis clínico y sanitario que evalúa cómo las diferencias biológicas ligadas al sexo y las desigualdades sociales derivadas de los roles de género interactúan determinando de forma diferenciada los modos de vivir, enfermar, consultar, ser diagnosticado/a, recibir tratamiento y morir de mujeres y hombres.
 
 El **Capítulo II del Título II de la Ley 7/2023 (*«Salud»*, artículos 49 a 55)** impone al Sistema Público de Salud de Galicia y al SERGAS un mandato jurídico vinculante:
-1. **Integración transversal del principio de igualdad en las políticas de salud (Artículo 49):** El Plan de Salud de Galicia y las estrategias asistenciales del SERGAS incorporarán sistemáticamente la perspectiva de género para corregir las desigualdades en salud y garantizar el derecho a la protección de la salud sin sesgos androcéntricos.
+1. **Integración transversal del principio de igualdad en las políticas de salud:** El Plan de Salud de Galicia y las estrategias asistenciales del SERGAS incorporarán sistemáticamente la perspectiva de género para corregir las desigualdades en salud y garantizar el derecho a la protección de la salud sin sesgos androcéntricos.
 2. **Atención específica a la salud sexual y reproductiva y a las etapas vitales de las mujeres (Artículos 50 y 51):** Promoción de la salud integral en el embarazo, parto respetado, puerperio, climaterio y menopausia, evitando la patologización y medicalización innecesaria de los procesos fisiológicos de las mujeres.
 3. **Atención a las cuidadoras informales y salud laboral (Artículos 52 y 53):** Programas específicos de apoyo físico y psicosocial para las personas (mayoritariamente mujeres) que asumen el cuidado no profesional de personas dependientes.
 4. **Formación, Investigación Biomédica y Sistemas de Información Sanitaria con Perspectiva de Género (Artículos 54 y 55):** Obligación de incluir a mujeres en proporción adecuada en los ensayos clínicos e investigaciones biomédicas financiadas o desarrolladas en Galicia, analizar los resultados desagregados por sexo y género, y garantizar que **todos los registros, encuestas y sistemas de información del SERGAS (`IANUS`, `RAE-CMBD`, `SIAP`) recojan, integren y exploten la variable sexo** junto con indicadores socioeconómicos y de carga de cuidados.
@@ -59,11 +28,11 @@ Cuando la medicina y la ingeniería biomédica ignoran la morbilidad diferenciad
 | **2. Dispositivos Cardioimplantables y Electrocardiografía** | • Menor tasa de indicación de **DAI** y **terapia de resincronización (CRT)** en mujeres.<br>• **Umbrales de duración del complejo $QRS$**: el corazón femenino es anatómicamente menor, por lo que las mujeres obtienen beneficio clínico de la CRT con $QRS$ más estrechos ($130\text{–}149\text{ ms}$) que los varones.<br>• Colocación errónea de derivaciones precordiales ($V_3\text{–}V_6$) sobre el tejido mamario alterando voltajes y segmento $ST$. | Parametrización diferenciada por sexo de los algoritmos de interpretación automática de ECG (ajustando el límite superior del intervalo $QT_c$: $\ge 460\text{ ms}$ en mujeres vs. $\ge 450\text{ ms}$ en hombres) y diseño de electrodos/cables adaptados a la anatomía torácica femenina. |
 | **3. Implantes Ortopédicos y Prótesis Articulares** | Diseño histórico de vástagos femorales de cadera y componentes femorales/tibiales de rodilla escalando linealmente la geometría masculina, sin considerar el mayor **ángulo $Q$ femorotibial**, la distinta relación de aspecto anteroposterior/mediolateral de la tróclea femoral ni la geometría pélvica femenina, aumentando el dolor anterior y el aflojamiento aséptico. | Diseño CAD/FEM específico por sexo (*gender-specific implants*) e **impresión 3D personalizada (*Point-of-Care Manufacturing*)** a partir del TC/RM de la propia paciente. |
 | **4. Sensórica Óptica, Biomarcadores y Calibración de Equipos** | Variaciones en fotopletismografía (`PPG`) y pulsioximetría por menor calibre arterial periférico y menor concentración basal fisiológica de hemoglobina en mujeres; puntos de corte únicos no ajustados por sexo en **troponina cardíaca de alta sensibilidad ($hs\text{-cTn}$)**. | Implementación en el Sistema de Información de Laboratorio (`SIL`) y en monitores críticos de **umbrales de referencia específicos por sexo** (percentil $99$ de troponina $hs\text{-cTnI}$ significativamente menor en mujeres, evitando infradiagnosticar infartos tipo 1 y 2). |
-| **5. Ergonomía de Equipamiento Quirúrgico y EPI Radiológicos** | Instrumental laparoscópico, grapadoras mecánicas, consolas robóticas y **delantales plomados de protección radiológica** diseñados según el percentil $50$ antropométrico masculino, causando fatiga muscular en cirujanas e insuficiente cobertura del tejido mamario (cuadrante superoexterno/axilar) frente a radiación dispersa. | Especificación en los Pliegos de Prescripciones Técnicas (PPT) del SERGAS de tallajes antropométricos múltiples, mangos quirúrgicos regulables y **delantales plomados con protección axilar y mamaria envolvente** (`RD 1029/2022`). |
+| **5. Ergonomía de Equipamiento Quirúrgico y EPI Radiológicos** | Instrumental laparoscópico, grapadoras mecánicas, consolas robóticas y **delantales plomados de protección radiológica** diseñados según el percentil $50$ antropométrico masculino, causando fatiga muscular en cirujanas e insuficiente cobertura del tejido mamario (cuadrante superoexterno/axilar) frente a radiación dispersa. | Especificación en los Pliegos de Prescripciones Técnicas (PPT) del SERGAS de tallajes antropométricos múltiples, mangos quirúrgicos regulables y **delantales plomados con protección axilar y mamaria envolvente**. |
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento (o Estructura Orgánica y Competencial)
+## ⚙️ 2. Marco Teórico y Dinámica de la Violencia de Género como Problema de Salud Pública
 
 ### 2.1. Marco Teórico y Dinámica de la Violencia de Género como Problema de Salud Pública
 La Organización Mundial de la Salud (OMS) declaró en 1996 la violencia de género como una **prioridad internacional de salud pública de primer orden**, debido a su elevada morbimortalidad aguda y crónica y a que los **servicios sanitarios constituyen la puerta de entrada universal** por la que pasan casi todas las mujeres que sufren maltrato (a menudo años antes de acudir a recursos policiales o judiciales). Para que el/la profesional del SERGAS comprenda por qué una mujer permanece en una relación violenta o retira una denuncia, debe conocer los tres modelos científicos fundamentales recogidos en los protocolos del SNS y del SERGAS:
@@ -88,9 +57,9 @@ La exposición continuada a la violencia de género actúa como un factor estres
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales (o Régimen Jurídico y Procedimientos)
+## 🔬 3. Prevención y Detección Temprana de la Violencia de Género en el SERGAS
 
-### 3.1. Prevención y Detección Temprana de la Violencia de Género en el SERGAS (`Ley 11/2007` Arts. 26–30 y Guía Técnica del SERGAS)
+### 3.1. Prevención y Detección Temprana de la Violencia de Género en el SERGAS
 El **Capítulo II del Título II de la Ley Gallega 11/2007 (*«Ámbito sanitario»*, artículos 26 a 30)** y la **Guía Técnica del Proceso de Atención a las Mujeres en Situación de Violencia de Género del SERGAS** estructuran la intervención sanitaria en tres niveles preventivos:
 - **Prevención Primaria:** Actuaciones de educación para la salud, promoción de relaciones igualitarias y de buen trato en el ámbito comunitario, educativo y en los programas de preparación maternal/paternal de Atención Primaria.
 - **Prevención Secundaria (Detección Precoz y Cribado):** Identificación temprana del maltrato en mujeres que acuden a los servicios sanitarios (Atención Primaria, Urgencias hospitalarias y extrahospitalarias `PAC`, Obstetricia/Ginecología, Salud Mental, Pediatría y Hospitalización), tanto mediante **búsqueda activa ante indicadores de sospecha** como mediante **cribado sistemático/oportunista**.
@@ -115,7 +84,7 @@ Para estandarizar el cribado en la Historia Clínica Electrónica (`IANUS`) en A
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento (o Garantías, Control y Régimen de Responsabilidades)
+## 🛡️ 4. Protocolo de Actuación Sanitaria ante la Violencia de Género
 
 ### 4.1. Protocolo de Actuación Sanitaria ante la Violencia de Género: Entrevista Clínica y Valoración del Riesgo Vital
 Una vez detectada la sospecha o confirmado un caso de violencia de género en cualquier dispositivo del SERGAS, los profesionales deben seguir la secuencia algorítmica del **Protocolo Común del SNS** y de la **Guía Técnica del SERGAS**:
@@ -144,11 +113,7 @@ En los casos de **agresión sexual aguda** (que, conforme al artículo 3 de la `
    - **Anticoncepción de urgencia:** Administración oral de levonorgestrel (eficaz hasta $72\text{ horas}$) o acetato de ulipristal (eficaz hasta $120\text{ horas}$ / $5\text{ días}$), previo test de embarazo basal negativo.
    - **Apoyo psicológico urgente y seguimiento** en consultas de Enfermedades Infecciosas / Ginecología a las $2\text{ semanas}$, $6\text{ semanas}$, $3\text{ meses}$ y $6\text{ meses}$.
 
----
-
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
-
-### 5.1. El Parte Judicial de Lesiones (Art. 262 LECrim), el Dilema Ético-Legal y el Registro Confidencial en `IANUS`
+### 4.3. El Parte Judicial de Lesiones, el Dilema Ético-Legal y el Registro Confidencial en `IANUS`
 Uno de los puntos más exigidos en los supuestos prácticos y exámenes del SERGAS es la articulación entre el deber legal de comunicación al Juzgado y la protección de la autonomía y seguridad de la mujer:
 1. **Obligación legal de emitir el Parte Judicial de Lesiones (`Artículo 262 y 355 de la Ley de Enjuiciamiento Criminal — LECrim`):** Los profesionales sanitarios tienen la obligación legal de poner en conocimiento de la Autoridad Judicial (Juzgado de Guardia / Fiscalía) la existencia de lesiones físicas o psíquicas que pudieran ser constitutivas de un delito público (como lo es el delito de maltrato o lesiones por violencia de género).
 2. **Protocolo de emisión del Parte de Lesiones en el SERGAS:**
@@ -159,7 +124,7 @@ Uno de los puntos más exigidos en los supuestos prácticos y exámenes del SERG
    - La Historia Clínica Electrónica del SERGAS (**`IANUS`**) incorpora un **Módulo específico de Atención a la Violencia de Género** que incluye las escalas de cribado (`WAST` / `AAS`), el formulario normalizado de valoración biopsicosocial y de riesgo, la generación electrónica del **Parte de Lesiones** y la hoja de derivación a Trabajo Social.
    - Los episodios codificados bajo sospecha o confirmación de violencia de género (`CIE-10-ES`: categoría **`T74`** —p. ej., `T74.11XA` maltrato físico de cónyuge/pareja confirmado, `T74.21XA` abuso sexual confirmado, `T74.31XA` maltrato psicológico confirmado; o categoría `T76` para casos sospechosos; y en Atención Primaria `CIAP-2`: códigos **`Z12`** problema de relación con la pareja y **`Z25`**) cuentan con **medidas reforzadas de confidencialidad y trazabilidad en `IANUS`**, asegurando además que dicha información sensible **no resulte visible para el agresor** en informes en papel entregados en mano ni en accesos no seguros, al tiempo que sirve como **prueba documental pericial** si la mujer decide denunciar en el futuro.
 
-### 5.2. Coordinación Interinstitucional y Red de Recursos Especializados contra la Violencia de Género en Galicia
+### 4.4. Coordinación Interinstitucional y Red de Recursos Especializados contra la Violencia de Género en Galicia
 El profesional del SERGAS actúa en red con las **Unidades de Trabajo Social Sanitario**, con las **Comisiones Técnicas de Violencia de Género de cada una de las 7 Áreas Sanitarias** y con el catálogo de recursos públicos de la Comunidad Autónoma de Galicia:
 - **Teléfono de Información a las Mujeres y Atención a la Violencia de Género en Galicia: `900 400 273`** (integrado y conectado en Galicia con el **`016` estatal**): Servicio **gratuito, confidencial, operativo las 24 horas de los 365 días del año**, atendido por un equipo multidisciplinar (psicología, derecho, trabajo social), con interpretación en más de 50 idiomas y accesibilidad para personas con discapacidad auditiva (`SVIsual` / `114` / WhatsApp `600 000 016`). **No deja rastro en la factura telefónica** (si bien se aconseja borrar el registro de llamadas salientes del propio terminal móvil).
 - **Teléfonos y Aplicaciones de Emergencia Inmediata:** **`112`** (Emerxencias Galicia), **`091`** (Policía Nacional), **`062`** (Guardia Civil), aplicación móvil **`AlertCops`** (con botón SOS geolocalizado para víctimas de violencia de género) y servicio telefónico de atención y protección móvil **`ATENPRO`**.
@@ -169,28 +134,28 @@ El profesional del SERGAS actúa en red con las **Unidades de Trabajo Social San
 
 ---
 
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-| Concepto / Protocolo / Recurso | Norma / Guía Técnica Aplicable | Regla Clínica / Cifra / Umbral Exacto para Examen |
-| :--- | :--- | :--- |
-| **Perspectiva de Género en Salud y Morbilidad Diferenciada** | Arts. 49 a 55 `Ley Gallega 7/2023` / Art. 34 bis `Ley 8/2008` | Obligación de integrar la perspectiva de género, combatir sesgos diagnósticos/terapéuticos y **desagregar por sexo todos los registros (`IANUS`, `RAE-CMBD`) y estudios**. |
-| **Actuación sanitaria ante la Violencia de Género en Galicia** | Arts. 26 a 30 `Ley Gallega 11/2007` y Guía Técnica SERGAS | Formación del personal, protocolos de detección precoz, registro en historia clínica y **Comisiones Técnicas en las Áreas Sanitarias**. |
-| **Las 3 Fases del Ciclo de la Violencia (Leonor Walker, 1979)** | Guía Técnica SERGAS / Protocolo SNS | **1.ª Acumulación de tensión** $\rightarrow$ **2.ª Explosión o agresión aguda** $\rightarrow$ **3.ª Arrepentimiento o «Luna de Miel»**. |
-| **Cuestionario de cribado rápido `WAST-Short`** | Guía Técnica SERGAS (`IANUS`) | **2 preguntas** iniciales (*tensión en la relación* y *dificultad para resolver discusiones*). Positivo si responde «mucha tensión» o «mucha dificultad» $\rightarrow$ pasar al **`WAST` de 8 ítems**. |
-| **Cuestionario de cribado en el embarazo (`AAS`)** | Guía Técnica SERGAS (`IANUS`) | *Abuse Assessment Screen* (**5 preguntas**), específico para detectar violencia física, emocional o sexual durante la gestación. |
-| **Condición inexcusable de la entrevista clínica** | Guía Técnica SERGAS / Protocolo SNS | Entrevistar a la mujer **SIEMPRE A SOLAS** en un espacio privado y seguro (sin pareja, familiares ni hijos/as $> 2\text{ años}$). |
-| **Actuación ante Violencia Sexual Aguda en Galicia** | Protocolo SERGAS / `IMELGA` | Urgencia médica prioritaria; **exploración conjunta en acto único** por Ginecología/Urgencias y **Médico Forense del `IMELGA`**; muestras en **bolsas de papel** y cadena de custodia. |
-| **Ventana temporal de la Profilaxis Post-Exposición VIH (`PPE`)** | Protocolo de Violencia Sexual SERGAS | Iniciar lo antes posible (idealmente $< 24\text{ h}$) y **antes de las $72\text{ HORAS}$** tras la agresión sexual (tratamiento antirretroviral durante **28 días**). |
-| **Anticoncepción de urgencia post-agresión sexual** | Protocolo de Violencia Sexual SERGAS | Levonorgestrel (hasta **$72\text{ horas}$**) o Acetato de ulipristal (hasta **$120\text{ horas}$ / $5\text{ días}$**). |
-| **Obligación de emitir el Parte Judicial de Lesiones** | Art. 262 `LECrim` y Guía Técnica SERGAS | Obligatorio ante lesiones constitutivas de delito, **informando siempre previamente a la mujer** y consignando la valoración del riesgo. |
-| **Teléfono gallego de atención a la Violencia de Género** | Xunta de Galicia / SERGAS | **`900 400 273`** (conectado con el **`016`**): gratuito, confidencial, 24h/365d y **no deja rastro en la factura telefónica**. |
-| **Centro de Recuperación Integral (`CRI`) y Emergencia (`CEMVI`)** | Red Gallega contra la Violencia de Género | **`CRI`** en **Santiago de Compostela** (referencia autonómica) y **`CEMVI`** en **Vigo** (Centro de Emergencia 24h). |
+| Concepto / Protocolo / Recurso | Regla Clínica / Cifra / Umbral Exacto para Examen |
+| :--- | :--- |
+| **Perspectiva de Género en Salud y Morbilidad Diferenciada** | Obligación de integrar la perspectiva de género, combatir sesgos diagnósticos/terapéuticos y **desagregar por sexo todos los registros (`IANUS`, `RAE-CMBD`) y estudios**. |
+| **Actuación sanitaria ante la Violencia de Género en Galicia** | Formación del personal, protocolos de detección precoz, registro en historia clínica y **Comisiones Técnicas en las Áreas Sanitarias**. |
+| **Las 3 Fases del Ciclo de la Violencia (Leonor Walker, 1979)** | **1.ª Acumulación de tensión** $\rightarrow$ **2.ª Explosión o agresión aguda** $\rightarrow$ **3.ª Arrepentimiento o «Luna de Miel»**. |
+| **Cuestionario de cribado rápido `WAST-Short`** | **2 preguntas** iniciales (*tensión en la relación* y *dificultad para resolver discusiones*). Positivo si responde «mucha tensión» o «mucha dificultad» $\rightarrow$ pasar al **`WAST` de 8 ítems**. |
+| **Cuestionario de cribado en el embarazo (`AAS`)** | *Abuse Assessment Screen* (**5 preguntas**), específico para detectar violencia física, emocional o sexual durante la gestación. |
+| **Condición inexcusable de la entrevista clínica** | Entrevistar a la mujer **SIEMPRE A SOLAS** en un espacio privado y seguro (sin pareja, familiares ni hijos/as $> 2\text{ años}$). |
+| **Actuación ante Violencia Sexual Aguda en Galicia** | Urgencia médica prioritaria; **exploración conjunta en acto único** por Ginecología/Urgencias y **Médico Forense del `IMELGA`**; muestras en **bolsas de papel** y cadena de custodia. |
+| **Ventana temporal de la Profilaxis Post-Exposición VIH (`PPE`)** | Iniciar lo antes posible (idealmente $< 24\text{ h}$) y **antes de las $72\text{ HORAS}$** tras la agresión sexual (tratamiento antirretroviral durante **28 días**). |
+| **Anticoncepción de urgencia post-agresión sexual** | Levonorgestrel (hasta **$72\text{ horas}$**) o Acetato de ulipristal (hasta **$120\text{ horas}$ / $5\text{ días}$**). |
+| **Obligación de emitir el Parte Judicial de Lesiones** | Obligatorio ante lesiones constitutivas de delito, **informando siempre previamente a la mujer** y consignando la valoración del riesgo. |
+| **Teléfono gallego de atención a la Violencia de Género** | **`900 400 273`** (conectado con el **`016`**): gratuito, confidencial, 24h/365d y **no deja rastro en la factura telefónica**. |
+| **Centro de Recuperación Integral (`CRI`) y Emergencia (`CEMVI`)** | **`CRI`** en **Santiago de Compostela** (referencia autonómica) y **`CEMVI`** en **Vigo** (Centro de Emergencia 24h). |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa conceptual entre Sexo y Género y el Síndrome de Yentl:** Si el tribunal pregunta qué término designa la exigencia de que una mujer presente exactamente la clínica o el patrón fisiopatológico masculino para recibir el mismo esfuerzo diagnóstico y terapéutico (como ocurría históricamente en la cardiopatía isquémica), la respuesta correcta es el **Síndrome de Yentl** (o sesgo de género en el esfuerzo diagnóstico), derivado del modelo androcéntrico en medicina e ingeniería biomédica.
 2. **Trampa sobre las fases del Ciclo de la Violencia de Leonor Walker:** En la evolución crónica del maltrato, la **3.ª fase (arrepentimiento o «luna de miel») NO aumenta con el tiempo, sino que se acorta progresivamente hasta llegar a desaparecer**, quedando el ciclo reducido a la alternancia entre acumulación de tensión (Fase 1) y descargas de agresión aguda cada vez más graves (Fase 2).
 3. **Trampa sobre la entrevista en presencia del acompañante:** Ante cualquier indicador de sospecha en Urgencias o Atención Primaria, **está terminantemente prohibido interrogar a la mujer sobre violencia de género delante de su pareja o acompañante**, ya que ello la pondría en grave peligro físico al salir de la consulta y anularía cualquier posibilidad de respuesta sincera.
 4. **Trampa sobre la exploración en Agresión Sexual Aguda (`IMELGA`) y la conservación de muestras:** En Galicia, ante una agresión sexual reciente, el médico del hospital **no debe realizar una exploración ginecológica completa con toma de muestras por su cuenta antes de avisar al médico forense**, salvo urgencia vital hemorrágica que no admita demora; lo protocolizado es avisar inmediatamente al **Médico Forense de guardia del `IMELGA`** para realizar la **exploración y toma de muestras en un único acto conjunto** (evitando la doble exploración y la victimización secundaria). Además, las muestras de ropa o vestigios biológicos húmedos deben guardarse en **bolsas de papel transpirables** (nunca en bolsas de plástico herméticas, que proliferan bacterias y destruyen el ADN).
-5. **Trampa sobre el Parte de Lesiones cuando la mujer no quiere denunciar:** Si existen **lesiones físicas o psíquicas agudas objetivables**, el profesional sanitario tiene el deber legal inexcusable de remitir el **Parte de Lesiones al Juzgado de Guardia** (Art. 262 LECrim) aunque la mujer manifieste que no desea presentar denuncia, pero **debe informarla siempre previamente de que va a emitir el parte** y reflejar en el propio parte la situación de riesgo y la negativa o temor de la víctima para que el Juzgado y las Fuerzas de Seguridad adopten las medidas de protección oportunas antes de notificar al agresor.
+5. **Trampa sobre el Parte de Lesiones cuando la mujer no quiere denunciar:** Si existen **lesiones físicas o psíquicas agudas objetivables**, el profesional sanitario tiene el deber legal inexcusable de remitir el **Parte de Lesiones al Juzgado de Guardia** aunque la mujer manifieste que no desea presentar denuncia, pero **debe informarla siempre previamente de que va a emitir el parte** y reflejar en el propio parte la situación de riesgo y la negativa o temor de la víctima para que el Juzgado y las Fuerzas de Seguridad adopten las medidas de protección oportunas antes de notificar al agresor.

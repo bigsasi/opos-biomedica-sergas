@@ -1,35 +1,6 @@
 # Tema 18 — Caracterización y funcionamiento de los equipos PET. Imagen híbrida: PET-TC y PET-RM.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #18 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 03 — Resonancia Magnética, Ultrasonidos, Radioterapia y Medicina Nuclear
-> - **Marco Normativo y Técnico Nuclear:** RD 1841/1997 (Criterios de Calidad en Medicina Nuclear), RD 601/2019 (Justificación y Optimización de Exposiciones Médicas), RD 1836/1999 y RD 35/2008 (Instalaciones Radiactivas de 2.ª Categoría), RD 1029/2022 (RPSI), Reglamento (UE) 2017/745 (MDR), RD 192/2023, RD 838/2015 y Orden EFP/1216/2019 (Módulo 1588), Normas UNE-EN 61675-1 y NEMA NU 2 (Características de funcionamiento y ensayos de tomógrafos por emisión de positrones), UNE-EN 60601-2-44 (Seguridad de equipos TC) y UNE-EN 60601-2-33 (Seguridad de equipos RM).
-> - **Sistemas y Entorno SERGAS:** Servicios de Medicina Nuclear y de Radiofísica y Protección Radiológica del SERGAS (CHUS, CHUAC, CHUVI — Hospital Meixoeiro/Álvaro Cunqueiro, HULA, CHUO) y GALARIA, Estaciones de Posprocesado Multimodal (Syngo.via, AW Server, IntelliSpace Portal), PACS Centralizado del SERGAS, RIS, IANUS y XMAO.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 18** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud aborda de forma monográfica los fundamentos físicos, la arquitectura electrónica y fotónica y la integración multimodal de los **tomógrafos por emisión de positrones (PET)** y de los **sistemas híbridos PET-TC y PET-RM**. Su desarrollo riguroso exige dominar:
-1. **Física de la emisión de positrones, aniquilación materia-antimateria y detección electrónica en coincidencia:** Desintegración $\beta^+$, rango libre medio del positrón, no colinealidad de los dos fotones de $511\text{ keV}$, Líneas de Respuesta (**LOR**), tipos de coincidencias (verdaderas, aleatorias/accidentales, dispersas y múltiples), Tasa de Cuentas Equivalentes a Ruido (**NECR**) y tecnología de **Tiempo de Vuelo (*Time-of-Flight* — TOF-PET)**.
-2. **Caracterización técnica de los detectores PET (Analógicos vs. Digitales):** Propiedades físicas de los cristales centelleadores rápidos de alta densidad (**$\text{LSO:Ce}$ y $\text{LYSO:Ce}$** frente a $\text{BGO}$, $\text{GSO}$ o $\text{NaI(Tl)}$), error de paralaje por profundidad de interacción (**DOI**), y transición desde los tubos fotomultiplicadores de vacío (**PMT**) hacia los **Fotomultiplicadores de Silicio de Estado Sólido (**$\text{SiPM}$** — *PET Digital*)** y los nuevos equipos de campo axial extendido (*Long Axial FOV / Total-Body PET*).
-3. **Arquitectura y funcionamiento de los sistemas híbridos PET-TC y PET-RM:** Diseño secuencial en tándem del **PET-TC**, mapa bilineal de **Corrección de Atenuación basada en TC (CTAC)** a $511\text{ keV}$, artefactos específicos y cuantificación metabólica mediante el **Valor Estándar de Captación ($\text{SUV}$, $\text{MTV}$, $\text{TLG}$)**; diseño simultáneo isocéntrico del **PET-RM ($3,0\text{ T}$)** y métodos de **Corrección de Atenuación basada en RM (MRAC: secuencias Dixon, UTE/ZTE y *Deep Learning*)**.
-4. **Ingeniería hospitalaria de una instalación PET, protección radiológica para fotones de $511\text{ keV}$ y control de calidad (`RD 1841/1997` y `NEMA NU 2`):** Circuito de «pacientes calientes», cálculo de blindajes de plomo ($\text{HVL} \approx 4\text{–}5\text{ mm Pb}$), inyectores automáticos de $^{18}\text{F-FDG}$, pruebas periódicas de calidad y despliegue en el SERGAS.
-
-### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Radiofísica Hospitalaria** | **TS Imagen para el Diagnóstico**
-- **Grado de solapamiento:** **Total (90%)** en Radiofísica Hospitalaria (cubre principios físicos de PET, equipamiento de sistemas PET y fusión de imágenes multimodal [PET-TC / PET-RM]); **Alto (80%)** en TS Imagen para el Diagnóstico (cubre específicamente equipos de medicina nuclear y tomografía de emisión de positrones [PET]).
-- **Epígrafes equivalentes en temarios SERGAS:**
-  - **Radiofísica Hospitalaria:**
-    - *Tema 31:* Fundamentos. Radisótopos empleados y características de los radionucleidos. Obtención de los radionucleidos. Radiofármacos. Captación de los radiofármacos por el organismo: período biológico efectivo. Estudios morfológicos y funcionales. Exploraciones gammagráficas más frecuentes y radiofármacos usados. Principios físicos de la tomografía computadorizada por emisión de fotón único (SPECT). Principios físicos de la tomografía por emisión de positrones (PET). Estadística y errores de contaje.
-    - *Tema 32:* Equipos. Activímetros. Gammacámaras: planares, sistemas SPECT y PET. Contadores gamma. Contadores beta. Sondas intraoperatorias. Programas de análisis de imagen y funciones. Cámaras de multi-imagen. Procesadoras.
-    - *Tema 5:* Fundamentos de la imagen médica. Física de la formación de imágenes. Principios básicos de las diferentes modalidades de imagen clínica. Tratamiento de imágenes: filtros, algoritmos de reconstrucción. Evaluación de la calidad de imagen: función de transferencia, ruido, resolución y contraste. Sistemas de transmisión de imágenes. Protocolos DICOM. Procesado de imágenes médicas. Fusión de imágenes. Sustracción de imágenes.
-  - **TS Imagen para el Diagnóstico:**
-    - *Tema 11:* Equipos de medicina nuclear: gammacámara y tomografía de emisión de positrones (PET).
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Física de la Emisión de Positrones ($\beta^+$), Aniquilación y Límites Intrínsecos de Resolución
 
 ### 1.1. Física de la Emisión de Positrones ($\beta^+$), Aniquilación y Límites Intrínsecos de Resolución
 La **Tomografía por Emisión de Positrones (PET)** es una modalidad de imagen molecular funcional y cuantitativa basada en la detección externa en coincidencia de los pares de fotones generados tras la aniquilación de los positrones emitidos por un radiofármaco administrado al paciente (como $^{18}\text{F-FDG}$, $^{18}\text{F-PSMA}$, $^{18}\text{F-Colina}$, $^{68}\text{Ga-DOTATOC}$ o $^{11}\text{C-Metionina}$). El proceso físico se desarrolla en tres etapas sucesivas:
@@ -66,7 +37,7 @@ A diferencia de la gammacámara y del SPECT (que necesitan un colimador físico 
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Cristales Centelleadores para $511\text{ keV}$ y Tecnología de Tiempo de Vuelo y Evolución de los Fotodetectores
 
 ### 2.1. Cristales Centelleadores para $511\text{ keV}$ y Tecnología de Tiempo de Vuelo (*Time-of-Flight* — TOF-PET)
 Dado que los fotones de aniquilación de **$511\text{ keV}$** poseen casi cuatro veces más energía y poder de penetración que los fotones de $140\text{ keV}$ del $^{99\text{m}}\text{Tc}$, el cristal clásico de $\text{NaI(Tl)}$ de las gammacámaras resulta inadecuado en PET por su baja densidad ($3,67\text{ g/cm}^3$) y bajo poder de frenado. Un cristal centelleador ideal para PET debe reunir cuatro propiedades físicas simultáneas:
@@ -106,7 +77,7 @@ Dado que los fotones de aniquilación de **$511\text{ keV}$** poseen casi cuatro
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Imagen Híbrida PET-TC y Imagen Híbrida PET-RM
 
 ### 3.1. Imagen Híbrida PET-TC: Arquitectura, Corrección de Atenuación (CTAC) y Cuantificación SUV
 El **PET-TC** combina en un único estativo ergonómico en **tándem secuencial coaxial** un **Tomógrafo Computarizado multicorte ($64\text{ a }128\text{ cortes}$)** en la parte frontal y un **anillo detector PET** en la parte posterior, compartiendo una **camilla de fibra de carbono en voladizo (*cantilever*) de deflexión nula o sincronizada por pedestal móvil** para que las coordenadas $(X,Y,Z)$ de ambos volúmenes coincidan con error submilimétrico.
@@ -152,10 +123,10 @@ El sistema híbrido **PET-RM** integra un tomógrafo PET y una resonancia magné
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Diseño de una Instalación PET-TC/PET-RM y Blindajes para Fotones de $511\text{ keV}$
 
-### 4.1. Diseño de una Instalación PET-TC/PET-RM y Blindajes para Fotones de $511\text{ keV}$ (`RD 1836/1999` y `CSN`)
-Toda unidad de diagnóstico PET tiene la consideración legal de **Instalación Radiactiva de 2.ª Categoría** (`RD 1836/1999`), autorizada previo informe del **CSN**. Su diseño arquitectónico y de protección radiológica presenta exigencias radicalmente superiores a las de una sala de gammagrafía convencional de $^{99\text{m}}\text{Tc}$:
+### 4.1. Diseño de una Instalación PET-TC/PET-RM y Blindajes para Fotones de $511\text{ keV}$
+Toda unidad de diagnóstico PET tiene la consideración legal de **Instalación Radiactiva de 2.ª Categoría**, autorizada previo informe del **CSN**. Su diseño arquitectónico y de protección radiológica presenta exigencias radicalmente superiores a las de una sala de gammagrafía convencional de $^{99\text{m}}\text{Tc}$:
 1. **Física del Blindaje a $511\text{ keV}$ (Constante Gamma y HVL):**
    - Mientras que el $^{99\text{m}}\text{Tc}$ ($140\text{ keV}$) tiene una capa hemirreductora en plomo de apenas $\text{HVL} \approx 0,25\text{–}0,3\text{ mm Pb}$ y una constante de tasa de dosis $\Gamma \approx 20\text{ }\mu\text{Sv}\cdot\text{m}^2/(\text{GBq}\cdot\text{h})$, los **fotones de aniquilación de $511\text{ keV}$** de los emisores de positrones ($^{18}\text{F}, ^{68}\text{Ga}$) tienen una **Capa Hemirreductora en plomo $\text{HVL}_{\text{Pb}} \approx \mathbf{4,1\text{ a }5,0\text{ mm Pb}}$** (y capa decimorreductora $\text{TVL}_{\text{Pb}} \approx \mathbf{13,5\text{ a }16\text{ mm Pb}}$; en hormigón ordinario $\text{HVL} \approx 3,4\text{ cm}$ y $\text{TVL} \approx 11,3\text{ cm}$) y una constante específica casi siete veces mayor ($\Gamma_{^{18}\text{F}} \approx \mathbf{143\text{ }\mu\text{Sv}\cdot\text{m}^2/(\text{GBq}\cdot\text{h})}$).
    - En consecuencia, **los delantales plomados convencionales de radiodiagnóstico ($0,25\text{–}0,5\text{ mm Pb}$) son completamente inútiles frente a los fotones de $511\text{ keV}$** (apenas atenúan un $3\text{–}5\%$ y añaden peso que prolonga el tiempo de exposición junto al paciente); en PET la protección del personal se basa estrictamente en **tiempo, distancia, blindaje estructural fijo y dispensadores/inyectores automáticos blindados**.
@@ -164,7 +135,7 @@ Toda unidad de diagnóstico PET tiene la consideración legal de **Instalación 
    - **Boxes Individuales Blindados de Reposo y Captación (Zona Controlada):** Tras la inyección de $^{18}\text{F-FDG}$ ($\approx 2,5\text{–}4\text{ MBq/kg}$, unos $185\text{–}300\text{ MBq}$ en adulto), el paciente debe permanecer en **reposo muscular, silencio, penumbra y ambiente térmico neutro ($22\text{–}24\text{ }^\circ\text{C}$, para evitar la activación fisiológica de la grasa parda interescapular/supraclavicular)** durante **$45\text{ a }60\text{ minutos}$**. Como el paciente inyectado es la fuente radiactiva principal de la instalación, los boxes individuales de captación se construyen con muros de **$10\text{ a }20\text{ mm}$ de plomo** (o $15\text{–}25\text{ cm}$ de hormigón macizo), monitorización por cámara CCTV y **aseo exclusivo para pacientes inyectados** (con lavabo e inodoro de acero inoxidable conectado a la red de recogida controlada para que el paciente vacíe la vejiga justo antes de entrar al tomógrafo, reduciendo la dosis vesical y mejorando la visualización pélvica).
    - **Sala de Exploración PET-TC:** Blindada simultáneamente para la radiación gamma continua de $511\text{ keV}$ emitida por el paciente y para la radiación X dispersa de alta intensidad del TC multicorte, con visor de vidrio plomado de alta equivalencia ($\ge 10\text{–}15\text{ mm Pb}$ en la ventana de control o visualización remota por monitores) y salida independiente de pacientes inyectados sin cruzarse con la sala de espera general ni con embarazadas/niños.
 
-### 4.2. Control de Calidad de los Equipos PET (`RD 1841/1997`, `NEMA NU 2` y Protocolo SEFM/SEPR)
+### 4.2. Control de Calidad de los Equipos PET
 El **Real Decreto 1841/1997** (por el que se establecen los criterios de calidad en Medicina Nuclear) y el estándar internacional **NEMA NU 2** definen las pruebas de aceptación, referencia y constancia obligatorias para los tomógrafos PET:
 1. **Controles Diarios de Constancia (Antes de iniciar la actividad clínica):**
    - **Exploración en Blanco (*Blank Scan*) y Verificación de Ganancia/Estabilidad de Detectores:** Adquisición sin paciente utilizando una **fuente sellada cilíndrica o en línea giratoria de Germanio-68 / Galio-68 ($^{68}\text{Ge}/^{68}\text{Ga}$, $T_{1/2} = 270,95\text{ días}$, emisor $\beta^+$ de $511\text{ keV}$)** o el fondo intrínseco de $^{176}\text{Lu}$ de los cristales $\text{LSO/LYSO}$ acoplado a una fuente puntual de $^{68}\text{Ge}$. Permite comprobar en un **sinograma de diagnóstico** que todos los bloques/cristales SiPM mantienen su fotopico en $511\text{ keV}$, su resolución temporal TOF y su eficiencia uniforme (un bloque averiado aparece como una **banda diagonal oscura** en el sinograma).
@@ -176,22 +147,9 @@ El **Real Decreto 1841/1997** (por el que se establecen los criterios de calidad
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Despliegue de Equipos PET-TC Digitales en los Complejos Hospitalarios del SERGAS y GALARIA
-En el **Servicio Gallego de Salud (SERGAS)**, la red pública de Tomografía por Emisión de Positrones ha experimentado una profunda renovación y expansión tecnológica impulsada por el **Plan INVEAT** y los programas de alta tecnología de la Consellería de Sanidade y **GALARIA, Empresa Pública de Servizos Sanitarios**:
-- **Red Asistencial PET-TC en Galicia:** Los Servicios de Medicina Nuclear de los grandes complejos hospitalarios universitarios (**CHUS** en Santiago de Compostela, **CHUAC** en A Coruña, **CHUVI — Hospital Meixoeiro y Hospital Álvaro Cunqueiro** en Vigo, **HULA** en Lugo y **CHUO** en Ourense) disponen de **tomógrafos híbridos PET-TC Digitales basados en cristales $\text{LSO/LYSO}$ y fotomultiplicadores de silicio ($\text{SiPM}$)** con tecnología de Tiempo de Vuelo (**TOF $< 250\text{–}350\text{ ps}$**), reconstrucción PSF/Bayesiana y barrido continuo de camilla.
-- **Sinergia con la Unidad Ciclotrón de GALARIA y con Radioterapia Oncológica:** Todos los equipos PET-TC del SERGAS reciben diariamente los radiofármacos sintetizados en la **Unidad de Radiofarmacia Ciclotrón de GALARIA en el CHUS** ($^{18}\text{F-FDG}$, $^{18}\text{F-Colina}$, $^{18}\text{F-PSMA}$, $^{18}\text{F-DOPA}$) además de producir *in situ* trazadores con generadores de **$^{68}\text{Ge}/^{68}\text{Ga}$**. Asimismo, los equipos PET-TC están equipados con **tableros planos indexados de fibra de carbono y sistemas de láseres externos móviles (`LAP`)** para realizar estudios **PET-TC en posición de simulación de radioterapia**, enviando directamente las imágenes fusionadas a los Sistemas de Planificación (TPS) de Oncología Radioterápica y del **Centro de Protonterapia de Galicia** para delimitar el Volumen Biológico Tumoral (**BTV**).
-
-### 5.2. Integración Digital (`DICOM PET/CT`, `RDSR`, `IANUS`) y Gestión del Mantenimiento en `XMAO`
-- **Flujo Digital Multimodal en el SERGAS:** Los estudios híbridos generan series sincronizadas **`DICOM PT` (Positron Emission Tomography, calibradas en $\text{Bq/mL}$ con etiquetas privadas/estándar de peso, actividad inyectada y hora de inyección para cálculo de SUV)**, **`DICOM CT`**, imágenes de fusión **`Secondary Capture / Spatial Registration`** y el objeto obligatorio **`DICOM RDSR` (*Radiation Dose Structured Report*)** que recoge tanto el $\text{CTDI}_{\text{vol}}$ y $\text{DLP}$ del componente TC como el **`Radiopharmaceutical Radiation Dose Structured Report` (`RRDSR`)** con la actividad administrada en $\text{MBq}$. Toda la información se archiva en el **PACS centralizado del SERGAS**, se analiza en las plataformas corporativas de posprocesado multimodal y se publica en la historia clínica electrónica **`IANUS`** en cumplimiento del **`RD 601/2019`**.
-- **Gestión de Activos y Mantenimiento en `XMAO`:** Los tomógrafos PET-TC y sus periféricos críticos (sistemas *chiller* de refrigeración líquida de los anillos SiPM, SAI/UPS de respaldo del gantry, inyectores automáticos de $^{18}\text{F-FDG}$, fuentes selladas de calibración de $^{68}\text{Ge}$ con renovación periódica cada $12\text{–}18\text{ meses}$ y monitores ambientales de área) están registrados en el sistema **`XMAO`** del SERGAS. El Servicio de Ingeniería Biomédica/Electromedicina supervisa los mantenimientos preventivos y correctivos, exigiendo siempre la validación posterior del **Servicio de Radiofísica y Protección Radiológica** (normalización, calibración cruzada de SUV y corregistro PET-TC) antes de reanudar la agenda asistencial (`RD 1841/1997`).
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Magnitud / Subsistema | Valor / Norma / Ecuación Clave | Observación Crítica para Examen A1 SERGAS |
 | :--- | :--- | :--- |
@@ -206,7 +164,7 @@ En el **Servicio Gallego de Salud (SERGAS)**, la red pública de Tomografía por
 | **Blindaje para fotones de $511\text{ keV}$** | **$\text{HVL}_{\text{Pb}} \approx 4,1\text{–}5,0\text{ mm Pb}$** · $\text{TVL}_{\text{Pb}} \approx 15\text{ mm Pb}$ | Los delantales plomados de RX ($0,25\text{–}0,5\text{ mm Pb}$) **no protegen en PET** |
 | **Control de Calidad (`RD 1841/1997` y `NEMA NU 2`)** | *Blank scan* diario con **$^{68}\text{Ge}$ ($T_{1/2}=271\text{ d}$)** | Calibración cruzada activímetro-PET (SUV): **$< \pm 5\%$** · Corregistro PET-TC: **$\le 1\text{–}2\text{ mm}$** |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Trampa clásica sobre qué limita la resolución espacial en un PET clínico!** Aunque redujésemos el tamaño de los cristales de $\text{LYSO}$ a medio milímetro, la resolución espacial de un PET humano de cuerpo entero **nunca puede llegar a cero** debido a dos límites físicos irreductibles de la naturaleza: 1) el **rango libre medio del positrón** en el tejido antes de aniquilarse (mínimo en $^{18}\text{F}$ con $0,6\text{ mm}$, pero de $2,9\text{ mm}$ en $^{68}\text{Ga}$ y $>4\text{ mm}$ en $^{82}\text{Rb}$), y 2) la **no colinealidad de $\pm 0,25^\circ$** de los dos fotones de $511\text{ keV}$ ($R_{\text{nc}} = 0,0022 \cdot D_{\text{anillo}} \approx 1,8\text{ mm}$ en un anillo de $80\text{ cm}$).
 2. **¿Por qué se produjo un falso foco hipermetabólico sobre una prótesis de cadera o un marcapasos en el PET-TC y cómo se demuestra?** Porque los metales producen un valor de Unidades Hounsfield exageradamente alto en el TC; el algoritmo de **Corrección de Atenuación por TC (CTAC)** interpreta erróneamente que allí hubo una enorme atenuación de fotones de $511\text{ keV}$ y **multiplica artificialmente las cuentas de esa zona (sobrecorrección)**. Se demuestra revisando la **imagen PET NO corregida por atenuación (NAC)**: si el foco hipercaptante no existe en la imagen NAC, es un artefacto de CTAC y no una infección ni una metástasis.
 3. **¿Por qué no se pueden usar Tubos Fotomultiplicadores (PMT) en un equipo PET-RM simultáneo?** Porque los PMT son tubos de vacío donde los fotoelectrones recorren varios centímetros entre dinodos: el campo magnético de $3,0\text{ T}$ de la RM desvía la trayectoria de los electrones por la fuerza de Lorentz ($\mathbf{F} = q\mathbf{v}\times\mathbf{B}$) anulando completamente su funcionamiento. La integración simultánea PET-RM solo fue posible al sustituir los PMT por **fotodetectores semiconductores de estado sólido: Fotodiodos de Avalancha (APD) y, actualmente, Fotomultiplicadores de Silicio ($\text{SiPM}$)**.

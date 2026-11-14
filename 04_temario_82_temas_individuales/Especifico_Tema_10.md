@@ -1,29 +1,6 @@
 # Tema 10 — Caracterización de los equipos de resonancia magnética. Generación de la señal electromagnética. Componentes, equipos e imanes.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #10 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 03 — Resonancia Magnética, Ultrasonidos, Radioterapia y Medicina Nuclear
-> - **Marco Normativo y Técnico Nuclear:** Reglamento (UE) 2017/745 (MDR, Clase IIa/IIb), Real Decreto 192/2023, Real Decreto 299/2016 (exposición laboral a campos electromagnéticos), Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulo Profesional 1588: *Sistemas de radiodiagnóstico, radioterapia e imagen médica*; MP 1585 y MP 1587), UNE-EN 60601-1, UNE-EN 60601-1-2, Norma Particular UNE-EN 60601-2-33 (Equipos de resonancia magnética para diagnóstico médico), NEMA MS 1 a MS 12 y Protocolos SEFM/ACR.
-> - **Sistemas y Entorno SERGAS:** Servicios de Radiodiagnóstico y Unidades de Resonancia Magnética de las 7 Áreas Sanitarias del SERGAS (CHUAC, CHUS, CHUVI, HULA, CHUO, CHOP, CHUF), Unidades Móviles y Fijas gestionadas con soporte de GALARIA, integración con `SIHGA`/`RIS`, `PACS` corporativo centralizado, `IANUS` y gestión de activos criogénicos y mantenimiento en `XMAO`.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 10** de la Parte Específica del programa oficial para el acceso a la categoría de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud (Resolución del DOG núm. 67, de 13 de abril de 2026) aborda de forma monográfica los principios físicos de generación y detección de la señal de resonancia magnética nuclear (RMN), la termodinámica de los tiempos de relajación tisular y la arquitectura electromecánica, criogénica y radioeléctrica de los imanes, bobinas de homogeneización (*shimming*), sistemas de gradientes espaciales, cadenas de radiofrecuencia y blindajes asociados. Su desarrollo se distingue nítidamente del **Tema 11**, que se reserva para las secuencias clínicas, el llenado del espacio K, los artefactos y los protocolos de seguridad y *quench*.
-
-- **Categorías con solapamiento en el SERGAS (`cruce_temarios_sergas.md`):** `Radiofísica Hospitalaria` | `TS Imagen para el Diagnóstico` | `Ingeniero/a Técnico/a`
-- **Grado de solapamiento:**
-  - **Total (95%) en Radiofísica Hospitalaria:** Cubre íntegramente el campo magnético e imanes, las propiedades magnéticas de la materia, la conducta del núcleo atómico bajo un campo magnético (excitación y relajación) y los componentes estructurales de un equipo de resonancia magnética.
-  - **Alto (75%) en TS Imagen para el Diagnóstico:** Cubre el equipamiento de diagnóstico por imagen y los principios físicos fundamentales de la resonancia magnética.
-  - **Medio (50%) en Ingeniero/a Técnico/a:** Incluye los equipos de RNM y las instalaciones hospitalarias asociadas dentro del bloque de diagnóstico por imagen.
-- **Epígrafes equivalentes en otros temarios oficiales del SERGAS:**
-  - **Radiofísica Hospitalaria:** Tema 36 (*Fundamentos de resonancia magnética. Campo magnético e imanes, propiedades magnéticas de la materia. Conducta de un núcleo atómico bajo un campo magnético, excitación y relajación. Obtención de imágenes, artefactos. Aplicaciones clínicas. Espectroscopia. Efectos biológicos y seguridad. Componentes de un equipo de resonancia magnética. Garantía y control de calidad*).
-  - **TS Imagen para el Diagnóstico:** Tema 9 (*Equipamientos de diagnóstico por imagen: radiología convencional intervencionista, tomografía computerizada, resonancia magnética y ultrasonografía. Principios de tomografía computerizada y resonancia magnética: fundamentos físicos, aplicaciones e indicaciones. Estudios y técnicas de exploración con TC y RMN*).
-  - **Ingeniero/a Técnico/a:** Tema 50 (*Diagnóstico por imagen. Equipos y salas de radiodiagnóstico. RNM. TAC. Instalaciones. Procesado de placas. Digitalización de imágenes*).
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Física Cuántica del Espín Nuclear, Efecto Zeeman y Ecuación de Larmor
 
 ### 1.1. Física Cuántica del Espín Nuclear, Efecto Zeeman y Ecuación de Larmor
 La **Resonancia Magnética (RM)** es una modalidad tomográfica no invasiva basada en la interacción de núcleos atómicos dotados de momento angular intrínseco (**espín nuclear $I \neq 0$**) con un campo magnético estático intenso ($\mathbf{B}_0$) y pulsos de radiación electromagnética **no ionizante** en la banda de radiofrecuencia (VHF). Poseen espín no nulo todos aquellos núcleos con número impar de protones, de neutrones o de ambos. Aunque la física de RM permite interrogar núcleos de interés metabólico como el Fósforo-31 ($^{31}\text{P}$), Sodio-23 ($^{23}\text{Na}$), Carbono-13 ($^{13}\text{C}$), Flúor-19 ($^{19}\text{F}$) o Helio-3 hiperpolarizado ($^3\text{He}$), el estándar absoluto en imagen clínica es el **protón de Hidrógeno ($^1\text{H}$, número cuántico de espín $I = 1/2$)** debido a dos razones físicas determinantes: su extraordinaria abundancia en el organismo humano ($> 60\text{–}70\%$ agua y lípidos, $\approx 10^{23}\text{ protones/cm}^3$) y poseer la **mayor constante giromagnética ($\gamma$)** de los isótopos estables biológicos.
@@ -94,7 +71,7 @@ Desde el punto de vista regulatorio, un sistema de RM es un producto sanitario a
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. El Imán Principal ($B_0$) y Criostato, Cabeza Fría (*Cold Head*) e Imanes Sellados de Bajo Helio
 
 Un sistema clínico de Resonancia Magnética se estructura en cuatro grandes subsistemas de ingeniería estrechamente sincronizados por un controlador de pulsos con precisión de nanosegundos: **1) El Imán Principal ($B_0$) y sus sistemas de homogeneización y blindaje**, **2) El Subsistema Criogénico**, **3) El Subsistema de Gradientes Espaciales ($G_x, G_y, G_z$)** y **4) La Cadena de Radiofrecuencia (RF) y la Jaula de Faraday**.
 
@@ -127,7 +104,7 @@ Para mantener el bobinado de $\text{NbTi}$ a $4,2\text{ K}$, éste se aloja en e
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Subsistema de Gradientes Espaciales ($G_x, G_y, G_z$)
 
 ### 3.1. Subsistema de Gradientes Espaciales ($G_x, G_y, G_z$): Diseño, Prestaciones y Codificación
 Si todos los protones del cuerpo experimentasen exactamente el mismo campo $B_0$, todos emitirían a la misma frecuencia $f_0$ y sería imposible saber de qué punto anatómico procede la señal. El **sistema de gradientes magnéticos** consta de tres conjuntos de bobinas resistivas (bobinas de **Maxwell** para el eje longitudinal $Z$ y bobinas en silla de montar o **Golay *fingerprint*** para los ejes transversales $X$ e $Y$) embebidas en un cilindro de resina epoxi y fibra de vidrio concéntrico al túnel del paciente. Su función es superponer al campo estático $B_0$ una **variación lineal controlada de la componente $B_z$ a lo largo de las tres coordenadas $(x, y, z)$**:
@@ -160,7 +137,7 @@ La cadena de RF comprende la rama de transmisión (excitación) y la rama de rec
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Ingeniería de la Instalación y Control de Calidad Instrumental y Mantenimiento Preventivo
 
 ### 4.1. Ingeniería de la Instalación: Jaula de Faraday, Panel de Penetración y Obra Civil
 El diseño y ejecución de una sala de Resonancia Magnética constituye uno de los proyectos de ingeniería hospitalaria más exigentes del Módulo Profesional 1588:
@@ -176,7 +153,7 @@ El diseño y ejecución de una sala de Resonancia Magnética constituye uno de l
    - **Climatización y Oxímetro:** Temperatura de sala de exploración entre **$18\text{ y }22\text{ }^\circ\text{C}$** con humedad relativa del **$40\text{ al }60\%$** (para evitar descargas electrostáticas y condensación), sensor permanente de **nivel de oxígeno ambiental** a $\approx 1,5\text{ m}$ del suelo con alarma acústica/visual automática si **$\text{O}_2 < 18\text{–}19\%$** y ventilador de **extracción de emergencia de alto caudal ($\ge 12\text{–}20\text{ renovaciones/hora}$)** acoplado a compuerta de aporte de aire.
    - **Cimentación y Vibraciones:** Losa de hormigón armado dimensionada para soportar carga puntual de $5.000\text{–}9.000\text{ kg}$ con armaduras de **acero inoxidable austenítico no magnético o fibra de vidrio** bajo el isocentro, aislada mecánicamente frente a vibraciones estructurales ($< 10^{-4}\text{ m/s}^2$) y alejada de grandes masas móviles de hierro (ascensores, aparcamientos o trenes que alterarían el *shimming* dinámico).
 
-### 4.2. Control de Calidad Instrumental y Mantenimiento Preventivo (`NEMA` / `ACR` / `SEFM`)
+### 4.2. Control de Calidad Instrumental y Mantenimiento Preventivo
 El control de calidad técnico de los equipos de RM (ejecutado conjuntamente por el Servicio de Radiofísica y el Servicio de Electromedicina/Ingeniería Biomédica según protocolos **ACR**, **NEMA MS 1–12** y **SEFM**) evalúa con maniquíes cilíndricos/esféricos rellenos de solución paramagnética ($\text{CuSO}_4$ o $\text{NiCl}_2$):
 
 | Prueba de Control de Calidad / Mantenimiento | Metodología / Estándar | Valor de Referencia / Tolerancia Típica | Periodicidad |
@@ -193,21 +170,9 @@ El control de calidad técnico de los equipos de RM (ejecutado conjuntamente por
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Parque Tecnológico de RM en las 7 Áreas Sanitarias del SERGAS y Rol de GALARIA
-El **Servicio Gallego de Salud (SERGAS)** cuenta con un extenso parque de equipos de Resonancia Magnética superconductores de **$1,5\text{ T}$ y $3,0\text{ T}$** desplegados en los Servicios de Radiodiagnóstico de los complejos hospitalarios universitarios y hospitales comarcales de las **7 Áreas Sanitarias de Galicia** (A Coruña y Cee — CHUAC; Santiago de Compostela y Barbanza — CHUS; Ferrol — CHUF; Lugo, A Mariña y Monforte de Lemos — HULA; Ourense, Verín y O Barco de Valdeorras — CHUO; Pontevedra y O Salnés — CHOP; Vigo — CHUVI en el Hospital Álvaro Cunqueiro y Meixoeiro), complementado por las unidades de alta tecnología e **Unidades Móviles de Resonancia Magnética** gestionadas con el apoyo de la empresa pública sanitaria **GALARIA, Empresa Pública de Servizos Sanitarios**, que acercan la capacidad diagnóstica a los hospitales comarcales reduciendo las listas de espera estructurales. A través del **Plan INVEAT** y los programas de renovación tecnológica de la Consellería de Sanidade, el SERGAS ha sustituido equipos obsoletos por imanes de túnel ancho (*Wide-Bore* de $70\text{ cm}$), cadenas de recepción 100% digitales por fibra óptica, gradientes de hasta $45\text{–}80\text{ mT/m}$ e imanes de bajo helio o *Zero Boil-Off*.
-
-### 5.2. Integración Digital Corporativa (`SIHGA`/`RIS` – `PACS` – `IANUS`) y Gestión en `XMAO`
-Desde la perspectiva de la Ingeniería Biomédica del SERGAS:
-1. **Integración `DICOM` e `IHE` con la Historia Clínica Electrónica (`IANUS`):** Los equipos de RM se integran con el sistema de información hospitalaria y de radiología (`SIHGA`/`RIS`) mediante **`DICOM Modality Worklist` (MWL)** para descargar la lista de trabajo diaria con los datos demográficos inequívocos del paciente, notificando el estado de la exploración mediante **`DICOM MPPS` (*Modality Performed Procedure Step*)** y enviando las series volumétricas (`DICOM MR Image Storage` y `Enhanced MR Image Storage`) al **Archivo Centralizado de Imagen Médica (`PACS` corporativo del SERGAS)** para su visualización inmediata desde cualquier centro en **`IANUS`**.
-2. **Telemetría Criogénica Predictiva y Gestión del Mantenimiento en `XMAO`:** Todos los imanes superconductores e instalaciones auxiliares asociadas (compresores de helio, enfriadoras de agua o *chillers* redundantes, cuadros eléctricos, SAIs de electrónica de control, oxímetros de sala y puertas de la Jaula de Faraday) están dados de alta en el sistema corporativo **`XMAO` (Gestión de Mantenimiento Asistido por Ordenador del SERGAS)**. Los imanes disponen de **telemetría remota $24\times 7$** que monitoriza de forma continua la presión interna del criostato, el porcentaje de helio líquido, la temperatura de las dos etapas de la cabeza fría, el caudal y la temperatura del agua primaria de la enfriadora del hospital ($\approx 8\text{–}14\text{ }^\circ\text{C}$). Si el *chiller* hospitalario falla o se corta el suministro eléctrico al compresor de helio, la cabeza fría se detiene y el imán comienza a evaporar helio (*boil-off*); la alarma telemétrica genera una orden de intervención urgente en `XMAO` antes de que se abra la válvula de venteo.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Magnitud Técnica | Valor Exacto / Fórmula / Norma | Punto Crítico para Examen A1 SERGAS |
 | :--- | :--- | :--- |
@@ -221,7 +186,7 @@ Desde la perspectiva de la Ingeniería Biomédica del SERGAS:
 | **Jaula de Faraday y Panel de Penetración** | Cobre/aluminio/acero; **IEEE Std 299** | Atenuación de RF **$\ge 90\text{–}100\text{ dB}$** ($10\text{–}150\text{ MHz}$); puerta abre **hacia fuera**; paso de fibra por **guías de onda** |
 | **Norma Particular de Seguridad en RM** | **UNE-EN 60601-2-33** y **RD 299/2016** | No aplica normativa CSN/RD 1085/2009 al no emitir radiaciones ionizantes |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa clásica sobre qué bobina origina el ruido acústico en RM:** El estruendo acústico característico durante una exploración de RM **NO lo produce el imán superconductor principal ni las antenas de radiofrecuencia**, sino las **bobinas de gradiente ($G_x, G_y, G_z$)** al vibrar mecánicamente por la **fuerza de Lorentz ($\mathbf{F} = I \mathbf{L} \times \mathbf{B}_0$)** cuando los amplificadores conmutan cientos de amperios a frecuencias de audio dentro del campo estático $B_0$.
 2. **Confusión entre Blindaje Magnético y Jaula de Faraday (Blindaje de RF):**
    - La **Jaula de Faraday (cobre o aluminio, material diamagnético/paramagnético no ferromagnético)** aísla únicamente frente a **ondas electromagnéticas de radiofrecuencia ($10\text{–}150\text{ MHz}$)** para evitar que emisoras externas contaminen la débil señal de los espines, pero **NO frena en absoluto el campo magnético estático $B_0$** (las líneas de $B_0$ atraviesan el cobre limpiamente).

@@ -1,30 +1,6 @@
 # Tema 32 — Caracterización, funcionamiento y gestión de los dispositivos biomédicos implantables. Dispositivos cardioimplantables, ortopédicos, neuroimplantables y otros dispositivos implantables.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #32 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 01 — Productos Sanitarios, Regulación MDR, AEMPS, Dispositivos Implantables, Diseño I+D+i e Impresión 3D
-> - **Marco Normativo y Técnico Nuclear:** Reglamento (UE) 2017/745 (MDR Art. 2.5, Art. 18, Anexo VIII Regla 8 y Regla 14), Real Decreto 192/2023 (Arts. 28–29), Serie UNE-EN ISO 14708 (Implantables activos), Serie ISO 5832 / ISO 21534 (Implantes quirúrgicos y ortopédicos), Norma ASTM F2503 / ISO/TS 10974 (Seguridad en Resonancia Magnética)
-> - **Sistemas y Entorno SERGAS:** Gestión logística de depósitos asistenciales y trazabilidad UDI en LOGAS, registro de implantes y Tarjeta de Implante electrónica en IANUS, telemonitorización cardíaca domiciliaria en TELEA y Unidades de Arritmias, Hemodinámica, COT y Neurocirugía de las 7 Áreas Sanitarias del SERGAS
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 32 de la Parte Específica** aborda de forma monográfica la ingeniería, física aplicada, ciencia de biomateriales, principios de operación clínica y gestión hospitalaria de los **dispositivos biomédicos implantables** (tanto activos como pasivos), dejando los aspectos estrictamente jurídico-administrativos de evaluación de la conformidad de los productos sanitarios implantables activos (PSIA) para el Tema 50. Su desarrollo abarca:
-1. **Caracterización técnica, biomecánica y física de los dispositivos implantables:** Definición legal de implante (total, sustitución epitelial/ocular o parcial $\ge 30\text{ días}$), propiedades mecánicas y tribológicas de los biomateriales metálicos, cerámicos y poliméricos, fenómenos de osteointegración y apantallamiento de tensiones (*stress shielding*), hermeticidad, electroquímica de baterías implantables y telemetría bidireccional.
-2. **Dispositivos cardioimplantables (activos y pasivos):** Marcapasos cardíacos endocavitarios y sin cables (*leadless*), código internacional **NASPE/BWG** de 5 letras, desfibriladores automáticos implantables (**DAI / ICD**), terapia de resincronización cardíaca (**CRT-P / CRT-D**), *Holter* insertables, *stents* coronarios metálicos (**BMS**) y farmacoactivos (**DES**), prótesis valvulares mecánicas, biológicas y transcatéter (**TAVI**), y dispositivos de asistencia ventricular (**LVAD**).
-3. **Dispositivos ortopédicos, neuroimplantables y otros implantes especiales:** Artroplastias totales y parciales de cadera, rodilla y hombro, osteosíntesis e implantes espinales; implantes cocleares, estimuladores cerebrales profundos (**DBS**), medulares (**SCS**) y del nervio vago (**VNS**); bombas de infusión intratecal programables, válvulas de derivación de líquido cefalorraquídeo (LCR), lentes intraoculares (**LIO**), mallas quirúrgicas, implantes mamarios e implantes radiactivos de braquiterapia.
-4. **Seguridad en Resonancia Magnética (`ASTM F2503`) y gestión integral en el SERGAS:** Categorías **MR Safe, MR Conditional y MR Unsafe**, trazabilidad **UDI**, gestión de depósitos quirúrgicos en **LOGAS** y emisión de la **Tarjeta de Implante** en **IANUS**.
-
-### 0.2. Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Radiofísica Hospitalaria**
-- **Grado de solapamiento:** **Bajo (25%)**: Solapa únicamente en implantes radiactivos permanentes/temporales; el resto es específico de Ingeniería Biomédica.
-- **Epígrafes equivalentes:**
-  - **Radiofísica Hospitalaria:** Tema 21. Técnicas de tratamiento. Selección de fuentes. Preparación de fuentes. Procedimientos de trabajo. Aplicaciones de carga directa. Aplicaciones de carga diferida (manual y automática). Implantes permanentes y temporales. Aplicaciones estándar: implantes de baja tasa de dosis, sistemas de implantación y de cálculo de dosis clásicos: sistema de París, de Manchester... Extensión a otros tipos de implantes: HDR, PDR. Técnicas especiales: intracoronaria, implantes permanentes de semillas, implantes oftálmicos, implantes estereotáxicos.
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Concepto Técnico-Legal y Encuadramiento en el Riesgo de los Dispositivos Implantables
 
 ### 1.1. Concepto Técnico-Legal y Encuadramiento en el Riesgo de los Dispositivos Implantables
 Conforme al **artículo 2.5 del Reglamento (UE) 2017/745 (MDR)**, se define como **producto implantable** todo producto diseñado —incluso aunque esté previsto que se absorba parcial o totalmente— para cumplir cualquiera de las tres condiciones siguientes mediante **intervención clínica**:
@@ -32,7 +8,7 @@ Conforme al **artículo 2.5 del Reglamento (UE) 2017/745 (MDR)**, se define como
 2. **Sustituir una superficie epitelial o la superficie ocular** y permanecer allí tras la intervención.
 3. Ser **introducido parcialmente** en el cuerpo humano y permanecer allí después de dicha intervención durante un período de **al menos 30 días** ($\ge 30\text{ días}$, coincidiendo con el umbral de uso prolongado del Anexo VIII).
 
-Cuando el producto implantable depende para su funcionamiento de una fuente de energía eléctrica o de otra naturaleza distinta de la generada por el cuerpo humano o por la gravedad y actúa por conversión de dicha energía (Art. 2.4 MDR), constituye un **Producto Sanitario Implantable Activo (PSIA)**, regulado técnicamente por la serie de normas armonizadas **UNE-EN ISO 14708** (`ISO 14708-1` requisitos generales, `ISO 14708-2` marcapasos cardíacos, `ISO 14708-3` neuroestimuladores, `ISO 14708-4` bombas de infusión implantables, `ISO 14708-5` dispositivos de asistencia circulatoria, `ISO 14708-6` desfibriladores automáticos implantables e `ISO 14708-7` sistemas de implante coclear y auditivo de tronco cerebral).
+Cuando el producto implantable depende para su funcionamiento de una fuente de energía eléctrica o de otra naturaleza distinta de la generada por el cuerpo humano o por la gravedad y actúa por conversión de dicha energía, constituye un **Producto Sanitario Implantable Activo (PSIA)**, regulado técnicamente por la serie de normas armonizadas **UNE-EN ISO 14708** (`ISO 14708-1` requisitos generales, `ISO 14708-2` marcapasos cardíacos, `ISO 14708-3` neuroestimuladores, `ISO 14708-4` bombas de infusión implantables, `ISO 14708-5` dispositivos de asistencia circulatoria, `ISO 14708-6` desfibriladores automáticos implantables e `ISO 14708-7` sistemas de implante coclear y auditivo de tronco cerebral).
 
 Bajo la **Regla 8 del Anexo VIII del MDR**, los productos implantables y los invasivos quirúrgicos de uso prolongado ($>30\text{ días}$) son de base **Clase IIb** (o **Clase IIa** si están destinados a colocarse en los dientes, como coronas, puentes o implantes dentales osteointegrados simples), pero **ascienden directamente a la máxima categoría de riesgo — Clase III —** en cualquiera de los siguientes supuestos críticos:
 - Todos los **productos sanitarios implantables activos (PSIA) y sus accesorios** (electrodos, programadores, cabezales de telemetría).
@@ -58,7 +34,7 @@ Un implante opera de forma permanente sumergido en el medio fisiológico interno
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento (o Estructura Orgánica y Competencial)
+## ⚙️ 2. Arquitectura de un Producto Sanitario Implantable Activo (PSIA)
 
 ### 2.1. Arquitectura de un Producto Sanitario Implantable Activo (PSIA): Marcapasos y DAI
 Todo generador implantable activo consta de cuatro subsistemas críticos encerrados en una **carcasa hermética de titanio comercialmente puro (Grado 1–4)** soldada por láser (para impedir la entrada de humedad fisiológica y actuar simultáneamente como electrodo indiferente/ánodo en configuraciones unipolares), coronada por un **cabezal conector (*header*) transparente de resina epoxi o poliuretano médico** con conectores estandarizados (**IS-1** de $3,2\text{ mm}$ para cables de marcapasos y **DF-1 / DF-4** para cables de desfibrilación de alta tensión) y pasamuros herméticos (*feedthroughs*) cerámicos de alúmina-platino con filtros capacitivos EMI integrados:
@@ -91,7 +67,7 @@ La *North American Society of Pacing and Electrophysiology* (hoy HRS) y el *Brit
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales (o Régimen Jurídico y Procedimientos)
+## 🔬 3. Dispositivos Cardioimplantables Avanzados
 
 ### 3.1. Dispositivos Cardioimplantables Avanzados (DAI, Leadless, Stents, Válvulas y LVAD)
 1. **Desfibrilador Automático Implantable (DAI / ICD) y CRT-D:**
@@ -112,19 +88,19 @@ La *North American Society of Pacing and Electrophysiology* (hoy HRS) y el *Brit
      - **Cerámica-Cerámica (CoC):** Mínimo coeficiente de fricción y menor desgaste volumétrico de todos los pares ($< 0,01\text{ mm}^3/\text{año}$), indicado en pacientes jóvenes, con riesgo residual de rotura frágil o ruido articular (*squeaking*).
      - **Metal-Metal (MoM):** Hoy muy restringido por alertas de tecnovigilancia de la AEMPS debido a la liberación de iones de **cobalto y cromo** en sangre y reacciones adversas locales a residuos metálicos (*ALVAL* / pseudotumores).
 2. **Dispositivos Neuroimplantables e Implantes Sensoriales Activos (Clase III):**
-   - **Implante Coclear (`ISO 14708-7`):** Indicado en hipoacusia neurosensorial bilateral profunda o severa de origen coclear cuando los audífonos convencionales no aportan discriminación verbal. Consta de: **a) Parte externa:** micrófono direccional, procesador digital del habla (que descompone el sonido en bandas espectrales mediante bancos de filtros FFT/CIS) y bobina transmisora sujeta por imán; **b) Parte interna implantable:** receptor-estimulador subcutáneo en hueso temporal (sin batería interna, alimentado y modulado por **inducción electromagnética RF transcutánea**) y guía de **12 a 22 electrodos intracocleares** de platino-iridio insertada en la **rampa timpánica de la cóclea**. Aprovecha la **organización tonotópica coclear**: los electrodos basales estimulan las fibras del nervio auditivo correspondientes a las **altas frecuencias (sonidos agudos)** y los electrodos apicales estimulan las correspondientes a las **bajas frecuencias (sonidos graves)**.
+   - **Implante Coclear:** Indicado en hipoacusia neurosensorial bilateral profunda o severa de origen coclear cuando los audífonos convencionales no aportan discriminación verbal. Consta de: **a) Parte externa:** micrófono direccional, procesador digital del habla (que descompone el sonido en bandas espectrales mediante bancos de filtros FFT/CIS) y bobina transmisora sujeta por imán; **b) Parte interna implantable:** receptor-estimulador subcutáneo en hueso temporal (sin batería interna, alimentado y modulado por **inducción electromagnética RF transcutánea**) y guía de **12 a 22 electrodos intracocleares** de platino-iridio insertada en la **rampa timpánica de la cóclea**. Aprovecha la **organización tonotópica coclear**: los electrodos basales estimulan las fibras del nervio auditivo correspondientes a las **altas frecuencias (sonidos agudos)** y los electrodos apicales estimulan las correspondientes a las **bajas frecuencias (sonidos graves)**.
    - **Estimulador Cerebral Profundo (DBS — *Deep Brain Stimulation*, `ISO 14708-3`):** Generador de impulsos infraclavicular conectado a electrodos estereotáxicos implantados en el **núcleo subtalámico (NST)**, el **globo pálido interno (GPi)** o el núcleo ventral intermedio del tálamo (VIM). Entrega trenes de impulsos de alta frecuencia (**$130\text{–}185\text{ Hz}$**, anchura $60\text{–}90\text{ }\mu\text{s}$, amplitud $1\text{–}4\text{ V}$ o $\text{mA}$) que modulan e inhiben funcionalmente la actividad neuronal patológica en la enfermedad de Parkinson, temblor esencial y distonía.
    - **Estimulador de Médula Espinal (SCS)** en espacio epidural dorsal para dolor neuropático crónico y **Estimulador del Nervio Vago (VNS)** cervical izquierdo para epilepsia refractaria.
 3. **Otros Dispositivos Implantables:**
-   - **Bombas de infusión intratecal programables (`ISO 14708-4`):** Reservorio de titanio recargable por punción percutánea a través de un septo de silicona central (con filtro antibacteriano de $0,22\text{ }\mu\text{m}$) que infunde microdosis de **baclofeno intratecal** (espasticidad severa) o **morfina/ziconotida** en el espacio subaracnoideo mediante motor peristáltico o propulsión por gas.
+   - **Bombas de infusión intratecal programables:** Reservorio de titanio recargable por punción percutánea a través de un septo de silicona central (con filtro antibacteriano de $0,22\text{ }\mu\text{m}$) que infunde microdosis de **baclofeno intratecal** (espasticidad severa) o **morfina/ziconotida** en el espacio subaracnoideo mediante motor peristáltico o propulsión por gas.
    - **Válvulas de derivación ventriculoperitoneal (DVP) de LCR:** Con mecanismo magnético programable externamente para ajustar la presión de apertura en hidrocefalia (¡atención al desprogramado accidental en campos magnéticos!).
    - **Implantes radiactivos de braquiterapia (cruce con Radiofísica):** Semillas permanentes de Yodo-125 ($^{125}\text{I}$, $T_{1/2} = 59,4\text{ días}$, energía media $28\text{ keV}$) o Paladio-103 ($^{103}\text{Pd}$) en cáncer de próstata o placas epiesclerales de Rutenio-106 ($^{106}\text{Ru}$) en melanoma ocular.
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento (o Garantías, Control y Régimen de Responsabilidades)
+## 🛡️ 4. Interacciones Físicas y Seguridad de los Dispositivos Implantables en Resonancia Magnética
 
-### 4.1. Interacciones Físicas y Seguridad de los Dispositivos Implantables en Resonancia Magnética (`ASTM F2503` e `ISO/TS 10974`)
+### 4.1. Interacciones Físicas y Seguridad de los Dispositivos Implantables en Resonancia Magnética
 La exposición de un paciente portador de un implante a los tres campos físicos de un equipo de Resonancia Magnética ($1,5\text{ T}$ o $3,0\text{ T}$) genera riesgos graves que el ingeniero biomédico y el servicio de radiología/radiofísica deben evaluar:
 1. **Campo Magnético Estático ($B_0 = 1,5\text{ T}$ o $3,0\text{ T}$) y su Gradiente Espacial ($\nabla B_0$):**
    - **Fuerza de traslación (Efecto proyectil / desplazamiento):** Proporcional al producto del campo por su gradiente espacial ($\vec{F}_{\text{tras}} \propto \chi \cdot V \cdot (\vec{B}_0 \cdot \nabla)\vec{B}_0$, máxima en la boca del túnel o *bore* del imán).
@@ -144,7 +120,7 @@ Para estandarizar el etiquetado mundial, la norma **ASTM F2503** define tres ico
 
 ### 4.2. Interferencias Electromagnéticas (EMI) Quirúrgicas y Terapéuticas sobre Implantes Activos
 En el quirófano y en radioterapia, los pacientes portadores de marcapasos, DAI o neuroestimuladores requieren protocolos estrictos de seguridad:
-- **Electrobisturí de Alta Frecuencia (`UNE-EN 60601-2-2`):** La corriente de radiofrecuencia monopolar ($300\text{–}500\text{ kHz}$) que viaja desde el electrodo activo hacia la placa neutra de retorno puede ser interpretada por el amplificador de sensado del marcapasos como actividad cardíaca propia (**sobresensado que inhibe el marcapasos causando asistolia en pacientes dependientes**) o por un DAI como fibrilación ventricular (**disparando choques inapropiados en pleno acto quirúrgico**).
+- **Electrobisturí de Alta Frecuencia:** La corriente de radiofrecuencia monopolar ($300\text{–}500\text{ kHz}$) que viaja desde el electrodo activo hacia la placa neutra de retorno puede ser interpretada por el amplificador de sensado del marcapasos como actividad cardíaca propia (**sobresensado que inhibe el marcapasos causando asistolia en pacientes dependientes**) o por un DAI como fibrilación ventricular (**disparando choques inapropiados en pleno acto quirúrgico**).
   - *Medidas de ingeniería y seguridad:* Priorizar el **bisturí bipolar** o ultrasónico; si es imprescindible usar monopolar, colocar la placa dispersiva de retorno de modo que el trayecto de corriente quede lo más alejado posible ($> 15\text{ cm}$) del sistema generador-electrodo; programar el marcapasos dependiente en **modo asíncrono (`VOO`/`DOO`)** y **desactivar las terapias de taquicardia del DAI** durante la cirugía (colocando un imán clínico sobre un **DAI se inhiben únicamente las terapias de choque/ATP sin cambiar el modo de marcapasos antibradicardia**, mientras que colocar un imán sobre un **marcapasos lo conmuta a modo asíncrono fijo `VOO`/`DOO`/`AOO`**).
 - **Radioterapia Externa (LINAC):** La radiación ionizante directa y los neutrones térmicos secundarios (en haces de fotones $> 10\text{ MV}$) pueden dañar las memorias RAM CMOS de los generadores implantables (norma `AAPM TG-203`: limitar dosis acumulada en el generador a $< 2\text{–}5\text{ Gy}$ y emplear haces $\le 6\text{–}10\text{ MV}$).
 
@@ -163,32 +139,9 @@ En el quirófano y en radioterapia, los pacientes portadores de marcapasos, DAI 
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Gestión Logística de Depósitos Quirúrgicos y Trazabilidad UDI en `LOGAS` e `IANUS`
-El elevado coste unitario y la amplísima variedad dimensional de las prótesis ortopédicas, implantes espinales, válvulas TAVI, *stents*, marcapasos, DAI y neuroestimuladores hacen inviable adquirir en propiedad todas las tallas posibles antes de la cirugía. Por ello, en las 7 Áreas Sanitarias del SERGAS, estos dispositivos se gestionan mayoritariamente mediante contratos de suministro (bajo la **Ley 9/2017 LCSP**, a menudo mediante Acuerdos Marco centralizados del SERGAS) en régimen de **Depósito Asistencial (Consigna Hospitalaria)** a través del sistema corporativo **`LOGAS`**:
-1. **Constitución del Depósito en `LOGAS`:** El proveedor adjudicatario deposita en el almacén quirúrgico del hospital la gama completa de tallas, vástagos, cotilos, lentes o generadores sin transferir aún la propiedad ni emitir factura. Cada unidad se recepciona en `LOGAS` como *stock en depósito* leyendo su código **GS1 DataMatrix / código de barras UDI**:
-   $$\text{UDI Completo} = \text{UDI-DI (Identificador fijo de modelo y fabricante)} + \text{UDI-PI (Lote, Nº de serie, Fecha de caducidad)}$$
-2. **Consumo Intraoperatorio e Integración con `IANUS`:** Durante la intervención quirúrgica en el bloque quirúrgico (o sala de Hemodinámica/Electrofisiología), el personal de enfermería circulante escanea con lector óptico el código **UDI** de las piezas realmente implantadas en el paciente. Esta lectura ejecuta tres acciones simultáneas:
-   - Vincula de forma indeleble el **UDI-DI + UDI-PI** (lote y número de serie exactos) al episodio quirúrgico de la Historia Clínica Electrónica **`IANUS`** del paciente.
-   - Genera en **`LOGAS`** el movimiento de **consumo de depósito**, que dispara automáticamente el **pedido de reposición** al proveedor para restituir esa talla en el depósito hospitalario en $24\text{–}48\text{ h}$ y habilita la **conformación de la factura** únicamente por el material implantado.
-   - Impide la implantación de cualquier dispositivo cuya fecha de caducidad haya vencido o cuyo lote esté bloqueado por una **Alerta de Vigilancia / Acción Correctiva de Seguridad en Campo (FSCA) de la AEMPS**.
-
-### 5.2. Emisión de la Tarjeta de Implante (Art. 18 MDR y Art. 28 RD 192/2023) y Telemonitorización en el SERGAS
-De acuerdo con el **artículo 18 del Reglamento (UE) 2017/745** y el **artículo 28 del Real Decreto 192/2023**, los centros sanitarios del SERGAS están obligados a entregar al paciente, antes del alta hospitalaria (tanto en soporte físico como en formato electrónico accesible a través de **`IANUS` / `É-Saúde`**), la **Tarjeta de Implante** con su nombre, número de lote/serie, UDI, nombre y dirección del fabricante e información sobre advertencias de seguridad (como su condición `MR Conditional` o `MR Unsafe`).
-- **Excepciones legales a la obligación de Tarjeta de Implante (Art. 18.3 MDR — ¡Pregunta fija de examen!):** Quedan exentos de Tarjeta de Implante los siguientes artículos implantables: **suturas, grapas, materiales de obturación dental, aparatos de ortodoncia, coronas dentales, tornillos, cuñas, placas, alambres, clavos, clips y conectores**.
-- **Registros Nacionales de Implantes (Art. 29 RD 192/2023):** Los hospitales del SERGAS comunican telemáticamente los datos de implantación, explantación y seguimiento a los registros nacionales gestionados por la AEMPS y las sociedades científicas (Registro Español de Marcapasos, Registro de DAI, Registro Nacional de Implantes Mamarios — SREIM).
-- **Seguimiento Remoto de Dispositivos Cardioimplantables (`TELEA` y Plataformas de Telemetría):** Las Unidades de Arritmias de los hospitales del SERGAS (CHUAC, CHUS, CHUVI, HULA, CHUO, CHOP, Arquitecto Marcide) combinan las plataformas de monitorización remota de los fabricantes (*CareLink*, *Latitude*, *Home Monitoring*, *Merlin.net*) con la historia clínica **IANUS** y la plataforma **TELEA**, permitiendo detectar de forma precoz en el domicilio del paciente episodios silentes de fibrilación auricular, terapias de choque del DAI, caídas o ascensos bruscos de la impedancia del electrodo (fractura $> 2000\text{ }\Omega$ o rotura de aislamiento $< 200\text{ }\Omega$) y la entrada de la batería en estado **ERI**.
-
-### 5.3. Protocolo de Explantación, Descontaminación y Custodia por Tecnovigilancia en el SERGAS
-- **Gestión de Implantes Explantados por Fallo o Incidente Adverso (`Art. 87 MDR` y `Art. 37 RD 192/2023`):** Cuando en un hospital del SERGAS se explanta una prótesis fracturada, un implante mamario con rotura intracapsular o un generador de marcapasos/DAI con agotamiento prematuro de batería, el dispositivo explantado constituye una **muestra crítica de tecnovigilancia**. El servicio quirúrgico debe descontaminarlo sin emplear autoclaves ni agentes químicos agresivos que alteren la superficie de fractura, custodiarlo debidamente identificado con su UDI, notificar el incidente en el portal **`NotificaPS`** de la AEMPS a través del punto de vigilancia del Área Sanitaria y remitirlo al fabricante bajo cadena de custodia para el análisis metalográfico o electrónico de causa raíz (*Root Cause Analysis*).
-- **Precaución Post-Mortem en Cremación:** Todo generador implantable con batería de litio (marcapasos, DAI, neuroestimuladores, bombas intratecales) **debe ser obligatoriamente explantado antes de la incineración/cremación funeraria**, ya que las altas temperaturas del horno crematorio ($\approx 800\text{–}1000\text{ }^\circ\text{C}$) provocan la **explosión violenta de la carcasa hermética de titanio y de la batería de litio**.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Dispositivo / Norma | Valor / Regla / Parámetro Exacto | Observación Crítica para Examen A1 SERGAS |
 | :--- | :--- | :--- |
@@ -200,10 +153,10 @@ De acuerdo con el **artículo 18 del Reglamento (UE) 2017/745** y el **artículo
 | **Código de Marcapasos NASPE/BWG** | **5 Letras (`1ª-2ª-3ª-4ª-5ª`)** | **1ª:** Cámara Estimulada (`O,A,V,D`) · **2ª:** Cámara Sensada (`O,A,V,D`) · **3ª:** Respuesta (`O,I,T,D`) · **4ª:** Modulación frecuencia (`R`) · **5ª:** Multisitio (`O,A,V,D`). |
 | **Impedancia Normal de Electrodo Cardíaco** | **$R_{\text{lead}} = 300\text{ }\Omega\text{ a }1200\text{ }\Omega$** | • **$R > 2000\text{–}3000\text{ }\Omega$:** Sospecha de **fractura del conductor** o desconexión en el cabezal.<br>• **$R < 200\text{ }\Omega$:** Sospecha de **rotura del aislamiento** interno (cortocircuito). |
 | **Efecto de Imán Clínico sobre MP vs. DAI** | **Protocolo en Quirófano (Electrobisturí)** | • **Sobre Marcapasos:** Conmuta a **modo asíncrono fijo (`VOO`/`DOO`/`AOO`)** (no sensa, evita inhibición por bisturí).<br>• **Sobre DAI:** **Inhibe únicamente las terapias de taquicardia (ATP y choques)** sin alterar el modo de marcapasos antibradicardia. |
-| **Implante Coclear (`ISO 14708-7`)** | **Organización tonotópica en rampa timpánica** | • **Base de la cóclea:** Frecuencias **altas (agudos)**.<br>• **Ápice (helicotrema):** Frecuencias **bajas (graves)**. Sin batería en la parte interna. |
+| **Implante Coclear** | **Organización tonotópica en rampa timpánica** | • **Base de la cóclea:** Frecuencias **altas (agudos)**.<br>• **Ápice (helicotrema):** Frecuencias **bajas (graves)**. Sin batería en la parte interna. |
 | **Etiquetado de Seguridad en RM** | **Norma `ASTM F2503`** | • **MR Safe:** Cuadrado **verde**.<br>• **MR Conditional:** Triángulo **amarillo** (ej. $\text{SAR} \le 2\text{ W/kg}$, $1,5\text{ T}/3\text{ T}$).<br>• **MR Unsafe:** Círculo **rojo** tachado. |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Trampa de la Regla 8 del MDR sobre Implantes de Columna y Tornillos!** Aunque la Regla 8 del Anexo VIII del MDR reclasifica a **Clase III** los implantes de columna vertebral (como las cajas intersomáticas o prótesis de disco cervical/lumbar) y las prótesis articulares de cadera, rodilla y hombro, establece una **excepción literal**: los **tornillos, cuñas, placas y barras** de columna vertebral **se mantienen en Clase IIb**, y además están **exentos de Tarjeta de Implante** según el Art. 18.3 del MDR.
 2. **¡Trampa sobre el efecto del imán sobre un DAI frente a un Marcapasos!** Es una pregunta recurrente en supuestos prácticos quirúrgicos: si un paciente portador de un **DAI (Desfibrilador Automático Implantable)** que además es dependiente de marcapasos entra en quirófano y se le coloca un imán encima del generador, el imán **desactiva los choques de desfibrilación**, pero **NO pasa el marcapasos del DAI a modo asíncrono `VOO`** (a diferencia de lo que ocurre en un marcapasos convencional). Por tanto, el electrobisturí monopolar aún podría inhibir la estimulación antibradicardia del DAI si no se reprograma previamente con el programador de la casa comercial.
 3. **¡Trampa de Resonancia Magnética en pacientes con sistemas cardioimplantables mixtos!** Un paciente cuyo generador de marcapasos es **MR Conditional** pero que conserva en el miocardio un **electrodo antiguo no condicional o un electrodo abandonado/fracturado desconectado** pasa a considerarse globalmente **MR Unsafe / No elegible para RM estándar**, debido a que el cable abandonado actúa como una antena resonante sin carga que experimenta el máximo calentamiento por radiofrecuencia ($B_1$) en su punta distal.

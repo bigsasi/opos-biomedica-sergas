@@ -1,29 +1,8 @@
 # Tema 11 — Protocolos de actuación en resonancia magnética. Seguridad de las exploraciones, usos diagnósticos y terapéuticos de la RM. Reconstrucción y artefactos.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #11 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 03 — Resonancia Magnética, Ultrasonidos, Radioterapia y Medicina Nuclear
-> - **Marco Normativo y Técnico Nuclear:** UNE-EN 60601-2-33 (Modos de funcionamiento Normal, Controlado de Primer Nivel y Segundo Nivel; límites de $B_0$, $dB/dt$ y SAR), ASTM F2503 / ISO/TS 10974 (marcado de implantes `MR Safe`, `MR Conditional`, `MR Unsafe`), *ACR Manual on MR Safety* (Zonas I a IV), Real Decreto 299/2016, Reglamento (UE) 2017/745 (MDR), Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulo Profesional 1588).
-> - **Sistemas y Entorno SERGAS:** Unidades de Resonancia Magnética Diagnóstica, Neurorradiología y RM Terapéutica (HIFU guiado por RM / MRgFUS en CHUS) de las 7 Áreas Sanitarias del SERGAS y GALARIA, formularios electrónicos de cribado de seguridad e integración con marcapasos condicionales en `IANUS`, `SIHGA`/`RIS`, `PACS` y protocolos de seguridad en `XMAO`.
+## 📖 1. Los Tres Campos Electromagnéticos en RM y sus Efectos Biofísicos
 
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 11** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del SERGAS (DOG núm. 67, de 13 de abril de 2026) desarrolla de forma monográfica los protocolos operativos y de seguridad física y clínica en Resonancia Magnética (zonificación ACR, límites normativos IEC de campos estáticos, gradientes y SAR, compatibilidad de implantes activos y pasivos, emergencias médicas y protocolo ante *quench*), las secuencias de pulsos y aplicaciones diagnósticas/terapéuticas avanzadas (incluyendo MRgFUS/HIFU, espectroscopia, difusión/perfusión y RM funcional) y la formulación matemática de la reconstrucción en el **Espacio K**, los métodos de adquisición acelerada y el catálogo exhaustivo de artefactos de imagen.
-
-- **Categorías con solapamiento en el SERGAS (`cruce_temarios_sergas.md`):** `Radiofísica Hospitalaria` | `TS Imagen para el Diagnóstico`
-- **Grado de solapamiento:**
-  - **Total (95%) en Radiofísica Hospitalaria:** Cubre explícitamente la obtención de imágenes, reconstrucción, artefactos, aplicaciones clínicas, espectroscopia, efectos biológicos y seguridad en resonancia magnética.
-  - **Alto (80%) en TS Imagen para el Diagnóstico:** Cubre aplicaciones, indicaciones, estudios y técnicas de exploración con RMN y angioRM, así como sus protocolos de seguridad y artefactos.
-- **Epígrafes equivalentes en otros temarios oficiales del SERGAS:**
-  - **Radiofísica Hospitalaria:** Tema 36 (*Fundamentos de resonancia magnética. Campo magnético e imanes, propiedades magnéticas de la materia. Conducta de un núcleo atómico bajo un campo magnético, excitación y relajación. Obtención de imágenes, artefactos. Aplicaciones clínicas. Espectroscopia. Efectos biológicos y seguridad. Componentes de un equipo de resonancia magnética. Garantía y control de calidad*).
-  - **TS Imagen para el Diagnóstico:** Tema 9 (*Equipamientos de diagnóstico por imagen... Principios de tomografía computerizada y resonancia magnética: fundamentos físicos, aplicaciones e indicaciones. Estudios y técnicas de exploración con TC y RMN*); Tema 10 (*Otras exploraciones radiológicas... angioTAC, angioRM*).
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
-
-### 1.1. Los Tres Campos Electromagnéticos en RM y sus Efectos Biofísicos (`UNE-EN 60601-2-33`)
+### 1.1. Los Tres Campos Electromagnéticos en RM y sus Efectos Biofísicos
 Toda exploración de Resonancia Magnética somete simultáneamente al paciente, a sus dispositivos médicos implantados y al personal sanitario a tres campos físicos de naturaleza y frecuencia radicalmente distintas, cuyos límites de operación están estrictamente regulados por la norma internacional **UNE-EN 60601-2-33**:
 1. **Campo Magnético Estático ($\mathbf{B}_0$, frecuencia $0\text{ Hz}$):** Presente las 24 horas del día, los 365 días del año en los imanes superconductores. Ejerce dos acciones mecánicas sobre objetos y tejidos:
    - **Fuerza de atracción traslacional (**$\mathbf{F}_{\text{tras}} \propto \chi_m V (\mathbf{B}_0 \cdot \nabla)\mathbf{B}_0$** — «Efecto Proyectil o Misil»):** Depende del producto del campo $B_0$ por el **gradiente espacial del campo estático ($dB_0/dr$)**, el cual alcanza su valor máximo **en la boca de entrada del túnel del imán** (no en el isocentro, donde $B_0$ es uniforme y $\nabla B_0 \approx 0$). Acelera violentamente cualquier objeto ferromagnético (botellas de oxígeno de acero, tijeras, carros, sillas, porta-sueros) convirtiéndolo en un proyectil letal a más de $60\text{ km/h}$.
@@ -36,10 +15,10 @@ Toda exploración de Resonancia Magnética somete simultáneamente al paciente, 
    $$\text{SAR} = \frac{\sigma \cdot |\mathbf{E}|^2}{2 \cdot \rho_{\text{tejido}}} \propto B_0^2 \cdot B_1^2 \cdot \text{Ciclo de trabajo}$$
    Además del calentamiento tisular global, el campo de RF es responsable del accidente adverso más frecuente en RM: las **quemaduras térmicas de 2.º y 3.er grado por acoplamiento de antena, ondas estacionarias o formación de bucles conductivos** (*skin-to-skin loops* o contacto con cables).
 
-### 1.2. Niveles de Operación Normativos y Límites de Exposición (`UNE-EN 60601-2-33`)
+### 1.2. Niveles de Operación Normativos y Límites de Exposición
 La norma **UNE-EN 60601-2-33** establece tres modos de funcionamiento en consola para los tres campos físicos (promedio temporal de SAR en cualquier periodo de **$6\text{ minutos}$**):
 
-| Parámetro Regulado (`UNE-EN 60601-2-33`) | Modo de Funcionamiento Normal (Rutinario) | Modo Controlado de Primer Nivel (Requiere confirmación médica) | Modo Controlado de Segundo Nivel (Investigación con Comité Ético) |
+| Parámetro Regulado | Modo de Funcionamiento Normal (Rutinario) | Modo Controlado de Primer Nivel (Requiere confirmación médica) | Modo Controlado de Segundo Nivel (Investigación con Comité Ético) |
 | :--- | :--- | :--- | :--- |
 | **Campo Magnético Estático ($B_0$)** | **$\le 4,0\text{ Teslas}$** | **$4,0\text{ T} < B_0 \le 8,0\text{ Teslas}$** | **$> 8,0\text{ Teslas}$** |
 | **Gradientes Variables ($dB/dt$ — PNS)** | **$\le 80\%$** del umbral mediano de percepción de PNS | **$\le 100\%$** del umbral mediano de PNS | **$> 100\%$** del umbral de PNS |
@@ -53,7 +32,7 @@ La norma **UNE-EN 60601-2-33** establece tres modos de funcionamiento en consola
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. El Espacio K, Codificación Espacial y Reconstrucción por Transformada de Fourier
 
 ### 2.1. El Espacio K, Codificación Espacial y Reconstrucción por Transformada de Fourier
 A diferencia de la Tomografía Computarizada o la Radiografía Digital (donde los detectores registran directamente proyecciones geométricas en el espacio real), en Resonancia Magnética la señal inducida $S(t)$ recogida por la antena receptora representa directamente la **Transformada de Fourier Espacial 2D o 3D** de la densidad de magnetización transversal efectiva $\rho_{\text{ef}}(x,y)$ del corte seleccionado. Definidas las coordenadas de frecuencia espacial (números de onda $k_x, k_y$ en unidades de $\text{ciclos/metro}$ o $\text{m}^{-1}$) como la integral temporal de los gradientes aplicados:
@@ -91,7 +70,7 @@ Para acortar los tiempos de examen en RM sin sacrificar resolución espacial, la
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Familias de Secuencias de Pulsos y Ponderación del Contraste
 
 ### 3.1. Familias de Secuencias de Pulsos y Ponderación del Contraste ($T_1$, $T_2$, $DP$, $T_2^*$)
 El contraste de una secuencia depende de los parámetros extrínsecos programados por el operador (**Tiempo de Repetición $TR$**, **Tiempo de Eco $TE$**, **Tiempo de Inversión $TI$** y **Ángulo de Inclinación $\alpha$**):
@@ -117,7 +96,7 @@ Las cuatro grandes arquitecturas de secuencias clínicas son:
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Catálogo Técnico de Artefactos de RM y Protocolos de Actuación y Seguridad en RM
 
 ### 4.1. Catálogo Técnico de Artefactos de RM: Origen Físico, Identificación y Corrección
 El dominio de las causas físicas y las soluciones de ingeniería/secuencia de los artefactos de RM es uno de los bloques de mayor peso en el examen:
@@ -157,26 +136,13 @@ La gestión de seguridad física y clínica en una unidad de RM se rige internac
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Protocolo Corporativo del SERGAS para Pacientes Portadores de Dispositivos Cardíacos Implantables Activos (DCEI)
-En los complejos hospitalarios de las 7 Áreas Sanitarias del SERGAS, la realización de estudios de RM en pacientes portadores de **marcapasos, desfibriladores automáticos implantables (DAI / ICD) o resincronizadores (TRC)** sigue un circuito multidisciplinar estandarizado entre Radiodiagnóstico, Cardiología (Unidad de Arritmias), Radiofísica e Ingeniería Biomédica registrado en **`IANUS`**:
-1. **Verificación previa en `IANUS` y `SIHGA`:** Se comprueba en la historia clínica electrónica el modelo exacto del generador y de los electrodos endocavitarios (implantados desde hace $> 6\text{ semanas}$ sin cables abandonados ni epicárdicos) y su ficha `MR Conditional` (`ISO/TS 10974`).
-2. **Programación pre-RM en Zona II:** El cardiólogo o enfermero/a experto/a de electrofisiología interroga el dispositivo con el programador telemétrico (fuera de la línea de $5\text{ Gauss}$) y activa el **Modo RM (*MRI SureScan / ProMRI*)**: en pacientes dependientes de marcapasos se programa en **modo asíncrono (`VOO` o `DOO`)** para que los gradientes o la RF no inhiban la estimulación por sobredetección, en pacientes no dependientes en `ODO`/`OVO`, y en los **DAI se desactiva temporalmente la detección de taquiarritmias y terapias de choque** (ya que el campo estático $B_0$ satura el núcleo del transformador de carga de condensadores e impide cargar el choque, o el ruido electromagnético podría inducir descargas inapropiadas).
-3. **Ejecución monitorizada en Zona IV e interrogación post-RM:** Durante toda la exploración en $1,5\text{ T}$ (en Modo Normal con $\text{SAR} \le 2,0\text{ W/kg}$), el paciente permanece monitorizado continuamente con **pulsioximetría de fibra óptica y ECG compatible con RM**, con el desfibrilador externo preparado en Zona III. Finalizada la RM, se reprograma el marcapasos/DAI a sus parámetros basales verificando impedancias de cables y umbrales de captura antes del alta.
-
-### 5.2. Hito Clínico y Tecnológico en el SERGAS: Neurocirugía Funcional sin Incisión mediante `MRgFUS` (HIFU Guiado por RM)
-El **Hospital Clínico Universitario de Santiago de Compostela (CHUS)** fue centro pionero en el Sistema Nacional de Salud en la implantación y uso clínico consolidado del sistema terapéutico de **Ultrasonidos Focalizados de Alta Intensidad Guiados por Resonancia Magnética (`MRgFUS` — *Exablate Neuro* integrado en una RM de $3,0\text{ T}$)** para el tratamiento funcional no invasivo (talamotomía térmica estereotáxica sin abrir el cráneo ni emplear radiación ionizante) del **temblor esencial incapacitante y el temblor parkinsoniano**, integrando la planificación tractográfica DTI previa, la corrección ultrasónica de fase a través del espesor óseo craneal medida en TC y el control de calidad térmico submilimétrico por termometría protónica en RM.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Protocolo / Parámetro | Valor Exacto / Regla / Norma | Punto Crítico para Examen A1 SERGAS |
 | :--- | :--- | :--- |
-| **Isulínea de Seguridad de Campo Estático ($B_0$)** | **$5\text{ Gauss} = \mathbf{0,5\text{ mT}}$** (`UNE-EN 60601-2-33`) | Umbral clásico de exclusión para personas con marcapasos convencionales no condicionales y acceso no controlado |
+| **Isulínea de Seguridad de Campo Estático ($B_0$)** | **$5\text{ Gauss} = \mathbf{0,5\text{ mT}}$** | Umbral clásico de exclusión para personas con marcapasos convencionales no condicionales y acceso no controlado |
 | **Límites de SAR de Cuerpo Entero ($6\text{ min}$)** | Modo Normal: **$\le 2,0\text{ W/kg}$** ($\Delta T \le 0,5\text{ }^\circ\text{C}$)<br>Primer Nivel: **$\le 4,0\text{ W/kg}$** ($\Delta T \le 1,0\text{ }^\circ\text{C}$) | En **cabeza** el límite es siempre **$\le 3,2\text{ W/kg}$**; en embarazadas se opera exclusivamente en **Modo Normal ($\le 2,0\text{ W/kg}$)** |
 | **Las 4 Zonas de Seguridad ACR** | **Zona I** (Público), **Zona II** (*Screening*), **Zona III** (Control restringido), **Zona IV** (Sala del Imán) | Todo objeto ferromagnético se detiene en Zona II; en Zona IV solo entra material **`MR Safe` (cuadrado verde)** o **`MR Conditional` (triángulo amarillo)** |
 | **Expansión del Helio en un *Quench* y Oxímetro** | Relación líquido-gas **$1 : 760$** (a $20\text{ }^\circ\text{C}$) | Alarma de oxímetro ambiental cuando **$\text{O}_2 < 18\text{–}19\%$**; riesgo de asfixia por desplazamiento de $\text{O}_2$ y sobrepresión |
@@ -185,7 +151,7 @@ El **Hospital Clínico Universitario de Santiago de Compostela (CHUS)** fue cent
 | **Secuencias Inversión-Recuperación ($TI$)** | $TI_{\text{nulo}} = T_1 \cdot \ln 2 \approx 0,693 \cdot T_1$ | **STIR** ($TI \approx 150\text{–}170\text{ ms}$ en $1,5\text{ T}$) anula la **grasa**; **FLAIR** ($TI \approx 2.000\text{–}2.500\text{ ms}$) anula el **LCR** |
 | **Desplazamiento Químico Agua-Grasa y Ángulo Mágico** | **$\Delta \delta = 3,5\text{ ppm}$** ($224\text{ Hz}$ en $1,5\text{ T}$; $447\text{ Hz}$ en $3\text{ T}$)<br>Ángulo mágico: **$\theta = 54,74^\circ$** | *Chemical shift* de 1.er tipo aparece en dirección de **frecuencia** (se corrige subiendo el ancho de banda $BW$); *Ghosting* por movimiento aparece siempre en dirección de **fase** |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¿Dónde es máxima la fuerza de atracción traslacional (Efecto Proyectil) de un imán de RM?** **En los bordes o bocas de entrada del túnel del imán**, porque la fuerza traslacional sobre un objeto ferromagnético es proporcional al producto del campo por su gradiente espacial ($F \propto B_0 \cdot \nabla B_0$); en cambio, exactamente en el isocentro del túnel el campo $B_0$ es máximamente homogéneo ($\nabla B_0 = 0$), por lo que allí la fuerza traslacional se anula y es máximo el **par de torsión rotacional ($\tau \propto B_0^2$)**.
 2. **Trampa de examen sobre la dirección de los artefactos en la imagen de RM:**
    - Los **fantasmas por movimiento periódico (*Ghosting* respiratorio, cardíaco o pulsación vascular)** se proyectan **SIEMPRE en la dirección de codificación de fase**, con independencia de si el vaso o la pared abdominal se mueve de arriba abajo o de izquierda a derecha (porque el intervalo temporal entre pasos de fase es de cientos de milisegundos [$TR$], mientras que la lectura de frecuencia dura pocos milisegundos).

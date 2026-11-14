@@ -1,32 +1,6 @@
 # Tema 21 — Ventilación mecánica. Definición y principios físicos de la ventilación mecánica. Modos de la ventilación mecánica. Ventilación invasiva y no invasiva. Ventilación en neonatología. Ventilación en anestesia.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #21 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 05 — Electromedicina de Cuidados Críticos, Quirófano, Ventilación, Anestesia, Monitorización, Endoscopia y Robótica
-> - **Marco Normativo y Técnico Nuclear:** Reglamento (UE) 2017/745 (MDR, Regla 9 y Regla 11 — Clase IIb), Real Decreto 192/2023, Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulos 1586 *Sistemas electromecánicos y de fluidos* y 1589 *Sistemas de monitorización, registro y cuidados críticos*), UNE-EN ISO 80601-2-12 (Equipos de ventilación pulmonar para cuidados críticos), UNE-EN ISO 80601-2-84 / ISO 80601-2-72 (Respiradores para soporte vital domiciliario y VNI), UNE-EN ISO 80601-2-13 (Estaciones de anestesia), ISO 19223 (Ventiladores pulmonares — Vocabulario y semántica de modos), UNE-EN ISO 80601-2-74 (Equipos de humidificación respiratoria)
-> - **Sistemas y Entorno SERGAS:** IANUS, Sistema de información de cuidados críticos y enfermería (GACELA / Centricity / ICCA con integración HL7 `IHE PCD-01`), TELEA (telemonitorización domiciliaria de VNI/CPAP), GMAO corporativo XMAO en las Unidades de Cuidados Intensivos (UCI Adultos, Pediátrica y Neonatal), Reanimación (REA) y Bloques Quirúrgicos de las 7 Áreas Sanitarias del SERGAS
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 21 de la Parte Específica** del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del SERGAS (DOG núm. 67, de 13 de abril de 2026) abarca de forma integral la **ventilación mecánica pulmonar**, estructurándose en los seis bloques explícitos de su enunciado oficial:
-1. **Definición y principios físicos de la ventilación mecánica**: mecánica ventilatoria por presión positiva intermitente (IPPV) frente a fisiología espontánea por presión negativa, ecuación general del movimiento del sistema respiratorio, compliancia estática y dinámica, resistencia de vía aérea, presión de distensión (*Driving Pressure*), constante de tiempo espiratoria ($\tau$) y atrapamiento aéreo (*Auto-PEEP*).
-2. **Arquitectura neumática, fluídica y electrónica de un respirador**: mezcladores proporcionales de $\text{O}_2/\text{Aire}$, turbinas *brushless*, las 3 tecnologías de sensores de flujo ($\dot{V}$), válvulas espiratorias activas, compensación BTPS y compliancia de tubuladuras.
-3. **Modos de la ventilación mecánica**: taxonomía de Chatburn e `ISO 19223` (variables de fase: disparo, límite, ciclado y basal), modos convencionales (VCV, PCV, SIMV, PSV), modos duales (PRVC/VG) y modos avanzados servocontrolados y neurales (APRV/BiLevel, ASV, PAV+, NAVA).
-4. **Ventilación mecánica invasiva (VMI) y no invasiva (VNI)**: circuitos de doble rama frente a rama única con fuga intencional, algoritmos de compensación de fugas e interfaces.
-5. **Ventilación en neonatología**: sensores de flujo proximales en pieza en «Y» de mínimo espacio muerto, nCPAP de flujo variable (efecto Coanda/Benveniste), Volumen Garantizado (VG) y Ventilación de Alta Frecuencia Oscilatoria (VAFO/HFOV).
-6. **Ventilación en anestesia**: diferencias técnicas y termodinámicas entre el respirador de UCI de circuito abierto sin reinhalación y el ventilador de anestesia de circuito circular semicerrado con reinhalación y absorción química de $\text{CO}_2$.
-
-### Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Ingeniero/a Técnico/a**
-- **Grado de solapamiento:** **Alto (75%)**: Incluye explícitamente «Equipos de ventilación» e instalaciones/equipos de UCI, reanimación y bloque quirúrgico.
-- **Epígrafes equivalentes:**
-  - • Tema 47. Monitorización. Desfibriladores. Bisturís. Equipos de ventilación.
-  - • Tema 46. El bloque quirúrgico: instalaciones y equipos. Circuitos. UCIs y unidades de reanimación post-anestésica: instalaciones y equipos. Inspección y mantenimiento.
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Definición de Ventilación Mecánica y la Ecuación del Movimiento del Sistema Respiratorio
 
 ### 1.1. Definición de Ventilación Mecánica y la Ecuación del Movimiento del Sistema Respiratorio
 La **ventilación mecánica (VM)** es un procedimiento de sustitución temporal (total o parcial) de la función ventilatoria externa mediante un generador electromecánico y neumático capaz de establecer un gradiente de presión entre la apertura de la vía aérea ($P_{\text{aw}}$) y los alvéolos pulmonares ($P_{\text{alv}}$) para garantizar el intercambio gaseoso alveolar (oxigenación arterial y eliminación de $\text{CO}_2$) y reducir el trabajo respiratorio metabólico del paciente crítico o anestesiado.
@@ -72,17 +46,17 @@ En un paciente en **ventilación controlada pasiva** (bajo sedorrelajación neur
 
 ### 1.2. Marco Normativo de los Equipos de Ventilación Mecánica
 - **Reglamento (UE) 2017/745 (MDR)**: Según el Anexo VIII, **Regla 9** (productos activos terapéuticos destinados a administrar o intercambiar energía de forma potencialmente peligrosa, como los ventiladores pulmonares de soporte vital) y **Regla 11** (software embebido en lazo cerrado que toma decisiones vitales), los respiradores de cuidados críticos, anestesia y neonatología se clasifican como **Clase IIb**.
-- **Normas Particulares de Seguridad y Funcionamiento Esencial (`ISO / IEC 80601`)**:
-  - **`UNE-EN ISO 80601-2-12`**: Requisitos particulares para **equipos de ventilación pulmonar para cuidados críticos**. Exige alarmas de prioridad alta (`IEC 60601-1-8`) ante fallo de suministro de ambos gases o energía eléctrica, presión en vía aérea alta/baja, volumen espirado bajo, apnea y obstrucción del circuito; válvula antisofocación de apertura subatmosférica (que permita al paciente inspirar aire ambiente si el respirador queda totalmente sin energía eléctrica ni neumática); válvula mecánica de alivio de sobrepresión máxima (típicamente limitada a $\le 80\text{–}125\text{ cmH}_2\text{O}$) y batería interna de respaldo con autonomía mínima **$\ge 30\text{–}60\text{ minutos}$** (habitualmente $1\text{ a }4\text{ h}$ en modelos actuales).
+- **Normas Particulares de Seguridad y Funcionamiento Esencial**:
+  - **`UNE-EN ISO 80601-2-12`**: Requisitos particulares para **equipos de ventilación pulmonar para cuidados críticos**. Exige alarmas de prioridad alta ante fallo de suministro de ambos gases o energía eléctrica, presión en vía aérea alta/baja, volumen espirado bajo, apnea y obstrucción del circuito; válvula antisofocación de apertura subatmosférica (que permita al paciente inspirar aire ambiente si el respirador queda totalmente sin energía eléctrica ni neumática); válvula mecánica de alivio de sobrepresión máxima (típicamente limitada a $\le 80\text{–}125\text{ cmH}_2\text{O}$) y batería interna de respaldo con autonomía mínima **$\ge 30\text{–}60\text{ minutos}$** (habitualmente $1\text{ a }4\text{ h}$ en modelos actuales).
   - **`UNE-EN ISO 80601-2-84` (que refunde `ISO 80601-2-72` e `ISO 80601-2-79`/`2-80`)**: Ventiladores para el entorno de asistencia sanitaria domiciliaria y soporte ventilatorio no invasivo.
   - **`ISO 19223`**: Estandariza internacionalmente la terminología y codificación semántica de los modos ventilatorios para eliminar la ambigüedad de los nombres comerciales entre fabricantes.
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Subsistema Neumático y de Mezcla de Gases de un Respirador de Cuidados Críticos
 
 ### 2.1. Subsistema Neumático y de Mezcla de Gases de un Respirador de Cuidados Críticos
-De acuerdo con los **Módulos 1586 y 1589** del currículo oficial (`RD 838/2015` y `Orden EFP/1216/2019`), un respirador de UCI se divide internamente en un **bloque neumático inspiratorio (zona limpia)**, un **bloque neumático espiratorio (zona contaminada desmontable y esterilizable en autoclave a $134\text{ }^\circ\text{C}$)** y una **unidad electrónica de control por microprocesador redundante** (arquitectura maestro-supervisor *Control / Monitor CPU*):
+De acuerdo con los **Módulos 1586 y 1589** del currículo oficial, un respirador de UCI se divide internamente en un **bloque neumático inspiratorio (zona limpia)**, un **bloque neumático espiratorio (zona contaminada desmontable y esterilizable en autoclave a $134\text{ }^\circ\text{C}$)** y una **unidad electrónica de control por microprocesador redundante** (arquitectura maestro-supervisor *Control / Monitor CPU*):
 
 1. **Alimentación Neumática y Mezclador Proporcional (*Electronic Blender*)**:
    - **Respiradores neumáticos de alta presión**: Se conectan a las tomas murales hospitalarias (`UNE-EN ISO 9170` / `ISO 7396-1`) mediante latiguillos con racores **NIST** de **Oxígeno ($\text{O}_2$, blanco)** y **Aire Medicinal (blanco/negro)** a una presión nominal de **$3,5\text{ a }5,0\text{ bar}$ ($350\text{ a }500\text{ kPa}$)**. A la entrada incorporan filtros coalescentes atrapa-agua, válvulas antirretorno y reguladores de presión de primera etapa que estabilizan la presión interna a $\approx 2,0\text{–}2,5\text{ bar}$.
@@ -111,7 +85,7 @@ De acuerdo con los **Módulos 1586 y 1589** del currículo oficial (`RD 838/2015
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Taxonomía de las 4 Variables de Fase (Chatburn / `ISO 19223`) y Modos Convencionales vs. Avanzados
 
 ### 3.1. Taxonomía de las 4 Variables de Fase (Chatburn / `ISO 19223`) y Modos Convencionales vs. Avanzados
 Para clasificar cualquier modo ventilatorio desde la ingeniería biomédica se analizan las **4 variables de fase** del ciclo respiratorio:
@@ -163,7 +137,7 @@ Para clasificar cualquier modo ventilatorio desde la ingeniería biomédica se a
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Humidificación Activa vs. Pasiva (`UNE-EN ISO 80601-2-74`) y Nebulización en el Circuito
 
 ### 4.1. Humidificación Activa vs. Pasiva (`UNE-EN ISO 80601-2-74`) y Nebulización en el Circuito
 Al intubar al paciente se puentean las fosas nasales y la nasofaringe, perdiéndose el acondicionamiento fisiológico del aire inspirado. La norma **`UNE-EN ISO 80601-2-74`** regula los sistemas de humidificación respiratoria:
@@ -171,15 +145,15 @@ Al intubar al paciente se puentean las fosas nasales y la nasofaringe, perdiénd
 - **Humidificación Activa Servocontrolada (Cámara Calefactada con Hilo Caliente en Rama Inspiratoria)**: Hace pasar el gas inspiratorio sobre una cámara de agua estéril calentada y mantiene la temperatura a lo largo de la tubuladura mediante una resistencia interna (*heated wire*) para evitar la condensación, entregando el gas a **$37\text{ }^\circ\text{C}$ y $100\%\text{ HR}$ ($44\text{ mg H}_2\text{O/L}$)**.
 - **Nebulización de aerosoles en VM**: Los **nebulizadores de malla vibrante piezoeléctrica (*Vibrating Mesh Nebulizers*, ej. *Aerogen*)** generan microgotas de $1\text{–}5\text{ }\mu\text{m}$ mediante una placa microporosa que vibra a $\approx 128\text{ kHz}$ **sin añadir flujo extra de gas al circuito**, por lo que no alteran el volumen corriente ni el ciclado ni las alarmas del respirador (a diferencia de los nebulizadores *jet* neumáticos que introducen $6\text{–}8\text{ L/min}$ adicionales en el circuito).
 
-### 4.2. Verificación Metrológica, Calibración y Mantenimiento Preventivo (`Módulo 1589` y `UNE-EN 62353`)
+### 4.2. Verificación Metrológica, Calibración y Mantenimiento Preventivo
 Los respiradores de cuidados críticos constituyen equipos de **Soporte Vital (Riesgo Máximo)**. En el método de priorización de **Fennigkoh y Smith**, su Número de Gestión de Equipamiento es el máximo posible:
 $$\text{EM} = \text{Función (Soporte Vital: } 10\text{)} + \text{Riesgo Físico (Muerte potencial: } 5\text{)} + \text{Mantenimiento Requerido (Alto/Neumático: } 5\text{)} = 20$$
 exigiendo inclusión al $100\%$ en el plan de mantenimiento preventivo con periodicidad **semestral o anual** (según horas de funcionamiento, típicamente cada $3.000\text{–}5.000\text{ h}$ o $12\text{ meses}$):
 
-1. **Instrumentación de Patrón Metrológico (`Módulo 1589`)**:
+1. **Instrumentación de Patrón Metrológico**:
    - **Analizador de Flujo y Ventilación Certificado** (p. ej. *Fluke Biomedical VT650 / VT900A*, *IMT Analytics Citrex H4/H5* o *PF-300*) capaz de medir simultáneamente flujo bidireccional de alta precisión ($\pm 1,5\%$), volumen integrado en condiciones ATPD/BTPS, presiones alta/baja/diferencial, tiempos de fase ($T_I, T_E, I:E, f$), $\text{FiO}_2$ y humedad/temperatura del gas.
    - **Pulmón de Prueba Calibrado (*Test Lung*, ej. *Michigan Instruments Dual Adult TTL* o *IngMar ASL 5000*)** con ajuste independiente de compliancias estáticas calibradas ($C = 10, 20, 50\text{ mL/cmH}_2\text{O}$) y resistencias parabólicas/lineales ($R_5, R_{20}, R_{50}\text{ cmH}_2\text{O/(L/s)}$).
-   - **Analizador de Seguridad Eléctrica (`UNE-EN 62353`)** para verificar la resistencia de tierra de protección ($\le 0,2\text{ }\Omega$) y las corrientes de fuga de equipo y de partes aplicables.
+   - **Analizador de Seguridad Eléctrica** para verificar la resistencia de tierra de protección ($\le 0,2\text{ }\Omega$) y las corrientes de fuga de equipo y de partes aplicables.
 2. **Protocolo de Verificación Funcional y Preventiva**:
    - Sustitución del kit preventivo de elastómeros, membranas de la válvula espiratoria, filtros coalescentes de entrada de alta presión, filtro bacteriológico/HEPA inspiratorio, celda galvánica de $\text{O}_2$ (si procede) y verificación de capacidad real de descarga de las baterías internas.
    - Ejecución de la autocomprobación técnica (*Extended Self-Test* — EST): estanqueidad del circuito interno (fuga $< 30\text{–}50\text{ mL/min}$ a $60\text{ cmH}_2\text{O}$), calibración de cero y ganancia de los transductores de presión, linealización de las servoválvulas proporcionales y de los sensores de flujo inspiratorio y espiratorio.
@@ -187,25 +161,9 @@ exigiendo inclusión al $100\%$ en el plan de mantenimiento preventivo con perio
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Integración de los Respiradores en las UCIs del SERGAS (`IANUS`, `GACELA` e `IHE PCD-01`)
-En las Unidades de Cuidados Intensivos (Adultos, Pediátricos y Neonatales), Unidades de Reanimación Posquirúrgica (REA) y Unidades de Cuidados Respiratorios Intermedios (UCRI) de los hospitales de las **7 Áreas Sanitarias del SERGAS**:
-1. **Integración automática de datos ventilatorios en la Historia Clínica Electrónica (`IANUS` / Sistemas Departamentales de Críticos)**:
-   - Los respiradores de cabecera de cama (p. ej. *Maquet Servo-u / Servo-i*, *Dräger Evita V600/V800 / Babylog VN800*, *Hamilton C6/G5*) exportan en tiempo real a través de su puerto serie RS-232/Ethernet y del concentrador de cabecera de cama (*Bedside Connectivity Concentrator* o pasarela del monitor multiparamétrico) tanto los **parámetros pautados** ($V_T, f, \text{PEEP}, \text{FiO}_2, \Delta P_{\text{soporte}}$) como los **parámetros medidos de mecánica pulmonar** ($P_{\text{pico}}, P_{\text{plat}}, P_{\text{media}}, C_{\text{st}}, R_{\text{aw}}, V_E, \text{Auto-PEEP}$) y las alarmas activas.
-   - La transmisión hacia el servidor de integración del SERGAS se realiza conforme al marco técnico **`IHE Patient Care Device (PCD)`**, transacción **`PCD-01` (*Communicate PCD Data*)** mediante mensajería **HL7 v2.6 (`ORU^R01`)** utilizando la nomenclatura semántica normalizada **`ISO/IEEE 11073-10101`**, volcando automáticamente las gráficas horarias de enfermería y medicina intensiva sin errores de transcripción manual.
-2. **Telemonitorización Domiciliaria de VNI y CPAP en `TELEA`**:
-   - En el ámbito ambulatorio de los Servicios de Neumología del SERGAS, los equipos domiciliarios de CPAP (apnea obstructiva del sueño) y VNI domiciliaria (pacientes con ELA, distrofias neuromusculares, cifoescoliosis o EPOC hipercápnico crónico) disponen de módem celular seguro e integración con la plataforma corporativa **`TELEA`** (*Teleasistencia Domiciliaria del SERGAS*), permitiendo monitorizar a distancia las **horas de adherencia reales de uso**, la **fuga no intencional en $\text{L/min}$**, el **Índice de Apnea-Hipopnea residual (IAH)** y las descompensaciones precoces del volumen minuto o de la frecuencia respiratoria basal.
-
-### 5.2. Gestión del Parque de Ventilación Mecánica en `XMAO` y Planes de Contingencia
-- Todos los respiradores de cuidados críticos, transporte intrahospitalario/interhospitalario (061 Galicia), neonatales y de VNI están inventariados en **`XMAO`** con trazabilidad de número de serie, UDI, versión de firmware, fecha de caducidad de celdas de $\text{O}_2$ y baterías, e historial de informes metrológicos `UNE-EN 62353` / `ISO 80601-2-12`.
-- Como lección aprendida en la ingeniería hospitalaria del SERGAS, el dimensionamiento de las redes de gases medicinales (`ISO 7396-1`) de las UCIs y UCRIs contempla el **caudal simultáneo máximo de diseño** (considerando que los equipos de VNI con fuga y la oxigenoterapia de alto flujo con cánula nasal —HFNC, que llega a consumir $40\text{–}60\text{ L/min}$ por cama— multiplican por tres la demanda instantánea de oxígeno líquido del tanque criogénico y de los evaporadores atmosféricos respecto a la ventilación invasiva convencional).
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Parámetro / Ecuación / Norma | Fórmula / Cifra Exacta de Examen | Interpretación Clínica y de Ingeniería Biomédica |
 | :--- | :--- | :--- |
@@ -219,7 +177,7 @@ En las Unidades de Cuidados Intensivos (Adultos, Pediátricos y Neonatales), Uni
 | **Sensor de flujo en Neonatología** | **Proximal en la pieza en «Y»** (espacio muerto **$< 0,9\text{ mL}$**) | Imprescindible para medir $V_T$ de $2\text{ a }20\text{ mL}$ descontando la compliancia del circuito. |
 | **Normas ISO/IEC de Ventilación** | **`ISO 80601-2-12`** (Críticos) · **`ISO 80601-2-84`** (VNI/Domicilio) · **`ISO 19223`** (Modos) | Clasificación MDR **Clase IIb**; tolerancia metrológica de volumen corriente típicamente $\pm 10\%$. |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Diagnóstico diferencial en el respirador entre un problema Resistivo y un problema Elástico (¡Supuesto fijo de examen!)**:
    - Si en un paciente en VCV se dispara la alarma de **Presión Pico Alta ($P_{\text{pico}}\uparrow$)** pero al hacer una pausa teleinspiratoria la **Presión Meseta permanece normal ($P_{\text{plat}} = \text{normal}$, aumentando el gradiente $P_{\text{pico}} - P_{\text{plat}}$)**, el problema es **exclusivamente RESISTIVO** ($R_{\text{aw}}\uparrow$: broncoespasmo, tapón de moco en el tubo endotraqueal, mordedura del tubo o filtro HME saturado de agua).
    - Si en cambio suben **tanto la Presión Pico ($P_{\text{pico}}\uparrow$) como la Presión Meseta ($P_{\text{plat}}\uparrow$)** manteniendo constante la diferencia $P_{\text{pico}} - P_{\text{plat}}$, el problema es **ELÁSTICO / DE COMPLIANCIA** ($C_{\text{st}}\downarrow$: neumotórax a tensión, intubación selectiva del bronquio principal derecho, atelectasia masiva, edema agudo de pulmón o evolución a SDRA).

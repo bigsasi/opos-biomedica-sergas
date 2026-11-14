@@ -1,25 +1,5 @@
 # Tema 42 — Codificación sanitaria e interoperabilidad. Estándares y clasificaciones (CIAP2, CIE-10, SNOMED CT) para el uso clínico.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #42 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 07 — Salud Digital, Sistemas Corporativos, Interoperabilidad, HCE, Analítica, IoMT, Citación y Logística (`💎 Núcleo Diamante · Fase 1`)
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 69/2015, de 6 de febrero (`RAE-CMBD` y obligatoriedad oficial de **`CIE-10-ES Diagnósticos y Procedimientos`**); Real Decreto 1093/2010 (`HCDSNS` y adopción de **`SNOMED CT`**, `CIE` y `LOINC` como estándares semánticos del SNS); Real Decreto 4/2010 (`Esquema Nacional de Interoperabilidad — ENI`); Reglamento (UE) 2017/745 (`MDR`, Art. 26 sobre la **Nomenclatura Europea de Productos Sanitarios `EMDN`**); Orden EFP/1216/2019 (Módulo Profesional 1592); Estándares internacionales **`WONCA CIAP-2` (`ICPC-2`)**, **`OMS CIE-10` / `CIE-10-ES` (`ICD-10-CM` e `ICD-10-PCS`)**, **`SNOMED CT`** (*SNOMED International*), **`LOINC`**, **`ATC`** y **`EMDN` / `GMDN`**.
-> - **Sistemas y Entorno SERGAS:** Servidor Terminológico Corporativo del SERGAS, `IANUS 5` (codificación `CIAP-2` en la Hoja de Problemas de Atención Primaria y `SNOMED CT` / `CIE-10-ES` en HCE), Unidades de Codificación de los `SADC` hospitalarios (`SIHGA` / `RAE-CMBD`), Sistemas de Información de Laboratorio (`LIS` con `LOINC`), `SILICON` / `e-Receita` (`ATC`) y catalogación de activos y suministros biomédicos en `XMAO` y `LOGAS` (`EMDN`/`GMDN`).
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose de Subepígrafes según Publicación Oficial del DOG (Resolución de 13/04/2026)
-El presente tema constituye el fundamento de la **interoperabilidad semántica** en salud digital e ingeniería biomédica. Mientras que el Tema 39 analiza los protocolos de transporte y sintaxis de mensajería (`HL7`, `DICOM`, `IHE`), el Tema 42 estudia cómo representar de forma computable, normalizada y sin ambigüedad el **significado clínico** de los diagnósticos, síntomas, procedimientos quirúrgicos y diagnósticos, observaciones de laboratorio, fármacos y dispositivos médicos a través de tres grandes sistemas nucleares exigidos expresamente en el epígrafe (**`CIAP-2`**, **`CIE-10` / `CIE-10-ES`** y **`SNOMED CT`**), complementados por los vocabularios específicos de dominio (**`LOINC`**, **`ATC`** y **`EMDN/GMDN`**) y la arquitectura de **Servidores Terminológicos**.
-
-### 0.2. Cruce Verificado 1:1 con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-
-| Categorías con las que coincide | Epígrafes Equivalentes en Otras Convocatorias del SERGAS | Grado de Solapamiento y Enfoque de Tribunal |
-| :--- | :--- | :--- |
-| **Grupo Técnico / Gestión TIC** | • **TIC Superior (A1):** Tema 25. Interoperabilidad en el entorno sanitario. Estándares tecnológicos en el ámbito sanitario: DICOM, HL7, CDA, IHE, CEN TC/251, AEN/CTN 139, IEEE Continua Alliance. Implementación de mensajería HL7 sobre buses de integración.<br>• **TIC Gestión (A2):** Tema 17. Interoperabilidad en el entorno sanitario. Estándares tecnológicos en el ámbito sanitario: DICOM, HL7, CDA, IHE, CEN TC/251, AEN/CTN 139, IEEE Continua Alliance. Implementación de mensajería HL7 sobre buses de integración.<br>• **TIC Especialista (C1):** Tema 12. Interoperabilidad en el entorno sanitario. Estándares tecnológicos en el ámbito sanitario: DICOM, HL7, CDA, IHE, CEN TC/251, AEN/CTN 139, IEEE Continua Alliance... | **Alto (80%)**: Cubre la capa de interoperabilidad semántica en el entorno sanitario y el dominio técnico de las clasificaciones clínicas y terminologías de referencia (`CIAP-2`, `CIE-10-ES`, `SNOMED CT`, `LOINC`). |
-
----
-
 ## 📖 1. Fundamentos de Codificación Sanitaria, Interoperabilidad Semántica y Sistemas de Organización del Conocimiento (`KOS`)
 
 ### 1.1. Clasificaciones Estadísticas vs. Nomenclaturas Multiaxiales vs. Ontologías Clínicas
@@ -49,7 +29,7 @@ En las arquitecturas modernas de Historia Clínica Electrónica (`UNE-EN ISO 136
 ## ⚙️ 2. Clasificaciones Clínicas en Atención Primaria y Especializada: `CIAP-2` y `CIE-10-ES` (Diagnósticos y Procedimientos)
 
 ### 2.1. `CIAP-2` (*Clasificación Internacional de la Atención Primaria*, 2.ª Edición de la `WONCA`)
-En Atención Primaria, gran parte de las consultas no finalizan en el primer contacto con un diagnóstico anatomopatológico o etiológico cerrado (como exige la CIE-10), sino que se atienden por **síntomas indiferenciados** (*tos*, *mareo*, *dolor abdominal*, *fiebre*), por actividades preventivas o por motivos administrativos. Para responder a esta realidad clínica, el Comité Internacional de Clasificación de la **`WONCA` (*World Organization of National Colleges, Academies and Academic Associations of General Practitioners/Family Physicians*)** desarrolló la **`CIAP-2` (`ICPC-2` — *International Classification of Primary Care*)**, que es el estándar de codificación de los **Episodios y de la Hoja de Problemas en Atención Primaria del SERGAS (`IANUS`)** y de la base nacional **`BDCAP`**:
+En Atención Primaria, gran parte de las consultas no finalizan en el primer contacto con un diagnóstico anatomopatológico o etiológico cerrado (como exige la CIE-10), sino que se atienden por **síntomas indiferenciados** (*tos*, *mareo*, *dolor abdominal*, *fiebre*), por actividades preventivas o por motivos administrativos. Para responder a esta realidad clínica, el Comité Internacional de Clasificación de la **`WONCA` (*World Organization of National Colleges, Academies and Academic Associations of General Practitioners/Family Physicians*)** desarrolló la **`CIAP-2` (`ICPC-2` — *International Classification of Primary Care*)**, que es el estándar de codificación de los **Episodios y de la Hoja de Problemas en Atención Primaria del servicio de salud (`HCE`)** y de la base nacional **`BDCAP`**:
 
 1. **Filosofía Orientada al Episodio de Atención:** Permite codificar los tres elementos de un episodio: **1) La Razón o Motivo de Consulta (`RFE` — *Reason For Encounter*)** expresada por el paciente, **2) El Proceso de Atención o Intervención** realizado por el profesional, y **3) El Problema de Salud o Diagnóstico** evaluado.
 2. **Estructura Biaxial Alfanumérica de 3 Caracteres (`1 Letra + 2 Dígitos Numéricos`):**
@@ -137,7 +117,7 @@ Toda la arquitectura de `SNOMED CT` se sustenta sobre **3 Componentes Nucleares*
 2. **Componente 2 — Descripciones (*Descriptions*):**
    - Vinculan términos legibles por humanos en cada idioma o dialecto con un `SCTID` de Concepto. Cada concepto posee múltiples descripciones clasificadas en tres tipos:
      - **Nombre Completamente Especificado (`FSN` — *Fully Specified Name*):** Descripción única y libre de toda ambigüedad que termina siempre con una **etiqueta semántica entre paréntesis (*Semantic Tag*)** que indica su jerarquía (p. ej., `Apendicectomía (procedimiento)` vs. `Apendicitis (trastorno)` vs. `Estructura del apéndice (estructura corporal)`).
-     - **Término Preferido (*Preferred Term*):** El término clínico habitual recomendado para mostrar en la interfaz de la HCE (`IANUS`) en un idioma concreto.
+     - **Término Preferido (*Preferred Term*):** El término clínico habitual recomendado para mostrar en la interfaz de la HCE (`HCE`) en un idioma concreto.
      - **Sinónimos Aceptables (*Acceptable Synonyms*):** Todas las variantes léxicas, acrónimos y términos equivalentes por los que el médico puede buscar en el buscador de la HCE, apuntando todos al mismo `SCTID`.
 3. **Componente 3 — Relaciones (*Relationships*):**
    - Son tripletas formales dirigidas **`(Concepto Origen — Tipo de Relación — Concepto Destino)`** que definen lógicamente cada concepto:
@@ -168,7 +148,7 @@ Para completar el ecosistema de interoperabilidad semántica en el hospital, `SN
      5. **Tipo de Escala (*Scale*):** Cuantitativa numérica (`Qn`), Ordinal (`Ord`: positivo/negativo, `1+`/`2+`), Nominal (`Nom`: cultivo taxonómico) o Narrativa (`Nar`: texto de informe).
      6. **Método (opcional, solo cuando altera la interpretación clínica):** Inmunoensayo, PCR en tiempo real, tira reactiva POCT, auscultación vs. arterial invasiva.
 2. **`ATC` (*Anatomical Therapeutic Chemical Classification System* — OMS):**
-   - Estándar para codificar principios activos y medicamentos (utilizado en **`SILICON`**, **`e-Receita`** y **`BDCAP`**). Tiene una estructura jerárquica alfanumérica de **5 Niveles y 7 Caracteres**:
+   - Estándar para codificar principios activos y medicamentos (utilizado en **`sistema de prescripción y farmacia hospitalaria`**, **`e-Receita`** y **`BDCAP`**). Tiene una estructura jerárquica alfanumérica de **5 Niveles y 7 Caracteres**:
      - **Nivel 1 (1 Letra):** Grupo Anatómico Principal (14 grupos: `A` Digestivo/Metabolismo, `B` Sangre, `C` Cardiovascular, `J` Antiinfecciosos sistémicos, `L` Antineoplásicos/Inmunomoduladores, `N` Sistema Nervioso, `R` Respiratorio...).
      - **Nivel 2 (2 Números):** Subgrupo Terapéutico Principal.
      - **Nivel 3 (1 Letra):** Subgrupo Farmacológico.
@@ -176,7 +156,7 @@ Para completar el ecosistema de interoperabilidad semántica en el hospital, `SN
      - **Nivel 5 (2 Números):** Sustancia Química / Principio Activo concreto (p. ej., **`N02BE01`** = *Paracetamol*; **`C09AA05`** = *Ramipril*). Se complementa con la **DDD (*Dosis Diaria Definida*)** como unidad técnica de medida de consumo farmacéutico.
 3. **Nomenclaturas Específicas de Productos Sanitarios y Equipamiento Biomédico (`EMDN` vs. `GMDN` — ¡Pregunta clave para Ingeniero Biomédico!):**
    - **`EMDN` (*European Medical Device Nomenclature* — Nomenclatura Europea de Productos Sanitarios):** Establecida por la Comisión Europea en cumplimiento del **Artículo 26 del Reglamento (UE) 2017/745 (`MDR`) y Art. 23 del `IVDR 2017/746`** para el registro obligatorio de todos los productos sanitarios y de diagnóstico *in vitro* en la base de datos europea **`EUDAMED`** vinculada al **`UDI-DI`**. Está basada en la clasificación italiana **`CND` (*Classificazione Nazionale dei Dispositivi medici*)** y es de acceso público y gratuito. Tiene una **estructura jerárquica alfanumérica en árbol de hasta 7 niveles**: el **1.º nivel es una Letra de Categoría** (`A` Dispositivos de administración/extracción, `B` Hematología, **`C` Sistema cardiocirculatorio**, `J` Implantes activos, **`P` Dispositivos protésicos e implantables**, `W` Diagnóstico in vitro, **`Z` Equipamiento sanitario y electromédico de diagnóstico, terapia y laboratorio**), seguida de pares de dígitos de Grupo y Tipos sucesivos (hasta 13 caracteres).
-   - **`GMDN` (*Global Medical Device Nomenclature* — Norma `ISO 15225`):** Nomenclatura internacional de términos preferidos de 5 dígitos numéricos utilizada históricamente por agencias como la FDA, AEMPS (alertas de vigilancia) y en catálogos de **GMAO / `XMAO`** para clasificar familias de equipamiento electromédico.
+   - **`GMDN` (*Global Medical Device Nomenclature* — Norma `ISO 15225`):** Nomenclatura internacional de términos preferidos de 5 dígitos numéricos utilizada históricamente por agencias como la FDA, AEMPS (alertas de vigilancia) y en catálogos de **GMAO / `GMAO`** para clasificar familias de equipamiento electromédico.
 
 ---
 
@@ -186,43 +166,29 @@ Para completar el ecosistema de interoperabilidad semántica en el hospital, `SN
 
 | Estándar / Clasificación | Organismo Mantenedor | Ámbito Principal de Uso en España / SERGAS | Arquitectura y Formato del Código | Propósito Nuclear |
 | :--- | :--- | :--- | :--- | :--- |
-| **`CIAP-2` (`ICPC-2`)** | **`WONCA`** | **Atención Primaria** (`IANUS` Hoja de Problemas y **`BDCAP`**). | **Biaxial de 3 caracteres (`1 Letra + 2 Dígitos`)**: 17 capítulos anatómicos $\times$ 7 componentes (`01–29` síntomas, `30–69` procesos, `70–99` enfermedades). | Clasificar **Episodios de Atención** (motivos de consulta, procesos y problemas de salud en AP). |
+| **`CIAP-2` (`ICPC-2`)** | **`WONCA`** | **Atención Primaria** (`HCE` Hoja de Problemas y **`BDCAP`**). | **Biaxial de 3 caracteres (`1 Letra + 2 Dígitos`)**: 17 capítulos anatómicos $\times$ 7 componentes (`01–29` síntomas, `30–69` procesos, `70–99` enfermedades). | Clasificar **Episodios de Atención** (motivos de consulta, procesos y problemas de salud en AP). |
 | **`CIE-10-ES Diagnósticos`** | **OMS / Ministerio de Sanidad** (`ICD-10-CM`) | **Atención Hospitalaria / Especializada** (**`RAE-CMBD`** `RD 69/2015`, urgencias, mortalidad). | **Monoaxial de `3 a 7` caracteres alfanuméricos** (1.º letra, punto tras el 3.º, lateralidad, comodín **`X`** y 7.º carácter de episodio `A`, `D`, `S`). | Estadística de morbilidad/mortalidad, casuística **`APR-GRD`** y estratificación **`GMA`**. |
 | **`CIE-10-ES Procedimientos`** | **Ministerio de Sanidad** (`ICD-10-PCS`) | **Atención Hospitalaria / Especializada** (**`RAE-CMBD`** Quirófano, Intervencionismo, Imagen, RT). | **Multiaxial de exactamente `7` caracteres alfanuméricos** ($34$ valores/posición, **sin `I` ni `O`**). 16 secciones (`0` MQ, `B` Imagen, `C` MN, `D` RT, `X` Nueva Tec.). | Codificación exhaustiva de procedimientos, abordajes, modalidades de imagen y **dispositivos implantados (Posición 6)**. |
-| **`SNOMED CT`** | **`SNOMED International`** + CNR España | **Historia Clínica Electrónica (`IANUS`, `HCDSNS`, `MyHealth@EU`)** e informes estructurados. | **Ontología polijerárquica** con **`SCTID`** ($6\text{–}18$ dígitos): **Conceptos** (19 jerarquías), **Descripciones** (`FSN` + sinónimos) y **Relaciones** (`Es un` + atributos). | **Terminología clínica de referencia** en el punto de atención, pre/post-coordinación y soporte a la decisión (`CDSS`). |
+| **`SNOMED CT`** | **`SNOMED International`** + CNR España | **Historia Clínica Electrónica (`HCE`, `HCDSNS`, `MyHealth@EU`)** e informes estructurados. | **Ontología polijerárquica** con **`SCTID`** ($6\text{–}18$ dígitos): **Conceptos** (19 jerarquías), **Descripciones** (`FSN` + sinónimos) y **Relaciones** (`Es un` + atributos). | **Terminología clínica de referencia** en el punto de atención, pre/post-coordinación y soporte a la decisión (`CDSS`). |
 | **`LOINC`** | **Regenstrief Institute** | **Laboratorio (`LIS`)**, Microbiología, Constantes Vitales (`IHE PCD`) y secciones `CDA`. | Código numérico con guion (`NNNNN-N`) y nombre formal de **6 ejes separados por `:`** (*Analito:Propiedad:Tiempo:Muestra:Escala:Método*). | Identificar inequívocamente la **prueba u observación medida** («la pregunta»). |
-| **`ATC`** | **OMS** (*WHOCC*) | **Farmacia Hospitalaria (`SILICON`)**, Receta Electrónica (**`e-Receita`**) y `BDCAP`. | **Jerárquico de 5 niveles y `7` caracteres** (`L NN L L NN`: Anatómico, Terapéutico, Farmacológico, Químico, Principio Activo). | Clasificación farmacológica y estudios de utilización de medicamentos (**`DDD`**). |
-| **`EMDN` / `GMDN`** | **Comisión Europea (`MDR`)** / GMDN Agency | **`EUDAMED`**, compras/logística (**`LOGAS`**) e inventario biomédico (**`XMAO`**). | **`EMDN`**: árbol alfanumérico de hasta 7 niveles (`Z...` equipos electromédicos, `P`/`J` implantes). **`GMDN`**: código numérico de 5 dígitos. | Catalogación regulatoria, vigilancia y trazabilidad de **productos sanitarios y equipos biomédicos**. |
+| **`ATC`** | **OMS** (*WHOCC*) | **Farmacia Hospitalaria (`sistema de prescripción y farmacia hospitalaria`)**, Receta Electrónica (**`e-Receita`**) y `BDCAP`. | **Jerárquico de 5 niveles y `7` caracteres** (`L NN L L NN`: Anatómico, Terapéutico, Farmacológico, Químico, Principio Activo). | Clasificación farmacológica y estudios de utilización de medicamentos (**`DDD`**). |
+| **`EMDN` / `GMDN`** | **Comisión Europea (`MDR`)** / GMDN Agency | **`EUDAMED`**, compras/logística (**`ERP logístico hospitalario`**) e inventario biomédico (**`GMAO`**). | **`EMDN`**: árbol alfanumérico de hasta 7 niveles (`Z...` equipos electromédicos, `P`/`J` implantes). **`GMDN`**: código numérico de 5 dígitos. | Catalogación regulatoria, vigilancia y trazabilidad de **productos sanitarios y equipos biomédicos**. |
 
 ### 4.2. Arquitectura de un Servidor Terminológico Corporativo (`HL7 FHIR Terminology Service`) y Regla de Oro del Ciclo de Vida
-Para evitar que cada aplicación hospitalaria (`IANUS`, `SIHGA`, `SILICON`, `LIS`, `RIS`, `XMAO`) mantenga copias locales desactualizadas o contradictorias de los catálogos de códigos, la arquitectura moderna de salud digital centraliza la gestión semántica en un **Servidor Terminológico Corporativo** accesible mediante la especificación estándar **`HL7 FHIR Terminology Service`**:
+Para evitar que cada aplicación hospitalaria (`HCE`, `HIS`, `sistema de prescripción y farmacia hospitalaria`, `LIS`, `RIS`, `GMAO`) mantenga copias locales desactualizadas o contradictorias de los catálogos de códigos, la arquitectura moderna de salud digital centraliza la gestión semántica en un **Servidor Terminológico Corporativo** accesible mediante la especificación estándar **`HL7 FHIR Terminology Service`**:
 - Gestiona tres recursos maestros: **`CodeSystem`** (define el sistema de codificación completo y sus propiedades), **`ValueSet`** (selecciona el subconjunto de códigos permitidos para un campo o formulario concreto) y **`ConceptMap`** (define las reglas de traducción o mapeo entre dos sistemas distintos, p. ej., `SNOMED CT` $\rightarrow$ `CIE-10-ES` o `CIAP-2` $\rightarrow$ `CIE-10-ES`).
 - Expone **4 operaciones RESTful estándar de examen**:
   1. **`$lookup`:** Dado un código (p. ej., un `SCTID` o un código `CIE-10-ES`), devuelve su descripción oficial, jerarquía y propiedades.
-  2. **`$expand`:** Expande dinámicamente un `ValueSet` aplicando filtros de búsqueda por texto predictivo para alimentar los cuadros de búsqueda de los médicos en `IANUS`.
+  2. **`$expand`:** Expande dinámicamente un `ValueSet` aplicando filtros de búsqueda por texto predictivo para alimentar los cuadros de búsqueda de los médicos en `HCE`.
   3. **`$validate-code`:** Verifica en tiempo real en el Bus de Integración si un código recibido en un mensaje `HL7` o documento `CDA/FHIR` pertenece válidamente al `ValueSet` exigido.
   4. **`$translate`:** Ejecuta el mapeo automático de un código origen a un código destino utilizando un `ConceptMap`.
-- **Regla de Oro de Mantenimiento Terminológico (Prohibición de Borrado Físico):** Cuando una nueva edición de `SNOMED CT`, `CIE-10-ES` o `LOINC` retira un código antiguo, **jamás se borra físicamente de la base de datos del servidor terminológico** (pues dejaría huérfanos e ilegibles los informes históricos de hace 10 años en `IANUS`), sino que se cambia su estado a **`Inactivo / Deprecado` (*Inactive*)** manteniendo un puntero histórico de sustitución (*Same-As / Replaced-By*) hacia el nuevo código vigente.
+- **Regla de Oro de Mantenimiento Terminológico (Prohibición de Borrado Físico):** Cuando una nueva edición de `SNOMED CT`, `CIE-10-ES` o `LOINC` retira un código antiguo, **jamás se borra físicamente de la base de datos del servidor terminológico** (pues dejaría huérfanos e ilegibles los informes históricos de hace 10 años en `HCE`), sino que se cambia su estado a **`Inactivo / Deprecado` (*Inactive*)** manteniendo un puntero histórico de sustitución (*Same-As / Replaced-By*) hacia el nuevo código vigente.
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. El Paradigma de Doble Capa Semántica en `IANUS 5` y en las 7 Áreas Sanitarias
-El Servicio Gallego de Salud aplica el principio internacional de **«Capturar una vez en el lenguaje clínico natural del profesional y derivar múltiples salidas estadísticas y de gestión»**:
-- **En los Centros de Salud y `PAC` (Atención Primaria):** Cuando el médico de familia o pediatra abre un nuevo episodio en la **Hoja de Problemas de `IANUS 5`**, utiliza el buscador asistido vinculado a **`CIAP-2`** (y términos clínicos mapeados a **`SNOMED CT`**), lo que permite simultáneamente estructurar la historia longitudinal del paciente, alimentar la muestra nacional de **`BDCAP`** y aportar los diagnósticos ambulatorios al algoritmo autonómico de estratificación **`GMA`**.
-- **En los Hospitales del SERGAS (Atención Especializada):** Los clínicos registran problemas, alergias, informes estructurados y procedimientos sobre vocabularios de interfaz basados en **`SNOMED CT`** y **`CIE-10-ES`**, mientras que las Unidades de Codificación de los **Servicios de Admisión y Documentación Clínica (`SADC`)** realizan la codificación normativa exhaustiva de los episodios de hospitalización, CMA, hospital de día y procedimientos complejos en **`CIE-10-ES Diagnósticos y Procedimientos`** para el **`RAE-CMBD`** y el cálculo de **`APR-GRD`**.
-
-### 5.2. Interoperabilidad Semántica en Laboratorio, Farmacia e Ingeniería Biomédica (`XMAO` y `LOGAS`)
-- **Laboratorios y Microbiología (`LIS`):** Los catálogos de determinaciones analíticas de las 7 Áreas Sanitarias están normalizados y mapeados a **`LOINC`** (y `SNOMED CT` para microorganismos y muestras), garantizando que una determinación de creatinina, troponina o PCR realizada en cualquier hospital de Galicia se represente en la misma gráfica evolutiva de `IANUS 5` y se publique correctamente en la **`HCDSNS`** (`RD 1093/2010`).
-- **Farmacia (`SILICON` y `e-Receita`):** Todos los medicamentos se vinculan al Nomenclátor oficial de facturación de la AEMPS/Ministerio (Código Nacional) y a la clasificación **`ATC`** de 5 niveles.
-- **Ingeniería Biomédica (`XMAO`) y Logística (`LOGAS`):** En la catalogación del inventario de la base instalada biomédica en **`XMAO`** (`Tema 71` y `Tema 73`) y del catálogo maestro de productos sanitarios e implantes en **`LOGAS`** (`Tema 70`), la codificación se alinea con la **Nomenclatura Europea de Productos Sanitarios `EMDN`** (Categoría `Z` para equipamiento electromédico y Categorías `C`, `J`, `P` para implantes) y con el identificador único **`UDI`**, permitiendo cruzar la trazabilidad física del implante con la **Posición 6 (Dispositivo) del código `CIE-10-ES Procedimientos`** registrado en el episodio quirúrgico del paciente.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Sistema / Concepto | Cifra / Regla Estructural Exacta de Examen | Detalle Crítico para no Fallar en el Test |
 | :--- | :--- | :--- |
@@ -232,9 +198,9 @@ El Servicio Gallego de Salud aplica el principio internacional de **«Capturar u
 | **Secciones de Imagen/Radiaciones en `CIE-10-ES PCS`** | **`B` = Imagen · `C` = Medicina Nuclear · `D` = Radioterapia · `X` = Nueva Tecnología** | En Sección `B` (Imagen), la **Posición 3** define la modalidad: `0` RX simple, `1` Fluoroscopia, **`2` TC**, **`3` RM**, **`4` Ecografía**, y la **Posición 5** el contraste. |
 | **Arquitectura de `SNOMED CT`** | **Ontología Polijerárquica** con **`SCTID`** ($6\text{–}18$ dígitos, control *Verhoeff*) | **3 Componentes:** **1) Conceptos** ($>360.000$ en **19 jerarquías**), **2) Descripciones** (**`FSN`** con etiqueta semántica, Preferido y Sinónimos) y **3) Relaciones** (**`Es un` `116680003`** + Atributos definitorios). |
 | **Estructura de `LOINC` y `ATC`** | **`LOINC` = 6 ejes (`:`)** · **`ATC` = 5 niveles y 7 caracteres** | `LOINC`: *Componente : Propiedad : Tiempo : Muestra/Sistema : Escala : Método*. `ATC`: Anatómico (1L) $\rightarrow$ Terapéutico (2N) $\rightarrow$ Farmacológico (1L) $\rightarrow$ Químico (1L) $\rightarrow$ Principio activo (2N). |
-| **Nomenclatura Regulatoria de Productos Sanitarios (`MDR`)** | **`EMDN`** (*Art. 26 Reglamento UE 2017/745*) y **`GMDN`** | `EMDN` es obligatoria en `EUDAMED` (basada en la italiana `CND`, árbol de hasta 7 niveles: **`Z`** = equipamiento electromédico; **`J`** = implantes activos; **`P`** = prótesis). |
+| **Nomenclatura Regulatoria de Productos Sanitarios (`MDR`)** | **`EMDN`** y **`GMDN`** | `EMDN` es obligatoria en `EUDAMED` (basada en la italiana `CND`, árbol de hasta 7 niveles: **`Z`** = equipamiento electromédico; **`J`** = implantes activos; **`P`** = prótesis). |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Trampa clásica entre `CIE-10-ES Diagnósticos` y `CIE-10-ES Procedimientos`!**
    - Si preguntan por **`CIE-10-ES Diagnósticos`**, la longitud es variable de **3 a 7 caracteres**, lleva punto decimal después del tercer carácter y utiliza la letra **`X`** como marcador de posición (*placeholder*).
    - Si preguntan por **`CIE-10-ES Procedimientos`**, la longitud es **SIEMPRE fija de 7 caracteres**, **no lleva punto decimal** y **jamás utiliza las letras `I` ni `O`** para no confundirlas con `1` y `0`.

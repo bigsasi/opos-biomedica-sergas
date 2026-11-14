@@ -28,13 +28,13 @@
 
 ---
 
-## 2. Tema 1 y Tema 48 (Cap. I): Definiciones Legales Exactas (Art. 2 del MDR 2017/745)
+## 2. Tema 1 y Tema 48: Definiciones Legales Exactas
 
 > **Pregunta clásica de examen:** ¿Cuál es la diferencia legal entre un **producto sanitario** y un **medicamento**?
-> **Respuesta (Art. 2.1 MDR):** El producto sanitario **NO ejerce su acción principal prevista en el interior o en la superficie del cuerpo humano por mecanismos farmacológicos, inmunológicos ni metabólicos**, aunque pueda contribuir a su función por tales medios.
+> **Respuesta:** El producto sanitario **NO ejerce su acción principal prevista en el interior o en la superficie del cuerpo humano por mecanismos farmacológicos, inmunológicos ni metabólicos**, aunque pueda contribuir a su función por tales medios.
 
 ### 2.1. Definiciones críticas del Artículo 2 del Reglamento (UE) 2017/745
-1. **Producto sanitario (Art. 2.1):** Todo instrumento, dispositivo, equipo, **programa informático (software)**, implante, reactivo, material u otro artículo destinado por el fabricante a ser utilizado en personas, por separado o en combinación, con alguno de los siguientes **fines médicos específicos**:
+1. **Producto sanitario:** Todo instrumento, dispositivo, equipo, **programa informático (software)**, implante, reactivo, material u otro artículo destinado por el fabricante a ser utilizado en personas, por separado o en combinación, con alguno de los siguientes **fines médicos específicos**:
    - Diagnóstico, prevención, seguimiento, predicción, pronóstico, tratamiento o alivio de una enfermedad.
    - Diagnóstico, seguimiento, tratamiento, alivio o compensación de una lesión o de una discapacidad.
    - Investigación, sustitución o modificación de la anatomía o de un proceso o estado fisiológico o patológico.
@@ -43,23 +43,23 @@
      - Los productos de **control o apoyo a la concepción**.
      - Los productos destinados específicamente a la **limpieza, desinfección o esterilización** de los productos sanitarios.
    - **Anexo XVI (Productos sin finalidad médica prevista):** El MDR también se aplica a ciertos productos sin fin médico listados en el Anexo XVI (lentes de contacto sin graduación, implantes estéticos, equipos de liposucción, láseres/IPL de depilación o rejuvenecimiento, equipos de estimulación cerebral transcraneal).
-2. **Accesorio de un producto sanitario (Art. 2.2):** Artículo que, sin ser en sí mismo un producto sanitario, está destinado por su fabricante a ser usado de forma conjunta con uno o varios productos sanitarios para permitir o ayudar a que estos se utilicen de acuerdo con su finalidad prevista. *(En el MDR, los accesorios se regulan igual que los productos sanitarios).*
-3. **Producto a medida (Art. 2.3):** Todo producto fabricado específicamente según la **prescripción escrita** de cualquier persona autorizada por la legislación nacional en virtud de sus cualificaciones profesionales, en la que se hagan constar, bajo su responsabilidad, las características específicas de diseño, y que esté destinado a ser **utilizado únicamente por un paciente determinado** para responder exclusivamente a su estado y necesidades individuales.
+2. **Accesorio de un producto sanitario:** Artículo que, sin ser en sí mismo un producto sanitario, está destinado por su fabricante a ser usado de forma conjunta con uno o varios productos sanitarios para permitir o ayudar a que estos se utilicen de acuerdo con su finalidad prevista. *(En el MDR, los accesorios se regulan igual que los productos sanitarios).*
+3. **Producto a medida:** Todo producto fabricado específicamente según la **prescripción escrita** de cualquier persona autorizada por la legislación nacional en virtud de sus cualificaciones profesionales, en la que se hagan constar, bajo su responsabilidad, las características específicas de diseño, y que esté destinado a ser **utilizado únicamente por un paciente determinado** para responder exclusivamente a su estado y necesidades individuales.
    - **¡Trampa de test!** **NO** se consideran productos a medida los productos fabricados en serie que deban adaptarse para satisfacer los requisitos específicos de un usuario profesional, ni los productos fabricados en masa mediante procesos de fabricación industrial (ej. **impresión 3D industrial en serie**), aunque sea con arreglo a las prescripciones escritas de una persona autorizada.
-4. **Producto sanitario activo (Art. 2.4):** Todo producto cuyo funcionamiento dependa de una **fuente de energía distinta de la generada por el cuerpo humano** con esa finalidad, o por la **gravedad**, y que actúe mediante conversión de dicha energía.
+4. **Producto sanitario activo:** Todo producto cuyo funcionamiento dependa de una **fuente de energía distinta de la generada por el cuerpo humano** con esa finalidad, o por la **gravedad**, y que actúe mediante conversión de dicha energía.
    - *Excepción legal:* No se consideran productos activos los productos destinados a transmitir energía, sustancias u otros elementos de un producto activo al paciente, **sin ninguna modificación significativa**.
    - **El Software como Dispositivo Médico (SaMD):** Según el MDR, los **programas informáticos autónomos se consideran productos sanitarios activos**.
-5. **Producto implantable (Art. 2.5) y Producto sanitario implantable activo (Tema 32 y Tema 50):**
+5. **Producto implantable y Producto sanitario implantable activo (Tema 32 y Tema 50):**
    - **Producto implantable:** Todo producto diseñado (incluso aunque se absorba parcial o totalmente) para:
      1. Ser introducido **totalmente** en el cuerpo humano, o
      2. **Sustituir una superficie epitelial o la superficie ocular**,
      mediante **intervención clínica** y destinado a permanecer allí después de dicha intervención.
    - **También se considera producto implantable** cualquier producto destinado a ser introducido **parcialmente** en el cuerpo humano mediante intervención clínica y a permanecer allí después de dicha intervención durante un período de **al menos 30 días**.
-   - **Producto sanitario implantable activo (PSIA):** Todo producto sanitario que sea a la vez **activo** (Art. 2.4) e **implantable** (Art. 2.5) (ej. marcapasos, desfibriladores automáticos implantables DAI, implantes cocleares, neuroestimuladores, bombas de infusión implantables).
+   - **Producto sanitario implantable activo (PSIA):** Todo producto sanitario que sea a la vez **activo** e **implantable** (ej. marcapasos, desfibriladores automáticos implantables DAI, implantes cocleares, neuroestimuladores, bombas de infusión implantables).
 
 ---
 
-## 3. Tema 1 y Tema 48: Clasificación de Productos Sanitarios (Art. 51 y Anexo VIII del MDR)
+## 3. Tema 1 y Tema 48: Clasificación de Productos Sanitarios
 
 ### 3.1. Criterios de clasificación y las 4 Clases de Riesgo
 Los productos sanitarios se dividen en **4 clases: Clase I, Clase IIa, Clase IIb y Clase III**, teniendo en cuenta la finalidad prevista y los riesgos inherentes según **3 variables fundamentales**:
@@ -120,7 +120,7 @@ El temario del SERGAS acota expresamente el estudio del MDR a los **Capítulos I
 
 ### 5.1. Capítulo I — Ámbito de aplicación y definiciones (Artículos 1 a 4)
 - **Art. 1 (Objeto y ámbito):** Establece las normas de introducción en el mercado, comercialización y puesta en servicio de productos sanitarios para uso humano y sus accesorios en la UE, así como las investigaciones clínicas.
-- **Exclusiones del MDR (Art. 1.6):** No se aplica a:
+- **Exclusiones del MDR:** No se aplica a:
   1. Productos sanitarios para diagnóstico *in vitro* (regulados por el **Reglamento UE 2017/746 IVDR**).
   2. Medicamentos (Directiva 2001/83/CE).
   3. Medicamentos de terapia avanzada (Reglamento CE 1394/2007).
@@ -129,25 +129,25 @@ El temario del SERGAS acota expresamente el estudio del MDR a los **Capítulos I
   6. Órganos, tejidos o células de origen humano o animal (salvo productos elaborados con derivados no viables).
 
 ### 5.2. Capítulo II — Comercialización y puesta en servicio, obligaciones de los agentes económicos, reprocesamiento, marcado CE y libre circulación (Artículos 5 a 24)
-1. **Fabricación *In-House* en Centros Sanitarios (Art. 5.5 MDR y Art. 9 RD 192/2023 — *Pregunta estrella para hospitales del SERGAS*):**
+1. **Fabricación *In-House* en Centros Sanitarios:**
    Los centros sanitarios (ej. un servicio de Ingeniería Biomédica o Impresión 3D de un hospital del SERGAS) pueden fabricar y utilizar productos internamente (sin marcado CE comercial) siempre que cumplan **todas** estas condiciones:
    - **No se transfieran a otra entidad jurídica** (uso exclusivo en el propio centro sanitario).
    - Se fabriquen y utilicen conforme a un **sistema de gestión de calidad** adecuado (ej. `ISO 13485`).
    - El centro justifique en su documentación que las necesidades específicas del grupo de pacientes **no pueden satisfacerse, o no con el nivel de funcionamiento adecuado, mediante un producto equivalente comercializado**.
    - Se elabore una declaración pública con los datos del centro y de los productos, y se revise la experiencia clínica.
    - **No se fabriquen a escala industrial**.
-   - *Restricción en España (Art. 9 RD 192/2023):* La fabricación *in house* en España requiere **comunicación previa a la AEMPS**, está **prohibida para productos de Clase IIb, Clase III e implantables**, salvo autorización expresa excepcional, y no puede subcontratarse la fabricación.
-2. **Los 4 Agentes Económicos y la Persona Responsable (Art. 10 a 16 MDR):**
-   - **Fabricante (Art. 10):** Establece el sistema de gestión de calidad, gestión de riesgos, evaluación clínica, documentación técnica (Anexos II y III), declaración UE de conformidad, asignación de **UDI** y sistema de seguimiento poscomercialización (**PMS**). Debe conservar la documentación técnica al menos **10 años** después de la introducción del último producto (**15 años** si es un **producto implantable**).
-   - **Persona Responsable del Cumplimiento de la Normativa — PRRC (Art. 15 MDR — *Antiguo Responsable Técnico*):** Todo fabricante (y todo representante autorizado) debe disponer en su organización de al menos una persona responsable con **titulación universitaria en derecho, medicina, farmacia, ingeniería u otra disciplina científica + 1 año de experiencia** en regulación/calidad de productos sanitarios (o bien **4 años de experiencia profesional** en el ámbito).
-   - **Representante Autorizado (Art. 11):** Obligatorio cuando el fabricante está establecido fuera de la UE.
-   - **Importador (Art. 13) y Distribuidor (Art. 14):** Verifican marcado CE, declaración UE de conformidad, etiquetado e instrucciones en español (Art. 19 y 21 del RD 192/2023) y asignación de UDI.
-3. **Reprocesamiento de productos de un solo uso (Art. 17 MDR y Art. 10 RD 192/2023):**
+   - *Restricción en España:* La fabricación *in house* en España requiere **comunicación previa a la AEMPS**, está **prohibida para productos de Clase IIb, Clase III e implantables**, salvo autorización expresa excepcional, y no puede subcontratarse la fabricación.
+2. **Los 4 Agentes Económicos y la Persona Responsable:**
+   - **Fabricante:** Establece el sistema de gestión de calidad, gestión de riesgos, evaluación clínica, documentación técnica (Anexos II y III), declaración UE de conformidad, asignación de **UDI** y sistema de seguimiento poscomercialización (**PMS**). Debe conservar la documentación técnica al menos **10 años** después de la introducción del último producto (**15 años** si es un **producto implantable**).
+   - **Persona Responsable del Cumplimiento de la Normativa — PRRC:** Todo fabricante (y todo representante autorizado) debe disponer en su organización de al menos una persona responsable con **titulación universitaria en derecho, medicina, farmacia, ingeniería u otra disciplina científica + 1 año de experiencia** en regulación/calidad de productos sanitarios (o bien **4 años de experiencia profesional** en el ámbito).
+   - **Representante Autorizado:** Obligatorio cuando el fabricante está establecido fuera de la UE.
+   - **Importador y Distribuidor:** Verifican marcado CE, declaración UE de conformidad, etiquetado e instrucciones en español y asignación de UDI.
+3. **Reprocesamiento de productos de un solo uso:**
    - El MDR solo permite reprocesar productos de un solo uso cuando lo autorice la legislación nacional. En España, el **RD 192/2023** regula estrictamente qué productos pueden o no reprocesarse (prohibido en productos que hayan estado en contacto con tejidos de riesgo de priones/EEB o Clase III invasivos críticos salvo condiciones estrictas y asumiendo todas las obligaciones de un fabricante).
-4. **Tarjeta de Implante e información a pacientes (Art. 18 MDR y Art. 28 RD 192/2023 — Tema 32 y 50):**
+4. **Tarjeta de Implante e información a pacientes:**
    - El fabricante de un **producto implantable** debe suministrar junto con el producto una **Tarjeta de Implante** (en papel y acceso electrónico) que incluya: nombre y modelo del producto, número de lote o serie, **identificador único del producto (UDI)**, nombre/dirección/web del fabricante, y advertencias/precauciones sobre **interferencias recíprocas con campos externos (ej. compatibilidad con Resonancia Magnética: MR Safe, MR Conditional, MR Unsafe)** y vida útil prevista.
    - El **centro sanitario del SERGAS** está obligado a cumplimentar los datos del paciente e implantación, entregar un ejemplar al paciente e **integrar la información en la Historia Clínica Electrónica (IANUS)** para garantizar la trazabilidad rápida en caso de alerta de seguridad.
-   - *Excepciones exentas de Tarjeta de Implante (Art. 18.3 MDR):* **Suturas, grapas, materiales de obturación dental, aparatos de ortodoncia, coronas dentales, tornillos, cuñas, placas, alambres, clavos, clips y conectores**.
+   - *Excepciones exentas de Tarjeta de Implante:* **Suturas, grapas, materiales de obturación dental, aparatos de ortodoncia, coronas dentales, tornillos, cuñas, placas, alambres, clavos, clips y conectores**.
 
 ### 5.3. Capítulo IX — Confidencialidad, Protección de Datos, Financiación y Sanciones (Artículos 109 a 113)
 - **Art. 109 (Confidencialidad):** Todas las partes implicadas deben mantener la confidencialidad de los datos comerciales, secretos industriales y datos personales. **No se consideran confidenciales**: la información sobre el registro de agentes económicos en **EUDAMED**, la información de los certificados expedidos/suspendidos/retirados por los Organismos Notificados, ni los avisos de seguridad y resúmenes de seguridad y funcionamiento clínico (**SSCP** de implantes y Clase III).
@@ -161,7 +161,7 @@ El temario del SERGAS acota expresamente el estudio del MDR a los **Capítulos I
 
 ### 6.1. Funciones de la AEMPS como Autoridad Competente (Tema 48-bis y RD 192/2023)
 La **Agencia Española de Medicamentos y Productos Sanitarios (AEMPS)**, adscrita al Ministerio de Sanidad, ejerce como autoridad competente nacional a través de su **Departamento de Productos Sanitarios**:
-1. **Otorgar la Licencia Previa de Funcionamiento (Art. 5 RD 192/2023):**
+1. **Otorgar la Licencia Previa de Funcionamiento:**
    - **¿Quién necesita licencia previa de la AEMPS?** Las personas físicas o jurídicas que se dediquen a la **fabricación, importación, agrupación o esterilización** de productos sanitarios en España, así como las instalaciones de fabricación a medida (salvo que la CCAA haya asumido la competencia para fabricantes a medida; para serie/importación/esterilización siempre es la **AEMPS**).
    - **Validez de la licencia:** **Máximo 5 años** (renovable previa solicitud antes de su vencimiento).
    - Exige contar con un **Responsable Técnico** titulado universitario adecuado y un archivo documental de trazabilidad.
@@ -169,12 +169,12 @@ La **Agencia Española de Medicamentos y Productos Sanitarios (AEMPS)**, adscrit
    - En España, el Organismo Notificado designado por el Ministerio de Sanidad / AEMPS para el marcado CE de productos sanitarios es el **Centro Nacional de Certificación de Productos Sanitarios (CNCps)**, cuyo número identificativo europeo es el **`0318`** (**`CE 0318`** — *¡Dato clásico de examen tipo test!*).
 3. **Gestión del Registro de Comercialización (`CCPS`):**
    - Comunicación de puesta en el mercado en España de productos de **Clases IIa, IIb, III y productos a medida**.
-4. **Autorización de Investigaciones Clínicas con Productos Sanitarios (Art. 32 RD 192/2023 y Tema 33):**
+4. **Autorización de Investigaciones Clínicas con Productos Sanitarios:**
    - Requiere dictamen favorable de un **Comité de Ética de la Investigación con medicamentos (CEIm)**, conformidad de la dirección del centro sanitario y autorización/notificación a la **AEMPS** según el riesgo del producto y si dispone o no de marcado CE.
 5. **Sistema Español de Vigilancia de Productos Sanitarios y Control del Mercado:**
    - Centraliza la notificación de **incidentes graves** (portal **`NotificaPS`** para profesionales sanitarios y pacientes, y formularios MIR para fabricantes).
    - Emite las **Notas Informativas de Seguridad** y coordina con los **Puntos de Vigilancia de las Comunidades Autónomas** (en Galicia, la Subdirección Xeral de Farmacia / Servizo de Control de Produtos Sanitarios de la Consellería de Sanidade y los responsables de vigilancia de cada Área Sanitaria del SERGAS) las **Acciones Correctivas de Seguridad en Campo (FSCA)** y las **Notas de Aviso de Seguridad en Campo (FSN)**.
-   - **Plazos de notificación de incidentes graves por el fabricante (Art. 87 MDR):**
+   - **Plazos de notificación de incidentes graves por el fabricante:**
      - Regla general: inmediatamente y **no más tarde de 15 días** tras tener conocimiento.
      - Si existe una **amenaza grave para la salud pública**: inmediatamente y **no más tarde de 2 días**.
      - En caso de **muerte o deterioro grave imprevisto del estado de salud**: inmediatamente y **no más tarde de 10 días**.
@@ -225,7 +225,7 @@ El ciclo de vida de diseño y desarrollo de un dispositivo biomédico desde la i
 | **`UNE-EN 62366-1` (IEC 62366)** | **Ingeniería de la aptitud de uso (Usabilidad) aplicada a los productos sanitarios** | Evaluación formativa y sumativa de la interfaz de usuario para prevenir **errores de uso** inducidos por un mal diseño ergonómico o cognitivo. |
 | **`UNE-EN 62304` (IEC 62304)** | **Procesos del ciclo de vida del software de dispositivos médicos** | Clasifica la seguridad del software biomédico en **3 clases**:<br>• **Clase A:** No puede producir lesiones ni daños a la salud.<br>• **Clase B:** Puede producir lesiones **no graves**.<br>• **Clase C:** Puede producir la **muerte o lesiones graves**. |
 | **`Serie UNE-EN ISO 10993`** | **Evaluación biológica de productos sanitarios (Biocompatibilidad)** | Ensayos preclínicos de citotoxicidad (ISO 10993-5), sensibilización, irritación, toxicidad sistémica, genotoxicidad y hemocompatibilidad según la naturaleza y duración del contacto con el tejido. |
-| **`UNE-EN ISO 14155`** | **Investigación clínica de productos sanitarios en humanos (Buenas Prácticas Clínicas — BPC)** | Equivalente a las BPC de ensayos clínicos de medicamentos pero específico para investigaciones clínicas de dispositivos biomédicos (Capítulo VI, Arts. 61 a 82 del MDR 2017/745). |
+| **`UNE-EN ISO 14155`** | **Investigación clínica de productos sanitarios en humanos (Buenas Prácticas Clínicas — BPC)** | Equivalente a las BPC de ensayos clínicos de medicamentos pero específico para investigaciones clínicas de dispositivos biomédicos. |
 
 ### Fases del Diseño y Desarrollo Biomédico (Modelo en Cascada / «V» de la FDA e ISO 13485)
 1. **Fase 1 — Identificación de la necesidad clínica y Planificación del diseño:** Especificación de necesidades del usuario (*User Needs*).

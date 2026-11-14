@@ -1,32 +1,6 @@
 # Tema 7 — Mamografía. Caracterización y funcionamiento de los equipos de mamografía digital. Diagnóstico e intervencionismo.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #7 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 02 — Física de las Radiaciones, Electromagnetismo y Equipos de Radiodiagnóstico
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulo Profesional 1588: *Sistemas de radiodiagnóstico, radioterapia e imagen médica*); Real Decreto 601/2019 (optimización y niveles de referencia en cribado mamográfico); Real Decreto 1085/2009 (Instalaciones de rayos X médicos — Clase 1); Real Decreto 1976/1999, Protocolo Español de Control de Calidad en Radiodiagnóstico (PECCRD) y Guías Europeas de Garantía de Calidad en el Cribado y Diagnóstico de Cáncer de Mama (EUREF); Normas `UNE-EN 60601-2-45` (seguridad particular de equipos de mamografía y dispositivos estereotáxicos) y `UNE-EN 61223-3-2`.
-> - **Sistemas y Entorno SERGAS:** Programa Gallego de Detección Precoz del Cáncer de Mama (`PGDPCM` — Dirección Xeral de Saúde Pública y SERGAS), Unidades de Exploración Mamográfica fijas y móviles, Unidades de Patología Mamaria de las 7 Áreas Sanitarias (`CHUAC`, `CHUS`, `CHUVI`, `HULA`, `CHUO`, `CHOP`, `C.H. Arquitecto Marcide`), integración `PACS` corporativo con estaciones de diagnóstico de $\ge 5\text{ MP}$, `IANUS`, `RIS` y mantenimiento en `XMAO`.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose de Subepígrafes según Publicación Oficial del DOG (Resolución de 13 de abril de 2026)
-El **Tema 7** de la Parte Específica del temario oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del SERGAS aborda de forma monográfica los sistemas de imagen radiológica dedicados a la patología mamaria, tanto en su vertiente poblacional de cribado (*screening*) como en el diagnóstico clínico avanzado y el intervencionismo percutáneo guiado por imagen. El epígrafe comprende tres bloques esenciales:
-1. **Fundamentos físicos de la mamografía y exigencias metrológicas:** El compromiso radiológico extremo entre resolución de bajo contraste (diferenciación entre tejido fibroglandular sano y carcinoma infiltrante), resolución espacial micrométrica (detección de microcalcificaciones agrupadas de $50\text{ a }100\text{ }\mu\text{m}$) y minimización de la **Dosis Glandular Media ($\text{DGM}$)** en un órgano altamente radiosensible ($w_T = 0,12$).
-2. **Caracterización y arquitectura técnica de los equipos de mamografía digital (`FFDM`):** Diseño especializado del generador de alta frecuencia y del tubo de rayos X mamográfico (ventana de berilio, orientación invertida del efecto talón, combinaciones específicas de pista anódica y filtro selectivo de borde K como $\text{Mo/Mo}$, $\text{Mo/Rh}$, $\text{Rh/Rh}$, $\text{W/Rh}$ y $\text{W/Ag}$, doble foco ultrafino de $0,3\text{ y }0,1\text{ mm}$), sistema mecánico de compresión controlada, rejilla antidifusora celular, exposimetria automática multipunto y receptores planos de conversión directa de **Selenio Amorfo ($\text{a-Se}$)**.
-3. **Modalidades diagnósticas avanzadas e intervencionismo mamario:** **Tomosíntesis Digital de Mama (`DBT`)** con imagen 2D sintetizada, **Mamografía Espectral con Realce de Contraste (`CESM / CEM`)**, sistemas de **biopsia estereotáxica** ($\pm 15^\circ$) y **biopsia asistida por vacío (`BAV`)** guiada por tomosíntesis o estereotaxia en mesa prona o estativo vertical, junto con el control de calidad (`PECCRD` / `EUREF`) y la arquitectura del `PGDPCM` en el SERGAS.
-
-### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** `Radiofísica Hospitalaria` | `TS Imagen para el Diagnóstico`
-- **Grado de solapamiento:**
-  - **Alto (80%) en Radiofísica Hospitalaria:** Cubre las características técnicas de los mamógrafos, los receptores digitales de imagen, la dosimetría glandular y los procedimientos y controles de calidad en estudios de mamografía.
-  - **Alto (75%) en TS Imagen para el Diagnóstico:** Cubre la anatomía radiológica, las técnicas de exploración de la mama y los parámetros técnicos de exposición ($\text{kVp}$, $\text{mA}$, tiempo y combinaciones ánodo/filtro).
-- **Epígrafes equivalentes en temarios SERGAS:**
-  - **Radiofísica Hospitalaria:** *Tema 26. Equipos. Tubos y generadores de rayos X. Propiedades. Cadena de imagen... Características de los equipos de radiodiagnóstico: radiográficos, tomógrafos convencionales, mamógrafos...*; *Tema 27. Introducción a los principales procedimientos... Estudios de mamografía.*
-  - **TS Imagen para el Diagnóstico:** *Tema 22. Anatomía radiológica y técnicas de exploración de la mama. Factores de exposición: kilovoltaje, miliamperaje y tiempo de exposición.*
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. El Reto Físico de la Imagen Mamográfica y Magnitudes Dosimétricas Específicas en Mamografía
 
 ### 1.1. El Reto Físico de la Imagen Mamográfica: Contraste Fotoeléctrico y Resolución Espacial
 La mama femenina está compuesta fundamentalmente por **tejido adiposo** ($\rho \approx 0,93\text{ g/cm}^3$, número atómico efectivo $Z_{\text{ef}} \approx 5,9\text{–}6,3$) y **tejido fibroglandular y conectivo** ($\rho \approx 1,03\text{ g/cm}^3$, $Z_{\text{ef}} \approx 7,4$). Las masas tumorales malignas (carcinoma ductal infiltrante) presentan una densidad másica y un $Z_{\text{ef}}$ prácticamente idénticos a los del parénquima fibroglandular normal, mientras que el segundo signo radiológico precoz de malignidad —las **microcalcificaciones pleomórficas agrupadas** de hidroxiapatita cálcica ($\text{Ca}_{10}(\text{PO}_4)_6(\text{OH})_2$, $Z_{\text{Ca}}=20$)— posee dimensiones críticas de tan solo **$50\text{ a }200\text{ }\mu\text{m}$**.
@@ -51,7 +25,7 @@ donde:
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. El Tubo de Rayos X Mamográfico y el Generador de Alta Frecuencia
 
 ### 2.1. El Tubo de Rayos X Mamográfico y el Generador de Alta Frecuencia
 El tubo de rayos X de un mamógrafo digital difiere sustancialmente de un tubo de radiología convencional en cinco aspectos de diseño de ingeniería:
@@ -76,7 +50,7 @@ Con la llegada de los **Mamógrafos Digitales de Campo Completo (FFDM)** con det
 | **$\text{W / Cu}$ o $\text{W / Ti}$** ($45\text{–}49\text{ kVp}$) | $74 \;/\; 29\text{ ó }22$ | Frenado de alta energía ($>33,2\text{ keV}$) | $\text{Cu}: 8,98\text{ keV} \;/\; \text{Ti}: 4,96\text{ keV}$ | Disparo de **alta energía en Mamografía con Contraste (`CESM`)** por encima del borde K del Yodo ($33,2\text{ keV}$). |
 
 ### 2.3. Compresión Mamaria, Rejilla Antidifusora, CAE y Detector Directo de Selenio Amorfo ($\text{a-Se}$)
-1. **Sistema de Compresión Motorizado (`UNE-EN 60601-2-45`):** Utiliza palas de policarbonato radiotransparentes (rectas, curvas ergonómicas o localizadas para magnificación) accionadas por pedal motorizado y ajuste fino manual, aplicando una fuerza controlada de **$100\text{ a }200\text{ N}$ ($10\text{ a }20\text{ daN} \approx 10\text{–}20\text{ kgf}$)**. La compresión firme es un requisito técnico no negociable por cinco motivos físicos:
+1. **Sistema de Compresión Motorizado:** Utiliza palas de policarbonato radiotransparentes (rectas, curvas ergonómicas o localizadas para magnificación) accionadas por pedal motorizado y ajuste fino manual, aplicando una fuerza controlada de **$100\text{ a }200\text{ N}$ ($10\text{ a }20\text{ daN} \approx 10\text{–}20\text{ kgf}$)**. La compresión firme es un requisito técnico no negociable por cinco motivos físicos:
    - **Reduce el espesor atravesado** (a $3\text{–}5\text{ cm}$), disminuyendo exponencialmente la **Dosis Glandular Media (DGM)**.
    - **Disminuye drásticamente la radiación dispersa Compton** (la relación dispersa/primaria cae de $>1,0$ a $<0,4$), aumentando el contraste.
    - **Homogeneiza el espesor** desde la pared costal hasta el pezón, evitando la sobreexposición anterior y subexposición posterior.
@@ -90,7 +64,7 @@ Con la llegada de los **Mamógrafos Digitales de Campo Completo (FFDM)** con det
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Tomosíntesis Digital de Mama (`DBT` — *Digital Breast Tomosynthesis*) e Imagen 2D Sintetizada
 
 ### 3.1. Tomosíntesis Digital de Mama (`DBT` — *Digital Breast Tomosynthesis*) e Imagen 2D Sintetizada
 La mamografía 2D convencional proyecta todo el volumen mamario en un solo plano, lo que en **mamas densas (ACR C y D)** provoca tanto falsos negativos (tumores ocultos tras tejido fibroglandular) como falsos positivos por sumación de sombras. La **Tomosíntesis Digital de Mama (DBT)** es una técnica pseudo-tridimensional de ángulo limitado:
@@ -113,7 +87,7 @@ Cuando se detectan grupos de microcalcificaciones sospechosas (`BI-RADS 4 o 5`) 
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Protocolo de Control de Calidad
 
 ### 4.1. Protocolo de Control de Calidad (`PECCRD` y Guías Europeas `EUREF`)
 El control de calidad de los mamógrafos digitales es el más riguroso de todo el radiodiagnóstico y exige las siguientes pruebas y tolerancias verificadas por el Servicio de Radiofísica y Protección Radiológica:
@@ -137,27 +111,14 @@ El control de calidad de los mamógrafos digitales es el más riguroso de todo e
 
 ### 4.2. Monitores Diagnósticos de $\ge 5\text{ MP}$, Climatización Crítica del $\text{a-Se}$ y Blindaje de Sala
 1. **Estaciones de Diagnóstico Mamográfico (`Monitores de 5 Megapíxeles`):** Dada la matriz de los detectores mamográficos ($3.000 \times 4.000\text{ a }4.000 \times 5.000\text{ píxeles}$), los monitores estándar de radiología general ($2\text{ o }3\text{ MP}$) son insuficientes. Las estaciones de informe mamográfico exigen **parejas de monitores médicos de escala de grises o color de al menos $5\text{ Megapíxeles}$ ($2048 \times 2560\text{ píxeles}$)** (o un monitor único de $8\text{–}12\text{ MP}$), con **luminancia máxima calibrada $\ge 450\text{–}600\text{ cd/m}^2$** (mínimo normativo $>300\text{ cd/m}^2$), razón de contraste $\ge 250:1$, ajuste estricto a la curva de percepción visual estándar **`DICOM Part 14 GSDF` (*Grayscale Standard Display Function*)** (desviación $<10\%$) y una **iluminancia ambiental en la sala de informes $\le 10\text{ a }15\text{ lux}$** sin reflejos especulares.
-2. **Protección Térmica Crítica del Detector de Selenio Amorfo ($\text{a-Se}$) en Mantenimiento (`XMAO`):** El fotoconductor de $\text{a-Se}$ es extremadamente sensible a la temperatura: si supera los **$35\text{–}40\text{ }^\circ\text{C}$** (o sufre caídas por debajo de $10\text{ }^\circ\text{C}$ o gradientes $>10\text{ }^\circ\text{C/h}$), **el selenio amorfo se cristaliza irreversiblemente (*delaminación / recristalización*)**, inutilizando un detector cuyo coste de reposición supera los $40.000\text{–}60.000\text{ €}$. Por ello, la climatización de las salas de mamografía y, muy especialmente, de las **unidades móviles del SERGAS**, debe mantenerse permanentemente activa ($20\text{–}26\text{ }^\circ\text{C}$) las 24 horas del día, con alarmas telemáticas de temperatura conectadas a mantenimiento.
+2. **Protección Térmica Crítica del Detector de Selenio Amorfo ($\text{a-Se}$) en Mantenimiento (`GMAO`):** El fotoconductor de $\text{a-Se}$ es extremadamente sensible a la temperatura: si supera los **$35\text{–}40\text{ }^\circ\text{C}$** (o sufre caídas por debajo de $10\text{ }^\circ\text{C}$ o gradientes $>10\text{ }^\circ\text{C/h}$), **el selenio amorfo se cristaliza irreversiblemente (*delaminación / recristalización*)**, inutilizando un detector cuyo coste de reposición supera los $40.000\text{–}60.000\text{ €}$. Por ello, la climatización de las salas de mamografía y, muy especialmente, de las **unidades móviles del servicio de salud**, debe mantenerse permanentemente activa ($20\text{–}26\text{ }^\circ\text{C}$) las 24 horas del día, con alarmas telemáticas de temperatura conectadas a mantenimiento.
 3. **Blindaje de Sala de Mamografía (`NCRP 147` / `RD 1085/2009`):** Como el propio soporte del receptor actúa como tope primario del haz directo (*beam stopper*) y la energía de los fotones dispersos es muy baja ($<30\text{ keV}$), la atenuación en paredes es muy elevada; un tabique convencional de doble placa de cartón-yeso o ladrillo macizo y un **biombo protector para el TSID con vidrio al plomo de $0,5\text{ a }1,0\text{ mm Pb}$ equivalente** garantizan sobradamente niveles de radiación ambiental inferiores a $0,1\text{ mSv/año}$.
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. El Programa Gallego de Detección Precoz del Cáncer de Mama (`PGDPCM`) y Unidades Hospitalarias
-En la Comunidad Autónoma de Galicia conviven dos circuitos mamográficos plenamente integrados en la infraestructura digital del **SERGAS**:
-1. **Cribado Poblacional (`PGDPCM` — Consellería de Sanidade):** Dirigido a todas las mujeres residentes en Galicia de **$50\text{ a }69\text{ años}$** (ampliado progresivamente a los $45\text{–}74\text{ años}$ según las nuevas directrices europeas), con exploración mamográfica bilateral en doble proyección (**cráneo-caudal `CC` y oblicua mediolateral `MLO`**) cada **$2\text{ años}$**. Se ejecuta en la red de **Unidades de Exploración Mamográfica (UEM)** fijas y móviles equipadas con mamógrafos digitales directos (`FFDM`). Todas las imágenes se transmiten al **`PACS` corporativo centralizado** para su **doble lectura ciega e independiente** en las Unidades de Evaluación Radiológica por radiólogos expertos sobre estaciones de **$5\text{ MP}$**.
-2. **Unidades de Diagnóstico de Patología Mamaria en las 7 Áreas Sanitarias:** Ubicadas en los hospitales de referencia (`CHUAC`, `CHUS`, `CHUVI`, `HULA`, `CHUO`, `CHOP` y `C.H. Arquitecto Marcide`), donde son derivadas las mujeres con hallazgos positivos en el cribado (`BI-RADS 0, 3, 4 o 5`) o las pacientes sintomáticas. Estas unidades están dotadas de mamógrafos de alta gama con **Tomosíntesis de ángulo amplio (`DBT`), Mamografía con Contraste (`CESM`), sistemas de Biopsia Asistida por Vacío (`BAV`) guiados por tomosíntesis** y ecógrafos de alta frecuencia ($12\text{–}18\text{ MHz}$) con elastografía *Shear-Wave*.
-
-### 5.2. Integración Digital (`DICOM MG / BTO / RDSR`) y Gestión en `XMAO`
-- **Objetos `DICOM` Específicos:** Los mamógrafos del SERGAS generan objetos **`DICOM Digital Mammography X-Ray Image — For Presentation` y `For Processing` (`MG`)**, objetos de tomosíntesis **`DICOM Breast Tomosynthesis Image Object` (`BTO`)** y envían automáticamente la `DGM` de cada disparo y el espesor comprimido mediante **`DICOM RDSR`** al historial dosimétrico de la paciente en **`IANUS`**.
-- **Control Diario y Mantenimiento (`XMAO`):** Diariamente, antes de iniciar la citación, el TSID adquiere una imagen de control de calidad sobre el bloque de PMMA con moneda/inserto de contraste y ejecuta el test automático de calibración de ganancia y mapa de píxeles (*Flat-Field*) según prescripción del fabricante, mientras que los Servicios de Radiofísica del SERGAS realizan la verificación anual completa del `PECCRD` y de las estaciones de $5\text{ MP}$ registradas en **`XMAO`**.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Parámetro / Componente / Norma | Valor / Cifra / Referencia Exacta de Examen | Observación Crítica para el Tribunal A1 |
 | :--- | :--- | :--- |
@@ -165,7 +126,7 @@ En la Comunidad Autónoma de Galicia conviven dos circuitos mamográficos plenam
 | **Orientación del Efecto Talón (*Heel Effect*)** | **CÁTODO en pared costal** y **ÁNODO hacia el pezón** | Mayor intensidad de rayos X en el lado del cátodo, donde el espesor de la mama es mayor. |
 | **Tamaño de los Focos Mamográficos** | **$0,3\text{ mm}$** (contacto) y **$0,1\text{ mm}$** (magnificación $\times 1,5\text{–}\times 2,0$) | En magnificación **se retira la rejilla antidifusora** (se usa el *air-gap* para reducir dispersión). |
 | **Picos K y Borde K de $\text{Mo}$ ($Z=42$) y $\text{Rh}$ ($Z=45$)** | $\text{Mo}$: picos **$17,5 / 19,6\text{ keV}$** (borde K **$20,0\text{ keV}$**) ; $\text{Rh}$: picos **$20,2 / 22,7\text{ keV}$** (borde K **$23,2\text{ keV}$**) | En FFDM/DBT moderno predomina **$\text{W/Rh}$** y **$\text{W/Ag}$** (borde K $\text{Ag} = 25,5\text{ keV}$), que bajan la DGM un $30\text{–}50\%$. |
-| **Fuerza del Compresor Motorizado** | **$100\text{ a }200\text{ N}$ ($10\text{–}20\text{ daN}$)** (`UNE-EN 60601-2-45`) | Tolerancia del indicador de espesor: **$\le \pm 5\text{ mm}$**; tolerancia de fuerza: **$\le \pm 20\text{ N}$**. |
+| **Fuerza del Compresor Motorizado** | **$100\text{ a }200\text{ N}$ ($10\text{–}20\text{ daN}$)** | Tolerancia del indicador de espesor: **$\le \pm 5\text{ mm}$**; tolerancia de fuerza: **$\le \pm 20\text{ N}$**. |
 | **Detector Digital Directo (`FFDM`)** | **Selenio Amorfo ($\text{a-Se}, Z=34$)**, píxel **$50\text{–}85\text{ }\mu\text{m}$** ($6\text{–}10\text{ pl/mm}$) | Muy sensible a la temperatura (**cristaliza si $T > 35\text{–}40\text{ }^\circ\text{C}$** $\rightarrow$ climatización 24/7). |
 | **Dosis Glandular Media (`DGM`) Estándar** | **$< 2,5\text{ mGy}$ (Aceptable)** y **$< 2,0\text{ mGy}$ (Deseable)** | Referida al maniquí estándar de **$45\text{ mm}$ de PMMA** (equivalente a **$53\text{ mm}$ de mama comprimida**). |
 | **Monitores de Diagnóstico Mamográfico** | Mínimo **$5\text{ Megapíxeles}$ ($2048 \times 2560$)**, luminancia **$> 300\text{–}450\text{ cd/m}^2$** | Calibración estricta a curva **`DICOM GSDF`** y luz ambiente de sala de lectura **$\le 10\text{–}15\text{ lux}$**. |
@@ -174,12 +135,12 @@ En la Comunidad Autónoma de Galicia conviven dos circuitos mamográficos plenam
 | **Precisión en Esterotaxia / Biopsia `BAV`** | Error máximo de localización tridimensional $(X, Y, Z)$: **$\le \pm 1,0\text{ mm}$** (`PECCRD`) | Agujas de Biopsia Asistida por Vacío (`BAV`) de calibre **$7\text{G a }11\text{G}$** y marcadores de titanio/nitinol posbiopsia. |
 | **Rejilla Antidifusora Mamográfica** | Relación de rejilla **$r = 4:1\text{ o }5:1$**, frecuencia **$31\text{–}36\text{ líneas/cm}$**, estructura celular o lineal móvil | En **mamografía de magnificación ($\times 1,5\text{–}\times 2,0$, foco $0,1\text{ mm}$) SIEMPRE se retira la rejilla** y se usa el *air-gap*. |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa sobre el uso de la rejilla antidifusora en mamografía magnificada:** Si un supuesto práctico o pregunta de test plantea realizar una proyección localizada magnificada ($\times 1,8$) de microcalcificaciones con el foco de $0,1\text{ mm}$ manteniendo puesta la rejilla antidifusora Potter-Bucky, la respuesta es **INCORRECTO**. En mamografía magnificada **siempre se retira la rejilla** porque el espacio de aire (*air-gap*) entre la plataforma de magnificación y el detector ya elimina la radiación dispersa; dejar la rejilla obligaría a multiplicar por $2\text{ o }3$ los $\text{mAs}$ con un foco de $0,1\text{ mm}$ (limitado en corriente a $\approx 25\text{–}30\text{ mA}$), provocando tiempos de exposición larguísimos, borrosidad por movimiento y una dosis glandular inaceptable.
 2. **Trampa sobre combinaciones prohibidas de Ánodo / Filtro (`Rh/Mo`):** Mientras que la combinación **$\text{Mo/Rh}$** (ánodo de Molibdeno con filtro de Rodio) es perfectamente válida, la combinación inversa **$\text{Rh/Mo}$ (ánodo de Rodio con filtro de Molibdeno) NUNCA SE UTILIZA**, porque los picos característicos K del Rodio ($20,2\text{ y }22,7\text{ keV}$) caen justo por encima del borde de absorción K del filtro de Molibdeno ($20,0\text{ keV}$), por lo que el filtro de Mo absorbería toda la radiación característica útil del ánodo de Rh.
 3. **Peligro de avería catastrófica en parada de climatización el fin de semana:** Ante una avería de climatización en una sala de mamografía o unidad móvil con detector directo de **Selenio Amorfo ($\text{a-Se}$)**, la actuación de Ingeniería Hospitalaria es crítica y urgente: a diferencia de los detectores de $\text{CsI}$, el $\text{a-Se}$ sufre transición de fase térmica irreversible por encima de $35\text{–}40\text{ }^\circ\text{C}$.
 4. **Diferencia entre el maniquí `ACR` y el maniquí `CDMAM`:** El maniquí `ACR` ($4,2\text{ cm}$ equivalentes, con **4 fibras, 3 grupos de calcificaciones y 3 masas** exigibles) es un test semicualitativo rápido de constancia; el maniquí **`CDMAM`** (discos de oro en matriz detalle-contraste) es el estándar cuantitativo exigido por la Guía Europea `EUREF` en las pruebas de aceptación y anuales de mamógrafos digitales.
 5. **Principio de la Mamografía Espectral con Contraste (`CESM`):** Recuerda la cifra exacta del **borde K del Yodo ($33,2\text{ keV}$)**: el disparo de baja energía ($26\text{–}32\text{ kVp}$) se hace por debajo de $33,2\text{ keV}$ y el de alta energía ($45\text{–}49\text{ kVp}$ con filtro de $\text{Cu}$ o $\text{Ti}$) justo por encima de $33,2\text{ keV}$.
 6. **Trampa sobre los objetos `DICOM` mamográficos (`For Processing` vs. `For Presentation`):** Los algoritmos de detección asistida por computador (`CAD`/`IA`) y los softwares de control de calidad física (`PECCRD` / `EUREF`) operan obligatoriamente sobre la imagen cruda lineal **`DICOM MG For Processing`**, mientras que el radiólogo informa en las estaciones de $5\text{ MP}$ sobre la imagen procesada no lineal **`DICOM MG For Presentation`** (y sobre el objeto **`DICOM BTO`** en tomosíntesis).
-7. **Liberación automática del compresor ante fallo eléctrico (`UNE-EN 60601-2-45`):** En las pruebas anuales de seguridad electromédica en `XMAO`, es obligatorio comprobar que ante un corte brusco del suministro eléctrico de red el sistema de compresión motorizado **libera de forma automática o manual inmediata la pala compresora** en menos de $3\text{ segundos}$.
+7. **Liberación automática del compresor ante fallo eléctrico:** En las pruebas anuales de seguridad electromédica en `GMAO`, es obligatorio comprobar que ante un corte brusco del suministro eléctrico de red el sistema de compresión motorizado **libera de forma automática o manual inmediata la pala compresora** en menos de $3\text{ segundos}$.
 8. **Imagen Sintética 2D (`C-View` / `Insight 2D`) en Tomosíntesis (`DBT`):** La reconstrucción matemática de la imagen 2D sintética a partir de las proyecciones del barrido de tomosíntesis evita realizar los disparos 2D `FFDM` convencionales adicionales (`CC` y `MLO`), reduciendo a la mitad la `DGM` total del estudio combinado `DBT + 2D`.

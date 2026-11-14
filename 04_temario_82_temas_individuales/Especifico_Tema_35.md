@@ -1,38 +1,11 @@
 # Tema 35 — Caracterización y funcionamiento de las fuentes de energía para uso quirúrgico o intervencionista. Equipamiento asociado.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #35 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 05 — Electromedicina de Cuidados Críticos, Quirófano, Ventilación, Anestesia, Monitorización, Endoscopia y Robótica
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulos 1585, 1587 y 1589), Reglamento (UE) 2017/745 (MDR, Regla 9 — Clase IIb/III), Real Decreto 192/2023, UNE-EN 60601-1, UNE-EN 60601-2-2 (Equipos quirúrgicos de alta frecuencia), UNE-EN 60601-2-22 (Equipos quirúrgicos y terapéuticos por láser), UNE-EN 60825-1 (Seguridad de productos láser — Clase 4), UNE-EN 62353 y REBT ITC-BT-38
-> - **Sistemas y Entorno SERGAS:** XMAO (Gestión de Activos y Mantenimiento Electromédico), IANUS (Historia Clínica Electrónica), SIHGA, Bloques Quirúrgicos Centrales, CMA y Salas de Intervencionismo (Hemodinámica, Electrofisiología y Radiología Vascular) de las 7 Áreas Sanitarias del SERGAS (CHUAC, CHUS, CHUVI, HULA, CHUO, CHOP, CHUF)
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose Curricular y Técnico del Epígrafe Oficial (DOG núm. 67, de 13/04/2026)
-El **Tema 35** de la Parte Específica del programa oficial para el acceso a la categoría de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servizo Galego de Saúde (SERGAS) aborda de forma integral los principios biofísicos, la arquitectura electrónica de potencia, las modalidades operativas, los sistemas de seguridad activa y el equipamiento periférico asociado a las **fuentes de energía para uso quirúrgico o intervencionista**. Su estructura técnica deriva directamente de los contenidos formativos del **Real Decreto 838/2015** y la **Orden EFP/1216/2019** (título de Técnico Superior en Electromedicina Clínica), en particular del **Módulo 1589 (*Sistemas de monitorización, registro y cuidados críticos*, bloque de electrobisturís y fuentes quirúrgicas)**, del **Módulo 1587 (*Sistemas electrónicos y fotónicos*, generadores de radiofrecuencia, amplificadores de potencia, transductores piezoeléctricos y fuentes láser)** y del **Módulo 1585 (*Instalaciones eléctricas*, acoplamiento en quirófanos bajo esquema IT médico según REBT ITC-BT-38)**:
-
-1. **Electrocirugía de Alta Frecuencia (AF / RF — `UNE-EN 60601-2-2`)**: Biofísica de la interacción corriente-tejido por encima de $100\text{ kHz}$ (ausencia de efecto farádico neuromuscular, calentamiento volumétrico por efecto Joule), regímenes térmicos tisulares, formas de onda y factor de cresta (*Crest Factor* $\text{CF}$), modos Monopolar y Bipolar, topologías de salida referenciada a tierra frente a salida aislada flotante, y monitorización dinámica de calidad de contacto del electrodo neutro (**REM / CQM**).
-2. **Fuentes de Energía Electrotérmica y de Plasma Avanzadas**: Sistemas de **Sellado Vascular Bipolar Avanzado** en lazo cerrado de impedancia (*LigaSure*, *EnSeal*) para vasos de hasta $7\text{ mm}$, **Coagulación por Plasma de Argón (APC)** sin contacto tisular y **Resección Bipolar en Plasma Salino** (*Saline Plasma Resection*) en urología y ginecología.
-3. **Fuentes de Energía Mecánica Ultrasónica e Híbrida**: **Bisturí Armónico Ultrasónico** (*Harmonic Scalpel* a $55,5\text{ kHz}$), **Sistemas Híbridos Ultrasónico-Bipolares** (*Thunderbeat*) y **Aspirador Quirúrgico Ultrasónico Cavitacional** (*CUSA* a $23\text{–}36\text{ kHz}$) para neurocirugía y cirugía hepatobiliar.
-4. **Fuentes Fotónicas Quirúrgicas (`UNE-EN 60601-2-22` y `UNE-EN 60825-1`)**: Láseres quirúrgicos de Clase 4 ($\text{CO}_2$, $\text{Ho:YAG}$, $\text{Tulio TFL}$, $\text{Nd:YAG}$, $\text{KTP } 532\text{ nm}$, Diodo y Excímero).
-5. **Fuentes de Ablación Intervencionista (Oncológica y Electrofisiológica)** y **Equipamiento Asociado**: Ablación por Radiofrecuencia (RFA), Microondas (MWA), Crioablación por efecto Joule-Thomson, Electroporación Irreversible (IRE) y Ablación por Campo Pulsado (PFA), junto con evacuadores de humo quirúrgico con filtración **ULPA** y analizadores metrológicos de electrocirugía.
-
-### 0.2. Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Ingeniero/a Técnico/a**
-- **Grado de solapamiento:** **Alto (75%)**: Incluye explícitamente «Bisturís» (electrobisturís y fuentes quirúrgicas) y equipamiento del bloque quirúrgico.
-- **Epígrafes equivalentes:**
-  - • Tema 47. Monitorización. Desfibriladores. Bisturís. Equipos de ventilación.
-  - • Tema 46. El bloque quirúrgico: instalaciones y equipos. Circuitos. UCIs y unidades de reanimación post-anestésica: instalaciones y equipos. Inspección y mantenimiento.
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Biofísica de la Electrocirugía de Alta Frecuencia y Regímenes Termobiológicos Tisulares y Marco Normativo Europeo
 
 ### 1.1. Biofísica de la Electrocirugía de Alta Frecuencia: Supresión del Efecto Farádico y Efecto Joule Volumétrico
 El principio físico cardinal que posibilita la **electrocirugía de alta frecuencia (AF)** —también denominada unidad electroquirúrgica (*Electrosurgical Unit*, ESU) o electrobisturí— radica en la respuesta en frecuencia de las membranas excitables del cuerpo humano (axones nerviosos periféricos, placa motora muscular esquelética y miocardio). A frecuencias industriales de red eléctrica ($50\text{–}60\text{ Hz}$), los iones extracelulares e intracelulares ($\text{Na}^+$, $\text{K}^+$, $\text{Ca}^{2+}$) disponen de un semiperíodo de $10\text{ ms}$, tiempo suficiente para desplazarse a través de los canales iónicos dependientes de voltaje y alterar el potencial transmembrana en reposo ($\approx -70\text{ a }-90\text{ mV}$). Este fenómeno se denomina **efecto farádico** y provoca contracción tetánica violenta, dolor agudo y, con corrientes transtorácicas tan bajas como $50\text{–}100\text{ mA}$, **fibrilación ventricular letal**.
 
-Como demostró Jacques-Arsène d'Arsonval y aplicó clínicamente William T. Bovie junto al neurocirujano Harvey Cushing, cuando la frecuencia de la corriente alterna supera el umbral de **$100\text{ kHz}$**, el período de inversión polar ($T < 10\text{ }\mu\text{s}$) resulta más corto que el tiempo de relajación y apertura de los canales de sodio de las membranas celulares. En consecuencia, los iones intracelulares simplemente oscilan en torno a su posición de equilibrio sin lograr despolarizar la membrana: **desaparece por completo el efecto farádico de estimulación neuromuscular y miocárdica**. Por seguridad normativa (`UNE-EN 60601-2-2`), los generadores electroquirúrgicos operan en la banda de radiofrecuencia comprendida entre **$300\text{ kHz}$ y $5\text{ MHz}$** (habitualmente entre **$300\text{ kHz}$ y $500\text{ kHz}$** en electrobisturís quirúrgicos generales, y hasta $1,7\text{–}4,0\text{ MHz}$ en unidades de radiocirugía dermatológica y oftalmológica). No se suelen superar los $5\text{ MHz}$ en unidades monopolares convencionales porque a frecuencias muy elevadas las impedancias capacitivas parásitas ($X_C = \frac{1}{2\pi f C}$) disminuyen drásticamente, incrementando las corrientes de fuga de alta frecuencia hacia tierra y hacia el personal quirúrgico.
+Como demostró Jacques-Arsène d'Arsonval y aplicó clínicamente William T. Bovie junto al neurocirujano Harvey Cushing, cuando la frecuencia de la corriente alterna supera el umbral de **$100\text{ kHz}$**, el período de inversión polar ($T < 10\text{ }\mu\text{s}$) resulta más corto que el tiempo de relajación y apertura de los canales de sodio de las membranas celulares. En consecuencia, los iones intracelulares simplemente oscilan en torno a su posición de equilibrio sin lograr despolarizar la membrana: **desaparece por completo el efecto farádico de estimulación neuromuscular y miocárdica**. Por seguridad normativa, los generadores electroquirúrgicos operan en la banda de radiofrecuencia comprendida entre **$300\text{ kHz}$ y $5\text{ MHz}$** (habitualmente entre **$300\text{ kHz}$ y $500\text{ kHz}$** en electrobisturís quirúrgicos generales, y hasta $1,7\text{–}4,0\text{ MHz}$ en unidades de radiocirugía dermatológica y oftalmológica). No se suelen superar los $5\text{ MHz}$ en unidades monopolares convencionales porque a frecuencias muy elevadas las impedancias capacitivas parásitas ($X_C = \frac{1}{2\pi f C}$) disminuyen drásticamente, incrementando las corrientes de fuga de alta frecuencia hacia tierra y hacia el personal quirúrgico.
 
 Importa distinguir conceptualmente el **electrobisturí (diatermia quirúrgica de AF)** del **termocauterio o electrocauterio clásico**:
 - En el **electrocauterio** (corriente continua o baja frecuencia), la corriente eléctrica circula *únicamente* por el interior de una resistencia metálica en la punta del instrumento, poniéndola incandescente para quemar el tejido por **conducción térmica pasiva** (el paciente no forma parte del circuito eléctrico).
@@ -48,7 +21,7 @@ $$\Delta T = \frac{J^2 \cdot \rho \cdot t}{c_e \cdot \delta_m} = \frac{I^2 \cdot
 
 Esta dependencia cuadrática respecto a la superficie $S$ explica por qué en cirugía monopolar la misma corriente $I$ (por ejemplo, $0,5\text{ A}$) produce la vaporización instantánea del tejido en la punta del **electrodo activo** ($S_{\text{activo}} \approx 1\text{ mm}^2 = 10^{-2}\text{ cm}^2$, altísima densidad $J$), mientras que al retornar por la **placa neutra de paciente** ($S_{\text{placa}} > 100\text{–}150\text{ cm}^2$, superficie $10^4$ veces mayor) la densidad de corriente cae en un factor $10^4$ y el incremento térmico se reduce en un factor $10^8$ ($\Delta T < 1\text{ }^\circ\text{C}$, completamente inocuo si la placa está íntegra y bien adherida).
 
-### 1.2. Regímenes Termobiológicos Tisulares y Marco Normativo Europeo (`MDR`, `UNE-EN 60601-2-2` y `60601-2-22`)
+### 1.2. Regímenes Termobiológicos Tisulares y Marco Normativo Europeo
 La respuesta histológica del tejido biológico ante el depósito de energía quirúrgica (eléctrica, ultrasónica o fotónica) depende estrictamente del perfil de temperatura alcanzado:
 - **$37\text{ }^\circ\text{C}\text{ a }44\text{ }^\circ\text{C}$ (Normotermia / Hipertermia leve):** Edema local y vasodilatación sin daño estructural irreversible; integridad proteica conservada.
 - **$45\text{ }^\circ\text{C}\text{ a }59\text{ }^\circ\text{C}$ (Umbral de daño celular irreversible dependiente del tiempo):** Inactivación enzimática y alteración de la permeabilidad de membrana celular (necrosis coagulativa diferida si se mantiene varios minutos, base de la hipertermia oncológica).
@@ -63,7 +36,7 @@ Desde el punto de vista jurídico-técnico, las fuentes de energía quirúrgica 
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Arquitectura Electrónica del Generador de Alta Frecuencia, Formas de Onda y Factor de Cresta
 
 ### 2.1. Arquitectura Electrónica del Generador de Alta Frecuencia, Formas de Onda y Factor de Cresta ($\text{CF}$)
 Un generador electroquirúrgico moderno controlado por microprocesador consta de cinco bloques funcionales en cascada:
@@ -84,7 +57,7 @@ Para una potencia media constante ($P = V_{\text{rms}}^2 / R$), las distintas fo
 - **Modo Coagulación Forzada y Fulguración sin Contacto (*Spray Coag*):** Paquetes muy breves de sinusoides amortiguadas con un **ciclo de trabajo muy bajo ($D \approx 6\%\text{ a }10\%$**, inactivo más del $90\%$ del tiempo) pero con **voltajes de pico extremadamente elevados ($V_{\text{pico}} = 3.000\text{ a }5.000\text{ Vp}$, hasta $9.000\text{ V}_{\text{pp}}$)** y un **Factor de Cresta muy alto ($\text{CF} \ge 5,0\text{ a }8,0$)**. El altísimo voltaje rompe la rigidez dieléctrica del aire ($\approx 3\text{ kV/mm}$) saltando largos arcos eléctricos sin contacto físico hacia el tejido, produciendo una coagulación superficial extensa de lechos sangrantes en sábana (p. ej., lecho vesicular, esternotomía o parénquima esplénico/hepático), aunque a costa de mayor dispersión capacitiva de RF.
 
 ### 2.2. Configuraciones de Salida (Referenciada a Tierra vs. Flotante Aislada) y Sistema REM/CQM
-Históricamente existieron tres topologías de circuito de salida en los generadores monopolares (`UNE-EN 60601-2-2`):
+Históricamente existieron tres topologías de circuito de salida en los generadores monopolares:
 1. **Salida Referenciada a Tierra (*Ground-Referenced* — Obsoleta por riesgo):** El electrodo neutro estaba conectado directamente a la tierra de protección del edificio. Cualquier contacto accidental del paciente con un elemento metálico puesto a tierra (chasis de la mesa quirúrgica, soportes de estribos, electrodos de monitorización ECG) ofrecía un **camino paralelo alternativo de retorno a tierra**. Si la impedancia de la placa neutra aumentaba ligeramente, la corriente de RF se dividía y retornaba por el punto de contacto metálico de pequeña superficie, provocando graves **quemaduras en sitios alternativos (*alternate-site burns*)**.
 2. **Salida Referenciada Equilibrada (*Balanced Output*):** Referenciada mediante impedancias simétricas respecto a tierra.
 3. **Salida Aislada o Flotante en Alta Frecuencia (*Isolated / Floating Output* — Estándar actual Tipo CF):** El secundario del transformador de RF está completamente aislado de la tierra física del quirófano. La corriente que sale por el electrodo activo solo reconoce como camino de retorno la entrada del electrodo neutro del propio generador: aunque el paciente toque una parte metálica conectada a tierra, no existe un lazo cerrado de conducción directa hacia el polo de retorno del transformador.
@@ -110,7 +83,7 @@ Para erradicar las quemaduras bajo el propio electrodo neutro debidas a despegam
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Sellado Vascular Bipolar Avanzado, Coagulación por Plasma de Argón (APC) y Resección Bipolar en Salino
 
 ### 3.1. Sellado Vascular Bipolar Avanzado, Coagulación por Plasma de Argón (APC) y Resección Bipolar en Salino
 1. **Sistemas Electroquirúrgicos de Sellado Vascular Bipolar Avanzado (*LigaSure™*, *EnSeal®*, *BiClamp®*):**
@@ -136,7 +109,7 @@ Las fuentes quirúrgicas ultrasónicas sustituyen o complementan el paso de corr
    - **Principio de Selectividad Tisular por Cavitación Acústica:** La violenta retracción y avance de la punta genera ondas de presión negativa en el líquido intersticial que crean microburbujas de vapor; su implosión (**cavitación inercial**) fragmenta y emulsiona selectivamente los **tejidos parenquimatosos con alto contenido en agua y baja densidad fibrilar** (hepatocitos, tejido tumoral cerebral, parénquima renal), mientras que **respeta intactas las estructuras con alto contenido en colágeno y elastina** (paredes de arterias, venas suprahepáticas, conductos biliares, duramadre y troncos nerviosos), ya que sus fibras elásticas absorben y disipan la vibración sin romperse.
    - La pieza de mano integra tres funciones simultáneas: **1) Vibración ultrasónica** (por transductor magnetoestrictivo refrigerado por agua en modelos clásicos o piezoeléctrico PZT en los actuales), **2) Irrigación coaxial de suero fisiológico estéril** ($2\text{–}20\text{ mL/min}$, que refrigera la punta y aporta el medio líquido para la cavitación) y **3) Aspiración por vacío central** a través del lumen de la punta de titanio para evacuar el parénquima emulsionado, dejando el esqueleto vascular limpio para su ligadura o clipado.
 
-### 3.3. Fuentes Fotónicas Quirúrgicas (`UNE-EN 60601-2-22`) y Sistemas de Ablación Intervencionista
+### 3.3. Fuentes Fotónicas Quirúrgicas y Sistemas de Ablación Intervencionista
 Los **láseres quirúrgicos (Clase 4 según `UNE-EN 60825-1`)** generan radiación electromagnética monocromática, coherente y colimada mediante emisión estimulada en un medio activo (gas, cristal de estado sólido dopado con tierras raras, fibra óptica o semiconductor), cuyo efecto tisular (fototérmico de coagulación/vaporización, fotomecánico/fotoacústico de litotricia o fotoquímico/fotoablativo) depende del **cromóforo diana** (agua, oxihemoglobina o melanina) a su longitud de onda ($\lambda$) específica:
 
 | Tipo de Láser Quirúrgico | Longitud de Onda ($\lambda$) | Cromóforo Diana Principal | Penetración Óptica y Vía de Transmisión | Aplicaciones Clínicas e Intervencionistas Principales |
@@ -156,7 +129,7 @@ En el ámbito de la **radiología intervencionista oncológica y la electrofisio
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Mecanismos de Lesión Electrotérmica en Cirugía Mínimamente Invasiva y Compatibilidad con Dispositivos Cardíacos
 
 ### 4.1. Mecanismos de Lesión Electrotérmica en Cirugía Mínimamente Invasiva y Compatibilidad con Dispositivos Cardíacos (CIED)
 En ingeniería clínica hospitalaria, el análisis de incidentes adversos asociados a fuentes electroquirúrgicas identifica cuatro mecanismos físicos principales de quemadura iatrogénica fuera del campo visual del cirujano (especialmente críticos en **laparoscopia**):
@@ -169,17 +142,17 @@ En **pacientes portadores de Marcapasos o Desfibrilador Automático Implantable 
 - Priorizar siempre el **Bisturí Ultrasónico Armónico** o la **Electrocirugía Bipolar**.
 - Si es imprescindible usar modo Monopolar: programar el marcapasos en **modo asíncrono (`VOO` / `DOO`)** en pacientes dependientes y **desactivar las terapias antitaquicardia (choques) del DAI** (mediante programador o colocación de imán clínico según modelo, manteniendo al paciente conectado a un desfibrilador externo con parches puestos); colocar la **placa neutra REM lo más cerca posible del campo quirúrgico** de modo que el vector Electrodo Activo $\rightarrow$ Placa Neutra quede a **$> 15\text{ cm}$ del generador/cables del CIED y nunca cruce el eje cardíaco**; usar modo *Corte Puro* de baja tensión en ráfagas cortas de $< 3\text{–}5\text{ s}$.
 
-### 4.2. Equipamiento Asociado (Evacuadores de Humo Quirúrgico ULPA) y Verificación Metrológica (`UNE-EN 60601-2-2` y `62353`)
+### 4.2. Equipamiento Asociado (Evacuadores de Humo Quirúrgico ULPA) y Verificación Metrológica
 El penacho de **humo quirúrgico (*surgical plume*)** generado por electrobisturís, láseres y bisturís ultrasónicos contiene un $95\%$ de vapor de agua y un $5\%$ de partículas ultrafinas ($0,07\text{ a }6,5\text{ }\mu\text{m}$), compuestos químicos mutagénicos y carcinógenos (benceno, cianuro de hidrógeno, formaldehído, acrilonitrilo, hidrocarburos aromáticos policíclicos) y fragmentos celulares o virales viables (VPH en condilomas tratados con láser $\text{CO}_2$, VHB, VIH). Por ello, el **equipamiento asociado** indispensable es el **Evacuador de Humo Quirúrgico** acoplado al mango del bisturí (*smoke pencil*) con activación automática por sensor inductivo de corriente de RF, dotado de un **cartucho de triple filtración**:
 1. **Prefiltro de macropartículas y trampa de humedad.**
 2. **Filtro ULPA (*Ultra-Low Penetration Air*, norma `EN 1822`)**: Retiene con una **eficiencia mínima del $99,999\%$ las partículas de tamaño más penetrante ($\mathbf{0,1\text{ a }0,12\text{ }\mu\text{m}}$)** (superior al filtro HEPA H13/H14, que certifica el $99,95\%\text{–}99,995\%$ a $0,3\text{ }\mu\text{m}$).
 3. **Lecho de Carbón Activo granulado:** Adsorbe los gases tóxicos y compuestos orgánicos volátiles (COV) responsables del olor y la toxicidad química.
 
-El protocolo de **control de calidad y mantenimiento preventivo anual** ejecutado por el Servicio de Electromedicina (`Módulo 1589`, `UNE-EN 60601-2-2` y `UNE-EN 62353`) emplea un **Analizador de Seguridad Eléctrica** y un **Analizador de Electrocirugía de Alta Frecuencia** (p. ej., *Fluke QA-ES III* o *Rigel Uni-Therm*) con banco de resistencias no inductivas de potencia ($10\text{ }\Omega$ a $5.000\text{ }\Omega$):
+El protocolo de **control de calidad y mantenimiento preventivo anual** ejecutado por el Servicio de Electromedicina emplea un **Analizador de Seguridad Eléctrica** y un **Analizador de Electrocirugía de Alta Frecuencia** (p. ej., *Fluke QA-ES III* o *Rigel Uni-Therm*) con banco de resistencias no inductivas de potencia ($10\text{ }\Omega$ a $5.000\text{ }\Omega$):
 
 | Prueba Metrológica y de Seguridad (`UNE-EN 60601-2-2` / `62353`) | Configuración de Ensayo en Analizador de Electrocirugía | Criterio de Aceptación y Límite Normativo Estricto |
 | :--- | :--- | :--- |
-| **1. Seguridad Eléctrica de Baja Frecuencia (`UNE-EN 62353`)** | Clase I, **Parte Aplicable Tipo CF a prueba de desfibrilación** | Resistencia tierra protección $\le 0,2\text{–}0,3\text{ }\Omega$; Fuga a paciente baja frec. $\le 10\text{ }\mu\text{A}$ (NC) / $\le 50\text{ }\mu\text{A}$ (SFC) |
+| **1. Seguridad Eléctrica de Baja Frecuencia** | Clase I, **Parte Aplicable Tipo CF a prueba de desfibrilación** | Resistencia tierra protección $\le 0,2\text{–}0,3\text{ }\Omega$; Fuga a paciente baja frec. $\le 10\text{ }\mu\text{A}$ (NC) / $\le 50\text{ }\mu\text{A}$ (SFC) |
 | **2. Exactitud de Potencia de Salida y Curva de Carga RF** | Medición de $P = I_{\text{rms}}^2 \cdot R_{\text{carga}}$ en Corte, Blend y Coag sobre carga nominal ($300\text{ o }500\text{ }\Omega$) y barrido $50\text{–}2.000\text{ }\Omega$ | Desviación de potencia **$\le \pm 20\%$** respecto al valor seleccionado en pantalla; potencia máxima absoluta **$\le 400\text{ W}$** |
 | **3. Corriente de Fuga de Alta Frecuencia (RF Leakage)** | Medición de corriente RF a tierra a través de resistencia estándar no inductiva de **$200\text{ }\Omega$** en electrodo activo y neutro | Generador de salida aislada (flotante): **$< 150\text{ mA}_{\text{rms}}$** (o potencia disipada $< 4,5\text{ W}$ sobre $200\text{ }\Omega$) |
 | **4. Verificación del Sistema REM / CQM (Placa Partida)** | Década resistiva variable conectada a la entrada de placa neutra ($0\text{ a }200\text{ }\Omega$) | Habilitado entre **$5\text{ }\Omega\text{ y }135\text{ }\Omega$**; alarma y corte de RF si $R < 5\text{ }\Omega$, $R > 135\text{ }\Omega$ o incremento $> 40\%$ sobre base |
@@ -187,39 +160,26 @@ El protocolo de **control de calidad y mantenimiento preventivo anual** ejecutad
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Gestión en XMAO, Clasificación de Criticidad e Integración Quirúrgica en las 7 Áreas Sanitarias
-En los bloques quirúrgicos generales, unidades de Cirugía Mayor Ambulatoria (CMA), paritorios, salas de endoscopia terapéutica y salas de hemodinámica/electrofisiología de las **7 Áreas Sanitarias del SERGAS** (CHUAC en A Coruña, CHUS en Santiago, CHUVI en Vigo —Hospital Álvaro Cunqueiro y Meixoeiro—, HULA en Lugo, CHUO en Ourense, CHOP en Pontevedra y CHUF en Ferrol), las fuentes de energía quirúrgica constituyen uno de los parques tecnológicos de mayor criticidad asistencial:
-- **Catalogación en `XMAO` e Índice de Fennigkoh y Smith ($\text{EM}$):** Los generadores electroquirúrgicos, unidades de sellado bipolar/ultrasónico y láseres quirúrgicos están inventariados en el sistema corporativo **`XMAO`** con trazabilidad por número de serie, etiqueta de código QR/barras y **UDI (*Unique Device Identification*)**. En la matriz de priorización de mantenimiento de Fennigkoh y Smith ($\text{EM} = \text{Función} + \text{Riesgo Físico} + \text{Mantenimiento Requerido}$), los electrobisturís y láseres quirúrgicos reciben la máxima puntuación de función (**Terapéutico Quirúrgico = $9$**) y de riesgo (**Muerte potencial o lesión grave por quemadura/perforación = $5$**) más requerimiento de mantenimiento alto (**$4\text{–}5$**), alcanzando un **$\text{EM} = 18\text{–}19$**, lo que obliga a su inclusión en el programa de **inspección preventiva y verificación metrológica semestral o anual obligatoria** (y tras cada reparación correctiva en banco).
-- **Integración en Quirófanos Integrados y Torres suspendidas en Columnas (`UNE-EN ISO 11197`):** En los quirófanos integrados del SERGAS (p. ej., sistemas *Karl Storz OR1*, *Olympus EndoAlpha* o *Stryker iSuite* del Hospital Álvaro Cunqueiro, CHUAC y HULA), las consolas de electrocirugía, el módulo de argón APC y el generador ultrasónico van alojados en la **columna de cirugía** alimentados a través de las tomas protegidas por el **Transformador de Aislamiento del Esquema IT Médico (`REBT ITC-BT-38`)**, y se comunican por bus serie/Ethernet con el panel táctil de control central del quirófano para preconfigurar perfiles de potencia según especialidad y cirujano.
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-### 5.2. Protocolos Corporativos de Seguridad Quirúrgica (Listado de Verificación OMS, Prevención de Incendios y Trazabilidad en IANUS)
-1. **Prevención de la Tríada del Fuego Quirúrgico (*Surgical Fire Triad*):** Todo incendio en quirófano requiere la concurrencia de tres elementos: **1) Fuente de ignición** (bisturí monopolar, fibra óptica de luz fría o láser quirúrgico, que aportan el $90\%$ de las igniciones), **2) Combustible** (antisépticos alcohólicos como clorhexidina al $2\%$ en alcohol isopropílico al $70\%$, paños quirúrgicos, gasas o tubos endotraqueales de PVC) y **3) Comburente** (atmósfera enriquecida en $\text{O}_2 > 30\%$ o $\text{N}_2\text{O}$ acumulada bajo los paños en cirugía de cabeza y cuello). Los protocolos de seguridad del paciente del SERGAS (`SINASP`) exigen respetar un **tiempo mínimo de secado y evaporación de $\ge 3\text{ minutos}$** tras aplicar clorhexidina alcohólica (evitando charcos en el ombligo o pliegues) antes de colocar los campos y activar el electrobisturí, y utilizar **tubos endotraqueales específicos resistentes al láser** (recubiertos de espiral metálica de acero inoxidable o silicona con doble manguito inflado con suero fisiológico teñido con azul de metileno, nunca con aire) en microcirugía laríngea con láser de $\text{CO}_2$.
-2. **Trazabilidad en `IANUS` y `SILICON`/`LOGAS`:** En la hoja quirúrgica electrónica de **`IANUS`**, el personal de enfermería circulante registra el código identificativo del generador electroquirúrgico empleado, la modalidad (monopolar/bipolar/ultrasónico), el lote de la placa neutra partida REM y la localización anatómica exacta de colocación (muslo o glúteo bien vascularizado, libre de prominencias óseas, cicatrices, tatuajes con pigmentos férricos o prótesis metálicas subyacentes, verificando la integridad cutánea al retirar la placa al final de la intervención).
+| Parámetro / Concepto Crítico | Cifra / Umbral / Ecuación Exacta |
+| :--- | :--- |
+| **Frecuencia de trabajo del Electrobisturí (AF)** | **$300\text{ kHz a }5\text{ MHz}$** (típico $300\text{–}500\text{ kHz}$; umbral sin efecto farádico **$> 100\text{ kHz}$**) |
+| **Ecuación del calentamiento tisular (Joule)** | $Q = J^2 \cdot \rho \cdot t = (I/S)^2 \cdot \rho \cdot t \implies \Delta T \propto \mathbf{1/S^2}$ ($\propto 1/r^4$) |
+| **Regímenes térmicos tisulares clave** | **$60\text{–}95\text{ }^\circ\text{C}$** (Coagulación/desnaturalización colágeno); **$\ge 100\text{ }^\circ\text{C}$** (Corte/vaporización); **$> 200\text{ }^\circ\text{C}$** (Carbonización) |
+| **Factor de Cresta ($\text{CF} = V_{\text{pico}}/V_{\text{rms}}$)** | **Corte puro**: $D=100\%, \mathbf{\text{CF}=1,41}$ ($\sqrt{2}$); **Coag/Spray**: $D=6\text{–}10\%, V_p=3\text{–}5\text{ kV}, \mathbf{\text{CF}\ge 5\text{–}8}$ |
+| **Colores normalizados de pedales y botones** | **Amarillo = Corte (*Cut*)** · **Azul = Coagulación (*Coag*)** |
+| **Ventana de impedancia del sistema REM / CQM** | Placa neutra partida (*Split-Plate*): **$5\text{ }\Omega\text{ a }135\text{ }\Omega$** (alarma si sube **$> 30\text{–}40\%$** sobre basal) |
+| **Potencia máxima y Fuga de AF admisible** | Potencia máx. **$\le 400\text{ W}$** (tolerancia $\pm 20\%$); Fuga RF en salida aislada **$< 150\text{ mA}$** (sobre $200\text{ }\Omega$) |
+| **Sellado Vascular Bipolar Avanzado (*LigaSure*)** | Vasos y haces de **hasta $7\text{ mm}$ de diámetro** (resiste $> 3\times$ PAS; control por impedancia $< 200\text{ V}$) |
+| **Coagulación por Plasma de Argón (APC)** | Gas Argón inerte ($\ge 99,998\%$), **sin contacto tisular**, penetración autolimitada de **$0,5\text{ a }3\text{ mm}$** |
+| **Bisturí Ultrasónico Armónico vs. CUSA** | **Armónico**: **$55,5\text{ kHz}$** ($50\text{–}100\text{ }\mu\text{m}$, $50\text{–}100\text{ }^\circ\text{C}$, $0\text{ mA}$); **CUSA**: **$23\text{–}36\text{ kHz}$** (cavitación selectiva) |
+| **Longitudes de onda de Láseres Quirúrgicos** | **$\text{CO}_2$: $10.600\text{ nm}$**; **$\text{Ho:YAG}$: $2.100\text{ nm}$**; **Tulio: $1.940\text{ nm}$**; **$\text{Nd:YAG}$: $1.064\text{ nm}$**; **KTP: $532\text{ nm}$**; **ArF: $193\text{ nm}$** |
+| **Filtración de Evacuadores de Humo Quirúrgico** | Filtro **ULPA**: eficiencia **$\ge 99,999\%$** para partículas de **$0,1\text{–}0,12\text{ }\mu\text{m}$** + Carbón activo |
 
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
-
-| Parámetro / Concepto Crítico | Cifra / Umbral / Ecuación Exacta | Norma / Referencia Oficial |
-| :--- | :--- | :--- |
-| **Frecuencia de trabajo del Electrobisturí (AF)** | **$300\text{ kHz a }5\text{ MHz}$** (típico $300\text{–}500\text{ kHz}$; umbral sin efecto farádico **$> 100\text{ kHz}$**) | `UNE-EN 60601-2-2` |
-| **Ecuación del calentamiento tisular (Joule)** | $Q = J^2 \cdot \rho \cdot t = (I/S)^2 \cdot \rho \cdot t \implies \Delta T \propto \mathbf{1/S^2}$ ($\propto 1/r^4$) | Física de Electrocirugía |
-| **Regímenes térmicos tisulares clave** | **$60\text{–}95\text{ }^\circ\text{C}$** (Coagulación/desnaturalización colágeno); **$\ge 100\text{ }^\circ\text{C}$** (Corte/vaporización); **$> 200\text{ }^\circ\text{C}$** (Carbonización) | Biofísica tisular |
-| **Factor de Cresta ($\text{CF} = V_{\text{pico}}/V_{\text{rms}}$)** | **Corte puro**: $D=100\%, \mathbf{\text{CF}=1,41}$ ($\sqrt{2}$); **Coag/Spray**: $D=6\text{–}10\%, V_p=3\text{–}5\text{ kV}, \mathbf{\text{CF}\ge 5\text{–}8}$ | `UNE-EN 60601-2-2` |
-| **Colores normalizados de pedales y botones** | **Amarillo = Corte (*Cut*)** · **Azul = Coagulación (*Coag*)** | `UNE-EN 60601-2-2` |
-| **Ventana de impedancia del sistema REM / CQM** | Placa neutra partida (*Split-Plate*): **$5\text{ }\Omega\text{ a }135\text{ }\Omega$** (alarma si sube **$> 30\text{–}40\%$** sobre basal) | `UNE-EN 60601-2-2` |
-| **Potencia máxima y Fuga de AF admisible** | Potencia máx. **$\le 400\text{ W}$** (tolerancia $\pm 20\%$); Fuga RF en salida aislada **$< 150\text{ mA}$** (sobre $200\text{ }\Omega$) | `UNE-EN 60601-2-2` |
-| **Sellado Vascular Bipolar Avanzado (*LigaSure*)** | Vasos y haces de **hasta $7\text{ mm}$ de diámetro** (resiste $> 3\times$ PAS; control por impedancia $< 200\text{ V}$) | Especificación clínica/técnica |
-| **Coagulación por Plasma de Argón (APC)** | Gas Argón inerte ($\ge 99,998\%$), **sin contacto tisular**, penetración autolimitada de **$0,5\text{ a }3\text{ mm}$** | Electrocirugía endoscópica |
-| **Bisturí Ultrasónico Armónico vs. CUSA** | **Armónico**: **$55,5\text{ kHz}$** ($50\text{–}100\text{ }\mu\text{m}$, $50\text{–}100\text{ }^\circ\text{C}$, $0\text{ mA}$); **CUSA**: **$23\text{–}36\text{ kHz}$** (cavitación selectiva) | Cirugía ultrasónica |
-| **Longitudes de onda de Láseres Quirúrgicos** | **$\text{CO}_2$: $10.600\text{ nm}$**; **$\text{Ho:YAG}$: $2.100\text{ nm}$**; **Tulio: $1.940\text{ nm}$**; **$\text{Nd:YAG}$: $1.064\text{ nm}$**; **KTP: $532\text{ nm}$**; **ArF: $193\text{ nm}$** | `UNE-EN 60601-2-22` / Clase 4 |
-| **Filtración de Evacuadores de Humo Quirúrgico** | Filtro **ULPA**: eficiencia **$\ge 99,999\%$** para partículas de **$0,1\text{–}0,12\text{ }\mu\text{m}$** + Carbón activo | `EN 1822` / Seguridad laboral |
-
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa de la frecuencia de $100\text{ kHz}$ vs. $50\text{ Hz}$:** Si el tribunal pregunta por qué el electrobisturí opera a $> 300\text{ kHz}$, la respuesta correcta es **para evitar el efecto farádico de despolarización neuromuscular y fibrilación ventricular**, ya que por encima de $100\text{ kHz}$ el período de la onda es más rápido que la cinética de los canales iónicos de la membrana celular.
 2. **Trampa del Ciclo de Trabajo (*Duty Cycle*) y del Factor de Cresta ($\text{CF}$):** Muchos opositores confunden qué modo tiene mayor voltaje de pico. **Corte Puro (*Cut*)** es una onda continua ($D = 100\%$) de **bajo voltaje de pico y bajo factor de cresta ($\text{CF} = 1,41$)** que hierve el agua intracelular a $\ge 100\text{ }^\circ\text{C}$; **Coagulación / Fulguración (*Spray Coag*)** es una onda pulsada muy intermitente ($D = 6\text{–}10\%$) pero de **altísimo voltaje de pico ($3.000\text{–}5.000\text{ V}$) y altísimo factor de cresta ($\text{CF} \ge 5\text{–}8$)**, por lo que **es el modo *Coag/Spray* (y NO el modo *Cut*) el que genera mayor riesgo de acoplamiento capacitivo y fallo de aislamiento en laparoscopia**.
 3. **Trampa de la placa simple en el sistema REM:** Si se conecta una placa neutra de una sola lámina metálica (*single-foil*, no partida) a un conector REM sin adaptador o sin reconocimiento de placa simple, la impedancia medida entre los dos pines será $< 5\text{ }\Omega$ (cortocircuito). Aun si el equipo permite operar en modo no-REM con placa simple, **el equipo únicamente sabrá que el cable está enchufado al generador, pero será totalmente incapaz de detectar si la placa está pegada o despegada de la piel del paciente**.

@@ -1,41 +1,16 @@
 # Tema 68 — Integración de equipos biomédicos en instalaciones e infraestructuras.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #68 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 08 — Ingeniería Hospitalaria, REBT, Ambiente Controlado, Planes Directores, Calidad, CAD y Sostenibilidad
-> - **Marco Normativo y Técnico Nuclear:** Código Técnico de la Edificación (`CTE DB-SE-AE` Acciones en la Edificación); `REBT RD 842/2002` (`ITC-BT-18`, `ITC-BT-19`, `ITC-BT-24`, `ITC-BT-38`); Norma `UNE-EN ISO 7396-1` y `-2` (Sistemas de canalización de gases medicinales y evacuación `AGSS`); Norma `UNE 111301` / `UNE-EN ISO 23500` (Agua para hemodiálisis); Norma `UNE-EN 285` (Esterilización); `RD 1085/2009`, `RD 1836/1999`, Guías `CSN` e Informes `NCRP 147 / 151` (Blindajes radiológicos); Norma `UNE-EN 60601-1-2` (CEM); Módulos 1586 y 1593 (RD 838/2015 y Orden EFP/1216/2019).
-> - **Sistemas y Entorno SERGAS:** Unidades de Ingeniería Biomédica y Electromedicina, Servicios de Ingeniería y Mantenimiento, Servicios de Radiofísica y Protección Radiológica, Subdirección de Sistemas de Información (`IANUS`, `PACS`, `VLAN` médica), sistema `XMAO` y hospitales de las 7 Áreas Sanitarias del SERGAS.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 68** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** constituye uno de los temas más genuinamente ingenieriles de toda la oposición: la **integración física, mecánica, eléctrica, termohidráulica, de gases, de blindajes y de comunicaciones de los equipos biomédicos dentro de las instalaciones e infraestructuras del edificio hospitalario** (disciplina conocida internacionalmente como ***Site Planning*, Preinstalación e Integración de Sistemas Biomédicos**). Su desarrollo abarca:
-1. **Metodología de Preinstalación (*Site Planning*) y coordinación multidisciplinar de obra**: Estructura de las Guías de Preinstalación de los fabricantes (`OEM`), replanteo en planos CAD/BIM y protocolo de inspección de disponibilidad de sala (*Site Readiness*).
-2. **Integración estructural, mecánica y logística (*Rigging*)**: Cálculo de sobrecargas estáticas y dinámicas sobre forjados, bancadas antivibratorias, estructuras de cuelgue en techo para estativos quirúrgicos/angiógrafos y rutas de introducción de grandes cargas.
-3. **Integración con instalaciones industriales hospitalarias**: Acometidas eléctricas de gran potencia y baja impedancia de línea ($Z_{\text{red}}$), protecciones diferenciales Tipo B, disipación térmica y enfriadoras de agua helada (*chillers*), redes de gases medicinales y vacío (`UNE-EN ISO 7396-1`), anillos de agua ultrapura de hemodiálisis (`ISO 23500`) y drenajes termorresistentes de esterilización.
-4. **Integración de blindajes especiales y redes TIC/CEM**: Cálculo y ejecución de blindajes radiológicos (`RD 1085/2009`, búnkeres de radioterapia y ciclotrón), ingeniería de salas de Resonancia Magnética (**Jaula de Faraday**, **blindaje magnético de $5\text{ Gauss}$** y **tubo criogénico de evacuación de *Quench***) e integración en redes de datos clínicas.
-
-### 0.2. Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías equivalentes con solapamiento:** **Ingeniero/a Técnico/a** (Subgrupo A2).
-- **Grado de solapamiento:** **Total (90%)** — Abarca la intersección completa entre el equipamiento electromédico, diagnóstico por imagen, radioterapia, esterilización y hemodiálisis y las instalaciones industriales del hospital.
-- **Epígrafes equivalentes verificados:**
-  - **Ingeniero/a Técnico/a:** *Tema 46 (Bloque quirúrgico y UCI: instalaciones y equipos)*, *Tema 49 (Salas de hemodiálisis: instalaciones, equipos y tratamiento de agua)*, *Tema 50 (Diagnóstico por imagen: salas de RX, RM, TC e instalaciones)* y *Tema 52 (Radioterapia, Medicina Nuclear, Aceleradores lineales e instalaciones).*
-  - **Currículo BOE (`RD 838/2015` y `Orden EFP/1216/2019`):** *Módulo 1586 (Sistemas electromecánicos y de fluidos en instalaciones de electromedicina, bloque b Logística de transporte, movimiento de cargas y fijación)* y *Módulo 1593 (bloque c Replanteo de instalaciones de electromedicina).*
-
----
-
 ## 📖 1. Ingeniería de Preinstalación (*Site Planning*), Coordinación de Obra y Requerimientos Estructurales / *Rigging*
 
 ### 1.1. La Guía de Preinstalación (*Site Planning Guide*) y el Ciclo de Integración en Obra
 Ningún equipo biomédico de media o alta complejidad (Grupo II fijo o Grupo III) es un electrodoméstico *plug-and-play*: su seguridad física, su calidad de imagen diagnóstica y su fiabilidad operativa dependen directamente de cómo haya sido preparada la infraestructura arquitectónica e industrial que lo recibe. El documento contractual y técnico que rige esta interfaz es la **Guía de Preinstalación (*Site Planning Guide* o *Planning Data*)** emitida por el fabricante original (**`OEM`**) para el modelo exacto adjudicado.
 
 El Ingeniero Biomédico del hospital lidera el **ciclo de integración en seis etapas secuenciales**:
-1. **Fase 1 — Estudio de Viabilidad y Replanteo CAD/BIM (`Módulo 1593.c`):** Superposición del modelo 2D/3D del equipo biomédico (con sus ejes de isocentro, áreas de barrido de estativos, radios de giro de camilla y zonas de acceso de mantenimiento técnico de $\ge 70\text{–}90\text{ cm}$ alrededor de los armarios) sobre los planos de arquitectura e instalaciones del hospital, ejecutando la detección de colisiones (*Clash Detection*).
+1. **Fase 1 — Estudio de Viabilidad y Replanteo CAD/BIM:** Superposición del modelo 2D/3D del equipo biomédico (con sus ejes de isocentro, áreas de barrido de estativos, radios de giro de camilla y zonas de acceso de mantenimiento técnico de $\ge 70\text{–}90\text{ cm}$ alrededor de los armarios) sobre los planos de arquitectura e instalaciones del hospital, ejecutando la detección de colisiones (*Clash Detection*).
 2. **Fase 2 — Redacción del Proyecto Técnico de Adecuación de Sala (*Site Preparation Project*):** Cálculo y diseño de los refuerzos estructurales, blindajes, acometidas eléctricas, climatización, gases, fontanería y datos, tramitando simultáneamente las autorizaciones reglamentarias ante el **Consejo de Seguridad Nuclear (`CSN`)** o Industria.
 3. **Fase 3 — Ejecución de Obra Civil e Instalaciones de Preinstalación:** Bajo control conjunto de la Dirección Facultativa y la Unidad de Ingeniería Biomédica, aplicando protocolos de bioseguridad frente a *Aspergillus* si el hospital está activo.
 4. **Fase 4 — Inspección de Disponibilidad de Sala (*Site Readiness Inspection*):** Lista de chequeo formal firmada antes del envío del equipo desde fábrica, verificando cotas libres, nivelación milimétrica del suelo ($\le \pm 2\text{ mm}$ en $2\text{ metros}$ para gantries de TC y mesas quirúrgicas/angiógrafos), presencia de tensión definitiva en el cuadro de sala, agua helada en el *chiller*, limpieza libre de polvo y ruta de acceso despejada.
-5. **Fase 5 — Logística de Entrega, Descarga, Movimiento de Cargas (*Rigging*) y Anclaje Mecánico (`Módulo 1586.b`).**
+5. **Fase 5 — Logística de Entrega, Descarga, Movimiento de Cargas (*Rigging*) y Anclaje Mecánico.**
 6. **Fase 6 — Montaje Electromecánico, Calibración (*Shimming* magnético en RM), Integración `DICOM/HL7` y Pruebas de Aceptación.**
 
 ### 1.2. Cálculo de Cargas Estructurales (Estáticas y Dinámicas), Bancadas, Cuelgues de Techo y Vibraciones
@@ -51,7 +26,7 @@ Para integrar estructuralmente estos equipos se aplican **cuatro soluciones de i
 2. **Aislamiento Antivibratorio (`Curvas VC-A a VC-E`):** La calidad de imagen por Resonancia Magnética (resolución submilimétrica y secuencias de difusión/`fMRI`) y los microscopios quirúrgicos de neurocirugía/oftalmología son extremadamente sensibles a las microvibraciones estructurales transmitidas por el metro, tráfico pesado exterior, grupos electrógenos o enfriadoras ($1\text{ a }80\text{ Hz}$). Se realiza un **estudio acelerométrico triaxial de vibraciones en sala** antes de instalar el equipo y se intercalan **apoyos elastoméricos de neopreno calibrado (*Sylomer*) o amortiguadores neumáticos** bajo el imán de RM.
 3. **Estructuras de Cuelgue en Forjado Superior (*Ceiling Suspension Systems*):**
    En **Quirófanos, UCI y Salas de Hemodinámica / Angiografía Vascular Biplano**, las lámparas scialíticas, las columnas de techo articuladas, las grúas de movilización de pacientes y los arcos en C suspendidos de techo cuelgan directamente de la losa superior a través de un **bastidor o subestructura primaria de acero (`Unistrut` / perfiles `HEB`) anclada al hormigón estructural** (nunca al falso techo). Dado que los brazos pantográficos de una columna quirúrgica cargada con monitores y estación de anestesia tienen longitudes de $1,5\text{ a }2,5\text{ metros}$, el cálculo estructural no está gobernado solo por el peso vertical ($F_z \approx 300\text{–}600\text{ kg}$), sino por el **Momento Flector y Par de Vuelco ($M = F_z \times L_{\text{brazo}}$)** transmitido a la placa de anclaje superior, cuya deformación angular máxima debe ser **$< 0,1^\circ$** para evitar que los brazos de la lámpara o columna "deriven" solos por gravedad.
-4. **Ingeniería de Ruta de Acceso e Introducción de Equipos Pesados (*Rigging* — `Módulo 1586.b`):**
+4. **Ingeniería de Ruta de Acceso e Introducción de Equipos Pesados:**
    - Estudio completo de la **ruta de transporte interior** desde el muelle de descarga hasta la sala definitiva: anchura y altura libre de puertas y pasillos, radios de giro en esquinas, capacidad de montacargas y **apuntalamiento provisional de las plantas inferiores** (más tendido de planchas de acero de $10\text{–}15\text{ mm}$ de reparto sobre el pavimento) para permitir el paso del equipo sobre **tanquetas de rodillos de poliuretano o colchones neumáticos de aire comprimido (*Air Skates*)**.
    - En **Resonancia Magnética y Ciclotrones**, el diseño arquitectónico prevé una **escotilla o paño de fachada desmontable** (o lucernario en cubierta) con plataforma exterior de recepción para izar el imán desde el camión góndola mediante una **grúa autopropulsada de gran tonelaje ($100\text{–}300\text{ t}$)** e introducirlo directamente en la sala.
 
@@ -84,7 +59,7 @@ La electrónica de potencia de los equipos biomédicos pesados convierte en calo
    - **Caudal y presión diferencial:** Típicamente **$30\text{ a }90\text{ litros/minuto}$** a presión de $2,5\text{ a }4,5\text{ bar}$ con filtro de malla ($\le 100\text{–}200\text{ }\mu\text{m}$), caudalímetro, manómetros y termómetros en impulsión y retorno.
    - **Estabilidad térmica crítica:** En un **Acelerador Lineal (`LINAC`)**, la cavidad aceleradora de cobre experimenta dilatación térmica micrométrica que altera la frecuencia de resonancia de microondas ($2.998\text{ MHz}$ en banda S), por lo que el agua de refrigeración debe mantenerse con una estabilidad de **$\pm 0,5\text{ }^\circ\text{C}$**; en una **Resonancia Magnética**, si se detiene el caudal de agua helada hacia el compresor de helio ($6\text{–}12\text{ }^\circ\text{C}$, disipación $6\text{–}10\text{ kW}$), se detiene la cabeza fría (*coldhead* de $4,2\text{ K}$) y comienza a aumentar la presión del criostato por ebullición del helio (*boil-off*), razón por la cual el cuadro de la sala incorpora un **by-pass automático a agua de red de emergencia (*City Water Backup*)** o doble cabezal compresor en el *chiller*.
 
-### 2.3. Integración con Redes de Gases Medicinales, Vacío y `AGSS` (`UNE-EN ISO 7396-1` y `-2`)
+### 2.3. Integración con Redes de Gases Medicinales, Vacío y `AGSS`
 Todo equipo de soporte vital (estaciones de anestesia, respiradores de UCI, incubadoras, consolas de circulación extracorpórea) se integra con las **canalizaciones fijas de gases medicinales y vacío** reguladas por las normas **`UNE-EN ISO 7396-1`** (*Sistemas de canalización de gases medicinales comprimidos y de vacío*) y **`UNE-EN ISO 7396-2`** (*Sistemas de evacuación de gases anestésicos — `AGSS`*):
 - **Presiones nominales reglamentarias en las tomas terminales de pared o columna:**
   1. **Gases medicinales comprimidos respirables — Oxígeno ($\text{O}_2$), Aire Medicinal ($\text{Aire } 4\text{ bar}$) y Protóxido de Nitrógeno / Óxido Nitroso ($\text{N}_2\text{O}$), así como Dióxido de Carbono ($\text{CO}_2$) para laparoscopia:** Presión nominal de distribución de **$400\text{ a }500\text{ kPa}$ ($4,0\text{ a }5,0\text{ bar}$ relativos)**.
@@ -96,11 +71,11 @@ Todo equipo de soporte vital (estaciones de anestesia, respiradores de UCI, incu
   - Las tomas murales rápidas (estándar **`AFNOR NF S 90-116`** mayoritario en España, o `DIN` / `BS`) y los conectores roscados **`NIST`** (*Non-Interchangeable Screw-Threaded*) de las mangueras de los equipos biomédicos poseen **geometría física y pines/diámetros mecánicamente incompatibles entre distintos gases**, haciendo físicamente imposible enchufar por error un latiguillo de oxígeno en una toma de óxido nitroso o de vacío.
   - **Particularidad crítica en Salas de Resonancia Magnética (Zona IV):** Dentro de la Jaula de Faraday, tanto las cajas de tomas de gases como los caudalímetros, vacuómetros y el respirador/máquina de anestesia deben ser **100% amagnéticos (`MR Conditional / MR Safe` de latón cromado, aluminio y polímeros)**, instalándose la caja de válvulas de corte zonal en el exterior de la sala (Zona III).
 
-### 2.4. Integración Hidráulica: Agua Ultrapura en Hemodiálisis (`ISO 23500`) y Agua/Drenajes en Esterilización (`UNE-EN 285`)
+### 2.4. Integración Hidráulica: Agua Ultrapura en Hemodiálisis y Agua/Drenajes en Esterilización
 1. **Integración de Monitores de Hemodiálisis con el Anillo de Agua Ultrapura (`UNE 111301` y Serie `UNE-EN ISO 23500`):**
    Un paciente en hemodiálisis está expuesto a $120\text{–}180\text{ litros}$ de agua por sesión ($> 20.000\text{ L/año}$) a través de la membrana semipermeable del dializador. La planta de tratamiento de agua (**pretratamiento con filtración, descalcificación y decloración por carbón activo + doble etapa de Ósmosis Inversa en serie**) alimenta a los monitores de diálisis a través de un **anillo de distribución cerrado en recirculación continua $24/7$**:
    - **Materiales inertes del anillo:** Tubería de **polietileno reticulado (`PEX-a`)**, **fluoruro de polivinilideno (`PVDF`)** o **acero inoxidable austenítico `AISI 316L` electropulido con soldadura orbital**, totalmente **libre de tramos muertos o fondos de saco (*dead-legs*)**, diseñando las tomas de cada puesto de diálisis en U invertida para que el agua barrida a velocidad turbulenta (**$> 1,0\text{ a }1,5\text{ m/s}$**) impida la formación de *biofilm* bacteriano, y permitiendo la **desinfección térmica periódica del anillo completo a $85\text{–}90\text{ }^\circ\text{C}$** (o por ozono).
-   - **Límites microbiológicos y químicos de examen (`ISO 23500`):**
+   - **Límites microbiológicos y químicos de examen:**
      - **Agua Purificada (Estándar para Hemodiálisis):** Recuento bacteriano **$< 100\text{ UFC/ml}$** y endotoxinas bacterianas **$< 0,25\text{ UI/ml}$** (conductividad $\le 5\text{–}10\text{ }\mu\text{S/cm}$, cloro total $< 0,1\text{ mg/L}$, aluminio $< 0,01\text{ mg/L}$).
      - **Agua Ultrapura (Obligatoria para Hemodiafiltración en línea `HDF on-line` y alto flujo):** Recuento bacteriano **$< 0,1\text{ UFC/ml}$** ($< 10\text{ UFC por }100\text{ ml}$) y endotoxinas **$< 0,03\text{ UI/ml}$**.
 2. **Integración de Autoclaves y Lavadoras en la Central de Esterilización (`UNE-EN 285` y `UNE-EN ISO 15883`):**
@@ -111,7 +86,7 @@ Todo equipo de soporte vital (estaciones de anestesia, respiradores de UCI, incu
 
 ## 🔬 3. Blindajes Especiales (Radiológico, Jaula de Faraday, Magnético), Tubo de *Quench* e Integración TIC / CEM
 
-### 3.1. Cálculo e Integración de Blindajes contra Radiaciones Ionizantes (`RD 1085/2009`, `CSN`, `NCRP 147 / 151`)
+### 3.1. Cálculo e Integración de Blindajes contra Radiaciones Ionizantes
 Todo equipo biomédico emisor de radiaciones ionizantes requiere un **proyecto de blindaje estructural calculado y firmado por un Servicio o Unidad Técnica de Protección Radiológica (`SPR / UTPR`)** autorizado por el **Consejo de Seguridad Nuclear (`CSN`)**, aplicando la metodología internacional de los informes **`NCRP Report 147`** (Radiodiagnóstico y TC) y **`NCRP Report 151`** (Aceleradores Lineales de Radioterapia):
 - **Parámetros de diseño del blindaje:** Carga de trabajo semanal del equipo ($W$, en $\text{mA·min/semana}$ o $\text{Gy/semana}$ en isocentro), Factor de Uso de cada pared/suelo/techo ($U$, igual a $1$ para haz primario y $0$ para barreras secundarias de radiación dispersa y de fuga), **Factor de Ocupación del local colindante ($T$**: $T = 1$ para zonas de estancia permanente como sala de control, despachos, habitaciones de hospitalización o viviendas colindantes; $T = 1/5$ para pasillos; $T = 1/20$ o $1/40$ para aseos, almacenes o viales exteriores), distancia $d$ desde el foco/isocentro hasta el punto protegido ($I \propto 1/d^2$) y **restricción de dosis semanal de diseño ($P$)**:
   - En **Zonas Controladas / Trabajadores Expuestos:** restricción de diseño típica de **$P = 0,1\text{ mSv/semana}$** ($\le 5\text{ mSv/año}$, con margen de seguridad sobre el límite legal de $20\text{ mSv/año}$ del `RD 1029/2022`).
@@ -130,7 +105,7 @@ Todo equipo biomédico emisor de radiaciones ionizantes requiere un **proyecto d
 
 ## 🛡️ 4. Ingeniería de Preinstalación de una Sala de Resonancia Magnética (`RM`): Jaula de Faraday, Blindaje de $5\text{ Gauss}$, Zonas ACR y Tubo de *Quench*
 
-La integración de un equipo de **Resonancia Magnética (`RM` de $1,5\text{ T}$ o $3,0\text{ T}$)** reúne simultáneamente los desafíos físicos más exigentes de toda la ingeniería hospitalaria y constituye una de las preguntas más repetidas en los exámenes de oposición del SERGAS:
+La integración de un equipo de **Resonancia Magnética (`RM` de $1,5\text{ T}$ o $3,0\text{ T}$)** reúne simultáneamente los desafíos físicos más exigentes de toda la ingeniería hospitalaria y constituye una de las preguntas más repetidas en los exámenes de oposición del servicio de salud:
 
 ### 4.1. Las 4 Zonas de Seguridad de Resonancia Magnética (`Criterio ACR`) y la Línea de $5\text{ Gauss}$ ($0,5\text{ mT}$)
 Dado que un imán superconductor de RM mantiene su **campo magnético estático $B_0$ encendido las $24\text{ horas}$ de los $365\text{ días}$ del año** (incluso aunque el equipo informático esté apagado), el *American College of Radiology (`ACR`)* y la norma **`UNE-EN 60601-2-33`** dividen el entorno de la RM en **cuatro Zonas de Seguridad progresiva**:
@@ -167,11 +142,7 @@ En los imanes superconductores convencionales de baño de helio, si por una emer
   2. **Sensor Monitor de Concentración de Oxígeno Ambiental ($\text{O}_2$):** Instalado en la sala del imán con repetidor en la sala de control; dispara **prealarma acústica y visual cuando la fracción de oxígeno cae por debajo del $19,5\%$** y activa automáticamente el **ventilador de extracción de emergencia de alto caudal cuando cae por debajo del $18\%$**.
   3. **Sentido de apertura de la puerta de la Sala de RM:** La puerta de la Jaula de Faraday debe **abrir obligatoriamente HACIA AFUERA (hacia la sala de control / Zona III)** (o contar con mirilla/panel de alivio de presión), para que en caso de rotura del tubo de *quench* y sobrepresión interior de la sala sea físicamente posible abrir la puerta y rescatar al paciente.
 
----
-
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
-
-### 5.1. Tabla Maestra Comparativa de Requisitos de Preinstalación e Integración por Modalidad Biomédica
+### 4.4. Tabla Maestra Comparativa de Requisitos de Preinstalación e Integración por Modalidad Biomédica
 
 | Equipo Biomédico / Unidad | Carga en Forjado y Mecánica | Acometida Eléctrica y Protección | Climatización y Agua / Gases | Blindajes y Seguridad Especial |
 | :--- | :--- | :--- | :--- | :--- |
@@ -179,36 +150,29 @@ En los imanes superconductores convencionales de baño de helio, si por una emer
 | **Tomografía Computarizada (`TC`)** | **$1.800\text{–}2.800\text{ kg}$** + fuerzas centrífugas dinámicas ($0,25\text{ s/vuelta}, >30\text{ }g$). Nivelación $\pm 2\text{ mm}$. | **$100\text{–}160\text{ kVA}$ de pico**, **Impedancia de red $Z_{\text{red}} \le 50\text{–}120\text{ m}\Omega$**, Curva D, **Diferencial Tipo B**, `EPO`. | Climatización constante $20\text{–}22\text{ }^\circ\text{C}$ para estabilidad de detectores + *Chiller* en TC de alta gama. Toma $\text{O}_2$/Vacío. | Blindaje radiológico de **plomo ($2,0\text{–}3,5\text{ mm Pb}$)** en muros, puertas y visor emplomado (`RD 1085/2009`, `NCRP 147`). |
 | **Sala de Angiografía / Hemodinámica / Quirófano Híbrido** | Estativo de suelo o **subestructura de cuelgue en techo** resistente a momento flector. | $100\text{–}150\text{ kVA}$ de pico, $Z_{\text{red}}$ baja + **Esquema IT Médico con Transformador de Aislamiento (`ITC-BT-38`)**. | Sala técnica con `CRAC` + quirófano Clase A (`ISO 5`, flujo laminar `HEPA H14`, $+20\text{ Pa}$). Gases `ISO 7396-1` y `AGSS`. | Plomo $2,0\text{–}3,0\text{ mm Pb}$ + faldillas plomadas de mesa y mampara suspendida de techo. |
 | **Acelerador Lineal (`LINAC` Radioterapia)** | **$8.000\text{–}14.000\text{ kg}$** sobre foso de cimentación (*base frame*) en planta sótano. | $60\text{–}100\text{ kVA}$, Diferencial Tipo B, `SAI` y circuito de enclavamientos (*interlocks*). | ***Chiller* de agua con estabilidad $\pm 0,5\text{ }^\circ\text{C}$** para guía de ondas y klystron + renovación de aire (ozono). | **Búnker de hormigón ($1,5\text{–}2,5\text{ m}$)** + laberinto + **puerta con polietileno borado (neutrones si $>10\text{ MV}$) + plomo** (`NCRP 151`, Licencia `CSN`). |
-| **Unidad de Hemodiálisis** | Planta de tratamiento de agua en sala anexa (peso de tanques de acumulación y filtros). | Tomas con protección diferencial de alta sensibilidad ($\le 30\text{ mA}$) y equipotencialidad. | **Anillo de agua ultrapura (`ISO 23500`)** en `PEX-a`/`PVDF`/`316L` sin *dead-legs* ($<0,1\text{ UFC/ml}$, $<0,03\text{ UI/ml}$). | Drenaje individual con sifón aéreo por puesto para evitar reflujo cruzado de efluente dializado. |
+| **Unidad de Hemodiálisis** | Planta de tratamiento de agua en sala anexa (peso de tanques de acumulación y filtros). | Tomas con protección diferencial de alta sensibilidad ($\le 30\text{ mA}$) y equipotencialidad. | **Anillo de agua ultrapura** en `PEX-a`/`PVDF`/`316L` sin *dead-legs* ($<0,1\text{ UFC/ml}$, $<0,03\text{ UI/ml}$). | Drenaje individual con sifón aéreo por puesto para evitar reflujo cruzado de efluente dializado. |
 | **Central de Esterilización (Autoclaves)** | **$1.500\text{–}3.500\text{ kg}$** + montaje pasante de barrera sanitaria entre Zona Sucia y Limpia. | Alimentación trifásica de gran potencia ($30\text{–}80\text{ kW}$ por generador eléctrico de vapor). | Agua osmotizada ($\le 5\text{–}15\text{ }\mu\text{S/cm}$), aire comprimido de control y **desagüe termorresistente ($>95\text{ }^\circ\text{C}$) con enfriador**. | Certificación de Equipo a Presión (`REP RD 809/2021`) y extracción de campana sobre puertas de descarga. |
-
-### 5.2. Protocolo Corporativo de Preinstalación e Integración en las 7 Áreas Sanitarias del SERGAS
-En el SERGAS, la ejecución de las obras de preinstalación (*Site Preparation*) de los grandes planes de renovación tecnológica (como los más de $35\text{ equipos}$ de Alta Tecnología desplegados en Galicia con el **Plan `INVEAT`** —Aceleradores Lineales, TC espectrales, RM de $1,5\text{ T}$ y $3\text{ T}$, PET-TC, SPECT-TC, salas de hemodinámica y neurorradiología— y el **Centro de Protonterapia de Galicia**) se gestiona mediante una comisión técnica cuatripartita en cada Área Sanitaria:
-1. **Unidad de Ingeniería Biomédica / Electromedicina:** Revisa y aprueba los planos definitivos de *Site Planning* con el fabricante (`OEM`), supervisa el *rigging*, coordina la configuración de red `DICOM` (`AE Title`, `DICOM Worklist`, `PACS` y servidor de dosis `DICOM RDSR` exigido por el `RD 601/2019`), ejecuta los ensayos de seguridad eléctrica `UNE-EN 62353` y da de alta el sistema padre-hijo en el **`XMAO`**.
-2. **Servicio de Ingeniería y Obras del Área Sanitaria / Subdirección General de Inversiones:** Ejecuta las adecuaciones estructurales, cuadros eléctricos de baja impedancia, enfriadoras (*chillers*), redes de gases medicinales (`UNE-EN ISO 7396-1`) y climatización (`UNE 100713`).
-3. **Servicio de Radiofísica y Protección Radiológica (`SERGAS` / `GALARIA`):** Diseña y verifica con cámara de ionización/detector de neutrones la integridad de los blindajes radiológicos y tramita las autorizaciones de puesta en marcha ante el `CSN` e Industria, realizando las pruebas de aceptación y estado de referencia inicial.
-4. **Subdirección de Sistemas y Tecnologías de la Información (`TIC`):** Provee las tomas de fibra óptica/Cat 6A en la **VLAN corporativa de equipamiento médico** y valida la integración con **`IANUS`**.
 
 ---
 
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 6.1. Tabla Maestra de Cifras, Umbrales y Normas Clave de Integración
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-| Parámetro / Concepto Físico-Normativo | Norma / Referencia | Valor Numérico Exacto de Examen A1 |
-| :--- | :--- | :--- |
-| **Frecuencia de Larmor del $^{1}\text{H}$ en RM** | $\omega_0 = \gamma \cdot B_0$ ($\gamma/2\pi = 42,58\text{ MHz/T}$) | **$63,87\text{ MHz}$ en $1,5\text{ T}$** · **$127,74\text{ MHz}$ en $3,0\text{ T}$** (banda VHF / FM). |
-| **Atenuación de la Jaula de Faraday (RF) en RM** | `IEEE Std 299` / Guías OEM | **$\ge 90\text{ a }100\text{ dB}$** entre $10\text{ y }128\text{–}300\text{ MHz}$ (un único punto de tierra estrella). |
-| **Línea de seguridad magnética para marcapasos / público** | `UNE-EN 60601-2-33` / `ACR` | **$5\text{ Gauss}$ ($= 0,5\text{ mT}$)**; delimita el perímetro de exclusión controlada (Zonas ACR I a IV). |
-| **Relación de expansión del Helio líquido en un *Quench*** | Termodinámica criogénica ($4,2\text{ K} \rightarrow 293\text{ K}$) | **$1\text{ litro de He líquido} \longrightarrow \mathbf{750\text{ a }760\text{ litros de gas He}}$** (riesgo de asfixia y sobrepresión). |
-| **Umbrales del sensor de Oxígeno ($\text{O}_2$) en sala de RM** | Seguridad en salas criogénicas | **$< 19,5\%\text{ O}_2$**: Alarma visual y acústica · **$< 18\%\text{ O}_2$**: Extracción de emergencia. |
-| **Impedancia máxima de red eléctrica ($Z_{\text{red}}$) en TC/RX** | Guías de Preinstalación OEM | **$\le 50\text{ a }150\text{ m}\Omega$** ($0,05\text{–}0,15\text{ }\Omega$) según potencia de pico ($80\text{–}160\text{ kVA}$). |
-| **Interruptor diferencial para TC, RM y Aceleradores** | `REBT` / `IEC 62423` | **Diferencial Tipo B (o B+)** (detecta fugas en corriente alterna, pulsante y **continua pura**). |
-| **Presiones de Gases Medicinales (`UNE-EN ISO 7396-1`)** | `UNE-EN ISO 7396-1` | $\text{O}_2$, Aire medicinal y $\text{N}_2\text{O}$: **$400\text{–}500\text{ kPa}$ ($4\text{–}5\text{ bar}$)** · Aire motor: **$700\text{–}800\text{ kPa}$ ($7\text{–}8\text{ bar}$)** · Vacío: **$\le 60\text{ kPa}$ abs.** (depresión $\ge 40\text{ kPa}$). |
-| **Calidad del Agua Ultrapura en Hemodiálisis (`HDF on-line`)** | `UNE-EN ISO 23500` | Bacterias **$< 0,1\text{ UFC/ml}$** y Endotoxinas **$< 0,03\text{ UI/ml}$** (Agua estándar: $<100\text{ UFC/ml}$ y $<0,25\text{ UI/ml}$). |
-| **Umbral de generación de Neutrones en LINAC** | Física Nuclear / `NCRP 151` | Fotones con energía **$> 10\text{ MV}$** $\rightarrow$ exige **parafina / polietileno borado** en puerta del búnker. |
+| Parámetro / Concepto Físico-Normativo | Valor Numérico Exacto de Examen A1 |
+| :--- | :--- |
+| **Frecuencia de Larmor del $^{1}\text{H}$ en RM** | **$63,87\text{ MHz}$ en $1,5\text{ T}$** · **$127,74\text{ MHz}$ en $3,0\text{ T}$** (banda VHF / FM). |
+| **Atenuación de la Jaula de Faraday (RF) en RM** | **$\ge 90\text{ a }100\text{ dB}$** entre $10\text{ y }128\text{–}300\text{ MHz}$ (un único punto de tierra estrella). |
+| **Línea de seguridad magnética para marcapasos / público** | **$5\text{ Gauss}$ ($= 0,5\text{ mT}$)**; delimita el perímetro de exclusión controlada (Zonas ACR I a IV). |
+| **Relación de expansión del Helio líquido en un *Quench*** | **$1\text{ litro de He líquido} \longrightarrow \mathbf{750\text{ a }760\text{ litros de gas He}}$** (riesgo de asfixia y sobrepresión). |
+| **Umbrales del sensor de Oxígeno ($\text{O}_2$) en sala de RM** | **$< 19,5\%\text{ O}_2$**: Alarma visual y acústica · **$< 18\%\text{ O}_2$**: Extracción de emergencia. |
+| **Impedancia máxima de red eléctrica ($Z_{\text{red}}$) en TC/RX** | **$\le 50\text{ a }150\text{ m}\Omega$** ($0,05\text{–}0,15\text{ }\Omega$) según potencia de pico ($80\text{–}160\text{ kVA}$). |
+| **Interruptor diferencial para TC, RM y Aceleradores** | **Diferencial Tipo B (o B+)** (detecta fugas en corriente alterna, pulsante y **continua pura**). |
+| **Presiones de Gases Medicinales (`UNE-EN ISO 7396-1`)** | $\text{O}_2$, Aire medicinal y $\text{N}_2\text{O}$: **$400\text{–}500\text{ kPa}$ ($4\text{–}5\text{ bar}$)** · Aire motor: **$700\text{–}800\text{ kPa}$ ($7\text{–}8\text{ bar}$)** · Vacío: **$\le 60\text{ kPa}$ abs.** (depresión $\ge 40\text{ kPa}$). |
+| **Calidad del Agua Ultrapura en Hemodiálisis (`HDF on-line`)** | Bacterias **$< 0,1\text{ UFC/ml}$** y Endotoxinas **$< 0,03\text{ UI/ml}$** (Agua estándar: $<100\text{ UFC/ml}$ y $<0,25\text{ UI/ml}$). |
+| **Umbral de generación de Neutrones en LINAC** | Fotones con energía **$> 10\text{ MV}$** $\rightarrow$ exige **parafina / polietileno borado** en puerta del búnker. |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa de la función de la Jaula de Faraday vs. Blindaje Magnético en RM (¡Clásico de examen!):** Muchos opositores confunden ambos blindajes. La **Jaula de Faraday (cobre/aluminio)** sirve para **bloquear las ondas de Radiofrecuencia (`RF`, $\approx 64\text{–}128\text{ MHz}$)** externas e internas, pero **NO frena en absoluto el campo magnético estático $B_0$ ($1,5\text{ T} / 3\text{ T}$)**, ya que el cobre es diamagnético/no ferromagnético. Para confinar el campo magnético estático (línea de **$5\text{ Gauss} = 0,5\text{ mT}$**) se utiliza **blindaje magnético activo (bobinas inversas) y blindaje magnético pasivo de planchas de acero al silicio**.
 2. **Trampa del sentido de apertura de la puerta de RM y ubicación de la alarma de oxígeno:** En caso de *quench* con fallo o rotura del tubo de evacuación, los $1.500\text{ L}$ de helio líquido se expanden $\times 760$ generando una enorme sobrepresión positiva dentro de la sala del imán. Si la puerta de la Jaula de Faraday abriese hacia adentro, la presión interior la bloquearía contra el marco impidiendo abrirla para salvar al paciente; por ello **la puerta de la sala de RM debe abrir hacia afuera (hacia Zona III)**.
 3. **Trampa del diferencial Tipo AC/A frente a Tipo B en equipos con inversores/generadores de alta frecuencia:** Si el tribunal pregunta qué protección diferencial debe instalarse en la acometida de un TC, una RM o un acelerador lineal cuyos convertidores pueden generar corrientes de defecto en continua lisa, la única respuesta correcta es **Diferencial Tipo B** (los Tipo AC y Tipo A quedan bloqueados magnéticamente ante corrientes continuas de defecto).

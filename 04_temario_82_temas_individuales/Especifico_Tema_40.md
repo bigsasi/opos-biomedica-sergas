@@ -1,39 +1,16 @@
 # Tema 40 — Historia clínica electrónica. Concepto y objetivos en atención primaria y hospitalaria.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #40 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 07 — Salud Digital, Sistemas Corporativos, Interoperabilidad, HCE, Analítica, IoMT, Citación y Logística (`💎 Núcleo Diamante · Fase 1`)
-> - **Marco Normativo y Técnico Nuclear:** Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica (Capítulos IV y V, Arts. 14 a 23); **Ley 3/2001, de 28 de mayo**, reguladora del consentimiento informado y de la historia clínica de los pacientes en Galicia (modificada por la Ley 3/2005 y la Ley 12/2013 — Título III, Arts. 13 a 21); **Decreto 29/2009, de 5 de febrero**, por el que se regula el uso y acceso a la historia clínica electrónica en el Sistema Público de Salud de Galicia; **Real Decreto 1093/2010, de 3 de septiembre**, por el que se aprueba el conjunto mínimo de datos de los informes clínicos en el SNS (`HCDSNS`); Ley Orgánica 3/2018 (`LOPDGDD`) y Reglamento (UE) 2016/679 (`RGPD`); Norma **`UNE-EN ISO 13606` (Partes 1 a 5)** y especificación `openEHR`; Orden EFP/1216/2019 (Módulo Profesional 1592).
-> - **Sistemas y Entorno SERGAS:** **`IANUS` / `IANUS 5`** (Historia Clínica Electrónica única e integrada de Atención Primaria, Hospitalaria y Sociosanitaria del SERGAS), **`É-Saúde`** y **`Sergas Móbil`** (Carpeta Personal de Salud del ciudadano), **`e-Receita`** (Receta Electrónica gallega), **`SIHGA`**, **`SILICON`**, **`HCDSNS`** y nodo europeo **`MyHealth@EU` (`eHDSI`)** en las 7 Áreas Sanitarias.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose de Subepígrafes según Publicación Oficial del DOG (Resolución de 13/04/2026)
-El presente tema constituye el núcleo conceptual, jurídico, arquitectónico y asistencial de la **Historia Clínica Electrónica (`HCE`)**. Su estudio en la categoría de Ingeniero/a Biomédico/a (Subgrupo A1) abarca:
-1. **Concepto, finalidad y régimen jurídico-normativo de la Historia Clínica Electrónica:** Definición legal, principio de historia clínica única por paciente, contenido mínimo documental, propiedad, custodia, régimen de accesos, reserva de anotaciones subjetivas y plazos legales de conservación en la normativa básica estatal (`Ley 41/2002` y `RD 1093/2010`) y en la legislación autonómica gallega (**`Ley 3/2001`** y **`Decreto 29/2009`**).
-2. **Arquitectura técnica y estándares internacionales de modelado de HCE:** Diferenciación entre `EMR`, `EHR` y `PHR`; arquitectura de **Doble Modelo (`Dual Model`)** de la norma europea e internacional **`UNE-EN ISO 13606` (Partes 1 a 5)** y `openEHR` (Modelo de Referencia frente a Modelo de Arquetipos `ADL`); y estructura de la **Historia Clínica Digital del Sistema Nacional de Salud (`HCDSNS`)**.
-3. **Objetivos específicos y diseño funcional de la HCE en Atención Primaria frente a Atención Hospitalaria:** Modelo longitudinal orientado a problemas de salud y episodios en Atención Primaria frente al modelo episódico de alta intensidad diagnóstica, quirúrgica y de cuidados críticos en Atención Hospitalaria, así como su convergencia en **`IANUS 5`** dentro del Servicio Gallego de Salud.
-
-### 0.2. Cruce Verificado 1:1 con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-
-| Categorías con las que coincide | Epígrafes Equivalentes en Otras Convocatorias del SERGAS | Grado de Solapamiento y Enfoque de Tribunal |
-| :--- | :--- | :--- |
-| **Grupo Técnico / Gestión TIC** | • **TIC Superior (A1):** Tema 13. Decreto por el que se regula el uso y acceso a la historia clínica electrónica. Decreto de receta electrónica. Decreto por el que se regula el uso de la tarjeta sanitaria para la identificación de pacientes y profesionales en Galicia. y Tema 24. Sistemas de información clínica: telemedicina. Telemonitorización. Historia clínica y receta electrónica. Imagen digital y PAC. Sistema de historia clínica del Sistema nacional de salud. Proyectos de intercambio de información clínica en el ámbito europeo.<br>• **TIC Gestión (A2):** Tema 6. Decreto por el que se regula el uso y el acceso a la historia clínica electrónica. Decreto de receta electrónica. Decreto por el que se regula el uso de la tarjeta sanitaria para la identificación de pacientes y profesionales en Galicia. y Tema 16. Sistemas de información clínica: telemedicina. Telemonitorización. Historia clínica y receta electrónica. Imagen digital y PAC. Sistema de historia clínica del Sistema nacional de salud. Proyectos europeos de intercambio de información clínica.<br>• **TIC Especialista (C1):** Tema 3. Decreto por el que se regula el uso y acceso a la historia clínica electrónica... y Tema 11. Sistemas de información clínica... | **Total (95%)**: Coincidencia directa y transversal tanto en la arquitectura funcional de la historia clínica electrónica en atención primaria y hospitalaria (`IANUS`) y del SNS (`HCDSNS`), como en su marco normativo regulador en Galicia (`Ley 3/2001` y `Decreto 29/2009`). |
-
----
-
-## 📖 1. Concepto, Finalidad y Marco Jurídico de la Historia Clínica Electrónica (`Ley 41/2002`, `Ley Gallega 3/2001` y `Decreto 29/2009`)
+## 📖 1. Concepto, Finalidad y Marco Jurídico de la Historia Clínica Electrónica
 
 ### 1.1. Definición Legal, Finalidad Primordial y Principio de Historia Clínica Única
-Tanto la legislación básica estatal (**Artículos 3 y 14 de la Ley 41/2002, de 14 de noviembre**) como la legislación autonómica gallega (**Artículo 13 de la Ley 3/2001, de 28 de mayo**, modificada por la **Ley 3/2005, de 7 de marzo** y por la **Ley 12/2013, de 9 de diciembre**, junto con el **Artículo 2 del Decreto 29/2009, de 5 de febrero**) definen la **Historia Clínica** en términos precisos que son objeto constante de preguntas literales de examen:
+Tanto la legislación básica estatal (**Artículos 3 y 14 de la Ley 41/2002, de 14 de noviembre**) como la legislación autonómica gallega (**Artículo 13 de la Ley 3/2001, de 28 de mayo**, modificada por la **Ley 3/2005, de 7 de marzo**, junto con el **Artículo 2 del Decreto 29/2009, de 5 de febrero**) definen la **Historia Clínica** en términos precisos que son objeto constante de preguntas literales de examen:
 - **Definición de Historia Clínica (`Art. 13 Ley Gallega 3/2001`):** Es el *«conjunto de documentos en los que se contienen los datos, las valoraciones y las informaciones de cualquier índole sobre la situación y la evolución clínica de los pacientes a lo largo de su proceso asistencial, así como la identificación de los médicos y demás profesionales que intervinieron en éste»*.
 - **Definición específica de Historia Clínica Electrónica (`Art. 2 Decreto 29/2009`):** Es el *«conjunto de información y documentos relativos al proceso asistencial de cada paciente cuyo soporte sea electrónico y que se encuentre disponible en el sistema informático corporativo del Sistema Público de Salud de Galicia»* (identificado corporativamente como **`IANUS`**).
 - **Finalidad Primordial (`Art. 15.2 Ley 41/2002` y `Art. 13.2 Ley 3/2001`):** La realización de una historia clínica tiene como **objeto fundamental facilitar la asistencia sanitaria del paciente**, dejando constancia de todos aquellos datos que, bajo criterio médico, permitan el conocimiento veraz y actualizado de su estado de salud.
 - **Principio de Historia Clínica Única por Paciente (`Art. 15 Ley 3/2001` y `Art. 3 Decreto 29/2009`):** En el Sistema Público de Salud de Galicia rige el principio de **historia clínica única e integrada por paciente**, identificada a través del **Código de Identificación Personal (`CIP`)** de la Tarjeta Sanitaria de Galicia y el Número de Historia Clínica (`NHC`). Este principio supera el modelo clásico de la Ley 41/2002 (que hablaba de historia única «al menos en cada centro» o institución) para consolidar un **expediente longitudinal único en toda la Comunidad Autónoma de Galicia**, que acumula toda la información clínica generada tanto en Atención Primaria como en Atención Hospitalaria y Sociosanitaria.
 - **Requisitos Técnicos del Soporte Electrónico (`Arts. 14 y 17 Ley 3/2001`):** Las historias clínicas pueden elaborarse en soporte papel, audiovisual e informático, siempre que se garantice la **autenticidad del contenido, su integridad, su plena reproducibilidad futura, la conservación, la confidencialidad, y el fechado temporal y firma electrónica (o identificación inequívoca)** de las personas que la elaboren o intervengan en ella.
 
-### 1.2. Contenido Mínimo Legal de la Historia Clínica (`Art. 16 Ley Gallega 3/2001` y `Art. 15 Ley 41/2002`)
+### 1.2. Contenido Mínimo Legal de la Historia Clínica
 De acuerdo con el **Artículo 16 de la Ley Gallega 3/2001** (en concordancia con el Art. 15.2 de la Ley 41/2002), toda historia clínica debe incluir obligatoriamente tres bloques documentales:
 1. **Datos de identificación del paciente y de la asistencia:** Nombre y apellidos, fecha de nacimiento, sexo, domicilio habitual y teléfono (para su localización), código de identificación personal de la tarjeta sanitaria (`CIP` / `NHC`), centro o unidad asistencial, fecha de asistencia y, en su caso, fecha de ingreso y alta, e indicación de la procedencia en caso de derivación desde otro centro.
 2. **Identificación de los profesionales:** Médico o profesional sanitario responsable de la asistencia y de los profesionales que intervienen en cada actuación o prescripción.
@@ -58,8 +35,8 @@ El régimen de gobernanza jurídica de la HCE presenta matices específicos en G
 3. **Derecho de Acceso del Paciente y sus Dos Límites Legales (`Art. 18 Ley 41/2002` y `Art. 19.3 Ley 3/2001`):**
    - El paciente tiene derecho de acceso a la documentación de su historia clínica y a obtener copia de los datos que figuran en ella (directamente en electrónico a través de **`É-Saúde`** o mediante solicitud).
    - **Doble límite legal al derecho de acceso del paciente (¡Pregunta fija de test!):** El derecho de acceso del paciente a la historia clínica **no puede ejercitarse en perjuicio del derecho de terceras personas a la confidencialidad** de los datos que constan en ella recogidos en interés terapéutico del paciente, **ni en perjuicio del derecho de los profesionales participantes en su elaboración, los cuales pueden oponer al derecho de acceso la reserva de sus anotaciones subjetivas**. En el diseño de `IANUS`, las anotaciones subjetivas se registran en un módulo específico que queda oculto en la exportación de copias al paciente salvo que el autor las autorice.
-   - **Acceso a la HCE de pacientes fallecidos (`Art. 18.4 Ley 41/2002` y `Art. 19.4 Ley 3/2001`):** Solo se facilitará el acceso a las personas vinculadas al paciente, por razones familiares o de hecho, **salvo que el fallecido lo hubiese prohibido expresamente y así se acredite**. En cualquier caso, el acceso de un tercero por un **riesgo para su salud** (p. ej., enfermedad genética hereditaria) se limitará estrictamente a los **datos pertinentes**, sin facilitar información que afecte a la intimidad del fallecido ni a las anotaciones subjetivas de los profesionales.
-4. **Plazos Legales de Conservación de la Historia Clínica: Normativa Estatal (`Ley 41/2002`) vs. Normativa Gallega (`Art. 20 Ley 3/2001`):**
+   - **Acceso a la HCE de pacientes fallecidos (`Art. 18.4 Ley 41/2002` y `Art. 19.6 Ley 3/2001`):** Solo se facilitará el acceso a las personas vinculadas al paciente, por razones familiares o de hecho, **salvo que el fallecido lo hubiese prohibido expresamente y así se acredite**. En cualquier caso, el acceso de un tercero por un **riesgo para su salud** (p. ej., enfermedad genética hereditaria) se limitará estrictamente a los **datos pertinentes**, sin facilitar información que afecte a la intimidad del fallecido ni a las anotaciones subjetivas de los profesionales.
+4. **Plazos Legales de Conservación de la Historia Clínica: Normativa Estatal vs. Normativa Gallega (`Art. 20 Ley 3/2001`):**
 
 | Criterio de Conservación | Ley Básica Estatal (`Art. 17 Ley 41/2002`) | Ley Autonómica de Galicia (`Art. 20 Ley 3/2001`, redacción `Ley 3/2005`) |
 | :--- | :--- | :--- |
@@ -68,7 +45,7 @@ El régimen de gobernanza jurídica de la HCE presenta matices específicos en G
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica y Estándares de Modelado de la Historia Clínica Electrónica (`UNE-EN ISO 13606`, `openEHR` y `RD 1093/2010`)
+## ⚙️ 2. Arquitectura Técnica y Estándares de Modelado de la Historia Clínica Electrónica
 
 ### 2.1. Evolución Conceptual: De `EMR` Departamental a `EHR` Longitudinal y `PHR` Ciudadana
 En la ingeniería de sistemas de salud se distinguen tres niveles evolutivos de registros electrónicos:
@@ -164,13 +141,13 @@ En la Atención Hospitalaria (Hospitalización convencional, Urgencias, Unidades
 | **Enfoque Temporal y Asistencial** | **Longitudinal y continuo** a lo largo de toda la vida del ciudadano y su entorno familiar/comunitario. | **Episódico y focalizado** en procesos agudos, descompensaciones graves o procedimientos especializados. |
 | **Unidad Básica de Organización** | **Episodio de Atención** vinculado a la **Hoja de Problemas de Salud** (`POMR` de Weed) y apuntes **`SOAP`**. | **Contacto / Episodio Hospitalario** (Ingreso, Urgencia, CMA, Hospital de Día, Consulta Externa). |
 | **Sistema Principal de Codificación** | **`CIAP-2`** (*Clasificación Internacional de la Atención Primaria* de la WONCA) + `SNOMED CT`. | **`CIE-10-ES`** (*Diagnósticos y Procedimientos*) para el **`RAE-CMBD`** + `SNOMED CT` + `NANDA-NOC-NIC`. |
-| **Documento Resumen Reglamentario (`Art. 16 Ley 3/2001`)** | **Hoja de Problemas** e Informe Clínico de Atención Primaria (`RD 1093/2010`). | **Informe Clínico de Alta**, Informe Quirúrgico, Informe de Urgencias e Informe de Cuidados de Enfermería. |
+| **Documento Resumen Reglamentario (`Art. 16 Ley 3/2001`)** | **Hoja de Problemas** e Informe Clínico de Atención Primaria. | **Informe Clínico de Alta**, Informe Quirúrgico, Informe de Urgencias e Informe de Cuidados de Enfermería. |
 | **Prescripción Farmacéutica** | **Receta Electrónica Ambulatoria (`e-Receita`)** dispensable en oficinas de farmacia comunitarias. | **Prescripción Electrónica Hospitalaria en Dosis Unitaria (`SILICON`)**, mezclas IV y farmacia de pacientes externos. |
 | **Integración de Equipamiento Biomédico** | Electrocardiógrafos digitales, espirómetros, retinógrafos, dermatoscopios, `MAPA`, coagulómetros y **`TELEA`**. | Modalidades pesadas **`PACS`** (TC, RM, MN, Angiógrafos), monitores **`UCI/REA`**, respiradores, estaciones de anestesia y bombas. |
 
 ---
 
-## 🛡️ 4. Seguridad, Control de Acceso Basado en Roles (`RBAC`), Trazabilidad (`Decreto 29/2009`) e Integración Biomédica
+## 🛡️ 4. Seguridad, Control de Acceso Basado en Roles (`RBAC`), Trazabilidad e Integración Biomédica
 
 ### 4.1. Régimen de Acceso, Perfiles Profesionales y Auditoría en el `Decreto 29/2009` de Galicia
 Dado que los datos de salud constituyen una categoría especial de datos personales de máxima protección (**Artículo 9 del `RGPD (UE) 2016/679`** y **`LO 3/2018 LOPDGDD`**), el **Decreto 29/2009, de 5 de febrero, por el que se regula el uso y acceso a la historia clínica electrónica en el Sistema Público de Salud de Galicia** establece una arquitectura de seguridad estricta:
@@ -185,7 +162,7 @@ Dado que los datos de salud constituyen una categoría especial de datos persona
    - **Módulos de Especial Confidencialidad (`Art. 11 Decreto 29/2009`):** Determinados episodios o datos especialmente sensibles (violencia de género, salud mental, enfermedades infecciosas estigmatizantes, genética o salud laboral) cuentan con medidas reforzadas de protección y trazabilidad.
 3. **Registro Inmutable de Accesos (*Audit Trail*) y Auditorías Periódicas (`Art. 12 Decreto 29/2009`):**
    - Cada intento de acceso (exitoso o fallido) a `IANUS` genera un **registro electrónico indeleble (*log*)** que almacena: **identificación del profesional, fecha y hora exacta, centro/terminal desde el que accede, paciente consultado, tipo de operación (lectura, escritura, impresión) y módulo/documento accedido**.
-   - El sistema realiza **auditorías periódicas y aleatorias** de los accesos (y auditorías específicas ante reclamaciones de ciudadanos, quienes pueden consultar en **`É-Saúde`** el historial de accesos a su historia clínica). El acceso indebido sin justificación asistencial constituye una **falta disciplinaria muy grave** en el Estatuto Marco (`Ley 55/2003`) e incluso un delito de descubrimiento y revelación de secretos (`Art. 197 del Código Penal`), con reiterada jurisprudencia condenatoria del Tribunal Supremo.
+   - El sistema realiza **auditorías periódicas y aleatorias** de los accesos (y auditorías específicas ante reclamaciones de ciudadanos, quienes pueden consultar en **`É-Saúde`** el historial de accesos a su historia clínica). El acceso indebido sin justificación asistencial constituye una **falta disciplinaria muy grave** en el Estatuto Marco e incluso un delito de descubrimiento y revelación de secretos (`Art. 197 del Código Penal`), con reiterada jurisprudencia condenatoria del Tribunal Supremo.
 
 ### 4.2. Ingeniería de Integración del Equipamiento Biomédico con la Historia Clínica Electrónica
 Desde la perspectiva del Ingeniero Biomédico, la HCE moderna ya no se alimenta sólo del teclado del médico, sino que actúa como el **sumidero clínico de miles de dispositivos médicos conectados**:
@@ -194,37 +171,20 @@ Desde la perspectiva del Ingeniero Biomédico, la HCE moderna ya no se alimenta 
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS): `IANUS 5` y `É-Saúde`
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. `IANUS` / `IANUS 5`: La Historia Clínica Electrónica Única del SERGAS
-Implantado progresivamente en toda Galicia y regulado por el **`Decreto 29/2009`**, **`IANUS`** (actualmente en su evolución tecnológica **`IANUS 5`**, con arquitectura web renovada, microservicios, visualización cronológica inteligente y motores de búsqueda semántica) es el sistema corporativo de **Historia Clínica Electrónica única del SERGAS**:
-- **Ruptura real de la barrera Atención Primaria – Atención Hospitalaria:** A diferencia de otros servicios de salud donde coexisten un software distinto para los centros de salud y otro distinto para los hospitales conectados solo por un visor pasivo, en el SERGAS **tanto el médico de familia y pediatra del centro de salud como el especialista del hospital, el médico de urgencias o el profesional de los puntos de atención continuada (`PAC`) trabajan sobre el mismo repositorio `IANUS`**.
-- **Componentes integrados en la pantalla de `IANUS 5`:**
-  1. **Cabecera clínica inteligente:** Muestra de un vistazo las alertas de alergias/reacciones adversas, antecedentes críticos, situación de anticoagulación y el **estrato de complejidad de morbilidad `GMA`** del paciente.
-  2. **Árbol Cronológico y por Problemas / Especialidades:** Permite alternar entre la visión longitudinal por **Problemas de Salud (`CIAP-2`)** propia de Atención Primaria y la visión por **Contactos Hospitalarios, Informes de Alta, Consultas Externas, Quirófano y Urgencias**.
-  3. **Módulo de Prescripción Única (`e-Receita` + Conciliación con `SILICON`):** Unifica el plan farmacológico activo del paciente para evitar duplicidades al ingreso y al alta hospitalaria.
-  4. **Peticionario Electrónico Integrado y Visores Diagnósticos:** Acceso directo con un clic a todos los informes y gráficas históricas de **Laboratorio (`LIS`), Microbiología, Anatomía Patológica, Electrocardiografía digital** y al visor web **`PACS Corporativo` / `Anello Radiolóxico Galego`**, además de los módulos de **`e-Interconsulta`** y telemonitorización **`TELEA`**.
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-### 5.2. Extensión Sociosanitaria y Empoderamiento Ciudadano (`É-Saúde` y `Sergas Móbil`)
-El alcance de `IANUS` se extiende asimismo a las **residencias sociosanitarias de Galicia** (permitiendo a los equipos médicos y de enfermería de las residencias consultar la historia clínica y la receta electrónica sin desplazar innecesariamente a los ancianos frágiles a urgencias) y hacia el propio ciudadano a través de **`É-Saúde`** (`https://esaude.sergas.gal`) y la aplicación **`Sergas Móbil`**:
-- Con certificado digital, DNIe o **`Chave365`**, cualquier ciudadano gallego puede consultar y descargar desde `É-Saúde` sus informes clínicos de alta, consultas, urgencias, resultados de analíticas de laboratorio, informes de imagen, hoja de medicación activa de `e-Receita`, calendario vacunal, testamento vital (instrucciones previas), gestionar citas médicas y registrar sus biomedidas en los programas de seguimiento de **`TELEA`**.
+| Norma / Estándar / Sistema | Cifra / Concepto / Regla Clave de Examen A1 |
+| :--- | :--- |
+| **Ley Básica Estatal de Autonomía del Paciente** | Finalidad primordial asistencial. Conservación mínima estatal: **5 años desde la fecha del alta de cada proceso asistencial**. Límites al acceso del paciente: **derechos de terceros y anotaciones subjetivas**. |
+| **Ley Gallega de Consentimiento e Historia Clínica** | **Art. 15:** Historia clínica única por paciente. **Art. 16:** Contenido mínimo (en AP incluye la **Hoja de Problemas**; en AH el **Informe de Alta**). **Art. 18:** Propiedad de la Administración sanitaria. **Art. 20:** Conservación **INDEFINIDA** de informes de alta, consentimientos, hojas quirúrgicas/parto, anestesia, exploraciones, evolución, necropsia; resto **5 años desde fallecimiento o desde la última asistencia**. |
+| **Decreto de la HCE de Galicia (`IANUS`)** | Regula el uso y acceso a **`IANUS`** en el Sistema Público de Salud de Galicia. Acceso por perfiles profesionales (`RBAC`), **vínculo asistencial** y registro inmutable de auditoría de accesos (*logs*). |
+| **Conjunto Mínimo de Datos de Informes del SNS** | Aprueba los **9 conjuntos mínimos de datos de informes clínicos** en el SNS (Alta, Consulta, Urgencias, AP, Enfermería, Imagen, Laboratorio, Otras Pruebas e **Historia Clínica Resumida `HCR`**). |
+| **Estándar Europeo/ISO de Arquitectura de HCE** | **Arquitectura de Doble Modelo (*Dual Model*)**: separa el **Modelo de Referencia (`RM`, fijo en software)** del **Modelo de Arquetipos (`ADL`, definido por clínicos)**. Jerarquía `RM`: `EHR_EXTRACT` $\rightarrow$ `FOLDER` $\rightarrow$ `COMPOSITION` $\rightarrow$ `SECTION` $\rightarrow$ `ENTRY` $\rightarrow$ `CLUSTER` $\rightarrow$ `ELEMENT`. |
+| **Estructura de la HCE en Atención Primaria** | Orientada longitudinalmente por **Problemas de Salud** (Activos e Inactivos) y **Episodios de Atención**, con apuntes `Subjetivo – Objetivo – Valoración (Assessment) – Plan`. |
 
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
-
-| Norma / Estándar / Sistema | Referencia / Artículo Exacto | Cifra / Concepto / Regla Clave de Examen A1 |
-| :--- | :--- | :--- |
-| **Ley Básica Estatal de Autonomía del Paciente** | **`Ley 41/2002, de 14 de noviembre`** (Arts. 14 a 23) | Finalidad primordial asistencial (Art. 15). Conservación mínima estatal: **5 años desde la fecha del alta de cada proceso asistencial** (Art. 17). Límites al acceso del paciente: **derechos de terceros y anotaciones subjetivas** (Art. 18.3). |
-| **Ley Gallega de Consentimiento e Historia Clínica** | **`Ley 3/2001, de 28 de mayo`** (modif. por `Ley 3/2005` y `Ley 12/2013`, Arts. 13 a 21) | **Art. 15:** Historia clínica única por paciente. **Art. 16:** Contenido mínimo (en AP incluye la **Hoja de Problemas**; en AH el **Informe de Alta**). **Art. 18:** Propiedad de la Administración sanitaria. **Art. 20:** Conservación **INDEFINIDA** de informes de alta, consentimientos, hojas quirúrgicas/parto, anestesia, exploraciones, evolución, necropsia; resto **5 años desde fallecimiento o desde la última asistencia**. |
-| **Decreto de la HCE de Galicia (`IANUS`)** | **`Decreto 29/2009, de 5 de febrero`** | Regula el uso y acceso a **`IANUS`** en el Sistema Público de Salud de Galicia. Acceso por perfiles profesionales (`RBAC`), **vínculo asistencial** y registro inmutable de auditoría de accesos (*logs*). |
-| **Conjunto Mínimo de Datos de Informes del SNS** | **`Real Decreto 1093/2010, de 3 de septiembre`** (`HCDSNS`) | Aprueba los **9 conjuntos mínimos de datos de informes clínicos** en el SNS (Alta, Consulta, Urgencias, AP, Enfermería, Imagen, Laboratorio, Otras Pruebas e **Historia Clínica Resumida `HCR`**). |
-| **Estándar Europeo/ISO de Arquitectura de HCE** | **`UNE-EN ISO 13606` (Partes 1 a 5)** y **`openEHR`** | **Arquitectura de Doble Modelo (*Dual Model*)**: separa el **Modelo de Referencia (`RM`, fijo en software)** del **Modelo de Arquetipos (`ADL`, definido por clínicos)**. Jerarquía `RM`: `EHR_EXTRACT` $\rightarrow$ `FOLDER` $\rightarrow$ `COMPOSITION` $\rightarrow$ `SECTION` $\rightarrow$ `ENTRY` $\rightarrow$ `CLUSTER` $\rightarrow$ `ELEMENT`. |
-| **Estructura de la HCE en Atención Primaria** | **Modelo `POMR` de Weed** + **`SOAP`** + **`CIAP-2`** | Orientada longitudinalmente por **Problemas de Salud** (Activos e Inactivos) y **Episodios de Atención**, con apuntes `Subjetivo – Objetivo – Valoración (Assessment) – Plan`. |
-
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Trampa clásica de examen entre la `Ley 41/2002` (estatal) y la `Ley Gallega 3/2001` sobre plazos de conservación!** Fíjese siempre en qué ley cita el enunciado de la pregunta:
    - Si pregunta según el **Artículo 17 de la Ley 41/2002 (básica estatal)**, el plazo mínimo es de **5 años contados desde la fecha del alta de cada proceso asistencial**.
    - Si pregunta según el **Artículo 20 de la Ley Gallega 3/2001 (modificada por la Ley 3/2005)**, los documentos nucleares (informes de alta, hojas de consentimiento informado, altas voluntarias, hojas quirúrgicas/parto, informes de anestesia, exploraciones complementarias, evolución, necropsia) se conservan **INDEFINIDAMENTE**, y el resto de documentación puede destruirse transcurridos **5 años desde el fallecimiento del paciente o, en todo caso, 5 años desde la última asistencia prestada en la institución**.

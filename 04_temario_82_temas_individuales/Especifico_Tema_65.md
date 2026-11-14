@@ -1,30 +1,5 @@
 # Tema 65 — Unidades funcionales y diseño de flujos: seguridad, eficiencia y circuitos asistenciales. Estructura organizativa y recursos. Criterios de humanización y sostenibilidad en el diseño de espacios y gestión de recursos.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #65 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 08 — Ingeniería Hospitalaria, REBT, Ambiente Controlado, Planes Directores, Calidad, CAD y Sostenibilidad
-> - **Marco Normativo y Técnico Nuclear:** Código Técnico de la Edificación (`RD 314/2006`: `CTE DB-SI` Seguridad en caso de Incendio, `CTE DB-SUA` Seguridad de Utilización y Accesibilidad, `CTE DB-HR` Protección frente al Ruido, `CTE DB-HE` Ahorro de Energía); Real Decreto 1367/2007 (Zonificación acústica y objetivos de calidad acústica en recintos sanitarios); Real Decreto Legislativo 1/2013 y Ley 10/2014 de Accesibilidad de Galicia; Guías de Unidades Asistenciales del Ministerio de Sanidad; Estrategia de Humanización de la Asistencia Sanitaria del SERGAS; Certificaciones `BREEAM ES`, `LEED Healthcare` y `VERDE`.
-> - **Sistemas y Entorno SERGAS:** Subdirección General de Inversiones, Servicios de Ingeniería Hospitalaria y Biomédica, Servicios de Medicina Preventiva, Hospital Público Álvaro Cunqueiro (`HAC` Vigo), Hospital Universitario Lucus Augusti (`HULA`), *Gran Montecelo* (Pontevedra), *Novo CHUAC* (A Coruña), Sistemas `AGV`, Transporte Neumático, `XMAO` e `IANUS`.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 65** de la Parte Específica del temario oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** aborda la arquitectura organizativa, circulatoria, de seguridad y de calidad ambiental de los centros sanitarios modernos. Su desarrollo monográfico comprende cuatro pilares de ingeniería hospitalaria:
-1. **Unidades funcionales y diseño de flujos (seguridad, eficiencia y circuitos asistenciales)**: Taxonomía de las unidades funcionales hospitalarias, matriz topológica de proximidad y adyacencia, y diseño de los circuitos horizontales y verticales bajo el principio de segregación estricta (externo/ambulatorio vs. interno/encamados, y circuito limpio vs. circuito sucio).
-2. **Seguridad en el diseño de espacios y flujos**: Prescripciones específicas para uso **Hospitalario** del **Código Técnico de la Edificación (`CTE DB-SI` y `DB-SUA`)**, evacuación horizontal progresiva por sectores de incendio, dimensionamiento de vías de evacuación y bioseguridad de flujos.
-3. **Estructura organizativa y recursos**: Evolución desde el modelo departamental clásico hacia las **Unidades de Gestión Clínica (`UGC`)**, áreas funcionales integradas por procesos y uso compartido eficiente de recursos tecnológicos y logísticos (transporte neumático, vehículos de guiado automático `AGV`).
-4. **Criterios de humanización y sostenibilidad en el diseño de espacios y gestión de recursos**: Diseño Basado en la Evidencia (*Evidence-Based Design* — `EBD`), arquitectura biofílica, iluminación circadiana, confort acústico reglamentario (**`RD 1367/2007`**), accesibilidad universal/cognitiva y estándares de edificación sanitaria sostenible (**`BREEAM`**, **`LEED Healthcare`**, **`VERDE`** y edificios `nZEB`).
-
-### 0.2. Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías equivalentes con solapamiento:** **Ingeniero/a Técnico/a** (Subgrupo A2).
-- **Grado de solapamiento:** **Alto (75%)** — Confluye directamente con el estudio de los circuitos asistenciales en áreas quirúrgicas y críticas y con el diseño organizativo y espacial de hospitales.
-- **Epígrafes equivalentes verificados:**
-  - **Ingeniero/a Técnico/a:** *Tema 46. El bloque quirúrgico: instalaciones y equipos. Circuitos. UCIs y unidades de reanimación post-anestésica: instalaciones y equipos. Inspección y mantenimiento.*
-  - **Ingeniero/a Técnico/a:** *Tema 72. Planes directores de hospitales. Metodología. Etapas del plan director.*
-
----
-
 ## 📖 1. Taxonomía de las Unidades Funcionales Hospitalarias y Matriz de Relaciones Topológicas
 
 ### 1.1. Concepto y Clasificación Sistemática de las Unidades Funcionales de un Hospital
@@ -72,11 +47,11 @@ El axioma fundamental de la ingeniería de flujos hospitalarios establece que **
    - **Usuarios:** Pacientes ingresados trasladados en cama o camilla (hacia quirófanos, UCI, pruebas diagnósticas o plantas de hospitalización), personal facultativo, de enfermería, técnicos y celadores.
    - **Criterio de diseño:** Pasillos internos de uso restringido (control de acceso electrónico) con anchura libre mínima de **$2,20\text{ a }2,40\text{ m}$** (que permite el cruce holgado de dos camas hospitalarias de $1,00\text{ m}$ de ancho) y núcleos de **ascensores montacamas exclusivos** (dimensiones mínimas de cabina $1,40\text{ m de ancho} \times 2,40\text{ m de fondo}$, carga $\ge 1.600\text{–}2.500\text{ kg}$ y puertas de paso libre $\ge 1,20\text{–}1,30\text{ m}$).
 3. **Circuito Logístico e Industrial Segregado en Flujo Limpio vs. Flujo Sucio:**
-   - **Subcircuito Limpio:** Distribución de medicación desde Farmacia, material estéril desde Esterilización, fungibles sanitarios desde almacén general (`LOGAS`), carros de alimentación en línea fría/regeneración desde Cocina y lencería limpia. Utiliza montacargas exclusivos de limpio y horarios/rutas diferenciados.
+   - **Subcircuito Limpio:** Distribución de medicación desde Farmacia, material estéril desde Esterilización, fungibles sanitarios desde almacén general (`ERP logístico hospitalario`), carros de alimentación en línea fría/regeneración desde Cocina y lencería limpia. Utiliza montacargas exclusivos de limpio y horarios/rutas diferenciados.
    - **Subcircuito Sucio / Contaminado:** Evacuación de contenedores de residuos sanitarios (Clases II, IIIa, IIIb y IV del `Decreto 38/2015`), sacos de lencería sucia, carros de vajilla usada, instrumental quirúrgico contaminado y traslado de *exitus* al mortuorio. Circula por galerías subterráneas de servicio y **montacargas exclusivos de sucio** con paramentos lavables y ventilación en depresión.
 
 ### 2.2. Automatización de Flujos Logísticos: Transporte Neumático y Sistemas `AGV / AMR`
-Para maximizar la eficiencia operativa y liberar al personal sanitario de tareas de transporte manual (*muda* de desplazamiento en metodología *Lean Healthcare*), los hospitales modernos del SERGAS integran dos infraestructuras electromecánicas de flujo continuo:
+Para maximizar la eficiencia operativa y liberar al personal sanitario de tareas de transporte manual (*muda* de desplazamiento en metodología *Lean Healthcare*), los hospitales modernos del servicio de salud integran dos infraestructuras electromecánicas de flujo continuo:
 1. **Sistema de Transporte Neumático por Tubo (`PTS` — *Pneumatic Tube System*):**
    - Red ramificada de tuberías de PVC o acero inoxidable ($\varnothing\text{ }110\text{ o }160\text{ mm}$) impulsada por centrales soplantes de vacío/sobrepresión reversibles y desvíos motorizados controlados por PLC.
    - Conecta en segundos las estaciones de Urgencias, UCI, Quirófanos, Plantas de Hospitalización y Consultas con el **Laboratorio Central (`Core Lab`), Microbiología, Anatomía Patológica, Banco de Sangre y Farmacia Hospitalaria**.
@@ -90,7 +65,7 @@ Para maximizar la eficiencia operativa y liberar al personal sanitario de tareas
 ## 🔬 3. Seguridad Estructural y de Evacuación (`CTE DB-SI` / `DB-SUA`), Estructura Organizativa y Gestión de Recursos
 
 ### 3.1. Seguridad Contra Incendios y Evacuación en Uso Hospitalario (`CTE DB-SI` y `DB-SUA`)
-El **Código Técnico de la Edificación (`RD 314/2006`)**, en su Documento Básico **`DB-SI` (Seguridad en caso de Incendio)** y **`DB-SUA` (Seguridad de Utilización y Accesibilidad)**, impone al uso **Hospitalario** las condiciones más restrictivas de toda la edificación debido a una realidad física ineludible: **los pacientes encamados, sedados, intervenidos quirúrgicamente o conectados a soporte vital en UCI no pueden autoevacuarse ni descender por escaleras**.
+El **Código Técnico de la Edificación**, en su Documento Básico **`DB-SI` (Seguridad en caso de Incendio)** y **`DB-SUA` (Seguridad de Utilización y Accesibilidad)**, impone al uso **Hospitalario** las condiciones más restrictivas de toda la edificación debido a una realidad física ineludible: **los pacientes encamados, sedados, intervenidos quirúrgicamente o conectados a soporte vital en UCI no pueden autoevacuarse ni descender por escaleras**.
 
 Por ello, la ingeniería de seguridad contra incendios en hospitales se fundamenta en el principio de **Compartimentación y Evacuación Horizontal Progresiva (*Defend in Place*)**:
 1. **División obligatoria por planta en al menos 2 Sectores de Incendio (`CTE DB-SI 1`):**
@@ -113,7 +88,7 @@ La arquitectura física de unidades funcionales y flujos va acompañada de una *
 - **Superación del modelo matricial/departamental estanco hacia la Gestión Clínica y por Procesos (`UGC`):** Frente al hospital clásico fragmentado en servicios médicos verticales que «poseían» un número fijo de camas y despachos nominales, el hospital moderno organiza sus recursos en **Áreas Funcionales y Unidades de Gestión Clínica (`UGC`) multidisciplinares** centradas en las necesidades del paciente (ej. *Área del Corazón*, *Área de Neurociencias*, *Área Oncológica*, *Área Materno-Infantil*), reguladas en Galicia por la **Ley 8/2008** y el **Decreto 168/2010** de estructura organizativa de gestión integrada.
 - **Polivalencia y Uso Compartido de Recursos Físicos y Tecnológicos (*Resource Pooling*):**
   1. **Hospitalización por Cuidados Progresivos y Camas No Asignadas Rigurosamente:** Las unidades de enfermería se diseñan con dotación estandarizada para absorber picos de ingresos médicos o quirúrgicos sin dejar camas vacías en un ala mientras otra está saturada.
-  2. **Consultas Externas y Quirófanos Polivalentes:** Los locales de consulta se agrupan en módulos por procesos afines y se asignan dinámicamente por franjas horarias de mañana y tarde a través del sistema de gestión de agendas (**`IANUS` / `SIHGA`**), maximizando el factor de utilización del espacio y del equipamiento diagnóstico compartido (ecógrafos, endoscopios, arcos quirúrgicos).
+  2. **Consultas Externas y Quirófanos Polivalentes:** Los locales de consulta se agrupan en módulos por procesos afines y se asignan dinámicamente por franjas horarias de mañana y tarde a través del sistema de gestión de agendas (**`HCE` / `HIS`**), maximizando el factor de utilización del espacio y del equipamiento diagnóstico compartido (ecógrafos, endoscopios, arcos quirúrgicos).
 
 ---
 
@@ -122,7 +97,7 @@ La arquitectura física de unidades funcionales y flujos va acompañada de una *
 ### 4.1. Criterios de Humanización Arquitectónica y Diseño Basado en la Evidencia (`EBD`)
 El **Diseño Basado en la Evidencia (*Evidence-Based Design* — `EBD`)**, iniciado por los estudios clásicos de **Roger Ulrich (1984)**, ha demostrado científicamente que las variables físicas del entorno hospitalario influyen de forma medible en los resultados clínicos: reducen el estrés neuroendocrino, disminuyen el delirio postoperatorio en UCI, reducen las necesidades de analgesia narcótica, acortan la estancia media y disminuyen los errores de medicación del personal.
 
-Los **criterios de humanización en el diseño de espacios y tecnologías sanitarias** (recogidos en la **Estrategia de Humanización de la Asistencia Sanitaria del SERGAS**) se concretan en seis vectores de ingeniería:
+Los **criterios de humanización en el diseño de espacios y tecnologías sanitarias** (recogidos en la **Estrategia de Humanización de la Asistencia Sanitaria del servicio de salud**) se concretan en seis vectores de ingeniería:
 1. **Arquitectura Biofílica, Luz Natural e Iluminación Circadiana Biodinámica:**
    - **Luz natural y vistas a la naturaleza:** Diseño de bloques de hospitalización y puestos de Hospital de Día/Hemodiálisis con orientación solar óptima, patios ajardinados terapéuticos y acristalamientos de control solar que garantizan luz diurna directa en el $100\%$ de las habitaciones.
    - **Iluminación Circadiana Biodinámica LED (`HCL` — *Human Centric Lighting*):** En unidades cerradas o sin luz natural suficiente (**boxes de UCI, Unidades Neonatales, salas de RM y búnkeres de Radioterapia**), se instalan luminarias LED dinámicas reguladas por protocolo **`DALI-2 DT8`** que varían automáticamente a lo largo de las $24\text{ horas}$ tanto su **Temperatura de Color Correlacionada (`TCC`)** como su iluminancia: por la mañana/mediodía emiten luz blanca fría enriquecida en longitud de onda azul de **$460\text{–}480\text{ nm}$** ($\text{TCC} \approx 5.000\text{–}6.500\text{ K}$, $300\text{–}500\text{ lux}$) que estimula las células ganglionares intrínsecamente fotosensibles de la retina (`ipRGC` / melanopsina) suprimiendo la melatonina y manteniendo el estado de vigilia; al atardecer transicionan a luz cálida ámbar ($\text{TCC} \approx 2.700\text{–}3.000\text{ K}$, $< 50\text{ lux}$) y oscuridad nocturna, preservando el **ritmo circadiano fisiológico** y reduciendo en más de un $30\%$ el **síndrome confusional agudo (*delirium*) en pacientes críticos de UCI**.
@@ -155,43 +130,22 @@ Un hospital funciona $24\text{ horas}$ los $365\text{ días}$ del año y consume
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Tabla Comparativa de Circuitos, Seguridad (`CTE`) y Confort Ambiental en Hospitales del SERGAS
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-| Ámbito / Sistema | Criterio de Diseño / Norma Aplicable | Valor / Parámetro Técnico Obligatorio | Aplicación en Hospitales del SERGAS |
-| :--- | :--- | :--- | :--- |
-| **Sectores de Incendio en Hospitalización / UCI** | **`CTE DB-SI 1`** (Uso Hospitalario) | **Mínimo $2\text{ sectores}$ por planta**; Superficie máx. **$\le 1.500\text{ m}^2$** por sector | Evacuación horizontal progresiva cama a cama a través de puertas cortafuegos **`EI2 60-C5`** con retenedor electromagnético. |
-| **Resistencia al Fuego y Recorridos** | **`CTE DB-SI 1 / SI 3 / SI 6`** | Muros/forjados **`EI 120`** ($h \le 28\text{ m}$) o **`EI 180`** ($h > 28\text{ m}$); Recorrido máx. **$\le 30\text{ m}$** ($15\text{ m}$ fondo de saco) | Obligatorias $\ge 2\text{ salidas de planta}$; pasillos de hospitalización $\ge 2,20\text{–}2,40\text{ m}$; puertas de habitaciones $\ge 1,05\text{–}1,20\text{ m}$. |
-| **Instalaciones PCI en Uso Hospitalario** | **`CTE DB-SI 4`** | Detección y `BIE 25 mm` en **todo el edificio**; Columna seca y Ascensor emergencia si **$h > 15\text{ m}$** | Extinción automática (rociadores) si $h > 28\text{ m}$ o superficie construida $> 5.000\text{ m}^2$. |
-| **Niveles Máximos de Ruido Interior** | **`RD 1367/2007`** (Tabla B.2 Anexo II) | **Dormitorios: $L_d \le 40\text{ dBA}$, $L_e \le 40\text{ dBA}$, $L_n \le 30\text{ dBA}$**; Estancias: $45 / 45 / 35\text{ dBA}$ | Semáforos acústicos en UCI/Neonatos y enrutamiento silencioso de alarmas médicas a central. |
-| **Transporte Neumático y `AGV`** | Ingeniería Logística Hospitalaria | Tubo neumático: **$6\text{–}8\text{ m/s}$** normal y **$2\text{–}3\text{ m/s}$** modo suave (sangre); `AGV` por galería técnica | Implantados en `HULA` (Lugo), `HAC` (Vigo), `CHUS`, `CHUAC` y *Gran Montecelo*. |
-| **Certificación Ambiental Hospitalaria** | **`BREEAM ES`** / **`LEED Healthcare`** | Evaluación multicriterio de energía, agua, materiales, residuos y salud interior | El **Hospital Público Álvaro Cunqueiro (`HAC` Vigo)** fue el primer gran hospital español certificado **`BREEAM`**. |
+| Parámetro / Requisito Normativo | Valor Exacto de Examen A1 |
+| :--- | :--- |
+| **Sectores de incendio mínimos por planta de hospitalización/UCI** | **$\ge 2\text{ sectores de incendio por planta}$**, cada uno de **$\le 1.500\text{ m}^2$** construidos. |
+| **Resistencia al fuego entre sectores en uso Hospitalario** | **`EI 120`** (para $h \le 28\text{ m}$) y **`EI 180`** (para $h > 28\text{ m}$); puertas de paso **`EI2 60-C5`**. |
+| **Recorrido máximo de evacuación en zonas de hospitalización** | **$\le 30\text{ metros}$** hasta una salida de planta (siempre $\ge 2\text{ salidas}$); fondo de saco **$\le 15\text{ metros}$**. |
+| **Altura para exigir Columna Seca y Ascensor de Emergencia** | Altura de evacuación **$h > 15\text{ metros}$** en uso Hospitalario (frente a $24\text{ m}$ / $28\text{ m}$ en otros usos). |
+| **Altura o superficie para exigir Extinción Automática** | Altura de evacuación **$h > 28\text{ m}$** o superficie total construida **$> 5.000\text{ m}^2$**. |
+| **Límites acústicos en dormitorios hospitalarios** | Día ($L_d$): **$\le 40\text{ dBA}$** · Tarde ($L_e$): **$\le 40\text{ dBA}$** · Noche ($L_n$): **$\le 30\text{ dBA}$**. |
+| **Límites acústicos en zonas de estancia hospitalarias** | Día ($L_d$): **$\le 45\text{ dBA}$** · Tarde ($L_e$): **$\le 45\text{ dBA}$** · Noche ($L_n$): **$\le 35\text{ dBA}$**. |
+| **Velocidad del tubo neumático para sangre/muestras frágiles** | **$2\text{ a }3\text{ m/s}$** con frenado suave amortiguado (frente a $6\text{–}8\text{ m/s}$ en envíos ordinarios). |
 
-### 5.2. Casuística Real de Diseño de Flujos, Humanización y Sostenibilidad en las 7 Áreas Sanitarias
-1. **Hospital Público Álvaro Cunqueiro (`HAC` de Vigo) y Hospital Universitario Lucus Augusti (`HULA` de Lugo):**
-   Ambos complejos se diseñaron bajo una arquitectura en **peine modular con segregación tridimensional de circulaciones**: una gran calle pública ambulatoria longitudinal en las cotas de acceso para consultas y pacientes externos, un bloque técnico central (*Hot Floor*) con comunicación vertical directa entre Urgencias, helipuerto, Diagnóstico por Imagen, Bloque Quirúrgico, UCI y Esterilización, y velas/dedos de hospitalización bañados por luz natural orientados al sur, complementados por una red subterránea de **robots `AGV`** y **transporte neumático** multicamino. El `HAC` de Vigo obtuvo la certificación internacional de sostenibilidad **`BREEAM`**.
-2. **Nuevos Desarrollos: *Gran Montecelo* (Pontevedra) y *Novo CHUAC* (A Coruña):**
-   Incorporan de serie los estándares de la **Estrategia de Humanización del SERGAS**: UCI con boxes individuales dotados de iluminación circadiana biodinámica y vidrios de privacidad regulable, áreas de oncología pediátrica y neonatal humanizadas con espacios familiares 24 h, salas de Resonancia Magnética y Radioterapia ambientadas con sistemas audiovisuales inmersivos y recuperación integral del agua de rechazo de las plantas de tratamiento de agua de hemodiálisis.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
-
-| Parámetro / Requisito Normativo | Norma Oficial | Valor Exacto de Examen A1 |
-| :--- | :--- | :--- |
-| **Sectores de incendio mínimos por planta de hospitalización/UCI** | `CTE DB-SI 1` | **$\ge 2\text{ sectores de incendio por planta}$**, cada uno de **$\le 1.500\text{ m}^2$** construidos. |
-| **Resistencia al fuego entre sectores en uso Hospitalario** | `CTE DB-SI 1` | **`EI 120`** (para $h \le 28\text{ m}$) y **`EI 180`** (para $h > 28\text{ m}$); puertas de paso **`EI2 60-C5`**. |
-| **Recorrido máximo de evacuación en zonas de hospitalización** | `CTE DB-SI 3` | **$\le 30\text{ metros}$** hasta una salida de planta (siempre $\ge 2\text{ salidas}$); fondo de saco **$\le 15\text{ metros}$**. |
-| **Altura para exigir Columna Seca y Ascensor de Emergencia** | `CTE DB-SI 4` | Altura de evacuación **$h > 15\text{ metros}$** en uso Hospitalario (frente a $24\text{ m}$ / $28\text{ m}$ en otros usos). |
-| **Altura o superficie para exigir Extinción Automática** | `CTE DB-SI 4` | Altura de evacuación **$h > 28\text{ m}$** o superficie total construida **$> 5.000\text{ m}^2$**. |
-| **Límites acústicos en dormitorios hospitalarios (`RD 1367/2007`)** | `RD 1367/2007` Tabla B.2 | Día ($L_d$): **$\le 40\text{ dBA}$** · Tarde ($L_e$): **$\le 40\text{ dBA}$** · Noche ($L_n$): **$\le 30\text{ dBA}$**. |
-| **Límites acústicos en zonas de estancia hospitalarias** | `RD 1367/2007` Tabla B.2 | Día ($L_d$): **$\le 45\text{ dBA}$** · Tarde ($L_e$): **$\le 45\text{ dBA}$** · Noche ($L_n$): **$\le 35\text{ dBA}$**. |
-| **Velocidad del tubo neumático para sangre/muestras frágiles** | Ingeniería Biomédica | **$2\text{ a }3\text{ m/s}$** con frenado suave amortiguado (frente a $6\text{–}8\text{ m/s}$ en envíos ordinarios). |
-
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa clásica del `CTE DB-SI` sobre cómo se evacúa una planta de hospitalización o UCI:** En un examen tipo test, si una opción propone que el diseño contra incendios de una planta de hospitalización se basa en dimensionar las escaleras para bajar simultáneamente a los pacientes en cama a la calle, es **falsa**. En uso **Hospitalario**, la estrategia normativa del `CTE DB-SI` es la **evacuación horizontal progresiva en la misma planta hacia un sector de incendio colindante seguro**, razón por la cual toda planta de hospitalización debe tener **como mínimo $2\text{ sectores de incendio}$ de $\le 1.500\text{ m}^2$** con capacidad espacial mutua de acogida.
 2. **Trampa de las alturas de evacuación específicas del Uso Hospitalario en `CTE DB-SI 4`:** Muchos opositores memorizan las cifras del uso Residencial/Administrativo (columna seca a $24\text{ m}$ y ascensor de emergencia a $28\text{ m}$). ¡Cuidado! En uso **Hospitalario**, tanto la **columna seca** como el **ascensor de emergencia** son obligatorios a partir de tan solo **$15\text{ metros}$ de altura de evacuación**.
 3. **Trampa de los decibelios nocturnos del `RD 1367/2007`:** En los dormitorios de uso sanitario (habitaciones de hospitalización), el objetivo de calidad acústica en período nocturno ($L_n$, de $23:00\text{ a }07:00\text{ h}$) es de **$\le 30\text{ dBA}$** (no $35\text{ dBA}$, que corresponde a zonas de estancia generales, ni $40\text{ dBA}$, que corresponde a los períodos diurno $L_d$ y vespertino $L_e$).

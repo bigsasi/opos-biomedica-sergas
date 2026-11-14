@@ -1,32 +1,6 @@
 # Tema 28 — Caracterización y funcionamiento del equipamiento de neonatología. Cunas térmicas. Incubadoras. Transporte neonatal.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #28 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 05 — Electromedicina de Cuidados Críticos, Quirófano, Ventilación, Anestesia, Monitorización, Endoscopia y Robótica
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulos 1586, 1587, 1589 y 1591), Reglamento (UE) 2017/745 (MDR), Real Decreto 192/2023, UNE-EN IEC 60601-2-19 (Incubadoras para bebés), UNE-EN IEC 60601-2-20 (Incubadoras de transporte para bebés), UNE-EN IEC 60601-2-21 (Calentadores radiantes / Cunas térmicas para bebés), UNE-EN IEC 60601-2-50 (Equipos de fototerapia para bebés), UNE-EN 1789 (Ambulancias de transporte sanitario), UNE-EN 62353
-> - **Sistemas y Entorno SERGAS:** Unidades de Cuidados Intensivos Neonatales (UCIN), Unidades de Neonatología y Paritorios de las 7 Áreas Sanitarias del SERGAS, Transporte Neonatal Crítico (FPUSG-061 Galicia), IANUS, GACELA y XMAO
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 28** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud (SERGAS), publicado en el *Diario Oficial de Galicia* (DOG núm. 67, de 13 de abril de 2026), desarrolla de forma íntegra la biofísica de la termorregulación del recién nacido y la ingeniería electromédica del **equipamiento de neonatología**: **incubadoras neonatales cerradas (`UNE-EN IEC 60601-2-19`)**, **cunas térmicas o calentadores radiantes abiertos con módulo de reanimación (`UNE-EN IEC 60601-2-21`)**, **incubadoras híbridas**, **incubadoras de transporte neonatal terrestre y aéreo (`UNE-EN IEC 60601-2-20`)** y **equipos de fototerapia para hiperbilirrubinemia neonatal (`UNE-EN IEC 60601-2-50`)**, así como su verificación metrológica mediante analizadores multiparamétricos de incubadoras.
-
-Su contenido técnico responde a los currículos oficiales del **Real Decreto 838/2015** y la **Orden EFP/1216/2019**:
-- **Módulo Profesional 1589 (*Sistemas de monitorización, registro y cuidados críticos*):** Incluye explícitamente la **incubadora** dentro de los equipos de soporte de cuidados críticos, detallando sus lazos de control de temperatura (modo aire y modo piel servocontrolado), humedad activa, concentración de oxígeno, nivel acústico y los ensayos preventivos con **analizador de incubadoras**, medidor de $\text{O}_2$ y analizador de seguridad eléctrica (`UNE-EN 62353`).
-- **Módulo Profesional 1587 (*Sistemas electrónicos y fotónicos*):** Sensores de temperatura por termistores NTC dobles, calentadores infrarrojos de cuarzo y cerámicos, fuentes de luz LED de nitruro de galio en banda azul ($430\text{–}490\text{ nm}$) y radiometría óptica.
-- **Módulo Profesional 1591 (*Sistemas de rehabilitación y pruebas funcionales*):** Uso del **radiómetro de fototerapia** y fotómetro para cuantificación de irradiancia espectral.
-
-### Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-
-- **Categorías con solapamiento:** **Ingeniero/a Técnico/a**
-- **Grado de solapamiento:** **Medio (45%)**: Relación con equipamiento de unidades críticas (UCI neonatal), ventilación y monitorización.
-- **Epígrafes equivalentes:**
-  - `• Tema 46. El bloque quirúrgico: instalaciones y equipos. Circuitos. UCIs y unidades de reanimación post-anestésica: instalaciones y equipos. Inspección y mantenimiento.`
-  - `• Tema 47. Monitorización. Desfibriladores. Bisturís. Equipos de ventilación.`
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Fisiopatología de la Termorregulación Neonatal y el Ambiente Térmico Neutro
 
 ### 1.1. Fisiopatología de la Termorregulación Neonatal y el Ambiente Térmico Neutro (ATN)
 
@@ -78,9 +52,9 @@ En el **Reglamento (UE) 2017/745 (MDR)**, las incubadoras neonatales, incubadora
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. La Incubadora Neonatal Cerrada
 
-### 2.1. La Incubadora Neonatal Cerrada (`UNE-EN IEC 60601-2-19`)
+### 2.1. La Incubadora Neonatal Cerrada
 
 La incubadora neonatal cerrada crea una cámara microclimática aislada de pared doble en acrilato transparente (PMMA) con portillos ovalados de acceso con manguitos iris y puertas abatibles con cortina de aire cálido. Su bloque técnico inferior (módulo de acondicionamiento bajo el lecho) integra los siguientes subsistemas:
 
@@ -116,13 +90,13 @@ La potencia entregada a la resistencia calefactora se modula sin ruido mecánico
 
 #### 3. Subsistema de Humidificación Activa Estéril por Ebullición
 Las incubadoras antiguas utilizaban bandejas pasivas de agua tibia o nebulizadores ultrasónicos, los cuales generaban microgotas líquidas (aerosoles) que actuaban como vectores directos de infección nosocomial grave por bacilos Gram-negativos hidrofílicos (***Pseudomonas aeruginosa*, *Klebsiella*, *Serratia***).
-- En las incubadoras modernas (`IEC 60601-2-19`), el subsistema de humedad funciona mediante **evaporación térmica por ebullición a alta temperatura ($\ge 100\text{ }^\circ\text{C}$)**: el agua destilada estéril pasa de un depósito extraíble a una pequeña caldera eléctrica donde hierve, destruyendo cualquier microorganismo y generando **vapor de agua molecular puro (gas, libre de gotículas transportadoras de bacterias)** que se mezcla con la corriente de aire antes de entrar al habitáculo.
+- En las incubadoras modernas, el subsistema de humedad funciona mediante **evaporación térmica por ebullición a alta temperatura ($\ge 100\text{ }^\circ\text{C}$)**: el agua destilada estéril pasa de un depósito extraíble a una pequeña caldera eléctrica donde hierve, destruyendo cualquier microorganismo y generando **vapor de agua molecular puro (gas, libre de gotículas transportadoras de bacterias)** que se mezcla con la corriente de aire antes de entrar al habitáculo.
 - Un **higrómetro capacitivo** en la cúpula cierra el lazo de servocontrol mantendo la humedad relativa entre el **$30\%$ y el $95\%\text{ HR}$**, e incluye una función automática anticondensación que ajusta la relación humedad/temperatura para evitar el empañamiento de la doble pared.
 
 #### 4. Subsistema de Servocontrol de Oxígeno, Báscula, Inclinación y Acústica
 - **Servocontrol de $\text{O}_2$ ($21\%\text{ a }65\%$):** Una electroválvula proporcional inyecta $\text{O}_2$ en el habitáculo controlada por una **doble celda electroquímica galvánica (o sensor paramagnético)** redundante (alarma si la lectura difiere en $> \pm 3\%\text{ de }\text{FiO}_2$).
 - **Lecho basculante y Báscula integrada:** El soporte del colchón permite inclinación suave motorizada o mecánica en **Trendelenburg y Anti-Trendelenburg ($\pm 12^\circ$)** sin abrir la cúpula, incorpora **báscula electrónica de células de carga (galgas extensiométricas, resolución $1\text{ a }5\text{ g}$)** con compensación de tara de cables/tubuladuras, y una **bandeja inferior portachasis radiotransparente** que permite introducir el detector digital plano (*Flat Panel*) de rayos X portátil sin abrir los portillos ni tocar al neonato.
-- **Protección Acústica y Neurodesarrollo (`IEC 60601-2-19`):** La cóclea inmadura del prematuro es sumamente sensible al trauma acústico (que además sinergiza con fármacos ototóxicos como los aminoglucósidos). Aunque el límite máximo normativo de la `IEC 60601-2-19` en funcionamiento normal sin alarmas es de **$\le 60\text{ dBA}$**, las guías de cuidados centrados en el desarrollo (NIDCAP / AAP) y los pliegos técnicos del SERGAS exigen un nivel de presión sonora basal en el interior del habitáculo **$\le 45\text{ dBA}$** (idealmente $38\text{–}42\text{ dBA}$).
+- **Protección Acústica y Neurodesarrollo:** La cóclea inmadura del prematuro es sumamente sensible al trauma acústico (que además sinergiza con fármacos ototóxicos como los aminoglucósidos). Aunque el límite máximo normativo de la `IEC 60601-2-19` en funcionamiento normal sin alarmas es de **$\le 60\text{ dBA}$**, las guías de cuidados centrados en el desarrollo (NIDCAP / AAP) y los pliegos técnicos del servicio de salud exigen un nivel de presión sonora basal en el interior del habitáculo **$\le 45\text{ dBA}$** (idealmente $38\text{–}42\text{ dBA}$).
 
 ---
 
@@ -150,7 +124,7 @@ La **Cuna Térmica (o Calentador Radiante Abierto)** está diseñada para situac
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Incubadoras Híbridas o Duales y Incubadora de Transporte Neonatal
 
 ### 3.1. Incubadoras Híbridas o Duales (Incubadora Cerrada + Cuna Térmica en un solo Equipo)
 
@@ -160,10 +134,10 @@ Las **Incubadoras Híbridas** (ej. *GE Giraffe OmniBed* o *Dräger Babyleo IncuW
 - Operan como **incubadora cerrada de doble pared** con calefacción convectiva y humidificación estéril hasta el $95\%$.
 - Al pulsar un pedal o botón, el **dosel superior se eleva verticalmente en pocos segundos** mediante columnas telescópicas motorizadas y, de forma sincronizada y sin interrupción térmica, el sistema **desactiva la calefacción convectiva y enciende automáticamente el calefactor radiante infrarrojo superior** (más el colchón térmico conductivo en modelos de triple fuente de calor), transformándose en una **cuna térmica abierta** sin tocar ni desconectar al neonato.
 
-### 3.2. Incubadora de Transporte Neonatal (`UNE-EN IEC 60601-2-20`)
+### 3.2. Incubadora de Transporte Neonatal
 
 Diseñada para el traslado intrahospitalario (paritorio a UCIN, UCIN a RM/quirófano) y el **transporte interhospitalario crítico terrestre (ambulancia SVA medicalizada `UNE-EN 1789`) o aéreo (helicóptero sanitario `UNE-EN 13718`)**:
-- **Integración estructural y resistencia a impactos:** Chasis montado sobre camilla plegable de aluminio con interfaz de anclaje certificado que soporta aceleraciones y deceleraciones de choque de **$10\text{ G a }20\text{ G}$** en los tres ejes espaciales (`UNE-EN 1789`), con correas de sujeción acolchadas internas para el neonato.
+- **Integración estructural y resistencia a impactos:** Chasis montado sobre camilla plegable de aluminio con interfaz de anclaje certificado que soporta aceleraciones y deceleraciones de choque de **$10\text{ G a }20\text{ G}$** en los tres ejes espaciales, con correas de sujeción acolchadas internas para el neonato.
 - **Autonomía Energética y Neumática:**
   - Fuente de alimentación conmutada universal ($100\text{–}240\text{ V AC}$, $50/60\text{ Hz}$) e inversor de corriente continua para toma de vehículo/aeronave (**$12\text{ V DC / }24\text{–}28\text{ V DC}$**).
   - Baterías internas recargables (iones de litio o plomo-ácido selladas VRLA) que garantizan por norma **`UNE-EN IEC 60601-2-20`** una **autonomía mínima de $\mathbf{90\text{ minutos}}$** (en equipos actuales **$2\text{ a }4\text{ horas}$**) manteniendo el interior a $36\text{ }^\circ\text{C}$ con una temperatura ambiente exterior de $0\text{ a }10\text{ }^\circ\text{C}$.
@@ -171,11 +145,11 @@ Diseñada para el traslado intrahospitalario (paritorio a UCIN, UCIN a RM/quiró
     $$V_{\text{disponible (L)}} = V_{\text{botella (L)}} \cdot \left( P_{\text{manométrica (bar)}} - P_{\text{seguridad (20 bar)}} \right) \quad \Longrightarrow \quad t_{\text{autonomía (min)}} = \frac{V_{\text{disponible (L)}}}{\dot{V}_{\text{consumo\_ventilador (L/min)}}}$$
 - **Equipamiento Electromédico Integrado:** Incorpora en su frontal un **respirador neonatal de transporte** (capaz de ventilar en CMV, SIMV, PSV y nCPAP no invasiva), **monitor multiparamétrico neonatal** (ECG, $\text{SpO}_2$ Masimo resistente al movimiento de la ambulancia, PANI neonatal, capnografía y 2 temperaturas), aspirador autónomo y soporte con **2 a 4 bombas de jeringa** para aminas vasoactivas y prostaglandinas.
 
-### 3.3. Equipos de Fototerapia Neonatal para Hiperbilirrubinemia (`UNE-EN IEC 60601-2-50`)
+### 3.3. Equipos de Fototerapia Neonatal para Hiperbilirrubinemia
 
 Más del $60\%$ de los recién nacidos a término y el $80\%$ de los prematuros desarrollan **ictericia neonatal** por aumento de la **bilirrubina indirecta (no conjugada, liposoluble)** debido a la hemólisis fisiológica de hematíes fetales y a la inmadurez de la enzima hepática glucuroniltransferasa (UGT1A1). Si la bilirrubina libre atraviesa la barrera hematoencefálica inmadura y se deposita en los ganglios basales, provoca encefalopatía bilirrubínica aguda irreversible (**Kernicterus**).
 
-1. **Principio Fotoquímico y Espectro de Acción Óptimo (`IEC 60601-2-50`):**
+1. **Principio Fotoquímico y Espectro de Acción Óptimo:**
    - La **fototerapia neonatal** irradia la piel del bebé con luz visible en la **banda azul-verde de $\mathbf{430\text{ a }490\text{ nm}}$, con pico de absorción óptimo de la bilirrubina en $\mathbf{450\text{–}460\text{ nm}}$**.
    - Los fotones azules de $450\text{–}460\text{ nm}$ penetran en el plexo capilar dérmico y transforman la molécula nativa de bilirrubina ($4Z, 15Z\text{-bilirrubina}$, apolar e insoluble en agua) mediante dos reacciones fotoquímicas simultáneas:
      - **Fotoisomerización configuracional ($4Z, 15E$)** y, sobre todo, **Fotoisomerización estructural irreversible a Lumirrubina (ciclación intramolecular)**: la **lumirrubina** es un isómero **hidrosoluble** que **se excreta directamente por la bilis y por la orina sin necesidad de conjugación hepática**.
@@ -188,11 +162,11 @@ Más del $60\%$ de los recién nacidos a término y el $80\%$ de los prematuros 
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Verificación Metrológica con Analizador de Incubadoras y Cunas Térmicas
 
-### 4.1. Verificación Metrológica con Analizador de Incubadoras y Cunas Térmicas (`Módulo 1589`)
+### 4.1. Verificación Metrológica con Analizador de Incubadoras y Cunas Térmicas
 
-El mantenimiento preventivo y control de calidad anual (o post-reparación de turbina, calefactor o tarjeta de control) de incubadoras y cunas térmicas en los Servicios de Electromedicina del SERGAS se realiza empleando un **Analizador Multiparamétrico de Incubadoras certificado** (ej. *Fluke Biomedical INCU II*), que se coloca en el centro del colchón de la incubadora reproduciendo exactamente la geometría de ensayo de la norma **`UNE-EN IEC 60601-2-19`**:
+El mantenimiento preventivo y control de calidad anual (o post-reparación de turbina, calefactor o tarjeta de control) de incubadoras y cunas térmicas en los Servicios de Electromedicina del servicio de salud se realiza empleando un **Analizador Multiparamétrico de Incubadoras certificado** (ej. *Fluke Biomedical INCU II*), que se coloca en el centro del colchón de la incubadora reproduciendo exactamente la geometría de ensayo de la norma **`UNE-EN IEC 60601-2-19`**:
 
 ```
      Vista Superior del Colchón de la Incubadora (Ensayo IEC 60601-2-19 a 10 cm de altura)
@@ -211,32 +185,17 @@ Los parámetros y tolerancias normativas verificados en el ensayo son:
 2. **Estabilidad en Régimen Estacionario (*Steady Temperature Condition*):** Una vez estabilizada durante $1\text{ hora}$, la temperatura en T5 no debe variar en más de **$\pm 0,5\text{ }^\circ\text{C}$** respecto a la media, y la lectura del indicador de la incubadora no debe diferir de la temperatura media medida por el analizador en más de **$\pm 0,8\text{ }^\circ\text{C}$**.
 3. **Uniformidad Espacial del Colchón (Puntos T1, T2, T3 y T4):** La temperatura media medida en el centro de los cuatro cuadrantes del colchón (T1 a T4, a $10\text{ cm}$ de altura) no debe diferir de la temperatura central T5 en más de **$\pm 0,8\text{ }^\circ\text{C}$** (o $\pm 1,0\text{ }^\circ\text{C}$ con el colchón inclinado en Trendelenburg).
 4. **Sobrepico Térmico (*Overshoot*) y Precisión del Sensor de Piel:** Al pasar de $32\text{ }^\circ\text{C}$ a $36\text{ }^\circ\text{C}$, el sobrepico transitorio no debe superar **$2,0\text{ }^\circ\text{C}$** y debe restablecerse en $< 15\text{ min}$. La exactitud del sensor cutáneo NTC sumergido en baño termostático patrón a $36,0\text{ }^\circ\text{C}$ debe ser **$\le \pm 0,3\text{ }^\circ\text{C}$** (y la alarma de desviación de piel debe saltar a $\pm 0,5\text{–}1,0\text{ }^\circ\text{C}$).
-5. **Velocidad de Aire, Humedad, Ruido y Seguridad Eléctrica (`UNE-EN 62353`):**
+5. **Velocidad de Aire, Humedad, Ruido y Seguridad Eléctrica:**
    - Velocidad de aire sobre el colchón: **$\le 0,35\text{ m/s}$** (anemómetro térmico del analizador).
    - Exactitud de humedad relativa: **$\pm 10\%\text{ HR}$** respecto al higrómetro patrón.
    - Nivel sonoro interno: **$\le 60\text{ dBA}$** normativo (**$\le 45\text{ dBA}$** objetivo clínico).
-   - Seguridad eléctrica (`UNE-EN 62353`): Resistencia de tierra de protección $\le 0,3\text{ }\Omega$ y corriente de fuga de parte aplicable (sondas cutáneas y sensores de $\text{SpO}_2$/ECG integrados de **Tipo BF o CF**).
+   - Seguridad eléctrica: Resistencia de tierra de protección $\le 0,3\text{ }\Omega$ y corriente de fuga de parte aplicable (sondas cutáneas y sensores de $\text{SpO}_2$/ECG integrados de **Tipo BF o CF**).
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Dotación en UCIN, Paritorios de Maternidad y Transporte Neonatal Crítico (061 Galicia)
-
-En las **7 Áreas Sanitarias del SERGAS**, los hospitales materno-infantiles de referencia (Hospital Teresa Herrera en el CHUAC de A Coruña, Hospital Clínico del CHUS en Santiago, Hospital Álvaro Cunqueiro del CHUVI en Vigo, HULA en Lugo, CHUO en Ourense, Hospital Provincial/Novo Montecelo en Pontevedra y Hospital Arquitecto Marcide en Ferrol) estructuran su equipamiento neonatal en tres niveles asistenciales:
-1. **Salas de Partos, Quirófanos de Obstetricia y Puertas de Urgencias Pediátricas:** Dotadas de **cunas térmicas radiantes (`IEC 60601-2-21`) con módulo de reanimación con pieza en T (*Neopuff*)**, mezclador de gases $\text{O}_2$/Aire, pulsioxímetro preductal de extracción de señal en baja perfusión y **dos incubadoras de transporte precalentadas a $35\text{–}36\text{ }^\circ\text{C}$** permanentemente conectadas a la red y a las tomas de gases para el traslado inmediato a UCIN.
-2. **Boxes de Cuidados Intensivos Neonatales (UCIN Nivel III):** Equipados con **incubadoras híbridas duales (*OmniBed / Babyleo*)** para grandes prematuros $< 1.500\text{ g}$, equipos de **hipotermia terapéutica servocontrolada ($33,5\text{ }^\circ\text{C}$ durante $72\text{ horas}$)** para recién nacidos con encefalopatía hipóxico-isquémica perinatal (con monitorización de EEG integrado por amplitud — aEEG) y fototerapia LED intensiva.
-3. **Transporte Neonatal Crítico Interhospitalario (`FPUSG-061` y Equipos de Transporte Pediátrico/Neonatal):** Coordina el traslado de neonatos críticos desde los hospitales comarcales (Barbanza, Cee, Burela, Monforte, Verín, Valdeorras, O Salnés) hacia las UCIN de referencia en ambulancias de soporte vital avanzado o helicópteros medicalizados del 061 con incubadoras de transporte certificadas `UNE-EN IEC 60601-2-20` y `UNE-EN 1789`.
-
-### 5.2. Integración en `IANUS`, `GACELA` y Gestión en `XMAO`
-
-Las incubadoras híbridas y monitores neonatales de las UCIN del SERGAS exportan sus variables microclimáticas ($T_{\text{aire}}$, $T_{\text{piel central}}$, $T_{\text{periférica}}$, $\% \text{HR}$, $\% \text{FiO}_2$ y peso diario de la báscula integrada) a través de pasarelas HL7 (`IHE PCD-01`) hacia la gráfica electrónica de cuidados críticos de **`IANUS`** y **`GACELA`**. En **`XMAO`**, las incubadoras y cunas térmicas están catalogadas como equipos de **Soporte Vital / Prioridad Alta**, exigiendo sustitución periódica preventiva de filtros HEPA cada $3\text{–}6\text{ meses}$, celdas de $\text{O}_2$ anuales y protocolo estricto de desmontaje y desinfección de alto nivel del calderín de humidificación entre pacientes.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Equipo / Parámetro Técnico Neonatal | Norma / Magnitud Oficial | Valor / Cifra Exacta de Examen A1 | Implicación Clínica o de Ingeniería Biomédica |
 | :--- | :--- | :--- | :--- |
@@ -244,14 +203,14 @@ Las incubadoras híbridas y monitores neonatales de las UCIN del SERGAS exportan
 | **Los 4 mecanismos de pérdida de calor** | Convección, Radiación, Evaporación, Conducción | Radiación ($T^4$): **Doble pared** · Evaporación ($2.427\text{ J/g}$): **Humedad $60\text{–}95\%$** | Una incubadora de pared simple en sala fría pierde calor por **radiación** |
 | **Modos de control térmico en incubadora** | Modo Aire (ATC) vs. Modo Piel (ITC) | Aire: **$28\text{–}37\text{ }^\circ\text{C}$** (*override* $39\text{ }^\circ\text{C}$) · Piel: **$36,5\text{ }^\circ\text{C}$** (NTC $\pm 0,1\text{ }^\circ\text{C}$) | El servocontrol de piel puede **enmascarar la fiebre** bajando $T_{\text{aire}}$ |
 | **Humidificación activa en incubadora** | Tecnología microbiológicamente segura | **Ebullición de vapor estéril ($\ge 100\text{ }^\circ\text{C}$)** | Prohibida la nebulización fría por riesgo de ***Pseudomonas aeruginosa*** |
-| **Nivel máximo de ruido interno e flujo de aire** | Acústica y aerodinámica (`IEC 60601-2-19`) | Normativo **$\le 60\text{ dBA}$** (clínico **$\mathbf{\le 45\text{ dBA}}$**) · Velocidad aire **$\le 0,35\text{ m/s}$** | Previene hipoacusia neurosensorial y pérdidas convectivas |
-| **Seguridad en Modo Manual de Cuna Térmica** | Temporizador obligatorio (`IEC 60601-2-21`) | **Alarma cada $\mathbf{15\text{ minutos}}$** y corte/reducción de potencia ($\le 25\%$) | Evita hipertermia maligna y quemaduras si se olvida sin sonda de piel |
+| **Nivel máximo de ruido interno e flujo de aire** | Acústica y aerodinámica | Normativo **$\le 60\text{ dBA}$** (clínico **$\mathbf{\le 45\text{ dBA}}$**) · Velocidad aire **$\le 0,35\text{ m/s}$** | Previene hipoacusia neurosensorial y pérdidas convectivas |
+| **Seguridad en Modo Manual de Cuna Térmica** | Temporizador obligatorio | **Alarma cada $\mathbf{15\text{ minutos}}$** y corte/reducción de potencia ($\le 25\%$) | Evita hipertermia maligna y quemaduras si se olvida sin sonda de piel |
 | **Reanimador neonatal con Pieza en T (*Neopuff*)** | Parámetros de presión en paritorio | Control exacto de **PIP ($20\text{–}25\text{ cmH}_2\text{O}$)** y **PEEP ($5\text{ cmH}_2\text{O}$)** | Evita el atelectrauma y el barotrauma neonatal frente al Ambu |
 | **Incubadora de Transporte Neonatal** | Autonomía mínima y choque (`2-20` / `EN 1789`) | Batería **$\ge 90\text{ min}$** (real $2\text{–}4\text{ h}$) · Anclaje de impacto **$10\text{–}20\text{ G}$** | Alimentación dual $230\text{ V AC} / 12\text{–}28\text{ V DC}$ + respirador neonatal |
 | **Fototerapia para ictericia neonatal** | Longitud de onda e irradiancia (`2-50`) | **Luz azul LED de $\mathbf{430\text{ a }490\text{ nm}}$ (pico $\mathbf{450\text{–}460\text{ nm}}$)** · Intensiva **$\ge 30\text{ }\mu\text{W/cm}^2\text{/nm}$** | Convierte la bilirrubina indirecta en **lumirrubina hidrosoluble** |
 | **Ensayo con Analizador de Incubadoras** | Puntos de medida sobre el colchón | **5 sensores de temperatura (T1–T5 a $10\text{ cm}$ de altura)** | Uniformidad espacial $\le \pm 0,8\text{ }^\circ\text{C}$ y estabilidad $\le \pm 0,5\text{ }^\circ\text{C}$ |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 
 1. **Trampa de test sobre el desprendimiento de la sonda cutánea en Modo Piel (Servocontrol):** Si la sonda de temperatura cutánea se despega accidentalmente del abdomen del neonato y cae sobre el colchón o queda al aire, el sensor leerá una temperatura más baja que los $36,5\text{ }^\circ\text{C}$ de consigna. El controlador interpretará erróneamente que el bebé está hipotérmico y **subirá la calefacción al máximo ($100\%$)**, pudiendo provocar una **hipertermia mortal** al neonato si las alarmas de desviación ($\pm 0,5\text{–}1,0\text{ }^\circ\text{C}$) están mal configuradas. Por el contrario, si se coloca la sonda sin el **parche reflectante de aluminio** bajo una cuna térmica, el infrarrojo calentará directamente el sensor, que leerá $> 38\text{ }^\circ\text{C}$ y **apagará el calefactor dejando al bebé en hipotermia**.
 2. **Trampa sobre Fototerapia y Radiación Ultravioleta:** La fototerapia para la ictericia neonatal **NO utiliza luz ultravioleta (UV)**. Utiliza **luz visible azul ($430\text{–}490\text{ nm}$, pico en $450\text{–}460\text{ nm}$)**; de hecho, la norma `UNE-EN IEC 60601-2-50` obliga a filtrar y suprimir cualquier emisión ultravioleta ($< 400\text{ nm}$).
@@ -259,4 +218,4 @@ Las incubadoras híbridas y monitores neonatales de las UCIN del SERGAS exportan
    - La **doble pared** de la incubadora reduce las pérdidas por **RADIACIÓN** (no por convección).
    - La **humedad relativa alta ($80\%$)** reduce las pérdidas por **EVAPORACIÓN** transepidérmica.
    - El **calentamiento del aire interior** reduce las pérdidas por **CONVECCIÓN**.
-4. **Trampa sobre el enmascaramiento de la sepsis en Modo Piel:** En un neonato en Modo Piel servocontrolado a $36,5\text{ }^\circ\text{C}$ que desarrolla fiebre por una sepsis, la temperatura del bebé seguirá marcando $36,5\text{ }^\circ\text{C}$, pero el signo de alarma en la gráfica de `IANUS` será un **descenso inexplicado de la temperatura del aire de la incubadora** y un aumento del gradiente central-periférico ($\Delta T > 2\text{ }^\circ\text{C}$).
+4. **Trampa sobre el enmascaramiento de la sepsis en Modo Piel:** En un neonato en Modo Piel servocontrolado a $36,5\text{ }^\circ\text{C}$ que desarrolla fiebre por una sepsis, la temperatura del bebé seguirá marcando $36,5\text{ }^\circ\text{C}$, pero el signo de alarma en la gráfica de `HCE` será un **descenso inexplicado de la temperatura del aire de la incubadora** y un aumento del gradiente central-periférico ($\Delta T > 2\text{ }^\circ\text{C}$).

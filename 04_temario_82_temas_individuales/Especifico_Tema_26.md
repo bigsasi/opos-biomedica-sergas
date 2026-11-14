@@ -1,31 +1,6 @@
 # Tema 26 — Robotización quirúrgica. Principios, tipos y tecnologías.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #26 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 05 — Electromedicina de Cuidados Críticos, Quirófano, Ventilación, Anestesia, Monitorización, Endoscopia y Robótica
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulos 1586, 1587, 1589 y 1591), Reglamento (UE) 2017/745 (MDR), Real Decreto 192/2023, UNE-EN IEC 80601-2-77 (Equipos quirúrgicos asistidos por robot — RASE), UNE-EN 60601-1, UNE-EN 62304 (Software de dispositivos médicos Clase C), UNE-EN 60601-2-2, UNE-EN 60601-2-18, UNE-EN 62353
-> - **Sistemas y Entorno SERGAS:** Programa Corporativo de Cirugía Robótica del SERGAS en los 7 Hospitales Universitarios de Cabecera de las 7 Áreas Sanitarias (CHUAC, CHUS, CHUVI, HULA, CHUO, CHOP y CHUF), PACS/VNA, IANUS, XMAO y Centrales de Esterilización (RUMED)
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 26** de la Parte Específica del temario oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud (SERGAS), convocado mediante Resolución en el *Diario Oficial de Galicia* (DOG núm. 67, de 13 de abril de 2026), estudia de manera monográfica la **robotización quirúrgica**: sus fundamentos cinemáticos y mecatrónicos, la clasificación internacional según arquitectura y nivel de autonomía (`UNE-EN IEC 80601-2-77`), los sistemas telemanipulados maestro-esclavo para tejidos blandos, los robots guiados por imagen con restricción háptica o navegación activa para cirugía ortopédica, espinal y neuroquirúrgica, y la infraestructura de ingeniería hospitalaria requerida para su implantación en el SERGAS.
-
-Su base curricular conecta los módulos del **Real Decreto 838/2015** y la **Orden EFP/1216/2019** con la ingeniería mecatrónica y clínica superior:
-- **Módulo Profesional 1586 (*Sistemas electromecánicos y de fluidos*):** Cadenas cinemáticas abiertas y cerradas, pares cinemáticos rotacionales y prismáticos, grados de libertad (GDL), reductores armónicos sin holgura (*Harmonic Drive*), transmisiones por cables tensados (*tendon-driven*), servomotores *brushless* y frenos electromagnéticos *fail-safe*.
-- **Módulo Profesional 1587 (*Sistemas electrónicos y fotónicos*):** Codificadores ópticos y magnéticos absolutos/incrementales (*encoders*), lazos de control digital de posición, velocidad y par en tiempo real ($\ge 1\text{ kHz}$), visión estereoscópica 3D-HD, sistemas de seguimiento óptico infrarrojo (*Optical Tracking*) y fluorescencia láser en infrarrojo cercano (NIR/ICG).
-- **Módulos Profesionales 1589 y 1591:** Integración en el bloque quirúrgico, seguridad eléctrica (`UNE-EN 62353`), gestión de alarmas y mantenimiento de sistemas robotizados.
-
-### Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-
-- **Categorías con solapamiento:** **Ingeniero/a Técnico/a**
-- **Grado de solapamiento:** **Bajo (25%)**: Relación tangencial dentro del equipamiento del bloque quirúrgico; tema de nueva incorporación tecnológica en Biomédica.
-- **Epígrafes equivalentes:**
-  - `• Tema 46. El bloque quirúrgico: instalaciones y equipos. Circuitos. UCIs y unidades de reanimación post-anestésica: instalaciones y equipos. Inspección y mantenimiento.`
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Definición Reglamentaria (`UNE-EN IEC 80601-2-77`) y Niveles de Autonomía en Robótica Quirúrgica
 
 ### 1.1. Definición Reglamentaria (`UNE-EN IEC 80601-2-77`) y Niveles de Autonomía en Robótica Quirúrgica
 
@@ -63,11 +38,11 @@ El procesador maestro-esclavo resuelve en tiempo real (frecuencia de muestreo de
 ### 1.3. Marco Normativo: MDR 2017/745, `UNE-EN IEC 80601-2-77` e `IEC 62304`
 
 - **Clasificación en el Reglamento (UE) 2017/745 (MDR):** Los sistemas quirúrgicos robotizados e instrumentos activos asociados se clasifican como **Clase IIb** (**Regla 9** y **Regla 11** para el software de control), elevándose a **Clase III** (**Reglas 6, 7 y 8**) cuando el robot y sus instrumentos están destinados a entrar en contacto directo con el **sistema nervioso central** (robots neuroquirúrgicos) o el **corazón y sistema circulatorio central** (cirugía cardíaca robótica).
-- **Seguridad del Software (`UNE-EN 62304`):** El software de control cinemático en tiempo real se clasifica como **Clase C** (el fallo del software podría ocasionar la muerte o lesión grave irreversible al paciente), exigiendo arquitectura redundante de doble procesador con comprobación cruzada (*lockstep / watchdog*) en cada milisegundo.
+- **Seguridad del Software:** El software de control cinemático en tiempo real se clasifica como **Clase C** (el fallo del software podría ocasionar la muerte o lesión grave irreversible al paciente), exigiendo arquitectura redundante de doble procesador con comprobación cruzada (*lockstep / watchdog*) en cada milisegundo.
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Arquitectura de un Sistema Quirúrgico Telemanipulado de Tejidos Blandos
 
 ### 2.1. Arquitectura de un Sistema Quirúrgico Telemanipulado de Tejidos Blandos
 
@@ -120,7 +95,7 @@ Aloja la unidad central de procesamiento del sistema, la fuente de iluminación 
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Comparativa de Plataformas Robóticas de Tejidos Blandos
 
 ### 3.1. Comparativa de Plataformas Robóticas de Tejidos Blandos (Multipuerto vs. Puerto Único)
 
@@ -149,7 +124,7 @@ En instrumentación espinal (colocación de tornillos transpediculares cerca de 
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Requisitos de Infraestructura e Ingeniería Hospitalaria del Quirófano Robótico
 
 ### 4.1. Requisitos de Infraestructura e Ingeniería Hospitalaria del Quirófano Robótico
 
@@ -168,38 +143,16 @@ La implantación de un sistema robótico en un bloque quirúrgico exige verifica
 ### 4.2. Seguridad Funcional (`UNE-EN IEC 80601-2-77`), Fallos Críticos y Desacoplamiento de Emergencia (*Emergency Undocking*)
 
 - **Autotest de Encendido (*Power-On Self-Test* — POST) y Homing:** Al encender el sistema, los brazos verifican todos los sensores redundantes, frenos electromagnéticos y continuidad de fibra óptica sin instrumentos insertados.
-- **Gestión de Fallos Recuperables vs. No Recuperables:** Si los dos codificadores redundantes de una articulación discrepan en más de una fracción de grado o la corriente de un servomotor supera el par previsto (colisión externa), el sistema entra en **Parada Segura (*Fault Safe State*)**, activando los frenos mecánicos y emitiendo alarma de prioridad alta (`IEC 60601-1-8`).
+- **Gestión de Fallos Recuperables vs. No Recuperables:** Si los dos codificadores redundantes de una articulación discrepan en más de una fracción de grado o la corriente de un servomotor supera el par previsto (colisión externa), el sistema entra en **Parada Segura (*Fault Safe State*)**, activando los frenos mecánicos y emitiendo alarma de prioridad alta.
 - **Protocolo de Conversión Abierta y Desacoplamiento de Emergencia (*Emergency Undocking*):** Ante una hemorragia masiva incontrolable o parada cardiorrespiratoria en el paciente, todo el equipo quirúrgico debe entrenarse para ejecutar el desacoplamiento de emergencia en **menos de $30\text{–}60\text{ segundos}$**:
   1. Abrir las mandíbulas de los instrumentos con la **llave mecánica de liberación manual de emergencia (*Instrument Release Kit*)** encajada en la carcasa del instrumento en caso de bloqueo del sistema.
   2. Extraer los instrumentos bajo visión directa, soltar los cierres rápidos de las cánulas de los trócares, pulsar el **botón de Parada de Emergencia (*E-Stop*)** y retirar el carro motorizado para dar paso a la laparotomía o RCP.
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. El Programa Corporativo de Cirugía Robótica en las 7 Áreas Sanitarias del SERGAS
-
-El **Servicio Gallego de Salud (SERGAS)** desplegó en 2021 de forma simultánea y homogénea su **Programa Corporativo de Cirugía Robótica de Alta Complejidad**, instalando sistemas quirúrgicos telemanipulados *Da Vinci Xi* (con doble consola quirúrgica para formación de residentes y adjuntos, simulador virtual y sistema de movimiento integrado de mesa) en los **7 Hospitales Universitarios de cabecera de las 7 Áreas Sanitarias de Galicia**:
-1. **Área Sanitaria de A Coruña y Cee:** Complejo Hospitalario Universitario de A Coruña (**CHUAC**).
-2. **Área Sanitaria de Santiago de Compostela y Barbanza:** Complejo Hospitalario Universitario de Santiago (**CHUS** — Hospital Clínico).
-3. **Área Sanitaria de Vigo:** Complejo Hospitalario Universitario de Vigo (**CHUVI** — Hospital Público Álvaro Cunqueiro).
-4. **Área Sanitaria de Lugo, A Mariña y Monforte de Lemos:** Hospital Universitario Lucus Augusti (**HULA**).
-5. **Área Sanitaria de Ourense, Verín y O Barco de Valdeorras:** Complejo Hospitalario Universitario de Ourense (**CHUO**).
-6. **Área Sanitaria de Pontevedra y O Salnés:** Complejo Hospitalario Universitario de Pontevedra (**CHOP** — Hospital Montecelo / Novo Montecelo).
-7. **Área Sanitaria de Ferrol:** Complejo Hospitalario Universitario de Ferrol (**CHUF** — Hospital Arquitecto Marcide).
-
-A esta flota de cirugía robótica de tejidos blandos (que supera las miles de intervenciones anuales en Urología, Cirugía General y Digestiva, Ginecología, Cirugía Torácica y Otorrinolaringología) se suman los sistemas robóticos de navegación ortopédica y neuroquirúrgica incorporados en los servicios de referencia del SERGAS.
-
-### 5.2. Trazabilidad en RUMED, Gestión en `XMAO` y Monitorización Remota
-
-1. **Circuito de Esterilización de Instrumentos Robóticos en RUMED:** Debido a su larguísimo lumen interno recorrido por microcables de tungsteno, los instrumentos robóticos reutilizables (*EndoWrist*) requieren en las Centrales de Esterilización (**RUMED**) del SERGAS conectores de irrigación a presión dedicados en las lavadoras-termodesinfectoras (`UNE-EN ISO 15883`), lavado ultrasónico de la muñeca distal, lubricación específica y ciclo de **autoclave de vapor con prevacío fraccionado a $134\text{ }^\circ\text{C}$** (`UNE-EN 285`), llevando el control estricto de los $10\text{–}18\text{ usos}$ por código UDI en el software de trazabilidad de esterilización y en **`LOGAS`**.
-2. **Mantenimiento Conectado y `XMAO`:** Los sistemas robóticos están dados de alta como equipamiento crítico de alta tecnología en **`XMAO`**, contando con telemetría diagnóstica segura encriptada que monitoriza la telemetría de pares de servomotores, horas de lámpara láser y logs de errores antes de que se produzca una parada intraoperatoria, y captura de vídeo 3D/2D integrada con **`IANUS`** y el **`PACS`** corporativo.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Subsistema Robótico | Norma / Parámetro Técnico Oficial | Valor / Cifra Exacta de Examen A1 | Implicación Clínica o de Ingeniería Biomédica |
 | :--- | :--- | :--- | :--- |
@@ -209,13 +162,13 @@ A esta flota de cirugía robótica de tejidos blandos (que supera las miles de i
 | **Centro Remoto de Movimiento (RCM)** | Punto de pivote en la cánula del trócar | **Traslación nula ($\Delta x = \Delta y = \Delta z = 0$) en la fascia abdominal** | Impide que el brazo ejerza palanca lateral y desgarre la pared abdominal |
 | **Filtrado digital de temblor fisiológico** | Banda de frecuencia eliminada | **Temblor humano de $\mathbf{6\text{ a }12\text{ Hz}}$** (filtro paso bajo) | Estabiliza la punta en microcirugía y suturas vasculares |
 | **Escalado de movimiento (*Motion Scaling*)** | Relaciones de desmultiplicación | **$1{,}5:1$, $2:1$, $\mathbf{3:1}$ o $\mathbf{5:1}$** + **Eliminación del Efecto Fulcro** | En $3:1$, mover $3\text{ cm}$ los dedos mueve solo $1\text{ cm}$ la punta en igual sentido |
-| **Frecuencia del lazo de servocontrol** | Enlace por fibra óptica Consola-Carro | **$\ge 1.000\text{–}1.300\text{ Hz}$** (latencia $< 10\text{ ms}$) | Software de seguridad **Clase C (`UNE-EN 62304`)** |
+| **Frecuencia del lazo de servocontrol** | Enlace por fibra óptica Consola-Carro | **$\ge 1.000\text{–}1.300\text{ Hz}$** (latencia $< 10\text{ ms}$) | Software de seguridad **Clase C** |
 | **Sensor de seguridad de la Consola Maestra** | Presencia de cabeza en el visor 3D | **Sensor Infrarrojo (*Head-in Sensor*)** | Bloquea instantáneamente los brazos si el cirujano aparta la vista del visor |
 | **Control de vida útil de instrumentos** | Memoria electrónica en carcasa | **Chip RFID / EEPROM ($\mathbf{10\text{ a }18\text{ usos}}$ máximos)** | Desactiva el instrumento al agotar los ciclos por fatiga de microcables |
 | **Robots ortopédicos semiautónomos (*Mako*)** | Principio de seguridad de corte óseo | **Seguimiento óptico IR + Restricción Háptica (*Active Constraint*)** | Frena el brazo y apaga la sierra si intenta salir del volumen planificado en TC |
-| **Despliegue de cirugía robótica en el SERGAS** | Cobertura hospitalaria gallega | **Los 7 Hospitales Universitarios de las 7 Áreas Sanitarias** | CHUAC, CHUS, CHUVI, HULA, CHUO, CHOP y CHUF |
+| **Despliegue de cirugía robótica en el ámbito hospitalario** | Cobertura hospitalaria gallega | **Los 7 Hospitales Universitarios de las 7 Áreas Sanitarias** | hospital universitario, hospital universitario, hospital universitario, hospital universitario, hospital universitario, CHOP y hospital universitario |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 
 1. **Trampa de test sobre la autonomía de los robots de tejidos blandos (*Da Vinci*, *Hugo*, *Versius*):** Si una pregunta sugiere que estos robots «ejecutan de forma autónoma la disección o la sutura programada previamente en el TC», es **totalmente FALSA**. Son sistemas **telemanipulados maestro-esclavo de Nivel 0 de autonomía**: cada milímetro que avanza la aguja o la tijera es ordenado en tiempo real por los dedos del cirujano en la consola maestra.
 2. **Trampa sobre el Centro Remoto de Movimiento (RCM) y la mesa quirúrgica:** El **RCM** debe quedar posicionado exactamente en el espesor de la pared muscular abdominal. Si la mesa quirúrgica se mueve o se pone en Trendelenburg **con los brazos del robot acoplados (*docked*)** y la mesa **NO** dispone de sistema de sincronización activa (*Integrated Table Motion* — ITM), los brazos robóticos mantendrán su RCM fijo en el espacio absoluto de la sala y desgarrarán la pared abdominal del paciente. Sin ITM, siempre hay que **desacoplar (*undock*) todos los brazos antes de mover la mesa quirúrgica**.

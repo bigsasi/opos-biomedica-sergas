@@ -1,27 +1,6 @@
 # Tema 12 — Caracterización y funcionamiento de los equipos de ultrasonido. Interacción de los ultrasonidos con el medio. Equipos y transductores. Usos diagnósticos y terapéuticos. Ecografía y artefactos.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #12 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 03 — Resonancia Magnética, Ultrasonidos, Radioterapia y Medicina Nuclear
-> - **Marco Normativo y Técnico Nuclear:** Reglamento (UE) 2017/745 (MDR, Clase IIa/IIb), Real Decreto 192/2023, Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulo Profesional 1588: *Sistemas de radiodiagnóstico, radioterapia e imagen médica*; Módulo Profesional 1591: *Sistemas de rehabilitación y pruebas funcionales*), UNE-EN 60601-2-37 (Equipos de diagnóstico y monitorización médica por ultrasonidos), UNE-EN 60601-2-5 (Equipos de fisioterapia por ultrasonidos), UNE-EN 60601-2-36 (Litotriptores extracorpóreos), UNE-EN 62359 (Determinación de índices térmicos TI y mecánicos MI) y Protocolos AAPM/AIUM/SEFM.
-> - **Sistemas y Entorno SERGAS:** Servicios de Radiodiagnóstico, Cardiología, Obstetricia y Ginecología, Urología, Digestivo, Rehabilitación, UCI/Urgencias (POCUS) y Atención Primaria de las 7 Áreas Sanitarias del SERGAS, integración `DICOM US` / `DICOM SR` con `SIHGA`/`RIS`, `PACS` corporativo, `IANUS` y gestión de sondas y ecógrafos en `XMAO`.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 12** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del SERGAS (DOG núm. 67, de 13 de abril de 2026) desarrolla de forma monográfica la física acústica de los ultrasonidos y los fenómenos de interacción con los tejidos biológicos (impedancia acústica, reflexión, refracción, dispersión y atenuación), la ingeniería de los transductores piezoeléctricos y capacitivos, la arquitectura electrónica del conformador de haz (*beamformer*) del ecógrafo, las modalidades de imagen (Modos A, B, M, Armónicos, CEUS, Doppler CW/PW/Color/Power y Elastografía), los usos terapéuticos (fisioterapia $1\text{–}3\text{ MHz}$, litotricia LEOC y ablación HIFU), los índices biofísicos de seguridad ($\text{MI}$ y $\text{TI}$), el catálogo de artefactos ecográficos y el control de calidad instrumental.
-
-- **Categorías con solapamiento en el SERGAS (`cruce_temarios_sergas.md`):** `Radiofísica Hospitalaria` | `TS Imagen para el Diagnóstico`
-- **Grado de solapamiento:**
-  - **Total (95%) en Radiofísica Hospitalaria:** Coincidencia literal de epígrafes, cubriendo naturaleza y propagación de los ultrasonidos en el medio, transductores, aplicaciones clínicas en diagnóstico y terapia, formación y tratamiento de imágenes, descripción general de equipos, efectos biológicos, seguridad y control de calidad.
-  - **Alto (80%) en TS Imagen para el Diagnóstico:** Cubre el equipamiento de ultrasonografía, bases y fundamentos físicos y modalidades ecográficas en 2D, 3D y 4D.
-- **Epígrafes equivalentes en otros temarios oficiales del SERGAS:**
-  - **Radiofísica Hospitalaria:** Tema 35 (*Fundamentos de ultrasonidos. Naturaleza de los ultrasonidos. Propagación. Transductores. Aplicaciones clínicas en diagnóstico y en terapia. Formación y tratamiento de imágenes. Descripción general de los equipos. Garantía y control de calidad. Efectos biológicos y seguridad*).
-  - **TS Imagen para el Diagnóstico:** Tema 9 (*Equipamientos de diagnóstico por imagen: radiología convencional intervencionista, tomografía computerizada, resonancia magnética y ultrasonografía... Ultrasonografía. Bases y fundamentos físicos. Ultrasonografía en 2, 3 y 4 dimensiones. Ventajas. Inconvenientes*).
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Naturaleza Física de los Ultrasonidos y Parámetros de Propagación en Tejidos Biológicos
 
 ### 1.1. Naturaleza Física de los Ultrasonidos y Parámetros de Propagación en Tejidos Biológicos
 A diferencia de los rayos X o de las ondas de radiofrecuencia de la resonancia magnética, el **ultrasonido NO es una radiación electromagnética**, sino una **onda mecánica longitudinal elástica de presión** (sucesión periódica de zonas de compresión o alta densidad molecular y zonas de rarefacción o baja presión donde las partículas del medio oscilan paralelamente a la dirección de propagación del haz) cuya frecuencia supera el límite superior de audición del oído humano (**$f > 20\text{ kHz}$**). Al ser una onda mecánica, **requiere obligatoriamente un medio material deformable para propagarse y no puede viajar en el vacío** (en el hueso compacto pueden propagarse adicionalmente ondas transversales o de cizalla).
@@ -74,7 +53,7 @@ Cuando un haz ultrasónico atraviesa los tejidos humanos, experimenta cuatro fen
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. El Transductor Ultrasónico y Cadena Electrónica del Ecógrafo y Tipos de Transductores Clínicos
 
 ### 2.1. El Transductor Ultrasónico: Efecto Piezoeléctrico, Estructura Multicapa y Geometría del Haz
 El transductor o sonda ecográfica es el elemento crítico que convierte energía eléctrica en energía mecánica acústica durante la emisión (**Efecto Piezoeléctrico Inverso**, descubierto por los hermanos Pierre y Jacques Curie en 1880 y aplicado por Lippmann) y convierte las débiles ondas de presión reflejadas en voltajes eléctricos durante la recepción (**Efecto Piezoeléctrico Directo**). En ecografía pulsada, la sonda emite un pulso de apenas $1\text{ }\mu\text{s}$ y permanece escuchando ecos durante $100\text{–}200\text{ }\mu\text{s}$ (**factor de trabajo o *Duty Factor* $< 0,1\%\text{ a }1\%$**, trabajando el **$> 99\%$ del tiempo como receptor**).
@@ -109,7 +88,7 @@ El bloque electrónico del ecógrafo consta de: **1) Conformador Digital del Haz
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Modos de Representación Ecográfica, Armónicos Tisulares (THI) y Contraste
 
 ### 3.1. Modos de Representación Ecográfica, Armónicos Tisulares (THI) y Contraste (CEUS)
 - **Modo A (*Amplitude*):** Representa en un eje la profundidad y en el vertical los picos de amplitud de los ecos a lo largo de una única línea (usado en **biometría y paquimetría ultrasónica oftálmica** de alta precisión).
@@ -134,16 +113,16 @@ El bloque electrónico del ecógrafo consta de: **1) Conformador Digital del Haz
    - **Elastografía de Deformación (*Strain Elastography*):** Cualitativa o semicuantitativa mediante compresión manual suave con la sonda.
    - **Elastografía por Ondas de Cizalla (*Shear-Wave Elastography* — 2D-SWE / pSWE-ARFI y Elastografía Transitoria *FibroScan*):** El transductor emite un pulso acústico de fuerza de radiación focalizada (**ARFI**) que induce en el tejido profundo **ondas transversales de cizalla (*shear waves*)** que se propagan lateralmente a baja velocidad ($c_s \approx 1\text{ a }10\text{ m/s}$). El ecógrafo mide a miles de fotogramas por segundo la velocidad de cizalla $c_s$ y calcula cuantitativamente el **Módulo de Elasticidad de Young ($E$, en kilopascales $\text{kPa}$)**:
      $$E \approx 3 \cdot \rho \cdot c_s^2$$
-     Constituye hoy el estándar no invasivo en los Servicios de Digestivo del SERGAS para el **estadiaje cuantitativo de la fibrosis hepática y cirrosis** (evitando biopsias hepáticas) y la diferenciación de nódulos mamarios y tiroideos.
+     Constituye hoy el estándar no invasivo en los Servicios de Digestivo del servicio de salud para el **estadiaje cuantitativo de la fibrosis hepática y cirrosis** (evitando biopsias hepáticas) y la diferenciación de nódulos mamarios y tiroideos.
 
-### 3.3. Usos Terapéuticos de los Ultrasonidos (`UNE-EN 60601-2-5`, `60601-2-36` y `HIFU`)
-1. **Ultrasonidos Terapéuticos en Rehabilitación y Fisioterapia (`UNE-EN 60601-2-5`, Módulo 1591):** Cabezales impermeables (IPX7) con Área de Radiación Efectiva (**ERA** de $1\text{ o }5\text{ cm}^2$) y Relación de No Uniformidad del Haz (**$\text{BNR} < 5\text{ a }6$** para evitar puntos calientes periósticos) operando a dos frecuencias seleccionables: **$1\text{ MHz}$** (lesiones profundas a $3\text{–}5\text{ cm}$) y **$3\text{ MHz}$** (lesiones tendinosas/cutáneas superficiales a $1\text{–}2\text{ cm}$). En **modo continuo** ($100\%$ ciclo de trabajo, potencia $0,5\text{–}3\text{ W/cm}^2$) predomina el **efecto térmico diatérmico** (aumento de extensibilidad del colágeno y vasodilatación); en **modo pulsado** (ciclo de trabajo $10\%\text{–}50\%$) predomina el **efecto mecánico atérmico** (micromasaje celular, cavitación estable y sonoforesis en fase aguda inflamatoria).
+### 3.3. Usos Terapéuticos de los Ultrasonidos
+1. **Ultrasonidos Terapéuticos en Rehabilitación y Fisioterapia:** Cabezales impermeables (IPX7) con Área de Radiación Efectiva (**ERA** de $1\text{ o }5\text{ cm}^2$) y Relación de No Uniformidad del Haz (**$\text{BNR} < 5\text{ a }6$** para evitar puntos calientes periósticos) operando a dos frecuencias seleccionables: **$1\text{ MHz}$** (lesiones profundas a $3\text{–}5\text{ cm}$) y **$3\text{ MHz}$** (lesiones tendinosas/cutáneas superficiales a $1\text{–}2\text{ cm}$). En **modo continuo** ($100\%$ ciclo de trabajo, potencia $0,5\text{–}3\text{ W/cm}^2$) predomina el **efecto térmico diatérmico** (aumento de extensibilidad del colágeno y vasodilatación); en **modo pulsado** (ciclo de trabajo $10\%\text{–}50\%$) predomina el **efecto mecánico atérmico** (micromasaje celular, cavitación estable y sonoforesis en fase aguda inflamatoria).
 2. **Litotricia Extracorpórea por Ondas de Choque (**`LEOC / ESWL`**, `UNE-EN 60601-2-36`):** Fragmentación no invasiva de cálculos renales y ureterales mediante **ondas de choque acústicas focalizadas de alta presión pico ($30\text{ a }100\text{ MPa}$)** con frente de subida de nanosegundos, generadas por un **generador electrohidráulico** (bujía submarina en semielipsoide), **electromagnético** (bobina + lente acústica) o **piezoeléctrico**, guiado por arco en C fluoroscópico y/o ecografía en línea y **sincronizado obligatoriamente con la onda R del ECG del paciente** (disparo en el período refractario ventricular para evitar extrasístoles o arritmias).
 3. **Ultrasonidos Focalizados de Alta Intensidad (`HIFU`):** Concentra haces ultrasónicos de alta potencia ($1.000\text{ a }10.000\text{ W/cm}^2$ en el foco) elevando la temperatura focal a **$65\text{–}85\text{ }^\circ\text{C}$ en $< 3\text{ s}$** para producir **necrosis coagulativa e implosión por cavitación inercial** (ablación prostática guiada por ecografía o ablación talámica/uterina guiada por RM).
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Catálogo de Artefactos Ecográficos
 
 ### 4.1. Catálogo de Artefactos Ecográficos: Causa Física y Utilidad Diagnóstica
 En ecografía, muchos artefactos se deben a violaciones de los supuestos de calibración del equipo (propagación rectilínea, haz infinitamente fino, velocidad constante $1.540\text{ m/s}$ y eco de rebote único) y poseen un altísimo valor semiológico:
@@ -167,24 +146,14 @@ En ecografía, muchos artefactos se deben a violaciones de los supuestos de cali
      *(Límite máximo regulatorio general FDA/IEC: **$\text{MI} \le 1,9$**; límite estricto en **ecografía oftálmica**: **$\text{MI} \le 0,23$**).*
 2. **Control de Calidad con Maniquí Tejido-Equivalente y Mantenimiento de Sondas (`SEFM / AAPM`):**
    - **Maniquí de Ultrasonidos (*Phantom* de hidrogel Zerdine o uretano con velocidad $1.540\text{ m/s}$ y atenuación $0,5\text{ o }0,7\text{ dB/(cm}\cdot\text{MHz)}$ e hilos de nailon y quistes/masas):** Verifica: 1) **Uniformidad de imagen y ausencia de caída de cristales (*Element Drop-out*)** (una línea vertical negra o hipoecogénica fija desde el borde superior del campo indica la **rotura de un cristal piezoeléctrico o de un hilo coaxial de la sonda**, verificable con el *Paperclip test* o test en aire), 2) **Zona Muerta (*Dead Zone* / *Ring-down*)**: distancia mínima desde la cara de la sonda al primer hilo distinguible (tolerancia **$\le 2\text{ a }5\text{ mm}$** según frecuencia), 3) **Exactitud de distancia vertical** (tolerancia **$\le \pm 1,5\%$** o $\pm 1,5\text{ mm}$) y **horizontal** (**$\le \pm 2\%$** o $\pm 2\text{ mm}$), 4) **Resolución axial y lateral**, y 5) **Profundidad máxima de penetración** (variación $< 1\text{ cm}$ respecto a referencia).
-   - **En equipos de Fisioterapia por Ultrasonidos (`UNE-EN 60601-2-5`):** La prueba de mantenimiento preventivo obligatoria se realiza sumergiendo el cabezal en agua desgasificada sobre una **Balanza de Fuerza de Radiación (Vatímetro Ultrasónico)** ($1\text{ W} \approx 69\text{ mg-fuerza}$ a $1.500\text{ m/s}$), verificando que la potencia acústica emitida esté dentro de **$\pm 20\%$** del valor indicado.
-   - **Higiene, Desinfección y Averías Críticas de Transductores:** Las sondas de superficie requieren limpieza y desinfección de bajo/medio nivel con toallitas **libres de alcohol etílico/isopropílico concentrado y libres de glutaraldehído si no están homologados** (el alcohol reseca y agrieta la lente de silicona RTV provocando corrientes de fuga eléctricas). Las **sondas endocavitarias (vaginales/rectales) y transesofágicas (ETE)** son productos semicríticos que exigen **Desinfección de Alto Nivel (DAN)** (sistemas automatizados de peróxido de hidrógeno nebulizado *Trophon*, ácido peracético u ortoftalaldehído OPA) y, en el caso de las **sondas ETE, test obligatorio de corriente de fuga eléctrica del vástago en cubeta conductora antes de cada paciente (`UNE-EN 62353`)** para descartar perforación de la funda por mordedura.
+   - **En equipos de Fisioterapia por Ultrasonidos:** La prueba de mantenimiento preventivo obligatoria se realiza sumergiendo el cabezal en agua desgasificada sobre una **Balanza de Fuerza de Radiación (Vatímetro Ultrasónico)** ($1\text{ W} \approx 69\text{ mg-fuerza}$ a $1.500\text{ m/s}$), verificando que la potencia acústica emitida esté dentro de **$\pm 20\%$** del valor indicado.
+   - **Higiene, Desinfección y Averías Críticas de Transductores:** Las sondas de superficie requieren limpieza y desinfección de bajo/medio nivel con toallitas **libres de alcohol etílico/isopropílico concentrado y libres de glutaraldehído si no están homologados** (el alcohol reseca y agrieta la lente de silicona RTV provocando corrientes de fuga eléctricas). Las **sondas endocavitarias (vaginales/rectales) y transesofágicas (ETE)** son productos semicríticos que exigen **Desinfección de Alto Nivel (DAN)** (sistemas automatizados de peróxido de hidrógeno nebulizado *Trophon*, ácido peracético u ortoftalaldehído OPA) y, en el caso de las **sondas ETE, test obligatorio de corriente de fuga eléctrica del vástago en cubeta conductora antes de cada paciente** para descartar perforación de la funda por mordedura.
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Despliegue de Ecografía en las 7 Áreas Sanitarias del SERGAS (Radiodiagnóstico, Especialidades y Atención Primaria)
-En el **Servicio Gallego de Salud (SERGAS)**, los equipos de ultrasonido conforman la flota más numerosa de diagnóstico por imagen, estructurada en tres niveles asistenciales gestionados en **`XMAO`**: **1) Ecógrafos de Gama Alta Radiológicos, Cardiológicos (4D/ETE) y Obstétrico-Ginecológicos** con elastografía *Shear-Wave*, fusión multimodal en tiempo real con TC/RM para biopsia/ablación hepática o prostática y CEUS en los hospitales de las 7 Áreas Sanitarias; **2) Ecógrafos de Punto de Atención (*Point-of-Care Ultrasound* — POCUS)** robustos en carros compactos y sondas inalámbricas en Servicios de Urgencias, UCI, Anestesiología y Reanimación (accesos vasculares y bloqueos nerviosos locorregionales); y **3) Ecógrafos Clínicos en los Centros de Salud de Atención Primaria del SERGAS**, todos ellos integrados por red (Ethernet o Wi-Fi corporativa segura) con **`SIHGA`/`RIS`** (`DICOM MWL`) y con el **`PACS` corporativo centralizado** (`DICOM US Image Storage` y `DICOM US Multi-frame Storage`), quedando las imágenes y mediciones estructuradas (`DICOM SR`) accesibles en **`IANUS`**.
-
-### 5.2. Gestión de Sondas Ecográficas y Contratos de Mantenimiento en `XMAO`
-Dado que los transductores ecográficos representan entre el **$35\%\text{ y el }50\%$ del valor económico total del ecógrafo** y son el componente con mayor tasa de siniestralidad accidental en el hospital (caídas del cabezal que fracturan cristales PZT, aplastamiento del cable multicoaxial de $128\text{–}256\text{ microhilos}$ por las ruedas del carro, despegamiento de la lente acústica de silicona o mordeduras en sondas ETE), los Servicios de Electromedicina/Ingeniería Biomédica del SERGAS registran individualmente cada sonda por su número de serie como subactivo vinculado en **`XMAO`**, realizando inspecciones preventivas de integridad de lente, *strain relief* del conector, test de caída de cristales (*drop-out*) y seguridad eléctrica (`UNE-EN 62353`), y aplicando técnicas certificadas de reparación de lente/envuelta o sustitución bajo cobertura todo-riesgo.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Magnitud / Parámetro | Valor Exacto / Fórmula / Norma | Punto Crítico para Examen A1 SERGAS |
 | :--- | :--- | :--- |
@@ -198,7 +167,7 @@ Dado que los transductores ecográficos representan entre el **$35\%\text{ y el 
 | **Índices de Seguridad ($\text{MI}$ y $\text{TI}$)** | $\text{MI} = \frac{P_{r.3}}{\sqrt{f_0}} \le \mathbf{1,9}$ ($\le \mathbf{0,23}$ en ojo)<br>$\text{TI} = W_p/W_{\text{deg}}$ (TIS, TIB, TIC) | `UNE-EN 60601-2-37` y `UNE-EN 62359`: **MI mide riesgo de cavitación inercial**; **TI mide calentamiento térmico** |
 | **Tolerancias QC Ecógrafo y Fisioterapia US** | Calibres: vertical **$\le \pm 1,5\%$**, horizontal **$\le \pm 2\%$**<br>Fisioterapia (`60601-2-5`): **$1\text{ y }3\text{ MHz}$**, potencia **$\pm 20\%$** | Fisioterapia US se verifica con **balanza de fuerza de radiación (vatímetro ultrasónico)** en agua desgasificada |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa clásica de física acústica sobre la velocidad del sonido y la densidad:** Aunque en la fórmula $c = \sqrt{K/\rho}$ la densidad $\rho$ está en el denominador, **en el hueso ($4.080\text{ m/s}$) el ultrasonido viaja casi tres veces más rápido que en el tejido blando ($1.540\text{ m/s}$) y doce veces más rápido que en el aire ($330\text{ m/s}$)** porque el módulo de rigidez $K$ del sólido crece órdenes de magnitud más que su densidad.
 2. **¿Cómo afecta una lesión con velocidad acústica real distinta de $1.540\text{ m/s}$ a la posición aparente de las estructuras posteriores?** Como el ecógrafo calcula la profundidad siempre con $d = 1.540 \cdot t / 2$:
    - Si el ultrasonido atraviesa una masa grasa o lipoma donde viaja **más despacio ($1.450\text{ m/s} < 1.540\text{ m/s}$)**, el eco tarda **más tiempo** en regresar y el ecógrafo dibuja el diafragma o borde posterior **más profundo (más lejos de la sonda) de lo que realmente está**.

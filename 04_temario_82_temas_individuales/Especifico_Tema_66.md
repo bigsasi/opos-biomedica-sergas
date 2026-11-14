@@ -1,30 +1,5 @@
 # Tema 66 — Planes directores de hospitales. Metodología y etapas.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #66 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 08 — Ingeniería Hospitalaria, REBT, Ambiente Controlado, Planes Directores, Calidad, CAD y Sostenibilidad
-> - **Marco Normativo y Técnico Nuclear:** Ley 38/1999 de Ordenación de la Edificación (`LOE`); Ley 9/2017 de Contratos del Sector Público (`LCSP`, Contrato de Obras y Proyecto); Real Decreto 314/2006 (Código Técnico de la Edificación `CTE`); Real Decreto 1627/1997 (Seguridad y Salud en las Obras de Construcción); Norma `UNE 171340:2020` y Guías del Ministerio de Sanidad / SEMSP de Prevención y Control de la Infección Nosocomial Fúngica (*Aspergillus*) en Obras Hospitalarias; `ASHRAE Guideline 0` (*The Commissioning Process*); Módulo 1593 (RD 838/2015 y Orden EFP/1216/2019).
-> - **Sistemas y Entorno SERGAS:** Subdirección General de Inversiones del SERGAS, Agencia Gallega de Infraestructuras (`AXI`), Servicios de Ingeniería, Obras, Medicina Preventiva e Ingeniería Biomédica de las 7 Áreas Sanitarias; Planes Directores del *Novo CHUAC* (A Coruña), *Gran Montecelo* (Pontevedra), *CHUF* (Ferrol), *CHUO* (Ourense) y ampliación del *CHUS* (Santiago).
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 66** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** aborda el instrumento maestro de la ingeniería y arquitectura sanitaria para transformar, ampliar y modernizar complejos hospitalarios a medio y largo plazo: los **Planes Directores de Hospitales**, su **metodología** y el desarrollo secuencial de sus **etapas**. Su dominio exige comprender:
-1. **Concepto, naturaleza y alcance de un Plan Director (*Master Plan*)**: Su horizonte plurianual ($5\text{ a }15\text{ años}$), las causas de obsolescencia hospitalaria y el imperativo técnico de reformar un complejo hospitalario en pleno funcionamiento manteniendo el $100\%$ de su continuidad asistencial.
-2. **Metodología general y las 6 Etapas canónicas del Plan Director**: Desde el diagnóstico integral de partida (físico, funcional, de centrales energéticas y del parque biomédico) y el modelo asistencial horizonte, hasta la ordenación urbanística/arquitectónica y la tipología edilicia.
-3. **Ingeniería de Fases Constructivas («Efecto Dominó») y Bioseguridad en Obras Hospitalarias**: Creación de *espacios pulmón*, secuencia de traslados internos y protocolos estrictos de aislamiento y depresión ambiental frente a esporas de *Aspergillus spp.* durante las demoliciones y reformas.
-4. **Programación económico-financiera, sincronización del montaje de equipamiento (Grupos I, II y III), Comisionado Técnico (*Commissioning*) y Evaluación Post-Ocupacional (`POE`)**.
-
-### 0.2. Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías equivalentes con solapamiento:** **Ingeniero/a Técnico/a** (Subgrupo A2).
-- **Grado de solapamiento:** **Total (100%)** — Coincidencia prácticamente literal entre ambos programas oficiales del SERGAS.
-- **Epígrafes equivalentes verificados:**
-  - **Ingeniero/a Técnico/a:** *Tema 72. Planes directores de hospitales. Metodología. Etapas del plan director.*
-  - **Foco de tribunal en Subgrupo A1:** Se pregunta de forma recurrente el **orden exacto y contenido de las 6 etapas del Plan Director**, la gestión de la **Etapa 4 («Efecto Dominó» y prevención de aspergilosis invasiva en obras hospitalarias)** y la coordinación de las ventanas constructivas para la entrada y *commissioning* de equipos pesados de Alta Tecnología.
-
----
-
 ## 📖 1. Concepto, Naturaleza y Fundamentos de los Planes Directores de Hospitales
 
 ### 1.1. Definición de Plan Director Hospitalario (*Hospital Master Plan*) y Premisa de Continuidad Asistencial
@@ -36,8 +11,8 @@ Mientras que un edificio administrativo, escolar o comercial puede cerrarse temp
 La necesidad de formular un nuevo Plan Director en un hospital (que suele presentar un ciclo de grandes reformas cada $20\text{–}30\text{ años}$, mientras su estructura portante de hormigón supera los $50\text{–}75\text{ años}$) responde a la confluencia de **cuatro vectores de obsolescencia**:
 1. **Obsolescencia Funcional y de Modelo Asistencial:** Los hospitales construidos en los años 1970 y 1980 se concibieron como grandes torres de hospitalización con habitaciones de $3\text{ o }4\text{ camas}$ sin baño adaptado y bloques ambulatorios minúsculos. La medicina actual exige el cambio radical hacia la **ambulatorización**, la **Cirugía Mayor Ambulatoria (`CMA`)**, los **Hospitales de Día**, las **consultas de alta resolución**, las habitaciones individuales y el crecimiento exponencial de las unidades de críticos y urgencias.
 2. **Obsolescencia Tecnológica y Espacial de las Salas Biomédicas:** La incorporación de equipamiento de **Alta Tecnología (Grupo III)** —como quirófanos híbridos con angiógrafo robotizado, sistemas de cirugía robótica, imanes de Resonancia Magnética de $3\text{ T}$, equipos híbridos `PET-TC` / `PET-RM`, laboratorios robotizados de cadena total (`TLA`) o aceleradores lineales con imagen guiada— exige superficies libres de sala de $45\text{ a }75\text{ m}^2$, alturas entre forjados $\ge 4,20\text{–}4,50\text{ m}$ y sobrecargas estructurales que los forjados antiguos de $2,80\text{–}3,00\text{ m}$ de altura y $250\text{ kg/m}^2$ no pueden soportar.
-3. **Obsolescencia de las Instalaciones Industriales y de Seguridad Reglamentaria:** Agotamiento de la capacidad de los centros de transformación eléctrica, centrales térmicas y frigoríficas, redes de gases medicinales (`UNE-EN ISO 7396-1`), climatización higiénica (`UNE 100713`), e incumplimiento sobrevenido de las exigencias actuales del **Código Técnico de la Edificación (`CTE DB-SI` de sectorización contra incendios, `DB-SUA` de accesibilidad y `DB-HE` de eficiencia energética)** y del **`REBT ITC-BT-38`**.
-4. **Obsolescencia Física y Constructiva:** Degradación de envolventes térmicas, cubiertas, redes de saneamiento y carpinterías, o presencia de materiales obsoletos en edificaciones antiguas que requieren desamiantado reglamentario (`RD 396/2006`) bajo planes específicos antes de su demolición.
+3. **Obsolescencia de las Instalaciones Industriales y de Seguridad Reglamentaria:** Agotamiento de la capacidad de los centros de transformación eléctrica, centrales térmicas y frigoríficas, redes de gases medicinales (`UNE-EN ISO 7396-1`), climatización higiénica, e incumplimiento sobrevenido de las exigencias actuales del **Código Técnico de la Edificación (`CTE DB-SI` de sectorización contra incendios, `DB-SUA` de accesibilidad y `DB-HE` de eficiencia energética)** y del **`REBT ITC-BT-38`**.
+4. **Obsolescencia Física y Constructiva:** Degradación de envolventes térmicas, cubiertas, redes de saneamiento y carpinterías, o presencia de materiales obsoletos en edificaciones antiguas que requieren desamiantado reglamentario bajo planes específicos antes de su demolición.
 
 ### 1.3. Diferenciación Jerárquica y Documental entre los Instrumentos de Planificación Sanitaria
 
@@ -67,7 +42,7 @@ Antes de trazar una sola línea de ampliación, el equipo redactor multidiscipli
    - **Suministro eléctrico:** Acometidas de Media Tensión ($20\text{ kV}$), centros de transformación (`CT`), grupos electrógenos de emergencia, sistemas `SAI/UPS` y cuadros generales de baja tensión (`REBT ITC-BT-28` e `ITC-BT-38`).
    - **Producción térmica y frigorífica:** Calderas de vapor y agua caliente, plantas enfriadoras de agua (*chillers*), torres de refrigeración y Unidades de Tratamiento de Aire (`UTA`).
    - **Gases medicinales y agua:** Centrales de oxígeno líquido (tanques criogénicos), vacío clínico, aire medicinal/motor (`UNE-EN ISO 7396-1`), aljibes de agua potable y plantas de tratamiento de agua.
-4. **Diagnóstico de la Base Instalada de Equipamiento Biomédico (`XMAO` y Perfil `FENIN/COCIR`):**
+4. **Diagnóstico de la Base Instalada de Equipamiento Biomédico (`GMAO` y Perfil `FENIN/COCIR`):**
    Inventario valorado del equipamiento de **Grupos II y III**, determinando qué equipos de alta tecnología (RM, TC, salas de hemodinámica, aceleradores lineales, autoclaves, cadenas de laboratorio) se encuentran próximos a la obsolescencia ($> 8\text{–}10\text{ años}$) para sincronizar su renovación con su reubicación espacial en las nuevas fases del Plan Director, y cuáles son relativamente nuevos y deberán trasladarse o respetarse durante las obras.
 
 ### 2.2. Etapa 2 — Definición del Modelo Asistencial Futuro y Programa Funcional Horizonte
@@ -123,14 +98,14 @@ Por ello, en la **Etapa 4 de todo Plan Director**, la Dirección de Obra, el Ser
 3. **Esclusas de Acceso de Operarios y Evacuación de Escombros:**
    Doble puerta enclavada con **alfombras adhesivas descontaminantes (*tacky mats*)** en el suelo para retener el polvo del calzado de los operarios, aspiración con filtro HEPA del vestuario de trabajo, humectación previa de paramentos antes de demoler y salida de escombros en **contenedores herméticamente cerrados y cubiertos** (o por bajantes exteriores sellados) en horarios de mínima actividad clínica.
 4. **Protección del Sistema de Climatización (`HVAC`) y de las Unidades de Alto Riesgo:**
-   Sellado hermético de todas las rejillas de retorno de aire de climatización situadas dentro de la zona de obra (para evitar que la red de conductos aspire polvo con *Aspergillus* y lo disemine a otras plantas), sellado de ventanas de unidades clínicas próximas a excavaciones exteriores, refuerzo de la sobrepresión positiva ($+15\text{ a }+20\text{ Pa}$) en quirófanos, UCI y unidades de hematología/aislamiento protector, y **muestreo microbiológico ambiental volumétrico seriado** (placas de agar Sabouraud buscando **$0\text{ UFC/m}^3$ de hongos filamentosos en zonas Clase I**) antes del inicio de la obra (nivel basal), diariamente/semanalmente durante las demoliciones y en la **validación terminal (`UNE 171340`)** tras limpieza profunda antes de reabrir la zona al uso asistencial.
+   Sellado hermético de todas las rejillas de retorno de aire de climatización situadas dentro de la zona de obra (para evitar que la red de conductos aspire polvo con *Aspergillus* y lo disemine a otras plantas), sellado de ventanas de unidades clínicas próximas a excavaciones exteriores, refuerzo de la sobrepresión positiva ($+15\text{ a }+20\text{ Pa}$) en quirófanos, UCI y unidades de hematología/aislamiento protector, y **muestreo microbiológico ambiental volumétrico seriado** (placas de agar Sabouraud buscando **$0\text{ UFC/m}^3$ de hongos filamentosos en zonas Clase I**) antes del inicio de la obra (nivel basal), diariamente/semanalmente durante las demoliciones y en la **validación terminal** tras limpieza profunda antes de reabrir la zona al uso asistencial.
 
 ---
 
 ## 🛡️ 4. Etapas 5 y 6 del Plan Director: Plan Económico-Financiero, Equipamiento, Comisionado Técnico (*Commissioning*) y Evaluación Post-Ocupacional (`POE`)
 
 ### 4.1. Etapa 5 — Programación Económico-Financiera Plurianual y Sincronización del Plan de Equipamiento
-La **Etapa 5** traduce el Plan Director arquitectónico y de fases en un **Plan Económico-Financiero Plurianual de Inversiones** (Capítulo VI de los Presupuestos de la Comunidad Autónoma) y en el **Plan Director de Equipamiento y Alta Tecnología**:
+La **Etapa 5** traduce el Plan Director arquitectónico y de fases en un **Plan Económico-Financiero Plurianual de Inversiones** y en el **Plan Director de Equipamiento y Alta Tecnología**:
 1. **Valoración Económica Integral por Fases y Anualidades:**
    Desglosa para cada Fase ($0, 1, 2, \dots, N$) y para cada ejercicio presupuestario los costes de:
    - Honorarios de redacción de proyectos, estudios geotécnicos, dirección facultativa de obra y coordinación de seguridad y salud.
@@ -145,61 +120,35 @@ La **Etapa 5** traduce el Plan Director arquitectónico y de fases en un **Plan 
 ### 4.2. Etapa 6 — Licitación, Dirección de Obra, Comisionado Técnico (*Commissioning*), Traslado y Evaluación Post-Ocupacional (`POE`)
 La **Etapa 6** culmina el ciclo de cada fase del Plan Director mediante cuatro procesos de ingeniería y gestión:
 1. **Licitación y Ejecución con Control de Calidad de Obra y Preinstalaciones Biomédicas:**
-   Redacción y supervisión de los Proyectos Básicos y de Ejecución, licitación de las obras (`Ley 9/2017 LCSP`), control de ejecución mediante metodología **`BIM` (`LOD 300` $\rightarrow$ `LOD 500 As-Built`)** e inspecciones conjuntas (*Site Readiness*) entre la Dirección Facultativa, la Unidad de Ingeniería Biomédica y los ingenieros de preinstalación de los fabricantes de equipamiento médico.
+   Redacción y supervisión de los Proyectos Básicos y de Ejecución, licitación de las obras, control de ejecución mediante metodología **`BIM` (`LOD 300` $\rightarrow$ `LOD 500 As-Built`)** e inspecciones conjuntas (*Site Readiness*) entre la Dirección Facultativa, la Unidad de Ingeniería Biomédica y los ingenieros de preinstalación de los fabricantes de equipamiento médico.
 2. **Comisionado Técnico de Instalaciones e Infraestructuras Críticas (*Technical Commissioning* — `ASHRAE Guideline 0` y `UNE 171340`):**
    Entre el acto formal de recepción de la obra civil y la entrada del primer paciente se abre un período indispensable de **$2\text{ a }4\text{ meses}$ de Comisionado, Montaje, Cualificación y Pruebas en Vacío**:
    - Equilibrado aeráulico e hidráulico de las instalaciones de climatización, verificación de las 3 etapas de filtración (`F5/F6 + F9 + HEPA H13/H14`), cascadas de sobrepresión/depresión y **Cualificación Operacional (`OQ`) y de Funcionamiento (`PQ`) bioambiental y de partículas (`ISO 14644-1` y `UNE 171340`)** de todos los quirófanos, UCI, salas blancas de farmacia y aislamientos.
    - Verificación e inspección inicial por **Organismo de Control Autorizado (`OCA`)** de los centros de transformación, grupos electrógenos, alumbrado de emergencia y quirófanos (`REBT ITC-BT-05`, `ITC-BT-28` e `ITC-BT-38`), incluyendo pruebas reales de **cero energético (*Blackout Test*)** desconectando el interruptor de acometida general de compañía para comprobar el arranque automático de los grupos electrógenos en $< 15\text{ s}$ y la continuidad sin corte ($< 0,5\text{ s}$) de los SAIs y baterías de quirófanos.
-   - Purgado, prueba de presión, análisis físico-químico/microbiológico de pureza e identidad de gases medicinales en el $100\%$ de las tomas murales y de columnas (`UNE-EN ISO 7396-1`) y cualificación del anillo de agua ultrapura de hemodiálisis (`ISO 23500`).
-   - Instalación, pruebas de aceptación (*Acceptance Testing*), ensayos de seguridad eléctrica (`UNE-EN 62353`), pruebas de estado de referencia radiofísico (`RD 1976/1999`), integración `DICOM`/`HL7` con `IANUS`/`PACS` y alta en el inventario del **`XMAO`** de todo el equipamiento biomédico.
+   - Purgado, prueba de presión, análisis físico-químico/microbiológico de pureza e identidad de gases medicinales en el $100\%$ de las tomas murales y de columnas (`UNE-EN ISO 7396-1`) y cualificación del anillo de agua ultrapura de hemodiálisis.
+   - Instalación, pruebas de aceptación (*Acceptance Testing*), ensayos de seguridad eléctrica, pruebas de estado de referencia radiofísico, integración `DICOM`/`HL7` con `HCE`/`PACS` y alta en el inventario del **`GMAO`** de todo el equipamiento biomédico.
 3. **Plan Logístico de Traslado Clínico y Simulacros en Vacío (*Dry Runs*):**
    Formación *in situ* del personal en las nuevas instalaciones, realización de simulacros cronometrados con actores/maniquíes (ej. traslado de un politraumatizado desde la nueva puerta de Urgencias hasta el TC y el nuevo quirófano) y ejecución escalonada del traslado: primero se trasladan las áreas administrativas, consultas externas y laboratorios programados; a continuación, las plantas de hospitalización; y **en último lugar (generalmente en fin de semana con actividad quirúrgica programada suspendida y equipos médicos, de enfermería y de ingeniería biomédica duplicados tanto en el edificio antiguo como en el nuevo)**, se ejecuta el traslado de **UCI, Reanimación, Bloque Obstétrico y Urgencias**.
 4. **Evaluación Post-Ocupacional (`POE` — *Post-Occupancy Evaluation*):**
-   Transcurridos **$6\text{ a }12\text{ meses}$** desde la puesta en marcha completa del nuevo edificio o fase, se realiza una auditoría técnica, funcional y de satisfacción de usuarios (`POE`) que contrasta el comportamiento real del hospital (consumos energéticos reales frente a simulados, flujos de pacientes, tiempos de recorrido, ergonomía de puestos clínicos y fiabilidad de instalaciones en el `XMAO`) frente a las previsiones del Plan Funcional y del Plan Director, corrigiendo desviaciones y retroalimentando el diseño de las fases siguientes.
+   Transcurridos **$6\text{ a }12\text{ meses}$** desde la puesta en marcha completa del nuevo edificio o fase, se realiza una auditoría técnica, funcional y de satisfacción de usuarios (`POE`) que contrasta el comportamiento real del hospital (consumos energéticos reales frente a simulados, flujos de pacientes, tiempos de recorrido, ergonomía de puestos clínicos y fiabilidad de instalaciones en el `GMAO`) frente a las previsiones del Plan Funcional y del Plan Director, corrigiendo desviaciones y retroalimentando el diseño de las fases siguientes.
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Tabla Resumen de las 6 Etapas Metodológicas de un Plan Director y Casuística en el SERGAS
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-| Etapa del Plan Director | Denominación Oficial de la Etapa | Entregables y Actuaciones Técnicas Nucleares | Hito Específico de Ingeniería Biomédica y Hospitalaria |
-| :--- | :--- | :--- | :--- |
-| **Etapa 1** | **Análisis y Diagnóstico de la Situación Actual** | Auditoría demográfica/asistencial, levantamiento planimétrico CAD/BIM, auditoría de estructura/CTE, **auditoría de centrales industriales y base instalada biomédica**. | Mapa de obsolescencia del parque tecnológico (`XMAO` / regla `60/30/10 COCIR`) y capacidad remanente de acometidas eléctricas/térmicas/gases. |
-| **Etapa 2** | **Definición del Modelo Asistencial y Plan Funcional Futuro** | Cartera de servicios horizonte, proyecciones de demanda a $10\text{–}15\text{ años}$, programa de necesidades y **balance de superficies ($\Delta S = S_{\text{futura}} - S_{\text{actual}}$)**. | Dimensionamiento del número futuro de quirófanos, boxes de UCI, salas de TC, RM, angiógrafos, LINAC y puestos de diálisis. |
-| **Etapa 3** | **Zonificación y Ordenación General Arquitectónica (*Master Plan*)** | Ordenación urbanística de parcela, elección de **tipología edilicia** (peine, basamento-torre), matriz de flujos, malla estructural ($7,20\text{–}7,50\text{ m}$) y reserva de ***espacios pulmón***. | Ubicación en cota de cimentación de búnkeres pesados (Radioterapia/Medicina Nuclear/RM) y conexión vertical Críticos-Imagen-Urgencias. |
-| **Etapa 4** | **Planificación de Fases de Ejecución y Gestión de Traslados («Efecto Dominó»)** | Secuencia constructiva (**Fase 0 Centrales + Edificio Pulmón $\rightarrow$ Traslado 1 $\rightarrow$ Reforma Zona A $\rightarrow$ Fase 2...**) sin detener el hospital. | **Protocolo de Bioseguridad Ambiental frente a *Aspergillus***: sellado de suelo a forjado + **obra en depresión ($-5\text{ a }-15\text{ Pa}$) con extractores `HEPA H13/H14`**. |
-| **Etapa 5** | **Plan de Equipamiento / Alta Tecnología y Plan Económico-Financiero** | Presupuesto plurianual de inversión por fases y anualidades (Obra + **Grupos I, II y III**) y cronograma integrado `PERT/Gantt`. | Sincronización de plazos `LCSP` de licitación de Alta Tecnología con las ventanas de preinstalación y cierre de fachadas en obra. |
-| **Etapa 6** | **Licitación, Dirección de Obra, *Commissioning*, Puesta en Marcha y `POE`** | Proyectos de ejecución, dirección de obra BIM, **Comisionado Técnico (`ASHRAE` / `UNE 171340`)**, traslado clínico escalonado y **Evaluación Post-Ocupacional (`POE`)**. | Pruebas de *Blackout*, validación de quirófanos, aceptación de equipos (`UNE-EN 62353`), volcado de planos *As-Built* (`BIM 7D`) al `XMAO`. |
+| Concepto / Parámetro de Examen | Cifra / Regla de Oro de Examen A1 |
+| :--- | :--- |
+| **Horizonte temporal de un Plan Director** | Medio y largo plazo: **$5\text{ a }15\text{ años}$** (premisa absoluta: **no interrumpir la actividad asistencial**). |
+| **Número y Orden de las Etapas del Plan Director** | **6 Etapas**: 1. Diagnóstico actual $\rightarrow$ 2. Modelo/Plan Funcional futuro $\rightarrow$ 3. Ordenación general (*Master Plan*) $\rightarrow$ 4. Fases y traslados («Efecto Dominó») $\rightarrow$ 5. Plan Equipamiento y Financiero $\rightarrow$ 6. Proyectos, Obra, *Commissioning* y `POE`. |
+| **Malla estructural y altura libre recomendadas** | Retícula modular de **$7,20 \times 7,20\text{ m}$ a $7,80 \times 7,80\text{ m}$**; altura entre forjados **$\ge 4,20\text{–}4,50\text{ m}$**. |
+| **Agente patógeno crítico en obras hospitalarias** | Esporas de hongos filamentosos del género ***Aspergillus spp.* (*A. fumigatus*)** $\rightarrow$ Aspergilosis Pulmonar Invasiva. |
+| **Presión diferencial en el recinto de obra interior** | **DEPRESIÓN (Presión Negativa $\le -5\text{ a }-15\text{ Pa}$)** respecto al hospital activo, mediante extractores con filtro **`HEPA H13/H14`**. |
+| **Ejecución de tabiques de aislamiento de obra** | Sellado hermético **de suelo estructural a forjado superior** (prohibido detener el tabique en el falso techo). |
+| **Evaluación Post-Ocupacional (`POE`)** | Auditoría técnica, energética y funcional realizada a los **$6\text{ a }12\text{ meses}$** tras la apertura. |
 
-### 5.2. Los Grandes Planes Directores Hospitalarios Ejecutados y en Curso en el SERGAS
-El Servicio Gallego de Salud cuenta con una de las carteras de **Planes Directores de modernización hospitalaria sobre hospitales en funcionamiento** más ambiciosas de Europa, ejecutada en colaboración entre la Subdirección General de Inversiones del SERGAS y la Agencia Gallega de Infraestructuras (`AXI`):
-1. **Plan Director del Complejo Hospitalario Universitario de A Coruña (`Novo CHUAC`):**
-   Diseñado por fases para duplicar la superficie del complejo hasta superar los $255.000\text{ m}^2$ sin detener la actividad del hospital de referencia del área coruñesa: incluye una **Fase 0** (adecuación en el Hospital Abente y Lago y nuevas áreas en el edificio central), construcción de la **Torre Polivalente** como edificio pulmón y gestión de accesos viarios en anillo, seguida de la construcción de los nuevos bloques clínico-quirúrgicos y de hospitalización y la posterior remodelación del edificio histórico.
-2. **Plan Director del Complejo Hospitalario Universitario de Pontevedra (`Hospital Público Gran Montecelo`):**
-   Ejemplo canónico de Plan Director en dos grandes fases secuenciales: **Fase 1** de construcción de un gran edificio de nueva planta anexo al actual Hospital Montecelo (dotado de un nuevo bloque quirúrgico, nueva UCI, urgencias, hospitalización individual y los nuevos búnkeres de Radioterapia y Medicina Nuclear), que actúa como receptor del traslado para permitir en la **Fase 2** la reforma integral y reconversión del edificio antiguo de Montecelo sin interrumpir la asistencia sanitaria y permitiendo unificar los recursos antes dispersos con el Hospital Provincial.
-3. **Plan Director del Complejo Hospitalario Universitario de Ferrol (`Plan Director CHUF`):**
-   Estructurado en **Fase 0** (renovación de centrales térmicas/energéticas y lavandería), **Fase 1** (construcción de dos nuevos edificios en el Hospital Arquitecto Marcide para Urgencias, UCI, Hospitalización, Radiodiagnóstico, Hemodiálisis y Farmacia) y fases sucesivas de remodelación de los edificios existentes en el Marcide y el Hospital Naval.
-4. **Plan Director del Complejo Hospitalario Universitario de Ourense (`CHUO`) y Ampliación del `CHUS` (Santiago de Compostela):**
-   Transformación mediante el nuevo edificio de hospitalización e innovación (`Hospital 2050`) y reforma del materno-infantil y bloque técnico en el `CHUO`, así como el Plan Director de ampliación de más de $30.000\text{ m}^2$ del Hospital Clínico Universitario de Santiago (`CHUS`) y la construcción anexa del **Centro de Protonterapia de Galicia**.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave del Plan Director
-
-| Concepto / Parámetro de Examen | Referencia Técnica / Normativa | Cifra / Regla de Oro de Examen A1 |
-| :--- | :--- | :--- |
-| **Horizonte temporal de un Plan Director** | Metodología Ingeniería Hospitalaria | Medio y largo plazo: **$5\text{ a }15\text{ años}$** (premisa absoluta: **no interrumpir la actividad asistencial**). |
-| **Número y Orden de las Etapas del Plan Director** | Epígrafe Oficial Tema 66 (A1) / Tema 72 (A2) | **6 Etapas**: 1. Diagnóstico actual $\rightarrow$ 2. Modelo/Plan Funcional futuro $\rightarrow$ 3. Ordenación general (*Master Plan*) $\rightarrow$ 4. Fases y traslados («Efecto Dominó») $\rightarrow$ 5. Plan Equipamiento y Financiero $\rightarrow$ 6. Proyectos, Obra, *Commissioning* y `POE`. |
-| **Malla estructural y altura libre recomendadas** | Diseño Arquitectónico Hospitalario | Retícula modular de **$7,20 \times 7,20\text{ m}$ a $7,80 \times 7,80\text{ m}$**; altura entre forjados **$\ge 4,20\text{–}4,50\text{ m}$**. |
-| **Agente patógeno crítico en obras hospitalarias** | Guías Medicina Preventiva / `UNE 171340` | Esporas de hongos filamentosos del género ***Aspergillus spp.* (*A. fumigatus*)** $\rightarrow$ Aspergilosis Pulmonar Invasiva. |
-| **Presión diferencial en el recinto de obra interior** | Protocolo de Bioseguridad en Obras (`ICRA`) | **DEPRESIÓN (Presión Negativa $\le -5\text{ a }-15\text{ Pa}$)** respecto al hospital activo, mediante extractores con filtro **`HEPA H13/H14`**. |
-| **Ejecución de tabiques de aislamiento de obra** | Protocolo de Bioseguridad en Obras | Sellado hermético **de suelo estructural a forjado superior** (prohibido detener el tabique en el falso techo). |
-| **Evaluación Post-Ocupacional (`POE`)** | Etapa 6 del Plan Director | Auditoría técnica, energética y funcional realizada a los **$6\text{ a }12\text{ meses}$** tras la apertura. |
-
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa sobre la presión del aire en una zona de obra dentro del hospital (¡Pregunta estrella de examen!):** El tribunal suele plantear: *«Durante la ejecución de la Fase 2 del Plan Director de un hospital, para evitar la contaminación por Aspergillus en las unidades clínicas colindantes, el recinto interior de la obra debe mantenerse en...»*. La respuesta correcta es: **en DEPRESIÓN (presión negativa respecto a los pasillos hospitalarios colindantes) mediante extractores dotados de filtros absolutos `HEPA H13/H14`**, mientras que las **unidades clínicas críticas colindantes (quirófanos, UCI, hematología) se mantienen en SOBREPRESIÓN positiva**. Jamás ponga la obra en sobrepresión, porque inyectaría millones de esporas de *Aspergillus* hacia el hospital.
 2. **Trampa del falso techo en los cerramientos provisionales de obra:** Si el cerramiento provisional de una obra hospitalaria solo llega hasta las placas del falso techo registrable, el aire contaminado con polvo de demolición pasa libremente por el plénum superior hacia las habitaciones contiguas. El cerramiento debe llegar **hasta la losa del forjado superior y sellarse herméticamente**, clausurando además los retornos de climatización dentro de la zona de obra.
 3. **¿Qué debe ejecutarse siempre en la Fase 0 / inicio de un Plan Director?** Antes de construir o poner en carga las nuevas ampliaciones asistenciales, es imprescindible **asegurar el desvío de redes afectadas y la capacidad/redundancia de las Centrales Industriales (eléctrica, térmica, frigorífica y de gases medicinales)**, así como generar el primer **espacio pulmón** que permita desencadenar el «Efecto Dominó» de traslados.

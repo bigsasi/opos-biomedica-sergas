@@ -1,32 +1,6 @@
 # Tema 31 — Desfibrilación. Fundamentos y tipos de desfibriladores. Soporte vital.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #31 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 05 — Electromedicina de Cuidados Críticos, Quirófano, Ventilación, Anestesia, Monitorización, Endoscopia y Robótica
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulos 1587 y 1589), Reglamento (UE) 2017/745 (MDR — Regla 22 Anexo VIII: DEA Clase III; Regla 9: Manual Clase IIb; Regla 8: DAI Clase III), Real Decreto 192/2023, Real Decreto 365/2009, Decreto 38/2017 de 23 de marzo (DOG — Regulación y Registro de DEA en Galicia), UNE-EN 60601-2-4 (Desfibriladores cardíacos), UNE-EN ISO 14708-2 / EN 45502-2-2 (DAI implantables), UNE-EN 62353, Guías ERC / ILCOR de Soporte Vital
-> - **Sistemas y Entorno SERGAS:** Fundación Pública Urxencias Sanitarias de Galicia-061 (FPUSG-061), Registro Gallego de DEA conectado al 061, Carros de Paradas, UCIs, Urgencias y Quirófanos de las 7 Áreas Sanitarias del SERGAS, IANUS y XMAO
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 31** de la Parte Específica del programa oficial para el ingreso en la categoría de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud (SERGAS), publicado en el *Diario Oficial de Galicia* (DOG núm. 67, de 13 de abril de 2026), aborda de manera exhaustiva los fundamentos electrofisiológicos y físicos de la **desfibrilación y cardioversión eléctrica**, la electrónica de potencia de los circuitos de carga y descarga capacitiva, la evolución de las ondas monofásicas a las **ondas bifásicas compensadas en impedancia (BTE y RLB)**, toda la tipología de desfibriladores (manuales con marcapasos transcutáneo, externos automatizados DEA/DESA, internos quirúrgicos, portátiles tipo chaleco WCD e implantables DAI), los algoritmos de **Soporte Vital Básico (SVB) y Soporte Vital Avanzado (SVA)** del Consejo Europeo de Resucitación (ERC) y los protocolos de ensayo normativo conforme a la norma **`UNE-EN 60601-2-4`**.
-
-Su desarrollo técnico se fundamenta directamente en los currículos del **Real Decreto 838/2015** y la **Orden EFP/1216/2019**:
-- **Módulo Profesional 1589 (*Sistemas de monitorización, registro y cuidados críticos*):** Incluye de forma expresa el **desfibrilador** y el **marcapasos** dentro de los equipos de soporte vital de cuidados críticos, así como los procedimientos de verificación funcional y metrológica mediante **analizador de desfibriladores y marcapasos** y analizador de seguridad eléctrica (`UNE-EN 62353`).
-- **Módulo Profesional 1587 (*Sistemas electrónicos y fotónicos*):** Convertidores DC-DC elevadores de alta tensión (*flyback*), condensadores de alta densidad energética, conmutadores de estado sólido en puente en H (IGBTs y tiristores SCR) y etapas frontales de ECG protegidas contra impulsos de desfibrilación ($5\text{ kV}$).
-
-### Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-
-- **Categorías con solapamiento:** **Ingeniero/a Técnico/a** | **TS Imagen para el Diagnóstico** | **TS Radioterapia**
-- **Grado de solapamiento:** **Alto (85%)**: Incluye explícitamente «Desfibriladores» en el Tema 47 de ingeniería clínica y electromedicina. / **Medio (50%)**: Solapa en actuaciones ante parada cardíaca y soporte vital en servicios sanitarios. / **Medio (50%)**: Solapa en actuaciones ante parada cardíaca y soporte vital.
-- **Epígrafes equivalentes:**
-  - `• Tema 47. Monitorización. Desfibriladores. Bisturís. Equipos de ventilación.`
-  - `• Tema 30. Primeros auxilios en el servicio de radiología y medicina nuclear. Actuaciones ante situaciones de emergencia: parada cardíaca, hemorragias, reacciones alérgicas y responsabilidad del/de la técnico en radiología.`
-  - `• Tema 4. Primeros auxilios en el servicio de radioterapia. Actuaciones ante situaciones de emergencia: parada cardíaca, hemorragias, reacciones alérgicas y responsabilidad del técnico especialista en radioterapia.`
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Electrofisiología de la Fibrilación Ventricular y Teoría de la Masa Crítica
 
 ### 1.1. Electrofisiología de la Fibrilación Ventricular y Teoría de la Masa Crítica
 
@@ -43,21 +17,21 @@ La desfibrilación eléctrica consiste en el paso brusco a través del tórax (o
 > $$E = \int_{0}^{t_d} V(t) \cdot I(t)\, dt = \int_{0}^{t_d} I^2(t) \cdot Z_p\, dt = \int_{0}^{t_d} \frac{V^2(t)}{Z_p}\, dt$$
 > Por tanto, para una misma energía fijada en Julios, un paciente con una **impedancia transtorácica muy elevada ($Z_p = 150\text{ }\Omega$)** recibirá una **corriente pico mucho menor** ($I = V / Z_p$) que un paciente de baja impedancia ($Z_p = 40\text{ }\Omega$), salvo que el desfibrilador incorpore un sistema electrónico activo de **compensación de impedancia**.
 
-### 1.2. Marco Reglamentario Europeo, Estatal y Autonómico Gallego (`Decreto 38/2017`)
+### 1.2. Marco Reglamentario Europeo, Estatal y Autonómico Gallego
 
 1. **Reglamento (UE) 2017/745 (MDR) — Diferenciación Crítica de Clases de Riesgo (¡Pregunta de examen!):**
    - **Desfibriladores Externos Automatizados (DEA / DESA):** Aunque son equipos externos no invasivos, el MDR introdujo en su Anexo VIII la **Regla 22**, que establece que *«los productos terapéuticos activos con una función diagnóstica integrada o incorporada que determinan significativamente la gestión del paciente por el producto, tales como los sistemas automatizados de circuito cerrado o los desfibriladores externos automatizados, se clasificarán en la **Clase III**»*.
    - **Monitores-Desfibriladores Externos Manuales (uso hospitalario por médicos):** En modo manual el diagnóstico lo realiza el médico y no el algoritmo cerrado del equipo, clasificándose como **Clase IIb** (**Regla 9** del Anexo VIII del MDR, equipos terapéuticos activos que administran energía de forma potencialmente peligrosa), si bien al incorporar modo DEA semiautomático la plataforma completa suele certificarse como Clase III.
    - **Desfibriladores Automáticos Implantables (DAI / ICD):** Productos sanitarios **implantables activos**, clasificados en la máxima categoría de riesgo **Clase III** (**Regla 8** del Anexo VIII del MDR y regulados en España por el Real Decreto 192/2023).
-2. **Norma Técnica Particular `UNE-EN 60601-2-4` (`IEC 60601-2-4`):** Especifica los requisitos particulares para la seguridad básica y el funcionamiento esencial de todos los desfibriladores cardíacos externos (tiempos máximos de carga, precisión de energía entregada en todo el rango de impedancias, aislamiento de alta tensión, recuperación del monitor de ECG en $\le 5\text{ s}$ y sincronización en cardioversión).
-3. **Legislación Autonómica de Galicia — `Decreto 38/2017, de 23 de marzo` (DOG núm. 66, de 4 de abril de 2017):**
-   En desarrollo del marco básico estatal (`Real Decreto 365/2009`), el **Decreto 38/2017** regula la instalación y el uso de desfibriladores externos automatizados (DEA/DESA) fuera del ámbito sanitario en la Comunidad Autónoma de Galicia:
+2. **Norma Técnica Particular `UNE-EN 60601-2-4`:** Especifica los requisitos particulares para la seguridad básica y el funcionamiento esencial de todos los desfibriladores cardíacos externos (tiempos máximos de carga, precisión de energía entregada en todo el rango de impedancias, aislamiento de alta tensión, recuperación del monitor de ECG en $\le 5\text{ s}$ y sincronización en cardioversión).
+3. **Legislación Autonómica de Galicia — `Decreto 38/2017, de 23 de marzo`:**
+   En desarrollo del marco básico estatal, el **Decreto 38/2017** regula la instalación y el uso de desfibriladores externos automatizados (DEA/DESA) fuera del ámbito sanitario en la Comunidad Autónoma de Galicia:
    - Establece los espacios obligados y recomendados de cardioprotección, los requisitos de formación acreditada y el mantenimiento obligatorio del equipo y de los parches/baterías conforme a las instrucciones del fabricante.
    - Crea el **Registro de Desfibriladores Externos de Galicia**, adscrito a la Consellería de Sanidade y **conectado operativamente con la Central de Coordinación de Urxencias Sanitarias de Galicia-061 (`FPUSG-061`)**, exigiendo que los DEA dispongan de **sistema de comunicación/activación automática o inmediata con el teléfono 061** al abrir la vitrina o encender el dispositivo, y obligando a remitir al 061 el registro documental y los datos almacenados en la memoria interna del DEA (ECG y eventos de descarga) tras cada utilización clínica.
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Electrónica de Potencia del Circuito de Carga y Descarga Capacitiva y Evolución de las Formas de Onda
 
 ### 2.1. Electrónica de Potencia del Circuito de Carga y Descarga Capacitiva
 
@@ -130,7 +104,7 @@ La **impedancia transtorácica ($Z_p$)** de un adulto humano oscila entre **$25\
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Modos Operativos y Tipología Completa de Equipos Desfibriladores y Marcapasos Transcutáneo
 
 ### 3.1. Modos Operativos: Desfibrilación Asíncrona vs. Cardioversión Eléctrica Sincronizada (¡Trampa de Examen!)
 
@@ -173,11 +147,11 @@ La **Cadena de Supervivencia** integra el reconocimiento precoz y alerta al 061,
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Ensayos Normativos y Tolerancias con Analizador de Desfibriladores
 
-### 4.1. Ensayos Normativos y Tolerancias con Analizador de Desfibriladores (`UNE-EN 60601-2-4` — ¡Cifras Fijas de Examen!)
+### 4.1. Ensayos Normativos y Tolerancias con Analizador de Desfibriladores
 
-En los Servicios de Ingeniería Biomédica y Electromedicina del SERGAS, la verificación preventiva semestral/anual de los monitores-desfibriladores se ejecuta con un **Analizador de Desfibriladores y Marcapasos Transcutáneos certificado** (ej. *Fluke Biomedical Impulse 7000DP / 7010* con módulo de cargas variables *7010*).
+En los Servicios de Ingeniería Biomédica y Electromedicina del servicio de salud, la verificación preventiva semestral/anual de los monitores-desfibriladores se ejecuta con un **Analizador de Desfibriladores y Marcapasos Transcutáneos certificado** (ej. *Fluke Biomedical Impulse 7000DP / 7010* con módulo de cargas variables *7010*).
 
 El analizador dispone de dos platos metálicos de contacto que contienen una **resistencia de potencia no inductiva calibrada de $\mathbf{50\text{ }\Omega}$** (además de cargas conmutables de $25, 75, 100, 125, 150, 175\text{ y }200\text{ }\Omega$ para verificar la compensación bifásica de impedancia). Al descargar el desfibrilador sobre el analizador, un divisor de alta tensión y un conversor ADC de alta velocidad ($> 100\text{ kHz}$) digitalizan la onda $V(t)$ y calculan numéricamente la energía entregada, la corriente pico, el voltaje pico y la duración de las fases $t_1$ y $t_2$.
 
@@ -185,8 +159,8 @@ Los **4 umbrales reglamentarios de la norma `UNE-EN 60601-2-4`** que todo aspira
 
 1. **Exactitud de la Energía Entregada ($\Delta E$):**
    Para cualquier nivel de energía seleccionado en todo el rango de impedancias (y específicamente sobre la carga patrón de **$50\text{ }\Omega$**), la energía realmente entregada medida por el analizador no debe diferir de la energía seleccionada en más de:
-   $$\text{Tolerancia máxima (`UNE-EN 60601-2-4`)} = \mathbf{\pm 15\%\text{ de la energía seleccionada ó }\pm 4\text{ Julios}\text{ (el valor que sea mayor)}}$$
-   *(Nota técnica: en los protocolos internos de mantenimiento preventivo del SERGAS suele exigirse además un criterio de alerta temprana de $\pm 10\%$ a $200\text{ J}$ sobre $50\text{ }\Omega$).*
+   $$\text{Tolerancia máxima} = \mathbf{\pm 15\%\text{ de la energía seleccionada ó }\pm 4\text{ Julios}\text{ (el valor que sea mayor)}}$$
+   *(Nota técnica: en los protocolos internos de mantenimiento preventivo del servicio de salud suele exigirse además un criterio de alerta temprana de $\pm 10\%$ a $200\text{ J}$ sobre $50\text{ }\Omega$).*
 2. **Tiempo Máximo de Carga hasta la Energía Máxima ($t_{\text{carga}}$):**
    Con baterías parcialmente descargadas (tras 15 descargas a energía máxima), el tiempo desde que se inicia la carga hasta que el condensador está listo para disparar a su energía máxima debe ser **$\mathbf{\le 15\text{ segundos}}$** (en equipos nuevos a red o batería plena suele ser $< 6\text{–}8\text{ s}$).
 3. **Tiempo Máximo de Recuperación del Monitor de ECG tras una Descarga:**
@@ -197,20 +171,9 @@ Los **4 umbrales reglamentarios de la norma `UNE-EN 60601-2-4`** que todo aspira
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Estandarización del Parque de Desfibriladores en los Hospitales del SERGAS y en el 061 de Galicia
-
-En las **7 Áreas Sanitarias del SERGAS** y en la **Fundación Pública Urxencias Sanitarias de Galicia-061 (`FPUSG-061`)**, la gestión de los desfibriladores responde a una política corporativa de estandarización de carros de paradas y cardioprotección:
-1. **Unificación de Conectores y Parches Multifunción:** Dentro de cada complejo hospitalario se estandariza el modelo de monitor-desfibrilador en plantas de hospitalización, Urgencias, UCI, Reanimación y Quirófanos (y con las ambulancias de Soporte Vital Básico y Avanzado del 061), garantizando que los **parches adhesivos colocados por el equipo del 061 en la calle o en un centro de salud de Atención Primaria se conecten directamente al desfibrilador del hospital receptor** sin tener que despegarlos ni utilizar adaptadores.
-2. **Autotest Diario Automático (*Auto-Test / Self-Check* a las 03:00 AM):** Los monitores-desfibriladores hospitalarios modernos conectados a la red Wi-Fi hospitalaria ejecutan todas las madrugadas una autoverificación automática sin intervención humana (comprobando la tensión de la batería, la continuidad y fecha de caducidad del gel de los parches preconectados y realizando una microdescarga interna de baja energía sobre una carga patrón interna), enviando el resultado (`OK / Fallo`) a un panel centralizado del Servicio de Electromedicina y al control de enfermería.
-3. **Gestión en `XMAO` y Registro Gallego de DEA (`Decreto 38/2017`):** Todos los desfibriladores están inventariados en **`XMAO`** con prioridad crítica de **Soporte Vital (Índice de Fennigkoh y Smith $\text{EM} = 20$: Función Terapéutica de Soporte Vital $[10] + \text{Riesgo de Muerte } [5] + \text{Mantenimiento Alto } [5]$)**, con control informatizado del lote y fecha de caducidad de los electrodos desechables (hidrogel conductivo, caducidad típica $18\text{–}24\text{ meses}$) y sustitución preventiva de baterías cada $2\text{–}4\text{ años}$.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Parámetro de Desfibrilación | Norma / Regla / Ecuación Oficial | Valor / Cifra Exacta de Examen A1 | Implicación Clínica o de Ingeniería Biomédica |
 | :--- | :--- | :--- | :--- |
@@ -226,7 +189,7 @@ En las **7 Áreas Sanitarias del SERGAS** y en la **Fundación Pública Urxencia
 | **Tiempo máximo de carga y recuperación ECG** | Requisitos `UNE-EN 60601-2-4` | Carga a $E_{\text{máx}}$: **$\mathbf{\le 15\text{ s}}$** · Recuperación ECG: **$\mathbf{\le 5\text{ s}}$** | Desarmado automático interno en $30\text{–}60\text{ s}$ sobre *bleeder resistor* |
 | **Compresiones torácicas de alta calidad** | Algoritmo ERC de SVB / SVA | Frecuencia **$100\text{–}120\text{ cpm}$** · Profundidad **$5\text{–}6\text{ cm}$** · Relación **$30:2$** | Medida intra-RCP por acelerómetro MEMS y capnografía ($\text{EtCO}_2$) |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 
 1. **Trampa clásica de test sobre la Asistolia («línea plana»):** En las películas se desfibrila la asistolia, pero en medicina e ingeniería clínica **la Asistolia y la Actividad Eléctrica Sin Pulso (AESP) SON RITMOS NO DESFIBRILABLES**. La desfibrilación no «arranca» un corazón parado, sino que **despolariza y silencia un corazón caótico (FV / TVsp)** para que el nodo sinusal retome el ritmo; aplicar un choque eléctrico a una asistolia solo quema miocardio e interrumpe el masaje cardíaco.
 2. **Trampa sobre Cardioversión Sincronizada (Onda R vs. Onda T):** En la cardioversión eléctrica sincronizada (`SYNC`), el pulso **se dispara sobre la ONDA R (complejo QRS, despolarización ventricular)** con el objetivo de **EVITAR disparar sobre la ONDA T (repolarización ventricular)**. Si una opción de test dice que «se sincroniza para disparar sobre la onda T», es **FALSA**: disparar sobre la onda T provoca el fenómeno **R sobre T** e induce una Fibrilación Ventricular.

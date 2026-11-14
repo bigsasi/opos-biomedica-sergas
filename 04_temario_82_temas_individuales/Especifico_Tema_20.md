@@ -1,34 +1,11 @@
 # Tema 20 — Caracterización y funcionamiento de los sistemas de endoscopia diagnóstica y terapéutica. Componentes técnicos, mecánicos y electrónicos.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #20 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 05 — Electromedicina de Cuidados Críticos, Quirófano, Ventilación, Anestesia, Monitorización, Endoscopia y Robótica
-> - **Marco Normativo y Técnico Nuclear:** Reglamento (UE) 2017/745 (MDR, Regla 5 de clasificación de invasivos por orificio corporal), Real Decreto 192/2023, Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulos 1586 *Sistemas electromecánicos y de fluidos*, 1587 *Sistemas electrónicos y fotónicos* y 1589 *Sistemas de monitorización, registro y cuidados críticos*), UNE-EN 60601-1, UNE-EN 60601-2-18 (Equipos de endoscopia), UNE-EN ISO 8600 (Sistemas ópticos endoscópicos), UNE-EN ISO 15883-1 y UNE-EN ISO 15883-4 (Lavadoras-termodesinfectoras para endoscopios termosensibles)
-> - **Sistemas y Entorno SERGAS:** IANUS (Historia Clínica Electrónica), PACS / VNA corporativo (archivo DICOM Visible Light `VL Endoscopic Image Storage`), GMAO corporativo XMAO, Sistemas de trazabilidad RFID de reprocesamiento endoscópico en las Unidades de Endoscopia Digestiva, Neumología (Broncoscopia) y Urología de las 7 Áreas Sanitarias del SERGAS (CHUAC, CHUS, CHUVI, HULA, CHUO, CHOP, CHUF)
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 20 de la Parte Específica** del programa oficial para el acceso a la categoría de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud (publicado en el *Diario Oficial de Galicia* núm. 67, de 13 de abril de 2026) aborda de forma íntegra y monográfica los **sistemas de endoscopia flexible diagnóstica y terapéutica** empleados en gastroenterología, neumología, urología y otorrinolaringología, desglosando sus tres pilares:
-1. **Caracterización y principios de funcionamiento de la endoscopia diagnóstica y terapéutica**: evolución desde los fibroscopios de haz coherente hasta los videoendoscopios electrónicos distales (*chip-on-the-tip*), cromoendoscopia virtual óptica y digital, ecoendoscopia (USE/EUS) y cápsula endoscópica.
-2. **Componentes técnicos y mecánicos**: arquitectura del conector universal (umbilical), cuerpo de mando proximal, tubo de inserción multicapa, sección de angulación distal por cables Bowden, sistema hidroneumático de insuflación/lavado/aspiración, canales de trabajo y uña elevadora de Albarrán.
-3. **Componentes ópticos, fotónicos y electrónicos**: fuentes de luz fría (Xenón, LED y multimodo láser), procesadores de imagen de alta definición (Full HD y 4K UHD), sensores CCD y CMOS, seguridad eléctrica (`UNE-EN 60601-2-18`) y reprocesamiento de alto nivel (`UNE-EN ISO 15883-4`).
-
-### Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Ingeniero/a Técnico/a**
-- **Grado de solapamiento:** **Bajo (30%)**: Relación parcial general dentro del equipamiento electromédico hospitalario y de áreas especiales; sin tema exclusivo de endoscopia diagnóstica.
-- **Epígrafes equivalentes:**
-  - • Tema 46. El bloque quirúrgico: instalaciones y equipos. Circuitos. UCIs y unidades de reanimación post-anestésica: instalaciones y equipos. Inspección y mantenimiento.
-  - • Tema 74. Organización de una unidad de electromedicina: UNE 209001 IN.
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Evolución Histórica y Principios Físicos de la Transmisión Óptica y Fotónica
 
 ### 1.1. Evolución Histórica y Principios Físicos de la Transmisión Óptica y Fotónica
 La endoscopia médica diagnóstica y terapéutica permite la inspección visual directa e instrumentada de cavidades y conductos anatómicos internos accediendo a través de orificios naturales (boca, fosas nasales, ano, uretra). A diferencia de la endoscopia quirúrgica rígida (objeto del Tema 25, que accede a cavidades cerradas mediante trócares e incisiones), los sistemas de endoscopia diagnóstica y terapéutica de este epígrafe se basan fundamentalmente en **endoscopios flexibles** capaces de adaptarse a las tortuosidades anatómicas del tracto gastrointestinal, el árbol traqueobronquial o la vía urinaria.
 
-Desde el punto de vista físico (recogido en el **Módulo 1587** de la **Orden EFP/1216/2019**), la evolución tecnológica de la endoscopia flexible ha transitado por dos grandes generaciones:
+Desde el punto de vista físico, la evolución tecnológica de la endoscopia flexible ha transitado por dos grandes generaciones:
 
 1. **Fibroscopios Ópticos (Primera Generación)**:
    - Se fundamentan en la **reflexión interna total** de la luz en el interior de fibras de vidrio de sílice compuestas por un núcleo cilindrico de alto índice de refracción ($n_1 \approx 1,62$) recubierto por un revestimiento (*cladding*) de menor índice de refracción ($n_2 \approx 1,52$).
@@ -45,7 +22,7 @@ Desde el punto de vista físico (recogido en el **Módulo 1587** de la **Orden E
    - El sensor distal realiza la conversión fotoeléctrica *in situ* y transmite la señal de vídeo eléctrica (analógica o digitalizada en origen mediante LVDS/fibra híbrida) a través de conductores blindados a lo largo del tubo de inserción hasta el procesador central de vídeo, conservando únicamente los haces de fibra óptica no coherentes (o diodos LED distales en modelos específicos de intubación y broncoscopia desechable) para la conducción de la iluminación.
 
 ### 1.2. Marco Normativo, Reglamentario y Estándares Técnicos Aplicables
-El diseño, fabricación, comercialización, seguridad eléctrica y reprocesamiento de los sistemas de endoscopia diagnóstica y terapéutica están regidos por un marco técnico-legal estricto que el ingeniero biomédico del SERGAS debe dominar:
+El diseño, fabricación, comercialización, seguridad eléctrica y reprocesamiento de los sistemas de endoscopia diagnóstica y terapéutica están regidos por un marco técnico-legal estricto que el ingeniero biomédico del servicio de salud debe dominar:
 
 - **Reglamento (UE) 2017/745 (MDR) y Real Decreto 192/2023**:
   - Conforme al **Anexo VIII, Regla 5 del MDR** (productos invasivos en relación con los orificios corporales, salvo los invasivos de tipo quirúrgico), los endoscopios flexibles diagnósticos y terapéuticos que se introducen por cavidades naturales se clasifican según la duración de su uso continuado:
@@ -55,7 +32,7 @@ El diseño, fabricación, comercialización, seguridad eléctrica y reprocesamie
   - El **Artículo 27 del MDR** exige la asignación e inscripción en EUDAMED del **Identificador Único del Producto (UDI)** grabado de forma directa y permanente sobre el cuerpo del endoscopio reutilizable.
 - **Norma Particular de Seguridad Electromédica `UNE-EN 60601-2-18`**:
   - Establece los requisitos particulares para la seguridad básica y el funcionamiento esencial de los **equipos de endoscopia**.
-  - Exige que toda parte del endoscopio introducida en el paciente sea clasificada como **Parte Aplicable Tipo BF (Flotante)** o **Tipo CF (Cardíaco Flotante)** cuando exista posibilidad de conducción directa o indirecta hacia el miocardio o uso simultáneo con equipos quirúrgicos de alta frecuencia (`UNE-EN 60601-2-2`).
+  - Exige que toda parte del endoscopio introducida en el paciente sea clasificada como **Parte Aplicable Tipo BF (Flotante)** o **Tipo CF (Cardíaco Flotante)** cuando exista posibilidad de conducción directa o indirecta hacia el miocardio o uso simultáneo con equipos quirúrgicos de alta frecuencia.
   - Limita estrictamente la **temperatura superficial máxima de la punta distal a $\le 41\text{ }^\circ\text{C}$** (o $\le 43\text{ }^\circ\text{C}$ con aviso específico en condiciones controladas) para evitar quemaduras térmicas de la mucosa provocadas por la alta irradiancia del haz de iluminación.
   - Regula las corrientes de fuga de paciente (en Tipo BF: $\le 100\text{ }\mu\text{A}$ en condición normal NC y $\le 500\text{ }\mu\text{A}$ en condición de primer defecto SFC; en Tipo CF: $\le 10\text{ }\mu\text{A}$ en NC y $\le 50\text{ }\mu\text{A}$ en SFC) y la rigidez dieléctrica del recubrimiento polimérico del tubo de inserción.
 - **Normas Ópticas de la Serie `UNE-EN ISO 8600` (Partes 1 a 8)**:
@@ -65,7 +42,7 @@ El diseño, fabricación, comercialización, seguridad eléctrica y reprocesamie
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Anatomía Mecánica e Interna del Videoendoscopio Flexible
 
 ### 2.1. Anatomía Mecánica e Interna del Videoendoscopio Flexible
 Un videoendoscopio flexible moderno constituye uno de los sistemas optomecatrónicos de mayor densidad de empaquetamiento por milímetro cuadrado de la ingeniería biomédica. Estructuralmente se divide en **cuatro secciones mecánicas contiguas**:
@@ -113,7 +90,7 @@ Un videoendoscopio flexible moderno constituye uno de los sistemas optomecatrón
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Tipología Clínica y Constructiva de los Sistemas de Endoscopia Flexible
 
 ### 3.1. Tipología Clínica y Constructiva de los Sistemas de Endoscopia Flexible
 
@@ -148,9 +125,9 @@ Un videoendoscopio flexible moderno constituye uno de los sistemas optomecatrón
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. El Punto Crítico de Ingeniería Clínica y Mantenimiento Preventivo, Correctivo y Seguridad Eléctrica
 
-### 4.1. El Punto Crítico de Ingeniería Clínica: Test de Estanqueidad y Reprocesamiento (`UNE-EN ISO 15883-4`)
+### 4.1. El Punto Crítico de Ingeniería Clínica: Test de Estanqueidad y Reprocesamiento
 El 70 % de las averías graves y de mayor coste económico en un parque de endoscopia flexible (sustitución del haz de inserción, rotura de cables Bowden por corrosión y destrucción del sensor CCD/CMOS distal, con costes de reparación de $3.000\text{ a }9.000\text{ €}$ por incidente) se originan por **perforaciones inadvertidas de la camisa polimérica externa o del canal de trabajo de PTFE** seguidas de la inmersión del equipo en líquidos desinfectantes.
 
 Por ello, el procedimiento técnico ineludible tras cada paciente y **antes de sumergir el endoscopio en cualquier solución acuosa o introducirlo en la lavadora-termodesinfectora** es el **Test de Estanqueidad o Prueba de Fugas (*Leak Test*)**:
@@ -167,10 +144,10 @@ Por ello, el procedimiento técnico ineludible tras cada paciente y **antes de s
      2. *Lavado con detergente enzimático neutro* a $35\text{–}45\text{ }^\circ\text{C}$ con **monitorización individualizada de flujo y presión en cada canal** (detectando obstrucciones o desconexiones de adaptadores).
      3. *Desinfección Química de Alto Nivel* con **Ácido Peracético ($\text{CH}_3\text{COOOH}$ al $0,15\%\text{–}0,20\%$ a $35\text{–}55\text{ }^\circ\text{C}$ durante $5\text{–}10\text{ min}$)** o Glutaraldehído/Orto-ftalaldehído (OPA), con acción esporicida, micobactericida, virucida y bactericida.
      4. *Aclarado final con agua microbiológicamente controlada* (ultrafiltración submicrónica $< 0,2\text{ }\mu\text{m}$ y desinfección UV/térmica del anillo de agua, garantizando recuento total de aerobios $< 10\text{ UFC}/100\text{ mL}$ y ausencia total de *Pseudomonas aeruginosa* y *Mycobacterium* en $100\text{ mL}$).
-     5. *Purgado con aire comprimido filtrado HEPA y alcohol isopropílico/etílico al $70\%$* (opcional según protocolo) y almacenamiento vertical u horizontal en **Armarios de Secado y Conservación Controlada (`UNE-EN 16442`)** que insuflan continuamente aire filtrado HEPA estéril a través de cada canal interno, manteniendo la validez microbiológica del endoscopio durante $72\text{ horas a }7\text{–}30\text{ días}$ según validación.
+     5. *Purgado con aire comprimido filtrado HEPA y alcohol isopropílico/etílico al $70\%$* (opcional según protocolo) y almacenamiento vertical u horizontal en **Armarios de Secado y Conservación Controlada** que insuflan continuamente aire filtrado HEPA estéril a través de cada canal interno, manteniendo la validez microbiológica del endoscopio durante $72\text{ horas a }7\text{–}30\text{ días}$ según validación.
 
-### 4.2. Mantenimiento Preventivo, Correctivo y Seguridad Eléctrica (`Módulo 1589` y `UNE-EN 62353`)
-En el ámbito del **Módulo 1589** del currículo oficial y la norma **`UNE-EN 62353`** (*Ensayos recurrentes y ensayos después de la reparación del equipo electromédico*), el Servicio de Electromedicina ejecuta:
+### 4.2. Mantenimiento Preventivo, Correctivo y Seguridad Eléctrica
+Conforme a la norma **`UNE-EN 62353`** (*Ensayos recurrentes y ensayos después de la reparación del equipo electromédico*), el Servicio de Electromedicina ejecuta:
 - **Inspección mecánica y funcional preventiva (semestral/anual)**:
   - Verificación de los **ángulos máximos de deflexión distal** con plantilla goniométrica y ajuste de la tensión de los 4 cables Bowden (corrigiendo la holgura o *play* excesivo en las ruedas de mando).
   - Inspección bajo lupa de la integridad de la goma de angulación distal, del pegamento epoxi de sellado distal, de la lente objetivo y de la permeabilidad de la boquilla de aire/agua.
@@ -182,28 +159,9 @@ En el ámbito del **Módulo 1589** del currículo oficial y la norma **`UNE-EN 6
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Arquitectura de las Unidades de Endoscopia en las 7 Áreas Sanitarias del SERGAS
-En los hospitales de referencia de las **7 Áreas Sanitarias del SERGAS** (CHUAC en A Coruña, CHUS en Santiago, CHUVI en Vigo, HULA en Lugo, CHUO en Ourense, CHOP en Pontevedra y CHUF en Ferrol), así como en los 7 Hospitales Comarcales (Barbanza, Cee, A Mariña, Monforte, Verín, Valdeorras y O Salnés), las Unidades de Endoscopia Digestiva, Broncoscopia e Intervencionismo Urológico operan bajo un modelo de **integración digital completa y trazabilidad de reprocesamiento**:
-
-1. **Integración con `IANUS` y `PACS / VNA` Corporativo del SERGAS**:
-   - Las torres de videoendoscopia se conectan a la red corporativa hospitalaria a través de estaciones de captura de imagen médica compatibles con el estándar **DICOM 3.0**.
-   - Mediante el servicio **DICOM Modality Worklist (MWL)**, la torre descarga automáticamente la lista de trabajo diaria de pacientes citados desde el HIS (**SIHGA**) e **IANUS**, asociando de forma inequívoca el identificador del paciente (CIP/NHC) y el número de episodio (*Accession Number*) sin introducción manual de datos.
-   - Al pulsar el botón de captura en el cuerpo de mando del endoscopio, las imágenes de alta definición y secuencias de vídeo se encapsulan como objetos **`DICOM VL Endoscopic Image Storage` (`SOP Class UID 1.2.840.10008.5.1.4.1.1.77.1.1`)** o `Video Endoscopic Image Storage` y se archivan en el **PACS / VNA autonómico del SERGAS**, quedando accesibles desde cualquier visor de **IANUS** junto con el informe estructurado de la exploración (p. ej., programas poblacionales de **Cribado de Cáncer Colorrectal de la Consellería de Sanidade**).
-2. **Trazabilidad Completa en la Sala de Reprocesamiento (Circuito Sucio $\rightarrow$ Limpio)**:
-   - Las salas de reprocesamiento de endoscopia del SERGAS están diseñadas con separación física y diferencial de presión negativa en la zona sucia respecto a la zona limpia de almacenamiento, extracción localizada de vapores químicos y planta de tratamiento de agua por ósmosis inversa + ultrafiltración para alimentar el parque de lavadoras-termodesinfectoras `UNE-EN ISO 15883-4`.
-   - Cada endoscopio dispone de un *tag* **RFID** leído en: 1) la pila de lavado manual y test de fugas, 2) la lavadora-termodesinfectora, 3) el armario de secado `UNE-EN 16442` y 4) el box de exploración antes de utilizarlo con el paciente, bloqueando informáticamente el uso de cualquier endoscopio cuyo ciclo de desinfección haya resultado incompleto o haya superado el tiempo máximo de almacenamiento validado.
-
-### 5.2. Gestión Patrimonial, Mantenimiento en `XMAO` y Contratos de Gestión Integral en el SERGAS
-- Todo el inventario de procesadores de vídeo, fuentes de luz, videoendoscopios flexibles, sondas de ecoendoscopia, insufladores de $\text{CO}_2$, bombas de irrigación, lavadoras-termodesinfectoras y armarios de secado se encuentra dado de alta y codificado en el sistema corporativo **`XMAO`** del SERGAS.
-- Dada la alta siniestralidad accidental por mordedura, perforación por agujas de PAAF/esclerosis o fatiga de angulación, los pliegos de prescripciones técnicas (PPT) de los expedientes de contratación del SERGAS bajo la **Ley 9/2017 (LCSP)** incorporan cláusulas de **mantenimiento integral a todo riesgo con cobertura de daños accidentales o *pool* de equipos de sustitución en préstamo ($\le 24\text{–}48\text{ h}$)**, así como auditorías periódicas por parte de Ingeniería Biomédica de la tasa de rechazos en el test de fugas por servicio clínico para impulsar acciones formativas preventivas con el personal de enfermería y facultativo.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Parámetro / Norma / Componente | Cifra / Especificación Exacta de Examen | Relevancia Técnica y Normativa |
 | :--- | :--- | :--- |
@@ -219,8 +177,8 @@ En los hospitales de referencia de las **7 Áreas Sanitarias del SERGAS** (CHUAC
 | **Ecoendoscopia (USE / EUS)** | **Transductor distal de $5\text{ a }20\text{ MHz}$** | Radial ($360^\circ$, estadificación) vs. Sectorial Lineal (permite **PAAF/BAAF** en tiempo real en el plano del haz). |
 | **Cápsula Endoscópica de intestino delgado** | **$11 \times 26\text{ mm}$ · $2\text{ a }6\text{ fps}$ · Batería $\ge 8\text{–}12\text{ h}$** | Sensor CMOS + LEDs + telemetría UHF $433\text{ MHz}$ / HBC; contraindicada en sospecha de estenosis/obstrucción intestinal. |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Trampa clásica sobre las longitudes de onda del NBI (*Narrow Band Imaging*)!**: Los tribunales suelen poner como distractores las longitudes de onda de la pulsioximetría ($660\text{ nm}$ y $940\text{ nm}$, que pertenecen al Tema 23) o de la fluorescencia con verde de indocianina ($780\text{–}830\text{ nm}$, que pertenecen al Tema 25). En **NBI** las dos bandas filtradas son siempre **Azul ($415\text{ nm}$)** y **Verde ($540\text{ nm}$)**, eliminando por completo la luz roja porque esta penetra demasiado profundamente y difumina el contraste microvascular mucoso.
 2. **Diferencia entre Ecoendoscopio Radial y Ecoendoscopio Sectorial Lineal para biopsia (PAAF)**: Solo el **ecoendoscopio sectorial lineal** (cuyo plano acústico es paralelo al eje longitudinal del tubo de inserción) permite visualizar en todo momento el trayecto completo de la aguja de punción (PAAF/BAAF) al emerger por el canal de trabajo ayudada por la uña elevadora; el ecoendoscopio radial ($360^\circ$, plano perpendicular al eje) solo cortaría la aguja como un punto hiperecoico y se usa exclusivamente con fines diagnósticos de estadificación locorregional.
 3. **¿Por qué el videobroncoscopio NO tiene válvula ni canal de insuflación de aire/agua?**: A diferencia de los gastroscopios, colonoscopios y duodenoscopios (que necesitan insuflar aire o $\text{CO}_2$ para distender las paredes colapsadas del tubo digestivo), el árbol traqueobronquial está mantenido abierto por los anillos cartilaginosos y ventilado de forma natural o mecánica, por lo que un videobroncoscopio carece de canal de insuflación y solo cuenta con **deflexión en un plano ($\text{Up/Down}$)** y **canal de trabajo/aspiración**.
-4. **Actuación técnica ante un Test de Estanqueidad positivo (aparición de burbujas en inmersión)**: Si en un supuesto práctico de examen preguntan qué debe hacerse al observar burbujeo continuo en la sección de angulación o en el canal de biopsia durante la prueba de fugas en agua, la respuesta correcta es **mantener el probador de fugas conectado e insuflando presión positiva mientras se retira inmediatamente el endoscopio del agua**, secarlo por fuera y enviarlo a reparación sin introducirlo jamás en la lavadora-termodesinfectora (`ISO 15883-4`).
+4. **Actuación técnica ante un Test de Estanqueidad positivo (aparición de burbujas en inmersión)**: Si en un supuesto práctico de examen preguntan qué debe hacerse al observar burbujeo continuo en la sección de angulación o en el canal de biopsia durante la prueba de fugas en agua, la respuesta correcta es **mantener el probador de fugas conectado e insuflando presión positiva mientras se retira inmediatamente el endoscopio del agua**, secarlo por fuera y enviarlo a reparación sin introducirlo jamás en la lavadora-termodesinfectora.

@@ -1,32 +1,6 @@
 # Tema 25 — Caracterización y funcionamiento de los sistemas de endoscopia quirúrgica. Componentes y tecnologías.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #25 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 05 — Electromedicina de Cuidados Críticos, Quirófano, Ventilación, Anestesia, Monitorización, Endoscopia y Robótica
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulos 1586, 1587 y 1589), Reglamento (UE) 2017/745 (MDR), Real Decreto 192/2023, UNE-EN 60601-2-18 (Equipos de endoscopia), Serie UNE-EN ISO 8600 (Endoscopios y sistemas ópticos), UNE-EN 60601-2-2 (Equipos electroquirúrgicos de alta frecuencia), UNE-EN 285 e ISO 17665 (Esterilización por vapor de ópticas autoclavables), UNE-EN 62353
-> - **Sistemas y Entorno SERGAS:** Bloques Quirúrgicos y Unidades de Cirugía Mayor Ambulatoria (CMA) de las 7 Áreas Sanitarias (CHUAC, CHUS, CHUVI, HULA, CHUO, CHOP, CHUF), Quirófanos Integrados Digitales, PACS/VNA Corporativo (DICOM Visible Light), IANUS, XMAO y Centrales de Esterilización (RUMED)
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 25** de la Parte Específica del programa oficial para el acceso a la categoría de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud (SERGAS), publicado en el *Diario Oficial de Galicia* (DOG núm. 67, de 13 de abril de 2026), aborda de forma exclusiva la ingeniería, física óptica, arquitectura optoelectrónica y sistemas fluídicos/neumáticos de la **endoscopia quirúrgica rígida y semirrígida** integrada en las **torres de Cirugía Mínimamente Invasiva (CMI)**: laparoscopia, toracoscopia (VATS), artroscopia, histeroscopia quirúrgica, resectoscopia urológica transuretral (RTU) y neuroendoscopia. A diferencia del Tema 20 (dedicado a los videoendoscopios flexibles diagnósticos y terapéuticos por orificios naturales de gastroenterología y neumología) y del Tema 26 (centrado en la robótica quirúrgica telemanipulada y guiada por imagen), este tema profundiza en los cinco subsistemas nucleares de la torre quirúrgica: telescopios rígidos de lentes cilíndricas de Hopkins, cabezales y procesadores de cámara 3-CMOS/4K/3D/NIR-ICG, fuentes de luz fría y guías fotónicas, insufladores electrónicos de $\text{CO}_2$ para neumoperitoneo y bombas servorreguladas de irrigación-aspiración junto con motores quirúrgicos (*shavers*).
-
-Su contenido técnico emana directamente de los currículos oficiales del **Real Decreto 838/2015** y la **Orden EFP/1216/2019** para el Título de Técnico Superior en Electromedicina Clínica:
-- **Módulo Profesional 1586 (*Sistemas electromecánicos y de fluidos*):** Leyes físicas de los gases, regulación neumática de presión y caudal en insufladores de $\text{CO}_2$, bombas peristálticas y de rodillos para irrigación-aspiración cavitaria, transductores de presión y motores quirúrgicos rotatorios/oscilantes.
-- **Módulo Profesional 1587 (*Sistemas electrónicos y fotónicos*):** Óptica geométrica y física, lentes de barra de Hopkins, reflexión interna total en fibras ópticas, fuentes de iluminación por arco de Xenón, LED y diodos láser, sensores de imagen matriciales CCD y CMOS, prismas dicroicos RGB y fluorescencia en el infrarrojo cercano (NIR).
-- **Módulo Profesional 1589 (*Sistemas de monitorización, registro y cuidados críticos*):** Estructura técnica de la dotación del quirófano endosquirúrgico, compatibilidad electromagnética con generadores de alta frecuencia, puesta en marcha, mantenimiento preventivo y seguridad eléctrica conforme a `UNE-EN 60601-2-18` y `UNE-EN 62353`.
-
-### Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-
-- **Categorías con solapamiento:** **Ingeniero/a Técnico/a**
-- **Grado de solapamiento:** **Medio (45%)**: Enmarcado dentro de instalaciones y equipos del bloque quirúrgico y bisturís/fuentes quirúrgicas.
-- **Epígrafes equivalentes:**
-  - `• Tema 46. El bloque quirúrgico: instalaciones y equipos. Circuitos. UCIs y unidades de reanimación post-anestésica: instalaciones y equipos. Inspección y mantenimiento.`
-  - `• Tema 47. Monitorización. Desfibriladores. Bisturís. Equipos de ventilación.`
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Principios de la Cirugía Mínimamente Invasiva (CMI) y Clasificación de Procedimientos Endosquirúrgicos
 
 ### 1.1. Principios de la Cirugía Mínimamente Invasiva (CMI) y Clasificación de Procedimientos Endosquirúrgicos
 
@@ -70,7 +44,7 @@ Las leyes ópticas que justifican la superioridad del sistema de Hopkins son:
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Subsistema 1: Ópticas Rígidas y Subsistema 2
 
 Una **Torre de Endoscopia Quirúrgica** constituye un sistema modular montado sobre carro móvil con transformador de aislamiento o integrado en la **columna de techo de cirugía (`UNE-EN ISO 11197`)**. Consta de cinco subsistemas tecnológicos interdependientes:
 
@@ -156,7 +130,7 @@ En artroscopia, histeroscopia y endourología, una **bomba peristáltica de rodi
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Imagen Guiada por Fluorescencia en Infrarrojo Cercano y Sistemas de Endoscopia Quirúrgica 3D Estereoscópica
 
 ### 3.1. Imagen Guiada por Fluorescencia en Infrarrojo Cercano (NIR / ICG — Verde de Indocianina)
 
@@ -203,14 +177,14 @@ Emitiendo alarmas escalonadas y deteniendo la bomba al alcanzar el umbral progra
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Riesgos Físicos Específicos en Endoscopia Quirúrgica y Medidas de Mitigación
 
 ### 4.1. Riesgos Físicos Específicos en Endoscopia Quirúrgica y Medidas de Mitigación
 
-1. **Quemaduras Térmicas e Ignición del Campo Quirúrgico por la Fuente de Luz (`UNE-EN 60601-2-18`):**
+1. **Quemaduras Térmicas e Ignición del Campo Quirúrgico por la Fuente de Luz:**
    - Aunque se denomine «luz fría», la concentración de $300\text{ W}$ de energía óptica visible en un área circular de solo $4\text{ a }5\text{ mm}$ de diámetro en el extremo distal del cable de fibra óptica o en la punta del laparoscopio puede elevar la temperatura local a **$> 95\text{–}200\text{ }^\circ\text{C}$ en menos de $10\text{ segundos}$** si se apoya directamente sobre los paños quirúrgicos de celulosa/polipropileno o sobre la piel del paciente en atmósfera rica en oxígeno, provocando quemaduras de tercer grado o fuego en quirófano.
    - **Regla de seguridad obligatoria:** La fuente de luz debe colocarse siempre en modo ***Stand-by* (espera)** antes de desconectar la óptica o mientras el telescopio esté fuera de la cavidad corporal; las fuentes modernas incorporan detección automática de desconexión del cable en la torreta.
-2. **Acoplamiento Capacitivo y Fallo de Aislamiento en Laparoscopia Monopolar (`UNE-EN 60601-2-2`):**
+2. **Acoplamiento Capacitivo y Fallo de Aislamiento en Laparoscopia Monopolar:**
    - En cirugía laparoscópica, el cirujano solo visualiza en el monitor el último $10\text{–}15\%$ distal del instrumento monopolar ($33\text{ cm}$ de longitud). Pueden producirse quemaduras viscerales ocultas (perforación intestinal diferida a las $48\text{–}72\text{ h}$ con peritonitis mortal) por **tres mecanismos eléctricos fuera del campo visual**:
      - **Fallo de aislamiento del vástago:** Microfisuras o poros en la vaina aislante polimérica del instrumento que descargan un arco de alta densidad de corriente al intestino adyacente (se verifica con **comprobadores de porosidad de alta tensión a $2,5\text{–}4\text{ kV}$ en la central de esterilización RUMED**).
      - **Acoplamiento directo:** Contacto accidental del electrodo activo con el tubo metálico del laparoscopio o con otra pinza.
@@ -220,32 +194,16 @@ Emitiendo alarmas escalonadas y deteniendo la bomba al alcanzar el umbral progra
 
 A diferencia de los videoendoscopios flexibles digestivos (termosensibles, limitados a $\le 55\text{ }^\circ\text{C}$), las **ópticas rígidas quirúrgicas con inscripción `AUTOCLAVABLE` y soldadura láser en cristal de zafiro** soportan la **esterilización por vapor saturado en autoclave (`UNE-EN 285` / `ISO 17665`) a $134\text{ }^\circ\text{C}$ durante $3\text{–}5\text{ minutos}$ ($2\text{ bar}$)** o a $121\text{ }^\circ\text{C}$ durante $15\text{–}20\text{ minutos}$, así como esterilización a baja temperatura por **plasma de gas de peróxido de hidrógeno ($\text{H}_2\text{O}_2$, $< 50\text{ }^\circ\text{C}$)** (método preferente para cabezales de cámara no autoclavables, cables de luz de gel líquido y ópticas 3D sensibles).
 
-**Protocolo de Mantenimiento Preventivo Anual (`XMAO` — Módulos 1587 y 1589):**
+**Protocolo de Mantenimiento Preventivo Anual (`GMAO` — Módulos 1587 y 1589):**
 1. **Inspección Óptica y Fotométrica:** Comprobación con lupa de superficies de zafiro distal y ocular proximal (ausencia de depósitos proteicos quemados por el autoclave, limpiables solo con pasta específica de óxido de aluminio), ausencia de humedad interna (empañamiento al cambio térmico indica pérdida de hermeticidad del sello de zafiro), medida del porcentaje de fibras rotas en el cable de luz ($< 25\%$) y medida del flujo luminoso en lúmenes/lux con **medidor de potencia óptica/luxómetro endoscópico**.
 2. **Calibración del Insuflador de $\text{CO}_2$:** Verificación con manómetro patrón digital y caudalímetro másico (analizador de flujo tipo *Fluke VT650/900*) de la exactitud de la presión estática en $10, 12, 15\text{ y }20\text{ mmHg}$ (tolerancia $\pm 1\text{ a }\pm 2\text{ mmHg}$), caudal de insuflación y disparo de la válvula de sobrepresión a $> 25\text{–}30\text{ mmHg}$.
-3. **Seguridad Eléctrica (`UNE-EN 62353`):** Medición de resistencia de tierra de protección ($\le 0,3\text{ }\Omega$ del chasis de la torre y del transformador de aislamiento del carro), corriente de fuga del equipo y corriente de fuga de parte aplicable (cabezal de cámara y elementos en contacto con el paciente **Tipo BF o CF**).
+3. **Seguridad Eléctrica:** Medición de resistencia de tierra de protección ($\le 0,3\text{ }\Omega$ del chasis de la torre y del transformador de aislamiento del carro), corriente de fuga del equipo y corriente de fuga de parte aplicable (cabezal de cámara y elementos en contacto con el paciente **Tipo BF o CF**).
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Quirófanos Integrados Digitales y Enrutamiento de Vídeo en las 7 Áreas Sanitarias
-
-En los bloques quirúrgicos de los hospitales de referencia de las **7 Áreas Sanitarias del SERGAS** (CHUAC en A Coruña, CHUS en Santiago, CHUVI — Hospital Álvaro Cunqueiro en Vigo, HULA en Lugo, CHUO en Ourense, CHOP en Pontevedra y CHUF en Ferrol), así como en los **14 Hospitales Comarcales**, las torres de endoscopia quirúrgica han evolucionado hacia **Quirófanos Integrados Digitales** (ej. sistemas *KARL STORZ OR1*, *Stryker iSuite* u *Olympus ENDOALPHA*):
-
-- **Matriz de Conmutación y Enrutamiento de Vídeo sin Compresión (*Video-over-IP* / Fibra Óptica / 12G-SDI):** Permite enrutar en tiempo real y con **latencia cero ($< 1\text{ fotograma}$)** cualquier fuente de imagen del quirófano (procesador laparoscópico 4K/3D/ICG, ecógrafo intraoperatorio, arco quirúrgico en C, microscopio quirúrgico, cámara cenital de lámpara quirúrgica y constantes del monitor de anestesia) hacia cualquiera de los monitores suspendidos en los brazos de techo, aplicando modos **PIP (*Picture-in-Picture*)** o **PBP (*Picture-by-Picture*)** desde una pantalla táctil en zona estéril o mediante comandos de voz.
-- **Control Centralizado de Dispositivos (Bus de comunicación propietario / `IEEE 11073` SDC):** Permite al cirujano o a la enfermería instrumentista ajustar desde la pantalla táctil o desde los botones programables del cabezal de cámara los parámetros del insuflador de $\text{CO}_2$, la fuente de luz, la bomba de irrigación y la grabación de vídeo.
-
-### 5.2. Integración con `IANUS`, `PACS/VNA` y Gestión en `XMAO`
-
-1. **Lista de Trabajo (`DICOM Modality Worklist` — MWL) y Almacenamiento `DICOM Visible Light`:** Al iniciar la intervención, el sistema de documentación quirúrgica de la torre consulta por HL7/DICOM la lista de trabajo quirúrgica del paciente activo (identificado por su código de tarjeta sanitaria del SERGAS / CIP), descarga automáticamente sus datos demográficos y el episodio quirúrgico, y al finalizar envía las fotografías intraoperatorias (objetos `VL Endoscopic Image Storage`, SOP Class `1.2.840.10008.5.1.4.1.1.77.1.1`) y los clips de vídeo comprimidos en H.264/H.265 encapsulados en DICOM directamente al **PACS / VNA corporativo del SERGAS**, quedando accesibles desde la historia clínica electrónica única **`IANUS`**.
-2. **Trazabilidad en RUMED y Gestión en `XMAO`:** Cada óptica rígida, cabezal de cámara y motor *shaver* está inventariado individualmente con su número de serie y código UDI en el sistema corporativo **`XMAO`** (asociado a la torre quirúrgica padre), registrando las reparaciones de lentes de barra o sellos de zafiro y exigiendo certificado de descontaminación y esterilización emitido por la Central de Esterilización (**RUMED**) antes de cualquier envío al servicio técnico externo.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Subsistema / Concepto Técnico | Norma / Magnitud / Parámetro Oficial | Valor / Cifra Exacta de Examen A1 | Implicación Clínica o de Ingeniería Biomédica |
 | :--- | :--- | :--- | :--- |
@@ -256,13 +214,13 @@ En los bloques quirúrgicos de los hospitales de referencia de las **7 Áreas Sa
 | **Resolución 4K UHD vs. Full HD** | Píxeles en barrido progresivo ($60\text{ Hz}$) | **4K UHD: $\mathbf{3840 \times 2160}$** ($8,3\text{ MP}$) vs. FHD: $1920 \times 1080$ | Espacio de color extendido **BT.2020** ($10\text{–}12\text{ bits}$) |
 | **Fluorescencia NIR con Verde de Indocianina (ICG)** | Excitación ($\lambda_{\text{exc}}$) y Emisión ($\lambda_{\text{em}}$) | **Excitación: $\mathbf{780\text{–}805\text{ nm}}$ · Emisión: $\mathbf{820\text{–}835\text{ nm}}$** | Perfusión de anastomosis, colangiografía sin RX y ganglio centinela |
 | **Fuente de luz de Xenón vs. LED** | Temperatura de color y vida útil | Xenón: **$6.000\text{ K}$ ($500\text{ h}$)** · LED: **$6.000\text{ K}$ ($\ge 30.000\text{ h}$)** | Filtro IR (*Hot Mirror*); cable de fibra óptica se retira si $> 25\text{–}30\%$ rotas |
-| **Esterilización de ópticas rígidas *Autoclavables*** | Ciclo de vapor (`UNE-EN 285`) | **$134\text{ }^\circ\text{C}$ durante $3\text{–}5\text{ min}$** (ventana de zafiro soldada) | Los cables de gel líquido **NO** admiten autoclave de vapor a $134\text{ }^\circ\text{C}$ |
+| **Esterilización de ópticas rígidas *Autoclavables*** | Ciclo de vapor | **$134\text{ }^\circ\text{C}$ durante $3\text{–}5\text{ min}$** (ventana de zafiro soldada) | Los cables de gel líquido **NO** admiten autoclave de vapor a $134\text{ }^\circ\text{C}$ |
 | **Gas de neumoperitoneo en laparoscopia** | Tipo de gas y motivos físicos | **$\text{CO}_2$ medicinal** (toma gris `ISO 9170`) | **1) Incombustible/no comburente** y **2) $\mathbf{> 20\times}$ más soluble en sangre** |
 | **Presión intraabdominal y flujo de insuflación** | Ajuste normal en adulto / pediátrico | Adulto: **$\mathbf{12\text{–}15\text{ mmHg}}$** (niños $8\text{–}10\text{ mmHg}$) · Flujo hasta **$40\text{–}50\text{ L/min}$** | Medición intermitente de presión estática (o continua sin válvulas *AirSeal*) |
 | **Filtración de humo quirúrgico laparoscópico** | Eficiencia del filtro de evacuación | **Filtro ULPA ($\mathbf{99,999\%}$ a $\mathbf{0,12\text{ }\mu\text{m}}$)** + carbón activo | Retiene partículas submicrónicas, hidrocarburos y virus (VPH/VHB) |
 | **Resectoscopia Monopolar vs. Bipolar (RTU / Histero)** | Líquido de distensión y déficit crítico | Monopolar: **Glicina $1,5\%$** (déficit máx. **$1.000\text{ mL}$**) · Bipolar: **$\text{NaCl } 0,9\%$** ($2.500\text{ mL}$) | El uso de $\text{NaCl } 0,9\%$ en bipolar evita la **hiponatremia dilucional post-RTU** |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 
 1. **Trampa de test sobre por qué se usa $\text{CO}_2$ en laparoscopia:** Si una opción afirma que el $\text{CO}_2$ se emplea «porque es un gas inerte que no se absorbe por el peritoneo», es **FALSA**. El $\text{CO}_2$ **sí se absorbe intensamente** a través del peritoneo (produciendo hipercapnia y acidosis respiratoria leve que el anestesiólogo compensa hiperventilando al paciente); precisamente su **altísima solubilidad sanguínea** ($\approx 20\times$ superior al $\text{O}_2$) junto con su carácter **incombustible y no comburente** son las dos razones por las que se utiliza, ya que impide la explosión con el electrobisturí y evita la embolia gaseosa letal.
 2. **Trampa sobre Resectoscopia Monopolar vs. Bipolar y el Suero Fisiológico:** En un resector **monopolar** NUNCA puede utilizarse suero fisiológico ($\text{NaCl } 0,9\%$), porque los iones $\text{Na}^+$ y $\text{Cl}^-$ conducen y dispersan la corriente de radiofrecuencia por toda la cavidad vesical/uterina impidiendo que se forme el arco de corte en el asa. Por ello el monopolar exige medios no electrolíticos (glicina/sorbitol), con el consiguiente peligro de **síndrome de intravasación hiponatrémica** si el déficit hídrico supera $1.000\text{ mL}$. En cambio, el resector **bipolar** exige obligatoriamente **suero fisiológico ($\text{NaCl } 0,9\%$)** para generar la corona de plasma, eliminando el riesgo de hiponatremia.

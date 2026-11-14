@@ -1,46 +1,18 @@
 # Tema 69 — Economía circular. Sostenibilidad. Resiliencia.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #69 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 08 — Ingeniería Hospitalaria, REBT, Ambiente Controlado, Planes Directores, Calidad, CAD y Sostenibilidad
-> - **Marco Normativo y Técnico Nuclear:** Ley 7/2022, de 8 de abril, de residuos y suelos contaminados para una economía circular; **Decreto 38/2015, de 26 de febrero, de residuos sanitarios de Galicia (DOG núm. 49)**; Real Decreto 110/2015 sobre residuos de aparatos eléctricos y electrónicos (`RAEE`); Norma internacional **`IEC 63077:2019`** (*Good Refurbishment Practice for Medical Electrical Equipment*); Reglamento (UE) 2024/1781 de Ecodiseño y Directiva 2009/125/CE; Normas `UNE-EN ISO 14001:2015`, Reglamento `EMAS` e `ISO 14064` (Huella de Carbono); Ley 8/2011 de Protección de Infraestructuras Críticas (`PIC`) y Directiva (UE) 2022/2557 (`CER`); Módulos 1592.e y 1594.d (RD 838/2015 y Orden EFP/1216/2019).
-> - **Sistemas y Entorno SERGAS:** Estrategia de Economía Circular del SERGAS, Sistema de Gestión Ambiental (`ISO 14001` / `EMAS`) en las 7 Áreas Sanitarias, Programa de descarbonización de gases anestésicos en Bloques Quirúrgicos, gestión de bajas `RAEE` en `XMAO`, Almacenes de Decaimiento Radiactivo (`GALARIA` / Medicina Nuclear) y Planes de Contingencia y Resiliencia Hospitalaria.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 69** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** integra tres dimensiones estratégicas y reglamentarias de la ingeniería clínica y hospitalaria del siglo XXI: **Economía Circular**, **Sostenibilidad** y **Resiliencia**. Su desarrollo riguroso abarca cuatro bloques nucleares:
-1. **Economía circular aplicada a la sanidad y a la tecnología biomédica**: Transición del modelo lineal al circular (`Ley 7/2022` y **Estrategia de Economía Circular del SERGAS**), ecodiseño de productos sanitarios, extensión de vida útil mediante actualizaciones tecnológicas (*Upgrades*), **reacondicionamiento industrial certificado conforme a la norma `IEC 63077:2019`** y gestión al final de la vida útil de los **Residuos de Aparatos Eléctricos y Electrónicos (`RAEE`, `RD 110/2015`)**.
-2. **Clasificación y gestión de los residuos sanitarios en Galicia (`Decreto 38/2015, de 26 de febrero`)**: Dominio exhaustivo de las **4 Clases de residuos sanitarios en Galicia (`Clases I, II, III [IIIa y IIIb] y IV`)**, sus envases, pictogramas, prohibiciones, tiempos máximos de almacenamiento intracentro ($72\text{ horas}$ / $1\text{ semana}$ refrigerado), tratamientos extracentro, gestión de residuos radiactivos por decaimiento (`ENRESA`/`CSN`), registro de incidentes y memoria anual.
-3. **Sostenibilidad ambiental y descarbonización hospitalaria**: Sistemas `ISO 14001` y `EMAS`, cálculo de la **Huella de Carbono (`ISO 14064`) en los Alcances 1, 2 y 3**, impacto climático de los **gases anestésicos halogenados (Desflurano vs. Sevoflurano y $\text{N}_2\text{O}$)** y del hexafluoruro de azufre ($\text{SF}_6$), y Compra Pública Ecológica (`CPE`).
-4. **Resiliencia de infraestructuras críticas y servicios biomédicos**: Marco de la `Ley 8/2011 PIC` y la OMS (*Safe and Resilient Hospitals*), topologías de redundancia eléctrica (`N+1` / `2N`), hídrica, de gases medicinales (`UNE-EN ISO 7396-1` de 3 fuentes) y de parque tecnológico ante emergencias y catástrofes.
-
-### 0.2. Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías equivalentes con solapamiento:** **Ingeniero/a Técnico/a** (Subgrupo A2).
-- **Grado de solapamiento:** **Medio (60%)** — Confluye directamente con los temas de clasificación y gestión intracentro/extracentro de residuos sanitarios en Galicia y con los temas de sostenibilidad y eficiencia energética hospitalaria.
-- **Epígrafes equivalentes verificados:**
-  - **Ingeniero/a Técnico/a:** *Tema 63. Gestión de residuos. Código técnico de la edificación (Sección HS 2).*
-  - **Ingeniero/a Técnico/a:** *Tema 64. Los residuos sanitarios. Clasificación. Decreto 38/2015, de residuos sanitarios de Galicia.*
-  - **Ingeniero/a Técnico/a:** *Tema 65. La gestión intracentro y extracentro de los residuos sanitarios. Tratamiento de los residuos. Registro de incidentes y accidentes. Memoria anual.*
-  - **Ingeniero/a Técnico/a:** *Tema 28. Cogeneración, trigeneración, recuperadores, máquinas de absorción y eficiencia energética.*
-  - **Currículo BOE (`RD 838/2015` y `Orden EFP/1216/2019`):** *Módulo 1592 (bloque e Residuos biosanitarios)* y *Módulo 1594 (bloque d Planificación y gestión del tratamiento de residuos y reutilización de componentes).*
-
----
-
 ## 📖 1. Economía Circular en el Sector Salud y en el Ciclo de Vida de la Tecnología Biomédica
 
-### 1.1. Del Modelo Lineal al Modelo de Economía Circular (`Ley 7/2022`) y Jerarquía de Residuos
+### 1.1. Del Modelo Lineal al Modelo de Economía Circular y Jerarquía de Residuos
 El sector sanitario representa cerca del **$4,5\text{ al }5\%$ de las emisiones netas de gases de efecto invernadero** de los países desarrollados y es un consumidor intensivo de materias primas críticas (tierras raras en detectores centelleadores como lutecio `LSO/LYSO` o gadolinio, helio líquido, cobre, platino, litio y polímeros de grado médico). Frente al modelo económico lineal tradicional de *«extraer – fabricar – utilizar – desechar»*, la **Economía Circular** (regulada en el marco del **Pacto Verde Europeo**, el Plan de Acción de Economía Circular de la UE y la **Ley 7/2022, de 8 de abril, de residuos y suelos contaminados para una economía circular**) propone un sistema industrial regenerativo en el que el valor de los productos, componentes y materiales se mantiene dentro de la economía durante el mayor tiempo posible.
 
 El Artículo 8 de la **Ley 7/2022** (transponiendo la Directiva Marco de Residuos `2008/98/CE`) establece un **orden de prelación vinculante en cinco escalones denominado Jerarquía de Residuos**:
 $$\mathbf{1.\text{º Prevención (Reducción en origen)}} \longrightarrow \mathbf{2.\text{º Preparación para la Reutilización}} \longrightarrow \mathbf{3.\text{º Reciclado}} \longrightarrow \mathbf{4.\text{º Otro tipo de Valorización (incluida la energética)}} \longrightarrow \mathbf{5.\text{º Eliminación (Depósito en vertedero / Incineración sin recuperación)}}$$
 
-### 1.2. Las Cuatro Vías de Circularidad en Ingeniería Biomédica: Ecodiseño, *Upgrades*, Reacondicionamiento (`IEC 63077:2019`) y Gestión `RAEE` (`RD 110/2015`)
-En el ámbito específico del equipamiento electromédico y de diagnóstico por imagen (`Módulo 1594.d`), la economía circular se materializa a través de **cuatro estrategias técnicas complementarias**:
+### 1.2. Las Cuatro Vías de Circularidad en Ingeniería Biomédica: Ecodiseño, *Upgrades*, Reacondicionamiento y Gestión `RAEE`
+En el ámbito específico del equipamiento electromédico y de diagnóstico por imagen, la economía circular se materializa a través de **cuatro estrategias técnicas complementarias**:
 
 1. **Ecodiseño de Productos Sanitarios (`Directiva 2009/125/CE` y `Reglamento (UE) 2024/1781` de Ecodiseño para Productos Sostenibles):**
-   Integración de los aspectos medioambientales desde la fase de concepción e I+D del dispositivo médico (`ISO 14006`): diseño modular que facilite el desmontaje y la reparación, reducción de sustancias peligrosas (**Directiva `RoHS 2011/65/UE`**, que restringe el uso de plomo en soldaduras electrónicas, mercurio, cadmio, cromo hexavalente y retardantes de llama bromados `PBB/PBDE`, con exenciones reguladas para blindajes de plomo radiológico), reducción del consumo en modo espera (*standby*) e imanes superconductores de RM con tecnología **sin pérdida de helio (*Zero Boil-Off*) o micro-enfriamiento sellado ($< 7\text{ litros}$ de helio de por vida frente a los $1.500\text{ litros}$ clásicos)**.
+   Integración de los aspectos medioambientales desde la fase de concepción e I+D del dispositivo médico: diseño modular que facilite el desmontaje y la reparación, reducción de sustancias peligrosas (**Directiva `RoHS 2011/65/UE`**, que restringe el uso de plomo en soldaduras electrónicas, mercurio, cadmio, cromo hexavalente y retardantes de llama bromados `PBB/PBDE`, con exenciones reguladas para blindajes de plomo radiológico), reducción del consumo en modo espera (*standby*) e imanes superconductores de RM con tecnología **sin pérdida de helio (*Zero Boil-Off*) o micro-enfriamiento sellado ($< 7\text{ litros}$ de helio de por vida frente a los $1.500\text{ litros}$ clásicos)**.
 2. **Extensión de Vida Útil mediante Actualizaciones Tecnológicas en Sala (*Mid-Life Upgrades / Fit / Evolution*):**
    En grandes equipos de **Resonancia Magnética (`RM`)**, el elemento más pesado, costoso y de mayor huella de carbono embebida es el **imán superconductor criogénico ($5\text{ a }7\text{ toneladas}$ de cobre, niobio-titanio y acero inoxidable)**, el cual no sufre desgaste físico con los años. En lugar de desmantelar el imán a los $10\text{ años}$ y abrir la fachada del hospital para introducir otro nuevo, la ingeniería circular permite conservar *in situ* el imán original (y la Jaula de Faraday) y **sustituir íntegramente las bobinas de gradiente, la cadena digital de radiofrecuencia (conversión a fibra óptica directa en bobina), la mesa de paciente, las antenas receptoras y el software de reconstrucción por IA**. Este *upgrade* integral convierte el equipo en un sistema de última generación con un **ahorro económico del $30\text{–}40\%$, una reducción del tiempo de parada de obra del $70\%$ y un ahorro de más de $25\text{ toneladas de }\text{CO}_2\text{ equivalente}$**.
 3. **Reacondicionamiento Industrial Certificado (*Good Refurbishment Practice*) según la Norma Internacional `IEC 63077:2019`:**
@@ -52,7 +24,7 @@ En el ámbito específico del equipamiento electromédico y de diagnóstico por 
      4. *Ensayo Final y Verificación de Especificaciones Originales (*Testing*):* Superación del $100\%$ de los ensayos de seguridad eléctrica y prestaciones de fábrica (**`UNE-EN 60601-1`** y normas particulares `60601-2-xx`) como si saliese nuevo de la línea de producción.
      5. *Reinstalación, Etiquetado de «Equipo Reacondicionado conforme a IEC 63077», Garantía y Servicio Postventa.*
    - **Nota regulatoria `MDR 2017/745` (`Art. 17` y `Art. 2.31`):** Si el reacondicionamiento se limita a restituir el equipo a sus especificaciones originales conforme a `IEC 63077` sin cambiar su finalidad prevista ni empeorar su seguridad, mantiene su marcado CE original; por el contrario, una **«transformación total» (*fully refurbishing*)** que modifique la finalidad prevista o las prestaciones para comercializarlo como producto nuevo convierte al transformador en **fabricante legal sujeto a nueva evaluación de conformidad `MDR`**.
-4. **Gestión de Residuos de Aparatos Eléctricos y Electrónicos (`RAEE`) al Final de la Vida Útil (`Real Decreto 110/2015`):**
+4. **Gestión de Residuos de Aparatos Eléctricos y Electrónicos (`RAEE`) al Final de la Vida Útil:**
    Cuando un equipo biomédico causa baja definitiva en el inventario del **`XMAO`** y no es apto para reutilización ni reacondicionamiento, se convierte en un **Residuo de Aparato Eléctrico y Electrónico (`RAEE`) de uso profesional**, regulado por el **Real Decreto 110/2015, de 20 de febrero** (que transpone la Directiva `2012/19/UE WEEE`):
    - **Clasificación:** Los productos sanitarios eléctricos y de diagnóstico *in vitro* se encuadran en la **Categoría 4 (Grandes aparatos) o Categoría 5 (Pequeños aparatos)** del Anexo III del `RD 110/2015` (históricamente Categoría 8: *Aparatos médicos*).
    - **Exclusión por riesgo infeccioso (`Art. 2.2.g RD 110/2015`):** Quedan excluidos del ámbito de `RAEE` los **productos sanitarios implantados e infectados** (como marcapasos o desfibriladores explantados de un paciente o sensores desechables contaminados con sangre), los cuales deben gestionarse como **residuos biosanitarios especiales de Clase IIIa** antes del final de su vida útil.
@@ -60,11 +32,11 @@ En el ámbito específico del equipamiento electromédico y de diagnóstico por 
 
 ---
 
-## ⚙️ 2. Clasificación y Gestión de los Residuos Sanitarios en Galicia (`Decreto 38/2015, de 26 de febrero`)
+## ⚙️ 2. Clasificación y Gestión de los Residuos Sanitarios en Galicia
 
-El núcleo normativo autonómico más preguntado en los exámenes del SERGAS dentro de este tema es el **Decreto 38/2015, de 26 de febrero, de residuos sanitarios de Galicia** (publicado en el DOG núm. 49, de 12 de marzo de 2015), que tiene por objeto regular la producción y gestión intracentro y extracentro de los residuos generados en cualquier centro, servicio o establecimiento sanitario de Galicia.
+El núcleo normativo autonómico más preguntado en los exámenes del SERGAS dentro de este tema es el **Decreto 38/2015, de 26 de febrero, de residuos sanitarios de Galicia**, que tiene por objeto regular la producción y gestión intracentro y extracentro de los residuos generados en cualquier centro, servicio o establecimiento sanitario de Galicia.
 
-### 2.1. Clasificación Oficial de los Residuos Sanitarios en Galicia en 4 Clases (`Art. 4 y Anexo I Decreto 38/2015`)
+### 2.1. Clasificación Oficial de los Residuos Sanitarios en Galicia en 4 Clases
 El **Artículo 4 y el Anexo I del Decreto 38/2015** clasifican la totalidad de los residuos generados en los centros sanitarios gallegos en **cuatro Clases (`Clase I`, `Clase II`, `Clase III` [dividida en `IIIa` y `IIIb`] y `Clase IV`)**:
 
 1. **CLASE I — Residuos domésticos (Sin riesgo sanitario específico):**
@@ -117,7 +89,7 @@ Los **Artículos 7 a 20 del Decreto 38/2015** imponen prescripciones técnicas e
 
 ## 🔬 3. Sostenibilidad Ambiental Hospitalaria, Descarbonización y Huella de Carbono (`Alcances 1, 2 y 3`)
 
-### 3.1. Sistemas de Gestión Ambiental (`UNE-EN ISO 14001:2015` y Reglamento `EMAS`)
+### 3.1. Sistemas de Gestión Ambiental
 Los complejos hospitalarios del SERGAS articulan su política de sostenibilidad a través de dos estándares internacionales auditables:
 - **Norma `UNE-EN ISO 14001:2015` (*Sistemas de Gestión Ambiental — Requisitos con orientación para su uso*):** Basada en la Estructura de Alto Nivel (`HLS`) y el ciclo `PDCA`, exige identificar y evaluar todos los **aspectos e impactos ambientales** significativos del hospital bajo una **perspectiva de ciclo de vida** (emisiones atmosféricas, vertidos de aguas residuales hospitalarias, generación de residuos `Decreto 38/2015`, consumo de energía eléctrica/térmica, agua, papel y reactivos), garantizar el cumplimiento de los requisitos legales ambientales y fijar objetivos anuales cuantificables de mejora ambiental.
 - **Reglamento Europeo `EMAS` (*Eco-Management and Audit Scheme* — Reglamento `(CE) 1221/2009` modificado por `(UE) 2017/1505`):** Estándar europeo de máxima exigencia ambiental que incorpora todos los requisitos de la `ISO 14001` y añade la obligación de elaborar y hacer pública anualmente una **Declaración Ambiental validada por un verificador medioambiental acreditado**, detallando indicadores básicos de eficiencia en energía, materiales, agua, residuos, biodiversidad y emisiones.
@@ -142,10 +114,10 @@ El inventario de emisiones de Gases de Efecto Invernadero (`GEI`), expresado en 
 
 ## 🛡️ 4. Resiliencia de Infraestructuras Críticas y Servicios Biomédicos Hospitalarios
 
-### 4.1. Concepto y Marco Legal de Resiliencia en Infraestructuras Críticas Sanitarias (`Ley 8/2011 PIC` y `Directiva CER 2022/2557`)
+### 4.1. Concepto y Marco Legal de Resiliencia en Infraestructuras Críticas Sanitarias
 En ingeniería de sistemas sanitarios, la **Resiliencia** (definida por el marco ***Safe and Resilient Hospitals*** de la OMS, la **Ley 8/2011, de 28 de abril, por la que se establecen medidas para la protección de las infraestructuras críticas [`PIC`]** y la **Directiva (UE) 2022/2557 relativa a la resiliencia de las entidades críticas [`CER`]**) es la **capacidad intrínseca de un hospital y de su parque tecnológico biomédico para anticipar, resistir, absorber, adaptarse y recuperarse rápidamente frente a perturbaciones extremas o crisis multirriesgo** (apagones eléctricos generales *blackouts*, sequías o roturas de suministro de agua, olas de calor extremas, inundaciones, incendios, pandemias con avalancha de pacientes críticos o ciberataques `ransomware`), **manteniendo en todo momento operativas sus funciones asistenciales vitales**.
 
-El **Sector Salud** está catalogado legalmente en el Anexo de la `Ley 8/2011` y de la `Directiva CER` como uno de los **sectores estratégicos esenciales**, exigiendo a los grandes complejos hospitalarios disponer de un **Plan de Autoprotección (`RD 393/2007`)**, un **Plan de Seguridad del Operador / Protección Específica** y un **Plan de Continuidad de Negocio y Contingencia Tecnológica**.
+El **Sector Salud** está catalogado legalmente en el Anexo de la `Ley 8/2011` y de la `Directiva CER` como uno de los **sectores estratégicos esenciales**, exigiendo a los grandes complejos hospitalarios disponer de un **Plan de Autoprotección**, un **Plan de Seguridad del Operador / Protección Específica** y un **Plan de Continuidad de Negocio y Contingencia Tecnológica**.
 
 ### 4.2. Los Cinco Pilares de Ingeniería de Resiliencia Física y Biomédica en un Hospital
 Para que un hospital sea verdaderamente autónomo y resiliente cuando colapsan las redes exteriores de la ciudad, su ingeniería de instalaciones y de equipamiento biomédico se diseña bajo una arquitectura de **redundancia activa (`N+1` y `2N`) e isla autónoma**:
@@ -163,14 +135,10 @@ Para que un hospital sea verdaderamente autónomo y resiliente cuando colapsan l
 4. **Resiliencia Espacial y Elasticidad Asistencial (*Surge Capacity*):**
    Diseño de las áreas de **URPA, CMA, Hospital de Día y plantas de hospitalización** con **paneles cabeceros dotados de tomas duplicadas de oxígeno, vacío, aire medicinal y red eléctrica de seguridad**, permitiendo transformar en menos de $24\text{ horas}$ decenas de puestos convencionales en **camas de cuidados críticos o semicríticos con ventilación mecánica** ante una pandemia o catástrofe con múltiples víctimas.
 5. **Resiliencia del Parque Biomédico y Ciberseguridad Operativa (`XMAO` y `ENS`):**
-   - Mantenimiento en el **`XMAO`** de un **Stock Estratégico de Reserva de Emergencia** (respiradores volumétricos y de transporte, monitores multiparamétricos, bombas de infusión y desfibriladores) mantenido en carga y verificado periódicamente (`UNE-EN 62353`), listo para despliegue inmediato entre los hospitales de las 7 Áreas Sanitarias.
+   - Mantenimiento en el **`XMAO`** de un **Stock Estratégico de Reserva de Emergencia** (respiradores volumétricos y de transporte, monitores multiparamétricos, bombas de infusión y desfibriladores) mantenido en carga y verificado periódicamente, listo para despliegue inmediato entre los hospitales de las 7 Áreas Sanitarias.
    - **Plan de Contingencia ante Ciberataque o Caída de Red (`Modo Isla Biomédico`):** Todos los equipos de soporte vital, estaciones de anestesia, desfibriladores y modalidades de imagen (`TC`, `RX`, `Ecografía`) están configurados para **poder operar localmente en modo autónomo (*Standalone*) y almacenar estudios en su disco local** aunque caigan la red hospitalaria, el servidor `DICOM Worklist` o el `PACS`, garantizando que ningún paciente urgente deje de ser diagnosticado o intervenido durante una incidencia TIC.
 
----
-
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
-
-### 5.1. Tabla Maestra de Clasificación y Gestión de Residuos Sanitarios en Galicia (`Decreto 38/2015`)
+### 4.3. Tabla Maestra de Clasificación y Gestión de Residuos Sanitarios en Galicia
 
 | Clase (`Decreto 38/2015` Galicia) | Denominación Oficial y Ejemplos Representativos | Envase, Color y Etiquetado Intracentro | Tiempo Máx. Almacén Final Intracentro | Tratamiento Final Extracentro |
 | :--- | :--- | :--- | :--- | :--- |
@@ -178,33 +146,27 @@ Para que un hospital sea verdaderamente autónomo y resiliente cuando colapsan l
 | **Clase II** | **Residuos sanitarios no específicos (Asimilables a domésticos):** Gasas, vendajes, guantes, mascarillas, yesos, bolsas de orina vacías de pacientes **no infecciosos**. | Bolsa de polietileno resistente color **negro/gris** (galga $\ge 200$). Sin pictograma de biorriesgo. | Evacuación frecuente (recomendado $\le 24\text{–}72\text{ h}$). | Gestión asimilable a residuos domésticos municipales (prohibido reciclar). |
 | **Clase III — Subgrupo `IIIa`** | **Biológicos / Infecciosos y Cortantes/Punzantes:** Agujas, bisturís, cultivos microbiológicos, sangre/líquidos corporales **$> 100\text{ ml}$**, vacunas vivas, infecciosos graves. | **Contenedor rígido AMARILLO** (o verde con bolsa roja) impermeable, imperforable, cierre hermético definitivo. **Pictograma «Riesgo Biológico»** (`LER 18 01 03*`). | **$\le 72\text{ horas}$ a temp. ambiente** · **$\le 1\text{ semana}$ ($7\text{ días}$) refrigerado a $\le 4\text{ }^\circ\text{C}$**. | **Esterilización en Autoclave + Trituración** (o Incineración; en priones incineración obligatoria). Transporte `ADR Clase 6.2 UN 3291`. |
 | **Clase III — Subgrupo `IIIb`** | **Residuos Químicos peligrosos y Citotóxicos / Citostáticos:** Restos de antineoplásicos, carcinógenos, mutágenos y material en contacto; formol, xileno. | **Contenedor rígido AZUL** de polietileno de un solo uso con cierre hermético. **Pictograma «Citotóxico»** (`LER 18 01 08*`). | **$\le 72\text{ horas}$ a temp. ambiente** · **$\le 1\text{ semana}$ refrigerado a $\le 4\text{ }^\circ\text{C}$**. | **EXCLUSIVAMENTE INCINERACIÓN a alta temperatura ($\ge 1.100\text{ }^\circ\text{C}$)**. **Prohibido el autoclave**. |
-| **Clase IV** | **Residuos sujetos a normativas singulares:** **1) Radiactivos** ($^{99\text{m}}\text{Tc}$, $^{18}\text{F}$, $^{131}\text{I}$); **2) Cadáveres y restos humanos de entidad** (`Decreto 151/2014`); **3) Medicamentos caducados** y **`RAEE` (`RD 110/2015`)**. | Blindajes plomados con trébol radiactivo (Radiactivos); contenedores específicos (`RAEE` descontaminados). | Radiactivos de vida corta: **$\ge 10\text{ semividas}$ ($10 \cdot T_{1/2}$)** en Almacén de Decaimiento hasta nivel de exención. | Competencia exclusiva de **`ENRESA` / `CSN`** (o desclasificación tras decaimiento); Gestor autorizado `RAEE`. |
-
-### 5.2. Despliegue de la Estrategia de Economía Circular, Sostenibilidad y Resiliencia en el SERGAS
-El **Servicio Gallego de Salud** ha sido pionero en el Sistema Nacional de Salud en la aprobación y despliegue de la **Estrategia de Economía Circular del SERGAS**, integrada con su red de hospitales certificados en **`UNE-EN ISO 14001`** y **`EMAS`** (entre los que destacan los complejos hospitalarios de las 7 Áreas Sanitarias y el reconocimiento internacional de la red *Global Green and Healthy Hospitals* — *Health Care Without Harm*):
-1. **Descarbonización Quirúrgica en Galicia:** El SERGAS ha implantado un programa corporativo en los bloques quirúrgicos de las 7 Áreas Sanitarias para la **retirada de los vaporizadores de Desflurano ($\text{GWP}_{100} = 2.540$)**, la implantación de **sistemas de captura circular de gases anestésicos por carbón activo** en las estaciones de anestesia y la monitorización de flujos mínimos, logrando reducir en miles de toneladas de $\text{CO}_2\text{e}$ las emisiones de Alcance 1 del sistema sanitario público gallego.
-2. **Economía Circular en Alta Tecnología y `XMAO`:** En los planes de renovación tecnológica del SERGAS se han ejecutado actualizaciones integrales (*upgrades* de imanes de RM de $1,5\text{ T}$) reaprovechando los criostatos existentes, se reutilizan componentes verificados entre áreas sanitarias a través del módulo de almacén del **`XMAO`** y se gestionan centralizadamente las bajas de equipamiento electromédico como **`RAEE` (`RD 110/2015`)** con certificado de descontaminación y borrado seguro de datos clínicos.
-3. **Gestión Centralizada de Residuos (`Decreto 38/2015`) y Almacenes de Decaimiento (`GALARIA`):** Trazabilidad por pesaje electrónico con código de barras de cada contenedor de Clase IIIa y IIIb desde la planta generadora hasta el almacén final intracentro, y gestión automatizada de los tanques de decaimiento de efluentes de Terapia Metabólica ($^{131}\text{I}$ y $^{177}\text{Lu}$) en los servicios de Medicina Nuclear.
+| **Clase IV** | **Residuos sujetos a normativas singulares:** **1) Radiactivos** ($^{99\text{m}}\text{Tc}$, $^{18}\text{F}$, $^{131}\text{I}$); **2) Cadáveres y restos humanos de entidad**; **3) Medicamentos caducados** y **`RAEE`**. | Blindajes plomados con trébol radiactivo (Radiactivos); contenedores específicos (`RAEE` descontaminados). | Radiactivos de vida corta: **$\ge 10\text{ semividas}$ ($10 \cdot T_{1/2}$)** en Almacén de Decaimiento hasta nivel de exención. | Competencia exclusiva de **`ENRESA` / `CSN`** (o desclasificación tras decaimiento); Gestor autorizado `RAEE`. |
 
 ---
 
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-| Norma / Concepto Clave | Referencia Oficial | Cifra / Regla Exacta de Examen A1 |
-| :--- | :--- | :--- |
-| **Norma Gallega de Residuos Sanitarios** | **`Decreto 38/2015, de 26 de febrero`** (DOG núm. 49) | Clasifica los residuos sanitarios de Galicia en **4 Clases: I, II, III (`IIIa` y `IIIb`) y IV**. |
-| **Umbral de volumen de sangre líquida para ser Clase IIIa** | `Anexo I.3.a Decreto 38/2015` | Sangre y hemoderivados líquidos en recipientes **$> 100\text{ ml}$** (los punzantes/cortantes son **siempre Clase IIIa**). |
-| **Tiempo máximo en Almacén Final Intracentro (Clase III)** | `Art. 12.2 Decreto 38/2015` | **$\le 72\text{ horas}$ a temperatura ambiente** · **$\le 1\text{ semana}$ ($7\text{ días}$) refrigerado a $\le 4\text{ }^\circ\text{C}$**. |
-| **Tratamiento de Citostáticos (`Clase IIIb`, contenedor azul)** | `Art. 15.2 Decreto 38/2015` | **Exclusivamente INCINERACIÓN ($\ge 1.100\text{ }^\circ\text{C}$)** (totalmente prohibido el autoclave). |
-| **Regla de Decaimiento Radiactivo Intracentro (Clase IV)** | `CSN` / `Orden IET/1946/2013` | Almacenamiento durante **$\ge 10\text{ semividas}$ ($10 \cdot T_{1/2}$)** ($A/A_0 = 2^{-10} = 1/1.024 < 0,1\%$) hasta nivel de exención. |
-| **Norma de Reacondicionamiento de Equipos Médicos** | **`IEC 63077:2019`** | *Good Refurbishment Practice for Medical Electrical Equipment* (5 pasos sin cambiar finalidad prevista). |
-| **Norma Española de Residuos Electrónicos (`RAEE`)** | **`Real Decreto 110/2015`** | Exige **descontaminación biológica previa** y **borrado seguro de datos** antes de entregar el equipo médico al gestor `RAEE`. |
-| **Potencial de Calentamiento Global ($\text{GWP}_{100}$) Anestésicos** | `ISO 14064` / Alcance 1 | **Desflurano: $\approx 2.540$** · **$\text{N}_2\text{O}$: $\approx 273$** · **Sevoflurano: $\approx 130$** · **$\text{SF}_6$: $\approx 23.500\text{–}25.200$**. |
-| **Fuentes de una Central de Gases Medicinales Resiliente** | **`UNE-EN ISO 7396-1`** | **3 Fuentes independientes**: **Primaria + Secundaria + Reserva** (conmutación neumática sin electricidad). |
+| Norma / Concepto Clave | Cifra / Regla Exacta de Examen A1 |
+| :--- | :--- |
+| **Norma Gallega de Residuos Sanitarios** | Clasifica los residuos sanitarios de Galicia en **4 Clases: I, II, III (`IIIa` y `IIIb`) y IV**. |
+| **Umbral de volumen de sangre líquida para ser Clase IIIa** | Sangre y hemoderivados líquidos en recipientes **$> 100\text{ ml}$** (los punzantes/cortantes son **siempre Clase IIIa**). |
+| **Tiempo máximo en Almacén Final Intracentro (Clase III)** | **$\le 72\text{ horas}$ a temperatura ambiente** · **$\le 1\text{ semana}$ ($7\text{ días}$) refrigerado a $\le 4\text{ }^\circ\text{C}$**. |
+| **Tratamiento de Citostáticos (`Clase IIIb`, contenedor azul)** | **Exclusivamente INCINERACIÓN ($\ge 1.100\text{ }^\circ\text{C}$)** (totalmente prohibido el autoclave). |
+| **Regla de Decaimiento Radiactivo Intracentro (Clase IV)** | Almacenamiento durante **$\ge 10\text{ semividas}$ ($10 \cdot T_{1/2}$)** ($A/A_0 = 2^{-10} = 1/1.024 < 0,1\%$) hasta nivel de exención. |
+| **Norma de Reacondicionamiento de Equipos Médicos** | *Good Refurbishment Practice for Medical Electrical Equipment* (5 pasos sin cambiar finalidad prevista). |
+| **Norma Española de Residuos Electrónicos (`RAEE`)** | Exige **descontaminación biológica previa** y **borrado seguro de datos** antes de entregar el equipo médico al gestor `RAEE`. |
+| **Potencial de Calentamiento Global ($\text{GWP}_{100}$) Anestésicos** | **Desflurano: $\approx 2.540$** · **$\text{N}_2\text{O}$: $\approx 273$** · **Sevoflurano: $\approx 130$** · **$\text{SF}_6$: $\approx 23.500\text{–}25.200$**. |
+| **Fuentes de una Central de Gases Medicinales Resiliente** | **3 Fuentes independientes**: **Primaria + Secundaria + Reserva** (conmutación neumática sin electricidad). |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa del `Decreto 38/2015` sobre agujas y bisturís sin uso infeccioso:** Si el tribunal pregunta en qué clase del `Decreto 38/2015` de Galicia se clasifica una aguja hipodérmica o una hoja de bisturí utilizada en un paciente sano no infeccioso, la respuesta es **SIEMPRE Clase IIIa (envase rígido amarillo imperforable)**: todos los objetos cortantes y punzantes son Clase IIIa por su riesgo mecánico de inoculación accidental, hayan estado o no en contacto con agentes infecciosos.
 2. **Trampa del tratamiento de residuos citostáticos (`Clase IIIb`) vs. biosanitarios (`Clase IIIa`):** Los residuos biosanitarios e infecciosos (`Clase IIIa`) pueden tratarse mediante **esterilización en autoclave de vapor + trituración**, pero los residuos **citotóxicos y citostáticos (`Clase IIIb`, contenedor rígido azul)** **NUNCA pueden meterse en un autoclave**: su único tratamiento final admisible es la **incineración a alta temperatura**.
 3. **Trampa de las $72\text{ horas}$ vs. $1\text{ semana}$ en el Almacén Final Intracentro (`Art. 12.2 Decreto 38/2015`):** Memorice con exactitud que el plazo máximo de almacenamiento final intracentro de los residuos de Clase III en Galicia es de **$72\text{ horas}$**, que solo puede ampliarse hasta **$1\text{ semana}$ ($7\text{ días}$)** si el almacén dispone de **sistema de refrigeración ($\le 4\text{ }^\circ\text{C}$)**.

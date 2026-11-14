@@ -98,15 +98,15 @@ En los exámenes del SERGAS (tanto teóricos como supuestos prácticos), pregunt
 1. **Normativa Básica:**
    - **Estatal:** **Ley 41/2002, de 14 de noviembre**, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica + **RD 1093/2010** (conjunto mínimo de datos de los informes clínicos en el SNS, base de la **Historia Clínica Digital del Sistema Nacional de Salud — HCDSNS** y del nodo europeo *MyHealth@EU*).
    - **Autonómica en Galicia (¡Preguntas fijas de Parte Común T7 y Específico T40!):**
-     - **Ley 3/2001, de 28 de mayo**, reguladora del consentimiento informado y de la historia clínica de los pacientes (modificada por la Ley 3/2005 y la Ley 12/2013).
+     - **Ley 3/2001, de 28 de mayo**, reguladora del consentimiento informado y de la historia clínica de los pacientes (modificada por la Ley 3/2005, de 7 de marzo).
      - **Decreto 29/2009, de 5 de febrero**, por el que se regula el uso y acceso a la **historia clínica electrónica (`IANUS`)** en el Sistema Público de Salud de Galicia.
 2. **Principios y Objetivos Clave de `IANUS` en el SERGAS:**
    - **Historia Clínica Única por Paciente en toda Galicia:** Integra en un repositorio único transversal toda la información generada en **Atención Primaria, Atención Hospitalaria (consultas, hospitalización, urgencias, bloque quirúrgico), e-Interconsulta, Receta Electrónica, Laboratorio e Imagen Médica (`PACS`)**.
-   - **Finalidad fundamental de la Historia Clínica (Art. 13 Ley 3/2001):** Facilitar la **asistencia sanitaria** al paciente, dejando constancia de todos aquellos datos que, bajo criterio médico, permitan el conocimiento veraz y actualizado de su estado de salud.
+   - **Finalidad fundamental de la Historia Clínica:** Facilitar la **asistencia sanitaria** al paciente, dejando constancia de todos aquellos datos que, bajo criterio médico, permitan el conocimiento veraz y actualizado de su estado de salud.
    - **Régimen de Acceso y Trazabilidad de Accesos (Decreto 29/2009):**
      - El acceso de los profesionales asistenciales está limitado a aquellos pacientes con los que mantienen un **vínculo asistencial activo** y con **perfiles diferenciados por categoría profesional** (médico, enfermería, personal técnico/administrativo solo a datos identificativos/citación).
      - **Registro de Auditoría (*Log* de accesos):** Todo acceso a `IANUS` queda registrado de forma indeleble (identificación del profesional, fecha, hora, centro, paciente y tipo de información consultada), conservándose el registro de accesos y realizándose auditorías periódicas.
-   - **Plazos de Conservación de la Historia Clínica en Galicia (Art. 20 Ley 3/2001 — ¡Pregunta clásica de test!):**
+   - **Plazos de Conservación de la Historia Clínica en Galicia:**
      - Se conservarán de forma **INDEFINIDA** (junto con los datos de identificación): **los informes de alta, las hojas de consentimiento informado, las hojas quirúrgicas, los informes de anestesia, los informes de exploraciones complementarias, las hojas de evolución, los informes de necropsia y los informes clínicos de urgencias**.
      - El resto de la documentación podrá destruirse una vez hayan transcurrido **5 años desde el fallecimiento del paciente** o, en todo caso, cuando hayan transcurrido **5 años desde la última asistencia** prestada al paciente en la institución.
 

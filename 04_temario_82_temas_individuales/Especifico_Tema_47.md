@@ -1,35 +1,12 @@
 # Tema 47 — Internet of Medical Things (IoMT) y Telemedicina: concepto, arquitectura funcional, sensores y casos de uso en el Sistema público de salud gallego.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #46 de 74 — *Nota: la publicación oficial del DOG núm. 67 omite el Tema 46 y pasa directamente del Tema 45 al Tema 47*) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 07 — Salud Digital, Sistemas Corporativos, Interoperabilidad, HCE, Analítica, IoMT, Citación y Logística (`💎 Núcleo Diamante · Fase 1`)
-> - **Marco Normativo y Técnico Nuclear:** Reglamento (UE) 2017/745 (`MDR`) y Real Decreto 192/2023; Familia de estándares **`ISO/IEEE 11073`** (*Personal Health Device Communication — `PHD`*, protocolo base **`IEEE 11073-20601`** y especializaciones `11073-104xx`); **Guías de Diseño `Continua` (*PCHAlliance*)**; Perfiles médicos **`Bluetooth Low Energy (BLE) GATT`**; Estándar **`IEEE 802.15.6`** (*Wireless Body Area Networks — WBAN*); Banda radioeléctrica médica para implantes activos **`MICS` / `MedRadio` ($401\text{–}406\text{ MHz}$, núcleo $402\text{–}405\text{ MHz}$, `ETSI EN 301 839`)**; Estándar **`HL7 FHIR` (*Personal Health Device IG*)** e **`IHE PCD`**; Norma **`UNE-EN 60601-1-11`** (Equipos electromédicos para uso en el entorno de asistencia sanitaria domiciliaria); Guía de Ciberseguridad **`MDCG 2019-16`** y Norma **`UNE-EN IEC 81001-5-1`**.
-> - **Sistemas y Entorno SERGAS:** **`TELEA`** (*Plataforma de Teleasistencia y Telemonitorización Domiciliaria del SERGAS*), `IANUS 5`, `É-Saúde`, `Sergas Móbil`, Unidades de Monitorización Remota de Dispositivos Cardioimplantables (`Marcapasos`, `DAI`, `CRT`, `Holter Insertable`), `e-Interconsulta` avanzada (Teledermatología, Teleoftalmología) y Red Gallega de **`Teleictus`**.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 47** del programa oficial de Ingeniero/a Biomédico/a (Subgrupo A1) ocupa el **puesto #46 de los 74 temas de la Parte Específica** en el Anexo de la Resolución publicada en el **DOG núm. 67, de 13 de abril de 2026** (debido a que la numeración del DOG salta del Tema 45 al Tema 47, omitiendo el ordinal 46). Es un tema perteneciente al **Núcleo Diamante (Fase 1)** que integra la ingeniería electrónica de biosensores, las redes inalámbricas de grado médico y los sistemas corporativos de telemedicina del SERGAS en cuatro bloques:
-1. **Concepto y taxonomía de Internet of Medical Things (`IoMT`) y Telemedicina:** diferenciación entre dispositivos vestibles (*wearables*), equipamiento de diagnóstico en el punto de atención domiciliario (*Point-of-Care*), implantes médicos activos conectados (`CIEDs`) y sistemas intrahospitalarios (*Smart ICU/Ward*), así como las modalidades síncronas y asíncronas de telemedicina.
-2. **Arquitectura funcional de 4 capas de un ecosistema IoMT:** desde el nodo transductor y el acondicionamiento de señal hasta las redes de área corporal (`WBAN`, `BLE GATT`, `MICS 402–405 MHz`), pasarelas celulares (`5G`, `NB-IoT`), plataforma *middleware* bajo estándares **`IEEE 11073-20601` / `Continua`** y **`HL7 FHIR`**, y capa de aplicación clínica.
-3. **Principios físicos y electrónicos de los sensores biomédicos IoMT:** ecuaciones y transducción en pulsioximetría reflectiva/transmisiva (`PPG`), esfigmomanometría oscilométrica, monitorización continua de glucosa amperométrica (`CGM`), bioimpedancia tetrapolar (`BIA`), parches ECG, espirometría ultrasónica/turbina y acelerometría triaxial `MEMS`.
-4. **Ciberseguridad (`MDCG 2019-16`), seguridad eléctrica domiciliaria (`UNE-EN 60601-1-11`) y casos de uso reales en el SERGAS:** arquitectura y protocolos clínicos de la plataforma corporativa **`TELEA`**, telemonitorización de marcapasos/DAI, Teledermatología, Teleoftalmología y **`Teleictus`**.
-
-### Cruce Verificado con Otras Oposiciones del SERGAS (`cruce_temarios_sergas.md`)
-
-| Categoría SERGAS con Solapamiento | Grado de Solapamiento | Epígrafes Equivalentes y Orientación de Tribunal |
-| :--- | :--- | :--- |
-| **Grupo Técnico de la Función Administrativa / Gestión TIC (Subgrupos A1, A2 y C1)** | **Total (90%)**: Cubre explícitamente telemedicina, telemonitorización, estándares de dispositivos personales conectados (IEEE Continua Alliance) y sistemas clínicos del SERGAS. | • **TIC Superior (A1):** Tema 24. Sistemas de información clínica: telemedicina. Telemonitorización. Historia clínica y receta electrónica. Imagen digital y PAC. Sistema de historia clínica del Sistema nacional de salud. Proyectos de intercambio de información clínica en el ámbito europeo. y Tema 25. Interoperabilidad en el entorno sanitario. Estándares tecnológicos en el ámbito sanitario: DICOM, HL7, CDA, IHE, CEN TC/251, AEN/CTN 139, IEEE Continua Alliance. Implementación de mensajería HL7 sobre buses de integración.<br>• **TIC Gestión (A2):** Tema 16. Sistemas de información clínica... y Tema 17. Interoperabilidad en el entorno sanitario...<br>• **TIC Especialista (C1):** Tema 11. Sistemas de información clínica... y Tema 12. Interoperabilidad en el entorno sanitario... |
-
----
-
 ## 📖 1. Concepto y Taxonomía de Internet of Medical Things (`IoMT`) y Telemedicina
 
 ### 1.1. Concepto de `IoMT` (*Internet of Medical Things*) y Paradigma de Atención Ubicua
 
 El concepto de **`IoMT` (*Internet of Medical Things* o Internet de las Cosas Médicas)** define la infraestructura ciberfísica formada por dispositivos médicos dotados de sensores fisiológicos, microprocesadores embebidos, actuadores e interfaces de comunicación inalámbrica que capturan, procesan y transmiten datos biomédicos de forma autónoma hacia los sistemas de información hospitalarios (`HCE`) sin requerir el desplazamiento físico del paciente al centro sanitario ni la transcripción manual del profesional.
 
-Mientras que el *Internet of Things* (`IoT`) de consumo general (relojes deportivos o pulseras comerciales de bienestar no reguladas) carece de validación clínica certificada, el verdadero ecosistema **`IoMT` clínico** está integrado por productos sanitarios con **marcado CE bajo el `Reglamento (UE) 2017/745 (MDR)`**, sujetos a requisitos estrictos de exactitud metrológica, biocompatibilidad (`ISO 10993`), seguridad eléctrica y compatibilidad electromagnética en el hogar (**`UNE-EN 60601-1-11`**), interoperabilidad sintáctica/semántica (**`ISO/IEEE 11073`**) y ciberseguridad extremo a extremo.
+Mientras que el *Internet of Things* (`IoT`) de consumo general (relojes deportivos o pulseras comerciales de bienestar no reguladas) carece de validación clínica certificada, el verdadero ecosistema **`IoMT` clínico** está integrado por productos sanitarios con **marcado CE bajo el `Reglamento (UE) 2017/745 (MDR)`**, sujetos a requisitos estrictos de exactitud metrológica, biocompatibilidad, seguridad eléctrica y compatibilidad electromagnética en el hogar (**`UNE-EN 60601-1-11`**), interoperabilidad sintáctica/semántica (**`ISO/IEEE 11073`**) y ciberseguridad extremo a extremo.
 
 Su objetivo estratégico en sistemas públicos de salud con alta dispersión geográfica y envejecimiento demográfico —como es el caso paradigmático de Galicia— es **desplazar el centro de gravedad asistencial desde el hospital de agudos hacia el domicilio del paciente**, transformando un modelo reactivo basado en ingresos por descompensación en urgencias en un **modelo proactivo, continuo y predictivo** guiado por biomarcadores digitales.
 
@@ -168,14 +145,14 @@ La capa superior proporciona dos vistas sincronizadas:
 
 ## 🛡️ 4. Ciberseguridad en IoMT (`MDCG 2019-16`), Gestión de Flota de Dispositivos y Seguridad del Paciente
 
-### 4.1. Seguridad Eléctrica y Ambiental en el Entorno Domiciliario (`UNE-EN 60601-1-11`)
+### 4.1. Seguridad Eléctrica y Ambiental en el Entorno Domiciliario
 
 Un equipo médico utilizado en la casa de un paciente opera en condiciones muy distintas a las de un hospital supervisado: la vivienda puede **carecer de toma de tierra de protección fiable**, está expuesta a derrames accidentales de líquidos, mascotas, pelusas y manipulación por usuarios legos sin formación técnica. Por ello, todo dispositivo electromédico domiciliario conectado debe cumplir la norma colateral **`UNE-EN 60601-1-11` (*Requisitos para los equipos electromédicos y los sistemas electromédicos utilizados en el entorno de la asistencia sanitaria domiciliaria*)**:
 - **Clase II de aislamiento eléctrico (doble aislamiento o aislamiento reforzado, símbolo de dos cuadrados concéntricos)** o alimentación exclusiva por batería interna, prohibiendo depender de la tierra de protección del enchufe doméstico.
 - Grado de protección envolvente contra penetración de agua y partículas mínimo **`IP21` o `IP22`** (y hasta `IP67`/`IP68` en sensores corporales vestibles).
 - Conectores diseñados mecánicamente a prueba de error para impedir que el paciente o familiar conecte un cable de sensor o tubuladura a la red eléctrica, e instrucciones de uso redactadas para un operador lego.
 
-### 4.2. Ciberseguridad en el Ciclo de Vida de Sistemas IoMT (`MDCG 2019-16` y `UNE-EN IEC 81001-5-1`)
+### 4.2. Ciberseguridad en el Ciclo de Vida de Sistemas IoMT
 
 Los dispositivos `IoMT` amplían el perímetro de exposición fuera del cortafuegos del hospital. Un ataque sobre una bomba de insulina conectada o un marcapasos podría alterar la terapia y comprometer la vida del paciente (*Safety = Security*). Conforme al **Anexo I (Requisitos Generales de Seguridad y Funcionamiento, apartado 17.2 y 17.4) del `MDR (UE) 2017/745`**, a la guía europea **`MDCG 2019-16`** y a la norma **`UNE-EN IEC 81001-5-1`**, la ingeniería biomédica exige cinco controles técnicos en la arquitectura `IoMT`:
 1. **Emparejamiento y Autenticación Fuerte en el Enlace Inalámbrico:** Prohibición de perfiles `BLE Just Works` sin protección; obligatoriedad de **`BLE LE Secure Connections`** con criptografía de curva elíptica (`ECDH P-256`) y autenticación fuera de banda (`NFC` o código QR) para evitar ataques *Man-in-the-Middle (`MitM`)* o inyección de constantes falsas (*spoofing*).
@@ -186,56 +163,23 @@ Los dispositivos `IoMT` amplían el perímetro de exposición fuera del cortafue
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. La Plataforma Corporativa `TELEA` (*Teleasistencia Domiciliaria*) del SERGAS
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-El Servicio Gallego de Salud es referente europeo en telemonitorización pública gracias a su plataforma corporativa **`TELEA` (*Plataforma de Teleasistencia Domiciliaria*)**, desarrollada e integrada de forma nativa dentro de la Historia Clínica Electrónica **`IANUS 5`** y conectada con el portal ciudadano **`É-Saúde`** y la aplicación **`Sergas Móbil`**:
-- **Flujo operativo sin silos:** A diferencia de las plataformas comerciales externas que obligan al médico a salir de la historia clínica y entrar en una web de terceros con otro usuario, en el SERGAS el facultativo o la enfermera prescribe un **Perfil de Seguimiento `TELEA`** directamente desde **`IANUS`**, y todas las biomedidas enviadas por el paciente desde su domicilio (por captura Bluetooth automática de sus sensores o por registro en `Sergas Móbil` / `É-Saúde` / llamada automatizada) se graban directamente como constantes clínicas en **`IANUS`**.
-- **Sistema de Triaje Proactivo por Semáforo de Alertas Clínicas:**
-  - 🟢 **Alerta Verde (Estabilidad):** Todas las constantes biomédicas y cuestionarios se encuentran dentro del rango terapéutico personalizado del paciente; el sistema registra los datos en la gráfica longitudinal de `IANUS` sin requerir intervención activa.
-  - 🟡 **Alerta Amarilla (Desviación Moderada o Técnica):** Superación leve de un umbral (p. ej., PAS entre $145\text{ y }160\text{ mmHg}$), síntoma moderado en el cuestionario o falta de envío de medidas programadas; genera una tarea de revisión para la **enfermera de Atención Primaria o gestora de casos**.
-  - 🔴 **Alerta Roja (Descompensación Clínica Crítica):** Superación de un umbral crítico de riesgo (p. ej., caída de $\text{SpO}_2 < 88\text{–}90\%$ en EPOC, ganancia brusca de peso $> 2\text{ kg}$ en $72\text{ h}$ con disnea en Insuficiencia Cardíaca, glucemia $< 54\text{ mg/dL}$ o fiebre postquirúrgica); prioriza al paciente en la cabecera del panel de `IANUS` para contacto telefónico inmediato, ajuste precoz de tratamiento diurético/broncodilatador o visita presencial/domiciliaria en el día, **evitando la visita a Urgencias y el ingreso hospitalario**.
-- **Catálogo de Perfiles Clínicos Implantados en `TELEA` en las 7 Áreas Sanitarias:**
-  1. **Crónicos Complejos y Pluripatológicos (estrato apical de `GMA`):** **Insuficiencia Cardíaca** (peso, TA, FC, $\text{SpO}_2$, cuestionario de edemas/disnea), **EPOC** ($\text{SpO}_2$, FC, flujo espiratorio, cuestionario de esputo/disnea), **Hipertensión Arterial (HTA)** y **Diabetes Mellitus** (integrando glucómetros y sistemas de monitorización continua de glucosa).
-  2. **Procesos Agudos, Subagudos y Perioperatorios:** **Hospitalización a Domicilio (`HADO`)**, seguimiento tras **alta precoz postquirúrgica** (cirugía colorrectal ERAS, cirugía mayor ambulatoria `CMA`, artroplastias), cardiopatía isquémica tras síndrome coronario agudo (**Post-Infarto** y **Rehabilitación Cardíaca domiciliaria**), pacientes oncológicos en tratamiento sistémico, trastorno mental grave y seguimiento de infecciones respiratorias.
+| Dispositivo / Estándar / Sistema | Cifra / Frecuencia / Regla de Oro para Examen A1 |
+| :--- | :--- |
+| **Orden Oficial del Tema 47 en el DOG** | **Orden #46 de 74** en Parte Específica (el DOG omite el Tema 46 y salta del 45 al 47). |
+| **Plataforma Corporativa IoMT del SERGAS** | **`TELEA`** (*Plataforma de Teleasistencia Domiciliaria*), integrada nativamente en **`IANUS 5`** y conectada con **`É-Saúde` / `Sergas Móbil`**, con triaje por **semáforo de alertas (Verde / Amarillo / Rojo)**. |
+| **Estándar de Dispositivos Personales (`PHD`)** | Modelo Agente-Gestor (`DIM` / `MDS`). Especializaciones clave: **`10404` Pulsioxímetro**, **`10407` Tensiómetro**, **`10408` Termómetro**, **`10415` Báscula**, **`10417` Glucómetro**, **`10418` INR**, **`10427` CGM**. |
+| **Banda Radioeléctrica de Implantes (`MICS`)** | Banda **$401\text{–}406\text{ MHz}$** (núcleo en **$402\text{–}405\text{ MHz}$**), potencia máxima $\text{PIRE} \le \mathbf{25\text{ }\mu\text{W}}$ ($-16\text{ dBm}$), para telemetría de **marcapasos y DAI**. |
+| **Física de la Pulsioximetría (`SpO2`)** | Dos longitudes de onda: **Rojo $\approx 660\text{ nm}$** (mayor absorción por $\text{Hb}$ reducida) e **Infrarrojo $\approx 940\text{ nm}$** (mayor absorción por $\text{HbO}_2$). Cociente $R = \frac{AC_{660}/DC_{660}}{AC_{940}/DC_{940}}$ ($R=1 \Rightarrow \text{SpO}_2 \approx 85\%$). |
+| **Física de la PANI Automática** | Mide directamente por máxima amplitud de oscilación del manguito la **Presión Arterial Media (`PAM`)** y calcula algorítmicamente PAS y PAD ($\text{PAM} \approx \text{PAD} + \frac{1}{3}[\text{PAS} - \text{PAD}]$). |
+| **Sensor Continuo de Glucosa (`CGM`)** | Enzima **Glucosa Oxidasa (`GOx`)** en **líquido intersticial subcutáneo** (retardo fisiológico de **$5\text{–}10\text{ min}$** respecto a sangre); corriente en $\text{nA}$; objetivo de **Tiempo en Rango (`TIR` $70\text{–}180\text{ mg/dL}$) $> 70\%$**. |
+| **Seguridad Eléctrica Domiciliaria** | Exige **Clase II de aislamiento eléctrico (doble aislamiento)** o batería interna (prohibido depender de toma de tierra doméstica) y protección mínima contra agua/polvo **`IP21`/`IP22`**. |
+| **Ciberseguridad de Dispositivos Médicos** | Emparejamiento `BLE LE Secure Connections`, transporte `TLS 1.3`, `AES-256`, arranque seguro (*Secure Boot*) y **telemetría remota de marcapasos/DAI estrictamente de solo lectura** (prohibida reprogramación remota por Internet). |
 
-### 5.2. Telemonitorización de Dispositivos Cardioimplantables (`Marcapasos`, `DAI` y `CRT`) en el SERGAS
-
-En los Servicios de Cardiología (Unidades de Arritmias y Electrofisiología) de los hospitales de las 7 Áreas Sanitarias del SERGAS, miles de pacientes portadores de **Marcapasos**, **Desfibriladores Automáticos Implantables (`DAI`)**, **Resincronizadores (`CRT`)** y **Holter subcutáneos insertables** se encuentran bajo **Monitorización Remota Domiciliaria**:
-- El paciente dispone en su domicilio de un transmisor de mesilla de noche (o app móvil autenticada) que interroga automáticamente durante la madrugada al implante mediante radiofrecuencia **`MICS` ($402\text{–}405\text{ MHz}$)** o **`BLE`** sin que el paciente note nada.
-- El sistema transmite de forma cifrada tanto las **revisiones programadas periódicas** (sustituyendo visitas presenciales rutinarias al hospital) como **alertas técnicas y clínicas urgentes en $< 24\text{ h}$**:
-  1. **Alertas de Integridad Técnica del Sistema Implantado (críticas para Ingeniería Biomédica):** Caída del voltaje de la batería alcanzando el **Indicador de Reemplazo Electivo (`ERI` / `RRT`)**, fractura o fallo de aislamiento de los cables/electrodos intracavitarios (detectado por caída brusca de la impedancia de estimulación $< 200\text{ }\Omega$ o subida $> 2.000\text{–}3.000\text{ }\Omega$, o aumento del umbral de captura en voltios/milisegundos) o ruido por sobredetección (*oversensing* de miopotenciales o interferencia electromagnética).
-  2. **Alertas Arrítmicas y Hemodinámicas:** Episodios de fibrilación auricular silente de nueva aparición (que obligan a iniciar anticoagulación para prevenir un ictus cardioembólico), taquicardias ventriculares sostenidas, descargas eléctricas de alta energía ($30\text{–}40\text{ J}$) o terapias de estimulación antitaquicardia (`ATP`) aplicadas por el DAI, e índice de impedancia intratorácica transtorácica (entre la carcasa de titanio del generador y la bobina del electrodo ventricular) para alerta precoz de edema agudo de pulmón.
-- Los informes estructurados y trazados intracavitarios (`EGM`) se integran directamente en la Historia Clínica Electrónica **`IANUS 5`**.
-
-### 5.3. `e-Interconsulta` con Equipamiento Conectado (Teledermatología, Teleoftalmología) y Red Gallega de `Teleictus`
-
-1. **Teledermatología con Dermatoscopia Digital y Teleoftalmología (Retinografía No Midriática):**
-   - Todos los centros de salud de Atención Primaria del SERGAS disponen de **dermatoscopios digitales con luz polarizada** y acceso a **retinógrafos digitales no midriáticos**. Las imágenes de lesiones pigmentadas sospechosas de melanoma o de fondo de ojo para cribado de retinopatía diabética se adquieren y envían en formato estándar **`DICOM VL` (*Visible Light*)** al **`PACS Corporativo` (`Anello Radiolóxico Galego`)**, vinculadas a una **`e-Interconsulta`** en `IANUS`. El dermatólogo u oftalmólogo del hospital de referencia evalúa la imagen de alta resolución en pocos días, derivando directamente a quirófano los tumores malignos y resolviendo en Atención Primaria las patologías benignas sin desplazar al paciente.
-2. **Red Gallega de `Teleictus` (Telemedicina Síncrona Crítica en Urgencias):**
-   - Conecta en tiempo real las $24\text{ horas}$ del día los Servicios de Urgencias de los **Hospitales Comarcales del SERGAS** (Cee, Barbanza, A Mariña, Monforte de Lemos, Verín, O Barco de Valdeorras y O Salnés) y otros hospitales sin neurólogo de guardia presencial con el **Centro de Atención al Ictus / Unidad de Ictus de referencia**.
-   - Integra una estación móvil de **videoconferencia clínica de alta definición con cámara robotizada PTZ** (que permite al neurólogo explorar a distancia las pupilas y la escala `NIHSS` del paciente en el box de urgencias comarcal) sincronizada con la visualización instantánea del **TC craneal multimodal (TC basal + Angio-TC de troncos supraaórticos/polígono de Willis + TC de Perfusión cerebral)** a través del `PACS Corporativo`. Gracias a esta arquitectura, el neurólogo indica la administración inmediata del bolo de **fibrinolisis intravenosa (alteplasa/tenecteplasa)** en el propio hospital comarcal (reduciendo drásticamente el **tiempo puerta-aguja**) y activa simultáneamente el traslado directo a la sala de neurorradiología intervencionista del hospital terciario si existe oclusión de gran vaso candidata a **trombectomía mecánica** (**tiempo puerta-ingle**).
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
-
-| Dispositivo / Estándar / Sistema | Referencia Normativa o Física | Cifra / Frecuencia / Regla de Oro para Examen A1 |
-| :--- | :--- | :--- |
-| **Orden Oficial del Tema 47 en el DOG** | DOG núm. 67 (13/04/2026) | **Orden #46 de 74** en Parte Específica (el DOG omite el Tema 46 y salta del 45 al 47). |
-| **Plataforma Corporativa IoMT del SERGAS** | Sistema Corporativo SERGAS | **`TELEA`** (*Plataforma de Teleasistencia Domiciliaria*), integrada nativamente en **`IANUS 5`** y conectada con **`É-Saúde` / `Sergas Móbil`**, con triaje por **semáforo de alertas (Verde / Amarillo / Rojo)**. |
-| **Estándar de Dispositivos Personales (`PHD`)** | **`ISO/IEEE 11073-20601`** y **`Continua`** | Modelo Agente-Gestor (`DIM` / `MDS`). Especializaciones clave: **`10404` Pulsioxímetro**, **`10407` Tensiómetro**, **`10408` Termómetro**, **`10415` Báscula**, **`10417` Glucómetro**, **`10418` INR**, **`10427` CGM**. |
-| **Banda Radioeléctrica de Implantes (`MICS`)** | **`ETSI EN 301 839` (`MedRadio`)** | Banda **$401\text{–}406\text{ MHz}$** (núcleo en **$402\text{–}405\text{ MHz}$**), potencia máxima $\text{PIRE} \le \mathbf{25\text{ }\mu\text{W}}$ ($-16\text{ dBm}$), para telemetría de **marcapasos y DAI**. |
-| **Física de la Pulsioximetría (`SpO2`)** | Ley de Beer-Lambert | Dos longitudes de onda: **Rojo $\approx 660\text{ nm}$** (mayor absorción por $\text{Hb}$ reducida) e **Infrarrojo $\approx 940\text{ nm}$** (mayor absorción por $\text{HbO}_2$). Cociente $R = \frac{AC_{660}/DC_{660}}{AC_{940}/DC_{940}}$ ($R=1 \Rightarrow \text{SpO}_2 \approx 85\%$). |
-| **Física de la PANI Automática** | Método Oscilométrico | Mide directamente por máxima amplitud de oscilación del manguito la **Presión Arterial Media (`PAM`)** y calcula algorítmicamente PAS y PAD ($\text{PAM} \approx \text{PAD} + \frac{1}{3}[\text{PAS} - \text{PAD}]$). |
-| **Sensor Continuo de Glucosa (`CGM`)** | Electroquímica Amperométrica | Enzima **Glucosa Oxidasa (`GOx`)** en **líquido intersticial subcutáneo** (retardo fisiológico de **$5\text{–}10\text{ min}$** respecto a sangre); corriente en $\text{nA}$; objetivo de **Tiempo en Rango (`TIR` $70\text{–}180\text{ mg/dL}$) $> 70\%$**. |
-| **Seguridad Eléctrica Domiciliaria** | **`UNE-EN 60601-1-11`** | Exige **Clase II de aislamiento eléctrico (doble aislamiento)** o batería interna (prohibido depender de toma de tierra doméstica) y protección mínima contra agua/polvo **`IP21`/`IP22`**. |
-| **Ciberseguridad de Dispositivos Médicos** | **`MDCG 2019-16`** y **`IEC 81001-5-1`** | Emparejamiento `BLE LE Secure Connections`, transporte `TLS 1.3`, `AES-256`, arranque seguro (*Secure Boot*) y **telemetría remota de marcapasos/DAI estrictamente de solo lectura** (prohibida reprogramación remota por Internet). |
-
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 
 1. **Trampa Física en Tensiómetros Automáticos (`PANI` Oscilométrica):**
    - Si en el test preguntan qué parámetro determina de forma directa el pico de máxima amplitud de oscilación de presión en el manguito de un tensiómetro automático de telemedicina, la respuesta correcta es la **Presión Arterial Media (`PAM`)**, nunca la sistólica ni la diastólica (que se derivan por algoritmos de fracción de amplitud).
@@ -243,7 +187,7 @@ En los Servicios de Cardiología (Unidades de Arritmias y Electrofisiología) de
    - Los sensores `CGM` **NO miden la glucosa en sangre capilar ni venosa**, sino en el **líquido intersticial del tejido celular subcutáneo** mediante una reacción enzimática amperométrica con **glucosa oxidasa (`GOx`)**. Por ello existe un desfase fisiológico de **$5\text{ a }10\text{ minutos}$** cuando la glucemia sube o baja rápidamente.
 3. **Trampa de Seguridad en Marcapasos y Desfibriladores (`DAI`) Conectados:**
    - Si una opción de respuesta indica que *«desde la plataforma de telemonitorización el cardiólogo puede reprogramar a distancia por Internet la energía de choque o el modo de estimulación del marcapasos en casa del paciente»*, es **FALSO**. Por seguridad del paciente y ciberseguridad, la comunicación remota domiciliaria (`MICS 402–405 MHz` / `BLE`) es **exclusivamente de monitorización/lectura**; cualquier cambio de programación exige telemetría inductiva presencial con cabezal programador en el hospital.
-4. **Trampa de Seguridad Eléctrica Domiciliaria (`UNE-EN 60601-1-11`):**
+4. **Trampa de Seguridad Eléctrica Domiciliaria:**
    - Un equipo electromédico diseñado para el entorno domiciliario (`TELEA` / `HADO`) conectado a la red de $230\text{ V}$ debe ser de **Clase II (aislamiento doble o reforzado, sin conductor de tierra de protección)**, porque según la norma `UNE-EN 60601-1-11` no se puede confiar en la existencia ni continuidad de la puesta a tierra de las instalaciones eléctricas domésticas.
 5. **Trampa sobre la Integración de `TELEA` en el SERGAS:**
    - `TELEA` **no es una aplicación aislada ni externa**, sino la plataforma corporativa del SERGAS **integrada nativamente dentro de `IANUS 5`** y conectada con **`É-Saúde` / `Sergas Móbil`**, cubriendo tanto patologías crónicas (IC, EPOC, Diabetes, HTA) como procesos agudos/subagudos (`HADO` y seguimiento postquirúrgico de alta precoz).

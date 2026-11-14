@@ -14,7 +14,7 @@
 > - **Tema 37:** Equipamiento estándar bloque quirúrgico: columnas de suministro, mesas quirúrgicas e iluminación.
 >
 > **Currículo Oficial base en [`01_normativa_oficial/`](../01_normativa_oficial/):**
-> - [`Base_Temas_01_a_73_RD_838_2015_Titulo_TS_Electromedicina_Clinica.pdf`](../01_normativa_oficial/Base_Temas_01_a_73_RD_838_2015_Titulo_TS_Electromedicina_Clinica.pdf) (Módulo 1589)
+> - [`Base_Temas_01_a_73_RD_838_2015_Titulo_TS_Electromedicina_Clinica.pdf`](../01_normativa_oficial/Base_Temas_01_a_73_RD_838_2015_Titulo_TS_Electromedicina_Clinica.pdf)
 
 ---
 

@@ -1,35 +1,6 @@
 # Tema 19 — Caracterización y funcionamiento de los equipos SPECT-TC.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #19 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 03 — Resonancia Magnética, Ultrasonidos, Radioterapia y Medicina Nuclear
-> - **Marco Normativo y Técnico Nuclear:** RD 1841/1997 (Criterios de Calidad en Medicina Nuclear), RD 601/2019 (Justificación y Optimización de Exposiciones Médicas), RD 1836/1999 y RD 35/2008 (Instalaciones Radiactivas de 2.ª Categoría), RD 1029/2022 (RPSI), Reglamento (UE) 2017/745 (MDR), RD 192/2023, RD 838/2015 y Orden EFP/1216/2019 (Módulo 1588), Normas UNE-EN 61675-2 y NEMA NU 1 (Características de funcionamiento y ensayos de gammacámaras planares, de cuerpo entero y SPECT) y UNE-EN 60601-2-44 (Seguridad básica de equipos de TC).
-> - **Sistemas y Entorno SERGAS:** Servicios de Medicina Nuclear y de Radiofísica y Protección Radiológica del SERGAS (CHUS, CHUAC, CHUVI — Hospital Meixoeiro/Álvaro Cunqueiro, HULA, CHUO) y GALARIA, Estaciones de Procesado de Medicina Nuclear (Xeleris, Syngo.via, IntelliSpace Portal), PACS Centralizado del SERGAS, RIS, IANUS y XMAO.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
-El **Tema 19** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud aborda de forma monográfica la tecnología fundamental de la Medicina Nuclear convencional y tomográfica moderna: la **Gammacámara Tomográfica de Emisión de Fotón Único (SPECT)** y su integración multimodal con la **Tomografía Computarizada en los sistemas híbridos SPECT-TC**. Su alcance técnico comprende:
-1. **Fundamentos físicos de la emisión de fotón único ($\gamma$) y principio de la Cámara de Anger (`UNE-EN 61675-2` / `NEMA NU 1`):** Radionucleidos emisores gamma de fotón único ($^{99\text{m}}\text{Tc}$, $^{123}\text{I}$, $^{111}\text{In}$, $^{67}\text{Ga}$, $^{131}\text{I}$, $^{201}\text{Tl}$, $^{177}\text{Lu}$), geometría de cabezales rotatorios ($180^\circ$ y $90^\circ$ en «L») y órbitas de seguimiento automático del contorno corporal (*Body-Contouring*).
-2. **Arquitectura interna del cabezal detector (Analógico de $\text{NaI(Tl)}$ vs. Digital de Semiconductores $\text{CZT}$):** Física y diseño de los **colimadores mecánicos de plomo** (LEHR, LEGP, MEGP, HEGP, *Fan-Beam* y *Pinhole*), compromiso resolución-sensibilidad, propiedades críticas del cristal centelleador de **Yoduro de Sodio activado con Talio ($\text{NaI(Tl)}$ de $3/8''$)**, matriz de tubos fotomultiplicadores (PMT), red de posicionamiento centroide de Anger $(X, Y, Z)$, Analizador de Altura de Pulsos (PHA), los **tres mapas de corrección en tiempo real (Energía, Linealidad y Uniformidad)** y la revolución de los **detectores semiconductores directos de Telururo de Cadmio-Zinc ($\text{CZT}$)**.
-3. **Caracterización y funcionamiento del sistema híbrido SPECT-TC y Cuantificación Absoluta (`SUV` en SPECT y Teragnosis):** Integración mecánica SPECT + TC multicorte, triple aportación del TC (localización anatómica milimétrica, **Corrección de Atenuación CTAC** y dosimetría interna), reconstrucción iterativa **3D-OSEM** con corrección de dispersión por ventanas energéticas (**DEW/TEW**) y modelado de la respuesta del colimador (**CDR**).
-4. **Control de calidad obligatorio (`RD 1841/1997`, Protocolo SEFM/SEPR y `NEMA NU 1`), mantenimiento crítico e implantación en el SERGAS:** Pruebas intrínsecas y extrínsecas con fuente plana de $^{57}\text{Co}$, **Uniformidad Integral/Diferencial**, **Centro de Rotación (COR)**, maniquí de **Jaszczak**, corregistro espacial SPECT-TC y protección del cristal frente a choques térmicos e higroscopicidad.
-
-### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
-- **Categorías con solapamiento:** **Radiofísica Hospitalaria** | **TS Imagen para el Diagnóstico**
-- **Grado de solapamiento:** **Total (90%)** en Radiofísica Hospitalaria (cubre principios físicos de SPECT, gammacámaras y sistemas SPECT, y fusión de imágenes [SPECT-TC]); **Alto (75%)** en TS Imagen para el Diagnóstico (cubre gammacámaras tomográficas en medicina nuclear).
-- **Epígrafes equivalentes en temarios SERGAS:**
-  - **Radiofísica Hospitalaria:**
-    - *Tema 31:* Fundamentos. Radisótopos empleados y características de los radionucleidos. Obtención de los radionucleidos. Radiofármacos. Captación de los radiofármacos por el organismo: período biológico efectivo. Estudios morfológicos y funcionales. Exploraciones gammagráficas más frecuentes y radiofármacos usados. Principios físicos de la tomografía computadorizada por emisión de fotón único (SPECT). Principios físicos de la tomografía por emisión de positrones (PET). Estadística y errores de contaje.
-    - *Tema 32:* Equipos. Activímetros. Gammacámaras: planares, sistemas SPECT y PET. Contadores gamma. Contadores beta. Sondas intraoperatorias. Programas de análisis de imagen y funciones. Cámaras de multi-imagen. Procesadoras.
-    - *Tema 5:* Fundamentos de la imagen médica. Física de la formación de imágenes. Principios básicos de las diferentes modalidades de imagen clínica. Tratamiento de imágenes: filtros, algoritmos de reconstrucción. Evaluación de la calidad de imagen: función de transferencia, ruido, resolución y contraste. Sistemas de transmisión de imágenes. Protocolos DICOM. Procesado de imágenes médicas. Fusión de imágenes.
-  - **TS Imagen para el Diagnóstico:**
-    - *Tema 11:* Equipos de medicina nuclear: gammacámara y tomografía de emisión de positrones (PET).
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Principio Físico de la Tomografía por Emisión de Fotón Único (SPECT) y Radionucleidos Empleados
 
 ### 1.1. Principio Físico de la Tomografía por Emisión de Fotón Único (SPECT) y Radionucleidos Empleados
 La **Tomografía Computarizada por Emisión de Fotón Único (*Single Photon Emission Computed Tomography* — SPECT)** es la modalidad tomográfica de la Medicina Nuclear convencional basada en la detección externa de **fotones gamma ($\gamma$) individuales y no correlacionados direccionalmente** emitidos por un radiofármaco distribuido en los órganos del paciente. A diferencia del PET (donde la aniquilación de un positrón genera siempre dos fotones antiparalelos de $511\text{ keV}$ a $180^\circ$ permitiendo colimación electrónica sin plomo), en un estudio SPECT cada núcleo radiactivo emite fotones gamma de forma isótropa e independiente. Por consiguiente, **para conocer la dirección de procedencia del fotón y formar una proyección planar es físicamente obligatorio interponer un colimador mecánico absorptivo de plomo o tungsteno** delante del detector.
@@ -51,7 +22,7 @@ Los radionucleidos emisores de fotón único abarca un amplio espectro de energ�
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. El Cabezal Detector de la Gammacámara de Anger y Revolución Tecnológica
 
 ### 2.1. El Cabezal Detector de la Gammacámara de Anger: Del Colimador al Analizador de Pulsos
 Inventada por Hal O. Anger en 1957, la **gammacámara de centelleo** constituye el cabezal detector de la gran mayoría de los sistemas SPECT-TC hospitalarios. Los equipos actuales disponen de **dos cabezales detectores de gran campo rectangular ($54 \times 40\text{ cm}$)** montados en un gantry robótico capaz de configurarse automáticamente en dos geometrías angulares:
@@ -73,7 +44,7 @@ En orden secuencial desde el paciente hacia la electrónica, cada cabezal de una
        Como la sensibilidad es proporcional al cuadrado de la anchura de resolución ($g \propto R_{\text{col}}^2 \approx 10^{-4}$, dejando pasar solo el **$0,01\%$ de los fotones**), **todo aumento de resolución espacial (agujeros más estrechos $d$ o más largos $L$) reduce drásticamente la sensibilidad** y viceversa.
      - **Espesor mínimo septal ($t$) para limitar la penetración septal al $< 5\%$:** $t \ge \frac{6 d / \mu_{\text{Pb}}}{L - (3/\mu_{\text{Pb}})}$.
 
-| Tipo de Colimador e Identificación | Geometría de Canales y Septos | Energía Fotónica de Diseño | Radionucleidos y Aplicaciones Clínicas en el SERGAS |
+| Tipo de Colimador e Identificación | Geometría de Canales y Septos | Energía Fotónica de Diseño | Radionucleidos y Aplicaciones Clínicas en el ámbito hospitalario |
 | :--- | :--- | :--- | :--- |
 | **LEHR (*Low Energy High Resolution*)** | Agujeros **paralelos**, estrechos ($d \approx 1,2\text{–}1,5\text{ mm}$), largos ($L \approx 24\text{–}35\text{ mm}$) y septos finos ($t \approx 0,15\text{ mm}$) | **Baja Energía** ($\le 160\text{ keV}$) | **El colimador estándar universal (>80% de estudios):** **$^{99\text{m}}\text{Tc}$ ($140\text{ keV}$)**, **$^{123}\text{I}$ ($159\text{ keV}$)** y $^{201}\text{Tl}$ en SPECT óseo, cardíaco, cerebral y renal. |
 | **LEGP / LEAP (*Low Energy General / All Purpose*)** | Agujeros paralelos más anchos o más cortos que el LEHR ($\approx 2\times$ más sensibilidad a costa de menor resolución) | Baja Energía ($\le 150\text{ keV}$) | Estudios dinámicos rápidos de alta tasa de cuadros (renograma dinámico, primer paso cardíaco, vaciamiento gástrico). |
@@ -108,7 +79,7 @@ En la última década se ha producido el salto desde la Cámara de Anger analóg
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. El Sistema Híbrido SPECT-TC
 
 ### 3.1. El Sistema Híbrido SPECT-TC: Arquitectura e Impacto Diagnóstico y Cuantitativo
 Un equipo **SPECT-TC** integra en un mismo estativo un **sistema SPECT de doble cabezal (o anillo $\text{CZT}$)** y un **Tomógrafo Computarizado helicoidal multicorte diagnóstico ($16\text{ a }64\text{ cortes}$)** compartiendo una camilla de fibra de carbono indexada con compensación de deflexión. La incorporación del TC transforma radicalmente las capacidades del SPECT a través de **tres funciones sinérgicas**:
@@ -132,9 +103,9 @@ Un equipo **SPECT-TC** integra en un mismo estativo un **sistema SPECT de doble 
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Control de Calidad Obligatorio de Equipos SPECT-TC
 
-### 4.1. Control de Calidad Obligatorio de Equipos SPECT-TC (`RD 1841/1997`, `NEMA NU 1` y Protocolo SEFM/SEPR)
+### 4.1. Control de Calidad Obligatorio de Equipos SPECT-TC
 El **Real Decreto 1841/1997** y el Protocolo Español de Control de Calidad en Medicina Nuclear dividen los ensayos de la gammacámara en **pruebas intrínsecas** (retirando el colimador e irradiando el cristal desnudo con una fuente puntual de $^{99\text{m}}\text{Tc}$ colocada a una distancia $\ge 5 \times \text{UFOV}$ para lograr un frente de onda plano) y **pruebas extrínsecas o del sistema** (con el colimador montado, utilizando una **fuente plana sólida de inundación de Cobalto-57 [$^{57}\text{Co}$, $T_{1/2} = 271,8\text{ días}$, energía $\gamma = \mathbf{122\text{ keV}}$ y $136\text{ keV}$]** o un maniquí plano rellenable de $^{99\text{m}}\text{Tc}$):
 
 | Prueba de Control de Calidad (`RD 1841/1997` / `SEFM`) | Periodicidad Mínima | Método Experimental y Magnitud Evaluada | Tolerancia de Aceptación / Acción (Examen A1) |
@@ -152,25 +123,13 @@ El **Real Decreto 1841/1997** y el Protocolo Español de Control de Calidad en M
   - Los muros de la sala de exploración y la cabina de control con visor plomado se calculan para el envolvente más restrictivo entre la **radiación X dispersa del TC multicorte** ($120\text{–}140\text{ kVp}$) y la **radiación gamma de alta energía del $^{131}\text{I}$ ($364\text{ keV}$, $\text{HVL}_{\text{Pb}} \approx 2,5\text{–}3\text{ mm Pb}$)**, situándose habitualmente en **$2,0\text{ a }3,0\text{ mm}$ de plomo equivalente**.
 - **Climatización Ininterrumpida 24/7 y Carros de Cambio de Colimadores:**
   - En los equipos con cristales de **$\text{NaI(Tl)}$**, el sistema de climatización de la sala debe estar conectado a un circuito preferente y monitorizado con **sonda de temperatura y humedad con alarma**, garantizando $20\text{–}22\text{ }^\circ\text{C}$, humedad relativa $< 50\text{–}60\%$ y **variación térmica horaria estrictamente $< 3\text{–}5\text{ }^\circ\text{C/h}$** (incluso durante noches y fines de semana).
-  - Los **carros o servidores automáticos bajo camilla de intercambio de colimadores** incorporan enclavamientos mecánicos y sensores inductivos de presencia: un fallo en el cerrojo de anclaje de un colimador HEGP de $> 100\text{ kg}$ sobre el paciente supone un riesgo mecánico letal (`UNE-EN 60601-1`), por lo que la revisión de los trinquetes de bloqueo de colimadores, los frenos electromagnéticos de los cabezales y las cortinas anticolisión es **prioridad número 1 en el mantenimiento preventivo en `XMAO`**.
+  - Los **carros o servidores automáticos bajo camilla de intercambio de colimadores** incorporan enclavamientos mecánicos y sensores inductivos de presencia: un fallo en el cerrojo de anclaje de un colimador HEGP de $> 100\text{ kg}$ sobre el paciente supone un riesgo mecánico letal, por lo que la revisión de los trinquetes de bloqueo de colimadores, los frenos electromagnéticos de los cabezales y las cortinas anticolisión es **prioridad número 1 en el mantenimiento preventivo en `GMAO`**.
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Parque de Equipos SPECT-TC y Teragnosis en los Hospitales del SERGAS y GALARIA
-En el **Servicio Gallego de Salud (SERGAS)**, los Servicios de Medicina Nuclear de los complejos hospitalarios de referencia (**CHUS** en Santiago de Compostela, **CHUAC** en A Coruña, **CHUVI — Hospital Meixoeiro y Hospital Álvaro Cunqueiro** en Vigo, **HULA** en Lugo y **CHUO** en Ourense), con la coordinación de alta tecnología de **GALARIA, Empresa Pública de Servizos Sanitarios**, han renovado su dotación sustituyendo las antiguas gammacámaras planares por **sistemas híbridos SPECT-TC de doble cabezal con TC diagnóstico de $16\text{ a }64\text{ cortes}$ y sistemas SPECT digitales con detectores semiconductores $\text{CZT}$** (impulsados por el Plan INVEAT):
-- **Cartera Asistencial y Auge de la Teragnosis en el SERGAS:** Además de los estudios de alta demanda asistencial (gammagrafía ósea oncológica/reumatológica, *Gated-SPECT* de perfusión miocárdica con corrección de atenuación CTAC, SPECT cerebral con $^{123}\text{I-Ioflupano}$ en trastornos del movimiento, localización prequirúrgica de ganglio centinela y paratiroides, y SPECT-TC pulmonar V/Q de urgencia), los equipos SPECT-TC cuantitativos del SERGAS constituyen la piedra angular de los programas de **Terapia Metabólica y Teragnosis** (tratamiento de tumores neuroendocrinos gastroenteropancreáticos con **$^{177}\text{Lu-DOTATATE}$**, cáncer de próstata resistente a castración con **$^{177}\text{Lu-PSMA}$**, cáncer diferenciado de tiroides con **$^{131}\text{I}$** en habitaciones de terapia metabólica con fosa de decaimiento, y radioembolización hepática selectiva SIRT con microesferas de **$^{90}\text{Y}$**).
-
-### 5.2. Integración Digital (`DICOM NM`, `CT`, `RDSR`, `IANUS`) y Gestión en `XMAO`
-- **Flujo Digital Corporativo:** Los estudios SPECT-TC se planifican mediante lista de trabajo **`DICOM MWL`** desde el `RIS` corporativo integrado con **`SIHGA`/`IANUS`**. Tras la adquisición y reconstrucción iterativa **3D-OSEM + CTAC + DEW + CDR** en las consolas y estaciones de trabajo (*GE Xeleris*, *Siemens Syngo.via*, *Philips IntelliSpace*), se envían al **PACS centralizado del SERGAS** los objetos **`DICOM NM` (*Nuclear Medicine Image*, incluyendo series dinámicas, *Gated-SPECT* sincronizado con la onda R del ECG para fracción de eyección ventricular izquierda LVEF y tomografías reconstruidas)**, **`DICOM CT`** y los informes estructurados de dosis **`DICOM RDSR / RRDSR`** (registrando tanto el $\text{CTDI}_{\text{vol}}$ y $\text{DLP}$ del TC como el radiofármaco y la actividad en $\text{MBq}$ administrada) para su publicación automática en **`IANUS`** conforme al **`RD 601/2019`**.
-- **Gestión del Mantenimiento y Seguridad en `XMAO`:** El Servicio de Ingeniería Biomédica y el Servicio de Radiofísica y Protección Radiológica gestionan en **`XMAO`** las órdenes preventivas electromecánicas (sistemas de parada anticolisión, anclajes de colimadores, compensación de flexión del gantry y climatización de sala), la renovación periódica de las **fuentes planas selladas de $^{57}\text{Co}$** para el control diario de uniformidad y las auditorías anuales de calidad exigidas por el **`RD 1841/1997`** (gammacámara) y el **`RD 1976/1999`** (componente TC).
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
 | Concepto / Subsistema / Parámetro | Valor / Fórmula / Norma Clave | Observación Crítica para Examen A1 SERGAS |
 | :--- | :--- | :--- |
@@ -185,7 +144,7 @@ En el **Servicio Gallego de Salud (SERGAS)**, los Servicios de Medicina Nuclear 
 | **Fuente patrón para control diario de uniformidad** | **Fuente plana sólida de Cobalto-57 ($^{57}\text{Co}$, $T_{1/2}=271,8\text{ d}$, $122\text{ keV}$)** | O maniquí líquido rellenable de $^{99\text{m}}\text{Tc}$; maniquí integral 3D de SPECT: **Maniquí de Jaszczak** |
 | **Las 3 correcciones de la reconstrucción `3D-OSEM` en SPECT-TC** | **1) Atenuación (CTAC)** + **2) Dispersión (DEW/TEW)** + **3) Respuesta colimador (CDR)** | Permiten **SPECT cuantitativo absoluto ($\text{kBq/mL}$ y $\text{SUV}$)** para dosimetría en **Teragnosis ($^{177}\text{Lu}$)** |
 
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **¡Diferencia clásica en examen entre el artefacto por fallo de Uniformidad y el artefacto por fallo del Centro de Rotación (COR) en SPECT!**
    - Si falla la **Uniformidad** de un cabezal (por ejemplo, un PMT desajustado que produce una pequeña zona fría o caliente del $1\text{–}2\%$), al retroproyectarse desde todos los ángulos genera **anillos concéntricos (*Ring Artifacts* o en diana)** centrados en el eje de rotación sobre un fondo uniforme.
    - Si está descalibrado el **Centro de Rotación (COR $> 0,5\text{ píxeles} \approx 2\text{ mm}$)** (desalineación entre el eje mecánico del gantry y el centro de la matriz digital), **una lesión puntual o fuente puntual pierde su forma de punto y se reconstruye deformada como un pequeño círculo hueco («rosquilla» o *donut*) o media luna**, emborronando toda la imagen tomográfica.

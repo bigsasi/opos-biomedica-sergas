@@ -1,38 +1,8 @@
 # Tema 59 — Calidad asistencial y gestión por procesos. Descripción y diseño de programas de calidad en sistemas sanitarios. Identificación de procesos clave. Bases metodológicas. Implantación de los procesos: características, claves estratégicas, metodología de implantación. Control y mejora continua de los procesos. Mecanismos de evaluación y seguimiento de procesos.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #59 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 08 — Ingeniería Hospitalaria, REBT, Ambiente Controlado, Planes Directores, Calidad, CAD y Sostenibilidad
-> - **Marco Normativo y Técnico Nuclear:** Real Decreto 838/2015 y Orden EFP/1216/2019 (Módulo 1594.h de Aplicación de técnicas de control de calidad en sistemas de electromedicina), UNE-EN ISO 9000:2015 (Fundamentos y vocabulario), UNE-EN ISO 9001:2015 (Sistemas de Gestión de la Calidad — Requisitos), UNE-EN 15224:2017 (Sistemas de Gestión de la Calidad para la asistencia sanitaria), UNE-EN ISO 13485:2016 (Productos sanitarios: Sistemas de Gestión de la Calidad para fines reglamentarios), UNE 179003:2013 (Servicios sanitarios: Gestión de riesgos para la seguridad del paciente), UNE-EN ISO 14971:2020 (Aplicación de la gestión de riesgos a los productos sanitarios), UNE-EN ISO 19011:2018 (Directrices para la auditoría de los sistemas de gestión), UNE 209001 IN (Guía para la gestión y el mantenimiento de productos sanitarios activos no implantables) y Modelo Europeo de Excelencia EFQM 2020/2025 (Matriz lógica REDER).
-> - **Sistemas y Entorno SERGAS:** Subdirección General de Humanización y Calidad Asistencial del SERGAS, Unidades de Calidad de las 7 Áreas Sanitarias, Procesos Asistenciales Integrados (PAI) y Vías Rápidas clínicas informatizadas en `IANUS`, Sistema de Notificación y Aprendizaje para la Seguridad del Paciente (`SINASP`), certificaciones `ISO 9001` e `ISO 13485` en Servicios de Ingeniería Biomédica/Electromedicina, Esterilización y Farmacia, y Cuadro de Mando de indicadores de proceso en `XMAO`.
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 59** de la Parte Específica del programa oficial de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud (publicado en el **DOG núm. 67, de 13 de abril de 2026**) desarrolla de forma exhaustiva la arquitectura conceptual, metodológica, normativa y estadística de la **Calidad Asistencial** y de la **Gestión por Procesos** en las organizaciones sanitarias, abarcando sus ocho subepígrafes oficiales:
-1. Calidad asistencial y gestión por procesos.
-2. Descripción y diseño de programas de calidad en sistemas sanitarios.
-3. Identificación de procesos clave.
-4. Bases metodológicas.
-5. Implantación de los procesos: características, claves estratégicas, metodología de implantación.
-6. Control y mejora continua de los procesos.
-7. Mecanismos de evaluación y seguimiento de procesos.
-
-- **Categorías del SERGAS con solapamiento directo (verificado 1:1 con `cruce_temarios_sergas.md`):**
-  - **Ingeniero/a Técnico/a (Subgrupo A2 — Resolución DOG núm. 51, de 13/03/2018 y DOG núm. 145, de 04/08/2026):**
-    - *Tema 59:* «Calidad asistencial y gestión por procesos. Descripción y diseño de programas de calidad en sistemas sanitarios. Identificación de procesos clave. Bases metodológicas. Implantación de los procesos: características, claves estratégicas, metodología de implantación. Control y mejora continua de los procesos. Mecanismos de evaluación y seguimiento de procesos.» (**Coincidencia literal del 100% palabra por palabra en ambas convocatorias**).
-  - **Grupo Técnico / Gestión de Sistemas y Tecnologías de la Información (TIC — A1, A2 — DOG núm. 126, de 05/07/2021):**
-    - *Superior (A1) Tema 4:* «Sistemas de gestión de calidad. Normalización y certificación. EFQM. Serie ISO 9000.» y *Tema 17 / Gestión (A2) Tema 10:* «Sistemas CRM y ERP. La informatización de los procedimientos. BPM (Business Process Management). Sistemas de gestión documental.»
-  - **FEA en Radiofísica Hospitalaria (Subgrupo A1 — DOG núm. 103, de 30/05/2007):**
-    - *Tema 7:* «Fundamentos sobre garantía y control de calidad. Definición de calidad, garantía de calidad, control de calidad, estándares de calidad. Gestión de calidad. Normas nacionales e internacionales de calidad. Programas de garantía de calidad y control de calidad.»
-- **Grado de solapamiento:** **Total (100%)** con Ingeniero/a Técnico/a, y **Medio (55%)** con TIC y Radiofísica Hospitalaria.
-- **Origen curricular estatal (BOE):** Desarrolla el bloque **h) «Aplicación de técnicas de control de calidad»** del **Módulo Profesional 1594 (*Gestión del montaje y mantenimiento de sistemas de electromedicina*)** del **Real Decreto 838/2015** y la **Orden EFP/1216/2019**.
-
----
-
 ## 📖 1. Fundamentos de la Calidad Asistencial y Diseño de Programas de Calidad en Sistemas Sanitarios
 
-### 1.1. Evolución Histórica, Trilogía de Avedis Donabedian y Dimensiones de la Calidad (`IOM` / `OMS`)
+### 1.1. Evolución Histórica, Trilogía de Avedis Donabedian y Dimensiones de la Calidad
 
 La evolución de la gestión de la calidad desde la ingeniería industrial hasta los sistemas sanitarios modernos ha transitado por cuatro paradigmas sucesivos: **1) Inspección final** (detección reactiva de defectos post-proceso), **2) Control Estadístico de Calidad** (Shewhart, años 1930: control de la variabilidad del proceso mediante muestreo y gráficos de control), **3) Aseguramiento o Garantía de la Calidad (*Quality Assurance*)** (documentación y normalización sistemática de procedimientos para prevenir fallos antes de que ocurran, serie `ISO 9000`) y **4) Gestión de la Calidad Total (`TQM` — *Total Quality Management* y Excelencia)** (Deming, Juran, Crosby, Ishikawa: cultura organizativa transversal orientada al paciente/usuario, al liderazgo participativo y a la mejora continua de todos los procesos clínicos y de soporte).
 
@@ -73,11 +43,11 @@ La **Gestión por Procesos (`BPM` — *Business Process Management*)** introduce
 
 El primer paso metodológico es la **Identificación y Clasificación de los Procesos** de la organización sanitaria dentro del **Mapa de Procesos Hospitalario**, el cual divide la totalidad de los procesos en **tres grandes categorías**:
 
-| Categoría del Mapa de Procesos | Misión y Naturaleza Funcional | Ejemplos Concretos en un Complejo Hospitalario del SERGAS |
+| Categoría del Mapa de Procesos | Misión y Naturaleza Funcional | Ejemplos Concretos en un Complejo Hospitalario del servicio de salud |
 | :--- | :--- | :--- |
-| **1. Procesos ESTRATÉGICOS (de Dirección o Gobernanza)** | Establecen las directrices, políticas, objetivos, recursos y marco de control a medio y largo plazo para el conjunto del hospital; guían a los procesos clave y de soporte. | • Planificación Estratégica y Acuerdos de Gestión (`SIHGA`).<br>• Gestión de la Calidad Total, Acreditación y Seguridad del Paciente (`SINASP`).<br>• Gestión del Conocimiento, Docencia e Investigación e Innovación (`ACIS` / Institutos `IDIS`, `INIBIC`, `IISGS`).<br>• Comunicación Institucional, Bioética y Humanización. |
+| **1. Procesos ESTRATÉGICOS (de Dirección o Gobernanza)** | Establecen las directrices, políticas, objetivos, recursos y marco de control a medio y largo plazo para el conjunto del hospital; guían a los procesos clave y de soporte. | • Planificación Estratégica y Acuerdos de Gestión (`HIS`).<br>• Gestión de la Calidad Total, Acreditación y Seguridad del Paciente (`SINASP`).<br>• Gestión del Conocimiento, Docencia e Investigación e Innovación (`ACIS` / Institutos `IDIS`, `INIBIC`, `IISGS`).<br>• Comunicación Institucional, Bioética y Humanización. |
 | **2. Procesos CLAVE u OPERATIVOS (Misionales o Asistenciales)** | Constituyen la **razón de ser del hospital**: impactan directamente sobre el paciente/ciudadano externo, transformando una necesidad de salud en un resultado clínico (alta, curación, alivio o cuidado paliativo). | • **Macroprocesos Asistenciales:** Proceso de Urgencias Hospitalarias, Proceso de Hospitalización Médica/Quirúrgica, Proceso Quirúrgico (Bloque Quirúrgico y `CMA`), Proceso de Consultas Externas y Atención Ambulatoria, Atención Primaria.<br>• **Procesos Asistenciales Integrados (`PAI`) y Vías Rápidas:** Código Infarto (`PROGALIAM`), Código Ictus, Código Sepsis, PAI de Cáncer de Mama/Colon/Pulmón, PAI de Insuficiencia Cardíaca, Embarazo y Parto. |
-| **3. Procesos de SOPORTE (o de Apoyo)** | Proveen los **recursos tecnológicos, diagnósticos, logísticos, humanos y de infraestructura** indispensables para que los Procesos Clave puedan ejecutarse sin interrupción y con seguridad. Sus clientes son principalmente clientes internos (los servicios clínicos). | • **Gestión de Ingeniería Biomédica, Electromedicina y Mantenimiento (`XMAO` / `UNE 209001 IN`)** *(subprocesos de incorporación/adquisición, recepción/aceptación, mantenimiento preventivo/correctivo/técnico-legal y baja)*.<br>• Diagnóstico por Imagen (`RIS`/`PACS`) y Diagnóstico Biológico/Laboratorio (`SIL`).<br>• Farmacia Hospitalaria (`SILICON`) y Central de Esterilización (trazabilidad).<br>• Sistemas y Tecnologías de la Información (`TIC` / `IANUS`), Compras y Logística (`LOGAS`), Hostelería, Limpieza y Gestión de Residuos (`Decreto 38/2015`). |
+| **3. Procesos de SOPORTE (o de Apoyo)** | Proveen los **recursos tecnológicos, diagnósticos, logísticos, humanos y de infraestructura** indispensables para que los Procesos Clave puedan ejecutarse sin interrupción y con seguridad. Sus clientes son principalmente clientes internos (los servicios clínicos). | • **Gestión de Ingeniería Biomédica, Electromedicina y Mantenimiento (`GMAO` / `UNE 209001 IN`)** *(subprocesos de incorporación/adquisición, recepción/aceptación, mantenimiento preventivo/correctivo/técnico-legal y baja)*.<br>• Diagnóstico por Imagen (`RIS`/`PACS`) y Diagnóstico Biológico/Laboratorio (`SIL`).<br>• Farmacia Hospitalaria (`sistema de prescripción y farmacia hospitalaria`) y Central de Esterilización (trazabilidad).<br>• Sistemas y Tecnologías de la Información (`TIC` / `HCE`), Compras y Logística (`ERP logístico hospitalario`), Hostelería, Limpieza y Gestión de Residuos. |
 
 Para priorizar sobre qué **Procesos Clave o de Soporte** actuar en primer lugar, se aplica una **Matriz de Priorización de Procesos** que pondera tres vectores: **1) Impacto en los objetivos estratégicos y en la seguridad del paciente**, **2) Repercusión en la satisfacción del usuario/cliente** y **3) Margen potencial de mejora y consumo de recursos (variabilidad actual y coste)**.
 
@@ -88,10 +58,10 @@ Una vez identificado un proceso, su diseño formal (Arquitectura de Nivel 0, Niv
    - **Nombre y Código del Proceso** y versión vigente.
    - **Misión u Objeto del Proceso:** Razón de ser del proceso (qué hace, para quién y con qué finalidad).
    - **Propietario o Responsable del Proceso (*Process Owner*):** Profesional designado por la Dirección encargado de velar por la eficacia global del proceso de principio a fin, liderar el equipo de proceso y analizar sus indicadores.
-   - **Límites del Proceso (Alcance):** Definición inequívoca del **Suceso de Inicio (*Trigger*)** que activa el proceso (p. ej., en el subproceso de *Mantenimiento Correctivo Biomédico*: generación del aviso de avería en el portal `XMAO` por la supervisora de UCI) y del **Suceso Final** (cierre validado de la Orden de Trabajo en `XMAO` tras superar el test de seguridad eléctrica `UNE-EN 62353` y conformidad del servicio clínico).
+   - **Límites del Proceso (Alcance):** Definición inequívoca del **Suceso de Inicio (*Trigger*)** que activa el proceso (p. ej., en el subproceso de *Mantenimiento Correctivo Biomédico*: generación del aviso de avería en el portal `GMAO` por la supervisora de UCI) y del **Suceso Final** (cierre validado de la Orden de Trabajo en `GMAO` tras superar el test de seguridad eléctrica `UNE-EN 62353` y conformidad del servicio clínico).
    - **Proveedores y Entradas (*Inputs*):** Qué elementos físicos o de información desencadenan o alimentan el proceso y quién los suministra.
    - **Salidas (*Outputs*) y Clientes/Destinatarios:** Producto o servicio entregado y quién lo recibe (paciente o servicio clínico interno).
-   - **Recursos, Instalaciones y Tecnología Sanitaria asociada:** Personal, equipamiento biomédico, analizadores de calibración, sistemas informáticos (`IANUS`, `XMAO`, `LOGAS`).
+   - **Recursos, Instalaciones y Tecnología Sanitaria asociada:** Personal, equipamiento biomédico, analizadores de calibración, sistemas informáticos (`HCE`, `GMAO`, `ERP logístico hospitalario`).
    - **Documentos, Normativa y Procedimientos (`PNT`) vinculados.**
    - **Riesgos asociados al proceso** (matriz de riesgos) y **Cuadro de Indicadores de Evaluación** (de estructura, proceso y resultado).
 2. **Representación Gráfica mediante Diagramas de Flujo (Flujogramas `ANSI` y Notación `BPMN 2.0`):**
@@ -109,7 +79,7 @@ La implantación efectiva de la gestión por procesos en un hospital presenta co
 Las **claves estratégicas de éxito** (y barreras que deben gestionarse mediante gestión del cambio) son:
 1. **Compromiso y liderazgo visible de la Alta Dirección (Gerencia del Área Sanitaria):** Sin respaldo ejecutivo para asignar recursos y romper barreras departamentales, la gestión por procesos queda reducida a burocracia documental.
 2. **Participación activa de los profesionales de primera línea (*Bottom-Up* y *Top-Down*):** Quienes ejecutan el proceso (cirujanos, intensivistas, técnicos de electromedicina) deben participar en el diseño y rediseño del mismo para garantizar su adhesión real.
-3. **Alineación con los sistemas de información corporativos (`IANUS`, `XMAO`, `SILICON`, `LOGAS`):** Automatizar la captura de datos dentro del flujo de trabajo diario, evitando registros manuales paralelos.
+3. **Alineación con los sistemas de información corporativos (`HCE`, `GMAO`, `sistema de prescripción y farmacia hospitalaria`, `ERP logístico hospitalario`):** Automatizar la captura de datos dentro del flujo de trabajo diario, evitando registros manuales paralelos.
 4. **Formación metodológica, comunicación transparente y reconocimiento de objetivos** a través de los Acuerdos de Gestión.
 
 La **metodología secuencial de implantación de un proceso** consta de **6 fases operativas**:
@@ -122,7 +92,7 @@ La **metodología secuencial de implantación de un proceso** consta de **6 fase
 
 ### 3.2. Normas Internacionales de Certificación y Modelos de Excelencia Aplicables a Sanidad e Ingeniería Biomédica
 
-En las organizaciones sanitarias y unidades de Ingeniería Biomédica del SERGAS coexisten cinco marcos normativos y de excelencia complementarios:
+En las organizaciones sanitarias y unidades de Ingeniería Biomédica del servicio de salud coexisten cinco marcos normativos y de excelencia complementarios:
 
 | Norma / Modelo | Ámbito y Propósito Específico | Estructura Técnica y Requisitos Nucleares de Examen |
 | :--- | :--- | :--- |
@@ -150,7 +120,7 @@ Para el análisis cuantitativo y cualitativo de los procesos, la ingeniería de 
      $$C_p = \frac{\text{LSE} - \text{LIE}}{6\sigma} \qquad ; \qquad C_{pk} = \min\left( \frac{\text{LSE} - \mu}{3\sigma}\;,\; \frac{\mu - \text{LIE}}{3\sigma} \right)$$
      Un proceso se considera capaz si **$C_p \ge 1,33$** (y excelente si $C_p \ge 1,67$; en nivel **Seis Sigma**, $C_p = 2,0$, lo que equivale con desplazamiento de $1,5\sigma$ a tan solo **$3,4\text{ defectos por millón de oportunidades — DPMO}$**).
 
-### 4.2. Gestión de Riesgos (`AMFE` / `ACR`), *Lean Six Sigma*, Indicadores y Auditorías (`ISO 19011`)
+### 4.2. Gestión de Riesgos (`AMFE` / `ACR`), *Lean Six Sigma*, Indicadores y Auditorías
 
 - **Herramientas Proactivas vs. Reactivas de Seguridad y Mejora:**
   - **Análisis Modal de Fallos y Efectos (`AMFE` / `FMEA` — herramienta PROACTIVA, antes de que ocurra el fallo, `UNE-EN ISO 14971` y `UNE 179003`):** Desglosa cada etapa de un proceso o componente de un sistema biomédico e identifica sus **Modos de Fallo potenciales**, sus **Efectos** sobre el paciente y sus **Causas**, cuantificando el **Número de Prioridad de Riesgo (`NPR` o `RPN`)** como el producto de tres factores puntuados habitualmente de $1\text{ a }10$:
@@ -159,7 +129,7 @@ Para el análisis cuantitativo y cualitativo de los procesos, la ingeniería de 
   - **Análisis Causa Raíz (`ACR` / *Root Cause Analysis* y Técnica de los «5 Porqués» — herramienta REACTIVA, después de ocurrir un Evento Centinela o Incidente Grave):** Investiga en profundidad los factores latentes del sistema (organizativos, tecnológicos, humanos y ambientales) tras un suceso adverso notificado en `SINASP` o un incidente de tecnovigilancia.
   - **Metodología *Lean Healthcare* y *Six Sigma* (`DMAIC`):** *Lean* se enfoca en maximizar el flujo de valor eliminando los **8 desperdicios (*mudas*)** en el hospital (esperas, movimientos innecesarios, transporte excesivo, sobreprocesamiento, exceso de inventario de fungibles, defectos/retrabajos, sobreproducción y talento desaprovechado) mediante herramientas como el **Mapa de Flujo de Valor (`VSM`)**, las **5S** (*Seiri* clasificar, *Seiton* ordenar, *Seiso* limpiar, *Seiketsu* estandarizar, *Shitsuke* disciplina), **Kanban** (doble cajetín logístico) y **Poka-Yoke** (diseño a prueba de error, como los conectores indexados `NIST` de gases medicinales que impiden físicamente conectar oxígeno en una toma de protóxido). *Six Sigma* se enfoca en reducir la variabilidad mediante el ciclo de 5 fases **`DMAIC` (*Define, Measure, Analyze, Improve, Control*)**.
 - **Mecanismos de Evaluación y Seguimiento: Construcción de Indicadores y Auditorías (`UNE-EN ISO 19011`):**
-  - **Indicadores de Proceso:** Son medidas cuantitativas expresadas como **Proporción** ($A / (A+B)$, el numerador está incluido en el denominador), **Razón** ($A / B$, numerador no incluido en denominador) o **Tasa / Incidencia** (incorpora el factor tiempo de exposición). Todo indicador se documenta en su **Ficha de Indicador** (Nombre, Dimensión, Tipo [Estructura/Proceso/Resultado], Fórmula matemática con numerador y denominador, Fuente de datos [`XMAO`/`IANUS`], Periodicidad, Responsable y **Estándar o Umbral de Aceptabilidad**) y debe reunir cuatro propiedades clinimétricas/metrológicas: **Validez** (mide realmente lo que pretende medir), **Fiabilidad o Reproducibilidad** (obtiene el mismo resultado al repetirse en iguales condiciones), **Sensibilidad** (capacidad de detectar todos los casos donde existe un problema de calidad: $\text{VP} / (\text{VP} + \text{FN})$) y **Especificidad** (detecta únicamente los casos reales sin falsos positivos: $\text{VN} / (\text{VN} + \text{FP})$). Evaluaciones puntuales pueden realizarse mediante **Estudios de *Audit* Clínico/Técnico** o muestreo por **Lotes (`LQAS`)**.
+  - **Indicadores de Proceso:** Son medidas cuantitativas expresadas como **Proporción** ($A / (A+B)$, el numerador está incluido en el denominador), **Razón** ($A / B$, numerador no incluido en denominador) o **Tasa / Incidencia** (incorpora el factor tiempo de exposición). Todo indicador se documenta en su **Ficha de Indicador** (Nombre, Dimensión, Tipo [Estructura/Proceso/Resultado], Fórmula matemática con numerador y denominador, Fuente de datos [`GMAO`/`HCE`], Periodicidad, Responsable y **Estándar o Umbral de Aceptabilidad**) y debe reunir cuatro propiedades clinimétricas/metrológicas: **Validez** (mide realmente lo que pretende medir), **Fiabilidad o Reproducibilidad** (obtiene el mismo resultado al repetirse en iguales condiciones), **Sensibilidad** (capacidad de detectar todos los casos donde existe un problema de calidad: $\text{VP} / (\text{VP} + \text{FN})$) y **Especificidad** (detecta únicamente los casos reales sin falsos positivos: $\text{VN} / (\text{VN} + \text{FP})$). Evaluaciones puntuales pueden realizarse mediante **Estudios de *Audit* Clínico/Técnico** o muestreo por **Lotes (`LQAS`)**.
   - **Auditorías de Sistemas de Gestión (`UNE-EN ISO 19011:2018`):** Proceso sistemático, independiente y documentado para obtener **evidencias objetivas** y evaluarlas de manera objetiva con el fin de determinar el grado en que se cumplen los **criterios de auditoría**:
     - **Auditoría de Primera Parte (Auditoría Interna):** Realizada por, o en nombre de, la propia organización sanitaria para la revisión por la dirección y fines internos (garantizando siempre que los auditores no auditen su propio trabajo).
     - **Auditoría de Segunda Parte (Externa de Proveedor):** Realizada por el hospital (cliente) sobre sus proveedores o empresas adjudicatarias de mantenimiento electromédico.
@@ -167,39 +137,23 @@ Para el análisis cuantitativo y cualitativo de los procesos, la ingeniería de 
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Certificaciones `ISO 9001` e `ISO 13485` en los Servicios de Ingeniería Biomédica y Centrales del SERGAS
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-El **Servicio Gallego de Salud (SERGAS)** ha impulsado de manera pionera la implantación y certificación de Sistemas de Gestión de la Calidad por procesos en las unidades técnicas y clínicas de las **7 Áreas Sanitarias**:
-- Los **Servicios de Ingeniería Biomédica / Electromedicina, Mantenimiento, Centrales de Esterilización, Servicios de Farmacia Hospitalaria, Servicios de Radiofísica y Protección Radiológica, Transfusión (`ADOS`) y Unidades de Impresión 3D / Biofabricación** de los complejos hospitalarios del SERGAS cuentan con certificaciones **`UNE-EN ISO 9001:2015`** y, en los ámbitos de fabricación *in-house* de productos sanitarios a medida/biomodelos y reprocesamiento/esterilización, con esquemas **`UNE-EN ISO 13485:2016`** (así como acreditaciones **`UNE-EN ISO 15189`** en laboratorios clínicos y de anatomía patológica).
-- En el Mapa de Procesos de los hospitales del SERGAS, el **Proceso de Soporte de Gestión de Tecnología Sanitaria e Ingeniería Biomédica** se desglosa en cuatro subprocesos estandarizados conforme a la guía **`UNE 209001 IN`**: *1) Planificación e Incorporación de Tecnología*, *2) Recepción, Instalación, Pruebas de Aceptación y Alta en Inventario*, *3) Gestión del Mantenimiento Preventivo, Correctivo, Técnico-Legal y Control de Calidad Metrológico*, y *4) Gestión de Vigilancia, Obsolescencia y Baja del Activo*.
+| Concepto / Modelo / Herramienta | Definición Exacta, Fórmula o Regla de Examen (¡Memorizar!) |
+| :--- | :--- |
+| **Trilogía de Evaluación de la Calidad Asistencial** | **1) Estructura** (recursos físicos, humanos, tecnológicos y organizativos), **2) Proceso** (qué se hace y cómo se aplica la evidencia/PNT) y **3) Resultado (*Outcome*)** (cambio en la salud, eventos evitados y satisfacción). |
+| **Las 6 Dimensiones de la Calidad** | **Seguridad**, **Efectividad**, **Atención centrada en el paciente**, **Oportunidad (accesibilidad temporal)**, **Eficiencia** y **Equidad**. |
+| **Trilogía de Gestión de la Calidad** | **Planificación de la calidad**, **Control de la calidad** y **Mejora de la calidad**. |
+| **Arquitectura del Mapa de Procesos** | **1) Procesos Estratégicos** (dirección, calidad, I+D+i), **2) Procesos Clave / Operativos** (asistenciales directos: Urgencias, Quirófano, PAI) y **3) Procesos de Soporte** (**Ingeniería Biomédica**, Imagen, Laboratorio, Farmacia, Esterilización, TIC, Logística). |
+| **Norma SGC General vs. Sanitaria vs. Productos Sanitarios** | `ISO 9001` tiene 10 capítulos (`HLS`) y pensamiento basado en riesgos. **`UNE-EN 15224`** es la específica sanitaria (añade **11 requisitos de calidad clínica** y riesgo clínico). **`ISO 13485`** es la específica de **productos sanitarios y SAT electromédico** (exige Manual de Calidad y `CAPA`). |
+| **Modelo Europeo de Excelencia** | Estructura en **3 bloques y 7 criterios**: **Dirección** (Criterios 1–2), **Ejecución** (Criterios 3–5) y **Resultados** (Criterios 6–7). Evaluación de $0\text{ a }1.000\text{ ptos}$ mediante la **Matriz Lógica `REDER`** (*Resultados, Enfoque, Despliegue, Evaluación y Revisión*). |
+| **Gráficos de Control Estadístico (`SPC`) y Capacidad** | Límites de control a **$\mu \pm 3\sigma$ ($99,73\%$)**. Capacidad potencial: $C_p = \frac{\text{LSE} - \text{LIE}}{6\sigma}$ (capaz si **$C_p \ge 1,33$**). Nivel **Seis Sigma (`DMAIC`)** = **$3,4\text{ defectos por millón de oportunidades (DPMO)}$**. |
+| **Análisis Modal de Fallos y Efectos (`AMFE`)** | Herramienta **PROACTIVA**. **$\text{NPR} = \text{Gravedad }(G) \times \text{Ocurrencia }(O) \times \text{Detectabilidad }(D)$**. A menor detectabilidad (fallo más oculto), **mayor** puntuación $D$ ($D=10$) y mayor riesgo. |
+| **Directrices para Auditorías** | **1.ª Parte** (internas), **2.ª Parte** (a proveedores/contratistas) y **3.ª Parte** (certificación independiente acreditada por **`ENAC`**). |
 
-### 5.2. Procesos Asistenciales Integrados (`PAI`) en `IANUS`, Seguridad (`SINASP`) y Cuadro de Mando en `XMAO`
-
-En el plano asistencial, la Consellería de Sanidade y el SERGAS han desplegado dentro de la historia clínica electrónica única **`IANUS`** múltiples **Procesos Asistenciales Integrados (`PAI`)** y **Vías Rápidas Oncológicas** (sospecha de cáncer de mama, colon, pulmón, próstata, vejiga, cabeza y cuello y melanoma, con plazos garantizados por el `Decreto 105/2017`) y códigos tiempo-dependientes (**Código Infarto `PROGALIAM`**, **Código Ictus**, **Código Sepsis**). En todos ellos, el proceso de soporte de Ingeniería Biomédica garantiza la disponibilidad crítica ($\ge 99\%$) de la tecnología diagnóstica y terapéutica que sustenta el proceso clínico (electrocardiógrafos conectados a red, salas de hemodinámica 24/7, tomógrafos computarizados de urgencias para angio-TC cerebral y analizadores *Point-of-Care* de lactato/gasometría).
-
-El seguimiento y evaluación mensual del proceso de Ingeniería Biomédica se realiza de forma automatizada en el cuadro de mando del sistema corporativo **`XMAO`**, monitorizando indicadores de proceso y resultado vinculados a los **Acuerdos de Gestión Anuales** de las Gerencias: tiempo medio de primera respuesta ante avería urgente en áreas críticas ($< 15\text{–}30\text{ min}$), tiempo medio de reparación (`MTTR`), porcentaje de ejecución del plan preventivo en equipos de alto riesgo ($\text{EM} \ge 12$, umbral $= 100\%$), porcentaje de equipos con verificación anual de seguridad eléctrica `UNE-EN 62353` apta, y registro de incidentes adversos relacionados con tecnología sanitaria en el sistema **`SINASP`** y en el portal de tecnovigilancia de la **AEMPS**.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
-
-| Concepto / Modelo / Herramienta | Norma / Autor de Referencia | Definición Exacta, Fórmula o Regla de Examen (¡Memorizar!) |
-| :--- | :--- | :--- |
-| **Trilogía de Evaluación de la Calidad Asistencial** | **Avedis Donabedian (1966)** | **1) Estructura** (recursos físicos, humanos, tecnológicos y organizativos), **2) Proceso** (qué se hace y cómo se aplica la evidencia/PNT) y **3) Resultado (*Outcome*)** (cambio en la salud, eventos evitados y satisfacción). |
-| **Las 6 Dimensiones de la Calidad** | **`IOM` (2001) / `OMS`** | **Seguridad**, **Efectividad**, **Atención centrada en el paciente**, **Oportunidad (accesibilidad temporal)**, **Eficiencia** y **Equidad**. |
-| **Trilogía de Gestión de la Calidad** | **Joseph M. Juran** | **Planificación de la calidad**, **Control de la calidad** y **Mejora de la calidad**. |
-| **Arquitectura del Mapa de Procesos** | `ISO 9001` / `EFQM` | **1) Procesos Estratégicos** (dirección, calidad, I+D+i), **2) Procesos Clave / Operativos** (asistenciales directos: Urgencias, Quirófano, PAI) y **3) Procesos de Soporte** (**Ingeniería Biomédica**, Imagen, Laboratorio, Farmacia, Esterilización, TIC, Logística). |
-| **Norma SGC General vs. Sanitaria vs. Productos Sanitarios** | **`ISO 9001:2015`** · **`UNE-EN 15224:2017`** · **`ISO 13485:2016`** | `ISO 9001` tiene 10 capítulos (`HLS`) y pensamiento basado en riesgos. **`UNE-EN 15224`** es la específica sanitaria (añade **11 requisitos de calidad clínica** y riesgo clínico). **`ISO 13485`** es la específica de **productos sanitarios y SAT electromédico** (exige Manual de Calidad y `CAPA`). |
-| **Modelo Europeo de Excelencia** | **`EFQM 2020/2025`** | Estructura en **3 bloques y 7 criterios**: **Dirección** (Criterios 1–2), **Ejecución** (Criterios 3–5) y **Resultados** (Criterios 6–7). Evaluación de $0\text{ a }1.000\text{ ptos}$ mediante la **Matriz Lógica `REDER`** (*Resultados, Enfoque, Despliegue, Evaluación y Revisión*). |
-| **Gráficos de Control Estadístico (`SPC`) y Capacidad** | **Shewhart** | Límites de control a **$\mu \pm 3\sigma$ ($99,73\%$)**. Capacidad potencial: $C_p = \frac{\text{LSE} - \text{LIE}}{6\sigma}$ (capaz si **$C_p \ge 1,33$**). Nivel **Seis Sigma (`DMAIC`)** = **$3,4\text{ defectos por millón de oportunidades (DPMO)}$**. |
-| **Análisis Modal de Fallos y Efectos (`AMFE`)** | **`UNE-EN ISO 14971` / `UNE 179003`** | Herramienta **PROACTIVA**. **$\text{NPR} = \text{Gravedad }(G) \times \text{Ocurrencia }(O) \times \text{Detectabilidad }(D)$**. A menor detectabilidad (fallo más oculto), **mayor** puntuación $D$ ($D=10$) y mayor riesgo. |
-| **Directrices para Auditorías** | **`UNE-EN ISO 19011:2018`** | **1.ª Parte** (internas), **2.ª Parte** (a proveedores/contratistas) y **3.ª Parte** (certificación independiente acreditada por **`ENAC`**). |
-
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 
 1. **Trampa fija de test sobre qué tipo de proceso es Ingeniería Biomédica / Electromedicina en el Mapa de Procesos de un Hospital:** Los tribunales ponen como distractor que el mantenimiento biomédico o el radiodiagnóstico son *Procesos Clave u Operativos* por su importancia vital. **¡Falso!** En la teoría ortodoxa de gestión por procesos hospitalarios, los **Procesos Clave (Operativos)** son aquellos por los que transita directamente el paciente como eje asistencial finalista (Urgencias, Hospitalización, Proceso Quirúrgico, Consultas, PAI), mientras que **Ingeniería Biomédica / Electromedicina, Mantenimiento, Esterilización, Farmacia, Laboratorio y TIC son siempre Procesos de SOPORTE (o Apoyo)**.
 2. **Trampa de clasificación de indicadores de Donabedian (Estructura vs. Proceso vs. Resultado):** Si el enunciado pregunta qué tipo de indicador es el *«porcentaje de respiradores de UCI con la revisión preventiva y el test `UNE-EN 62353` realizados dentro del plazo programado»*, es un **Indicador de PROCESO** (evalúa el cumplimiento de una actividad/protocolo). En cambio, el *«número de respiradores disponibles por cada cama de UCI»* es un **Indicador de ESTRUCTURA**, y la *«tasa de disponibilidad operativa anual (`Uptime`) $\ge 98,5\%$ o la tasa de neumonía asociada a ventilación mecánica»* es un **Indicador de RESULTADO**.

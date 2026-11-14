@@ -1,34 +1,6 @@
 # Tema 2 — Caracterización de la radiación en el ámbito sanitario. Radiación ionizante y no ionizante: naturaleza física, interacción con la materia y efectos biológicos relevantes. Magnitudes y unidades radiológicas de uso sanitario.
 
-> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #2 de 74) — Ejercicio 1.º Eliminatorio
-> - **Bloque Temático SERGAS:** Bloque 02 — Física de las Radiaciones, Electromagnetismo y Equipos de Radiodiagnóstico
-> - **Marco Normativo y Técnico Nuclear:** Directiva 2013/59/EURATOM; RD 1029/2022 (Reglamento de Protección de la Salud contra las Radiaciones Ionizantes); RD 601/2019 (Exposiciones Médicas); RD 1085/2009; Informes ICRU 85, ICRP 103 e ICRP 118; Protocolo OIEA TRS-398; RD 838/2015 y Orden EFP/1216/2019 (Módulo Profesional 1588 — *Sistemas de radiodiagnóstico, radioterapia e imagen médica*).
-> - **Sistemas y Entorno SERGAS:** Servicios de Radiofísica y Protección Radiológica (SRPR) de las 7 Áreas Sanitarias del SERGAS, Unidad Técnica de Protección Radiológica (UTPR) de Galaria, Historia Clínica Electrónica (`IANUS`), `PACS` Corporativo, Sistemas de Gestión de Dosis (`DICOM RDSR`) y Sistema de Gestión de Mantenimiento (`XMAO`).
-
----
-
-## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
-
-El **Tema 2** de la Parte Específica del programa oficial para el acceso a la categoría de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud (publicado en el *Diario Oficial de Galicia* núm. 67, de 13 de abril de 2026) constituye la piedra angular físico-matemática y dosimétrica sobre la que descansan los bloques de diagnóstico por imagen, radioterapia, medicina nuclear y protección radiológica hospitalaria (Temas 3 al 19 y 51 al 54). Su contenido desarrolla de forma exhaustiva los criterios de evaluación del Resultado de Aprendizaje 1 (RA1) del **Módulo Profesional 1588 (*Sistemas de radiodiagnóstico, radioterapia e imagen médica*, 14 ECTS)** del `RD 838/2015` y de la `Orden EFP/1216/2019`, articulándose en cuatro ejes nucleares:
-1. **Caracterización física de la radiación en el ámbito sanitario:** dualidad onda-corpúsculo, espectro electromagnético y frontera energética entre radiaciones no ionizantes e ionizantes (directamente e indirectamente ionizantes).
-2. **Mecanismos de interacción con la materia:** formulación analítica del poder de frenado de partículas cargadas (Bethe-Bloch, $LET$, Pico de Bragg), atenuación exponencial de fotones (Beer-Lambert, $\text{HVL}$, $\text{TVL}$), los cinco procesos fotónicos (Rayleigh, Fotoeléctrico, Compton, Producción de Pares y Fotonuclear) y moderación/captura neutrónica.
-3. **Efectos biológicos relevantes:** acción directa e indirecta (radiólisis del agua), cinética de supervivencia celular (modelo Lineal-Cuadrático $\alpha/\beta$, las «5 R»), diferenciación entre reacciones tisulares (efectos deterministas) y efectos estocásticos, radiosensibilidad embrionaria/fetal y efectos biofísicos de radiaciones no ionizantes (SAR y corrientes inducidas).
-4. **Magnitudes y unidades radiológicas de uso sanitario:** jerarquía metrológica oficial según `ICRU 85`, `ICRP 103` y el vigente **`RD 1029/2022`** (magnitudes radiométricas, de radiactividad, dosimétricas físicas, limitadoras de protección radiológica y operacionales de vigilancia ambiental y personal).
-
-De acuerdo con la matriz verificada en `cruce_temarios_sergas.md`, este epígrafe presenta la siguiente correspondencia directa con otras categorías estatutarias del SERGAS:
-- **Categorías con solapamiento:** **`Radiofísica Hospitalaria`** | **`TS Imagen para el Diagnóstico`** | **`TS Radioterapia`**.
-- **Grado de solapamiento:**
-  - **Total (95%) en `Radiofísica Hospitalaria`:** cubre íntegramente radiaciones ionizantes y no ionizantes, naturaleza física, interacción con la materia, efectos biológicos y magnitudes/unidades.
-  - **Alto (85%) en `TS Imagen para el Diagnóstico`:** cubre física de radiaciones ionizantes, interacción con la materia, magnitudes/unidades y efectos biológicos (radiobiología).
-  - **Alto (85%) en `TS Radioterapia`:** cubre física de radiaciones ionizantes, interacción con la materia, magnitudes/unidades y efectos biológicos.
-- **Epígrafes equivalentes en temarios SERGAS:**
-  - **`Radiofísica Hospitalaria`:** *Tema 1* (Ampliación de física de radiaciones. Estructura de la materia. Radiaciones ionizantes y no ionizantes. Radiactividad. Interacción de la radiación con la materia [fotones y partículas]. Efectos físicos de la radiación); *Tema 4* (Fundamentos de radiobiología. Respuesta de los tejidos a la radiación a nivel molecular y celular. Efectos deterministas y estocásticos. Daño celular y curvas de supervivencia celular. Modelos radiobiológicos $\alpha/\beta$, TCP y NTCP. Carcinogénesis, riesgos genéticos y somáticos. Efectos de la radiación en el embrión y el feto); *Tema 8* (Bases científicas de la protección radiológica. Magnitudes y unidades en protección radiológica. Detección de la radiación. Justificación, optimización ALARA y limitación de dosis).
-  - **`TS Imagen para el Diagnóstico`:** *Tema 5* (Física de las radiaciones: conceptos y tipos de radiaciones ionizantes. Interacción con la materia. Fuentes y equipos generadores en radiología y medicina nuclear. Magnitudes y unidades radiológicas); *Tema 7* (Radiobiología: radiosensibilidad, respuesta celular sistémica y orgánica. Efectos genéticos y somáticos de la radiación).
-  - **`TS Radioterapia`:** *Tema 6* (Física de las radiaciones: conceptos y tipos de radiaciones ionizantes. Interacción con la materia. Fuentes y equipos generadores en radioterapia. Magnitudes y unidades radiológicas); *Tema 8* (Radiobiología: radiosensibilidad, respuesta celular sistémica y orgánica. Efectos genéticos y somáticos).
-
----
-
-## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
+## 📖 1. Naturaleza Física de la Radiación y Umbral Energético de Ionización en Tejido Biológico
 
 ### 1.1. Naturaleza Física de la Radiación y Umbral Energético de Ionización en Tejido Biológico
 En física médica, el término **radiación** designa la propagación de energía a través del vacío o de un medio material, ya sea en forma de ondas electromagnéticas (cuantos sin masa en reposo llamados **fotones**, que se desplazan en el vacío a la velocidad de la luz $c = 2,99792458 \times 10^8\text{ m/s}$) o de partículas subatómicas dotadas de masa en reposo (electrones, positrones, protones, neutrones, partículas $\alpha$ o iones pesados). Para la radiación electromagnética, la **relación de Planck-Einstein** vincula la energía $E$ de cada fotón con su frecuencia $\nu$ y su longitud de onda $\lambda$:
@@ -43,12 +15,12 @@ La distinción física y reglamentaria entre **radiación no ionizante** y **rad
 - Aunque la energía primera de ionización del átomo de hidrógeno aislado es de $13,6\text{ eV}$ (y la de átomos como el carbono es $11,26\text{ eV}$, el oxígeno $13,62\text{ eV}$ y el nitrógeno $14,53\text{ eV}$), en el **agua líquida ($\text{H}_2\text{O}$)** —que constituye entre el $70\%$ y el $80\%$ de la masa de los tejidos blandos humanos— y en las macromoléculas celulares, el **umbral efectivo de ionización** se sitúa entre **$10\text{ eV}$ y $12,4\text{ eV}$** (convenio internacional ICRU/ICRP fijado en **$E_{\text{umbral}} \approx 12,4\text{ eV}$**, correspondiente a una longitud de onda $\lambda \approx 100\text{ nm}$ situada en la región del **ultravioleta extremo o de vacío, UV-C**).
 - Adicionalmente, en gases de referencia como el aire seco utilizado en cámaras de ionización, la **energía media consumida por cada par iónico formado ($W/e$)** —que incluye tanto la energía invertida en ionizaciones como la disipada en excitaciones subumbrales— tiene un valor constante y metrológicamente crítico de **$W_{\text{aire}}/e = 33,97\text{ eV/par iónico}$** ($33,97\text{ J/C}$) para haces de fotones y electrones.
 
-### 1.2. Taxonomía de las Radiaciones en el Entorno Sanitario (ICRU 85)
+### 1.2. Taxonomía de las Radiaciones en el Entorno Sanitario
 Siguiendo el Informe **ICRU 85 (*Fundamental Quantities and Units for Ionizing Radiation*)** y el marco del **`RD 1029/2022`**, las radiaciones empleadas o generadas en un hospital se clasifican en dos grandes familias:
 1. **Radiaciones No Ionizantes ($E < 12,4\text{ eV}$, $\lambda > 100\text{ nm}$):**
    - **Campos eléctricos y magnéticos estáticos ($0\text{ Hz}$) y de frecuencia extremadamente baja (ELF, $< 300\text{ Hz}$):** imán principal $B_0$ de Resonancia Magnética ($1,5\text{ T}$ a $3,0\text{ T}$), bobinas de gradiente de RM ($\text{kHz}$), magnetoterapia de rehabilitación y estimulación magnética transcraneal (TMS).
    - **Radiofrecuencia (RF, $100\text{ kHz–}300\text{ MHz}$) y Microondas (MW, $300\text{ MHz–}300\text{ GHz}$):** pulsos de excitación $B_1$ en RM ($63,87\text{ MHz}$ en $1,5\text{ T}$; $127,74\text{ MHz}$ en $3,0\text{ T}$), bisturí eléctrico de alta frecuencia ($300\text{ kHz–}5\text{ MHz}$), diatermia por onda corta ($27,12\text{ MHz}$), radarterapia y ablación tumoral por microondas ($2.450\text{ MHz}$).
-   - **Radiación óptica (Infrarroja, Visible y Ultravioleta A/B y C $>100\text{ nm}$):** lámparas de infrarrojos, pulsioximetría ($660\text{ nm} / 940\text{ nm}$), fototerapia neonatal azul ($450\text{–}470\text{ nm}$ para isomerización de la bilirrubina), radiación germicida UV-C ($254\text{ nm}$) y **láseres médicos** quirúrgicos, oftalmológicos y de centrado (`UNE-EN 60601-2-22`).
+   - **Radiación óptica (Infrarroja, Visible y Ultravioleta A/B y C $>100\text{ nm}$):** lámparas de infrarrojos, pulsioximetría ($660\text{ nm} / 940\text{ nm}$), fototerapia neonatal azul ($450\text{–}470\text{ nm}$ para isomerización de la bilirrubina), radiación germicida UV-C ($254\text{ nm}$) y **láseres médicos** quirúrgicos, oftalmológicos y de centrado.
 2. **Radiaciones Ionizantes ($E \ge 12,4\text{ eV}$, $\lambda \le 100\text{ nm}$):**
    - **Directamente ionizantes (partículas cargadas con energía cinética suficiente):** interactúan de forma continua a lo largo de su trayectoria mediante fuerzas coulombianas de largo alcance con los electrones corticales y núcleos del medio. Comprenden:
      - **Partículas ligeras:** **electrones ($\beta^-$ o $e^-$)** acelerados en tubos de rayos X o aceleradores lineales de radioterapia ($4\text{ a }22\text{ MeV}$) o emitidos por radionucleidos terapéuticos ($^{131}\text{I}$, $^{90}\text{Y}$, $^{177}\text{Lu}$), y **positrones ($\beta^+$ o $e^+$)** emitidos por radionucleidos ricos en protones en tomografía PET ($^{18}\text{F}$, $^{11}\text{C}$, $^{68}\text{Ga}$, $^{82}\text{Rb}$).
@@ -67,7 +39,7 @@ La ingeniería biomédica hospitalaria aplica esta caracterización física bajo
 
 ---
 
-## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento
+## ⚙️ 2. Interacción de Partículas Cargadas con la Materia y Interacción de Fotones con la Materia
 
 ### 2.1. Interacción de Partículas Cargadas con la Materia: Poder de Frenado, LET y Pico de Bragg
 Cuando una partícula cargada atraviesa un medio de densidad $\rho$, experimenta miles de interacciones coulombianas clasificadas según el parámetro de impacto $b$ respecto al radio atómico $a$:
@@ -129,9 +101,9 @@ $$\mu = \sigma_{\text{coh}} + \tau + \sigma_{\text{inc}} + \kappa + \sigma_{\tex
 
 ---
 
-## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales
+## 🔬 3. Sistema Oficial de Magnitudes y Unidades Radiológicas y Radiobiología Molecular y Celular
 
-### 3.1. Sistema Oficial de Magnitudes y Unidades Radiológicas (ICRU 85, ICRP 103 y RD 1029/2022)
+### 3.1. Sistema Oficial de Magnitudes y Unidades Radiológicas
 La ingeniería clínica y la protección radiológica distinguen rigurosamente entre **magnitudes físicas medibles** (actividad, exposición, kerma y dosis absorbida), **magnitudes de protección radiológica o limitadoras** (dosis equivalente en órgano y dosis efectiva, que contienen factores de juicio biológico y no son directamente medibles) y **magnitudes operacionales ICRU** (que proporcionan una estimación conservadora y medible de las magnitudes limitadoras):
 1. **Actividad ($A$):** número esperado de transiciones nucleares espontáneas $dN$ que ocurren en una cantidad de radionucleido en el tiempo $dt$:
    $$A(t) = \left|\frac{dN}{dt}\right| = \lambda \cdot N(t) = A_0 \cdot e^{-\lambda t} = A_0 \cdot 2^{-t / T_{1/2}} \quad ; \quad T_{1/2} = \frac{\ln 2}{\lambda} \approx \frac{0,693}{\lambda}$$
@@ -168,7 +140,7 @@ La ingeniería clínica y la protección radiológica distinguen rigurosamente e
 | **Dosis Absorbida** | $D$ | $D = \frac{d\bar{\varepsilon}}{dm}$ | **Gray ($\text{Gy}$)** | **rad** ($1\text{ Gy} = 100\text{ rad}$) | Física básica (toda radiación y medio). Prescripción en **Radioterapia** y evaluación de **efectos deterministas**. |
 | **Dosis Equivalente** | $H_T$ | $H_T = \sum_R w_R D_{T,R}$ | **Sievert ($\text{Sv}$)** | **rem** ($1\text{ Sv} = 100\text{ rem}$) | Limitadora de Protección Radiológica en órgano (límites en cristalino $20\text{ mSv}$, piel y extremidades $500\text{ mSv}$). |
 | **Dosis Efectiva** | $E$ | $E = \sum_T w_T H_T$ | **Sievert ($\text{Sv}$)** | **rem** ($1\text{ Sv} = 100\text{ rem}$) | Limitadora de cuerpo entero para **riesgo estocástico** (límite trabajador $20\text{ mSv/año}$, público $1\text{ mSv/año}$). |
-| **Equivalente de Dosis Personal** | $H_p(d)$ | Dosis equivalente en tejido blando a profundidad $d\text{ (mm)}$ | **Sievert ($\text{Sv}$)** | $\text{mSv}$ | Operacional medible en dosimetría oficial del SERGAS: **$H_p(10)$** solapa, **$H_p(3)$** cristalino, **$H_p(0,07)$** anillo. |
+| **Equivalente de Dosis Personal** | $H_p(d)$ | Dosis equivalente en tejido blando a profundidad $d\text{ (mm)}$ | **Sievert ($\text{Sv}$)** | $\text{mSv}$ | Operacional medible en dosimetría oficial del servicio de salud: **$H_p(10)$** solapa, **$H_p(3)$** cristalino, **$H_p(0,07)$** anillo. |
 
 ### 3.2. Radiobiología Molecular y Celular: Acción Directa/Indirecta, Modelo Lineal-Cuadrático y las «5 R»
 La diana crítica celular frente a las radiaciones ionizantes es la molécula de **ADN nuclear**. El daño al ADN se produce por dos vías complementarias:
@@ -203,7 +175,7 @@ A nivel macroscópico y epidemiológico (`ICRP 103`, `ICRP 118` y `RD 1029/2022`
 | **Relación Dosis – Efecto** | Por encima del umbral, al aumentar la dosis **aumenta la GRAVEDAD (severidad)** de la lesión tisular (curva sigmoidea). | Al aumentar la dosis **aumenta la PROBABILIDAD de aparición**, pero **la GRAVEDAD del cáncer o mutación es independiente de la dosis recibida**. |
 | **Período de latencia** | Generalmente corto (horas, días o semanas), aunque existen reacciones tisulares tardías (cataratas, fibrosis pulmonar, mielopatía). | Largo período de latencia: **$> 2\text{–}5\text{ años}$ para leucemias** y **$> 10\text{–}40\text{ años}$ para tumores sólidos**. |
 | **Ejemplos clínicos y umbrales de referencia (ICRP 103 / 118)** | • **Eritema cutáneo transitorio:** $2\text{–}3\text{ Gy}$; **depilación temporal:** $3\text{ Gy}$; **radionecrosis cutánea:** $> 15\text{–}18\text{ Gy}$.<br>• **Esterilidad temporal:** $0,15\text{ Gy}$ (testículo) / $0,6\text{ Gy}$ (ovario); **permanente:** $3,5\text{–}6\text{ Gy}$ (testículo) / $2,5\text{–}6\text{ Gy}$ (ovario).<br>• **Cataratas en el cristalino:** nuevo umbral **ICRP 118 de $0,5\text{ Gy}$** (tanto aguda como fraccionada/crónica).<br>• **Síndrome de Irradiación Aguda (cuerpo entero):** Hematopoyético ($1\text{–}6\text{ Gy}$, $DL_{50/60} \approx 3,5\text{–}4\text{ Gy}$ sin soporte), Gastrointestinal ($6\text{–}15\text{ Gy}$), Cerebrovascular ($> 20\text{–}50\text{ Gy}$). | • **Efectos estocásticos somáticos:** **Carcinogénesis radioinducida** (leucemias, cáncer de tiroides, mama, pulmón, colon). Coeficiente nominal de riesgo de detrimento ICRP 103: **$5,5\%\text{ por Sv}$ ($5,5 \times 10^{-2}\text{ Sv}^{-1}$) en población general** y **$4,1\%\text{ por Sv}$ en trabajadores adultos**.<br>• **Efectos estocásticos hereditarios:** enfermedades genéticas en la descendencia (riesgo nominal $\approx 0,2\%\text{ por Sv}$). |
-| **Prevención en Protección Radiológica (`RD 1029/2022`)** | Manteniendo las dosis por debajo de los umbrales mediante **Límites de Dosis Equivalente en órganos** (cristalino $\le 20\text{ mSv/año}$; piel y extremidades $\le 500\text{ mSv/año}$). | Reduciendo la probabilidad a niveles aceptables mediante **Justificación, Optimización (ALARA)** y **Límites de Dosis Efectiva** ($20\text{ mSv/año}$ en trabajadores, $1\text{ mSv/año}$ en público). |
+| **Prevención en Protección Radiológica** | Manteniendo las dosis por debajo de los umbrales mediante **Límites de Dosis Equivalente en órganos** (cristalino $\le 20\text{ mSv/año}$; piel y extremidades $\le 500\text{ mSv/año}$). | Reduciendo la probabilidad a niveles aceptables mediante **Justificación, Optimización (ALARA)** y **Límites de Dosis Efectiva** ($20\text{ mSv/año}$ en trabajadores, $1\text{ mSv/año}$ en público). |
 
 En el **embrión y feto** (cuya protección en trabajadoras gestantes exige que la dosis equivalente al feto sea tan baja como sea razonablemente posible y **no exceda de $1\text{ mSv}$ desde la comunicación del embarazo hasta el final de la gestación**, Art. 12 del `RD 1029/2022`), los efectos deterministas dependen críticamente de la **edad gestacional**:
 1. **Período preimplantacional (días $0\text{ a }9$ posconcepción):** rige la **ley del «todo o nada»**; dosis superiores a $100\text{ mGy}$ pueden producir la muerte embrionaria y reabsorción, pero si el embrión sobrevive no presenta malformaciones congénitas.
@@ -217,7 +189,7 @@ Por su parte, las **radiaciones no ionizantes** carecen de energía cuántica pa
 
 ---
 
-## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento
+## 🛡️ 4. Sistemas de Detección y Dosimetría de las Radiaciones en Ingeniería Biomédica
 
 ### 4.1. Sistemas de Detección y Dosimetría de las Radiaciones en Ingeniería Biomédica
 El ingeniero biomédico y el especialista en radiofísica hospitalaria seleccionan el detector idóneo según la magnitud, el tipo de radiación y si se requiere medida en tiempo real (activa) o integrada (pasiva):
@@ -234,7 +206,7 @@ El ingeniero biomédico y el especialista en radiofísica hospitalaria seleccion
    - **Películas Radiocrómicas (tipo *GafChromic*):** polímeros orgánicos autodesarrollables (no requieren revelado químico, insensibles a la luz ambiente y equivalentes a agua) que se oscurecen por polimerización radioinducida proporcionalmente a la dosis, empleados en control de calidad de radioterapia IMRT/VMAT y en cartografía de dosis en piel en intervencionismo.
 
 ### 4.2. Metrología de las Radiaciones, Factores de Corrección y Control de Calidad
-Toda cámara de ionización abierta a la atmósfera empleada en los Servicios de Radiofísica del SERGAS debe contar con trazabilidad metrológica a un laboratorio secundario o primario acreditado (en España, el **Laboratorio de Metrología de Radiaciones Ionizantes del CIEMAT**) y corregir su lectura bruta $M_{\text{bruta}}$ por las variaciones de la densidad del aire mediante el **factor de presión y temperatura ($k_{TP}$)** respecto a las condiciones estándar de referencia en España (**$T_0 = 20\text{ }^\circ\text{C} = 293,15\text{ K}$** y **$P_0 = 101,325\text{ kPa}$**):
+Toda cámara de ionización abierta a la atmósfera empleada en los Servicios de Radiofísica del servicio de salud debe contar con trazabilidad metrológica a un laboratorio secundario o primario acreditado (en España, el **Laboratorio de Metrología de Radiaciones Ionizantes del CIEMAT**) y corregir su lectura bruta $M_{\text{bruta}}$ por las variaciones de la densidad del aire mediante el **factor de presión y temperatura ($k_{TP}$)** respecto a las condiciones estándar de referencia en España (**$T_0 = 20\text{ }^\circ\text{C} = 293,15\text{ K}$** y **$P_0 = 101,325\text{ kPa}$**):
 
 $$k_{TP} = \frac{P_0}{P} \cdot \frac{T + 273,15}{T_0 + 273,15} = \frac{101,325}{P\text{ (kPa)}} \cdot \frac{T\text{ (}^\circ\text{C)} + 273,15}{293,15}$$
 
@@ -242,52 +214,34 @@ junto con el factor de electrómetro ($k_{\text{elec}}$), el factor de polaridad
 
 ---
 
-## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+## ⚡ 5. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen
 
-### 5.1. Arquitectura de los Servicios de Radiofísica y Protección Radiológica en las 7 Áreas Sanitarias y Galaria
-En el **Servicio Gallego de Salud (SERGAS)**, la gestión integral de las radiaciones ionizantes y no ionizantes se articula a través de los **Servicios de Radiofísica y Protección Radiológica (SRPR)** de los complejos hospitalarios universitarios (CHUAC en A Coruña, CHUS en Santiago, CHUVI en Vigo, HULA en Lugo, CHUO en Ourense, CHOP en Pontevedra y CHUF en Ferrol) en estrecha coordinación con la **Unidad Técnica de Protección Radiológica (UTPR) de Galaria, Empresa Pública de Servizos Sanitarios**, autorizada por el Consejo de Seguridad Nuclear (CSN), y con los **Servicios de Ingeniería Biomédica / Electromedicina**.
+### 5.1. Tabla Maestra de Cifras, Umbrales y Conceptos Clave
 
-La vigilancia dosimétrica individual de los más de $4.500$ trabajadores expuestos (categorías A y B del `RD 1029/2022`) de los hospitales y centros de salud del SERGAS se realiza mediante lectura mensual de dosímetros personales pasivos homologados por el CSN (dosímetro de solapa para $H_p(10)$, dosímetro de anillo/muñeca para $H_p(0,07)$ en Medicina Nuclear e Intervencionismo, dosímetro de cristalino para $H_p(3)$ y segundo dosímetro de abdomen bajo delantal plomado para estimación de doble dosimetría y control de gestantes), complementada con dosímetros electrónicos de lectura directa (DMC) en zonas de permanencia limitada y salas de hemodinámica/electrofisiología.
+| Concepto / Parámetro Técnico o Normativo | Valor Exacto / Fórmula / Cifra de Examen |
+| :--- | :--- |
+| **Fórmula de Planck-Einstein para fotones** | $E\text{ (keV)} = \frac{1,24}{\lambda\text{ (nm)}}$ ($h = 6,626 \times 10^{-34}\text{ J}\cdot\text{s}$) |
+| **Umbral energético de ionización en agua / tejido biológico** | **$10\text{ a }12,4\text{ eV}$** ($\lambda \approx 100\text{ nm}$, región UV-C extremo) |
+| **Energía media por par iónico en aire seco ($W_{\text{aire}}/e$)** | **$33,97\text{ eV/par iónico}$** ($33,97\text{ J/C}$) |
+| **Capa Hemirreductora ($\text{HVL}$) y Decimorreductora ($\text{TVL}$)** | $\text{HVL} = \frac{\ln 2}{\mu} \approx \frac{0,693}{\mu}$ ; $\text{TVL} = \frac{\ln 10}{\mu} \approx \mathbf{3,322 \cdot \text{HVL}}$ |
+| **Dependencia del Efecto Fotoeléctrico ($\tau/\rho$)** | **$\propto \frac{Z^3}{E^3}$** (dominante en tejido blando a **$< 30\text{ keV}$**; da el contraste hueso/músculo) |
+| **Bordes de absorción $K$ (*K-edges*) clave** | **Yodo ($Z=53$): $33,2\text{ keV}$** · **Bario ($Z=56$): $37,4\text{ keV}$** · **Plomo ($Z=82$): $88,0\text{ keV}$** |
+| **Dependencia del Efecto Compton ($\sigma_{\text{inc}}/\rho$)** | **Independiente de $Z$** ($\propto \rho_e / E$). Dominante en tejido blando de **$30\text{ keV}$ a $25\text{ MeV}$** |
+| **Energía máxima del fotón Compton a $90^\circ$ y a $180^\circ$** | A **$90^\circ$: $\le 511\text{ keV}$** · A **$180^\circ$ (retrodispersión): $\le 255,5\text{ keV}$** |
+| **Umbral absoluto de Producción de Pares ($\kappa$)** | **$E \ge 1,022\text{ MeV}$ ($2 m_e c^2$)** $\to$ aniquilación en **2 fotones de $511\text{ keV}$ a $180^\circ$** |
+| **Umbral de Reacción Fotonuclear $(\gamma, n)$ en cabezales LINAC** | **$E \ge 8\text{–}10\text{ MeV}$** (relevante en aceleradores lineales operando a **$\ge 10\text{–}15\text{ MV}$**) |
+| **Equivalencia de Actividad ($A$): Curio vs. Becquerel** | **$1\text{ Ci} = 3,7 \times 10^{10}\text{ Bq} = 37\text{ GBq}$** ; **$1\text{ mCi} = 37\text{ MBq}$** |
+| **Equivalencia de Exposición ($X$): Roentgen vs. $\text{C/kg}$** | **$1\text{ R} = 2,58 \times 10^{-4}\text{ C/kg}$** ($\approx 8,76\text{ mGy}$ de kerma en aire) |
+| **Equivalencia de Dosis Absorbida ($D$) y Equivalente ($H_T$)** | **$1\text{ Gy} = 1\text{ J/kg} = 100\text{ rad}$** ($1\text{ cGy}=1\text{ rad}$) ; **$1\text{ Sv} = 100\text{ rem}$** |
+| **Factores de Ponderación de la Radiación ($w_R$)** | Fotones y $e^-/e^+$: **$1$** · **Protones: $2$** · **Partículas $\alpha$ e iones pesados: $20$** · Neutrones: **$2,5\text{–}20$** |
+| **Factores de Ponderación Tisular ($w_T$, $\sum w_T = 1$)** | **$0,12$:** Médula, colon, pulmón, estómago, mama, resto · **$0,08$:** Gónadas · **$0,04$:** Vejiga, esófago, hígado, tiroides · **$0,01$:** Hueso, cerebro, salivales, piel |
+| **Magnitudes Operacionales Personales $H_p(d)$** | **$H_p(10)$:** cuerpo entero ($10\text{ mm}$) · **$H_p(3)$:** cristalino ($3\text{ mm}$) · **$H_p(0,07)$:** piel/manos ($0,07\text{ mm}$) |
+| **Acción indirecta (radiólisis del agua, radical $\text{OH}^\bullet$) y OER** | Representa **$\approx 2/3$ ($65\text{–}70\%$)** del daño en bajo LET; **$\text{OER} \approx 2,5\text{–}3,0$** |
+| **Cociente $\alpha/\beta$ del Modelo Lineal-Cuadrático** | Tejidos de respuesta aguda y tumores: **$\approx 10\text{ Gy}$** (próstata $\approx 1,5\text{ Gy}$) · Respuesta tardía: **$\approx 2\text{–}3\text{ Gy}$** |
+| **Umbral de cataratas en cristalino y límite ocupacional** | **Umbral determinista: $0,5\text{ Gy}$** (`ICRP 118`) · **Límite anual trabajador: $20\text{ mSv/año}$** |
+| **Límite legal al feto y ventana de mayor riesgo neurológico** | **Límite legal al feto: $\le 1\text{ mSv}$** · Ventana crítica retraso mental: **semanas $8\text{ a }15$** |
 
-### 5.2. Trazabilidad Digital de Magnitudes Dosimétricas en `IANUS`, `PACS` y `XMAO` (`RD 601/2019`)
-En cumplimiento de los artículos 11 y 14 del **`RD 601/2019`**, todos los equipos generadores de radiaciones ionizantes adquiridos por el SERGAS (radiología digital, mamógrafos, TC, arcos quirúrgicos, angiógrafos, aceleradores lineales, PET-TC y SPECT-TC) deben disponer de dispositivos que informen de los parámetros técnicos y exporten automáticamente las magnitudes dosimétricas estandarizadas mediante objetos **`DICOM RDSR` (*Radiation Dose Structured Report*)** hacia el **`PACS` corporativo del SERGAS** y el **Sistema Corporativo de Gestión de Dosis**, integrándose en el informe clínico de **`IANUS`**:
-- En **Radiología general, telemandos e intervencionismo:** **Producto Kerma-Área ($\text{PKA / DAP}$ en $\text{Gy}\cdot\text{cm}^2$ o $\mu\text{Gy}\cdot\text{m}^2$)** y **Kerma en aire en el punto de referencia intervencionista ($K_{a,r}$ en $\text{mGy}$)**.
-- En **Mamografía digital y tomosíntesis:** **Dosis Glandular Media ($\text{DGM}$ en $\text{mGy}$)**.
-- En **Tomografía Computarizada (TC):** **Índice de Dosis en TC volumétrico ($\text{CTDI}_{\text{vol}}$ en $\text{mGy}$)** y **Producto Dosis-Longitud ($\text{DLP}$ en $\text{mGy}\cdot\text{cm}$)**.
-- En **Medicina Nuclear:** **Actividad administrada ($A$ en $\text{MBq}$)** y radiofármaco empleado.
-
-Por su parte, los Servicios de Ingeniería Biomédica registran en **`XMAO`** la totalidad del inventario de equipos emisores de radiación y la instrumentación de medida (cámaras de ionización, multímetros de RX, fantomas y monitores de área), vinculando las órdenes de trabajo preventivas y correctivas con los certificados obligatorios de aceptación y estado de referencia de Radiofísica Hospitalaria antes de autorizar la puesta en uso clínico de cualquier equipo tras una intervención técnica.
-
----
-
-## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
-
-### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
-
-| Concepto / Parámetro Técnico o Normativo | Valor Exacto / Fórmula / Cifra de Examen | Norma o Referencia Oficial |
-| :--- | :--- | :--- |
-| **Fórmula de Planck-Einstein para fotones** | $E\text{ (keV)} = \frac{1,24}{\lambda\text{ (nm)}}$ ($h = 6,626 \times 10^{-34}\text{ J}\cdot\text{s}$) | Física Cuántica / Módulo 1588 |
-| **Umbral energético de ionización en agua / tejido biológico** | **$10\text{ a }12,4\text{ eV}$** ($\lambda \approx 100\text{ nm}$, región UV-C extremo) | ICRU 85 / ICRP 103 |
-| **Energía media por par iónico en aire seco ($W_{\text{aire}}/e$)** | **$33,97\text{ eV/par iónico}$** ($33,97\text{ J/C}$) | ICRU 85 / OIEA TRS-398 |
-| **Capa Hemirreductora ($\text{HVL}$) y Decimorreductora ($\text{TVL}$)** | $\text{HVL} = \frac{\ln 2}{\mu} \approx \frac{0,693}{\mu}$ ; $\text{TVL} = \frac{\ln 10}{\mu} \approx \mathbf{3,322 \cdot \text{HVL}}$ | Ley de Beer-Lambert |
-| **Dependencia del Efecto Fotoeléctrico ($\tau/\rho$)** | **$\propto \frac{Z^3}{E^3}$** (dominante en tejido blando a **$< 30\text{ keV}$**; da el contraste hueso/músculo) | Física Radiológica |
-| **Bordes de absorción $K$ (*K-edges*) clave** | **Yodo ($Z=53$): $33,2\text{ keV}$** · **Bario ($Z=56$): $37,4\text{ keV}$** · **Plomo ($Z=82$): $88,0\text{ keV}$** | Radiodiagnóstico / Blindajes |
-| **Dependencia del Efecto Compton ($\sigma_{\text{inc}}/\rho$)** | **Independiente de $Z$** ($\propto \rho_e / E$). Dominante en tejido blando de **$30\text{ keV}$ a $25\text{ MeV}$** | Física Radiológica |
-| **Energía máxima del fotón Compton a $90^\circ$ y a $180^\circ$** | A **$90^\circ$: $\le 511\text{ keV}$** · A **$180^\circ$ (retrodispersión): $\le 255,5\text{ keV}$** | Cinemática de Compton |
-| **Umbral absoluto de Producción de Pares ($\kappa$)** | **$E \ge 1,022\text{ MeV}$ ($2 m_e c^2$)** $\to$ aniquilación en **2 fotones de $511\text{ keV}$ a $180^\circ$** | Física Nuclear / PET |
-| **Umbral de Reacción Fotonuclear $(\gamma, n)$ en cabezales LINAC** | **$E \ge 8\text{–}10\text{ MeV}$** (relevante en aceleradores lineales operando a **$\ge 10\text{–}15\text{ MV}$**) | Protección Radiológica RT |
-| **Equivalencia de Actividad ($A$): Curio vs. Becquerel** | **$1\text{ Ci} = 3,7 \times 10^{10}\text{ Bq} = 37\text{ GBq}$** ; **$1\text{ mCi} = 37\text{ MBq}$** | ICRU 85 / `RD 1029/2022` |
-| **Equivalencia de Exposición ($X$): Roentgen vs. $\text{C/kg}$** | **$1\text{ R} = 2,58 \times 10^{-4}\text{ C/kg}$** ($\approx 8,76\text{ mGy}$ de kerma en aire) | ICRU 85 |
-| **Equivalencia de Dosis Absorbida ($D$) y Equivalente ($H_T$)** | **$1\text{ Gy} = 1\text{ J/kg} = 100\text{ rad}$** ($1\text{ cGy}=1\text{ rad}$) ; **$1\text{ Sv} = 100\text{ rem}$** | ICRU 85 / `RD 1029/2022` |
-| **Factores de Ponderación de la Radiación ($w_R$)** | Fotones y $e^-/e^+$: **$1$** · **Protones: $2$** · **Partículas $\alpha$ e iones pesados: $20$** · Neutrones: **$2,5\text{–}20$** | `ICRP 103` / `RD 1029/2022` Anexo I |
-| **Factores de Ponderación Tisular ($w_T$, $\sum w_T = 1$)** | **$0,12$:** Médula, colon, pulmón, estómago, mama, resto · **$0,08$:** Gónadas · **$0,04$:** Vejiga, esófago, hígado, tiroides · **$0,01$:** Hueso, cerebro, salivales, piel | `ICRP 103` / `RD 1029/2022` Anexo I |
-| **Magnitudes Operacionales Personales $H_p(d)$** | **$H_p(10)$:** cuerpo entero ($10\text{ mm}$) · **$H_p(3)$:** cristalino ($3\text{ mm}$) · **$H_p(0,07)$:** piel/manos ($0,07\text{ mm}$) | ICRU 85 / `RD 1029/2022` |
-| **Acción indirecta (radiólisis del agua, radical $\text{OH}^\bullet$) y OER** | Representa **$\approx 2/3$ ($65\text{–}70\%$)** del daño en bajo LET; **$\text{OER} \approx 2,5\text{–}3,0$** | Radiobiología |
-| **Cociente $\alpha/\beta$ del Modelo Lineal-Cuadrático** | Tejidos de respuesta aguda y tumores: **$\approx 10\text{ Gy}$** (próstata $\approx 1,5\text{ Gy}$) · Respuesta tardía: **$\approx 2\text{–}3\text{ Gy}$** | Radiobiología Clínica |
-| **Umbral de cataratas en cristalino y límite ocupacional** | **Umbral determinista: $0,5\text{ Gy}$** (`ICRP 118`) · **Límite anual trabajador: $20\text{ mSv/año}$** | `RD 1029/2022` Art. 9 |
-| **Límite legal al feto y ventana de mayor riesgo neurológico** | **Límite legal al feto: $\le 1\text{ mSv}$** · Ventana crítica retraso mental: **semanas $8\text{ a }15$** | `RD 1029/2022` Art. 12 / ICRP 84 |
-
-### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+### 5.2. Puntos Críticos y Trampas Habituales de Examen
 1. **Trampa clásica de origen físico (Rayos X vs. Rayos Gamma):** Los tribunales suelen afirmar falsamente que «los rayos gamma tienen siempre más energía que los rayos X». **FALSO:** se diferencian **exclusivamente por su lugar de origen** (los **rayos X son extranucleares/corticales** y los **rayos $\gamma$ son intranucleares**); un fotón $\gamma$ del $^{99\text{m}}\text{Tc}$ ($140\text{ keV}$) tiene mucha menos energía que un fotón X de un acelerador lineal de $6\text{ MV}$.
 2. **Trampa de clasificación ICRU (Directamente vs. Indirectamente Ionizantes):** Los **fotones (RX y $\gamma$) y los neutrones son radiaciones INDIRECTAMENTE ionizantes** porque carecen de carga eléctrica; los **electrones, positrones, protones y partículas alfa son DIRECTAMENTE ionizantes**.
 3. **Trampa de dependencia con $Z$ en el Efecto Compton vs. Fotoeléctrico:** En una pregunta tipo test sobre qué interacción depende de $Z^3$, la respuesta es siempre el **Efecto Fotoeléctrico ($\tau/\rho \propto Z^3/E^3$)**, mientras que el **Efecto Compton por unidad de masa es independiente de $Z$** (depende de la densidad electrónica $\rho_e$, que es casi constante salvo en el hidrógeno, donde es el doble por carecer de neutrones).
