@@ -9,13 +9,13 @@ Te adjunto el resumen ejecutivo del análisis del temario oficial de la convocat
 1. ORIGEN REAL DEL TEMARIO Y REFERENCIAS EN OTRAS CCAA
 ======================================================================
 • BOE — Título de Técnico Superior en Electromedicina Clínica (RD 838/2015 y Orden EFP/1216/2019):
-  Casi 40 temas de la Parte Específica del SERGAS («Caracterización y funcionamiento de los equipos/sistemas de...») están extraídos literalmente de los módulos profesionales 1588 a 1594 de este Real Decreto:
-  - Módulo 1588: Instalaciones asociadas a equipos de electromedicina (Temas 37, 55, 62 y 68).
+  Casi 40 temas de la Parte Específica del SERGAS («Caracterización y funcionamiento de los equipos/sistemas de...») están extraídos literalmente de los siete módulos profesionales técnicos de este Real Decreto:
+  - Módulo 1588: Sistemas de radiodiagnóstico, radioterapia e imagen médica (Temas 4 al 16, 18, 19 y 38).
   - Módulo 1589: Sistemas de monitorización, registro y cuidados críticos (Temas 20, 21, 22, 23, 25, 28, 31, 35 y 36).
-  - Módulo 1590: Sistemas de imagen para el diagnóstico (Temas 4 al 12, 18, 19 y 38).
-  - Módulo 1591: Sistemas de radioterapia, terapia y rehabilitación (Temas 13 al 16, 24, 27 y 30).
-  - Módulo 1592: Tecnología sanitaria en el ámbito clínico (Temas 1, 48, 49 y 50).
-  - Módulos 1593 y 1594: Planificación y gestión del mantenimiento (Temas 60, 70, 71, 72 y 73).
+  - Módulo 1590: Sistemas de laboratorio y hemodiálisis (Temas 24, 30, 57 y 58).
+  - Módulo 1591: Sistemas de rehabilitación y pruebas funcionales (Temas 27 y 29).
+  - Módulo 1592: Tecnología sanitaria en el ámbito clínico e instalaciones asociadas (Temas 1, 37, 48, 49, 50, 55, 62 y 68).
+  - Módulos 1593 y 1594: Planificación de la adquisición y gestión del montaje y mantenimiento de sistemas de electromedicina (Temas 60, 70, 71, 72 y 73).
 
 • Otras CCAA con plazas de Ingeniería Biomédica / Electromedicina:
   1. Illes Balears (IB-SALUT): Ingeniero/a Superior (Biomedicina) — Exp. SSCC 2026-1 (BOIB núm. 67, 28/05/2026).

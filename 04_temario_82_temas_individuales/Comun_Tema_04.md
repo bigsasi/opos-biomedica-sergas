@@ -1,41 +1,241 @@
 # Común Tema 4 — La Ley de salud de Galicia: el Sistema público de salud de Galicia. Competencias sanitarias de las administraciones públicas de Galicia. El Servicio Gallego de Salud. Su estructura organizativa: disposiciones que la regulan.
 
-> **Parte del Programa:** Parte Común  
-> **Prioridad Estratégica:** Fase 3: Parte Común (Modo Test) (Complementario)  
-> **Bloque de Estudio Completo:** [`Bloque_10_Parte_Comun_SERGAS_y_Tema_74_Igualdad_Resumen_Test.md`](../02_apuntes_nucleo_diamante/Bloque_10_Parte_Comun_SERGAS_y_Tema_74_Igualdad_Resumen_Test.md)
+> - **Parte del Programa:** Parte Común (Temas 1 al 8) — Ejercicio 2.º
+> - **Bloque Temático SERGAS:** Bloque 10 — Legislación General, Sanitaria, Estatutaria y Transversal (Parte Común)
+> - **Marco Normativo y Técnico Nuclear:** Ley 8/2008, de 10 de julio, de Salud de Galicia (DOG núm. 143, de 24/07/2008; reformada por Ley 1/2018 y Ley 8/2021); Decreto 145/2024, de 20 de mayo, de estructura orgánica del Servicio Gallego de Salud (DOG núm. 101, de 27/05/2024); Decreto 144/2024, de 20 de mayo, de estructura orgánica de la Consellería de Sanidade; Decreto 134/2019, de 10 de octubre, por el que se regulan las Áreas Sanitarias y los Distritos Sanitarios; Decreto 105/2017, de 28 de septiembre (garantía de tiempos máximos de acceso).
+> - **Sistemas y Entorno SERGAS:** Dirección General de Recursos Económicos y Subdirección General de Inversiones (Ingeniería Biomédica y Equipamiento), Gerencias de las 7 Áreas Sanitarias y 14 Distritos Sanitarios de Galicia, entidades adscritas (`ACIS`, `ADOS`, `Galaria`, `061`) y sistemas corporativos (`IANUS`, `XMAO`, `LOGAS`, `SIHGA`, `SILICON`, `TELEA`).
 
-## 🎯 Cruce con Otras Oposiciones del SERGAS
+---
 
-- **Categorías con solapamiento:** • **Ingeniero/a Técnico/a** (Parte Común) | • **TS Imagen para el Diagnóstico** (Parte Común) | • **TS Radioterapia** (Parte Común) | • **Radiofísica Hospitalaria** (Parte Común) | • **Grupo Técnico / Gestión TIC** (Parte Común)
+## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
+
+### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
+
+El **Tema 4 de la Parte Común** del programa oficial para el ingreso en la categoría de **Ingeniero/a Biomédico/a (Subgrupo A1)** del Servicio Gallego de Salud aborda de forma íntegra y monográfica la arquitectura normativa, territorial, competencial y orgánica de la sanidad pública autonómica gallega. Su estudio se estructura en cuatro bloques nucleares:
+1. **La Ley 8/2008, de 10 de julio, de Salud de Galicia y el Sistema Público de Salud de Galicia:** Evolución legislativa desde la derogada Ley 7/2003, estructura sistemática en **139 artículos distribuidos en 9 Títulos**, catálogo autonómico de derechos y deberes sanitarios (Título I, incluyendo la garantía de tiempos máximos de respuesta del `Decreto 105/2017` y el Valedor do Paciente), principios rectores del Sistema Público de Salud de Galicia (Artículo 32) y ordenación territorial en **7 Áreas Sanitarias y 14 Distritos Sanitarios** tras la reforma operada por la **Ley 1/2018, de 2 de abril**, y el **Decreto 134/2019, de 10 de octubre**.
+2. **Competencias sanitarias de las Administraciones Públicas de Galicia (Título V, Artículos 79 a 90 de la Ley 8/2008):** Delimitación de las atribuciones del **Consello da Xunta de Galicia** (Art. 80), de la **Consellería de Sanidade** (Art. 81, desarrollada por el **`Decreto 144/2024, de 20 de mayo`**) y de las **Corporaciones Locales** (Art. 85).
+3. **El Servicio Gallego de Salud (SERGAS — Título VI, Artículos 91 a 99 de la Ley 8/2008):** Naturaleza jurídica como **organismo autónomo de carácter administrativo** adscrito a la Consellería de Sanidade, fines, funciones, régimen patrimonial, contratación y hacienda.
+4. **Estructura organizativa del SERGAS y disposiciones vigentes que la regulan:** Análisis exhaustivo del **`Decreto 145/2024, de 20 de mayo, por el que se establece la estructura orgánica del Servicio Gallego de Salud`** (DOG núm. 101, de 27 de mayo de 2024, que derogó al Decreto 137/2019), desglosando sus órganos centrales de dirección (Presidencia, Consejo de Dirección, Gerencia del SERGAS y sus tres Direcciones Generales: Asistencia Sanitaria, Recursos Económicos —donde se encuadra orgánicamente la ingeniería biomédica y de inversiones— y Recursos Humanos) y su estructura periférica de gestión integrada.
+
+### 0.2. Cruce Semántico Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
+
+- **Categorías con solapamiento:**
+  - **Ingeniero/a Técnico/a** (Parte Común)
+  - **TS Imagen para el Diagnóstico** (Parte Común)
+  - **TS Radioterapia** (Parte Común)
+  - **Radiofísica Hospitalaria** (Parte Común)
+  - **Grupo Técnico / Gestión TIC** (Parte Común)
 - **Grado de solapamiento:** **Total (100%)**: Coincidencia literal en el bloque común de todas las convocatorias estatutarias del SERGAS.
 - **Epígrafes equivalentes:**
-  • **Todas las categorías (Parte Común):** Tema 4. La Ley de salud de Galicia: el sistema público de salud de Galicia. Competencias sanitarias de las administraciones públicas de Galicia. El Servicio Gallego de Salud. Su estructura organizativa: disposiciones que la regulan.
+  - **Todas las categorías (Parte Común):** Tema 4. La Ley de salud de Galicia: el sistema público de salud de Galicia. Competencias sanitarias de las administraciones públicas de Galicia. El Servicio Gallego de Salud. Su estructura organizativa: disposiciones que la regulan.
 
 ---
 
-## 📖 Desarrollo Técnico y Normativo del Tema
+## 📖 1. Fundamentos Conceptuales, Físicos o Jurídicos y Marco Normativo
 
-### 4. Tema 4 Común: Ley 8/2008, de 10 de julio, de Salud de Galicia y Estructura del SERGAS (`Decreto 145/2024` y `Decreto 144/2024`)
+### 1.1. Génesis, Estructura Sistemática y Reformas de la Ley 8/2008, de 10 de julio, de Salud de Galicia
 
-- **Ley 8/2008, de 10 de julio, de Salud de Galicia** (modificada de forma importante por la **Ley 1/2018, de 2 de abril**, que estableció la actual división territorial en **Distritos Sanitarios y 7 Áreas Sanitarias**):
-  - **Las 7 Áreas Sanitarias del Sistema Público de Salud de Galicia (Art. 66 Ley 8/2008):**
-    1. Área Sanitaria de **A Coruña y Cee** *(Distritos de A Coruña y Cee)*.
-    2. Área Sanitaria de **Santiago de Compostela y Barbanza** *(Distritos de Santiago y A Barbanza/Ribeira)*.
-    3. Área Sanitaria de **Ferrol** *(Distrito de Ferrol)*.
-    4. Área Sanitaria de **Lugo, A Mariña y Monforte de Lemos** *(Distritos de Lugo, A Mariña/Burela y Monforte)*.
-    5. Área Sanitaria de **Ourense, Verín y O Barco de Valdeorras** *(Distritos de Ourense, Verín y O Barco)*.
-    6. Área Sanitaria de **Pontevedra y O Salnés** *(Distritos de Pontevedra y O Salnés/Vilagarcía)*.
-    7. Área Sanitaria de **Vigo** *(Distrito de Vigo)*.
-    - *(Total: **7 Áreas Sanitarias** divididas en **14 Distritos Sanitarios**).*
-- **Naturaleza Jurídica y Disposiciones que regulan la Estructura Organizativa del SERGAS (Art. 91 Ley 8/2008 y Decretos de Estructura de 2024 — ¡Pregunta de examen!):**
-  - El **SERGAS** es un **organismo autónomo de naturaleza administrativa**, dotado de personalidad jurídica propia y plena capacidad para el cumplimiento de sus fines, adscrito a la **Consellería de Sanidade**.
-  - **Normativa vigente de estructura organizativa (¡No confundir ambos decretos del mismo día!):**
-    - **`Decreto 145/2024, de 20 de mayo` (DOG núm. 101, de 27/05/2024):** Establece la **estructura orgánica del Servicio Gallego de Salud (SERGAS)** *(derogó el anterior `Decreto 137/2019, de 10 de octubre`, y es el citado expresamente en el preámbulo de la convocatoria de Ingeniero/a Biomédico/a)*.
-    - **`Decreto 144/2024, de 20 de mayo` (DOG núm. 101, de 27/05/2024):** Establece la **estructura orgánica de la Consellería de Sanidade** *(derogó el `Decreto 136/2019`)*.
-    - **`Decreto 134/2019, de 10 de octubre`:** Regula las **Áreas Sanitarias y los Distritos Sanitarios** del Sistema Público de Salud de Galicia (órganos periféricos de gestión integrada).
-  - **Órganos Centrales de Dirección del SERGAS (`Decreto 145/2024`):**
-    1. **La Presidencia del SERGAS:** Corresponde a la persona titular de la **Consellería de Sanidade** (órgano unipersonal).
-    2. **El Consejo de Dirección del SERGAS** (órgano colegiado).
-    3. **La Gerencia del SERGAS** (órgano unipersonal bajo el cual se estructuran tres Direcciones Generales: **1) Dirección General de Asistencia Sanitaria**, **2) Dirección General de Recursos Económicos** [donde se encuadra la Subdirección General de Inversiones / Ingeniería y Equipamiento] y **3) Dirección General de Recursos Humanos** [órgano convocante del proceso selectivo]).
+En ejercicio de la competencia exclusiva de organización de sus instituciones de autogobierno (**Artículo 27.1 del Estatuto de Autonomía de Galicia, LO 1/1981**) y de la competencia de desarrollo legislativo y ejecución de la legislación básica del Estado en materia de **sanidad interior** (**Artículo 33.1 EAG** y **Artículo 149.1.16.ª CE**), el Parlamento de Galicia aprobó la **Ley 8/2008, de 10 de julio, de Salud de Galicia** (publicada en el **DOG núm. 143, de 24 de julio de 2008**, y en el BOE núm. 202, de 21 de agosto de 2008, con entrada en vigor al mes de su publicación en el DOG, el **24 de agosto de 2008**). Esta norma derogó la anterior Ley 7/2003, de 9 de diciembre, de Ordenación Sanitaria de Galicia (LOSGA), que a su vez había sustituido a la histórica Ley 1/1989, de 2 de enero, de creación del Servicio Gallego de Salud.
+
+La **Ley 8/2008** consta de **139 artículos**, estructurados en **9 Títulos numerados**, más Disposiciones Adicionales, Transitorias, Derogatoria y Finales, habiendo experimentado dos grandes reformas legislativas de obligado conocimiento en los exámenes de oposición del SERGAS:
+1. **La Ley 1/2018, de 2 de abril, por la que se modifica la Ley 8/2008, de 10 de julio, de Salud de Galicia:** Reformó profundamente el **Título IV (Organización Territorial)** para consagrar legalmente el modelo de gestión integrada mediante **7 Áreas Sanitarias** y **14 Distritos Sanitarios** como divisiones territoriales de las áreas que blindan la presencia y cartera de servicios de los hospitales comarcales gallegos, además de crear los Consejos de Salud de Distrito y reforzar la participación ciudadana.
+2. **La Ley 8/2021, de 25 de febrero, de modificación de la Ley 8/2008:** Actualizó los instrumentos de intervención administrativa de salud pública ante crisis sanitarias y epidemias (medidas preventivas en el Art. 38 y tipificación detallada de infracciones y sanciones de salud pública en los Artículos 41 bis a 44 bis).
+
+| Título de la Ley 8/2008 | Denominación Oficial del Título | Artículos | Capítulos y Contenido Jurídico Nuclear |
+| :--- | :--- | :---: | :--- |
+| **Título Preliminar** | Disposiciones generales | **Arts. 1 a 4** | Objeto de la Ley (Art. 1), ámbito de aplicación en el territorio de Galicia (Art. 2), principios generales (Art. 3) y titulares de los derechos y deberes (Art. 4). |
+| **Título I** | De los derechos y deberes sanitarios de la ciudadanía | **Arts. 5 a 31** | **5 Capítulos:** Derechos relativos a la intimidad, información, autonomía, **tiempos máximos de respuesta (Art. 9)** y **segunda opinión médica (Art. 10)**; colectivos vulnerables (Cap. II); **Deberes sanitarios (Cap. III, Art. 19)**; Garantía de efectividad (Cap. IV); y el **Valedor do Paciente (Cap. V, Arts. 25 a 31)**. |
+| **Título II** | Del Sistema Público de Salud de Galicia | **Arts. 32 a 48** | **3 Capítulos:** Disposiciones generales y **principios rectores (Art. 32)**, prestaciones (Arts. 34–37); **Intervención en materia de salud pública (Cap. II, Arts. 38–39)**; y **Régimen sancionador (Cap. III, Arts. 40–48)**. |
+| **Título III** | De la planificación sanitaria | **Arts. 49 a 64** | **2 Capítulos:** **Plan de Salud de Galicia (Arts. 49–55)** como instrumento estratégico superior, y **ordenación de las prestaciones y cartera de servicios (Arts. 56–64)**. |
+| **Título IV** | De la organización territorial del Sistema Público de Salud de Galicia | **Arts. 65 a 78** | **3 Capítulos (reformados por `Ley 1/2018`):** Demarcación territorial en **7 Áreas Sanitarias y 14 Distritos Sanitarios (Arts. 65–68)**; **Zonas Sanitarias (Art. 69)**; Estructura de gestión y órganos del Área Sanitaria y del Distrito (Arts. 70–75); y niveles de **Atención Primaria y Atención Hospitalaria (Arts. 76–78)**. |
+| **Título V** | De las competencias sanitarias de las Administraciones Públicas | **Arts. 79 a 90** | **3 Capítulos:** Competencias del **Consello da Xunta (Art. 80)**, de la **Consellería de Sanidade (Art. 81)**, inspección sanitaria (Arts. 82–84); **Corporaciones Locales (Arts. 85–87)**; y relaciones con la iniciativa privada / conciertos (Arts. 88–90). |
+| **Título VI** | Del Servicio Gallego de Salud (SERGAS) | **Arts. 91 a 99** | **4 Capítulos:** Naturaleza jurídica, fines y funciones (Arts. 91–93); **organización central y periférica (Arts. 94–95)**; patrimonio y contratación (Arts. 96–97); y régimen presupuestario, financiero y contable (Arts. 98–99). |
+| **Título VII** | De la ordenación de los recursos humanos | **Arts. 100 a 125** | Personal del Sistema Público de Salud de Galicia, Registro de Profesionales Sanitarios, selección, provisión, carrera profesional y salud laboral. |
+| **Título VIII** | De la docencia, formación e investigación sanitaria | **Arts. 126 a 139** | **3 Capítulos:** Docencia y formación (Arts. 126–131); **investigación e innovación en salud (Arts. 132–137)**; y **Escuela Gallega de Salud para Ciudadanos (Arts. 138–139)**. |
+
+### 1.2. El Sistema Público de Salud de Galicia: Concepto, Principios Rectores y Derechos Específicos (Títulos I y II de la Ley 8/2008)
+
+Conforme al **Artículo 32.1 de la Ley 8/2008**, el **Sistema Público de Salud de Galicia** es el conjunto de recursos, medios organizativos y actuaciones de las Administraciones públicas sanitarias de la Comunidad Autónoma orientados a la satisfacción del derecho a la protección de la salud mediante la promoción de la salud, la prevención de las enfermedades, la atención sanitaria y la rehabilitación. Está integrado por todos los centros, servicios y establecimientos sanitarios de la Comunidad Autónoma de Galicia, de las corporaciones locales y de cualesquiera otras administraciones territoriales intracomunitarias, siendo gestionado bajo la dirección y coordinación de la Consellería de Sanidade a través del **Servicio Gallego de Salud (SERGAS)**.
+
+El **Artículo 32.2 de la Ley 8/2008** enumera los **14 principios rectores** que informan el Sistema Público de Salud de Galicia:
+1. **Universalidad y equidad** en el acceso a las prestaciones y servicios sanitarios en condiciones de igualdad efectiva.
+2. **Concepción integral de la salud**, incluyendo actuaciones de promoción, prevención, educación sanitaria, vigilancia en salud pública, asistencia y rehabilitación.
+3. **Orientación prioritaria a las personas usuarias**, garantizando la humanización de la asistencia y el respeto a su autonomía y dignidad.
+4. **Superación de las desigualdades territoriales, sociales y económicas**, así como de las **desigualdades por razón de género** en el ámbito de la salud.
+5. **Calidad y seguridad clínica y tecnológica** permanente de los servicios y prestaciones, incluyendo la **evaluación de las tecnologías sanitarias** bajo criterios de eficacia, efectividad, seguridad, eficiencia y utilidad terapéutica.
+6. **Integración funcional y coordinación** de todos los recursos sanitarios públicos y sociosanitarios en un dispositivo único.
+7. **Desconcentración y descentralización** en la gestión a través de las Áreas y Distritos Sanitarios.
+8. **Participación social, comunitaria y profesional** en la orientación, seguimiento y control del sistema.
+9. **Financiación pública y sostenibilidad financiera**, así como eficiencia en la asignación de los recursos públicos.
+10. **Fomento de la docencia, la formación continuada, la investigación biomédica y la innovación sanitaria**.
+11. **Promoción del uso del idioma gallego** en todas las relaciones asistenciales y administrativas sanitarias.
+
+En el **Título I (Artículos 5 a 31)**, la Ley 8/2008 amplía el catálogo básico estatal de derechos sanitarios e incorpora tres instituciones autonómicas muy preguntadas en examen:
+- **Derecho a la garantía de tiempos máximos de respuesta en la atención sanitaria programada y no urgente (Artículo 9 de la Ley 8/2008, desarrollado por el `Decreto 105/2017, de 28 de septiembre`):** Garantiza a los usuarios del SERGAS para patologías graves o seleccionadas unos tiempos máximos legales de demora: **$\le 60\text{ días naturales}$ para intervenciones quirúrgicas**, **$\le 45\text{ días naturales}$ para primeras consultas externas hospitalarias** y **$\le 45\text{ días naturales}$ para primeras pruebas diagnósticas o terapéuticas**, además de las **Vías Rápidas Oncológicas ($\le 15\text{ a }30\text{ días}$)** ante sospecha fundada de cáncer. Si se supera el plazo máximo garantizado por causas imputables al SERGAS, el paciente tiene derecho a ser atendido en un centro acreditado elegido por él con cargo al presupuesto del SERGAS.
+- **Derecho a la Segunda Opinión Médica (Artículo 10 de la Ley 8/2008 y `Decreto 54/2015`):** Reconocido ante diagnósticos de enfermedad neoplásica maligna, enfermedad neurológica inflamatoria y degenerativa invalidante, enfermedad rara o necesidad de intervención quirúrgica de altísimo riesgo.
+- **El Valedor o Valedora do Paciente (Artículos 25 a 31 de la Ley 8/2008):** Órgano encargado de la defensa y tutela de los derechos de las personas usuarias del Sistema Público de Salud de Galicia. Es designado por la persona titular de la Consellería de Sanidade, dando cuenta al Parlamento de Galicia, y actúa con **plena autonomía funcional e independencia**, sin recibir instrucciones de ninguna autoridad en el desempeño de sus funciones de mediación y tramitación de reclamaciones.
 
 ---
+
+## ⚙️ 2. Arquitectura Técnica, Componentes y Principios de Funcionamiento (o Estructura Orgánica y Competencial)
+
+### 2.1. Organización Territorial del Sistema Público de Salud de Galicia: Las 7 Áreas Sanitarias y los 14 Distritos Sanitarios (Título IV de la Ley 8/2008 y Decreto 134/2019)
+
+Tras la reforma introducida por la **Ley 1/2018, de 2 de abril**, y su desarrollo reglamentario mediante el **Decreto 134/2019, de 10 de octubre, por el que se regulan las áreas sanitarias y los distritos sanitarios del Sistema público de salud de Galicia**, el territorio sanitario gallego se articula en tres demarcaciones territoriales (**Artículos 65 a 69 de la Ley 8/2008**):
+1. **Las Áreas Sanitarias (Artículos 65 y 66 Ley 8/2008):** Constituyen la **demarcación territorial fundamental del Sistema Público de Salud de Galicia**, responsabilizada de la **gestión unitaria e integrada** de todos los centros, servicios y establecimientos del SERGAS en su ámbito territorial (tanto de **Atención Primaria** como de **Atención Hospitalaria** y sociosanitaria). El mapa sanitario de Galicia se divide exactamente en **siete (7) Áreas Sanitarias**.
+2. **Los Distritos Sanitarios (Artículos 67 y 68 Ley 8/2008):** Son las **divisiones territoriales en que se estructuran las Áreas Sanitarias**, constituyendo el marco de referencia para la coordinación de la atención primaria, hospitalaria y sociosanitaria de proximidad en torno a un hospital de referencia (universitario o comarcal). La Ley 8/2008 (Art. 68) blinda por rango de ley la existencia de **catorce (14) Distritos Sanitarios**, prohibiendo que puedan suprimirse distritos o reducirse la cartera básica de servicios de los hospitales comarcales sin ley del Parlamento de Galicia.
+3. **Las Zonas Sanitarias (Artículo 69 Ley 8/2008):** Constituyen la demarcación territorial básica para la prestación de la **Atención Primaria de salud** de proximidad, en la que desarrollan su actividad los **Servicios y Centros de Salud** y los Puntos de Atención Continuada (PAC).
+
+| N.º | Área Sanitaria Oficial (Art. 66 Ley 8/2008) | N.º Distritos | Distritos Sanitarios Integrados (Art. 68 Ley 8/2008 y Decreto 134/2019) | Hospitales Públicos de Referencia en cada Distrito |
+| :---: | :--- | :---: | :--- | :--- |
+| **1** | **Área Sanitaria de A Coruña y Cee** | **2** | **1.** Distrito Sanitario de **A Coruña**<br>**2.** Distrito Sanitario de **Cee** | • Complejo Hospitalario Universitario de A Coruña (**CHUAC**)<br>• Hospital Virxe da Xunqueira de **Cee** |
+| **2** | **Área Sanitaria de Santiago de Compostela y Barbanza** | **2** | **3.** Distrito Sanitario de **Santiago de Compostela**<br>**4.** Distrito Sanitario de **A Barbanza** | • Complejo Hospitalario Universitario de Santiago (**CHUS**)<br>• Hospital da Barbanza (**Ribeira**) |
+| **3** | **Área Sanitaria de Ferrol** | **1** | **5.** Distrito Sanitario de **Ferrol** | • Complejo Hospitalario Universitario de Ferrol (**CHUF**: H. Arquitecto Marcide, H. Naval y H. Novoa Santos) |
+| **4** | **Área Sanitaria de Lugo, A Mariña y Monforte de Lemos** | **3** | **6.** Distrito Sanitario de **Lugo**<br>**7.** Distrito Sanitario de **A Mariña**<br>**8.** Distrito Sanitario de **Monforte de Lemos** | • Hospital Universitario Lucus Augusti (**HULA**)<br>• Hospital Público da Mariña (**Burela**)<br>• Hospital Público de **Monforte de Lemos** |
+| **5** | **Área Sanitaria de Ourense, Verín y O Barco de Valdeorras** | **3** | **9.** Distrito Sanitario de **Ourense**<br>**10.** Distrito Sanitario de **Verín**<br>**11.** Distrito Sanitario de **O Barco de Valdeorras** | • Complejo Hospitalario Universitario de Ourense (**CHUO**)<br>• Hospital Público de **Verín**<br>• Hospital Público de **Valdeorras (O Barco)** |
+| **6** | **Área Sanitaria de Pontevedra y O Salnés** | **2** | **12.** Distrito Sanitario de **Pontevedra**<br>**13.** Distrito Sanitario de **O Salnés** | • Complejo Hospitalario Universitario de Pontevedra (**CHUP**: H. Montecelo y H. Provincial)<br>• Hospital do Salnés (**Vilagarcía de Arousa**) |
+| **7** | **Área Sanitaria de Vigo** | **1** | **14.** Distrito Sanitario de **Vigo** | • Complejo Hospitalario Universitario de Vigo (**CHUVI**: Hospital Público Álvaro Cunqueiro, H. Meixoeiro y H. Nicolás Peña) |
+
+### 2.2. Órganos de Dirección, Gestión y Participación de las Áreas y Distritos Sanitarios (Artículos 70 a 75 de la Ley 8/2008 y Decreto 134/2019)
+
+En cada una de las **7 Áreas Sanitarias** existen los siguientes órganos periféricos de dirección y participación (**Artículos 70 a 75 de la Ley 8/2008** y **`Decreto 134/2019`**):
+1. **La Gerencia del Área Sanitaria (Art. 71 Ley 8/2008 y Art. 5 Decreto 134/2019):** Es el órgano unipersonal de dirección y gestión superior del Área Sanitaria, encargado de la ejecución de las directrices de la Consellería de Sanidade y del SERGAS, de la firma y cumplimiento de los **Acuerdos de Gestión anuales** y de la jefatura superior de todo el personal y recursos de atención primaria y hospitalaria del área. Bajo su dependencia directa se estructuran:
+   - La **Dirección Asistencial** del Área Sanitaria.
+   - La **Dirección de Atención Primaria** y la **Dirección de Atención Hospitalaria**.
+   - La **Dirección de Enfermería**.
+   - La **Dirección de Recursos Económicos** *(bajo cuya dependencia orgánica se integran los **Servicios o Unidades de Ingeniería Biomédica, Electromedicina, Mantenimiento e Instalaciones** del Área Sanitaria)*.
+   - La **Dirección de Recursos Humanos**.
+   - Las **Direcciones de Distrito Sanitario** (en los distritos comarcales de Cee, Barbanza, A Mariña, Monforte, Verín, O Barco de Valdeorras y O Salnés).
+2. **La Comisión de Dirección del Área Sanitaria (Art. 72 Ley 8/2008 y Art. 14 Decreto 134/2019):** Órgano colegiado de coordinación y dirección ejecutiva del Área, presidido por la persona titular de la Gerencia del Área e integrado por las personas titulares de las Direcciones del Área y de las Direcciones de los Distritos Sanitarios. Se reúne con carácter ordinario, al menos, **una vez al mes**.
+3. **Las Comisiones Asesoras Técnicas:** Entre las que destacan la **Junta Técnico-Asistencial** y la **Comisión de Garantía y Evaluación de la Calidad y Seguridad Clínica**.
+4. **Los Órganos de Participación Ciudadana y Comunitaria (Artículos 74 y 75 Ley 8/2008):**
+   - **El Consejo de Salud de Área (Art. 74):** Órgano colegiado de participación comunitaria, consulta y seguimiento de la gestión en el ámbito del Área Sanitaria.
+   - **Los Consejos de Salud de Distrito (Art. 75, creados por la `Ley 1/2018`):** Órganos colegiados de participación comunitaria constituidos en cada uno de los **14 Distritos Sanitarios** para acercar el seguimiento de la actividad sanitaria a los ayuntamientos, sindicatos y asociaciones de pacientes y vecinos de cada comarca.
+
+---
+
+## 🔬 3. Modalidades Avanzadas, Parámetros Técnicos, Prestaciones y Aplicaciones Clínicas/Asistenciales (o Régimen Jurídico y Procedimientos)
+
+### 3.1. Competencias Sanitarias de las Administraciones Públicas de Galicia (Título V: Artículos 79 a 90 de la Ley 8/2008 y Decreto 144/2024)
+
+El **Título V de la Ley 8/2008** delimita con precisión las competencias que corresponden al **Consello da Xunta**, a la **Consellería de Sanidade** y a las **Corporaciones Locales** de Galicia (**¡Diferenciación clásica de preguntas tipo test!**):
+
+| Órgano / Administración | Precepto Ley 8/2008 | Competencias Sanitarias Específicas Atribuidas por la Ley 8/2008 |
+| :--- | :---: | :--- |
+| **1. Consello da Xunta de Galicia** | **Artículo 80** | • **a)** Fijar las **directrices generales de la política sanitaria** de la Comunidad Autónoma.<br>• **b)** Aprobar el **Plan de Salud de Galicia**.<br>• **c)** Aprobar el **mapa sanitario de Galicia** y las modificaciones de las demarcaciones territoriales que no requieran ley.<br>• **d)** Aprobar la **estructura orgánica de la Consellería de Sanidade (`Decreto 144/2024`) y del Servicio Gallego de Salud (`Decreto 145/2024`)**.<br>• **e)** Aprobar el proyecto de presupuesto del Sistema Público de Salud de Galicia y la **Oferta de Empleo Público (OEP)** del personal estatutario.<br>• **f)** Nombrar y cesar a los altos cargos de la Consellería y del SERGAS y aprobar los acuerdos de creación de entidades instrumentales (fundaciones, agencias o sociedades públicas). |
+| **2. Consellería de Sanidade** | **Artículo 81** *(y `Decreto 144/2024`)* | • **a)** Proponer al Consello da Xunta las directrices de política sanitaria, el Plan de Salud de Galicia y el anteproyecto de presupuestos.<br>• **b)** Ejercer la **autoridad sanitaria superior**, la **salud pública**, la vigilancia epidemiológica y la **inspección y evaluación sanitaria**.<br>• **c)** **Autorizar la creación, modificación, traslado y cierre de centros, servicios y establecimientos sanitarios** públicos y privados, y gestionar su registro oficial.<br>• **d)** Aprobar la **cartera de servicios complementaria** propia de Galicia y fijar los criterios de calidad, seguridad y acreditación de centros y **tecnologías sanitarias**.<br>• **e)** Ejercer la potestad reglamentaria interna, las **relaciones institucionales con el Estado (Consejo Interterritorial del SNS)** y el control de la publicidad sanitaria y ordenación farmacéutica. |
+| **3. Corporaciones Locales (Ayuntamientos)** | **Artículos 85 a 87** | • Ejercen las competencias de **salubridad pública y control sanitario ambiental municipal** en el marco de la legislación básica (Art. 42 LGS) y autonómica:<br>  **a)** Control sanitario del **medio ambiente**, aguas de consumo público, aguas residuales y gestión de residuos urbanos.<br>  **b)** Control sanitario de **industrias, actividades, servicios, transportes, ruidos y vibraciones**.<br>  **c)** Control sanitario de **edificios, viviendas y lugares de convivencia humana** (hoteles, escuelas, piscinas, centros deportivos, peluquerías).<br>  **d)** Control higiénico-sanitario en la distribución y comercio minorista de alimentos y bebidas.<br>  **e)** Control sanitario de **cementerios y policía sanitaria mortuoria**.<br>  **f)** Colaboración en la construcción, remodelación o cesión de solares para centros sanitarios públicos y participación en los **Consejos de Salud de Área y de Distrito**. |
+
+Asimismo, el **Decreto 144/2024, de 20 de mayo, por el que se establece la estructura orgánica de la Consellería de Sanidade** (publicado en el **DOG núm. 101, de 27 de mayo de 2024**, derogando al Decreto 136/2019), estructura la Consellería bajo la dirección superior de la **persona titular de la Consellería de Sanidade** en dos grandes órganos superiores y de dirección:
+1. **La Secretaría General Técnica (SXT):** Con rango orgánico de Secretaría General, de la que dependen la Vicesecretaría General, la Subdirección General de Régimen Jurídico y Administrativo, la Subdirección General de Planificación y Programación Asistencial, la **Subdirección General de Inspección de Servicios Sanitarios** y la **Subdirección General de Sistemas y Tecnologías de la Información** *(órgano directivo horizontal responsable de las TIC sanitarias corporativas, ciberseguridad, interoperabilidad e infraestructura digital de la Consellería y del SERGAS)*.
+2. **La Dirección General de Salud Pública (DXSP):** Órgano directivo encargado de la vigilancia epidemiológica, prevención y control de enfermedades transmisibles y crónicas, calendario vacunal, programas de cribado poblacional (mama, cérvix, colon, neonatal), seguridad alimentaria y sanidad ambiental y radiológica ambiental.
+
+### 3.2. El Servicio Gallego de Salud (SERGAS): Naturaleza Jurídica, Fines y Estructura Organizativa (`Ley 8/2008` y `Decreto 145/2024, de 20 de mayo`)
+
+El **Título VI de la Ley 8/2008 (Artículos 91 a 99)** regula la configuración institucional del **Servicio Gallego de Salud (SERGAS)**:
+- **Naturaleza jurídica (Artículo 91 Ley 8/2008 — ¡Pregunta fija de examen!):** El Servicio Gallego de Salud, para el adecuado desarrollo de las competencias de gestión y provisión de la asistencia sanitaria, se configura como un **organismo autónomo de naturaleza administrativa**, dotado de **personalidad jurídica propia y plena capacidad** para el cumplimiento de sus fines, adscrito a la **Consellería competente en materia de sanidad (Consellería de Sanidade)**, rigiéndose asimismo por la `Ley 16/2010, de 17 de diciembre (LOFAXGA)`.
+- **Fines y Funciones (Artículos 92 y 93 Ley 8/2008):** Tiene por finalidad la **gestión y provisión integrada de los servicios sanitarios públicos** de carácter asistencial en Galicia, correspondiéndole la ejecución de las directrices de la Consellería de Sanidade, el gobierno, dirección y gestión de todos los centros, servicios y establecimientos sanitarios propios o adscritos, la gestión de los recursos humanos, económicos, patrimoniales y tecnológicos (**compra centralizada, inversión en obra y equipamiento electromédico, y mantenimiento hospitalario**), y la gestión de las prestaciones sanitarias y farmacéuticas.
+
+La estructura organizativa vigente del SERGAS está regulada por el **Decreto 145/2024, de 20 de mayo, por el que se establece la estructura orgánica del Servicio Gallego de Salud** (publicado en el **DOG núm. 101, de 27 de mayo de 2024**, que derogó al Decreto 137/2019, de 10 de octubre). Conforme a sus artículos 2 a 15, el SERGAS se estructura en **Órganos Centrales de Dirección** y **Órganos Periféricos de Dirección**:
+
+#### A) Órganos Centrales de Dirección del SERGAS (`Decreto 145/2024`)
+1. **La Presidencia del SERGAS (Artículo 3 Decreto 145/2024):** Órgano unipersonal que corresponde de forma nata a la **persona titular de la Consellería de Sanidade**. Ostenta la representación legal superior del organismo autónomo, firma los convenios, aprueba la memoria anual y ejerce la superior dirección e inspección del SERGAS.
+2. **El Consejo de Dirección del SERGAS (Artículo 4 Decreto 145/2024):** Órgano colegiado superior de gobierno y coordinación del organismo autónomo. Está integrado por:
+   - *Presidencia:* La persona titular de la Consellería de Sanidade (Presidente/a del SERGAS).
+   - *Vicepresidencia:* La persona titular de la **Gerencia del SERGAS**.
+   - *Vocalías:* Las personas titulares de la Secretaría General Técnica y de la Dirección General de Salud Pública de la Consellería de Sanidade, las personas titulares de las **tres Direcciones Generales del SERGAS** (Asistencia Sanitaria, Recursos Económicos y Recursos Humanos) y las personas titulares de las **Gerencias de las siete (7) Áreas Sanitarias**. Actúa como Secretario/a, con voz pero sin voto, un funcionario/a designado por la Presidencia.
+3. **La Gerencia del SERGAS (Artículo 5 Decreto 145/2024):** Órgano unipersonal con rango de Secretaría General / Dirección General responsable de la dirección ejecutiva, coordinación y control de todas las actividades del SERGAS y de sus Áreas Sanitarias, la programación y suscripción de los **Acuerdos de Gestión anuales** con las Gerencias de las Áreas Sanitarias y las entidades instrumentales adscritas. De la Gerencia dependen la Vicesecretaría del SERGAS y las **tres Direcciones Generales del SERGAS**:
+   - **1) Dirección General de Asistencia Sanitaria (Artículos 6 a 9 Decreto 145/2024):** Responsable de la ordenación, coordinación y evaluación de la actividad asistencial de Atención Primaria, Atención Hospitalaria, Urgencias, Salud Mental, Sociosanitaria y Prestación Farmacéutica y Productos Sanitarios. Se estructura en cuatro Subdirecciones Generales: *Subdirección General de Atención Primaria*, *Subdirección General de Atención Hospitalaria*, *Subdirección General de Farmacia* y *Subdirección General de Integración Asistencial e Innovación*.
+   - **2) Dirección General de Recursos Económicos (Artículos 10 a 12 Decreto 145/2024 — ¡Órgano Directivo de Referencia para la Ingeniería Biomédica!):** Responsable de la dirección económica, presupuestaria, contable, patrimonial, de contratación centralizada y de **inversiones en infraestructuras y equipamiento tecnológico y electromédico** del SERGAS. Se estructura en tres Subdirecciones Generales:
+     1. *Subdirección General de Presupuestos:* Elaboración del anteproyecto de presupuestos del SERGAS, seguimiento presupuestario, contabilidad analítica (`SIHGA`) y facturación a terceros.
+     2. *Subdirección General de Compras y Servicios:* Contratación administrativa centralizada de suministros y servicios, gestión de la plataforma logística integral (**`LOGAS`**, con plataforma central en Negreira) y compras agregadas.
+     3. ***Subdirección General de Inversiones (Subdirección Xeral de Investimentos):*** **¡Imprescindible en el examen de Ingeniero/a Biomédico/a!** Es el órgano encargado de la programación, redacción de proyectos, contratación, dirección y supervisión de las **obras de construcción, reforma y ampliación de centros sanitarios**, así como de la **planificación, adquisición, instalación, puesta en marcha y gestión corporativa del equipamiento electromédico, de alta tecnología e ingeniería hospitalaria (`XMAO`)** en toda la red del SERGAS (integrando el Servicio de Obras y Supervisión de Proyectos y el **Servicio de Equipamientos y Alta Tecnología / Ingeniería Biomédica**).
+   - **3) Dirección General de Recursos Humanos (Artículos 13 y 14 Decreto 145/2024):** Órgano directivo responsable de la política de personal estatutario, negociación colectiva en la Mesa Sectorial de Sanidad, **convocatoria y gestión de los procesos selectivos (OPE), concursos de traslados (CAP), listas de selección temporal y carrera profesional**, régimen retributivo y prevención de riesgos laborales. Se estructura en la *Subdirección General de Gestión y Programación de Recursos Humanos* y la *Subdirección General de Desarrollo y Seguridad Laboral*.
+
+#### B) Órganos Periféricos y Entidades Instrumentales Adscritas a la Consellería de Sanidade / SERGAS
+- **Órganos Periféricos (Artículo 15 Decreto 145/2024 y Decreto 134/2019):** Son las **Gerencias de las siete (7) Áreas Sanitarias** (A Coruña y Cee; Santiago de Compostela y Barbanza; Ferrol; Lugo, A Mariña y Monforte de Lemos; Ourense, Verín y O Barco de Valdeorras; Pontevedra y O Salnés; y Vigo).
+- **Entidades Instrumentales Adscritas del Sector Público Autonómico Sanitario:**
+  1. **Fundación Pública Urxencias Sanitarias de Galicia-061:** Gestión coordinada del transporte sanitario urgente terrestre y aéreo (helicópteros medicalizados) y Central de Coordinación del 061 en A Estrada.
+  2. **Axencia Galega de Sangue, Órganos e Tecidos (`ADOS`):** Agencia pública autonómica con sede en Santiago que integra el Centro de Transfusión de Galicia, la Oficina de Coordinación de Trasplantes y los bancos de tejidos/sangre de cordón.
+  3. **Axencia Galega para a Xestión do Coñecemento en Saúde (`ACIS`):** Agencia pública autonómica responsable de la formación continuada del personal del SERGAS, la gestión de la investigación e innovación sanitaria y la **Unidad de Asesoramiento Científico-Técnico (`Avalia-t`)** de Evaluación de Tecnologías Sanitarias.
+  4. **Empresa Pública de Servizos Sanitarios `Galaria`, S.A.:** Sociedad mercantil pública autonómica que gestiona unidades de alta tecnología (como unidades de Radiofísica y Protección Radiológica, producción de radiofármacos PET en ciclotrón, resonancia magnética móvil, litotricia o cirugía cardíaca/oncología radioterápica según encomienda) y consultoría técnica sanitaria.
+  5. **Las 3 Fundaciones Públicas de Investigación Biomédica de Galicia:** Fundación Pública Gallega de Investigación Biomédica **INIBIC** (A Coruña), Fundación Pública Gallega Instituto de Investigación Sanitaria de Santiago (**IDIS**) y Fundación Pública Gallega de Investigación Biomédica **Galicia Sur** (Vigo - Pontevedra - Ourense).
+
+---
+
+## 🛡️ 4. Ingeniería Hospitalaria, Seguridad, Control de Calidad y Mantenimiento (o Garantías, Control y Régimen de Responsabilidades)
+
+### 4.1. Régimen Patrimonial, de Contratación e Intervención Pública en la Ley 8/2008 (Artículos 38 a 48 y 96 a 99)
+
+Desde la óptica de la ingeniería hospitalaria, las adquisiciones tecnológicas y las garantías administrativas, la **Ley 8/2008** establece las siguientes reglas específicas:
+1. **Régimen Patrimonial del SERGAS (Artículo 96 Ley 8/2008):** Se adscriben al SERGAS los bienes y derechos de toda índole afectos a los servicios de salud transferidos o adquiridos por cualquier título. Los bienes y derechos adscritos conservan su calificación jurídica originaria de **dominio público (bienes demaniales)** cuando estén afectos a la prestación directa del servicio público sanitario (hospitales, centros de salud y equipamiento clínico afecto al servicio), gozando de las prerrogativas de **inalienabilidad, imprescriptibilidad e inembargabilidad**.
+2. **Régimen de Contratación y Hacienda (Artículos 97 a 99 Ley 8/2008):** La contratación del SERGAS se rige por la legislación de contratos del sector público (`Ley 9/2017, LCSP`). Actúa como **órgano de contratación general la Presidencia del SERGAS**, sin perjuicio de las **delegaciones de competencias** vigentes en la Gerencia del SERGAS, en la **Dirección General de Recursos Económicos** (para expedientes centralizados de obras, suministros de alta tecnología y acuerdos marco) y en las **Gerencias de las 7 Áreas Sanitarias** dentro de sus límites presupuestarios delegados.
+3. **Inspección Sanitaria y Medidas Preventivas de Autoridad Sanitaria (Artículos 38, 39 y 82 a 84 Ley 8/2008):**
+   - El personal de la **Inspección de Servicios Sanitarios** y de salud pública tiene, en el ejercicio de sus funciones, la condición de **autoridad pública / agente de la autoridad**, estando facultado para entrar libremente y sin previa notificación en cualquier centro, servicio o establecimiento sanitario, realizar pruebas, investigaciones o exámenes de equipos e instalaciones, y tomar muestras o requerir documentación técnica y clínica (**Art. 83 Ley 8/2008**).
+   - Ante la existencia o sospecha razonable de un **riesgo inminente y extraordinario para la salud**, las autoridades sanitarias gallegas pueden adoptar **medidas preventivas de intervención** (**Art. 38 Ley 8/2008**): inmovilización cautelar de productos o equipos sanitarios, suspensión de actividades, clausura preventiva de instalaciones o centros que carezcan de autorización sanitaria o incumplan las condiciones técnicas de seguridad, medidas que **no tienen carácter de sanción** (**Art. 39.2**).
+
+### 4.2. Régimen Sancionador de la Ley 8/2008 de Salud de Galicia (Artículos 40 a 48)
+
+El **Capítulo III del Título II de la Ley 8/2008 (Artículos 40 a 48)** regula el régimen de infracciones y sanciones sanitarias en Galicia:
+- **Tipificación de Infracciones (Artículo 41 Ley 8/2008):** Las infracciones se clasifican en **leves**, **graves** y **muy graves**. Entre las infracciones graves y muy graves directamente vinculadas a la actividad hospitalaria y tecnológica destacan: abrir, modificar o cerrar un centro o servicio sanitario sin haber obtenido la **autorización administrativa previa**; incumplir los requisitos técnicos, de equipamiento, de plantilla o de seguridad exigidos reglamentariamente; obstruir la labor inspectora; o vulnerar el derecho a la confidencialidad e intimidad de los pacientes.
+- **Plazos de Prescripción de las Infracciones y de las Sanciones en la Ley 8/2008 (Artículo 47 — ¡Cuidado con la diferencia respecto a la Ley 14/1986 estatal!):**
+  - **Prescripción de las Infracciones en la Ley 8/2008 (Art. 47.1):**
+    - Infracciones **muy graves**: prescriben a los **cinco (5) años** *(o tres años en las infracciones especiales de salud pública del Art. 44 quinquies introducidas por la Ley 8/2021)*.
+    - Infracciones **graves**: prescriben a los **dos (2) años**.
+    - Infracciones **leves**: prescriben al **año (1 año)**.
+  - **Prescripción de las Sanciones impuestas (Art. 47.3):** Las sanciones impuestas por faltas **muy graves** prescriben a los **tres (3) años**, las impuestas por faltas **graves** a los **dos (2) años**, y las impuestas por faltas **leves** al **año (1 año)** desde que adquiera firmeza la resolución sancionadora.
+- **Plazo máximo de caducidad del procedimiento sancionador (Artículo 48 Ley 8/2008):** El plazo máximo para resolver y notificar la resolución del procedimiento sancionador sanitario en Galicia es de **nueve (9) meses** (o **seis meses** en el procedimiento simplificado por infracciones leves), transcurrido el cual sin notificación se produce la **caducidad** del expediente.
+
+---
+
+## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+
+### 5.1. Encuadramiento Orgánico y Funcional del Ingeniero/a Biomédico/a en la Estructura del SERGAS (`Decreto 145/2024` y `Decreto 134/2019`)
+
+En el entorno real de trabajo del **Servicio Gallego de Salud**, la figura estatutaria del **Ingeniero/a Biomédico/a (Subgrupo A1)** despliega sus funciones en una doble dimensión organizativa directamente regulada por las normas estudiadas en este tema:
+1. **En los Servicios Centrales del SERGAS (Santiago de Compostela — Edificio Administrativo de San Lázaro):**
+   - Dentro de la **Dirección General de Recursos Económicos**, la **Subdirección General de Inversiones (`Art. 12 del Decreto 145/2024`)** centraliza la planificación estratégica del parque tecnológico sanitario de toda Galicia: elaboración de los **Planes de Renovación Tecnológica y Alta Tecnología**, redacción de los Pliegos de Prescripciones Técnicas (PPT) para la compra centralizada de equipamiento de radiodiagnóstico (TC, RM, salas digitales, mamógrafos, angiógrafos), radioterapia (aceleradores lineales, protonterapia), medicina nuclear (PET-TC, SPECT-TC), bloques quirúrgicos (robótica quirúrgica, torres de endoscopia, mesas y lámparas) y monitorización multiparamétrica, así como la administración corporativa del sistema de gestión de mantenimiento **`XMAO`** y la coordinación con **`LOGAS`** y **`SIHGA`**.
+   - Paralelamente, coordina con la **Subdirección General de Sistemas y Tecnologías de la Información (`Decreto 144/2024`)** la integración de todos los equipos electromédicos e imagen médica con la Historia Clínica Electrónica **`IANUS`**, el archivo de imagen médica, el sistema de farmacia **`SILICON`** y la plataforma de teleasistencia domiciliaria **`TELEA`**.
+2. **En las Gerencias de las 7 Áreas Sanitarias y sus 14 Distritos Sanitarios (`Decreto 134/2019`):**
+   - Dependiendo de la **Dirección de Recursos Económicos** (Subdirección de Recursos Económicos / Servicios Técnicos) de cada Área Sanitaria, el Ingeniero/a Biomédico/a dirige o integra la **Unidad o Servicio de Ingeniería Biomédica / Electromedicina** del Área.
+   - En virtud del principio de **gestión integrada de Área (Art. 65 Ley 8/2008)**, la Unidad de Ingeniería Biomédica de cada Área Sanitaria da cobertura tecnológica integral tanto al Complejo Hospitalario Universitario de cabecera como a los **hospitales comarcales de sus Distritos Sanitarios** (por ejemplo, el Área de Lugo da soporte al HULA y a los hospitales de Burela y Monforte; el Área de Ourense al CHUO y a los hospitales de Verín y O Barco de Valdeorras) y a toda la red de **Centros de Salud y PAC de las Zonas Sanitarias de Atención Primaria** (ecógrafos de atención primaria, retinógrafos, espirómetros, electrocardiógrafos conectados a `IANUS` y desfibriladores DESA).
+
+### 5.2. Articulación con las Entidades Instrumentales (`ACIS`, `Galaria`, `ADOS`, `061`) en Proyectos Tecnológicos
+
+La Ley 8/2008 (Título VIII, Artículos 132 a 137) y los Decretos de estructura de 2024 articulan asimismo la colaboración directa de los Servicios de Ingeniería Biomédica con las entidades instrumentales adscritas:
+- Con **`ACIS` (*Axencia Galega para a Xestión do Coñecemento en Saúde*)**, tanto en la emisión de informes de **Evaluación de Tecnologías Sanitarias (`Avalia-t`)** previos a la incorporación de nuevo equipamiento a la cartera del SERGAS, como en los proyectos de **Compra Pública de Innovación (CPI)** (proyectos *Código 100*, *Hospital 2050*, *Innova MicroLab*, *Innova Saúde* o *PRECISAÚDE*).
+- Con **`Galaria`, Empresa Pública de Servizos Sanitarios**, en la coordinación técnica con las Unidades de **Radiofísica y Protección Radiológica** (control de calidad y licencias del CSN de instalaciones radiactivas y de radiodiagnóstico de las Áreas Sanitarias) y con el **Centro Oncológico de Protonterapia de Galicia** y el ciclotrón de radiofármacos.
+- Con **`ADOS`** (equipamiento de aféresis, irradiadores de hemocomponentes, congeladores de plasma y cadena de frío sanguínea) y con el **`061`** (monitores-desfibriladores, respiradores de transporte y cardiocompresores mecánicos de las ambulancias de Soporte Vital Avanzado y helicópteros medicalizados).
+
+---
+
+## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
+
+### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+
+| Concepto / Institución / Disposición en Galicia | Norma y Precepto Exacto | Cifra, Plazo, Órgano o Regla Exacta para Examen A1 SERGAS |
+| :--- | :--- | :--- |
+| **Ley de Salud de Galicia (Estructura y Vigor)** | `Ley 8/2008, de 10 de julio` | **139 artículos** en **9 Títulos** (DOG núm. 143, de `24/07/2008`; vigor `24/08/2008`). Reformada por **`Ley 1/2018, de 2 de abril`** y **`Ley 8/2021, de 25 de febrero`**. |
+| **Tiempos máximos garantizados de acceso** | **Art. 9 Ley 8/2008** y `Decreto 105/2017` | **$\le 60\text{ días naturales}$** en intervenciones quirúrgicas, **$\le 45\text{ días naturales}$** en primeras consultas externas y **$\le 45\text{ días naturales}$** en primeras pruebas diagnósticas/terapéuticas. |
+| **Defensa de derechos de los usuarios** | **Arts. 25 a 31 Ley 8/2008** | **Valedor o Valedora do Paciente**: designado/a por el/la titular de la Consellería de Sanidade dando cuenta al Parlamento de Galicia; actúa con plena autonomía funcional. |
+| **Mapa territorial sanitario de Galicia** | **Arts. 65 a 69 Ley 8/2008** y `Decreto 134/2019` | **7 Áreas Sanitarias** subdivididas en **14 Distritos Sanitarios** (2 en A Coruña, 2 en Santiago, 1 en Ferrol, 3 en Lugo, 3 en Ourense, 2 en Pontevedra y 1 en Vigo) + **Zonas Sanitarias** (Atención Primaria). |
+| **Órganos de Participación en el Territorio** | **Arts. 74 y 75 Ley 8/2008** | **Consejo de Salud de Área** (en cada una de las 7 Áreas) y **Consejos de Salud de Distrito** (en cada uno de los 14 Distritos Sanitarios, creados por la `Ley 1/2018`). |
+| **Aprobación del Plan de Salud y Estructura Orgánica** | **Art. 80 Ley 8/2008** | Competencia exclusiva del **Consello da Xunta de Galicia** (junto con el mapa sanitario y el proyecto de presupuestos). |
+| **Autorización de centros y Cartera de Servicios** | **Art. 81 Ley 8/2008** | Competencia de la **Consellería de Sanidade** (autoridad sanitaria, salud pública, inspección y autorización de centros y servicios). |
+| **Naturaleza jurídica del SERGAS** | **Art. 91 Ley 8/2008** | **Organismo autónomo de naturaleza administrativa**, con personalidad jurídica propia y plena capacidad, adscrito a la **Consellería de Sanidade**. |
+| **Decreto de Estructura Orgánica de la Consellería** | **`Decreto 144/2024, de 20 de mayo`** | Publicado en DOG núm. 101 (`27/05/2024`). Estructura la Consellería en **Secretaría General Técnica** (incluye Subd. Gral. de Sistemas y Tecnologías de la Información) y **Dirección General de Salud Pública**. |
+| **Decreto de Estructura Orgánica del SERGAS** | **`Decreto 145/2024, de 20 de mayo`** | Publicado en DOG núm. 101 (`27/05/2024`, derogó el `Decreto 137/2019`). Órganos centrales: **Presidencia**, **Consejo de Dirección** y **Gerencia del SERGAS** (con **3 Direcciones Generales**). |
+| **Las 3 Direcciones Generales del SERGAS** | **Arts. 6 a 14 `Decreto 145/2024`** | **1)** Dirección General de **Asistencia Sanitaria**; **2)** Dirección General de **Recursos Económicos** *(con la Subdirección General de Inversiones)*; **3)** Dirección General de **Recursos Humanos**. |
+| **Prescripción de Infracciones y Caducidad (Ley 8/2008)** | **Arts. 47 y 48 Ley 8/2008** | Infracciones generales: **Muy graves = 5 años**, **Graves = 2 años**, **Leves = 1 año**. Caducidad del procedimiento sancionador: **9 meses** (6 meses en simplificado). |
+
+### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+
+1. **¡Trampa clásica de los dos Decretos del 20 de mayo de 2024 (`Decreto 144/2024` vs. `Decreto 145/2024`)!** Ambos decretos se aprobaron el mismo día (**20 de mayo de 2024**) y se publicaron en el mismo diario oficial (**DOG núm. 101, de 27 de mayo de 2024**), por lo que los tribunales los cruzan sistemáticamente en las preguntas de test:
+   - El **`Decreto 144/2024, de 20 de mayo`**, regula la estructura orgánica de la **Consellería de Sanidade** (donde están la Secretaría General Técnica y la Dirección General de Salud Pública).
+   - El **`Decreto 145/2024, de 20 de mayo`**, regula la estructura orgánica del **Servicio Gallego de Salud — SERGAS** (donde están la Presidencia, el Consejo de Dirección, la Gerencia del SERGAS y las 3 Direcciones Generales: Asistencia Sanitaria, Recursos Económicos y Recursos Humanos). Además, recuerda que el `Decreto 145/2024` derogó al antiguo `Decreto 137/2019`.
+2. **Trampa sobre dónde se ubica la Subdirección General de Sistemas y Tecnologías de la Información (TIC) frente a la Subdirección General de Inversiones (Ingeniería y Obras):**
+   - La **Subdirección General de Sistemas y Tecnologías de la Información (TIC)** depende orgánicamente de la **Secretaría General Técnica de la Consellería de Sanidade** (`Decreto 144/2024`), dando servicio horizontal tanto a la Consellería como al SERGAS.
+   - En cambio, la **Subdirección General de Inversiones (*Subdirección Xeral de Investimentos*)** —encargada de las obras y del equipamiento electromédico y de alta tecnología— depende de la **Dirección General de Recursos Económicos del SERGAS** (`Artículo 12 del Decreto 145/2024`).
+3. **Trampa del número exacto de Áreas Sanitarias (7) y Distritos Sanitarios (14) tras la Ley 1/2018:** Si una opción afirma que en Galicia existen *«11 Áreas Sanitarias»* o *«7 Distritos Sanitarios»*, es **falsa**. Existen exactamente **7 Áreas Sanitarias** divididas en **14 Distritos Sanitarios**: solo dos Áreas tienen **1 único Distrito** (**Ferrol** y **Vigo**), tres Áreas tienen **2 Distritos** (**A Coruña y Cee**, **Santiago y Barbanza**, **Pontevedra y O Salnés**) y las dos Áreas de interior tienen **3 Distritos cada una** (**Lugo, A Mariña y Monforte**; y **Ourense, Verín y O Barco de Valdeorras**): $1 + 1 + 2 + 2 + 2 + 3 + 3 = \mathbf{14\text{ Distritos Sanitarios}}$.
+4. **Trampa sobre la naturaleza jurídica del SERGAS (Art. 91 Ley 8/2008):** El SERGAS es un **organismo autónomo de naturaleza administrativa** (no es una agencia pública autonómica, ni una entidad pública empresarial, ni una sociedad mercantil, a diferencia de `ACIS` y `ADOS` que sí son agencias públicas autonómicas, o de `Galaria` que es una sociedad mercantil pública).
+5. **Trampa competencial entre el Consello da Xunta (Art. 80) y la Consellería de Sanidade (Art. 81):** **Aprobar** el Plan de Salud de Galicia, el mapa sanitario y la estructura orgánica del SERGAS corresponde al **Consello da Xunta**; mientras que **proponer** el Plan de Salud y **autorizar** la creación, modificación o cierre de centros y servicios sanitarios corresponde a la **Consellería de Sanidade**.

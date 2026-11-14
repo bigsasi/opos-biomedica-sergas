@@ -3,14 +3,14 @@
 > **🌐 Portal Web Interactivo (GitHub Pages):** **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)**  
 > **💻 Repositorio en GitHub:** **[https://github.com/bigsasi/opos-biomedica-sergas](https://github.com/bigsasi/opos-biomedica-sergas)**  
 
-Este repositorio contiene toda la documentación oficial descargada, el cruce semántico de temarios, los **10 Bloques de Apuntes Desarrollados (que cubren los 82 temas del programa oficial: 8 de Parte Común + 74 de Parte Específica)**, los **26 textos legales oficiales íntegros del BOE, DOUE y DOG**, el **Simulacro Oficial de Examen (Teoría + Supuestos Prácticos + Parte Común)** y el **Portal Web Interactivo (`index.html`)**.
+Este repositorio contiene toda la documentación oficial descargada, el cruce semántico de temarios, los **82 Temas Oficiales desarrollados a nivel monográfico Subgrupo A1** (`04_temario_82_temas_individuales/`, cada uno con estructura homogénea de **7 secciones canónicas `0..6`, mínimo 180 líneas y más de 2.000 palabras por monografía**, sumando **565.785 palabras y 17.805 líneas** en total), los **10 Bloques de Apuntes de Síntesis (`02_apuntes_nucleo_diamante/`)**, los **26 textos legales oficiales íntegros del BOE, DOUE y DOG**, los **5 Exámenes y Simulacros Oficiales Comentados (133 preguntas + 12 supuestos prácticos)** y el **Portal Web Interactivo (`index.html`)** con protagonismo del **Lector Oficial de los 82 Temas del DOG**.
 
 ---
 
 ## 1. Mapa de Carpetas y Archivos Principales
 
 ### A. Raíz — Portal Interactivo, Convocatorias, JSONs de Temarios y Cruce Estratégico
-- **[`index.html`](./index.html) / [`00_PORTAL_ESTUDIO_INTERACTIVO_BIOMEDICA_SERGAS.html`](./00_PORTAL_ESTUDIO_INTERACTIVO_BIOMEDICA_SERGAS.html)**: Portal web interactivo publicado en **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)**.
+- **[`index.html`](./index.html) / [`00_PORTAL_ESTUDIO_INTERACTIVO_BIOMEDICA_SERGAS.html`](./00_PORTAL_ESTUDIO_INTERACTIVO_BIOMEDICA_SERGAS.html)**: Portal web interactivo publicado en **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)**, cuya vista principal por defecto es el **Lector Monográfico Oficial de los 82 Temas del DOG (Parte Común 1–8 y Parte Específica 1–74 con las 82 monografías íntegras embebidas)**.
 - [`00_INDICE_CATALOGO.md`](./00_INDICE_CATALOGO.md): Este índice maestro y guía de lo que tienes y lo que falta.
 - [`cruce_temarios_sergas.md`](./cruce_temarios_sergas.md): **Documento estratégico central**. Contiene:
   - Tabla comparativa tema a tema de los 82 temas contra las 5 categorías del SERGAS y otras CCAA.
@@ -18,7 +18,7 @@ Este repositorio contiene toda la documentación oficial descargada, el cruce se
   - Referencias de otras CCAA (**IB-SALUT Baleares**, **GVA Comunitat Valenciana**, **SAS Andalucía**, **Osakidetza País Vasco**, **SALUD Aragón**) y el origen real del temario en el **RD 838/2015**.
   - El **«Set Mínimo de Estudio» (39 temas)** y la **Estrategia «Bingo» / Núcleo Diamante (10 bloques / 15 temas clave)** basada en las reglas de puntuación del Anexo III del DOG.
 - [`resumen_email_biomedica.md`](./resumen_email_biomedica.md): Resumen ejecutivo listo para enviar por correo electrónico.
-- **[`04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md`](./04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md)**: Índice y los **82 temas desarrollados individualmente uno por uno** (`Comun_Tema_01..08.md` y `Especifico_Tema_01..74.md`).
+- **[`04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md`](./04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md)**: Índice maestro y acceso directo a los **82 temas con desarrollo monográfico A1 individual uno por uno** (`Comun_Tema_01..08.md` y `Especifico_Tema_01..74.md`, con mínimo 180 líneas, más de 2.000 palabras y 7 secciones `0..6` por tema).
 - **[`05_convocatorias_dog_referencia/Comparativa_Ingeniero_Biomedico_Otras_CCAA.md`](./05_convocatorias_dog_referencia/Comparativa_Ingeniero_Biomedico_Otras_CCAA.md)**: **Mapa Nacional de Oposiciones de Ingeniería Biomédica y Electromedicina en Otras CCAA** (Illes Balears IB-SALUT `SSCC 2026-1`, Comunitat Valenciana GVA `A1-S05-04`, País Vasco Osakidetza `OPE 2023-25`, Andalucía SAS, Castilla-La Mancha SESCAM, Cataluña SISCAT e INGESA).
 - [`05_convocatorias_dog_referencia/temario_biomedica.json`](./05_convocatorias_dog_referencia/temario_biomedica.json) y [`05_convocatorias_dog_referencia/convocatoria_biomedica.html`](./05_convocatorias_dog_referencia/convocatoria_biomedica.html): Convocatoria oficial íntegra del DOG (Resolución de 31 de marzo de 2026, DOG núm. 67, de 13/04/2026) y temario estructurado en JSON.
 - Temarios oficiales en JSON y convocatorias/temarios íntegros en HTML del DOG de las 5 categorías comparadas del SERGAS (en [`05_convocatorias_dog_referencia/`](./05_convocatorias_dog_referencia/)):

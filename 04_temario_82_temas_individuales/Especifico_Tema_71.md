@@ -1,100 +1,190 @@
-# Esp. Tema 71 — Sistema de gestión de mantenimiento asistido por ordenador (XMAO).
+# Tema 71 — Sistema de gestión de mantenimiento asistido por ordenador (XMAO).
 
-> **Parte del Programa:** Parte Específica  
-> **Prioridad Estratégica:** Fase 1: Núcleo Diamante (💎 Núcleo Diamante)  
-> **Bloque de Estudio Completo:** [`Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md`](../02_apuntes_nucleo_diamante/Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md)
-
-## 🎯 Cruce con Otras Oposiciones del SERGAS
-
-- **Categorías con solapamiento:** **Ingeniero/a Técnico/a**
-- **Grado de solapamiento:** **Total (95%)**: Coincidencia directa con «Tema 73. Gestión documental del mantenimiento. Gestión del mantenimiento asistido por ordenador. Aplicaciones y herramientas informáticas básicas...»
-- **Epígrafes equivalentes:**
-  • Tema 73. Gestión documental del mantenimiento. Gestión del mantenimiento asistido por ordenador. Aplicaciones y herramientas informáticas básicas. Sistemas de control de instalaciones. Telegestión.
+> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #71 de 74) — Ejercicio 1.º Eliminatorio
+> - **Bloque Temático SERGAS:** Bloque 09 — Gestión del Mantenimiento Biomédico (UNE 209001 IN), XMAO, Base Instalada, FENIN/COCIR y LCSP
+> - **Marco Normativo y Técnico Nuclear:** Norma `UNE 209001 IN` (apartados de registro documental e informatización); Norma `UNE-EN 13306:2018`; Serie `UNE-EN ISO 55000 / 55001` (Sistemas de Gestión de Activos); Norma `UNE-EN ISO 14224` (Recogida e intercambio de datos de fiabilidad y mantenimiento); Esquema Nacional de Seguridad (`ENS`, `RD 311/2022`); Currículo BOE `RD 838/2015` y `Orden EFP/1216/2019` (Módulo 1594, bloques b y f: Gestión de mantenimiento asistido por ordenador GMAO y archivo documental; Módulo 1593, bloque f: Herramientas informáticas para la gestión de inventarios).
+> - **Sistemas y Entorno SERGAS:** Sistema Corporativo de Xestión de Mantemento Asistido por Ordenador (`XMAO` del SERGAS), Sistema Logístico y Económico (`LOGAS`), Historia Clínica Electrónica (`IANUS`), sistemas `BMS/SCADA` de telegestión hospitalaria y Unidades de Ingeniería Biomédica y Mantenimiento de las 7 Áreas Sanitarias.
 
 ---
 
-## 📖 Desarrollo Técnico y Normativo del Tema
+## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
 
-### 1. Tema 71, Tema 72 y Tema 73: Gestión del Mantenimiento Biomédico, Base Instalada, Ciclo de Vida y Norma `UNE 209001 IN`
+### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
+El **Tema 71** de la Parte Específica aborda de forma monográfica la arquitectura informática, el modelo de datos relacional, los módulos funcionales, las reglas de negocio y la interoperabilidad del **Sistema de Gestión de Mantenimiento Asistido por Ordenador (`XMAO`**, por sus siglas en gallego *Xestión de Mantemento Asistido por Ordenador*, equivalente a `GMAO` en castellano o `CMMS` — *Computerized Maintenance Management System* en inglés). Su estudio en el Subgrupo A1 de Ingeniería Biomédica comprende:
+1. **Arquitectura tecnológica y modelo de datos de un sistema `XMAO` corporativo:** Topología multicapa web y móvil, control de accesos basado en roles (`RBAC`), pista de auditoría (`audit trail`), codificación jerárquica de ubicaciones técnicas (`ISO 14224`) y relaciones padre-hijo de activos compuestos.
+2. **Módulos operativos nucleares:** Motor de gestión de Órdenes de Trabajo (`OTs` correctivas, preventivas por calendario o por contador/horómetro, técnico-legales y de control de calidad) con listas de chequeo digitales bloqueantes; módulo de gestión de almacén técnico de repuestos (`PMP`, `FIFO`, `FEFO`, punto de pedido y stock de seguridad); y módulo de gestión de contratos externos, garantías y auditoría automática de Acuerdos de Nivel de Servicio (`SLAs`).
+3. **Explotación analítica (`BI`), movilidad en campo (`QR`, `RFID`, `RTLS`) e interoperabilidad:** Cuadro de mando de indicadores técnicos y financieros, integración con sistemas corporativos (`LOGAS`, `IANUS`, `PACS`, analizadores automáticos de seguridad eléctrica y sistemas `BMS/SCADA` de telegestión).
 
-> **¡EL BLOQUE MÁS IMPORTANTE PARA LOS SUPUESTOS PRÁCTICOS!**
-> El documento de referencia nacional para los servicios de Ingeniería Biomédica y Electromedicina en España es el informe/norma **`UNE 209001 IN` (*Guía para la gestión y el mantenimiento de productos sanitarios activos no implantables — PSANI*)**, complementado por la norma **`UNE-EN 62353` (*Equipos electromédicos. Ensayos recurrentes y ensayos después de la reparación del equipo electromédico*)** y la Circular de la **AEMPS** sobre asistencia técnica de productos sanitarios.
-
-### 1.1. Ciclo de Vida Completo de un Equipo Biomédico en el Hospital (`UNE 209001 IN` — Tema 73)
-El ciclo de vida de cualquier activo biomédico en la **Base Instalada** del SERGAS consta de **7 fases obligatorias**:
-1. **Fase 1 — Planificación y Detección de Necesidad:** Evaluación técnica/clínica, estudio de viabilidad e inclusión en el Plan de Inversiones (Tema 61).
-2. **Fase 2 — Adquisición / Contratación (`LCSP`):** Redacción del **Pliego de Prescripciones Técnicas (PPT)** definiendo requisitos clínicos, de integración `DICOM`/`HL7`, ciberseguridad, suministro de manuales de servicio/claves de mantenimiento, formación técnica y condiciones de garantía.
-3. **Fase 3 — Recepción, Instalación y Pruebas de Aceptación (*Acceptance Testing* — ¡Pregunta fija de examen!):**
-   - **Ningún equipo biomédico nuevo, en demostración, cesión o depósito puede entrar en uso clínico con pacientes sin haber superado antes la Recepción y Prueba de Aceptación** por la Unidad de Ingeniería Biomédica / Electromedicina (y por Radiofísica / SPR si emite radiaciones ionizantes).
-   - **¿Qué se hace en la Recepción y Aceptación (`UNE 209001 IN`)?**
-     1. Comprobación administrativa del albarán frente al pedido, **Marcado CE**, Declaración UE de Conformidad, manual de usuario y manual técnico en español.
-     2. **Alta en el Inventario de la Base Instalada en el `XMAO`** y colocación de la **Etiqueta de Identificación Única (Código de Activo / Código de Barras / QR)** en lugar visible del equipo.
-     3. **Inspección visual y ensayo de Seguridad Eléctrica inicial (`UNE-EN 62353`)** + verificación funcional con simuladores/analizadores de parámetros para establecer el **Estado de Referencia Inicial**.
-     4. **Acta de Recepción Formal y Formación inicial** al personal clínico usuario y al personal técnico.
-4. **Fase 4 — Uso Clínico y Formación Continua:** Operación segura conforme a la finalidad prevista del fabricante.
-5. **Fase 5 — Mantenimiento (Preventivo, Técnico-Legal, Conductivo, Correctivo y Predictivo) y Control de Calidad:** Registrado íntegramente en el **`XMAO`**.
-6. **Fase 6 — Vigilancia de Productos Sanitarios:** Gestión de notas de seguridad de la AEMPS, alertas y **Acciones Correctivas de Seguridad en Campo (`FSCA`)** / actualizaciones (*upgrades*).
-7. **Fase 7 — Baja de Inventario, Desinstalación y Gestión Ambiental (`RAEE`):**
-   - Causas de baja: obsolescencia técnica o clínica, pérdida de soporte de repuestos por el fabricante (*End-of-Support* / *End-of-Life*), avería antieconómica o inseguridad.
-   - **Protocolo obligatorio de Baja (`UNE 209001 IN`):** **1) Descontaminación/desinfección biológica**, **2) Borrado seguro de todos los datos personales de pacientes almacenados en la memoria/disco duro del equipo (cumplimiento RGPD/LOPDGDD)**, **3) Retirada de fuentes radiactivas si las hubiera**, **4) Certificado de Baja en el `XMAO`** y **5) Entrega a gestor autorizado de residuos `RAEE`**.
-
-### 1.2. Gestión de la Base Instalada e Inventario: El Índice de Fennigkoh y Smith (Priorización Basada en el Riesgo — Tema 72 y 73)
-Para gestionar miles de equipos biomédicos y decidir la periodicidad de mantenimiento preventivo e inclusión en el plan de calidad, se aplica el modelo clásico de **Fennigkoh y Smith (recomendado por la OMS y ECRI)**, que calcula el **Número de Gestión del Equipo (`EM` — *Equipment Management Number*)** sumando 3 factores:
-$$\text{EM} = \text{Función del Equipo (1 a 10)} + \text{Riesgo Físico / Aplicación Clínica (1 a 5)} + \text{Requisitos de Mantenimiento (1 a 5)}$$
-1. **Función ($F$, de $1\text{ a }10$):**
-   - **Terapéuticos:** Soporte vital (**$10$**: respirador, anestesia, desfibrilador, hemodiálisis, incubadora); Quirúrgicos y cuidados intensivos (**$9$**: electrobisturí, láser); Terapia física y tratamiento (**$8$**).
-   - **Diagnósticos:** Monitorización quirúrgica y de UCI (**$7$**);Otros equipos de monitorización fisiológica y diagnóstico (**$6$**).
-   - **Analíticos:** Analizadores de laboratorio (**$5$**); Accesorios de laboratorio (**$4$**); Ordenadores y relacionados (**$3$**).
-   - **Otros:** Relacionados con el paciente (**$2$**: camas eléctricas, grúas); No relacionados con paciente (**$1$**).
-2. **Riesgo Físico asociado al fallo ($R$, de $1\text{ a }5$):**
-   - **$5$:** Posible **muerte del paciente**.
-   - **$4$:** Posible **lesión grave** del paciente o del operador.
-   - **$3$:** Terapia inapropiada o **diagnóstico erróneo**.
-   - **$2$:** Daño al equipo o pérdida de datos sin riesgo directo grave.
-   - **$1$:** Sin riesgo significativo identificado.
-3. **Requisitos de Mantenimiento ($M$, de $1\text{ a }5$):**
-   - **$5$:** Extensivo / Muy alto (equipos neumáticos, mecánicos o de fluidos que requieren calibración frecuente: respiradores, máquinas de anestesia, hemodiálisis).
-   - **$4$:** Superior a la media.
-   - **$3$:** Medio (equipos electrónicos con pruebas de funcionamiento).
-   - **$2$:** Inferior a la media.
-   - **$1$:** Mínimo (inspección visual básica).
-- **Criterio de inclusión:** Los equipos con **$\text{EM} \ge 12$** se consideran **Críticos / Prioritarios** y deben tener mantenimiento preventivo programado estricto (semestral o anual); los equipos de soporte vital ($F=10$ o $R=5$) tienen prioridad absoluta en tiempos de respuesta ante averías.
-
-### 1.3. Tipos de Mantenimiento e Indicadores Clave de Gestión (`KPIs`: `MTBF`, `MTTR`, Disponibilidad — Tema 71 y 72)
-
-1. **Tipos de Mantenimiento (`UNE-EN 13306` y `UNE 209001 IN`):**
-   - **Mantenimiento Conductivo (De Uso / Primer Nivel):** Realizado a diario por el propio usuario o técnico de guardia (limpieza externa, test diario de autochequeo de máquina de anestesia o desfibrilador, test de Bowie-Dick en autoclave).
-   - **Mantenimiento Preventivo (Sistemático / Programado):** Intervenciones programadas a intervalos predeterminados (sustitución de kits de mantenimiento de horas/año: baterías, células de $\text{O}_2$, filtros, membranas, calibración con simuladores y test de seguridad eléctrica `UNE-EN 62353`) para reducir la probabilidad de fallo.
-   - **Mantenimiento Técnico-Legal (Reglamentario):** Obligatorio por normativa industrial o sanitaria (`RD 1085/2009` y `RD 1976/1999` en Rayos X, `ITC-BT-38` en quirófanos, `UNE 171340` en salas de ambiente controlado, reglamento de equipos a presión `REP RD 809/2021` en autoclaves de vapor).
-   - **Mantenimiento Correctivo (No programado / Averías):** Tras la detección de un fallo para devolver el equipo a su estado operativo, seguido obligatoriamente de **verificación funcional y ensayo de seguridad `UNE-EN 62353` antes de devolverlo a planta**.
-   - **Mantenimiento Predictivo (Basado en la Condición — CBM):** Monitorización continua o remota de variables físicas (corriente de filamento y arcos en tubos de TC, presión y nivel de helio en RM, vibraciones, temperatura) para intervenir justo antes de que se produzca la rotura.
-2. **Los 3 Indicadores Matemáticos de Fiabilidad, Mantenibilidad y Disponibilidad (¡Preguntas fijas de cálculo en test y supuestos!):**
-   - **1) `MTBF` (*Mean Time Between Failures* — Tiempo Medio Entre Fallos $\rightarrow$ mide la FIABILIDAD):**
-     $$\text{MTBF} = \frac{\text{Tiempo total operativo de funcionamiento (Horas de buen funcionamiento)}}{\text{Número de fallos (averías) en ese período}}$$
-   - **2) `MTTR` (*Mean Time To Repair* — Tiempo Medio de Reparación $\rightarrow$ mide la MANTENIBILIDAD):**
-     $$\text{MTTR} = \frac{\text{Tiempo total de parada por reparación correctiva (Horas de indisponibilidad por avería)}}{\text{Número de fallos (averías) reparados}}$$
-   - **3) Disponibilidad Operativa Intrínseca ($D$ o *Uptime* $\rightarrow$ objetivo en Alta Tecnología y Críticos $\ge \mathbf{95\text{–}98\%}$):**
-     $$D = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}} \times 100\%$$
-   - *(Ejemplo rápido de examen: Si un TC tiene un $\text{MTBF} = 490\text{ horas}$ y un $\text{MTTR} = 10\text{ horas}$, su Disponibilidad es $D = \frac{490}{490 + 10} = \frac{490}{500} = \mathbf{98\%}$).*
-
-### 1.4. Ensayos Eléctricos tras Reparación y Mantenimiento Preventivo (`UNE-EN 62353` vs. `UNE-EN 60601-1`)
-> **Pregunta frecuente de Electromedicina:** ¿Qué norma se usa para los ensayos periódicos de mantenimiento en el hospital y por qué no se usa directamente la `UNE-EN 60601-1`?
-> **Respuesta:** La `UNE-EN 60601-1` es la norma de **homologación y diseño en fábrica** (incluye ensayos destructivos de rigidez dieléctrica de alta tensión que deteriorarían el equipo si se repiten cada año). Para las **revisiones periódicas en el hospital y después de cada reparación** se aplica la norma **`UNE-EN 62353`**, que mide con un analizador de seguridad eléctrica:
-1. **Inspección visual** (integridad de chasis, cables de red, latiguillos y etiquetado).
-2. **Resistencia de la Tierra de Protección (en equipos Clase I eléctrica):** Con corriente de prueba $\ge 200\text{ mA}$: debe ser **$\le 0,3\text{ }\Omega$** para el equipo con cable de red desmontable o **$\le 0,2\text{ }\Omega$** solo el cable (y $\le 0,1\text{ }\Omega$ solo el chasis).
-3. **Resistencia de Aislamiento** (a $500\text{ V DC}$).
-4. **Corriente de Fuga del Equipo y Corriente de Fuga de la Parte Aplicable (Tipo B, BF y CF)** (por método directo, diferencial o alternativo).
-5. **Prueba Funcional** con simulador de paciente (simulador de ECG/SpO2/PNI, pulmón de prueba en respiradores, medidor de energía con carga de $50\text{ }\Omega$ en desfibriladores, analizador de electrobisturís).
-
-### 1.5. Tema 71: Sistema de Gestión de Mantenimiento Asistido por Ordenador (`XMAO` / `GMAO`)
-El **`XMAO`** del SERGAS es la herramienta informática central que estructura toda la actividad de Ingeniería Biomédica y Mantenimiento:
-- **Módulos funcionales del `XMAO`:**
-  1. **Módulo de Inventario Técnico y Árbol Jerárquico de Ubicaciones:** Ficha maestra de cada activo (código único de inventario, denominación estandarizada **GMDN / EMDN** [Nomenclatura Europea de Dispositivos Médicos], marca, modelo, número de serie, **UDI**, clase de riesgo MDR, criticidad Fennigkoh, Área Sanitaria / Hospital / Planta / Local, fecha de puesta en marcha, fin de garantía, valor de adquisición, proveedor y contrato asociado).
-  2. **Módulo de Gestión de Órdenes de Trabajo (OTs):**
-     - **OTs Correctivas (Avisos de avería):** Abiertas desde cualquier PC de planta (`IANUS`/Intranet) con registro de fecha/hora de aviso, fecha/hora de respuesta, fecha/hora de resolución, diagnóstico del fallo, repuestos consumidos y tiempo de parada.
-     - **OTs Preventivas, Técnico-Legales y de Control de Calidad:** Generadas automáticamente por calendario o por contador de horas de uso, con **gamas de mantenimiento y listas de chequeo (*checklists*) parametrizadas** según los manuales del fabricante y la `UNE 209001 IN`.
-  3. **Módulo de Gestión de Almacén de Repuestos y Fungibles Técnicos:** Control de stock mínimo/crítico de repuestos (baterías, sensores de flujo, células de $\text{O}_2$, brazaletes, cables de ECG).
-  4. **Módulo de Gestión de Contratos Externos y SLAs (*Service Level Agreements*):** Control del cumplimiento de los **Acuerdos de Nivel de Servicio (SLA)** de las empresas adjudicatarias (tiempo de respuesta presencial, tiempo máximo de resolución, porcentaje de disponibilidad anual garantizada $\ge 98\%$ y cálculo automático de penalizaciones contractuales).
-  5. **Módulo de Cuadro de Mando e Indicadores Técnicos y Económicos:** Cálculo automático de `MTBF`, `MTTR`, disponibilidad, cumplimiento del plan preventivo ($\% \text{ OTs preventivas realizadas / programadas}$) y **ratio de coste acumulado de mantenimiento sobre valor de reposición** para alimentar el Plan de Renovación Tecnológica.
+### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
+- **Categorías equivalentes en el SERGAS:** **Ingeniero/a Técnico/a**.
+- **Grado de solapamiento:** **Total (95%)**: Coincidencia directa con el tema homólogo de gestión documental e informática del mantenimiento de la categoría de Ingeniero/a Técnico/a del SERGAS.
+- **Epígrafes equivalentes en convocatorias del SERGAS y currículo BOE:**
+  - *Ingeniero/a Técnico/a (Subgrupo A2):* `Tema 73. Gestión documental del mantenimiento. Gestión del mantenimiento asistido por ordenador. Aplicaciones y herramientas informáticas básicas. Sistemas de control de instalaciones. Telegestión.`
+  - *Currículo BOE (`RD 838/2015` y `Orden EFP/1216/2019`):* `Módulo 1594 (Gestión del montaje y mantenimiento de sistemas de electromedicina), bloque b) Gestión de mantenimiento asistido por ordenador (GMAO)` y `bloque f) Elaboración y archivo de documentación`; `Módulo 1593, bloque f) Herramientas informáticas para la gestión y mantenimiento de inventarios.`
 
 ---
+
+## 📖 1. Concepto, Evolución y Arquitectura Tecnológica de un Sistema XMAO en Ingeniería Biomédica
+
+### 1.1. De los Sistemas CMMS Locales a las Plataformas Corporativas EAM/XMAO (ISO 55001 y UNE 209001 IN)
+Un **Sistema de Gestión de Mantenimiento Asistido por Ordenador (`XMAO` / `GMAO` / `CMMS`)** es una plataforma de software empresarial diseñada para centralizar, automatizar, planificar y auditar toda la información técnica, operativa, legal y económico-financiera ligada a los activos físicos de una organización sanitaria.
+- En el ámbito hospitalario, la guía nacional **`UNE 209001 IN`** y la familia de normas internacionales **`UNE-EN ISO 55000 / 55001`** (*Gestión de activos*) establecen que la trazabilidad íntegra de las intervenciones sobre los Productos Sanitarios Activos No Implantables (`PSANI`) exige un soporte informático robusto que actúe como **Repositorio Único de la Verdad (*Single Source of Truth*)**.
+- Históricamente, los servicios hospitalarios evolucionaron desde hojas de cálculo aisladas y bases de datos departamentales de escritorio (años 1990) hacia sistemas `CMMS` cliente-servidor locales por hospital, hasta culminar en la actual arquitectura de **Gestión de Activos Empresariales (`EAM` — *Enterprise Asset Management*) centralizada y multi-centro**, cuyo exponente en Galicia es el **`XMAO` corporativo del SERGAS**, capaz de gestionar de forma simultánea y unificada decenas de miles de equipos electromédicos, instalaciones industriales e infraestructuras edilicias en todas las Áreas Sanitarias de la Comunidad Autónoma.
+
+### 1.2. Arquitectura Informática Multicapa, Seguridad (RBAC) y Pista de Auditoría (*Audit Trail*)
+Desde la perspectiva de la ingeniería del software y de los sistemas de información sanitarios, un `XMAO` corporativo moderno se despliega sobre una **arquitectura web de tres capas (*Three-Tier Architecture*)** de alta disponibilidad:
+1. **Capa de Presentación (Clientes Web HTML5 y Clientes Móviles Nativos/PWA):**
+   - **Portal Web de Peticionarios Clínicos:** Interfaz ligera accesible desde cualquier estación de trabajo clínica (integrada en el escritorio de `IANUS`/Intranet) mediante la cual las supervisiones de enfermería o facultativos notifican averías en menos de $30\text{ segundos}$ seleccionando el equipo por código de etiqueta o ubicación y consultan en tiempo real el estado de sus avisos.
+   - **Consola Técnica y de Administración Web:** Interfaz completa para ingenieros biomédicos, jefes de taller y administrativos (planificación de gamas, gestión de contratos, compras de repuestos, cuadros de mando).
+   - **Aplicación de Movilidad en Campo (*Mobile CMMS*):** Ejecutada en tabletas o terminales robustecidos con cámara lectora de códigos `QR`/`DataMatrix` y lector `RFID`/`NFC`, dotada de **modo de sincronización asíncrona (*offline/online*)** con base de datos local encriptada (`SQLite`) para permitir que el técnico registre medidas en sótanos, búnkeres de radioterapia o jaulas de Faraday sin cobertura Wi-Fi, sincronizando los datos automáticamente al recuperar la conectividad.
+2. **Capa de Lógica de Negocio y Motor de Reglas (*Application Server & Workflow Engine*):**
+   - Implementa los motores de generación automática de órdenes preventivas, el enrutador inteligente de avisos según matriz de contratos/garantías, el motor de cálculo de penalizaciones `SLA` y el bus de servicios web (`API RESTful / JSON`, `SOAP / XML`) para la comunicación con sistemas externos.
+3. **Capa de Persistencia de Datos (SGBD Relacional `OLTP` + Almacén Analítico `OLAP/BI`):**
+   - Base de datos relacional transaccional (`Oracle` / `PostgreSQL` / `SQL Server`) con integridad referencial estricta para las operaciones en tiempo real (`OLTP`), replicada hacia un *Data Warehouse* o *Data Mart* analítico (`OLAP`) para la ejecución de consultas complejas de *Business Intelligence* sin degradar el rendimiento transaccional.
+4. **Control de Acceso Basado en Roles (`RBAC`), Firma Electrónica y *Audit Trail* (`ENS`):**
+   - Integración con el **Directorio Activo Corporativo (`LDAP` / `SSO`)** del SERGAS, segregando permisos por perfil funcional (*Solicitante Clínico*, *Técnico Interno*, *Técnico de Empresa Externa Adjudicataria* —quien solo visualiza los activos y OTs adjudicados a su lote contractual—, *Ingeniero Biomédico / Responsable de Contrato* y *Perfil Auditor*).
+   - **Trazabilidad médico-legal inalterable (*Audit Trail*):** Toda creación, modificación de estado o cierre de una Orden de Trabajo queda sellada con marca de tiempo sincronizada por protocolo **`NTP`** (*Network Time Protocol*), identificador único del usuario autenticado y registro inmutable de valores previos y posteriores, garantizando la validez probatoria ante inspecciones de la **AEMPS**, del **CSN**, auditorías **`ISO 9001`/`ISO 13485`** o peritajes judiciales.
+
+---
+
+## ⚙️ 2. Modelo de Datos del XMAO: Ubicaciones Técnicas, Ficha de Activo y Árbol Padre-Hijo
+
+### 2.1. Codificación Jerárquica de Ubicaciones Técnicas (Norma UNE-EN ISO 14224)
+El cimiento estructural del modelo de datos de un `XMAO` es la separación lógica entre la **Ubicación Técnica o Funcional (*Functional Location*)** y el **Activo Físico o Equipo (*Equipment / Asset*)** que ocupa dicha ubicación en un instante dado. Conforme al estándar internacional **`UNE-EN ISO 14224`**, las ubicaciones técnicas se organizan en una **estructura jerárquica en árbol de seis niveles**:
+
+$$\text{Nivel 1: Área Sanitaria} \longrightarrow \text{Nivel 2: Centro / Hospital} \longrightarrow \text{Nivel 3: Edificio / Bloque} \longrightarrow \text{Nivel 4: Planta / Nivel} \longrightarrow \text{Nivel 5: Servicio / Unidad Funcional (GFH)} \longrightarrow \text{Nivel 6: Local / Sala / Box}$$
+
+- **Ventaja de ingeniería del modelo Ubicación vs. Activo:** Cuando un equipo móvil o modular (p. ej. un respirador de UCI o un ecógrafo) se traslada desde el Box 4 de la UCI Polivalente al Quirófano 7, el activo **conserva intacto su código único de inventario y todo su historial clínico-técnico**, actualizándose únicamente el puntero relacional de su ubicación actual y dejando trazabilidad histórica de en qué sala estuvo instalado en cada período. A su vez, la ubicación técnica «Quirófano 7» conserva el histórico acumulado de todos los equipos e instalaciones que han operado en ese recinto físico y está vinculada por clave primaria al código del recinto en los planos **`CAD/BIM`** y al **Centro de Coste (`GFH` — *Grupo Funcional Homogéneo*)** de contabilidad analítica.
+
+### 2.2. Relaciones Padre-Hijo en Sistemas Biomédicos Complejos y Entidades Relacionales
+En la ingeniería clínica hospitalaria existen numerosos sistemas compuestos cuya gestión en el `XMAO` requiere modelar una **jerarquía de activos Padre-Hijo (*Parent-Child Asset Hierarchy*)**:
+1. **Activo Padre (Sistema Principal):** Representa la unidad funcional completa (por ejemplo, una **Sala de Tomografía Computarizada**, una **Torre de Endoscopia Digestiva** o una **Central de Monitorización de UCI**).
+2. **Activos Hijos (Subactivos o Subconjuntos Críticos Seriables):** Son equipos con número de serie propio, ciclo de vida diferenciado o contadores independientes que forman parte del sistema padre, tales como:
+   - En una Sala de TC: *Hijo 1:* Gantry y mesa de paciente; *Hijo 2:* **Tubo de Rayos X** (cuya vida útil se mide en $\text{mAs}$ acumulados o número de cortes y puede sustituirse 2 o 3 veces durante la vida del TC); *Hijo 3:* **Inyector automático de medios de contraste**; *Hijo 4:* Estación de trabajo de posprocesado multimodal; *Hijo 5:* **Sistema de Alimentación Ininterrumpida (`SAI`)** y *Chiller* dedicados.
+   - En una Torre de Endoscopia: *Padre:* Carro/Torre de vídeo $\rightarrow$ *Hijos:* Procesador de imagen, fuente de luz fría LED/Xenón, insuflador de $\text{CO}_2$, bomba de irrigación, monitor de grado médico y cada uno de los **videoendoscopios flexibles** individuales (que rotan continuamente entre las salas de exploración y la central de reprocesamiento/lavado).
+3. **Herencia de estados y agregación de costes (`Roll-up`):** La relación Padre-Hijo en el `XMAO` permite que los costes de reparación de todos los subactivos hijos se agreguen automáticamente (*cost roll-up*) en el activo padre para calcular el **Coste Total de Mantenimiento de la sala**, a la vez que permite sustituir un tubo de RX o un videoendoscopio averiado sin perder el historial individual de ninguno de ellos.
+
+---
+
+## 🔬 3. Módulos Operativos Nucleares del XMAO: Órdenes de Trabajo, Almacén Técnico y Contratos/SLAs
+
+### 3.1. Módulo de Gestión de Órdenes de Trabajo (OTs): Estados, Sellos Temporales y Checklists Bloqueantes
+La **Orden de Trabajo (`OT` — *Work Order*)** es la entidad transaccional nuclear del `XMAO` en la que se registra toda acción técnica realizada sobre un activo.
+1. **Tipología normalizada de OTs en el `XMAO` biomédico:**
+   - **`OT-COR` (Correctiva / Aviso de Avería):** No programada; originada por fallo o mal funcionamiento detectado por el usuario clínico o durante una ronda técnica.
+   - **`OT-PREV` (Preventiva Sistemática):** Programada automáticamente por el motor del `XMAO` según intervalos temporales (calendario fijo o flotante desde la fecha de cierre de la última revisión) o por **umbrales de contadores/horómetros** (cada $1.000 / 5.000\text{ horas}$ de turbina en respiradores, número de disparos en tubos de RX/láseres o ciclos de esterilización en autoclaves).
+   - **`OT-TL` (Técnico-Legal / Reglamentaria) y `OT-CC` (Control de Calidad):** Asociada a inspecciones normativas obligatorias (`ITC-BT-38` mensual/anual en quirófanos, `UNE 171340` en salas limpias, controles de calidad de Radiofísica o inspecciones de equipos a presión `REP`).
+   - **`OT-ACEP` (Recepción y Pruebas de Aceptación inicial)**, **`OT-VIG` (Alerta de Vigilancia / `FSCA` de la AEMPS)** y **`OT-MOD` (Mejora o Actualización / *Upgrade*)**.
+2. **Cronometría de una OT Correctiva y los Cinco Sellos Temporales ($t_0$ a $t_4$):**
+   Para medir con precisión matemática los tiempos de respuesta, reparación y parada sin ambigüedades contractuales, el `XMAO` registra cinco instantes temporales en cada `OT-COR`:
+   - **$t_0$ (Hora de Apertura / Notificación de Avería):** Instante exacto en que el usuario clínico registra la incidencia en el `XMAO` (o llama al centro de control), cambiando el estado del activo a `Averiado / Parado`.
+   - **$t_1$ (Hora de Respuesta / Presencia o Tele-diagnóstico):** Instante en que el técnico asignado acusa recibo e inicia la primera atención presencial o remota sobre el equipo.
+   - **$t_2$ (Hora de Inicio Efectivo de la Reparación):** Instante en que comienza la intervención técnica activa en banco o sala (tras eventuales esperas de acceso a sala clínica ocupada o recepción de repuesto).
+   - **$t_3$ (Hora de Fin Técnico de Reparación y Superación del Ensayo `UNE-EN 62353`):** Instante en que el equipo queda reparado, calibrado, con su protocolo de seguridad eléctrica aprobado y disponible nuevamente para uso clínico (`Disponible`).
+   - **$t_4$ (Hora de Conformidad de Usuario y Cierre Administrativo de la OT):** Instante en que el supervisor del servicio clínico valida la recepción del equipo y el responsable de Ingeniería Biomédica cierra administrativamente el parte.
+   - A partir de estos sellos, el `XMAO` calcula automáticamente para cada avería:
+     $$\text{Tiempo de Respuesta (TR)} = t_1 - t_0 \quad ; \quad \text{Tiempo Activo de Reparación} = t_3 - t_2 \quad ; \quad \text{Tiempo Total de Resolución / Indisponibilidad (TRes)} = t_3 - t_0$$
+3. **Gamas de Mantenimiento y Listas de Chequeo (*Checklists*) Digitales Bloqueantes:**
+   Cada familia y modelo de equipo tiene parametrizada en el `XMAO` su **Gama de Mantenimiento** con una lista de chequeo estructurada en pasos secuenciales. El sistema incorpora **reglas de validación bloqueantes**: el técnico **no puede cambiar el estado de la OT a «Terminada / Cerrada»** si no ha cumplimentado todos los campos obligatorios, incluyendo la introducción de los valores cuantitativos medidos (p. ej. resistencia de tierra de protección en $\Omega$, corrientes de fuga en $\mu\text{A}$ y errores de energía/flujo), los cuales son comparados automáticamente por el `XMAO` frente a los límites de tolerancia de la norma `UNE-EN 62353`, exigiendo además seleccionar el **analizador/simulador patrón utilizado** (cuya fecha de calibración vigente es verificada por el sistema, impidiendo seleccionar un instrumento con calibración caducada).
+
+### 3.2. Módulo de Gestión de Almacén Técnico de Repuestos y Fungibles de Mantenimiento (Módulo 1594.c)
+El módulo de almacén del `XMAO` gestiona el catálogo de repuestos críticos, kits preventivos y accesorios reutilizables del taller de Electromedicina:
+1. **Codificación y asociación a activos (*Bill of Materials* — `BOM`):** Cada artículo de repuesto (baterías específicas, sensores de flujo, células galvánicas de $\text{O}_2$, válvulas espiratorias, manguitos, latiguillos de ECG/SpO2, lámparas, placas electrónicas) está vinculado a la lista de materiales (`BOM`) de los modelos de equipos compatibles.
+2. **Criterios de Valoración y Rotación de Stock:**
+   - Valoración contable automática de las existencias mediante el **Precio Medio Ponderado (`PMP`)**:
+     $$\text{PMP}_{\text{nuevo}} = \frac{(Q_{\text{actual}} \cdot \text{PMP}_{\text{actual}}) + (Q_{\text{entrada}} \cdot P_{\text{compra}})}{Q_{\text{actual}} + Q_{\text{entrada}}}$$
+   - Reglas de salida de almacén por **`FIFO`** (*First-In, First-Out*) general y **`FEFO`** (*First-Expired, First-Out*, primero en caducar, primero en salir) obligatorio para componentes con fecha de caducidad físico-química, como **células electroquímicas de oxígeno, baterías de litio/plomo de desfibriladores, parches y kits estériles**.
+3. **Cálculo automático del Punto de Pedido ($PP$), Stock de Seguridad ($SS$) y Clasificación `ABC`:**
+   - Si $D_d$ es el consumo medio diario de un repuesto, $L$ es el plazo de aprovisionamiento del proveedor en días (*Lead Time*) y $\sigma_d$ la desviación típica de la demanda con factor de servicio $Z$, el `XMAO` lanza automáticamente una solicitud de reposición a **`LOGAS`** cuando el stock físico más el pendiente de recibir cae hasta el **Punto de Pedido ($PP$)**:
+     $$SS = Z \cdot \sigma_d \cdot \sqrt{L} \quad ; \quad PP = (D_d \cdot L) + SS$$
+   - Asimismo, cuando el motor del `XMAO` planifica las OTs preventivas del mes siguiente, ejecuta una **reserva automática de los kits preventivos** necesarios en el almacén para garantizar la disponibilidad de piezas antes de parar el equipo clínico.
+
+### 3.3. Módulo de Gestión de Contratos Externos, Garantías y Auditoría Automática de SLAs
+1. **Control de Garantías Activas:** Al dar de alta un equipo tras el Acta de Recepción, el `XMAO` activa una alerta de **Equipo en Garantía** hasta la fecha de vencimiento. Si se abre una `OT` sobre dicho activo, el sistema la enruta automáticamente al adjudicatario del suministro y **bloquea cualquier intento de imputación de costes de mano de obra o piezas** por averías cubiertas por la garantía legal/contractual.
+2. **Auditoría Automática de Acuerdos de Nivel de Servicio (`SLAs` — *Service Level Agreements*) y Cálculo de Penalizaciones:**
+   En los contratos de mantenimiento integral o externo (regidos por la `Ley 9/2017 LCSP`), los Pliegos de Prescripciones Técnicas definen umbrales estrictos de nivel de servicio que el `XMAO` monitoriza de forma objetiva e inapelable a partir de los sellos temporales de las OTs:
+   - **SLA de Tiempo Máximo de Respuesta ($\text{TR}_{\max}$):** Por ejemplo, $\le 30\text{ minutos}$ en equipos críticos de soporte vital/quirófano y $\le 4\text{ horas}$ en equipamiento general.
+   - **SLA de Tiempo Máximo de Resolución / Parada ($\text{TRes}_{\max}$):** Por ejemplo, $\le 24\text{ horas}$ sin equipo de sustitución o $\le 48\text{–}72\text{ horas}$ con préstamo de equipo de *backup* equivalente.
+   - **SLA de Disponibilidad Anual o Trimestral Garantizada ($D_{\text{garantizada}}$):** Típicamente **$D \ge 96\%\text{ a }98\%$** en alta tecnología (`TC`, `RM`, `LINAC`, `Hemodinámica`).
+   - **SLA de Cumplimiento del Plan Preventivo ($\text{ICPP}$):** $\mathbf{100\%}$ de las revisiones preventivas y técnico-legales ejecutadas dentro del mes programado.
+   - Al cierre de cada período de facturación mensual o trimestral, el `XMAO` emite el **Informe de Liquidación de SLAs**, calculando automáticamente el porcentaje de deducción o penalización económica aplicable a la factura de la empresa mantenedora (por ejemplo, descuento de un $X\%$ del canon mensual por cada punto porcentual de caída de disponibilidad por debajo del $98\%$ o por cada día de retraso en el cierre de preventivos).
+
+### 3.4. Máquina de Estados de una Orden de Trabajo (OT) y Matriz de Prioridades SLA en el XMAO
+Para garantizar la integridad del flujo documental exigido por la norma **`UNE 209001 IN`**, ninguna Orden de Trabajo en el `XMAO` puede saltar arbitrariamente de estado sin superar las validaciones de rol y campos obligatorios definidas en la siguiente matriz de estados y niveles de prioridad:
+
+| Estado Secuencial de la OT en el `XMAO` | Actor Responsable en el Sistema | Condición de Transición / Regla de Negocio Bloqueante | Impacto en el Estado del Activo y Cronómetro `SLA` |
+| :--- | :--- | :--- | :--- |
+| **1. `SOLICITADA / ABIERTA` ($t_0$)** | Personal Clínico Usuario / Supervisión de Enfermería (o motor automático en Preventivas / `BMS`) | Selección obligatoria del código de activo o ubicación técnica, descripción del síntoma y nivel de urgencia clínica. | Cambia el activo a `Con Incidencia / Averiado` e **inicia el cómputo del Tiempo de Respuesta ($\text{TR}$)** y del **Tiempo de Resolución ($\text{TRes}$)**. |
+| **2. `ASIGNADA / EN CURSO` ($t_1 \rightarrow t_2$)** | Jefe de Taller / Despachador automático por matriz de contratos y garantías | Acuse de recibo por el técnico interno o por el ingeniero de campo (`FSE`) de la empresa adjudicataria en su terminal móvil. | **Detiene el reloj de Tiempo de Respuesta ($\text{TR} = t_1 - t_0$)** y verifica si cumple el umbral contractual ($\le 30\text{ min}$ en Críticos / $\le 4\text{ h}$ en General). |
+| **3. `PENDIENTE DE PIEZA / EXTERNO`** | Técnico de Electromedicina / Empresa Mantenedora | Registro de la solicitud de repuesto al módulo de Almacén/`LOGAS` o envío a laboratorio externo. | El reloj de **indisponibilidad clínica del activo sigue corriendo** hasta su restitución (salvo instalación de equipo de préstamo *backup* validado en el `XMAO`). |
+| **4. `REALIZADA TÉCNICAMENTE` ($t_3$)** | Técnico Ejecutor (interno o externo) | **Regla bloqueante:** Exige codificar causa del fallo, imputar horas/repuestos y **adjuntar valores aprobados del test `UNE-EN 62353`** con analizador cuya calibración esté vigente. | Cambia el activo a `Operativo / Disponible` y **detiene el reloj de Tiempo de Resolución ($\text{TRes} = t_3 - t_0$)**. |
+| **5. `CONFORMADA Y CERRADA` ($t_4$)** | Supervisión Clínica (conformidad) + Ingeniero Biomédico (cierre y visado) | Firma digital de conformidad del servicio usuario (y de **Radiofísica `SPR`** si el equipo emite radiaciones ionizantes). | Consolida los costes en el histórico del activo (`ICVR`), actualiza contadores (`MTBF`/`MTTR`) y archiva el parte en el Libro Histórico inmutable. |
+
+---
+
+## 🛡️ 4. Movilidad, Identificación Automática (QR/RFID/RTLS), Cuadro de Mando BI e Interoperabilidad
+
+### 4.1. Tecnologías de Identificación Automática (AIDC) y Localización en Tiempo Real (RTLS) Integradas con el XMAO
+Uno de los mayores problemas operativos en los grandes hospitales (documentado en el **`Módulo 1593.f`** del currículo oficial) es el tiempo perdido por los técnicos buscando equipos móviles o portátiles (bombas de infusión, monitores de traslado, electrocardiógrafos, desfibriladores, ecógrafos portátiles) que cambian constantemente de planta o quedan almacenados en lencerías y cuartos clínicos, generando OTs preventivas cerradas como **«Equipo no localizado / No disponible»**. Para erradicarlo, el `XMAO` integra tres niveles tecnológicos:
+1. **Etiquetado Óptico 2D (`QR` y `GS1 DataMatrix`):** Etiquetas de poliéster metalizado de alta resistencia química adheridas al chasis; su escaneo con la cámara de la tablet del técnico abre instantáneamente en el `XMAO` la ficha del activo, su historial de averías, su manual de servicio en PDF y la OT pendiente.
+2. **Identificación por Radiofrecuencia (`RFID` Pasiva `UHF` / `NFC`):** Permite realizar auditorías rápidas de inventario pasando un lector de mano por la puerta de un almacén o box de UCI y leyendo simultáneamente a varios metros de distancia todos los activos presentes sin necesidad de línea de visión directa.
+3. **Sistemas de Localización en Tiempo Real (`RTLS` — *Real-Time Location Systems*):** Mediante balizas activas **`BLE` (*Bluetooth Low Energy*)**, **`Wi-Fi`** o **`UWB` (*Ultra-Wideband*)** adosadas a los equipos móviles que triangulan su posición con la red de antenas hospitalarias, el `XMAO` muestra sobre el plano `CAD/BIM` de la planta la **coordenada exacta (Edificio, Planta y Sala) donde se encuentra el equipo en tiempo real**, reduciendo a cero el porcentaje de preventivos fallidos por no localización y permitiendo bloquear alarmas en los arcos de salida del hospital ante intentos de hurto o extravío.
+
+### 4.2. Cuadro de Mando Analítico (Business Intelligence) y Matriz de Interoperabilidad del XMAO
+La siguiente tabla resume los principales **Indicadores Clave de Rendimiento (`KPIs`)** calculados por el módulo analítico del `XMAO` y las interfaces de interoperabilidad con el ecosistema digital hospitalario:
+
+| Dimensión del `XMAO` | Indicador (`KPI`) / Interfaz de Integración | Fórmula Matemática / Protocolo Estándar de Comunicación | Umbral Objetivo en Ingeniería Biomédica A1 |
+| :--- | :--- | :--- | :--- |
+| **KPI de Planificación Preventiva** | **Índice de Cumplimiento del Plan Preventivo (`ICPP`)** | $$\text{ICPP} = \frac{\text{N.º OTs Preventivas cerradas en plazo}}{\text{N.º OTs Preventivas programadas en el período}} \times 100\%$$ | **$\ge 95\%\text{ General}$**<br>**$100\%\text{ en Soporte Vital y Técnico-Legal}$** |
+| **KPI de Equilibrio de Mantenimiento** | **Ratio Preventivo / Correctivo (`RPC`)** | $$\text{RPC} = \frac{\text{Horas dedicadas a Mantenimiento Preventivo}}{\text{Horas totales (Preventivo + Correctivo)}} \times 100\%$$ | **$60\%\text{–}70\%\text{ Preventivo}$** frente a $30\%\text{–}40\%$ Correctivo. |
+| **KPI de Presión Asistencial Taller** | **Carga Pendiente (*Backlog* de OTs)** | $$\text{Backlog (semanas)} = \frac{\sum \text{Horas estimadas de OTs pendientes}}{\text{Capacidad semanal en Horas-Hombre del taller}}$$ | **$\le 2\text{ semanas}$** en general ($\mathbf{0\text{ h}}$ en críticos sin *backup*). |
+| **KPI Financiero de Sostenibilidad** | **Índice de Coste de Mantenimiento sobre Valor de Reposición (`ICVR`)** | $$\text{ICVR} = \frac{\text{Coste total anual de mantenimiento del activo}}{\text{Valor de reposición a nuevo (CAPEX)}} \times 100\%$$ | Óptimo: **$4\%\text{ a }8\%$ anual**.<br>Alerta de baja/renovación: **$> 15\%\text{–}20\%$**. |
+| **KPI de Formación Clínica** | **Tasa de Averías Inducidas por Usuario / Mal Uso (`TAMU`)** | $$\text{TAMU} = \frac{\text{OTs Correctivas con causa «Fallo de operador / Rotura accidental»}}{\text{Total de OTs Correctivas cerradas}} \times 100\%$$ | Si **$> 15\%$** en un servicio $\rightarrow$ activar plan de formación específica a enfermería/clínicos. |
+| **Integración con ERP y Logística** | **Interfaz `XMAO` $\leftrightarrow$ `LOGAS` / Contabilidad** | Servicios Web `SOAP / REST` y ficheros estructurados `XML` | Sincronización de altas patrimoniales, pedidos de repuestos, albaranes y facturas conformadas. |
+| **Integración con Analizadores de Taller** | **Interfaz `XMAO` $\leftrightarrow$ Analizadores `UNE-EN 62353`** | Importación directa vía `USB / Bluetooth / API JSON-XML` desde equipos *Fluke / Rigel / Bender* | Volcado automático de curvas y valores eléctricos a la OT sin transcripción manual. |
+| **Integración con Instalaciones (`BMS`)** | **Interfaz `XMAO` $\leftrightarrow$ `BMS / SCADA` de Telegestión** | Protocolos **`BACnet/IP`**, **`Modbus TCP/IP`**, **`OPC-UA`** y **`SNMP`** | Generación automática de `OT-COR` urgente ante alarma de aislamiento `ITC-BT-38` ($< 50\text{ k}\Omega$), caída de presión en quirófano o alarma de gases/frío. |
+| **Integración con Imagen y Clínica** | **Interfaz `XMAO` $\leftrightarrow$ `IANUS` / `RIS-PACS`** | Mensajería **`HL7` / `FHIR`** y contadores **`DICOM MPPS`** | Bloqueo automático de agenda de citación en `RIS` cuando un TC/RM entra en parada en `XMAO`, y lectura de contadores de estudios realizados. |
+
+---
+
+## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+
+### 5.1. Arquitectura Corporativa del XMAO en las 7 Áreas Sanitarias del SERGAS
+En el **Servicio Gallego de Salud (`SERGAS`)**, el sistema **`XMAO`** constituye la plataforma corporativa unificada de gestión de activos e ingeniería hospitalaria desplegada por la Subdirección General de Sistemas y Tecnologías de la Información en coordinación con la Dirección General de Recursos Económicos y las Direcciones de Recursos Económicos / Subdirecciones de Ingeniería y Mantenimiento de las **7 Áreas Sanitarias gallegas** (`A Coruña-Cee`, `Santiago-Barbanza`, `Ferrol`, `Lugo-A Mariña-Monforte`, `Ourense-Verín-O Barco`, `Pontevedra-O Salnés` y `Vigo`):
+1. **Instancia Única Multi-Área y Multi-Disciplina:** A diferencia de otros servicios de salud fragmentados donde cada hospital utiliza un software distinto, el `XMAO` del SERGAS opera bajo un **catálogo normalizado común para toda Galicia**, gestionando en una misma plataforma corporativa dos grandes ramas técnicas con flujos de trabajo diferenciados:
+   - **Rama de Ingeniería Biomédica y Electromedicina:** Gestiona la totalidad de los equipos médicos de diagnóstico, terapia, soporte vital, laboratorio y esterilización tanto de los **14 complejos hospitalarios/hospitales comarcales** como de los **más de 450 centros de salud y puntos de atención continuada (`PAC`)** de Atención Primaria.
+   - **Rama de Ingeniería de Instalaciones Generales e Infraestructuras:** Gestiona las centrales térmicas, grupos electrógenos, cuadros eléctricos de quirófanos (`ITC-BT-38`), climatización y salas de ambiente controlado (`UNE 100713` / `UNE 171340`), redes de gases medicinales (`ISO 7396-1`), transporte vertical y obra civil.
+2. **Circuito Operativo Diario en los Hospitales del SERGAS:**
+   - Cualquier profesional del SERGAS autenticado con su usuario corporativo abre un parte de incidencia desde el icono de acceso directo al **`XMAO`** en los ordenadores clínicos de planta o consulta.
+   - El sistema identifica el servicio peticionario, permite seleccionar el equipo del listado de activos asignados a ese local (o escanear su etiqueta) y clasifica la prioridad clínica.
+   - El motor del `XMAO` despacha instantáneamente la orden a los terminales móviles de la **Unidad de Electromedicina del hospital** o de la **empresa de asistencia técnica adjudicataria**, iniciando el cronómetro de control de `SLAs`.
+
+### 5.2. Gobernanza del Dato en el XMAO del SERGAS: Acuerdos de Gestión, Seguridad del Paciente y Auditorías CSN/AEMPS
+El `XMAO` del SERGAS trasciende la mera gestión de taller para convertirse en un instrumento estratégico de gobierno clínico y económico:
+- **Evaluación de los Acuerdos de Gestión Anuales:** Los indicadores de cumplimiento del plan preventivo (`ICPP`), tiempos medios de respuesta en áreas críticas (`UCI`, `Bloque Quirúrgico`, `Urgencias`, `Obstetricia`) y disponibilidad de alta tecnología extraídos directamente del `XMAO` forman parte de los objetivos anuales de los Acuerdos de Gestión suscritos entre los Servicios Centrales del SERGAS y las Gerencias de las 7 Áreas Sanitarias.
+- **Soporte a Inspecciones Reglamentarias (`CSN`, `AEMPS` y `OCA`):** Ante cualquier inspección del **Consejo de Seguridad Nuclear (`CSN`)** sobre instalaciones radiactivas o de radiodiagnóstico, de la **AEMPS** o de un **Organismo de Control Autorizado (`OCA`)**, el Ingeniero Biomédico extrae en segundos del `XMAO` el **Libro Histórico del Equipo**, que compila desde el acta de recepción inicial todas las OTs preventivas, correctivas y de control de calidad con sus certificados firmados y los informes de los analizadores calibrados adjuntos en formato electrónico.
+
+---
+
+## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
+
+### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+
+| Concepto / Módulo / Indicador del `XMAO` | Norma / Referencia Técnica | Cifra / Fórmula / Regla Exacta de Examen | Función Crítica en Ingeniería Biomédica del SERGAS |
+| :--- | :--- | :--- | :--- |
+| **Estándar de Gestión de Activos y Datos de Mantenimiento** | `UNE-EN ISO 55001` y `UNE-EN ISO 14224` | Árbol jerárquico de ubicaciones técnicas (**6 niveles**) + relación **Padre-Hijo** | Separa la Ubicación Funcional fija del Activo Físico móvil, conservando el historial al trasladar el equipo. |
+| **Guía nacional de gestión y registro en Electromedicina** | `UNE 209001 IN` | Trazabilidad obligatoria de todas las fases y OTs en el `XMAO` | Exige registrar en el `XMAO` recepción, inventario, preventivos, correctivos, seguridad eléctrica y baja. |
+| **Sello temporal: Tiempo de Respuesta (`TR`)** | Módulo de OTs / `SLA` | $$\text{TR} = t_1\text{ (Atención)} - t_0\text{ (Aviso)}$$ | Mide la rapidez de reacción inicial del servicio técnico ($\le 15\text{–}30\text{ min}$ en soporte vital/quirófano). |
+| **Sello temporal: Tiempo de Resolución / Parada (`TRes`)** | Módulo de OTs / `SLA` | $$\text{TRes} = t_3\text{ (Disponible + Test 62353)} - t_0\text{ (Aviso)}$$ | Mide el tiempo total de indisponibilidad clínica del activo desde la apertura del aviso. |
+| **Índice de Cumplimiento del Plan Preventivo (`ICPP`)** | Cuadro de Mando `XMAO` | $$\text{ICPP} = \frac{\text{OTs Prev. cerradas en plazo}}{\text{OTs Prev. programadas}} \times 100\%$$ | Objetivo general **$\ge 95\%$** y **$100\%$ en equipos de soporte vital y técnico-legales**. |
+| **Índice de Coste de Mantenimiento sobre Valor de Reposición (`ICVR`)** | Cuadro de Mando Financiero | $$\text{ICVR} = \frac{\text{Gasto anual mant.}}{\text{Valor de reposición}} \times 100\%$$ | Rango óptimo **$4\%\text{–}8\%$**. Si supera el **$15\%\text{–}20\%$**, el `XMAO` marca alerta de obsolescencia económica. |
+| **Fórmula del Punto de Pedido en almacén técnico ($PP$)** | Módulo de Almacén (`Módulo 1594.c`) | $$PP = (D_d \times L) + SS$$ | Lanza pedido automático de repuestos al alcanzar la demanda durante el plazo de entrega ($L$) más el stock de seguridad ($SS$). |
+| **Criterio de rotación de repuestos con caducidad** | Módulo de Almacén `XMAO` | **`FEFO`** (*First-Expired, First-Out*) | Obligatorio para células de $\text{O}_2$, baterías de desfibriladores/monitores, electrodos y fungibles estériles. |
+| **Criterio de valoración contable de repuestos** | Módulo de Almacén `XMAO` / `LOGAS` | **`PMP`** (*Precio Medio Ponderado*) | Recalcula automáticamente el valor unitario del stock tras cada entrada de albarán a distinto precio. |
+| **Integración con telegestión de instalaciones (`BMS/SCADA`)** | Interoperabilidad Industrial | Protocolos **`BACnet/IP`**, **`Modbus TCP`**, **`OPC-UA`** | Convierte una alarma técnica crítica (ej. fallo de aislamiento `ITC-BT-38` $< 50\text{ k}\Omega$) en una `OT-COR` automática en el `XMAO`. |
+
+### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+1. **Trampa de la Ubicación Técnica vs. Activo Físico (`ISO 14224`):** En las preguntas sobre el modelo de datos del `XMAO`, recuerda que **jamás se debe dar de baja y crear un código de inventario nuevo cuando un equipo cambia de servicio o de hospital dentro del SERGAS**. El código único de activo acompaña al equipo desde su recepción hasta su achatarramiento `RAEE`; lo único que se actualiza mediante un movimiento en el `XMAO` es el código de la **Ubicación Técnica** a la que está asociado, garantizando así que la contabilidad analítica impute los nuevos mantenimientos al nuevo Centro de Coste (`GFH`) sin perder el historial técnico acumulado del equipo.
+2. **Trampa de laDiferencia entre Tiempo de Respuesta (`TR`), Tiempo de Reparación (`MTTR`) y Tiempo de Resolución (`TRes`):** En los supuestos prácticos de cálculo de penalizaciones por incumplimiento de `SLA` en el `XMAO`, distingue con precisión los sellos temporales: si se abre un aviso de avería en un TC a las $09:00\text{ h}$ ($t_0$), el técnico llega a las $10:00\text{ h}$ ($t_1$), espera hasta las $14:00\text{ h}$ ($t_2$) a que llegue un repuesto por mensajería urgente, termina la reparación y el ensayo eléctrico a las $16:00\text{ h}$ ($t_3$) y el jefe de servicio firma el parte a las $17:00\text{ h}$ ($t_4$), entonces: el **Tiempo de Respuesta** es $t_1 - t_0 = \mathbf{1\text{ hora}}$; el **Tiempo Activo de Intervención** es $t_3 - t_2 = \mathbf{2\text{ horas}}$; y el **Tiempo Total de Resolución / Parada del equipo** es $t_3 - t_0 = \mathbf{7\text{ horas}}$ (el tramo administrativo $t_4 - t_3$ no computa como indisponibilidad técnica si el equipo ya quedó operativo y entregado en $t_3$).
+3. **Trampa del Cierre de OTs Preventivas sin Instrumentación Calibrada:** Un sistema `XMAO` configurado conforme a la `UNE 209001 IN` y `ISO 9001`/`13485` debe **impedir técnicamente el cierre de una OT preventiva o correctiva** si el técnico no vincula el código del equipo de medida (analizador de seguridad eléctrica o simulador) utilizado o si dicho instrumento figura en la base de datos metrológica del propio `XMAO` con su **certificado de calibración vencido**.
+4. **Trampa de las Averías por Mal Uso (`TAMU`) y su Explotación en el `XMAO`:** La codificación tipificada del fallo al cerrar cada `OT-COR` en el `XMAO` no tiene una finalidad punitiva, sino de **seguridad del paciente y gestión económica**: permite detectar qué servicios clínicos concentran roturas accidentales de sondas de ecografía, cables de paciente o cañas de endoscopia para programar sesiones focalizadas de **formación de uso y mantenimiento conductivo**, y permite excluir de los contratos a todo riesgo aquellas roturas por negligencia o maltrato físico si así lo estipula el pliego.

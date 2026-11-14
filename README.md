@@ -11,8 +11,8 @@ Repositorio completo y verificado para la preparación de la oposición de **Ing
 
 | Carpeta / Archivo | Contenido |
 | :--- | :--- |
-| 🌐 **[`index.html`](https://bigsasi.github.io/opos-biomedica-sergas/)** | **Portal Web Interactivo**: Lector de los 10 bloques, visor desplegable de los 82 temas, 5 exámenes interactivos (133 preguntas + 12 supuestos), flashcards, calculadora de baremo y normativa. |
-| 📚 **[`04_temario_82_temas_individuales/`](./04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md)** | **Los 82 Temas Desglosados Uno por Uno**: Un archivo Markdown individual para cada tema (`Comun_Tema_01..08.md` y `Especifico_Tema_01..74.md`) con su desarrollo completo y cruce SERGAS. |
+| 🌐 **[`index.html`](https://bigsasi.github.io/opos-biomedica-sergas/)** | **Portal Web Interactivo**: **Lector Monográfico Oficial de los 82 Temas del DOG (vista protagonista por defecto)**, síntesis por 10 bloques, 5 exámenes interactivos (133 preguntas + 12 supuestos), flashcards, calculadora de baremo y biblioteca de normativa. |
+| 📚 **[`04_temario_82_temas_individuales/`](./04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md)** | **Los 82 Temas con Desarrollo Monográfico A1 Uno por Uno**: Un archivo Markdown individual para cada tema (`Comun_Tema_01..08.md` y `Especifico_Tema_01..74.md`) con **estructura homogénea de 7 secciones canónicas (`0..6`), mínimo 180 líneas y más de 2.000 palabras por tema** (565.785 palabras y 17.805 líneas en total). |
 | 💎 **[`02_apuntes_nucleo_diamante/`](./02_apuntes_nucleo_diamante/)** | **Los 10 Bloques Temáticos Desarrollados**: Síntesis intensiva agrupada por áreas tecnológicas y normativas. |
 | 📝 **[`03_examenes_y_simulacros/`](./03_examenes_y_simulacros/)** | **5 Exámenes y Simulacros Oficiales Comentados** (133 preguntas tipo test + 12 supuestos prácticos hospitalarios, incluyendo preguntas oficiales de IB-SALUT, GVA, Osakidetza y SAS). |
 | ⚖️ **[`01_normativa_oficial/`](./01_normativa_oficial/)** | **26 Textos Legales Consolidados** (BOE, DOUE y DOG) en PDF y HTML. |
@@ -38,9 +38,9 @@ Puedes realizarlos de forma interactiva con corrección automática en **[el Por
 
 👉 **[Ver Índice Completo de los 82 Temas Individuales (`00_INDICE_82_TEMAS.md`)](./04_temario_82_temas_individuales/00_INDICE_82_TEMAS.md)**
 
-Cada uno de los **82 temas oficiales** cuenta con su propio archivo `.md` individual con su desarrollo técnico completo:
+Cada uno de los **82 temas oficiales** cuenta con su propio archivo `.md` individual con **desarrollo monográfico completo de nivel Subgrupo A1** (7 secciones canónicas `0..6`, mínimo 180 líneas y más de 2.000 palabras por monografía, con al menos 2 tablas técnicas y referencias normativas BOE/DOUE/DOG y sistemas SERGAS):
 - **Parte Común (Temas 1 al 8):** [`Comun_Tema_01.md`](./04_temario_82_temas_individuales/Comun_Tema_01.md) a [`Comun_Tema_08.md`](./04_temario_82_temas_individuales/Comun_Tema_08.md)
-- **Parte Específica (Temas 1 al 74):** [`Especifico_Tema_01.md`](./04_temario_82_temas_individuales/Especifico_Tema_01.md) a [`Especifico_Tema_74.md`](./04_temario_82_temas_individuales/Especifico_Tema_74.md)
+- **Parte Específica (Temas 1 al 74, incluyendo `48-bis` y nota de omisión del n.º 46 en DOG):** [`Especifico_Tema_01.md`](./04_temario_82_temas_individuales/Especifico_Tema_01.md) a [`Especifico_Tema_74.md`](./04_temario_82_temas_individuales/Especifico_Tema_74.md)
 
 ---
 

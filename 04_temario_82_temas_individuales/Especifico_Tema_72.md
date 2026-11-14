@@ -1,106 +1,215 @@
-# Esp. Tema 72 — Gestión del mantenimiento y planes de mantenimiento en el ámbito biomédico.
+# Tema 72 — Gestión del mantenimiento y planes de mantenimiento en el ámbito biomédico.
 
-> **Parte del Programa:** Parte Específica  
-> **Prioridad Estratégica:** Fase 1: Núcleo Diamante (💎 Núcleo Diamante)  
-> **Bloque de Estudio Completo:** [`Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md`](../02_apuntes_nucleo_diamante/Bloque_09_Mantenimiento_XMAO_Base_Instalada_UNE209001_FENIN_COCIR_y_LCSP.md)
-
-## 🎯 Cruce con Otras Oposiciones del SERGAS
-
-- **Categorías con solapamiento:** **Ingeniero/a Técnico/a** |  | **TS Imagen para el Diagnóstico** |  | **TS Radioterapia**
-- **Grado de solapamiento:** **Total (95%)**: Cubre concepto y tipos de mantenimiento, planes de mantenimiento integral y organización del mantenimiento en una unidad de electromedicina (UNE 209001 IN).<br><br>**Medio (60%)**: Incluye control de calidad del equipamiento y programa de mantenimiento.<br><br>**Medio (60%)**: Incluye control de calidad de la equipación y programa de mantenimiento.
-- **Epígrafes equivalentes:**
-  • Tema 67. El mantenimiento. Concepto. Tipos de mantenimiento.
-  • Tema 70. Planes de mantenimiento integral. Gestión y contratación de servicios técnicos.
-  • Tema 74. Organización de una unidad de electromedicina: UNE 209001 IN.
-  
-  • Tema 4. Programa de garantía de calidad en el servicio de radiología y medicina nuclear. Control de calidad en aspectos clínicos. Control de calidad del equipamiento. Programa de mantenimiento.
-  
-  • Tema 5. Criterios de calidad en radioterapia. Control de calidad de los instrumentos de medida. Control de calidad en aspectos clínicos. Control de calidad de la equipación. Programa de mantenimiento.
+> - **Parte del Programa:** Parte Específica (74 Temas · Orden DOG #72 de 74) — Ejercicio 1.º Eliminatorio
+> - **Bloque Temático SERGAS:** Bloque 09 — Gestión del Mantenimiento Biomédico (UNE 209001 IN), XMAO, Base Instalada, FENIN/COCIR y LCSP
+> - **Marco Normativo y Técnico Nuclear:** Norma `UNE 209001 IN` (*Guía para la gestión y el mantenimiento de PSANI*); Norma `UNE-EN 13306:2018` (*Terminología del mantenimiento*); Norma `UNE-EN 62353:2015` (*Ensayos recurrentes y ensayos después de la reparación del equipo electromédico*); Serie `UNE-EN 60601-1`; `RD 192/2023`; `Circular 3/2012 de la AEMPS` (Asistencia técnica de productos sanitarios); `UNE-EN ISO/IEC 17025` (Calibración `ENAC`); Currículo BOE `RD 838/2015` y `Orden EFP/1216/2019` (Módulo 1594, bloques a, b y e; Módulo 1592, bloque c).
+> - **Sistemas y Entorno SERGAS:** Unidades y Servicios de Ingeniería Biomédica y Electromedicina de las 7 Áreas Sanitarias del SERGAS, Talleres de Electromedicina y Laboratorios de Metrología Biomédica, Servicios de Radiofísica y Protección Radiológica (`SPR`) y coordinación con Servicios de Asistencia Técnica (`SAT`) de fabricantes (`OEM`) y empresas multimarca.
 
 ---
 
-## 📖 Desarrollo Técnico y Normativo del Tema
+## 🎯 0. Alcance Oficial del Epígrafe y Cruce con Otras Oposiciones del SERGAS
 
-### 1. Tema 71, Tema 72 y Tema 73: Gestión del Mantenimiento Biomédico, Base Instalada, Ciclo de Vida y Norma `UNE 209001 IN`
+### 0.1. Desglose del Epígrafe Oficial (DOG núm. 67, de 13 de abril de 2026)
+El **Tema 72** de la Parte Específica constituye el núcleo de la ingeniería de mantenimiento hospitalario y la seguridad electromédica. Su desarrollo monográfico A1 abarca cinco pilares técnicos fundamentales:
+1. **Fundamentos normativos y taxonomía de estrategias de mantenimiento biomédico:** Aplicación conjunta de las normas **`UNE-EN 13306`**, **`UNE 209001 IN`**, el **`RD 192/2023`** y la **`Circular 3/2012 de la AEMPS`**, diferenciando el mantenimiento conductivo, preventivo sistemático, técnico-legal reglamentario, correctivo, predictivo basado en la condición (`CBM` y tele-mantenimiento), Mantenimiento Centrado en la Fiabilidad (`RCM`) y Mantenimiento Productivo Total (`TPM`).
+2. **Diseño y dimensionamiento de Planes de Mantenimiento en el ámbito biomédico:** Metodología de cálculo de cargas de trabajo anuales en Horas-Hombre ($HH$), dimensionamiento de plantilla técnica, nivelación de calendarios (*smoothing*), coordinación de paradas clínicas y modelos organizativos de asistencia técnica (*In-House*, `OEM`, *Multivendor* e Híbrido/Mixto).
+3. **Ingeniería de Fiabilidad, Mantenibilidad y Disponibilidad (`RAMS`):** La curva de la bañera, la distribución de Weibull, la ley exponencial de fiabilidad $R(t) = e^{-\lambda t}$ y el cálculo matemático riguroso de **`MTBF`**, **`MTTF`**, **`MTTR`**, **Disponibilidad Intrínseca ($D_{\text{intrínseca}}$)** y **Disponibilidad Operativa ($D_{\text{operativa}}$)**.
+4. **Protocolos de Seguridad Eléctrica y Verificación Funcional (`UNE-EN 62353` vs. `UNE-EN 60601-1`):** Justificación técnica de la norma `UNE-EN 62353`, circuitos de medida (directo, diferencial y alternativo), límites exactos de resistencia de tierra de protección ($\Omega$), aislamiento ($\text{M}\Omega$) y corrientes de fuga ($\mu\text{A}$) para equipos Clase I / Clase II y partes aplicables Tipo B, BF y CF, junto con la trazabilidad metrológica `ENAC` (`ISO 17025`).
 
-> **¡EL BLOQUE MÁS IMPORTANTE PARA LOS SUPUESTOS PRÁCTICOS!**
-> El documento de referencia nacional para los servicios de Ingeniería Biomédica y Electromedicina en España es el informe/norma **`UNE 209001 IN` (*Guía para la gestión y el mantenimiento de productos sanitarios activos no implantables — PSANI*)**, complementado por la norma **`UNE-EN 62353` (*Equipos electromédicos. Ensayos recurrentes y ensayos después de la reparación del equipo electromédico*)** y la Circular de la **AEMPS** sobre asistencia técnica de productos sanitarios.
-
-### 1.1. Ciclo de Vida Completo de un Equipo Biomédico en el Hospital (`UNE 209001 IN` — Tema 73)
-El ciclo de vida de cualquier activo biomédico en la **Base Instalada** del SERGAS consta de **7 fases obligatorias**:
-1. **Fase 1 — Planificación y Detección de Necesidad:** Evaluación técnica/clínica, estudio de viabilidad e inclusión en el Plan de Inversiones (Tema 61).
-2. **Fase 2 — Adquisición / Contratación (`LCSP`):** Redacción del **Pliego de Prescripciones Técnicas (PPT)** definiendo requisitos clínicos, de integración `DICOM`/`HL7`, ciberseguridad, suministro de manuales de servicio/claves de mantenimiento, formación técnica y condiciones de garantía.
-3. **Fase 3 — Recepción, Instalación y Pruebas de Aceptación (*Acceptance Testing* — ¡Pregunta fija de examen!):**
-   - **Ningún equipo biomédico nuevo, en demostración, cesión o depósito puede entrar en uso clínico con pacientes sin haber superado antes la Recepción y Prueba de Aceptación** por la Unidad de Ingeniería Biomédica / Electromedicina (y por Radiofísica / SPR si emite radiaciones ionizantes).
-   - **¿Qué se hace en la Recepción y Aceptación (`UNE 209001 IN`)?**
-     1. Comprobación administrativa del albarán frente al pedido, **Marcado CE**, Declaración UE de Conformidad, manual de usuario y manual técnico en español.
-     2. **Alta en el Inventario de la Base Instalada en el `XMAO`** y colocación de la **Etiqueta de Identificación Única (Código de Activo / Código de Barras / QR)** en lugar visible del equipo.
-     3. **Inspección visual y ensayo de Seguridad Eléctrica inicial (`UNE-EN 62353`)** + verificación funcional con simuladores/analizadores de parámetros para establecer el **Estado de Referencia Inicial**.
-     4. **Acta de Recepción Formal y Formación inicial** al personal clínico usuario y al personal técnico.
-4. **Fase 4 — Uso Clínico y Formación Continua:** Operación segura conforme a la finalidad prevista del fabricante.
-5. **Fase 5 — Mantenimiento (Preventivo, Técnico-Legal, Conductivo, Correctivo y Predictivo) y Control de Calidad:** Registrado íntegramente en el **`XMAO`**.
-6. **Fase 6 — Vigilancia de Productos Sanitarios:** Gestión de notas de seguridad de la AEMPS, alertas y **Acciones Correctivas de Seguridad en Campo (`FSCA`)** / actualizaciones (*upgrades*).
-7. **Fase 7 — Baja de Inventario, Desinstalación y Gestión Ambiental (`RAEE`):**
-   - Causas de baja: obsolescencia técnica o clínica, pérdida de soporte de repuestos por el fabricante (*End-of-Support* / *End-of-Life*), avería antieconómica o inseguridad.
-   - **Protocolo obligatorio de Baja (`UNE 209001 IN`):** **1) Descontaminación/desinfección biológica**, **2) Borrado seguro de todos los datos personales de pacientes almacenados en la memoria/disco duro del equipo (cumplimiento RGPD/LOPDGDD)**, **3) Retirada de fuentes radiactivas si las hubiera**, **4) Certificado de Baja en el `XMAO`** y **5) Entrega a gestor autorizado de residuos `RAEE`**.
-
-### 1.2. Gestión de la Base Instalada e Inventario: El Índice de Fennigkoh y Smith (Priorización Basada en el Riesgo — Tema 72 y 73)
-Para gestionar miles de equipos biomédicos y decidir la periodicidad de mantenimiento preventivo e inclusión en el plan de calidad, se aplica el modelo clásico de **Fennigkoh y Smith (recomendado por la OMS y ECRI)**, que calcula el **Número de Gestión del Equipo (`EM` — *Equipment Management Number*)** sumando 3 factores:
-$$\text{EM} = \text{Función del Equipo (1 a 10)} + \text{Riesgo Físico / Aplicación Clínica (1 a 5)} + \text{Requisitos de Mantenimiento (1 a 5)}$$
-1. **Función ($F$, de $1\text{ a }10$):**
-   - **Terapéuticos:** Soporte vital (**$10$**: respirador, anestesia, desfibrilador, hemodiálisis, incubadora); Quirúrgicos y cuidados intensivos (**$9$**: electrobisturí, láser); Terapia física y tratamiento (**$8$**).
-   - **Diagnósticos:** Monitorización quirúrgica y de UCI (**$7$**);Otros equipos de monitorización fisiológica y diagnóstico (**$6$**).
-   - **Analíticos:** Analizadores de laboratorio (**$5$**); Accesorios de laboratorio (**$4$**); Ordenadores y relacionados (**$3$**).
-   - **Otros:** Relacionados con el paciente (**$2$**: camas eléctricas, grúas); No relacionados con paciente (**$1$**).
-2. **Riesgo Físico asociado al fallo ($R$, de $1\text{ a }5$):**
-   - **$5$:** Posible **muerte del paciente**.
-   - **$4$:** Posible **lesión grave** del paciente o del operador.
-   - **$3$:** Terapia inapropiada o **diagnóstico erróneo**.
-   - **$2$:** Daño al equipo o pérdida de datos sin riesgo directo grave.
-   - **$1$:** Sin riesgo significativo identificado.
-3. **Requisitos de Mantenimiento ($M$, de $1\text{ a }5$):**
-   - **$5$:** Extensivo / Muy alto (equipos neumáticos, mecánicos o de fluidos que requieren calibración frecuente: respiradores, máquinas de anestesia, hemodiálisis).
-   - **$4$:** Superior a la media.
-   - **$3$:** Medio (equipos electrónicos con pruebas de funcionamiento).
-   - **$2$:** Inferior a la media.
-   - **$1$:** Mínimo (inspección visual básica).
-- **Criterio de inclusión:** Los equipos con **$\text{EM} \ge 12$** se consideran **Críticos / Prioritarios** y deben tener mantenimiento preventivo programado estricto (semestral o anual); los equipos de soporte vital ($F=10$ o $R=5$) tienen prioridad absoluta en tiempos de respuesta ante averías.
-
-### 1.3. Tipos de Mantenimiento e Indicadores Clave de Gestión (`KPIs`: `MTBF`, `MTTR`, Disponibilidad — Tema 71 y 72)
-
-1. **Tipos de Mantenimiento (`UNE-EN 13306` y `UNE 209001 IN`):**
-   - **Mantenimiento Conductivo (De Uso / Primer Nivel):** Realizado a diario por el propio usuario o técnico de guardia (limpieza externa, test diario de autochequeo de máquina de anestesia o desfibrilador, test de Bowie-Dick en autoclave).
-   - **Mantenimiento Preventivo (Sistemático / Programado):** Intervenciones programadas a intervalos predeterminados (sustitución de kits de mantenimiento de horas/año: baterías, células de $\text{O}_2$, filtros, membranas, calibración con simuladores y test de seguridad eléctrica `UNE-EN 62353`) para reducir la probabilidad de fallo.
-   - **Mantenimiento Técnico-Legal (Reglamentario):** Obligatorio por normativa industrial o sanitaria (`RD 1085/2009` y `RD 1976/1999` en Rayos X, `ITC-BT-38` en quirófanos, `UNE 171340` en salas de ambiente controlado, reglamento de equipos a presión `REP RD 809/2021` en autoclaves de vapor).
-   - **Mantenimiento Correctivo (No programado / Averías):** Tras la detección de un fallo para devolver el equipo a su estado operativo, seguido obligatoriamente de **verificación funcional y ensayo de seguridad `UNE-EN 62353` antes de devolverlo a planta**.
-   - **Mantenimiento Predictivo (Basado en la Condición — CBM):** Monitorización continua o remota de variables físicas (corriente de filamento y arcos en tubos de TC, presión y nivel de helio en RM, vibraciones, temperatura) para intervenir justo antes de que se produzca la rotura.
-2. **Los 3 Indicadores Matemáticos de Fiabilidad, Mantenibilidad y Disponibilidad (¡Preguntas fijas de cálculo en test y supuestos!):**
-   - **1) `MTBF` (*Mean Time Between Failures* — Tiempo Medio Entre Fallos $\rightarrow$ mide la FIABILIDAD):**
-     $$\text{MTBF} = \frac{\text{Tiempo total operativo de funcionamiento (Horas de buen funcionamiento)}}{\text{Número de fallos (averías) en ese período}}$$
-   - **2) `MTTR` (*Mean Time To Repair* — Tiempo Medio de Reparación $\rightarrow$ mide la MANTENIBILIDAD):**
-     $$\text{MTTR} = \frac{\text{Tiempo total de parada por reparación correctiva (Horas de indisponibilidad por avería)}}{\text{Número de fallos (averías) reparados}}$$
-   - **3) Disponibilidad Operativa Intrínseca ($D$ o *Uptime* $\rightarrow$ objetivo en Alta Tecnología y Críticos $\ge \mathbf{95\text{–}98\%}$):**
-     $$D = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}} \times 100\%$$
-   - *(Ejemplo rápido de examen: Si un TC tiene un $\text{MTBF} = 490\text{ horas}$ y un $\text{MTTR} = 10\text{ horas}$, su Disponibilidad es $D = \frac{490}{490 + 10} = \frac{490}{500} = \mathbf{98\%}$).*
-
-### 1.4. Ensayos Eléctricos tras Reparación y Mantenimiento Preventivo (`UNE-EN 62353` vs. `UNE-EN 60601-1`)
-> **Pregunta frecuente de Electromedicina:** ¿Qué norma se usa para los ensayos periódicos de mantenimiento en el hospital y por qué no se usa directamente la `UNE-EN 60601-1`?
-> **Respuesta:** La `UNE-EN 60601-1` es la norma de **homologación y diseño en fábrica** (incluye ensayos destructivos de rigidez dieléctrica de alta tensión que deteriorarían el equipo si se repiten cada año). Para las **revisiones periódicas en el hospital y después de cada reparación** se aplica la norma **`UNE-EN 62353`**, que mide con un analizador de seguridad eléctrica:
-1. **Inspección visual** (integridad de chasis, cables de red, latiguillos y etiquetado).
-2. **Resistencia de la Tierra de Protección (en equipos Clase I eléctrica):** Con corriente de prueba $\ge 200\text{ mA}$: debe ser **$\le 0,3\text{ }\Omega$** para el equipo con cable de red desmontable o **$\le 0,2\text{ }\Omega$** solo el cable (y $\le 0,1\text{ }\Omega$ solo el chasis).
-3. **Resistencia de Aislamiento** (a $500\text{ V DC}$).
-4. **Corriente de Fuga del Equipo y Corriente de Fuga de la Parte Aplicable (Tipo B, BF y CF)** (por método directo, diferencial o alternativo).
-5. **Prueba Funcional** con simulador de paciente (simulador de ECG/SpO2/PNI, pulmón de prueba en respiradores, medidor de energía con carga de $50\text{ }\Omega$ en desfibriladores, analizador de electrobisturís).
-
-### 1.5. Tema 71: Sistema de Gestión de Mantenimiento Asistido por Ordenador (`XMAO` / `GMAO`)
-El **`XMAO`** del SERGAS es la herramienta informática central que estructura toda la actividad de Ingeniería Biomédica y Mantenimiento:
-- **Módulos funcionales del `XMAO`:**
-  1. **Módulo de Inventario Técnico y Árbol Jerárquico de Ubicaciones:** Ficha maestra de cada activo (código único de inventario, denominación estandarizada **GMDN / EMDN** [Nomenclatura Europea de Dispositivos Médicos], marca, modelo, número de serie, **UDI**, clase de riesgo MDR, criticidad Fennigkoh, Área Sanitaria / Hospital / Planta / Local, fecha de puesta en marcha, fin de garantía, valor de adquisición, proveedor y contrato asociado).
-  2. **Módulo de Gestión de Órdenes de Trabajo (OTs):**
-     - **OTs Correctivas (Avisos de avería):** Abiertas desde cualquier PC de planta (`IANUS`/Intranet) con registro de fecha/hora de aviso, fecha/hora de respuesta, fecha/hora de resolución, diagnóstico del fallo, repuestos consumidos y tiempo de parada.
-     - **OTs Preventivas, Técnico-Legales y de Control de Calidad:** Generadas automáticamente por calendario o por contador de horas de uso, con **gamas de mantenimiento y listas de chequeo (*checklists*) parametrizadas** según los manuales del fabricante y la `UNE 209001 IN`.
-  3. **Módulo de Gestión de Almacén de Repuestos y Fungibles Técnicos:** Control de stock mínimo/crítico de repuestos (baterías, sensores de flujo, células de $\text{O}_2$, brazaletes, cables de ECG).
-  4. **Módulo de Gestión de Contratos Externos y SLAs (*Service Level Agreements*):** Control del cumplimiento de los **Acuerdos de Nivel de Servicio (SLA)** de las empresas adjudicatarias (tiempo de respuesta presencial, tiempo máximo de resolución, porcentaje de disponibilidad anual garantizada $\ge 98\%$ y cálculo automático de penalizaciones contractuales).
-  5. **Módulo de Cuadro de Mando e Indicadores Técnicos y Económicos:** Cálculo automático de `MTBF`, `MTTR`, disponibilidad, cumplimiento del plan preventivo ($\% \text{ OTs preventivas realizadas / programadas}$) y **ratio de coste acumulado de mantenimiento sobre valor de reposición** para alimentar el Plan de Renovación Tecnológica.
+### 0.2. Cruce Verificado con Otras Categorías del SERGAS (`cruce_temarios_sergas.md`)
+- **Categorías equivalentes en el SERGAS:** **Ingeniero/a Técnico/a** | **TS Imagen para el Diagnóstico** | **TS Radioterapia**.
+- **Grado de solapamiento:**
+  - **Total (95%) con Ingeniero/a Técnico/a:** Cubre íntegramente el concepto y tipos de mantenimiento, los planes de mantenimiento integral y la organización técnica de una unidad de electromedicina bajo la norma `UNE 209001 IN`.
+  - **Medio (60%) con TS Imagen para el Diagnóstico y TS Radioterapia:** Incluye los programas de garantía y control de calidad del equipamiento y el programa de mantenimiento preventivo y correctivo en servicios de diagnóstico por imagen, medicina nuclear y radioterapia.
+- **Epígrafes equivalentes en convocatorias del SERGAS y currículo BOE:**
+  - *Ingeniero/a Técnico/a (Subgrupo A2):* `Tema 67. El mantenimiento. Concepto. Tipos de mantenimiento.`, `Tema 70. Planes de mantenimiento integral. Gestión y contratación de servicios técnicos.` y `Tema 74. Organización de una unidad de electromedicina: UNE 209001 IN.`
+  - *TS Imagen para el Diagnóstico (C1):* `Tema 4. Programa de garantía de calidad en el servicio de radiología y medicina nuclear. Control de calidad en aspectos clínicos. Control de calidad del equipamiento. Programa de mantenimiento.`
+  - *TS Radioterapia (C1):* `Tema 5. Criterios de calidad en radioterapia. Control de calidad de los instrumentos de medida. Control de calidad en aspectos clínicos. Control de calidad de la equipación. Programa de mantenimiento.`
+  - *Currículo BOE (`RD 838/2015` y `Orden EFP/1216/2019`):* `Módulo 1594 (Gestión del montaje y mantenimiento de sistemas de electromedicina), bloques a), b) y e)` y `Módulo 1592, bloque c) Servicio de electromedicina clínica y relación con SAT.`
 
 ---
+
+## 📖 1. Fundamentos Normativos y Taxonomía de Estrategias de Mantenimiento en el Ámbito Biomédico
+
+### 1.1. Marco Normativo de la Asistencia Técnica Biomédica: UNE-EN 13306, UNE 209001 IN, RD 192/2023 y Circular AEMPS 3/2012
+ conforme a la norma europea **`UNE-EN 13306:2018` (*Terminología del mantenimiento*)**, el **mantenimiento** se define como la combinación de todas las acciones técnicas, administrativas y de gestión realizadas durante el ciclo de vida de un elemento, destinadas a conservarlo o a devolverlo a un estado en el que pueda desempeñar la función requerida. En el ámbito específico de la tecnología sanitaria, esta actividad está sujeta a una cuádruple regulación de obligado cumplimiento:
+1. **`Reglamento (UE) 2017/745 (MDR)` y `Real Decreto 192/2023, de 21 de marzo` (por el que se regulan los productos sanitarios en España):** Establecen la obligación legal de los centros sanitarios de garantizar que los productos sanitarios se instalen, utilicen y **mantengan adecuadamente conforme a las instrucciones del fabricante** y por personal con la cualificación técnica acreditada, de modo que durante toda su vida útil mantengan inalteradas las prestaciones clínicas y los requisitos generales de seguridad y funcionamiento que ampararon su **Marcado CE**.
+2. **`Circular 3/2012 de la AEMPS` (*Recomendaciones aplicables en la asistencia técnica de productos sanitarios en los centros sanitarios*):** Documento rector de la Agencia Española de Medicamentos y Productos Sanitarios que fija los requisitos exigibles tanto a los servicios propios de Electromedicina como a las empresas externas de asistencia técnica (`SAT`):
+   - **Cualificación documentada del personal técnico:** Formación específica y actualizada por tipo/modelo de equipo acreditada por el fabricante o entidad capacitada.
+   - **Disponibilidad de documentación técnica original:** Manuales de servicio vigentes, boletines técnicos y procedimientos de ajuste.
+   - **Trazabilidad e idoneidad de piezas de repuesto:** Uso de repuestos originales o componentes equivalentes cuya compatibilidad y seguridad estén certificadas sin alterar el diseño ni invalidar el Marcado CE.
+   - **Control metrológico de la instrumentación de ensayo:** Todos los analizadores, simuladores y patrones empleados para calibrar o verificar equipos médicos deben contar con **certificado de calibración vigente trazable a patrones nacionales o internacionales (`ENAC` / `UNE-EN ISO/IEC 17025`)**.
+3. **Informe / Norma `UNE 209001 IN` (*Guía para la gestión y el mantenimiento de productos sanitarios activos no implantables — PSANI*):** Elaborada por el Comité Técnico `AEN/CTN 209` de AENOR/UNE con participación de la Sociedad Española de Electromedicina e Ingeniería Clínica (`SEEIC`) y `FENIN`, estandariza la organización de las Unidades de Ingeniería Biomédica/Electromedicina, los protocolos de mantenimiento y los registros obligatorios.
+
+### 1.2. Clasificación Exhaustiva de los Tipos y Estrategias de Mantenimiento Biomédico
+Aplicando la taxonomía de la **`UNE-EN 13306`** y la **`UNE 209001 IN`** al equipamiento electromédico, las estrategias de mantenimiento se dividen en seis modalidades complementarias:
+1. **Mantenimiento Conductivo o de Uso (Mantenimiento de Primer Nivel):**
+   - Es el conjunto de verificaciones básicas, limpiezas superficiales, calibraciones de punto cero y pruebas de autocomprobación diarias ejecutadas por el **propio personal clínico usuario (enfermería, técnicos superiores de imagen/radioterapia/laboratorio, facultativos)** o por los técnicos de guardia antes del inicio de la jornada asistencial.
+   - *Ejemplos críticos en el hospital:* Ejecución del **test automático de fugas, complacencia y sensores de $\text{O}_2$/flujo en estaciones de anestesia y respiradores de UCI** antes de cada paciente; **test diario de descarga a $30\text{–}50\text{ J}$ sobre resistencia interna en desfibriladores** de carros de parada; **test diario de penetración de vapor de Bowie-Dick (`134 °C` durante $3,5\text{ min}$)** en autoclaves de esterilización; control diario de uniformidad y fondo en gammacámaras; o purgado y calibración con soluciones de control en analizadores de gases en sangre.
+2. **Mantenimiento Preventivo Sistemático (Programado):**
+   - Mantenimiento ejecutado a **intervalos predeterminados de tiempo** (mensual, trimestral, semestral o anual) o según **unidades de uso acumuladas** (cada $1.000\text{ h}$, $5.000\text{ h}$ o $10.000\text{ h}$ de operación en respiradores y monitores de hemodiálisis; número de disparos en láseres quirúrgicos; número de cortes/$\text{mAs}$ en tubos de TC), sin investigación previa de la condición del equipo, con el objetivo de reducir la probabilidad de fallo o la degradación funcional.
+   - *Contenido técnico:* Sustitución programada de los **kits preventivos de desgaste** prescritos por el fabricante (baterías recargables cada $2\text{–}3\text{ años}$, células galvánicas de oxígeno cada $12\text{ meses}$, membranas, válvulas unidireccionales, juntas tóricas, filtros HEPA/bacteriológicos, tubos peristálticos), lubricación mecánica, limpieza interna de polvo en fuentes de alimentación, ajuste metrológico con simuladores y **ejecución obligatoria del ensayo de seguridad eléctrica recurrente (`UNE-EN 62353`)**, adhiriendo al chasis la **etiqueta física de revisión superada** con la fecha de ejecución y la fecha de la próxima revisión.
+3. **Mantenimiento Técnico-Legal (Reglamentario):**
+   - Mantenimiento preventivo de carácter **imperativo por ley o reglamento de seguridad industrial/radiológica**, sujeto a periodicidades taxativas y, en determinados escalones, a la intervención de Organismos de Control Autorizados (`OCA`), Unidades Técnicas de Protección Radiológica (`UTPR`) o Servicios de Radiofísica Hospitalaria (`SPR`):
+     - **Equipos de Rayos X, Radioterapia y Medicina Nuclear:** Controles de calidad y pruebas de constancia anuales/periódicas según **`RD 1085/2009`**, **`RD 1976/1999`**, **`RD 1566/1998`** y **`RD 1841/1997`**.
+     - **Instalaciones Eléctricas de Quirófanos y Salas de Intervención (`REBT ITC-BT-38` e `ITC-BT-05`):** Control **semanal** de dispositivos de vigilancia de aislamiento y suministros complementarios, control **mensual** de medidas de equipotencialidad y aislamiento, revisión **anual** por empresa instaladora autorizada e inspección **quinquenal (cada $5\text{ años}$)** por `OCA`.
+     - **Salas de Ambiente Controlado (Quirófanos, UCI, Aislados, Salas Blancas de Farmacia):** Validación ambiental y microbiológica según **`UNE 171340`** y **`UNE 100713`** (semestral en quirófanos de alto riesgo Clase A / ISO 5 y anual en convencionales Clase B / ISO 7).
+     - **Autoclaves de Vapor y Equipos a Presión (`RD 809/2021 — REP`):** Inspecciones periódicas reglamentarias de **Nivel A** (en servicio), **Nivel B** (fuera de servicio con prueba de interior) y **Nivel C** (prueba hidrostática de presión).
+4. **Mantenimiento Correctivo (Inmediato / Urgente o Diferido):**
+   - Mantenimiento ejecutado tras el reconocimiento de una avería o fallo funcional, destinado a devolver el equipo a un estado en el que pueda realizar la función requerida. Se divide en fases de recepción y triaje de criticidad $\rightarrow$ diagnóstico y localización del fallo (hasta nivel de módulo, tarjeta electrónica o componente autorizado) $\rightarrow$ sustitución/reparación $\rightarrow$ calibración $\rightarrow$ **prueba funcional y ensayo de seguridad eléctrica post-reparación obligatorio (`UNE-EN 62353`) antes de su reincorporación al servicio clínico**.
+5. **Mantenimiento Predictivo o Basado en la Condición (`CBM` — *Condition-Based Maintenance*) y Tele-mantenimiento Proactivo:**
+   - Mantenimiento preventivo basado en la **monitorización continua o periódica de parámetros físicos de funcionamiento** y el análisis de su tendencia evolutiva para predecir la aparición de un fallo incipiente e intervenir de forma programada justo antes de que se produzca la parada catastrófica en pleno uso clínico.
+   - *Aplicaciones reales en Alta Tecnología:* Monitorización remota por agentes de telemetría segura del **número de micro-arcos de alta tensión, corriente de filamento, vibración de rodamientos de ánodo rotatorio y temperatura de aceite en tubos de TC y Angiografía**; monitorización continua de la **presión del criostato ($3,5\text{–}4,5\text{ psi}$), nivel de helio líquido, temperatura del cabezal frío (*coldhead* de $4\text{ K}$) y caudal de agua helada del *chiller* en imanes superconductores de RM**; o análisis termográfico infrarrojo de cuadros eléctricos y análisis de vibraciones en ultracentrífugas.
+6. **Metodologías Avanzadas: `RCM` (*Reliability-Centered Maintenance*) y `TPM` (*Total Productive Maintenance*):**
+   - **Mantenimiento Centrado en la Fiabilidad (`RCM`, norma `UNE-EN 60300-3-11`):** Metodología estructurada nacida en la aviación y adaptada a sistemas médicos críticos que utiliza el **Análisis Modal de Fallos, Efectos y Criticidad (`AMFEC` / `FMECA`)** para determinar qué tareas de mantenimiento son técnicamente factibles y merecen ser realizadas en función de la gravedad clínica del modo de fallo.
+   - **Mantenimiento Productivo Total (`TPM`):** Filosofía que integra al personal clínico usuario (mantenimiento autónomo/conductivo de primer nivel, orden y limpieza `5S`) con el personal técnico de Ingeniería Biomédica para maximizar la **Efectividad Global del Equipo (`OEE` = Disponibilidad $\times$ Rendimiento $\times$ Calidad)**.
+
+---
+
+## ⚙️ 2. Diseño de Planes de Mantenimiento Biomédico y Modelos Organizativos de Asistencia Técnica
+
+### 2.1. Metodología de Diseño y Dimensionamiento de un Plan Anual de Mantenimiento Biomédico (Módulo 1594.b)
+La elaboración del **Plan Anual de Mantenimiento Biomédico** de un Área Sanitaria por el Ingeniero Biomédico sigue una secuencia metodológica de cinco etapas cuantitativas:
+1. **Etapa 1 — Segmentación de la Base Instalada y Asignación de Frecuencias ($f_i$):** Agrupación de los activos inventariados por familias tecnológicas (`EMDN`/`UMDNS`) y determinación de su frecuencia anual de revisión preventiva ($f_i = 1\text{ vez/año}$ general; $f_i = 2\text{ veces/año}$ [semestral] en soporte vital, anestesia, respiradores, desfibriladores, incubadoras y quirófanos; $f_i = 4\text{ veces/año}$ [trimestral] en alta tecnología pesada) conforme a las prescripciones del fabricante y al índice de riesgo de Fennigkoh y Smith.
+2. **Etapa 2 — Redacción de Gamas y Protocolos Técnicos Normalizados:** Definición para cada familia/modelo de la secuencia exacta de operaciones, repuestos del kit preventivo, instrumentos patrones requeridos y tolerancias admisibles.
+3. **Etapa 3 — Cálculo de la Carga Anual de Trabajo en Horas-Hombre ($HH_{\text{totales}}$) y Dimensionamiento de Plantilla:**
+   Sea $N_i$ el número de equipos de la familia $i$, $f_i$ su frecuencia anual de revisiones preventivas y $t_{\text{prev}, i}$ el tiempo estándar medio (en horas) requerido para completar una revisión preventiva de esa familia (incluyendo desplazamiento interno, prueba funcional, test `UNE-EN 62353` y registro documental). La carga anual de trabajo técnico propio se calcula mediante:
+   $$HH_{\text{prev}} = \sum_{i=1}^{k} \left( N_i \cdot f_i \cdot t_{\text{prev}, i} \right) \quad ; \quad HH_{\text{totales}} = HH_{\text{prev}} + HH_{\text{corr}} + HH_{\text{aceptación/bajas}} + HH_{\text{gestión/formación}}$$
+   Donde $HH_{\text{corr}}$ se estima estadísticamente a partir del histórico de avisos correctivos del año anterior (en un servicio maduro, el mantenimiento preventivo representa en torno al $50\text{–}60\%$ de las horas técnicas directas y el correctivo el $30\text{–}40\%$). Si $H_{\text{efectivas/técnico}}$ es la jornada anual productiva neta de un técnico especialista descontando vacaciones, formación y tiempos improductivos (típicamente $\approx 1.450\text{–}1.550\text{ h/año}$ sobre una jornada estatutaria de $1.624\text{ h}$), la **plantilla necesaria de técnicos ($P_{\text{técnicos}}$)** resulta:
+   $$P_{\text{técnicos}} = \left\lceil \frac{HH_{\text{totales}}}{H_{\text{efectivas/técnico}}} \right\rceil$$
+4. **Etapa 4 — Nivelación de Cargas (*Load Smoothing*) y Calendario Anual:** Distribución equilibrada de las revisiones a lo largo de los 12 meses del año (aprovechando los meses estivales de menor actividad quirúrgica programada para las grandes paradas de bloques quirúrgicos y salas limpias).
+5. **Etapa 5 — Coordinación Clínica de Ventanas de Parada:** Concertación previa con los Jefes de Servicio y Supervisiones de Enfermería para no solapar nunca el mantenimiento preventivo de dos equipos críticos del mismo servicio (por ejemplo, nunca parar simultáneamente dos salas de TC de Urgencias ni dos aceleradores lineales gemelos).
+
+### 2.2. Comparativa de Modelos Organizativos de Mantenimiento Biomédico en un Servicio de Salud
+Para ejecutar el Plan de Mantenimiento, la Dirección e Ingeniería Biomédica del hospital debe seleccionar la combinación óptima entre **cuatro modelos organizativos de asistencia técnica**:
+
+| Modelo Organizativo de Mantenimiento | Alcance y Características Operativas | Ventajas Principales | Limitaciones y Riesgos a Mitigar |
+| :--- | :--- | :--- | :--- |
+| **1. Modelo Propio Interno (*In-House* Estatutario)** | Plantilla propia de Ingenieros Biomédicos y Técnicos Especialistas en Electromedicina del hospital. | • **Tiempo de respuesta inmediato ($< 10\text{ min}$)** en primera intervención en Quirófano/UCI.<br>• Menor coste por hora y total alineación con los objetivos clínicos del hospital.<br>• Independencia tecnológica y conocimiento profundo de los usuarios. | • Dificultad de mantener capacitación ultra-especializada y stock de piezas carísimas en equipos únicos de Alta Tecnología (`RM`, `LINAC`, `PET-TC`, Robots) o de acceder a software propietario bloqueado. |
+| **2. Modelo Externo con Fabricante Original (`OEM` — *Original Equipment Manufacturer*)** | Contratos de mantenimiento (a todo riesgo o preventivo + correctivo) suscritos directamente con la casa matriz fabricante de cada equipo (ej. *Siemens, GE, Philips, Varian, Elekta, Intuitive*). | • Acceso garantizado al $100\%$ de **repuestos originales, tubos de RX, detectores, actualizaciones de software (`upgrades`)**, soporte de fábrica de 3.er nivel y tele-mantenimiento predictivo. | • **Elevado coste económico anual ($8\%\text{ a }12\%$ del valor de compra)**.<br>• Mayor tiempo de respuesta presencial si el ingeniero de campo (`FSE`) se desplaza desde otra provincia. |
+| **3. Modelo Externo Multimarca (*Multivendor* / `ISO` — *Independent Service Organization*)** | Contratación mediante licitación pública (`LCSP`) de una empresa mantenedora multimarca con técnicos residentes en el hospital que asume el parque de baja y media tecnología. | • Unificación de un gran volumen de equipos multimarca bajo un único contrato con `SLAs` y penalizaciones.<br>• Flexibilidad de plantilla residente. | • Riesgo de pérdida de conocimiento interno (*know-how*) del hospital si no existe una Unidad de Ingeniería Biomédica propia que audite y controle a la empresa adjudicataria; limitaciones ante patentes exclusivas de `OEM`. |
+| **4. Modelo Mixto o Híbrido (Estándar de Excelencia en grandes hospitales y SERGAS)** | **Combinación sinérgica:** Unidad de Ingeniería Biomédica/Electromedicina en el hospital (propia + soporte residente) que realiza el **$100\%$ de la primera intervención inmediata** y el mantenimiento integral del equipamiento general y de críticos (Grupo II), combinada con **contratos `OEM` o colaborativos (*Shared Service*) para la Alta Tecnología (Grupo III)** supervisados por el Ingeniero Biomédico. | • **Optimiza el binomio Coste-Disponibilidad:** combina la inmediatez del servicio en el hospital ($0\text{ min}$ de desplazamiento) con el respaldo de fábrica y cobertura de grandes componentes (tubos, bobinas, detectores) en alta tecnología. | • Exige una gobernanza rigurosa desde el `XMAO` y formación cruzada (*first-line training*) de los técnicos del hospital por parte de los fabricantes. |
+
+---
+
+## 🔬 3. Ingeniería de Fiabilidad, Mantenibilidad y Disponibilidad (RAMS): Leyes de Fallo y Cálculo de KPIs
+
+### 3.1. La Curva de la Bañera (*Bathtub Curve*), Tasa de Fallos $\lambda(t)$ y Distribución de Weibull
+La **Ingeniería de Fiabilidad (`RAMS` — *Reliability, Availability, Maintainability and Safety*)** modela matemáticamente el comportamiento de los fallos de un activo biomédico a lo largo del tiempo $t$ mediante la función de **Tasa Instantánea de Fallos o Función de Riesgo $\lambda(t)$**, cuya representación gráfica clásica adopta la forma de la **Curva de la Bañera (*Bathtub Curve*)** y se modela analíticamente mediante la **Distribución de Weibull de dos parámetros** ($\beta$ parámetro de forma y $\eta$ vida característica):
+
+$$\lambda(t) = \frac{\beta}{\eta} \cdot \left(\frac{t}{\eta}\right)^{\beta - 1} \quad ; \quad R(t) = e^{-\left(\frac{t}{\eta}\right)^\beta}$$
+
+La curva se divide en **tres fases cronológicas bien diferenciadas**, cada una con una estrategia específica de ingeniería biomédica:
+1. **Fase I — Zona de Fallos Tempranos o «Mortalidad Infantil» ($\beta < 1$, tasa de fallos $\lambda(t)$ decreciente):**
+   - Aparece inmediatamente tras la instalación del equipo. Los fallos se deben a defectos latentes de fabricación electrónica (componentes débiles), errores de montaje en obra o falta de destreza inicial de los operadores.
+   - *Estrategia de mitigación en Ingeniería Biomédica:* Rodaje en fábrica (*burn-in*), **Protocolo exhaustivo de Recepción y Pruebas de Aceptación inicial**, formación intensiva al usuario antes de la puesta en marcha y cobertura mediante el **período de Garantía Contractual ($1\text{ a }4\text{ años}$)**.
+2. **Fase II — Zona de Vida Útil o Madurez Operativa ($\beta = 1$, tasa de fallos constante $\lambda(t) = \lambda = \text{cte}$):**
+   - Es el período central de operación normal del activo biomédico ($5\text{ a }8\text{ años}$). Para $\beta = 1$, la distribución de Weibull se reduce a la **Distribución Exponencial de Fiabilidad**:
+     $$R(t) = e^{-\lambda \cdot t} = e^{-\frac{t}{\text{MTBF}}} \quad ; \quad F(t) = 1 - R(t) = 1 - e^{-\lambda \cdot t}$$
+     Donde $R(t)$ es la **Fiabilidad** (probabilidad de que el equipo funcione sin fallos durante un intervalo de tiempo $t$) y $F(t)$ es la probabilidad acumulada de fallo. *(Caso clásico de examen: para un tiempo de operación exactamente igual al $\text{MTBF}$ [$t = \text{MTBF}$], la probabilidad de que un equipo con tasa de fallos constante NO sufra ninguna avería en ese período es $R(\text{MTBF}) = e^{-1} \approx \mathbf{0,3679 = 36,8\%}$, es decir, existe un $63,2\%$ de probabilidad de que falle antes de alcanzar su propio $\text{MTBF}$).*
+   - *Estrategia de mitigación:* **Mantenimiento conductivo diario, mantenimiento preventivo sistemático y control de condiciones ambientales/eléctricas**.
+3. **Fase III — Zona de Envejecimiento o Desgaste ($\beta > 1$, tasa de fallos $\lambda(t)$ rápidamente creciente):**
+   - Aparece al superar la vida útil recomendada por `FENIN`/`COCIR` ($8\text{–}10\text{ años}$). Los fallos se deben a fatiga mecánica acumulada, corrosión hidráulica, degradación térmica de condensadores electrolíticos y agotamiento de aislamiento.
+   - *Estrategia de mitigación:* **Mantenimiento predictivo (`CBM`), reacondicionamiento integral (*overhaul* / *refurbishment*) o dictamen de Baja por Obsolescencia y Renovación**.
+
+### 3.2. Fórmulas Matemáticas Exactas de MTBF, MTTF, MTTR y Disponibilidad (Intrínseca vs. Operativa)
+Conforme a la norma **`UNE-EN 13306`**, sea un período de observación programado total $T_{\text{prog}}$ (por ejemplo, un año de servicio de un TC en Urgencias funcionando $24\text{ h} \times 365\text{ días} = 8.760\text{ horas}$), durante el cual el equipo sufre $N_f$ averías (fallos correctivos), acumulando un **Tiempo Total de Parada por Reparación Correctiva** $T_{\text{corr}} = \sum_{i=1}^{N_f} t_{\text{rep}, i}$ y un **Tiempo de Parada por Mantenimiento Preventivo** $T_{\text{prev}}$. Entonces, el **Tiempo Operativo Real de Buen Funcionamiento ($T_{\text{op}}$ o *Uptime*)** es:
+
+$$T_{\text{op}} = T_{\text{prog}} - T_{\text{corr}} - T_{\text{prev}}$$
+
+A partir de estas magnitudes se definen los cuatro indicadores fundamentales de examen:
+1. **`MTBF` (*Mean Time Between Failures* — Tiempo Medio Entre Fallos $\rightarrow$ indicador de FIABILIDAD en equipos reparables):**
+   $$\text{MTBF} = \frac{T_{\text{op}}\text{ (Horas reales de buen funcionamiento operativo)}}{N_f\text{ (Número de fallos en el período)}} = \frac{1}{\lambda}$$
+   *(Nota: En elementos NO reparables —como una lámpara halógena, un fusible o una batería primaria desechable— el indicador equivalente hasta el fallo único se denomina **`MTTF` [*Mean Time To Failure* — Tiempo Medio Hasta el Fallo]**).*
+2. **`MTTR` (*Mean Time To Repair* — Tiempo Medio de Reparación $\rightarrow$ indicador de MANTENIBILIDAD):**
+   $$\text{MTTR} = \frac{T_{\text{corr}}\text{ (Horas totales de parada por avería correctiva)}}{N_f\text{ (Número de fallos reparados)}} = \frac{1}{\mu}$$
+   Donde $\mu = 1 / \text{MTTR}$ es la tasa de reparación.
+3. **Disponibilidad Intrínseca o Inherente ($D_{\text{intrínseca}}$):** Considera únicamente el tiempo operativo frente al tiempo de parada correctiva (excluyendo paradas preventivas planificadas y demoras administrativas/logísticas):
+   $$D_{\text{intrínseca}} = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}} \times 100\% = \frac{T_{\text{op}}}{T_{\text{op}} + T_{\text{corr}}} \times 100\%$$
+4. **Disponibilidad Operativa Real ($D_{\text{operativa}}$):** Incluye todas las causas de indisponibilidad (averías correctivas $T_{\text{corr}}$, paradas preventivas/control de calidad $T_{\text{prev}}$ y tiempos de espera logística de repuestos):
+   $$D_{\text{operativa}} = \frac{T_{\text{op}}}{T_{\text{prog}}} \times 100\% = \frac{T_{\text{op}}}{T_{\text{op}} + T_{\text{corr}} + T_{\text{prev}}} \times 100\%$$
+
+---
+
+## 🛡️ 4. Protocolos de Seguridad Eléctrica y Verificación Funcional: Norma UNE-EN 62353 vs. UNE-EN 60601-1
+
+### 4.1. Por Qué en Mantenimiento Hospitalario se Aplica la UNE-EN 62353 y No la UNE-EN 60601-1
+Una de las preguntas conceptuales más importantes en los exámenes de Ingeniería Biomédica es explicar la diferencia de propósito y metodología entre la **`UNE-EN 60601-1`** y la **`UNE-EN 62353` (`IEC 62353`)**:
+- La norma **`UNE-EN 60601-1` (*Equipos electromédicos. Parte 1: Requisitos generales para la seguridad básica y el funcionamiento esencial*)** es una **norma de diseño, homologación de tipo y ensayo en fábrica**. Incluye ensayos de laboratorio agresivos y potencialmente destructivos (como pruebas de rigidez dieléctrica aplicando entre $1.500\text{ V}$ y $4.000\text{ V AC}$, preacondicionamiento en cámara climática de humedad al $93\%$ durante $48\text{ h}$ y simulación de cortocircuitos térmicos) que, si se repitiesen anualmente en el hospital, **degradarían prematuramente los aislamientos del equipo** y resultarían inviables fuera de un laboratorio de certificación.
+- Por ello, la Comisión Electrotécnica Internacional promulgó la norma **`UNE-EN 62353` (*Equipos electromédicos. Ensayos recurrentes y ensayos después de la reparación del equipo electromédico*)**, diseñada específicamente para que los Servicios de Ingeniería Biomédica realicen los ensayos en **tres momentos clave en el hospital**: **1) Antes de la puesta en servicio inicial (Prueba de Aceptación / Valor de Referencia)**, **2) Durante el mantenimiento preventivo recurrente**, y **3) Obligatoriamente después de cualquier reparación o modificación**, empleando tensiones no destructivas y métodos reproducibles que permiten comparar la evolución histórica de los aislamientos en el `XMAO`.
+
+### 4.2. Clasificación Eléctrica de Equipos Electromédicos y Secuencia de Ensayo según UNE-EN 62353
+Para aplicar correctamente los límites de ensayo, todo equipo electromédico se clasifica según dos ejes ortogonales (`UNE-EN 60601-1` / `UNE-EN 62353`):
+1. **Según la Clase de Protección contra Choque Eléctrico desde la Red de Alimentación:**
+   - **Clase I:** La protección no recae solo en el aislamiento básico, sino que incorpora una medida de seguridad adicional consistente en conectar todas las partes metálicas accesibles del chasis al **conductor de Tierra de Protección (`PE`)** de la instalación fija (enchufe con toma de tierra), evitando que adquieran tensión peligrosa si falla el aislamiento básico.
+   - **Clase II (Símbolo $\square\!\!\!\square$ de dos cuadrados concéntricos):** No depende de la tierra de protección (carece de conexión de tierra funcional de seguridad en su chasis), sino de un **doble aislamiento** (aislamiento básico + aislamiento suplementario) o un **aislamiento reforzado**.
+   - **Alimentado Internamente (`IP`):** Opera exclusivamente mediante su propia batería interna mientras está conectado al paciente (aunque si puede usarse conectado al cargador de red, se ensaya como Clase I o Clase II).
+2. **Según el Grado de Protección de las Partes Aplicables al Paciente (*Applied Parts*):**
+   - **Tipo B (*Body* — Símbolo de figura humana sin recuadro):** Parte aplicable que proporciona protección contra descargas eléctricas, generalmente referenciada a tierra; apta para contacto externo o interno **excluyendo la aplicación cardíaca directa** (ej. camas eléctricas, lámparas, manguitos de PNI).
+   - **Tipo BF (*Body Floating* — Símbolo de figura humana dentro de un recuadro):** Parte aplicable de **tipo flotante** (aislada galvánicamente o por transformador/optoacoplador respecto a tierra y al chasis), que ofrece mayor grado de protección que el Tipo B; estándar para contacto prolongado o invasivo no cardíaco (ej. sondas de ecografía, pulsioxímetros `SpO2`, placas de electrobisturí con circuito flotante `REM`, electrodos de ECG de superficie no intracardíacos).
+   - **Tipo CF (*Cardiac Floating* — Símbolo de un corazón dentro de un recuadro):** Parte aplicable flotante de **máximo aislamiento eléctrico**, el **ÚNICO tipo autorizado para aplicación cardíaca directa** (contacto eléctrico directo con el miocardio a través de catéteres intravasculares, guías de marcapasos endocavitarios, transductores de presión invasiva central o monitores de quirófano/UCI para prevenir el **microshock** a partir de $10\text{–}50\text{ }\mu\text{A}$).
+
+La **secuencia obligatoria de ensayo de la norma `UNE-EN 62353`** sigue un orden estricto de seguridad (nunca se mide corriente de fuga antes de haber comprobado la inspección visual y la continuidad de la tierra de protección):
+$$\text{1. Inspección Visual} \longrightarrow \text{2. Resistencia de Tierra de Protección (`PE`)} \longrightarrow \text{3. Resistencia de Aislamiento (opcional/500 V DC)} \longrightarrow \text{4. Corrientes de Fuga (Equipo y Parte Aplicable)} \longrightarrow \text{5. Prueba Funcional}$$
+
+La norma `UNE-EN 62353` define **tres métodos de circuito para medir las corrientes de fuga**:
+- **Método Directo:** Mide la corriente que circula directamente a través del dispositivo de medida (`MD`, red RC de $1\text{ k}\Omega$ que simula la impedancia del cuerpo humano en frecuencia) hacia tierra con el conductor de protección abierto (equivalente a la Condición de Primer Defecto `SFC` de la `UNE-EN 60601-1`, invirtiendo la polaridad de red $L/N$).
+- **Método Diferencial:** Mide la corriente de fuga como la diferencia vectorial (mediante transformador toroidal diferencial) entre la corriente que entra por la fase ($I_L$) y la que retorna por el neutro ($I_N$) con la tierra conectada. No requiere aislar el equipo del suelo, pero es menos sensible para fugas muy pequeñas ($< 50\text{ }\mu\text{A}$).
+- **Método Alternativo (Equivalente a ensayo de aislamiento en AC):** Cortocircuita entre sí la fase y el neutro del equipo y aplica una tensión de prueba a frecuencia de red ($\le 250\text{ V AC}$) a través de una resistencia limitadora de $1\text{ k}\Omega$ entre la entrada de red y el chasis/partes aplicables; el equipo no llega a encenderse (gran seguridad para el operador), pero los valores medidos son el doble en circuitos simétricos, por lo que sus límites normativos son distintos.
+
+### 4.3. Tabla Comparativa de Límites Máximos de Seguridad Eléctrica: UNE-EN 62353 vs. UNE-EN 60601-1
+
+| Parámetro / Ensayo Eléctrico | Clase / Tipo de Parte Aplicable | Límite Máximo `UNE-EN 62353` (Método Directo o Diferencial) | Límite Máximo `UNE-EN 62353` (Método Alternativo) | Límite de Referencia en Fábrica `UNE-EN 60601-1` (`NC` Normal / `SFC` Primer Defecto) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Resistencia de Tierra de Protección (`PE`)**<br>*(Corriente de prueba $\ge 200\text{ mA}$ AC o DC)* | • **Solo cable de red desmontable**<br>• **Equipo Clase I con cable fijo**<br>• **Equipo Clase I + cable desmontable**<br>• **Sistema electromédico completo (regleta)** | • **$\le \mathbf{0,1\text{ }\Omega}$**<br>• **$\le \mathbf{0,2\text{ }\Omega}$**<br>• **$\le \mathbf{0,3\text{ }\Omega}$**<br>• **$\le \mathbf{0,5\text{ }\Omega}$** | Igual ($\le 0,1\text{ / }0,2\text{ / }0,3\text{ / }0,5\text{ }\Omega$) | $\le 0,1\text{ }\Omega$ (chasis sin cable) / $\le 0,2\text{ }\Omega$ (con cable de red, ensayado a $25\text{ A}$ durante $5\text{–}10\text{ s}$ en fábrica). |
+| **Resistencia de Aislamiento**<br>*(Tensión de ensayo $500\text{ V DC}$)* | • **Red a Tierra (`PE`) en Clase I**<br>• **Red a Chasis no puesto a tierra (Clase II)**<br>• **Partes Aplicables Tipo BF / CF a Tierra** | • **$\ge \mathbf{2\text{ M}\Omega}$**<br>• **$\ge \mathbf{7\text{ M}\Omega}$**<br>• **$\ge \mathbf{70\text{ M}\Omega}$** | Igual ($\ge 2\text{ M}\Omega\text{ / }\ge 7\text{ M}\Omega\text{ / }\ge 70\text{ M}\Omega$) | Ensayo de rigidez dieléctrica en alta tensión ($1.500\text{–}4.000\text{ V AC}$) según `MOOP` / `MOPP`. |
+| **Corriente de Fuga del Equipo** | • **Equipo Clase I**<br>• **Equipo Clase II** | • **$\le \mathbf{500\text{ }\mu\text{A}}$** ($0,5\text{ mA}$)<br>• **$\le \mathbf{100\text{ }\mu\text{A}}$** ($0,1\text{ mA}$) | • **$\le \mathbf{1.000\text{ }\mu\text{A}}$** ($1\text{ mA}$)<br>• **$\le \mathbf{250\text{ }\mu\text{A}}$** ($0,25\text{ mA}$) | • Fuga a Tierra Clase I: $500\text{ }\mu\text{A}$ (`NC`) / $1.000\text{ }\mu\text{A}$ (`SFC`)<br>• Fuga de Envolvente/Contacto: $100\text{ }\mu\text{A}$ (`NC`) / $500\text{ }\mu\text{A}$ (`SFC`) |
+| **Corriente de Fuga de la Parte Aplicable**<br>*(Tensión de red sobre la Parte Aplicable — Tipo F)* | • **Tipo B** (no aplica red en parte aplicable)<br>• **Tipo BF** (*Body Floating*)<br>• **Tipo CF** (*Cardiac Floating* — cada electrodo) | • *(Se mide como fuga de equipo)*<br>• **$\le \mathbf{5.000\text{ }\mu\text{A}}$** ($5\text{ mA}$)<br>• **$\le \mathbf{50\text{ }\mu\text{A}}$** ($0,05\text{ mA}$) | • *(Se mide como fuga de equipo)*<br>• **$\le \mathbf{5.000\text{ }\mu\text{A}}$** ($5\text{ mA}$)<br>• **$\le \mathbf{50\text{ }\mu\text{A}}$** ($0,05\text{ mA}$) | • Fuga de Paciente Tipo B / BF (AC): $100\text{ }\mu\text{A}$ (`NC`) / $500\text{ }\mu\text{A}$ (`SFC`) ($5.000\text{ }\mu\text{A}$ con red en parte aplicable BF).<br>• **Fuga de Paciente Tipo CF (AC): $\mathbf{10\text{ }\mu\text{A}}$ (`NC`) / $\mathbf{50\text{ }\mu\text{A}}$ (`SFC`)**. |
+
+---
+
+## 🏥 5. Implantación, Integración y Casuística en el Servicio Gallego de Salud (SERGAS)
+
+### 5.1. Organización de los Servicios de Ingeniería Biomédica y Electromedicina en el SERGAS
+En las **7 Áreas Sanitarias del SERGAS**, la gestión del mantenimiento biomédico responde a un **Modelo Mixto Avanzado** dirigido por los Servicios y Unidades de Ingeniería Biomédica y Mantenimiento dependientes de las Direcciones de Recursos Económicos / Subdirecciones de Ingeniería:
+1. **Unidades de Electromedicina Hospitalarias y de Atención Primaria:** Cada complejo hospitalario (`CHUAC`, `CHUS`, `HAC/Meixoeiro`, `HULA`, `CHUO`, `CHOP`, `CHUF`) y sus hospitales comarcales disponen de talleres de Electromedicina equipados con bancos de trabajo protegidos por transformadores de aislamiento/diferenciales de alta sensibilidad, puestos antiestáticos (`ESD`) y un parque completo de **analizadores y simuladores patrones con calibración anual trazable a `ENAC` (`UNE-EN ISO/IEC 17025`)**: analizadores automáticos de seguridad eléctrica `UNE-EN 62353`, simuladores multiparamétricos de paciente (`ECG`, arritmias, respiración, presión invasiva, temperatura, gasto cardíaco y dedo artificial óptico de `SpO2`), analizadores de flujo/volumen/presión y pulmones de prueba para respiradores y anestesia, analizadores de desfibriladores y marcapasos externos con carga no inductiva de $50\text{ }\Omega$, analizadores de unidades electroquirúrgicas de alta frecuencia (`HF`) y analizadores multicanal de bombas de infusión.
+2. **Distribución del Plan de Mantenimiento en el SERGAS:**
+   - **Equipamiento General, Monitorización, Quirófano, Críticos, Diagnóstico ligero y Atención Primaria:** Mantenimiento conductivo supervisado, primera intervención inmediata en $100\%$ de avisos y mantenimiento preventivo/correctivo integral con verificación `UNE-EN 62353` gestionado en el hospital.
+   - **Alta Tecnología (Grupo III: Aceleradores Lineales, Protonterapia, PET-TC, SPECT-TC, RM, TC, Salas de Angiografía/Hemodinámica y Cirugía Robótica):** Contratos de asistencia técnica con los fabricantes originales (`OEM`) o contratos colaborativos donde los técnicos del hospital realizan la primera línea (*First-Line Support*) y el `OEM` aporta el mantenimiento preventivo especializado, el tele-mantenimiento predictivo y la cobertura de grandes componentes (tubos de RX, detectores, bobinas y fuentes).
+
+### 5.2. Coordinación Multidisciplinar con Radiofísica (SPR), Medicina Preventiva e Instalaciones en el SERGAS
+En los hospitales del SERGAS existe un protocolo formal de coordinación interdepartamental para las intervenciones sobre tecnologías reguladas:
+- **Coordinación con los Servicios de Radiofísica y Protección Radiológica (`SPR`):** Conforme a los Reales Decretos `1976/1999`, `1566/1998` y `1841/1997`, después de cualquier mantenimiento correctivo o preventivo en un equipo de radiodiagnóstico, radioterapia o medicina nuclear que afecte al haz de radiación, tubo, colimador o cadena de imagen, el técnico de Electromedicina/fabricante cierra el parte de intervención técnica en el `XMAO`, pero **el equipo no puede volver a utilizarse clínicamente con pacientes hasta que el Facultativo Especialista en Radiofísica Hospitalaria realiza la verificación dosimétrica y de calidad de imagen post-reparación y emite la conformidad escrita de restitución al uso clínico**.
+- **Coordinación con Medicina Preventiva y Esterilización:** En las paradas programadas de quirófanos y unidades de críticos para el mantenimiento anual/semestral de instalaciones (`ITC-BT-38` y climatización `UNE 100713`), Ingeniería Biomédica sincroniza la revisión de las mesas quirúrgicas, lámparas cialíticas, columnas de techo, respiradores y bisturís eléctricos durante la misma ventana de parada, concluyendo con la limpieza terminal y el muestreo microbiológico ambiental y de superficies (`UNE 171340`) por Medicina Preventiva antes de reabrir el quirófano.
+
+---
+
+## ⚡ 6. Síntesis de Alto Rendimiento, Tabla Resumen y Puntos Críticos de Examen A1
+
+### 6.1. Tabla Maestra de Cifras, Umbrales y Artículos Clave
+
+| Concepto / Norma / Indicador de Mantenimiento | Referencia Normativa | Cifra / Límite / Fórmula Exacta de Examen | Observación Crítica para Test y Supuestos Prácticos |
+| :--- | :--- | :--- | :--- |
+| **Norma europea de Terminología del Mantenimiento** | `UNE-EN 13306:2018` | Define Preventivo, Correctivo, Basado en Condición (`CBM`), Predictivo, `MTBF` y `MTTR` | Base conceptual de todos los pliegos de mantenimiento técnico en el SERGAS. |
+| **Guía nacional de gestión y mantenimiento de PSANI** | `UNE 209001 IN` | Aplica a Productos Sanitarios Activos No Implantables (`PSANI`) | Excluye implantables activos (`AIMD`) y diagnóstico *in vitro* puro, aunque su metodología se extiende a todo el parque. |
+| **Directriz regulatoria sobre Servicios de Asistencia Técnica (`SAT`)** | `Circular 3/2012 AEMPS` y `RD 192/2023` | Exige cualificación por modelo, manuales, repuestos trazables y patrones calibrados `ENAC` | Obliga a verificar la capacitación técnica tanto del servicio propio como de empresas externas. |
+| **Fórmula de Fiabilidad (`MTBF`)** | `UNE-EN 13306` | $$\text{MTBF} = \frac{T_{\text{op}}}{N_{\text{fallos}}} = \frac{1}{\lambda}$$ | En distribución exponencial ($\beta = 1$), para $t = \text{MTBF}$ la fiabilidad es $R(\text{MTBF}) = e^{-1} \approx \mathbf{36,8\%}$. |
+| **Fórmula de Mantenibilidad (`MTTR`)** | `UNE-EN 13306` | $$\text{MTTR} = \frac{T_{\text{parada correctiva}}}{N_{\text{fallos}}} = \frac{1}{\mu}$$ | Mide la rapidez media de restitución técnica ante avería. |
+| **Disponibilidad Intrínseca vs. Operativa** | `UNE-EN 13306` | $$D_{\text{int}} = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}} \quad ; \quad D_{\text{op}} = \frac{T_{\text{op}}}{T_{\text{op}} + T_{\text{corr}} + T_{\text{prev}}}$$ | En alta tecnología y soporte vital se exige contractualmente **$D \ge 96\%\text{–}98\%$**. |
+| **Norma de seguridad eléctrica en hospital (recurrente y post-reparación)** | `UNE-EN 62353` (`IEC 62353`) | **3 métodos de fuga:** Directo, Diferencial y Alternativo | Se usa en el hospital en lugar de la `UNE-EN 60601-1` para evitar ensayos destructivos de alta tensión. |
+| **Límite de Resistencia de Tierra de Protección (`UNE-EN 62353`)** | `UNE-EN 62353` (con $I \ge 200\text{ mA}$) | • Cable solo: **$\le 0,1\text{ }\Omega$**<br>• Equipo cable fijo: **$\le 0,2\text{ }\Omega$**<br>• Equipo + cable desmontable: **$\le 0,3\text{ }\Omega$** | En un sistema electromédico completo con base múltiple el límite es **$\le 0,5\text{ }\Omega$**. |
+| **Límite de Corriente de Fuga del Equipo (`UNE-EN 62353`)** | `UNE-EN 62353` (Directo/Diferencial) | • **Clase I:** **$\le 500\text{ }\mu\text{A}$** ($1.000\text{ }\mu\text{A}$ en Alternativo)<br>• **Clase II:** **$\le 100\text{ }\mu\text{A}$** ($250\text{ }\mu\text{A}$ en Alternativo) | Mide la fuga global del equipo hacia tierra con el conductor de protección abierto. |
+| **Límite de Fuga de Parte Aplicable (`UNE-EN 62353` vs. `60601-1`)** | `UNE-EN 62353` y `UNE-EN 60601-1` | • **Tipo CF (`62353`):** **$\le 50\text{ }\mu\text{A}$** (en `60601-1`: **$10\text{ }\mu\text{A}$ `NC` / $50\text{ }\mu\text{A}$ `SFC`**)<br>• **Tipo BF (`62353` red en PA):** **$\le 5.000\text{ }\mu\text{A}$** | El **Tipo CF** es el **único apto para contacto intracardíaco directo** (previene el microshock). |
+
+### 6.2. Puntos Críticos y Trampas Habituales de Tribunal (Tipo Test y Supuestos Prácticos)
+1. **Caso Práctico Resuelto de Cálculo de `MTBF`, `MTTR` y Disponibilidad (`UNE-EN 13306`):**
+   - *Enunciado:* Un Tomógrafo Computarizado (`TC`) del Servicio de Urgencias está programado para operar $24\text{ horas al día}$ durante los $365\text{ días}$ del año ($T_{\text{prog}} = 8.760\text{ horas}$). Durante el último año se le realizaron $4$ revisiones preventivas programadas de $15\text{ horas}$ cada una ($T_{\text{prev}} = 60\text{ h}$) y sufrió **$5\text{ averías imprevistas}$** que supusieron un tiempo total acumulado de parada correctiva de **$200\text{ horas}$** ($T_{\text{corr}} = 200\text{ h}$). Calcule el Tiempo Operativo Real ($T_{\text{op}}$), el `MTBF`, el `MTTR`, la Disponibilidad Intrínseca ($D_{\text{int}}$) y la Disponibilidad Operativa ($D_{\text{op}}$).
+   - *Resolución paso a paso:*
+     1. **Tiempo Operativo Real ($T_{\text{op}}$):** $T_{\text{op}} = 8.760 - 200 - 60 = \mathbf{8.500\text{ horas}}$.
+     2. **`MTBF` (Fiabilidad):** $\text{MTBF} = \dfrac{T_{\text{op}}}{N_f} = \dfrac{8.500\text{ h}}{5\text{ fallos}} = \mathbf{1.700\text{ horas/fallo}}$. *(Cuidado con la trampa habitual: nunca dividas las $8.760\text{ h}$ totales entre $5$; al numerador del `MTBF` hay que restarle previamente las horas en que el equipo estuvo parado).*
+     3. **`MTTR` (Mantenibilidad):** $\text{MTTR} = \dfrac{T_{\text{corr}}}{N_f} = \dfrac{200\text{ h}}{5\text{ fallos}} = \mathbf{40\text{ horas/reparación}}$.
+     4. **Disponibilidad Intrínseca ($D_{\text{int}}$):** $D_{\text{int}} = \dfrac{\text{MTBF}}{\text{MTBF} + \text{MTTR}} = \dfrac{1.700}{1.700 + 40} = \dfrac{1.700}{1.740} = \mathbf{97,70\%}$.
+     5. **Disponibilidad Operativa ($D_{\text{op}}$):** $D_{\text{op}} = \dfrac{T_{\text{op}}}{T_{\text{prog}}} = \dfrac{8.500}{8.760} = \mathbf{97,03\%}$.
+2. **Trampa de los Límites de Resistencia de Tierra en `UNE-EN 62353` ($0,1\text{ }\Omega$ vs. $0,2\text{ }\Omega$ vs. $0,3\text{ }\Omega$):** Memoriza con precisión milimétrica esta terna porque cae en casi todas las oposiciones de Electromedicina e Ingeniería Biomédica: **$0,1\text{ }\Omega$** es para el cable de alimentación suelto; **$0,2\text{ }\Omega$** es para un equipo Clase I con cable de alimentación fijo (no desconectable); y **$0,3\text{ }\Omega$** es para el conjunto formado por un equipo Clase I más su cable de red desconectable ($0,1\text{ }\Omega\text{ del chasis} + 0,1\text{ }\Omega\text{ del cable} + 0,1\text{ }\Omega\text{ de resistencia de contacto del conector IEC} = 0,3\text{ }\Omega$).
+3. **Trampa del Tipo CF y los $10\text{ }\mu\text{A}$ / $50\text{ }\mu\text{A}$ frente al Microshock:** Si una pregunta de examen plantea qué grado de protección de parte aplicable debe tener un monitor o catéter conectado directamente a una cavidad cardíaca y cuál es su límite de corriente de fuga en condición normal (`UNE-EN 60601-1`) y en primer defecto (`UNE-EN 60601-1` y `UNE-EN 62353`), la respuesta única es **Tipo CF (*Cardiac Floating*)**, con límite de **$10\text{ }\mu\text{A}$ en Condición Normal (`NC`)** y **$50\text{ }\mu\text{A}$ en Condición de Primer Defecto (`SFC` / `UNE-EN 62353`)**, precisamente porque el umbral fisiopatológico de fibrilación ventricular por **microshock** en el miocardio humano comienza en el rango de **$10\text{ a }50\text{ }\mu\text{A}$**.
+4. **Trampa de la Conformidad de Radiofísica tras Reparación de Equipos Emisores de Radiación (`RD 1976/1999` y `RD 1566/1998`):** En un supuesto práctico sobre una avería en un tubo de TC, un mamógrafo o un acelerador lineal, nunca olvides señalar que la intervención del técnico de electromedicina o del fabricante **no basta por sí sola para reabrir la agenda de pacientes**: cuando la reparación afecta a parámetros geométricos, dosimétricos o de formación de imagen, es preceptiva la verificación previa y la firma de conformidad del **Especialista en Radiofísica Hospitalaria**.

@@ -2,7 +2,7 @@
 
 > **🌐 Portal Web Interactivo:** **[https://bigsasi.github.io/opos-biomedica-sergas/](https://bigsasi.github.io/opos-biomedica-sergas/)**
 
-En esta carpeta tienes **cada uno de los 82 temas del programa oficial en su propio archivo Markdown individual** (8 de Parte Común + 74 de Parte Específica), con su epígrafe oficial del DOG, su cruce con otras oposiciones del SERGAS, su normativa BOE/DOG vinculada y todo su desarrollo técnico listo para estudiar.
+En esta carpeta tienes **cada uno de los 82 temas del programa oficial en su propio archivo Markdown individual con desarrollo monográfico completo de nivel Subgrupo A1** (8 de Parte Común + 74 de Parte Específica; cada monografía cuenta con estructura homogénea de **7 secciones canónicas `0..6`, mínimo 180 líneas y más de 2.000 palabras por tema**, sumando **565.785 palabras y 17.805 líneas** en el corpus total), con su epígrafe oficial del DOG, su cruce verificado 1:1 con otras oposiciones del SERGAS, su normativa BOE/DOUE/DOG vinculada y todo su desarrollo técnico listo para estudiar.
 
 ---
 
